@@ -1,0 +1,754 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>furtoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="furutils module" href="furutils.html" />
+    <link rel="prev" title="fileutils module" href="fileutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-furtoolutils">
+<span id="furtoolutils-module"></span><h1>furtoolutils module<a class="headerlink" href="#module-furtoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="furtoolutils.addConditionals">
+<code class="descclassname">furtoolutils.</code><code class="descname">addConditionals</code><span class="sig-paren">(</span><em>pt</em>, <em>conds</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.addConditionals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.addFurTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">addFurTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.addFurTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.addGroomSop">
+<code class="descclassname">furtoolutils.</code><code class="descname">addGroomSop</code><span class="sig-paren">(</span><em>kwargs</em>, <em>pane</em>, <em>groomobject</em>, <em>nodetype</em>, <em>toolname=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.addGroomSop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new groom SOP of nodetype.</p>
+<p>If the SOP has a tool/operation menu, it’s set to ‘toolname’ when
+‘toolname’ is not None.</p>
+<p>Enters the state of the new SOP.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.addStrokes">
+<code class="descclassname">furtoolutils.</code><code class="descname">addStrokes</code><span class="sig-paren">(</span><em>node</em>, <em>strokes</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.addStrokes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.animateGuidesTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">animateGuidesTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.animateGuidesTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.appendOrSetSourceGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">appendOrSetSourceGroomObject</code><span class="sig-paren">(</span><em>groomobject</em>, <em>sourcegroomobject</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.appendOrSetSourceGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends the source object if groomobject supports multiple source
+objects.</p>
+<p>Replaces the source obeject if the groomobject only supports a single
+source.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.appendSourceGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">appendSourceGroomObject</code><span class="sig-paren">(</span><em>groomobject</em>, <em>sourcegroomobject</em>, <em>useinput=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.appendSourceGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends sourcegroomobject to groomobject’s sources.</p>
+<p>Only operates on groom objects that support multiple sources.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.buildSkinPaintAttribMenu">
+<code class="descclassname">furtoolutils.</code><code class="descname">buildSkinPaintAttribMenu</code><span class="sig-paren">(</span><em>node</em>, <em>skininput=None</em>, <em>skinparmname=None</em>, <em>attribType=None</em>, <em>attribSize=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.buildSkinPaintAttribMenu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.changeGroomMask">
+<code class="descclassname">furtoolutils.</code><code class="descname">changeGroomMask</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.changeGroomMask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.changeGuideGroomSopMask">
+<code class="descclassname">furtoolutils.</code><code class="descname">changeGuideGroomSopMask</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.changeGuideGroomSopMask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.chooseAndPaintFurObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">chooseAndPaintFurObject</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>attribname</em>, <em>props</em>, <em>prompt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.chooseAndPaintFurObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interactively selects a fur object in which to paint an attribute and
+enters the paint state, creating Attribute Create and Paint SOPs as
+needed or reusing existing nodes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.clumpHairTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">clumpHairTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.clumpHairTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.collectStrokes">
+<code class="descclassname">furtoolutils.</code><code class="descname">collectStrokes</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.collectStrokes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.combineGroomNodeChain">
+<code class="descclassname">furtoolutils.</code><code class="descname">combineGroomNodeChain</code><span class="sig-paren">(</span><em>chainnodes</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.combineGroomNodeChain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.combineGroomNodes">
+<code class="descclassname">furtoolutils.</code><code class="descname">combineGroomNodes</code><span class="sig-paren">(</span><em>nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.combineGroomNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.compareChainPosition">
+<code class="descclassname">furtoolutils.</code><code class="descname">compareChainPosition</code><span class="sig-paren">(</span><em>nodeA</em>, <em>nodeB</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.compareChainPosition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.computeSurfaceScale">
+<code class="descclassname">furtoolutils.</code><code class="descname">computeSurfaceScale</code><span class="sig-paren">(</span><em>skingeo</em>, <em>transform=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.computeSurfaceScale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.copyParm">
+<code class="descclassname">furtoolutils.</code><code class="descname">copyParm</code><span class="sig-paren">(</span><em>sourceparm</em>, <em>targetparm</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.copyParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.copyParms">
+<code class="descclassname">furtoolutils.</code><code class="descname">copyParms</code><span class="sig-paren">(</span><em>source</em>, <em>target</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.copyParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createDefaultFurNodes">
+<code class="descclassname">furtoolutils.</code><code class="descname">createDefaultFurNodes</code><span class="sig-paren">(</span><em>container</em>, <em>restskinobject</em>, <em>animskinobject</em>, <em>selection</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createDefaultFurNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createFurAndStartGrooming">
+<code class="descclassname">furtoolutils.</code><code class="descname">createFurAndStartGrooming</code><span class="sig-paren">(</span><em>kwargs</em>, <em>tool=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createFurAndStartGrooming" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createGroomMergeObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">createGroomMergeObject</code><span class="sig-paren">(</span><em>container</em>, <em>groomnodes</em>, <em>nodename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createGroomMergeObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createGroomSop">
+<code class="descclassname">furtoolutils.</code><code class="descname">createGroomSop</code><span class="sig-paren">(</span><em>groomobject</em>, <em>container</em>, <em>nodetype</em>, <em>toolname=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createGroomSop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createGuideDeformObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">createGuideDeformObject</code><span class="sig-paren">(</span><em>container</em>, <em>sourcenode</em>, <em>skinobject</em>, <em>basename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createGuideDeformObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createGuideGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">createGuideGroomObject</code><span class="sig-paren">(</span><em>container</em>, <em>skinsop</em>, <em>selection</em>, <em>scale=None</em>, <em>basename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createGuideGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createGuideSimObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">createGuideSimObject</code><span class="sig-paren">(</span><em>container</em>, <em>groomnode</em>, <em>basename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createGuideSimObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createHairGenObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">createHairGenObject</code><span class="sig-paren">(</span><em>container</em>, <em>sourcenode</em>, <em>scale=None</em>, <em>basename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createHairGenObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.createHairShader">
+<code class="descclassname">furtoolutils.</code><code class="descname">createHairShader</code><span class="sig-paren">(</span><em>container</em>, <em>basename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.createHairShader" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.curveAdvectTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">curveAdvectTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.curveAdvectTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.drawHair">
+<code class="descclassname">furtoolutils.</code><code class="descname">drawHair</code><span class="sig-paren">(</span><em>pane</em>, <em>groomobject</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.drawHair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a drawhairguides node for the ‘fur’ object, creates one if none
+exists.</p>
+<p>Enters the state of the drawhairguides node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.drawPartingLine">
+<code class="descclassname">furtoolutils.</code><code class="descname">drawPartingLine</code><span class="sig-paren">(</span><em>kwargs</em>, <em>skininput=None</em>, <em>curveinput=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.drawPartingLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.drawPartingLineTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">drawPartingLineTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.drawPartingLineTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findConnectedOfSameType">
+<code class="descclassname">furtoolutils.</code><code class="descname">findConnectedOfSameType</code><span class="sig-paren">(</span><em>node</em>, <em>mode</em>, <em>nodeset</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findConnectedOfSameType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all nodes of the same type as ‘node’ that are connected in a chain to
+‘node’ and contained in nodeset.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findGroomInputInOutputs">
+<code class="descclassname">furtoolutils.</code><code class="descname">findGroomInputInOutputs</code><span class="sig-paren">(</span><em>startnode</em>, <em>inputindex=-1</em>, <em>includeme=False</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findGroomInputInOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a groom node input in the outputs of ‘startnode’ and returns
+(foundnode, inputindex), where ‘foundnode’ is the found groom node and
+inputindex is the index of the input by which the search reached the
+node.</p>
+<p>If includeme is True the first node will be returned if it is a groom
+node. In that case the inputindex by which the startnode was reached
+should be supplied.</p>
+<p>Returns (None, -1) when no groom node was found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findGroomObjectInAncestors">
+<code class="descclassname">furtoolutils.</code><code class="descname">findGroomObjectInAncestors</code><span class="sig-paren">(</span><em>startnode</em>, <em>nodetypes</em>, <em>acceptlegacyfurobject=False</em>, <em>inferfromparents=False</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findGroomObjectInAncestors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findGroomOutputInInputs">
+<code class="descclassname">furtoolutils.</code><code class="descname">findGroomOutputInInputs</code><span class="sig-paren">(</span><em>startnode</em>, <em>outputindex=-1</em>, <em>includeme=False</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findGroomOutputInInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a groom node output in the inputs of ‘startnode’ and returns
+(foundnode, outputindex), where ‘foundnode’ is the found groom node and
+outputindex is the index of the output by which the search reached the
+node.</p>
+<p>Note that groomnode may be a hou.SubnetIndirectInput since we stop at
+subnet boundaries and these are treated as groom nodes.</p>
+<p>If includeme is True the first node will be returned if it is a groom
+node. In that case the outputindex by which the startnode was reached
+should be supplied.</p>
+<p>Returns (None, -1) when no groom node was found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findMatchingGroomSop">
+<code class="descclassname">furtoolutils.</code><code class="descname">findMatchingGroomSop</code><span class="sig-paren">(</span><em>container</em>, <em>nodetype</em>, <em>toolname=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findMatchingGroomSop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findMergeSets">
+<code class="descclassname">furtoolutils.</code><code class="descname">findMergeSets</code><span class="sig-paren">(</span><em>nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findMergeSets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findOrCreateGroomSop">
+<code class="descclassname">furtoolutils.</code><code class="descname">findOrCreateGroomSop</code><span class="sig-paren">(</span><em>kwargs</em>, <em>fur</em>, <em>container</em>, <em>nodetype</em>, <em>toolname=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findOrCreateGroomSop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findOrCreateGuideGroomSop">
+<code class="descclassname">furtoolutils.</code><code class="descname">findOrCreateGuideGroomSop</code><span class="sig-paren">(</span><em>kwargs</em>, <em>pane</em>, <em>fur</em>, <em>container</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findOrCreateGuideGroomSop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.findRequiredVDBExtBand">
+<code class="descclassname">furtoolutils.</code><code class="descname">findRequiredVDBExtBand</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.findRequiredVDBExtBand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.generateEngineHDA">
+<code class="descclassname">furtoolutils.</code><code class="descname">generateEngineHDA</code><span class="sig-paren">(</span><em>groomobject</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.generateEngineHDA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getAffectedHairGens">
+<code class="descclassname">furtoolutils.</code><code class="descname">getAffectedHairGens</code><span class="sig-paren">(</span><em>groomobj</em>, <em>overlapthresh=0.25</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getAffectedHairGens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find dependent hair generate objects that appear to be generate
+hair for the same skin primitives affected by groomobject.</p>
+<p>overlapthresh is the percentage of primitives of a Hair Generate object
+that should be affected by groomobj for it to be considered affected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getConnectedGroomObjects">
+<code class="descclassname">furtoolutils.</code><code class="descname">getConnectedGroomObjects</code><span class="sig-paren">(</span><em>groomnode</em>, <em>res=set([])</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getConnectedGroomObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getCurrentGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">getCurrentGroomObject</code><span class="sig-paren">(</span><em>pane, acceptlegacyfurobject=False, nodetypes=['guidegroom', 'hairgen']</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getCurrentGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches for a groom object using the following methods and returns
+the first one it finds. Returns None if none is found.</p>
+<ul class="simple">
+<li>The current node or it’s ancestors.</li>
+<li>The node at the current pane path or it’s ancestors.</li>
+<li>One of the selected nodes.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getCurrentGroomObjects">
+<code class="descclassname">furtoolutils.</code><code class="descname">getCurrentGroomObjects</code><span class="sig-paren">(</span><em>pane, acceptlegacyfurobject=False, nodetypes=['guidegroom', 'hairgen'], allowmultiple=False, infer=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getCurrentGroomObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches for a groom object using the following methods and returns
+the first one it finds. Returns None if none is found.</p>
+<ul class="simple">
+<li>The current node or it’s ancestors.</li>
+<li>The node at the current pane path or it’s ancestors.</li>
+<li>One of the selected nodes.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getDefaultGuideCount">
+<code class="descclassname">furtoolutils.</code><code class="descname">getDefaultGuideCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getDefaultGuideCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getDefaultHairCount">
+<code class="descclassname">furtoolutils.</code><code class="descname">getDefaultHairCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getDefaultHairCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getDefaultInfluenceRadius">
+<code class="descclassname">furtoolutils.</code><code class="descname">getDefaultInfluenceRadius</code><span class="sig-paren">(</span><em>scale</em>, <em>guidecount</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getDefaultInfluenceRadius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getDefaultLength">
+<code class="descclassname">furtoolutils.</code><code class="descname">getDefaultLength</code><span class="sig-paren">(</span><em>scale</em>, <em>guidecount</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getDefaultLength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getDependentGroomObjects">
+<code class="descclassname">furtoolutils.</code><code class="descname">getDependentGroomObjects</code><span class="sig-paren">(</span><em>groomnode</em>, <em>recurse=True</em>, <em>done=set([])</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getDependentGroomObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getGroomNodeSkinOutput">
+<code class="descclassname">furtoolutils.</code><code class="descname">getGroomNodeSkinOutput</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getGroomNodeSkinOutput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">getGroomObject</code><span class="sig-paren">(</span><em>pane, prompt, acceptlegacyfurobject=False, nodetypes=['guidegroom', 'hairgen'], infer=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a groom object in the current object or in it’s ancestors.</p>
+<p>If no groom object can be found this way, the user is prompted to
+select one.</p>
+<p>Returns None if the user doesn’t select anything or selects something
+other than a groom node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getGroomObjectAffectedFraction">
+<code class="descclassname">furtoolutils.</code><code class="descname">getGroomObjectAffectedFraction</code><span class="sig-paren">(</span><em>groomobj</em>, <em>primnumbers</em>, <em>skingeo=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getGroomObjectAffectedFraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the percentage of prims affected by groomobj that are also in
+the primnumbers array.</p>
+<p>If skingeo is None the object’s own skin geometry is used, requiring it
+to be cooked. A skingeo can be supplied to avoid this.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getGroomObjectAffectedPrims">
+<code class="descclassname">furtoolutils.</code><code class="descname">getGroomObjectAffectedPrims</code><span class="sig-paren">(</span><em>groomobj</em>, <em>skingeo=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getGroomObjectAffectedPrims" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the numbers of primitives on which groomobj generates hair.</p>
+<p>If skingeo is None the object’s own skin geometry is used, requiring
+it to be cooked. A skingeo can be supplied to avoid this.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getGroomObjectEditableSubnet">
+<code class="descclassname">furtoolutils.</code><code class="descname">getGroomObjectEditableSubnet</code><span class="sig-paren">(</span><em>groomobject</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getGroomObjectEditableSubnet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getGroomObjects">
+<code class="descclassname">furtoolutils.</code><code class="descname">getGroomObjects</code><span class="sig-paren">(</span><em>pane, prompt, acceptlegacyfurobject=False, nodetypes=['guidegroom', 'hairgen'], allowmultiple=True, infer=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getGroomObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a groom object in the current object or in it’s ancestors.</p>
+<p>If no groom object can be found this way, the user is prompted to
+select one.</p>
+<p>Returns None if the user doesn’t select anything or selects something
+other than a groom node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getGuideGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">getGuideGroomObject</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getGuideGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getMultiParmInstance">
+<code class="descclassname">furtoolutils.</code><code class="descname">getMultiParmInstance</code><span class="sig-paren">(</span><em>node</em>, <em>templatename</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getMultiParmInstance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getOrCreateGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">getOrCreateGroomObject</code><span class="sig-paren">(</span><em>pane</em>, <em>prompt</em>, <em>acceptlegacyfurobject=False</em>, <em>creatorfunction=&lt;function createDefaultFurNodes&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getOrCreateGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a groom object in the current object or in it’s ancestors.</p>
+<p>If no groom object can be found this way, the user is prompted to
+select one.</p>
+<p>Returns None if the user doesn’t select anything.</p>
+<p>If the user selects something other than a groom node, it is assumed to
+be a skin geometry and a groom setup is created for it by calling
+‘creatorfunction’ this assumed to be of the form
+creatorfunction(container, skinobject, animskinobject, selection).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getReferencedGroomObjects">
+<code class="descclassname">furtoolutils.</code><code class="descname">getReferencedGroomObjects</code><span class="sig-paren">(</span><em>groomnode</em>, <em>recurse=True</em>, <em>done=set([])</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getReferencedGroomObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getSkinObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">getSkinObject</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getSkinObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.getSkinPaintConnections">
+<code class="descclassname">furtoolutils.</code><code class="descname">getSkinPaintConnections</code><span class="sig-paren">(</span><em>node</em>, <em>skininput=None</em>, <em>skinparmname=None</em>, <em>paintinput=None</em>, <em>displayerrors=False</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.getSkinPaintConnections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a tuple containting</p>
+<p>(prevnode, prevnodeoutput, nextnode, nextnodeinput)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.groomHair">
+<code class="descclassname">furtoolutils.</code><code class="descname">groomHair</code><span class="sig-paren">(</span><em>kwargs</em>, <em>pane</em>, <em>groomobject</em>, <em>tool=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.groomHair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a guidegroom node for the groom object, creates one if none
+exists.</p>
+<p>Enters the state of the guidegroom node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.groomMergeTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">groomMergeTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.groomMergeTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.guideGroomTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">guideGroomTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.guideGroomTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.guideInitTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">guideInitTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.guideInitTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.guideProcessTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">guideProcessTool</code><span class="sig-paren">(</span><em>kwargs</em>, <em>toolname</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.guideProcessTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.hairGenTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">hairGenTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.hairGenTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.inListOfLists">
+<code class="descclassname">furtoolutils.</code><code class="descname">inListOfLists</code><span class="sig-paren">(</span><em>setlist</em>, <em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.inListOfLists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.inferGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">inferGroomObject</code><span class="sig-paren">(</span><em>obj</em>, <em>nodetypes</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.inferGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.insertGroomSop">
+<code class="descclassname">furtoolutils.</code><code class="descname">insertGroomSop</code><span class="sig-paren">(</span><em>fur</em>, <em>container</em>, <em>groomsop</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.insertGroomSop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.insertGroomSopIntoLegacyFur">
+<code class="descclassname">furtoolutils.</code><code class="descname">insertGroomSopIntoLegacyFur</code><span class="sig-paren">(</span><em>fur</em>, <em>container</em>, <em>guidegroomsop</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.insertGroomSopIntoLegacyFur" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.insertGuideTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">insertGuideTool</code><span class="sig-paren">(</span><em>kwargs</em>, <em>tool</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.insertGuideTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.isGroomNode">
+<code class="descclassname">furtoolutils.</code><code class="descname">isGroomNode</code><span class="sig-paren">(</span><em>node</em>, <em>acceptlegacyfurobject=False</em>, <em>nodetypes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.isGroomNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.isGroomNodeLive">
+<code class="descclassname">furtoolutils.</code><code class="descname">isGroomNodeLive</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.isGroomNodeLive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the groom node is live, meaning it doesn’t load it’s
+output from a file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.isLegacyFurObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">isLegacyFurObject</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.isLegacyFurObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.isTransferNode">
+<code class="descclassname">furtoolutils.</code><code class="descname">isTransferNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.isTransferNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.isolateGroomParts">
+<code class="descclassname">furtoolutils.</code><code class="descname">isolateGroomParts</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.isolateGroomParts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.jumpIntoGuideGroomTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">jumpIntoGuideGroomTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.jumpIntoGuideGroomTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.jumpIntoHairGenTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">jumpIntoHairGenTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.jumpIntoHairGenTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.jumpToGuideGroomTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">jumpToGuideGroomTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.jumpToGuideGroomTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.jumpToHairGenTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">jumpToHairGenTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.jumpToHairGenTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.jumpToObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">jumpToObject</code><span class="sig-paren">(</span><em>kwargs</em>, <em>nodetypename</em>, <em>jumpinto=False</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.jumpToObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.markAsTransferNode">
+<code class="descclassname">furtoolutils.</code><code class="descname">markAsTransferNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.markAsTransferNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.matchAny">
+<code class="descclassname">furtoolutils.</code><code class="descname">matchAny</code><span class="sig-paren">(</span><em>patterns</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.matchAny" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.mergeConditionals">
+<code class="descclassname">furtoolutils.</code><code class="descname">mergeConditionals</code><span class="sig-paren">(</span><em>pt</em>, <em>refpt</em>, <em>skip_inherit_cond=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.mergeConditionals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.paintSkinAttrib">
+<code class="descclassname">furtoolutils.</code><code class="descname">paintSkinAttrib</code><span class="sig-paren">(</span><em>kwargs</em>, <em>attribname</em>, <em>attribdef=None</em>, <em>skininput=None</em>, <em>skinparmname=None</em>, <em>mode='paint'</em>, <em>fgcolor=&lt;hou.Vector3 [1</em>, <em>1</em>, <em>1]&gt;</em>, <em>bgcolor=&lt;hou.Vector3 [0</em>, <em>0</em>, <em>0]&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.paintSkinAttrib" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.positionPaintNodes">
+<code class="descclassname">furtoolutils.</code><code class="descname">positionPaintNodes</code><span class="sig-paren">(</span><em>refnode</em>, <em>nextnode</em>, <em>inputitems</em>, <em>paint_nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.positionPaintNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.recacheAllGroomNodes">
+<code class="descclassname">furtoolutils.</code><code class="descname">recacheAllGroomNodes</code><span class="sig-paren">(</span><em>fur</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.recacheAllGroomNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.recacheGroomObjectStrokes">
+<code class="descclassname">furtoolutils.</code><code class="descname">recacheGroomObjectStrokes</code><span class="sig-paren">(</span><em>groomobject</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.recacheGroomObjectStrokes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.recacheStrokesTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">recacheStrokesTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.recacheStrokesTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.reguideTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">reguideTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.reguideTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.removeFromGroomChain">
+<code class="descclassname">furtoolutils.</code><code class="descname">removeFromGroomChain</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.removeFromGroomChain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes node from groom-node chain.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.replaceGroomSource">
+<code class="descclassname">furtoolutils.</code><code class="descname">replaceGroomSource</code><span class="sig-paren">(</span><em>groomobject</em>, <em>oldsource</em>, <em>newsource</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.replaceGroomSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes source groom object(s) from groom object</p>
+<p>If sourcegroomobject is None any sources are removed.</p>
+<p>If it is not then only that sourcegroomobject is removed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.selectGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">selectGroomObject</code><span class="sig-paren">(</span><em>pane</em>, <em>prompt</em>, <em>acceptlegacyfurobject=False</em>, <em>infer=True</em>, <em>nodetypes=None</em>, <em>use_existing_selection=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.selectGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets the user select a groom object while displaying a custom prompt.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.selectGroomObjects">
+<code class="descclassname">furtoolutils.</code><code class="descname">selectGroomObjects</code><span class="sig-paren">(</span><em>pane</em>, <em>prompt</em>, <em>acceptlegacyfurobject=False</em>, <em>infer=True</em>, <em>nodetypes=None</em>, <em>use_existing_selection=True</em>, <em>allow_multisel=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.selectGroomObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets the user select a groom object while displaying a custom prompt.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.selectObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">selectObject</code><span class="sig-paren">(</span><em>pane</em>, <em>prompt</em>, <em>use_existing_selection=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.selectObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.selectObjects">
+<code class="descclassname">furtoolutils.</code><code class="descname">selectObjects</code><span class="sig-paren">(</span><em>pane</em>, <em>prompt</em>, <em>use_existing_selection=True</em>, <em>allow_multisel=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.selectObjects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.setGuideGroomSopGroup">
+<code class="descclassname">furtoolutils.</code><code class="descname">setGuideGroomSopGroup</code><span class="sig-paren">(</span><em>guidegroomsop</em>, <em>groupstring</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.setGuideGroomSopGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.setNewSkin">
+<code class="descclassname">furtoolutils.</code><code class="descname">setNewSkin</code><span class="sig-paren">(</span><em>fur</em>, <em>new_sop</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.setNewSkin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a new model.</p>
+<p>Returns a tuple of the old skin path and the old group.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.setSourceGroomObject">
+<code class="descclassname">furtoolutils.</code><code class="descname">setSourceGroomObject</code><span class="sig-paren">(</span><em>groomobject</em>, <em>sourcegroomobject</em>, <em>useinput=True</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.setSourceGroomObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets groomobject’s source to sourcegroomobject.</p>
+<p>Only operates on groom objects that support a single source object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.setUpGroomSop">
+<code class="descclassname">furtoolutils.</code><code class="descname">setUpGroomSop</code><span class="sig-paren">(</span><em>groomsop</em>, <em>toolname=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.setUpGroomSop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.simGuidesTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">simGuidesTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.simGuidesTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.startDrawing">
+<code class="descclassname">furtoolutils.</code><code class="descname">startDrawing</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.startDrawing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.startGrooming">
+<code class="descclassname">furtoolutils.</code><code class="descname">startGrooming</code><span class="sig-paren">(</span><em>kwargs</em>, <em>tool=None</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.startGrooming" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.toggleHairDisplayTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">toggleHairDisplayTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.toggleHairDisplayTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.transferGroomParms">
+<code class="descclassname">furtoolutils.</code><code class="descname">transferGroomParms</code><span class="sig-paren">(</span><em>sourcenode</em>, <em>targetnode</em>, <em>expatterns=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.transferGroomParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.untangleOffset">
+<code class="descclassname">furtoolutils.</code><code class="descname">untangleOffset</code><span class="sig-paren">(</span><em>xoffset</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.untangleOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.updateFromSopCallback">
+<code class="descclassname">furtoolutils.</code><code class="descname">updateFromSopCallback</code><span class="sig-paren">(</span><em>fur</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.updateFromSopCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.updateSkinUsingRecache">
+<code class="descclassname">furtoolutils.</code><code class="descname">updateSkinUsingRecache</code><span class="sig-paren">(</span><em>fur</em>, <em>new_sop</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.updateSkinUsingRecache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.updateSkinUsingTransfer">
+<code class="descclassname">furtoolutils.</code><code class="descname">updateSkinUsingTransfer</code><span class="sig-paren">(</span><em>fur</em>, <em>skinsop</em>, <em>method='direct'</em>, <em>uvattrib='None'</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.updateSkinUsingTransfer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="furtoolutils.whiteHairTool">
+<code class="descclassname">furtoolutils.</code><code class="descname">whiteHairTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#furtoolutils.whiteHairTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="fileutils.html" title="previous chapter">fileutils module</a></li>
+      <li>Next: <a href="furutils.html" title="next chapter">furutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/furtoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/furtoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

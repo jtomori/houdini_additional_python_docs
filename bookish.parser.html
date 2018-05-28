@@ -1,0 +1,1147 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>bookish.parser package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="canvaseventtypes module" href="canvaseventtypes.html" />
+    <link rel="prev" title="bookish.grammars package" href="bookish.grammars.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bookish-parser-package">
+<h1>bookish.parser package<a class="headerlink" href="#bookish-parser-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-bookish.parser.bootstrap">
+<span id="bookish-parser-bootstrap-module"></span><h2>bookish.parser.bootstrap module<a class="headerlink" href="#module-bookish.parser.bootstrap" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-bookish.parser.builder">
+<span id="bookish-parser-builder-module"></span><h2>bookish.parser.builder module<a class="headerlink" href="#module-bookish.parser.builder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bookish.parser.builder.Builder">
+<em class="property">class </em><code class="descclassname">bookish.parser.builder.</code><code class="descname">Builder</code><span class="sig-paren">(</span><em>globals=None</em>, <em>file=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.add_alias">
+<code class="descname">add_alias</code><span class="sig-paren">(</span><em>callname</em>, <em>realname</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.add_alias" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.add_assertion">
+<code class="descname">add_assertion</code><span class="sig-paren">(</span><em>fn</em>, <em>msgfn</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.add_assertion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.add_assignment">
+<code class="descname">add_assignment</code><span class="sig-paren">(</span><em>rule</em>, <em>suffix</em>, <em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.add_assignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.add_computed_assignment">
+<code class="descname">add_computed_assignment</code><span class="sig-paren">(</span><em>rule</em>, <em>suffix</em>, <em>fn</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.add_computed_assignment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.add_import">
+<code class="descname">add_import</code><span class="sig-paren">(</span><em>modname</em>, <em>bindname</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.add_import" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.add_parms">
+<code class="descname">add_parms</code><span class="sig-paren">(</span><em>name</em>, <em>argnames</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.add_parms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.arity">
+<code class="descname">arity</code><span class="sig-paren">(</span><em>rulename</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.arity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.build_rule">
+<code class="descname">build_rule</code><span class="sig-paren">(</span><em>rule</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.build_rule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.build_string">
+<code class="descname">build_string</code><span class="sig-paren">(</span><em>content</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.build_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.get_method">
+<code class="descname">get_method</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.get_method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.name">
+<code class="descname">name</code><span class="sig-paren">(</span><em>rule</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.qname">
+<code class="descname">qname</code><span class="sig-paren">(</span><em>rule</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.qname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.builder.Builder.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>rulelist</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.Builder.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.builder.build_meta">
+<code class="descclassname">bookish.parser.builder.</code><code class="descname">build_meta</code><span class="sig-paren">(</span><em>content</em>, <em>outfile</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.build_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.builder.parse_string">
+<code class="descclassname">bookish.parser.builder.</code><code class="descname">parse_string</code><span class="sig-paren">(</span><em>content</em>, <em>ctx</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.builder.parse_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-bookish.parser.parser">
+<span id="bookish-parser-parser-module"></span><h2>bookish.parser.parser module<a class="headerlink" href="#module-bookish.parser.parser" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="bookish.parser.parser.ArgError">
+<em class="property">exception </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">ArgError</code><a class="headerlink" href="#bookish.parser.parser.ArgError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.parser.Document">
+<em class="property">class </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">Document</code><a class="headerlink" href="#bookish.parser.parser.Document" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+<dl class="method">
+<dt id="bookish.parser.parser.Document.line_and_col">
+<code class="descname">line_and_col</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Document.line_and_col" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.parser.Document.lines">
+<code class="descname">lines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Document.lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.parser.Failure">
+<em class="property">class </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">Failure</code><a class="headerlink" href="#bookish.parser.parser.Failure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.parser.Grammar">
+<em class="property">class </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">Grammar</code><span class="sig-paren">(</span><em>ruledict</em>, <em>context=None</em>, <em>rulename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Grammar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bookish.parser.parser.Grammar.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>string</em>, <em>pos=0</em>, <em>debug=False</em>, <em>**extra</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Grammar.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.parser.Grammar.parse_file">
+<code class="descname">parse_file</code><span class="sig-paren">(</span><em>fileobj</em>, <em>encoding='utf8'</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Grammar.parse_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.parser.Grammar.push">
+<code class="descname">push</code><span class="sig-paren">(</span><em>m</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Grammar.push" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.parser.Grammar.snap">
+<code class="descname">snap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Grammar.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.parser.Lines">
+<em class="property">class </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">Lines</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bookish.parser.parser.Lines.indices">
+<code class="descname">indices</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Lines.indices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.parser.Lines.line_and_col">
+<code class="descname">line_and_col</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Lines.line_and_col" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.parser.Miss">
+<em class="property">class </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">Miss</code><span class="sig-paren">(</span><em>message</em>, <em>position</em>, <em>expr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.Miss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.parser.ParserContext">
+<em class="property">class </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">ParserContext</code><span class="sig-paren">(</span><em>m=None</em>, <em>parent=None</em>, <em>namespace=None</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.ParserContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.util.Context" title="bookish.util.Context"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.util.Context</span></code></a></p>
+<dl class="attribute">
+<dt id="bookish.parser.parser.ParserContext.cache">
+<code class="descname">cache</code><a class="headerlink" href="#bookish.parser.parser.ParserContext.cache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bookish.parser.parser.ParserContext.debug">
+<code class="descname">debug</code><a class="headerlink" href="#bookish.parser.parser.ParserContext.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bookish.parser.parser.ParserContext.namespace">
+<code class="descname">namespace</code><a class="headerlink" href="#bookish.parser.parser.ParserContext.namespace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.parser.ParserContext.set_debug">
+<code class="descname">set_debug</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.ParserContext.set_debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="bookish.parser.parser.ParserError">
+<em class="property">exception </em><code class="descclassname">bookish.parser.parser.</code><code class="descname">ParserError</code><a class="headerlink" href="#bookish.parser.parser.ParserError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.parser.condition_string">
+<code class="descclassname">bookish.parser.parser.</code><code class="descname">condition_string</code><span class="sig-paren">(</span><em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.condition_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.parser.make_grammar">
+<code class="descclassname">bookish.parser.parser.</code><code class="descname">make_grammar</code><span class="sig-paren">(</span><em>rulelist</em>, <em>context=None</em>, <em>rulename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.make_grammar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.parser.make_rule">
+<code class="descclassname">bookish.parser.parser.</code><code class="descname">make_rule</code><span class="sig-paren">(</span><em>name</em>, <em>expr</em>, <em>args</em>, <em>add=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.make_rule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.parser.make_ruledict">
+<code class="descclassname">bookish.parser.parser.</code><code class="descname">make_ruledict</code><span class="sig-paren">(</span><em>rulelist</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.make_ruledict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.parser.parsed_meta_grammar">
+<code class="descclassname">bookish.parser.parser.</code><code class="descname">parsed_meta_grammar</code><span class="sig-paren">(</span><em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.parsed_meta_grammar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.parser.rules_from_locals">
+<code class="descclassname">bookish.parser.parser.</code><code class="descname">rules_from_locals</code><span class="sig-paren">(</span><em>localvars</em>, <em>namelist</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.rules_from_locals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.parser.parser.rules_from_module">
+<code class="descclassname">bookish.parser.parser.</code><code class="descname">rules_from_module</code><span class="sig-paren">(</span><em>mod</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.parser.rules_from_module" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-bookish.parser.rules">
+<span id="bookish-parser-rules-module"></span><h2>bookish.parser.rules module<a class="headerlink" href="#module-bookish.parser.rules" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="bookish.parser.rules.ensure">
+<code class="descclassname">bookish.parser.rules.</code><code class="descname">ensure</code><span class="sig-paren">(</span><em>rule</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.ensure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Rule">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Rule</code><span class="sig-paren">(</span><em>rulename=None</em>, <em>grammarpos=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><em>stream</em>, <em>i</em>, <em>context</em>, <em>level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.accept" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.arguments">
+<code class="descname">arguments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.arity">
+<code class="descname">arity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.arity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.children">
+<code class="descname">children</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.children" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.getname">
+<code class="descname">getname</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.getname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.has_binding">
+<code class="descname">has_binding</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.has_binding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.is_atomic">
+<code class="descname">is_atomic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.is_atomic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.is_optional">
+<code class="descname">is_optional</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.is_optional" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>stream</em>, <em>i=0</em>, <em>context=None</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.optional_firsts">
+<code class="descname">optional_firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.optional_firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.snap">
+<code class="descname">snap</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.test">
+<code class="descname">test</code><span class="sig-paren">(</span><em>stream</em>, <em>i=0</em>, <em>context=None</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Rule.test2">
+<code class="descname">test2</code><span class="sig-paren">(</span><em>stream</em>, <em>i=0</em>, <em>context=None</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Rule.test2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Wrapper">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Wrapper</code><span class="sig-paren">(</span><em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Rule" title="bookish.parser.rules.Rule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Rule</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.children">
+<code class="descname">children</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.children" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.has_binding">
+<code class="descname">has_binding</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.has_binding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.is_atomic">
+<code class="descname">is_atomic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.is_atomic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.is_optional">
+<code class="descname">is_optional</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.is_optional" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.optional_firsts">
+<code class="descname">optional_firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.optional_firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Wrapper.snap">
+<code class="descname">snap</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Wrapper.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.MultiRule">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">MultiRule</code><span class="sig-paren">(</span><em>targets</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Rule" title="bookish.parser.rules.Rule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Rule</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.MultiRule.children">
+<code class="descname">children</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule.children" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.MultiRule.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.MultiRule.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.MultiRule.has_binding">
+<code class="descname">has_binding</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule.has_binding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.MultiRule.is_atomic">
+<code class="descname">is_atomic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule.is_atomic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.MultiRule.is_optional">
+<code class="descname">is_optional</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule.is_optional" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.MultiRule.snap">
+<code class="descname">snap</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.MultiRule.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Match">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Match</code><span class="sig-paren">(</span><em>item</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Rule" title="bookish.parser.rules.Rule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Rule</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Match.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Match.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Match.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Match.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Match.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Match.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Match.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Match.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Match.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Match.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.String">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">String</code><span class="sig-paren">(</span><em>string</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.String" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Match" title="bookish.parser.rules.Match"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Match</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.String.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.String.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.String.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.String.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.String.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.String.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.String.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.String.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.In">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">In</code><span class="sig-paren">(</span><em>xs</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.In" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Match" title="bookish.parser.rules.Match"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Match</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.In.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.In.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.In.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.In.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.In.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.In.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.In.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.In.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Or">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Or</code><span class="sig-paren">(</span><em>targets</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Or" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.MultiRule" title="bookish.parser.rules.MultiRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.MultiRule</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Or.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Or.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Or.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Or.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Or.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Or.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Or.optional_firsts">
+<code class="descname">optional_firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Or.optional_firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Or.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Or.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Seq">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Seq</code><span class="sig-paren">(</span><em>targets</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.MultiRule" title="bookish.parser.rules.MultiRule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.MultiRule</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Seq.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Seq.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Seq.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Seq.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Seq.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Seq.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Seq.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Seq.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Not">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Not</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Not" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Not.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Not.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Not.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Not.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Not.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Not.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Not.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Not.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Repeat">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Repeat</code><span class="sig-paren">(</span><em>target</em>, <em>mintimes=1</em>, <em>maxtimes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Repeat.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Repeat.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Repeat.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Repeat.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Repeat.is_optional">
+<code class="descname">is_optional</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat.is_optional" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Repeat.optional_firsts">
+<code class="descname">optional_firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat.optional_firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Repeat.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Repeat.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Opt">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Opt</code><span class="sig-paren">(</span><em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Opt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Repeat" title="bookish.parser.rules.Repeat"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Repeat</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Opt.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Opt.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Star">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Star</code><span class="sig-paren">(</span><em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Star" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Repeat" title="bookish.parser.rules.Repeat"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Repeat</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Plus">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Plus</code><span class="sig-paren">(</span><em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Plus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Repeat" title="bookish.parser.rules.Repeat"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Repeat</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Peek">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Peek</code><span class="sig-paren">(</span><em>target</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Peek.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Peek.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Peek.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Peek.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Peek.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Peek.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.LookBehind">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">LookBehind</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.LookBehind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.LookBehind.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.LookBehind.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.LookBehind.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.LookBehind.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.LookBehind.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.LookBehind.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.LookBehind.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.LookBehind.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Bind">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Bind</code><span class="sig-paren">(</span><em>name</em>, <em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Bind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Bind.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Bind.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Bind.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Bind.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Bind.has_binding">
+<code class="descname">has_binding</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Bind.has_binding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Bind.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Bind.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Take">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Take</code><span class="sig-paren">(</span><em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Take" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Take.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Take.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Take.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Take.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Do">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Do</code><span class="sig-paren">(</span><em>source</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Do" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Rule" title="bookish.parser.rules.Rule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Rule</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Do.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Do.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Do.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Do.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Do.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Do.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Do.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Do.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.If">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">If</code><span class="sig-paren">(</span><em>source</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.If" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Do" title="bookish.parser.rules.Do"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Do</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.If.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.If.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.If.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.If.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.RecordChars">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">RecordChars</code><span class="sig-paren">(</span><em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.RecordChars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.RecordChars.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.RecordChars.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.RecordChars.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.RecordChars.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Regex">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Regex</code><span class="sig-paren">(</span><em>pattern</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Match" title="bookish.parser.rules.Match"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Match</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Regex.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Regex.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Regex.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Regex.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Regex.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Regex.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Regex.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Regex.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Mixed">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Mixed</code><span class="sig-paren">(</span><em>until</em>, <em>target=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Mixed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Mixed.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Mixed.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Mixed.children">
+<code class="descname">children</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Mixed.children" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Mixed.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Mixed.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Mixed.is_atomic">
+<code class="descname">is_atomic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Mixed.is_atomic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Mixed.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Mixed.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Mixed.snap">
+<code class="descname">snap</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Mixed.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.FailIf">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">FailIf</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.FailIf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.FailIf.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.FailIf.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.FailIf.firsts">
+<code class="descname">firsts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.FailIf.firsts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.FailIf.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.FailIf.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.FailIf.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.FailIf.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.PythonExpr">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">PythonExpr</code><span class="sig-paren">(</span><em>ends</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.PythonExpr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Rule" title="bookish.parser.rules.Rule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Rule</span></code></a></p>
+<dl class="attribute">
+<dt id="bookish.parser.rules.PythonExpr.brackets">
+<code class="descname">brackets</code><em class="property"> = {'(': ')', '[': ']', '{': '}'}</em><a class="headerlink" href="#bookish.parser.rules.PythonExpr.brackets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.PythonExpr.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.PythonExpr.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bookish.parser.rules.PythonExpr.endbrackets">
+<code class="descname">endbrackets</code><em class="property"> = frozenset([')', '}', ']'])</em><a class="headerlink" href="#bookish.parser.rules.PythonExpr.endbrackets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="bookish.parser.rules.PythonExpr.take_python_expr">
+<em class="property">static </em><code class="descname">take_python_expr</code><span class="sig-paren">(</span><em>stream</em>, <em>i</em>, <em>ends</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.PythonExpr.take_python_expr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Parms">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Parms</code><span class="sig-paren">(</span><em>args</em>, <em>target</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Parms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Wrapper" title="bookish.parser.rules.Wrapper"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Wrapper</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Parms.arguments">
+<code class="descname">arguments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Parms.arguments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Parms.arity">
+<code class="descname">arity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Parms.arity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Parms.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Parms.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Parms.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Parms.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Call">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Call</code><span class="sig-paren">(</span><em>target</em>, <em>args=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Rule" title="bookish.parser.rules.Rule"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Rule</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Call.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call.fixed_length">
+<code class="descname">fixed_length</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.fixed_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call.get_target">
+<code class="descname">get_target</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.get_target" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call.has_binding">
+<code class="descname">has_binding</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.has_binding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call.is_optional">
+<code class="descname">is_optional</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.is_optional" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call.snap">
+<code class="descname">snap</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.parser.rules.Call2">
+<em class="property">class </em><code class="descclassname">bookish.parser.rules.</code><code class="descname">Call2</code><span class="sig-paren">(</span><em>modulename</em>, <em>rulename</em>, <em>args=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.parser.rules.Call" title="bookish.parser.rules.Call"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.parser.rules.Call</span></code></a></p>
+<dl class="method">
+<dt id="bookish.parser.rules.Call2.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>builder</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call2.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call2.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><em>tab=0</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call2.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call2.get_target">
+<code class="descname">get_target</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call2.get_target" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call2.qname">
+<code class="descname">qname</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call2.qname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.parser.rules.Call2.repr">
+<code class="descname">repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bookish.parser.rules.Call2.repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bookish.parser">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-bookish.parser" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">bookish.parser package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-bookish.parser.bootstrap">bookish.parser.bootstrap module</a></li>
+<li><a class="reference internal" href="#module-bookish.parser.builder">bookish.parser.builder module</a></li>
+<li><a class="reference internal" href="#module-bookish.parser.parser">bookish.parser.parser module</a></li>
+<li><a class="reference internal" href="#module-bookish.parser.rules">bookish.parser.rules module</a></li>
+<li><a class="reference internal" href="#module-bookish.parser">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+  <li><a href="bookish.html">bookish package</a><ul>
+      <li>Previous: <a href="bookish.grammars.html" title="previous chapter">bookish.grammars package</a></li>
+      <li>Next: <a href="canvaseventtypes.html" title="next chapter">canvaseventtypes module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/bookish.parser.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/bookish.parser.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

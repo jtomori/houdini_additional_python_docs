@@ -1,0 +1,166 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>shelfutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="shopclerks package" href="shopclerks.html" />
+    <link rel="prev" title="shadingutils module" href="shadingutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-shelfutils">
+<span id="shelfutils-module"></span><h1>shelfutils module<a class="headerlink" href="#module-shelfutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="shelfutils.chooseAndOpenAudioFile">
+<code class="descclassname">shelfutils.</code><code class="descname">chooseAndOpenAudioFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.chooseAndOpenAudioFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chooses and loads a soundtrack file, and sets up the Audio Panel 
+parameters to play the audio durng animation playback or playbar 
+scrubbing.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.downloadAndInstallPackage">
+<code class="descclassname">shelfutils.</code><code class="descname">downloadAndInstallPackage</code><span class="sig-paren">(</span><em>shelf_name</em>, <em>shelf_url</em>, <em>install_path</em>, <em>tmp_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.downloadAndInstallPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the shelf package from ‘shelf_url’ and installs it
+into the given installation directory.  Returns the final install
+path of the shelf package.  Returns the empty string on failure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.findFilesByExtension">
+<code class="descclassname">shelfutils.</code><code class="descname">findFilesByExtension</code><span class="sig-paren">(</span><em>dir</em>, <em>file_ext</em><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.findFilesByExtension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively searches in ‘dir’ and returns a list of all the files
+found in the directory tree that match the given file extension.
+Does not search in hidden directories or ‘backup’ directories.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.findShelfFiles">
+<code class="descclassname">shelfutils.</code><code class="descname">findShelfFiles</code><span class="sig-paren">(</span><em>shelf_install_dir</em>, <em>shelf_extensions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.findShelfFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively searches in ‘shelf_install_dir’ and returns a list
+of shelf files found in the directory tree.  Does not search
+in hidden directories or ‘backup’ directories.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.findShelfOTLFiles">
+<code class="descclassname">shelfutils.</code><code class="descname">findShelfOTLFiles</code><span class="sig-paren">(</span><em>shelf_install_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.findShelfOTLFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively searches in ‘shelf_install_dir’ and returns a list
+of shelf files found in the directory tree.  Does not search
+in hidden directories or ‘backup’ directories.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.installOrboltAsset">
+<code class="descclassname">shelfutils.</code><code class="descname">installOrboltAsset</code><span class="sig-paren">(</span><em>kwargs</em>, <em>node_name</em>, <em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.installOrboltAsset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Script that Houdini calls when clicking on a shelf tool that
+corresponds to an Orbolt asset. We can either direct the user
+to the asset store if it the asset has not been installed yet
+or install it in the viewport.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.installPackage">
+<code class="descclassname">shelfutils.</code><code class="descname">installPackage</code><span class="sig-paren">(</span><em>shelf_name</em>, <em>shelf_pkg_path</em>, <em>install_path</em><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.installPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Installs the shelf package, ‘shelf_pkg_path’, into
+the given installation directory. This removes previously installed
+packages with the same shelf name.  Returns the final installation
+path for the shelf package.  Returns the empty string on failure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.normalizePath">
+<code class="descclassname">shelfutils.</code><code class="descname">normalizePath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.normalizePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalizes the given file path by replacing backward slashes
+with forward slashes.  This function is useful when comparing
+file paths.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="shelfutils.populateShelfFromJSON">
+<code class="descclassname">shelfutils.</code><code class="descname">populateShelfFromJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#shelfutils.populateShelfFromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the list of shelf tools corresponding to Orbolt assets
+and populate them in the shelf.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="shadingutils.html" title="previous chapter">shadingutils module</a></li>
+      <li>Next: <a href="shopclerks.html" title="next chapter">shopclerks package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/shelfutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/shelfutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

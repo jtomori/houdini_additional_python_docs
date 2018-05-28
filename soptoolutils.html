@@ -1,0 +1,333 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>soptoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="soputils module" href="soputils.html" />
+    <link rel="prev" title="skytoolutils module" href="skytoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-soptoolutils">
+<span id="soptoolutils-module"></span><h1>soptoolutils module<a class="headerlink" href="#module-soptoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="soptoolutils.addBooleanTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">addBooleanTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.addBooleanTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.addUVTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">addUVTool</code><span class="sig-paren">(</span><em>kwargs</em>, <em>nodetype</em>, <em>uvattribparm</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.addUVTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generically adds the given nodetype, returning the resulting SOP.
+The uvattribparm is a parameter that can be filled in with
+the viewer’s current UV selection if this was put down in the
+viewport.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.buildBlockBeginCompile">
+<code class="descclassname">soptoolutils.</code><code class="descname">buildBlockBeginCompile</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.buildBlockBeginCompile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a begin compile block node 
+next to ourself.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.buildBlockMetadata">
+<code class="descclassname">soptoolutils.</code><code class="descname">buildBlockMetadata</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.buildBlockMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a metadata import node pointed to ourself
+next to ourself.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.buildBlockPair">
+<code class="descclassname">soptoolutils.</code><code class="descname">buildBlockPair</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>name</em>, <em>begintype</em>, <em>endtype</em>, <em>wire_to_end</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.buildBlockPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a pair of block nodes, a begin and an end, and links
+them together nicely.</p>
+<p>wire_to_end means to wire to second input on node creation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.buildPaintNode">
+<code class="descclassname">soptoolutils.</code><code class="descname">buildPaintNode</code><span class="sig-paren">(</span><em>previtem</em>, <em>nextnode</em>, <em>parms</em>, <em>props</em>, <em>node_output_index=0</em>, <em>move_new_nodes=True</em>, <em>use_existing=True</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.buildPaintNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a paint node at or prior to node which matches parms.
+If not found, builds one.  If the attribute does not exist,
+creates the attribute to paint.
+It will be inserted prior to nextnode if not none.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.chooseAndApplyTexture">
+<code class="descclassname">soptoolutils.</code><code class="descname">chooseAndApplyTexture</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>attribname</em>, <em>props</em>, <em>prompt=None</em>, <em>objfilter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.chooseAndApplyTexture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interactively selects an object to apply fluid map operator on</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.chooseAndOpenGeoFile">
+<code class="descclassname">soptoolutils.</code><code class="descname">chooseAndOpenGeoFile</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>click_to_place</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.chooseAndOpenGeoFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens a file chooser that allows the user to select a geometry file(s).
+For each chosen file, a File SOP node is created to open that file.
+The ‘click_to_place’ determines whether the user needs to click on the
+construction plane to place the geometry, or whether it will be placed
+automatically at the world origin.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.chooseAndPaintEaseInObject">
+<code class="descclassname">soptoolutils.</code><code class="descname">chooseAndPaintEaseInObject</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>attribname</em>, <em>props</em>, <em>prompt=None</em>, <em>objfilter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.chooseAndPaintEaseInObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interactively selects an object in which to paint an attribute with
+ease-in and ease-out properties.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.chooseAndPaintObject">
+<code class="descclassname">soptoolutils.</code><code class="descname">chooseAndPaintObject</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>attribname</em>, <em>props</em>, <em>prompt=None</em>, <em>objfilter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.chooseAndPaintObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interactively selects an object in which to paint an attribute and
+enters the paint state.  Existing Paint SOPs will be reused.
+Otherwise, an Attribute Create SOP (if necessary) and a Paint SOP will
+be appended.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.createCustomSelectionSopNodeFilterTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">createCustomSelectionSopNodeFilterTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename</em>, <em>selection_queries</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.createCustomSelectionSopNodeFilterTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates sop nodes(s) for the given node type and selection queries.
+selection_queries is a list of dictionaries, where each dictionary
+corresponds to the argument list of SceneViewer.selectGeometry plus
+the additional keys ‘parm_name’, which is the name of the group
+parameter corresponding to the selection, and ‘is_required’, which
+specifies if the selection is required.
+Returns the list of sop nodes created.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.createSopNodeContainer">
+<code class="descclassname">soptoolutils.</code><code class="descname">createSopNodeContainer</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>newobjectname</em>, <em>merge_context=False</em>, <em>merge_creator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.createSopNodeContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a scene level object node to contain a new SOP node.
+This function may return an existing object node if the Model in
+Context option is turned on, or the merge_context parameter is
+set to True.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.createSopNodeFilter">
+<code class="descclassname">soptoolutils.</code><code class="descname">createSopNodeFilter</code><span class="sig-paren">(</span><em>container</em>, <em>nodetypename</em>, <em>nodename</em>, <em>exact_node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.createSopNodeFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a SOP node that takes an input.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.createSopNodeGenerator">
+<code class="descclassname">soptoolutils.</code><code class="descname">createSopNodeGenerator</code><span class="sig-paren">(</span><em>container</em>, <em>nodetypename</em>, <em>nodename</em>, <em>merge_context=False</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.createSopNodeGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a SOP node that doesn’t require an input. If the container
+already has nodes, this new SOP may be merged with the existing SOPs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.customSopNodeFilterTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">customSopNodeFilterTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>activepane</em>, <em>nodetypename</em>, <em>prompt=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.customSopNodeFilterTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.customStateTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">customStateTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.customStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes a custom SOP tool. This differs from genericTool() in that the
+custom state has custom selectors. For filters, we prompt for a single
+object, then enter into it before entering the custom state.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.findDeformTypeInputSop">
+<code class="descclassname">soptoolutils.</code><code class="descname">findDeformTypeInputSop</code><span class="sig-paren">(</span><em>endnode</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.findDeformTypeInputSop" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does a depth first traversal of the node
+input hierarchy to find the first deform-type node.
+Returns the deform-type node.  Returns None if no such node exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.findViewersUV">
+<code class="descclassname">soptoolutils.</code><code class="descname">findViewersUV</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.findViewersUV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the active viewer and return its uv attribute name.
+If no viewer, return ‘uv’</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.genericCaptureTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">genericCaptureTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.genericCaptureTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes a generic capture-type SOP tool.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.genericReusableTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">genericReusableTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename=None</em>, <em>iscapture=False</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.genericReusableTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes a generic reusable SOP tool.
+If iscapture is True, then the tool is considered to be a capture-type
+tool.  Capture-type tools will attempt to create new nodes before
+any deform-type SOPs in the network.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.genericSopNodeFilterTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">genericSopNodeFilterTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename</em>, <em>isreusable=False</em>, <em>iscapture=False</em>, <em>allow_obj_sel=True</em>, <em>selector_indices=()</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.genericSopNodeFilterTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic tool for creating a SOP node that takes another SOP node
+as input. The user is prompted for selections based on the selector
+bindings set in the OPbindings file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.genericSopNodeGeneratorTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">genericSopNodeGeneratorTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename</em>, <em>merge_context=False</em>, <em>prompt=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.genericSopNodeGeneratorTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic tool for instantiating SOP generator nodes such as Box and
+Sphere. The user is prompted to select a location in the viewport if
+the tool was not invoked with the Ctrl key. The new SOP may be merged
+into an existing scene level object depending onthe merge_context
+parameter value.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.getGeometrySelections">
+<code class="descclassname">soptoolutils.</code><code class="descname">getGeometrySelections</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>selectors</em>, <em>allow_obj_selection=True</em>, <em>prompt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.getGeometrySelections" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function invokes a geometry selection for each
+selector in “selectors”.  The selector is not started, but
+its properties are used when calling sceneviewer.selectGeometry().</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.getItemGeometry">
+<code class="descclassname">soptoolutils.</code><code class="descname">getItemGeometry</code><span class="sig-paren">(</span><em>item</em>, <em>outputindex=0</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.getItemGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the geometry from the specified item’s output index.</p>
+<p>If ‘item’ is a hou.SubnetIndirectInput, the parent subnet’s connections
+are traversed until we find an actual node. We return None if we end up
+at an unconnected input.</p>
+<p>In the case of indirect inputs, the specified ‘outputindex’ is ignored,
+since the is no such concepts with indirect inputs. However, the
+traversal of the parent subnet’s input connections may arrive at a
+node via an outputindex other than 0, in which case the geometry
+corresponding to that output is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.initNewSopFilterNode">
+<code class="descclassname">soptoolutils.</code><code class="descname">initNewSopFilterNode</code><span class="sig-paren">(</span><em>branch</em>, <em>newnode</em>, <em>selections</em>, <em>container</em>, <em>force_keep_original_objects=False</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.initNewSopFilterNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.initNewSopFilterNodeWithOutput">
+<code class="descclassname">soptoolutils.</code><code class="descname">initNewSopFilterNodeWithOutput</code><span class="sig-paren">(</span><em>branch</em>, <em>newnode</em>, <em>selections</em>, <em>container</em>, <em>outputnode</em>, <em>force_keep_original_objects=False</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.initNewSopFilterNodeWithOutput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.initReusedSopFilterNode">
+<code class="descclassname">soptoolutils.</code><code class="descname">initReusedSopFilterNode</code><span class="sig-paren">(</span><em>reusednode</em>, <em>selections</em>, <em>container</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.initReusedSopFilterNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.paintObject">
+<code class="descclassname">soptoolutils.</code><code class="descname">paintObject</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>object_nodes</em>, <em>attribname</em>, <em>props</em>, <em>objfilter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.paintObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paints an attribute on an object node. Loops through object_nodes and
+uses the first paintable object (it must have a valid display node).
+Existing Paint SOPs will be reused. If none is found, an Attribute
+Create SOP (if necessary) and a Paint SOP will be appended.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.scriptSopFilterTool">
+<code class="descclassname">soptoolutils.</code><code class="descname">scriptSopFilterTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename=None</em>, <em>center_on_selection=False</em>, <em>translate_parm_name=None</em>, <em>connected_selection=True</em>, <em>orient=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.scriptSopFilterTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new script operator (OTL) that operates on
+existing geometry.  This can be used when no generic tool exists
+for the desired operator.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.setGroupParmsOnSopNode">
+<code class="descclassname">soptoolutils.</code><code class="descname">setGroupParmsOnSopNode</code><span class="sig-paren">(</span><em>node</em>, <em>selector</em>, <em>selection</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.setGroupParmsOnSopNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the group type and group parameters on the given node
+based on the selection info.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="soptoolutils.setupBendRegions">
+<code class="descclassname">soptoolutils.</code><code class="descname">setupBendRegions</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#soptoolutils.setupBendRegions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cooks the input to node to find its bounding box and sets
+the capture region of node to encompass that.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="skytoolutils.html" title="previous chapter">skytoolutils module</a></li>
+      <li>Next: <a href="soputils.html" title="next chapter">soputils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/soptoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/soptoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

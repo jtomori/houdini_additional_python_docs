@@ -1,0 +1,402 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>bookish.avenue package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="bookish.grammars package" href="bookish.grammars.html" />
+    <link rel="prev" title="bookish package" href="bookish.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bookish-avenue-package">
+<h1>bookish.avenue package<a class="headerlink" href="#bookish-avenue-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-bookish.avenue.avenue">
+<span id="bookish-avenue-avenue-module"></span><h2>bookish.avenue.avenue module<a class="headerlink" href="#module-bookish.avenue.avenue" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bookish.avenue.avenue.AvenueContext">
+<em class="property">class </em><code class="descclassname">bookish.avenue.avenue.</code><code class="descname">AvenueContext</code><span class="sig-paren">(</span><em>root</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.AvenueContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+<dl class="method">
+<dt id="bookish.avenue.avenue.AvenueContext.parent">
+<code class="descname">parent</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.AvenueContext.parent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.avenue.AvenueManager">
+<em class="property">class </em><code class="descclassname">bookish.avenue.avenue.</code><code class="descname">AvenueManager</code><a class="headerlink" href="#bookish.avenue.avenue.AvenueManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Simple class that provides caching of compiled Avenue strings.</p>
+<dl class="method">
+<dt id="bookish.avenue.avenue.AvenueManager.compile">
+<code class="descname">compile</code><span class="sig-paren">(</span><em>avestring</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.AvenueManager.compile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.avenue.AvenueManager.find">
+<code class="descname">find</code><span class="sig-paren">(</span><em>ave</em>, <em>root</em>, <em>start</em>, <em>**vars</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.AvenueManager.find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="bookish.avenue.avenue.AvenueParserError">
+<em class="property">exception </em><code class="descclassname">bookish.avenue.avenue.</code><code class="descname">AvenueParserError</code><a class="headerlink" href="#bookish.avenue.avenue.AvenueParserError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="bookish.avenue.avenue.find">
+<code class="descclassname">bookish.avenue.avenue.</code><code class="descname">find</code><span class="sig-paren">(</span><em>parsed</em>, <em>root</em>, <em>**vars</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.avenue.avenue.get_parent">
+<code class="descclassname">bookish.avenue.avenue.</code><code class="descname">get_parent</code><span class="sig-paren">(</span><em>parents</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.get_parent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.avenue.avenue.make_parents">
+<code class="descclassname">bookish.avenue.avenue.</code><code class="descname">make_parents</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.make_parents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="bookish.avenue.avenue.parse">
+<code class="descclassname">bookish.avenue.avenue.</code><code class="descname">parse</code><span class="sig-paren">(</span><em>avestring</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.avenue.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-bookish.avenue.patterns">
+<span id="bookish-avenue-patterns-module"></span><h2>bookish.avenue.patterns module<a class="headerlink" href="#module-bookish.avenue.patterns" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bookish.avenue.patterns.Action">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Action</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Action.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Action.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Action.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Action.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Ancestor">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Ancestor</code><span class="sig-paren">(</span><em>left</em>, <em>right</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Ancestor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Ancestor.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Ancestor.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Ancestor.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Ancestor.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.App">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">App</code><span class="sig-paren">(</span><em>name</em>, <em>patterns</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.App" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.App.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.App.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.App.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.App.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Child">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Child</code><span class="sig-paren">(</span><em>left</em>, <em>right</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Child.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Child.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Child.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Child.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Comparison">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Comparison</code><span class="sig-paren">(</span><em>name</em>, <em>opname</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Comparison" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.TestPattern" title="bookish.avenue.patterns.TestPattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.TestPattern</span></code></a></p>
+<dl class="attribute">
+<dt id="bookish.avenue.patterns.Comparison.ops">
+<code class="descname">ops</code><em class="property"> = {'!=': &lt;built-in function ne&gt;, '&lt;': &lt;built-in function lt&gt;, '&lt;=': &lt;built-in function le&gt;, '=': &lt;built-in function eq&gt;, '==': &lt;built-in function eq&gt;, '&gt;': &lt;built-in function gt&gt;, '&gt;=': &lt;built-in function ge&gt;}</em><a class="headerlink" href="#bookish.avenue.patterns.Comparison.ops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Filter">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Filter</code><span class="sig-paren">(</span><em>pattern</em>, <em>test</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Filter.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Filter.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Filter.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Filter.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Lookup">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Lookup</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Lookup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Lookup.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Lookup.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Lookup.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Lookup.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Pattern">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Pattern</code><a class="headerlink" href="#bookish.avenue.patterns.Pattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Pattern.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Pattern.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Pattern.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Pattern.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Predicate">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Predicate</code><span class="sig-paren">(</span><em>source</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Predicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.TestPattern" title="bookish.avenue.patterns.TestPattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.TestPattern</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Root">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Root</code><a class="headerlink" href="#bookish.avenue.patterns.Root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Root.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Root.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Root.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Root.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Sequence">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Sequence</code><span class="sig-paren">(</span><em>patterns</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Sequence.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Sequence.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Sequence.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Sequence.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Slice">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Slice</code><span class="sig-paren">(</span><em>start</em>, <em>stop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Slice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Slice.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Slice.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Slice.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Slice.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Star">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Star</code><a class="headerlink" href="#bookish.avenue.patterns.Star" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Star.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Star.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Star.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Star.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.TestPattern">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">TestPattern</code><a class="headerlink" href="#bookish.avenue.patterns.TestPattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.TestPattern.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.TestPattern.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.TestPattern.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.TestPattern.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="bookish.avenue.patterns.Union">
+<em class="property">class </em><code class="descclassname">bookish.avenue.patterns.</code><code class="descname">Union</code><span class="sig-paren">(</span><em>patterns</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Union" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bookish.avenue.patterns.Pattern" title="bookish.avenue.patterns.Pattern"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.avenue.patterns.Pattern</span></code></a></p>
+<dl class="method">
+<dt id="bookish.avenue.patterns.Union.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Union.matches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bookish.avenue.patterns.Union.pull">
+<code class="descname">pull</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.Union.pull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="bookish.avenue.patterns.run_code">
+<code class="descclassname">bookish.avenue.patterns.</code><code class="descname">run_code</code><span class="sig-paren">(</span><em>ctx</em>, <em>obj</em>, <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#bookish.avenue.patterns.run_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-bookish.avenue">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-bookish.avenue" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">bookish.avenue package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-bookish.avenue.avenue">bookish.avenue.avenue module</a></li>
+<li><a class="reference internal" href="#module-bookish.avenue.patterns">bookish.avenue.patterns module</a></li>
+<li><a class="reference internal" href="#module-bookish.avenue">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+  <li><a href="bookish.html">bookish package</a><ul>
+      <li>Previous: <a href="bookish.html" title="previous chapter">bookish package</a></li>
+      <li>Next: <a href="bookish.grammars.html" title="next chapter">bookish.grammars package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/bookish.avenue.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/bookish.avenue.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

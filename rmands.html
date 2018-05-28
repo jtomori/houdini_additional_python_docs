@@ -1,0 +1,394 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>rmands module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="roptoolutils module" href="roptoolutils.html" />
+    <link rel="prev" title="rigtoolutils package" href="rigtoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-rmands">
+<span id="rmands-module"></span><h1>rmands module<a class="headerlink" href="#module-rmands" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="rmands.ArgsOutput">
+<em class="property">class </em><code class="descclassname">rmands.</code><code class="descname">ArgsOutput</code><span class="sig-paren">(</span><em>outputType</em>, <em>outputName</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.ArgsOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Args output object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="rmands.RslMethod">
+<em class="property">class </em><code class="descclassname">rmands.</code><code class="descname">RslMethod</code><span class="sig-paren">(</span><em>rsl_return</em>, <em>rsl_name</em>, <em>rsl_isvariadic=False</em>, <em>rsl_arguments=None</em>, <em>rsl_help=None</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>An RslMethod object describes an RSL method on a class.</p>
+<dl class="method">
+<dt id="rmands.RslMethod.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>fp</em>, <em>indent=''</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslMethod.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the method in the json format used in the VopTypeDefinitions 
+file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslMethod.setHelp">
+<code class="descname">setHelp</code><span class="sig-paren">(</span><em>rsl_help</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslMethod.setHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the help for the parameter.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="rmands.RslParm">
+<em class="property">class </em><code class="descclassname">rmands.</code><code class="descname">RslParm</code><span class="sig-paren">(</span><em>rsl_type</em>, <em>rsl_name</em>, <em>rsl_default=None</em>, <em>rsl_arraysize=1</em>, <em>rsl_help=None</em>, <em>ui_page=None</em>, <em>inputType=None</em>, <em>connectable=True</em>, <em>rsl_min=None</em>, <em>rsl_max=None</em>, <em>hideRule=None</em>, <em>isRamp=False</em>, <em>rampParmTags=([]</em>, <em>{})</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>An RslParm object describes the RSL parameter used in a
+shader.  The parameter default should <em>always</em> be a list
+object (even for scalars).</p>
+<dl class="method">
+<dt id="rmands.RslParm.getDisableOp">
+<code class="descname">getDisableOp</code><span class="sig-paren">(</span><em>opName</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.getDisableOp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.getHideOp">
+<code class="descname">getHideOp</code><span class="sig-paren">(</span><em>opName</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.getHideOp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.isShaderParm">
+<code class="descname">isShaderParm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.isShaderParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to determine if the parameter is a shader parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.numberToString">
+<code class="descname">numberToString</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.numberToString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.processDisableRule">
+<code class="descname">processDisableRule</code><span class="sig-paren">(</span><em>hintdict</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.processDisableRule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.processHideRule">
+<code class="descname">processHideRule</code><span class="sig-paren">(</span><em>hintdict</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.processHideRule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>fp</em>, <em>indent=''</em>, <em>ds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the parameter in the format used by Houdini dialog
+script files.</p>
+<p>Ensure that the parmtag storing the RSL type information
+is saved as well.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.saveMultiparm">
+<code class="descname">saveMultiparm</code><span class="sig-paren">(</span><em>fp</em>, <em>parmName</em>, <em>parmLabel</em>, <em>indent=''</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.saveMultiparm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setArraySize">
+<code class="descname">setArraySize</code><span class="sig-paren">(</span><em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setArraySize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor method to set the array size for the parameter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setDefault">
+<code class="descname">setDefault</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setDefault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor method to set the default value for the parameter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setDisableRule">
+<code class="descname">setDisableRule</code><span class="sig-paren">(</span><em>lockOp</em>, <em>lockPath</em>, <em>lockValue</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setDisableRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the disable-when rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setHelp">
+<code class="descname">setHelp</code><span class="sig-paren">(</span><em>rsl_help</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the help for the parameter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setHideRule">
+<code class="descname">setHideRule</code><span class="sig-paren">(</span><em>visOp</em>, <em>visPath</em>, <em>visValue</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setHideRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the hide-when rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setLabel">
+<code class="descname">setLabel</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The label shows up as the UI label for the parameter and
+may be different than the parameter name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setMax">
+<code class="descname">setMax</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setMax" title="Permalink to this definition">¶</a></dt>
+<dd><p>The max value for the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setMin">
+<code class="descname">setMin</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setMin" title="Permalink to this definition">¶</a></dt>
+<dd><p>The min value for the parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setMultipleDisableRule">
+<code class="descname">setMultipleDisableRule</code><span class="sig-paren">(</span><em>lockOp1</em>, <em>lockPath1</em>, <em>lockValue1</em>, <em>lockOp</em>, <em>lockOp2</em>, <em>lockPath2</em>, <em>lockValue2</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setMultipleDisableRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the multiple disable-when rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setMultipleHideRule">
+<code class="descname">setMultipleHideRule</code><span class="sig-paren">(</span><em>visOp1</em>, <em>visPath1</em>, <em>visValue1</em>, <em>visOp</em>, <em>visOp2</em>, <em>visPath2</em>, <em>visValue2</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setMultipleHideRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the multiple hide-when rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setUI">
+<code class="descname">setUI</code><span class="sig-paren">(</span><em>ui_type</em>, <em>meta</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setUI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the Houdini UI widget.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslParm.setVisibility">
+<code class="descname">setVisibility</code><span class="sig-paren">(</span><em>vis</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslParm.setVisibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessory method to set the visibility state.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="rmands.RslShader">
+<em class="property">class </em><code class="descclassname">rmands.</code><code class="descname">RslShader</code><span class="sig-paren">(</span><em>shader_type</em>, <em>shader_name</em>, <em>shader_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RslShader class stores the information about a shader.
+This consists of</p>
+<blockquote>
+<div>shader_type = RSL shader type (i.e. “surface”, “light”)
+shader_name = The name of the shader (i.e. “plastic”)</div></blockquote>
+<dl class="docutils">
+<dt>The shader has additional attributes which can be set</dt>
+<dd>Label = The text which appears in the SHOP menu
+Help  = A help string
+Icon  = The icon used on the SHOP tile</dd>
+</dl>
+<p>After the shader is constructed, parameters may be added.</p>
+<dl class="method">
+<dt id="rmands.RslShader.addMethod">
+<code class="descname">addMethod</code><span class="sig-paren">(</span><em>method</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.addMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.addOutput">
+<code class="descname">addOutput</code><span class="sig-paren">(</span><em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.addOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add output</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.addParm">
+<code class="descname">addParm</code><span class="sig-paren">(</span><em>parm</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.addParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a parameter.  The parameter should be an RslParm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.addToOTL">
+<code class="descname">addToOTL</code><span class="sig-paren">(</span><em>otl_path</em>, <em>force=True</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.addToOTL" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method will add the shader definition to an OTL.</p>
+<p>If the OTL already contains a definition for the shader,
+the force parameter can be used to ensure that this shader
+is included (instead of leaving the previous definition).
+This is the default behaviour.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.beginPage">
+<code class="descname">beginPage</code><span class="sig-paren">(</span><em>pageName</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.beginPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each page is stored as a (list,dict) tuple. Child pages names are
+stored as a string in the list of the parent (the child page’s name)
+and the child page itself is then stored in the dict of
+its parent. The dict has a pointer back to its parent node
+which is a tuple of (parentpage, ‘child name’)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.endPage">
+<code class="descname">endPage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.endPage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.getPagePath">
+<code class="descname">getPagePath</code><span class="sig-paren">(</span><em>page</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.getPagePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>build a pathname to the current page replacing spaces with _
+and using _ as a joining char</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.isValid">
+<code class="descname">isValid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.isValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RSL shader is only valid if there’s a corresponding
+SHOP type for the shader.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.makeOTL">
+<code class="descname">makeOTL</code><span class="sig-paren">(</span><em>otl_path</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.makeOTL" title="Permalink to this definition">¶</a></dt>
+<dd><p>An OTL consists of several components.  The most important
+for SHOPs is the dialog script (which defines the UI).</p>
+<p>This part of the program relies on being able to create an
+expanded view of the OTL (consisting of all the
+components).</p>
+<p>When the expanded view has been created, the “hotl”
+application is invoked to bundle the components into the
+OTL.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.saveDialogScript">
+<code class="descname">saveDialogScript</code><span class="sig-paren">(</span><em>fp</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.saveDialogScript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the dialog script to the file passed in.  This is the
+primary component of the OTL.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.savePage">
+<code class="descname">savePage</code><span class="sig-paren">(</span><em>fp</em>, <em>pageName</em>, <em>node</em>, <em>indent=''</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.savePage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.saveRampParmTags">
+<code class="descname">saveRampParmTags</code><span class="sig-paren">(</span><em>fp</em>, <em>parmName</em>, <em>indent=''</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.saveRampParmTags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.saveRoot">
+<code class="descname">saveRoot</code><span class="sig-paren">(</span><em>fp</em>, <em>node</em>, <em>indent=''</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.saveRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.saveVopTypeDefinitions">
+<code class="descname">saveVopTypeDefinitions</code><span class="sig-paren">(</span><em>fp</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.saveVopTypeDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the vop type defintions file. This file allows other classes
+to introspect methods on the shader class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.setHelp">
+<code class="descname">setHelp</code><span class="sig-paren">(</span><em>help</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.setHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the help for the SHOP.  The help should be an array of
+strings.  Each element of the array will be a separate
+line of help text.  For example:</p>
+<p>shader.setHelp([“line one”, “line two”])</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.setIcon">
+<code class="descname">setIcon</code><span class="sig-paren">(</span><em>icon</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.setIcon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the icon for the SHOP</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.setLabel">
+<code class="descname">setLabel</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the label (text which shows up in the SHOP menu) for
+the shader.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.setName">
+<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set operator name (overriding shader name for some reason)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rmands.RslShader.setPath">
+<code class="descname">setPath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#rmands.RslShader.setPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the path (text to resolve the shader in rib)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="rigtoolutils.html" title="previous chapter">rigtoolutils package</a></li>
+      <li>Next: <a href="roptoolutils.html" title="next chapter">roptoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/rmands.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/rmands.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

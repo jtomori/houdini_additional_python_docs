@@ -1,0 +1,640 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>objecttoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opnode_sum module" href="opnode_sum.html" />
+    <link rel="prev" title="nodethemes module" href="nodethemes.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-objecttoolutils">
+<span id="objecttoolutils-module"></span><h1>objecttoolutils module<a class="headerlink" href="#module-objecttoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="objecttoolutils.AutoPaneState">
+<em class="property">class </em><code class="descclassname">objecttoolutils.</code><code class="descname">AutoPaneState</code><span class="sig-paren">(</span><em>pane</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.AutoPaneState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Auto Scope class to keep a Pane State</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="objecttoolutils.ConstraintBlendToolbox">
+<em class="property">class </em><code class="descclassname">objecttoolutils.</code><code class="descname">ConstraintBlendToolbox</code><a class="headerlink" href="#objecttoolutils.ConstraintBlendToolbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="toolutils.html#toolutils.ToolboxTemplateGroup" title="toolutils.ToolboxTemplateGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">toolutils.ToolboxTemplateGroup</span></code></a></p>
+<p>Toolbox for blend constraints</p>
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintBlendToolbox.add_key">
+<code class="descname">add_key</code><em class="property"> = 0</em><a class="headerlink" href="#objecttoolutils.ConstraintBlendToolbox.add_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintBlendToolbox.blend_mask">
+<code class="descname">blend_mask</code><em class="property"> = 511</em><a class="headerlink" href="#objecttoolutils.ConstraintBlendToolbox.blend_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintBlendToolbox.blend_mode">
+<code class="descname">blend_mode</code><em class="property"> = 1</em><a class="headerlink" href="#objecttoolutils.ConstraintBlendToolbox.blend_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintBlendToolbox.blend_value">
+<code class="descname">blend_value</code><em class="property"> = 1.0</em><a class="headerlink" href="#objecttoolutils.ConstraintBlendToolbox.blend_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintBlendToolbox.keep_offset">
+<code class="descname">keep_offset</code><em class="property"> = 0</em><a class="headerlink" href="#objecttoolutils.ConstraintBlendToolbox.keep_offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="objecttoolutils.ConstraintBlendToolbox.updateGlobals">
+<code class="descname">updateGlobals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.ConstraintBlendToolbox.updateGlobals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="objecttoolutils.ConstraintMenuEntry">
+<em class="property">class </em><code class="descclassname">objecttoolutils.</code><code class="descname">ConstraintMenuEntry</code><span class="sig-paren">(</span><em>name</em>, <em>icon</em>, <em>cb</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.ConstraintMenuEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="objecttoolutils.ConstraintParentToolbox">
+<em class="property">class </em><code class="descclassname">objecttoolutils.</code><code class="descname">ConstraintParentToolbox</code><a class="headerlink" href="#objecttoolutils.ConstraintParentToolbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="toolutils.html#toolutils.ToolboxTemplateGroup" title="toolutils.ToolboxTemplateGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">toolutils.ToolboxTemplateGroup</span></code></a></p>
+<p>Toolbox for parent constraints</p>
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintParentToolbox.add_key">
+<code class="descname">add_key</code><em class="property"> = 1</em><a class="headerlink" href="#objecttoolutils.ConstraintParentToolbox.add_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintParentToolbox.blend_mask">
+<code class="descname">blend_mask</code><em class="property"> = 511</em><a class="headerlink" href="#objecttoolutils.ConstraintParentToolbox.blend_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintParentToolbox.blend_mode">
+<code class="descname">blend_mode</code><em class="property"> = 3</em><a class="headerlink" href="#objecttoolutils.ConstraintParentToolbox.blend_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintParentToolbox.blend_value">
+<code class="descname">blend_value</code><em class="property"> = 1.0</em><a class="headerlink" href="#objecttoolutils.ConstraintParentToolbox.blend_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintParentToolbox.keep_offset">
+<code class="descname">keep_offset</code><em class="property"> = 1</em><a class="headerlink" href="#objecttoolutils.ConstraintParentToolbox.keep_offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="objecttoolutils.ConstraintParentToolbox.updateGlobals">
+<code class="descname">updateGlobals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.ConstraintParentToolbox.updateGlobals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="objecttoolutils.ConstraintToolbox">
+<em class="property">class </em><code class="descclassname">objecttoolutils.</code><code class="descname">ConstraintToolbox</code><span class="sig-paren">(</span><em>do_update=True</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.ConstraintToolbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="toolutils.html#toolutils.ToolboxTemplateGroup" title="toolutils.ToolboxTemplateGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">toolutils.ToolboxTemplateGroup</span></code></a></p>
+<p>Common toolbox for all constraints</p>
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintToolbox.blend_mode">
+<code class="descname">blend_mode</code><em class="property"> = 0</em><a class="headerlink" href="#objecttoolutils.ConstraintToolbox.blend_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintToolbox.keep_offset">
+<code class="descname">keep_offset</code><em class="property"> = 0</em><a class="headerlink" href="#objecttoolutils.ConstraintToolbox.keep_offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="objecttoolutils.ConstraintToolbox.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.ConstraintToolbox.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>All constraints have a keep_offset toggle at the end</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="objecttoolutils.ConstraintTransformToolbox">
+<em class="property">class </em><code class="descclassname">objecttoolutils.</code><code class="descname">ConstraintTransformToolbox</code><a class="headerlink" href="#objecttoolutils.ConstraintTransformToolbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="toolutils.html#toolutils.ToolboxTemplateGroup" title="toolutils.ToolboxTemplateGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">toolutils.ToolboxTemplateGroup</span></code></a></p>
+<p>Toolbox for transform constraints</p>
+<dl class="attribute">
+<dt id="objecttoolutils.ConstraintTransformToolbox.pmode">
+<code class="descname">pmode</code><em class="property"> = 2</em><a class="headerlink" href="#objecttoolutils.ConstraintTransformToolbox.pmode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="objecttoolutils.ConstraintTransformToolbox.updateGlobals">
+<code class="descname">updateGlobals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.ConstraintTransformToolbox.updateGlobals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="objecttoolutils.RightToolbox">
+<em class="property">class </em><code class="descclassname">objecttoolutils.</code><code class="descname">RightToolbox</code><a class="headerlink" href="#objecttoolutils.RightToolbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="toolutils.html#toolutils.ToolboxTemplateGroup" title="toolutils.ToolboxTemplateGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">toolutils.ToolboxTemplateGroup</span></code></a></p>
+<p>Empty Right Toolbox to fill the right side of the toolbox</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.bakeanimationStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">bakeanimationStateTool</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.bakeanimationStateTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.checkShiftDown">
+<code class="descclassname">objecttoolutils.</code><code class="descname">checkShiftDown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.checkShiftDown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintaddkey">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintaddkey</code><span class="sig-paren">(</span><em>add_key</em>, <em>prm</em>, <em>f</em>, <em>v0</em>, <em>v1</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintaddkey" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintaddkeyoffset">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintaddkeyoffset</code><span class="sig-paren">(</span><em>add_key</em>, <em>keep_offset</em>, <em>bld</em>, <em>f</em>, <em>v0</em>, <em>v1</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintaddkeyoffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintbakeStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintbakeStateTool</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintbakeStateTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintblendStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintblendStateTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintblendStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blend Constraint Shelf Tool</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintblendStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintblendStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>arg_nodes</em>, <em>keep_offset=0</em>, <em>blend_mode=0</em>, <em>add_key=0</em>, <em>blend_value=1.0</em>, <em>blend_mask=511</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintblendStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blend Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintdeleteStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintdeleteStateTool</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintdeleteStateTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintdisableStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintdisableStateTool</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintdisableStateTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintenableStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintenableStateTool</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintenableStateTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintgamepadStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintgamepadStateTool</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintgamepadStateTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintlookatStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintlookatStateTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintlookatStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look At Constraint Shelf Tool</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintlookatStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintlookatStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>lookat_nodes</em>, <em>lookup_nodes</em>, <em>keep_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintlookatStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look At Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintnetworkStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintnetworkStateToolApply</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintnetworkStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintparentblendLayout">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintparentblendLayout</code><span class="sig-paren">(</span><em>chop</em>, <em>parent</em>, <em>blend</em>, <em>blend_target</em>, <em>targets</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintparentblendLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintparentblendLayouts">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintparentblendLayouts</code><span class="sig-paren">(</span><em>chops</em>, <em>parents</em>, <em>blends</em>, <em>blend_targets</em>, <em>targets</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintparentblendLayouts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintparentblendStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintparentblendStateTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintparentblendStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent Blend Constraint Shelf Tool</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintparentblendStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintparentblendStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>arg_nodes</em>, <em>keep_offset</em>, <em>blend_mode</em>, <em>add_key=False</em>, <em>blend_value=1.0</em>, <em>blend_mask=511</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintparentblendStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent Blend Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintpathStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintpathStateTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintpathStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path Constraint Shelf Tool</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintpathStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintpathStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>path_nodes</em>, <em>lookat_nodes</em>, <em>lookup_nodes</em>, <em>keep_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintpathStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintpointsSelect">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintpointsSelect</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintpointsSelect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintpointsStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintpointsStateTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintpointsStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Points Constraint Shelf Tool</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintpointsStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintpointsStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>soppath_nodes</em>, <em>lookat_nodes</em>, <em>lookup_nodes</em>, <em>keep_offset=False</em>, <em>select_points=None</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintpointsStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Points Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsMenu">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsMenu</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback for the constraint_path extra button</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsMenuBuiltinEntries">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsMenuBuiltinEntries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsMenuBuiltinEntries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsMenuEntries">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsMenuEntries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsMenuEntries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsMenuUserEntries">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsMenuUserEntries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsMenuUserEntries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsequenceStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsequenceStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>arg_nodes</em>, <em>keep_offset=0</em>, <em>add_key=0</em>, <em>blend_value=1.0</em>, <em>blend_mask=511</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsequenceStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsimpleblendStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsimpleblendStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>arg_nodes</em>, <em>keep_offset=0</em>, <em>add_key=0</em>, <em>blend_value=1.0</em>, <em>blend_mask=511</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsimpleblendStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Blend Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsurfacePicked">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsurfacePicked</code><span class="sig-paren">(</span><em>n</em>, <em>npr</em>, <em>picked</em>, <em>new_sop</em>, <em>new_prim</em>, <em>new_pos</em>, <em>new_uvw</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsurfacePicked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsurfaceSelect">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsurfaceSelect</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsurfaceSelect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsurfaceStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsurfaceStateTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsurfaceStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface Constraint Shelf Tool</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constraintsurfaceStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constraintsurfaceStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>lookat_nodes</em>, <em>lookup_nodes</em>, <em>keep_offset</em>, <em>select_location</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constraintsurfaceStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constrainttoggleStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constrainttoggleStateTool</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constrainttoggleStateTool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constrainttransformStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constrainttransformStateTool</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constrainttransformStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform Constraint Shelf Tool</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.constrainttransformStateToolApply">
+<code class="descclassname">objecttoolutils.</code><code class="descname">constrainttransformStateToolApply</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>pivot_nodes</em>, <em>pmode</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.constrainttransformStateToolApply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform Constraint Shelf Tool without Picking session</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.createChopWithRate">
+<code class="descclassname">objecttoolutils.</code><code class="descname">createChopWithRate</code><span class="sig-paren">(</span><em>n</em>, <em>node_type</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.createChopWithRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a CHOP node and add rate references.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.createChopnetWithRate">
+<code class="descclassname">objecttoolutils.</code><code class="descname">createChopnetWithRate</code><span class="sig-paren">(</span><em>n</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.createChopnetWithRate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a CHOPnet and add rate spare parameter if one of its parents doesn’t have it already.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.createObjNode">
+<code class="descclassname">objecttoolutils.</code><code class="descname">createObjNode</code><span class="sig-paren">(</span><em>container</em>, <em>nodetypename</em>, <em>inputnodes</em>, <em>nodename</em>, <em>exact_node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.createObjNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Object node inside the specified container network.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.createSkyLight">
+<code class="descclassname">objecttoolutils.</code><code class="descname">createSkyLight</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.createSkyLight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a linked sky light and sunlight pair.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.customStateTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">customStateTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>statename</em>, <em>nodename=None</em>, <em>clicktoplace=None</em>, <em>translate_parm_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.customStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes a custom object state if invoked from a scene viewer. This
+allows the custom state to control the creation and configuration of
+the object node. In a network editor this function calls the
+standard node creation code.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.fixupArgNodes">
+<code class="descclassname">objecttoolutils.</code><code class="descname">fixupArgNodes</code><span class="sig-paren">(</span><em>arg_nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.fixupArgNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.forceList">
+<code class="descclassname">objecttoolutils.</code><code class="descname">forceList</code><span class="sig-paren">(</span><em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.forceList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.forceObject">
+<code class="descclassname">objecttoolutils.</code><code class="descname">forceObject</code><span class="sig-paren">(</span><em>o</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.forceObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.freeze">
+<code class="descclassname">objecttoolutils.</code><code class="descname">freeze</code><span class="sig-paren">(</span><em>selected_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.freeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Freezes the transforms of the given list of geometry objects. Transform
+SOPs are added in order to move the world transforms of the objects
+to the geometry level.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.genericCameraLightTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">genericCameraLightTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename=None</em>, <em>clicktoplace=None</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.genericCameraLightTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic function for creating Camera or Light object nodes of
+various types. This tool handles the initialization of the node
+transforms to match the current view if the Ctrl key was used to
+invoke the tool. Otherwise the user is prompted for a location.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.genericObjNodeFilterTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">genericObjNodeFilterTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename</em>, <em>prompt=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.genericObjNodeFilterTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Object node that requires other object nodes as input.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.genericObjNodeGeneratorTool">
+<code class="descclassname">objecttoolutils.</code><code class="descname">genericObjNodeGeneratorTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename</em>, <em>clicktoplace</em>, <em>translate_parm_name=None</em>, <em>prompt=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.genericObjNodeGeneratorTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Object Generator node. The node is either created at the
+origin, or asks the user to select a location in the viewport
+depending on the value of the clicktoplace parameter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.getConstraintsOnParms">
+<code class="descclassname">objecttoolutils.</code><code class="descname">getConstraintsOnParms</code><span class="sig-paren">(</span><em>objs</em>, <em>valid_values</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.getConstraintsOnParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.getInputsRecursively">
+<code class="descclassname">objecttoolutils.</code><code class="descname">getInputsRecursively</code><span class="sig-paren">(</span><em>n</em>, <em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.getInputsRecursively" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.getObjNodeContainer">
+<code class="descclassname">objecttoolutils.</code><code class="descname">getObjNodeContainer</code><span class="sig-paren">(</span><em>cwd</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.getObjNodeContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the scene level object that is or contains the specified
+node (which should be a SOP node or Object node).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.getViewportPivotDistance">
+<code class="descclassname">objecttoolutils.</code><code class="descname">getViewportPivotDistance</code><span class="sig-paren">(</span><em>viewport</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.getViewportPivotDistance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initConstraint">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initConstraint</code><span class="sig-paren">(</span><em>cname</em>, <em>clabel</em>, <em>chop</em>, <em>targets</em>, <em>setflag</em>, <em>useSetNextInput=True</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initConstraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initConstraints">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initConstraints</code><span class="sig-paren">(</span><em>cname</em>, <em>clabel</em>, <em>chops</em>, <em>targets</em>, <em>setflag=True</em>, <em>useSetNextInput=True</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initConstraints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initEmptyGeometryObject">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initEmptyGeometryObject</code><span class="sig-paren">(</span><em>objectnode</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initEmptyGeometryObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy the File SOP that gets created inside a default Geometry
+Object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initLookAtTargets">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initLookAtTargets</code><span class="sig-paren">(</span><em>chops</em>, <em>lookat_nodes</em>, <em>lookup_nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initLookAtTargets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOBJConstraints">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOBJConstraints</code><span class="sig-paren">(</span><em>objs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOBJConstraints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOBJTarget">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOBJTarget</code><span class="sig-paren">(</span><em>chop</em>, <em>arg_nodes</em>, <em>nodetype='constraintobject'</em>, <em>obj=None</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOBJTarget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOBJTargets">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOBJTargets</code><span class="sig-paren">(</span><em>chops</em>, <em>arg_nodes</em>, <em>nodetype='constraintobject'</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOBJTargets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOBJTargetsOffset">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOBJTargetsOffset</code><span class="sig-paren">(</span><em>chops</em>, <em>arg_nodes</em>, <em>keep_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOBJTargetsOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOffset">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOffset</code><span class="sig-paren">(</span><em>cname</em>, <em>clabel</em>, <em>obj</em>, <em>constraint</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOffsetBlends">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOffsetBlends</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>constraints</em>, <em>chops</em>, <em>add_key</em>, <em>keep_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOffsetBlends" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOffsetParents">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOffsetParents</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>blends</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOffsetParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOffsetTarget">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOffsetTarget</code><span class="sig-paren">(</span><em>obj</em>, <em>n</em>, <em>parent</em>, <em>parent_outputidx</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOffsetTarget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initOffsets">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initOffsets</code><span class="sig-paren">(</span><em>input_nodes</em>, <em>constraints</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initOffsets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.initParentTargets">
+<code class="descclassname">objecttoolutils.</code><code class="descname">initParentTargets</code><span class="sig-paren">(</span><em>chops</em>, <em>objs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.initParentTargets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.layoutInputs">
+<code class="descclassname">objecttoolutils.</code><code class="descname">layoutInputs</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.layoutInputs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.matchTransform">
+<code class="descclassname">objecttoolutils.</code><code class="descname">matchTransform</code><span class="sig-paren">(</span><em>kwargs</em>, <em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.matchTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a match transform button is clicked.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.normalizeLightExposure">
+<code class="descclassname">objecttoolutils.</code><code class="descname">normalizeLightExposure</code><span class="sig-paren">(</span><em>lightnode</em>, <em>dist</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.normalizeLightExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the light exposure such that brightness at a distance ‘dist’
+equals the value of the light_intensity parameter. This compensates for
+physical attenuation, if set.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.objectsFromScriptArgs">
+<code class="descclassname">objecttoolutils.</code><code class="descname">objectsFromScriptArgs</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.objectsFromScriptArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.promoteParm">
+<code class="descclassname">objecttoolutils.</code><code class="descname">promoteParm</code><span class="sig-paren">(</span><em>target_node</em>, <em>source_node</em>, <em>parm_name</em>, <em>folder</em>, <em>has_menu=False</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.promoteParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.selectPrimtiveUVs">
+<code class="descclassname">objecttoolutils.</code><code class="descname">selectPrimtiveUVs</code><span class="sig-paren">(</span><em>orisop</em>, <em>prompt</em>, <em>icon</em>, <em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.selectPrimtiveUVs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="objecttoolutils.setGoodLightExposure">
+<code class="descclassname">objecttoolutils.</code><code class="descname">setGoodLightExposure</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>lightnode</em><span class="sig-paren">)</span><a class="headerlink" href="#objecttoolutils.setGoodLightExposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the light exposure such that brightness is 1.0 at the
+viewport pivot, compensating for physical attenuation, if set. Does
+nothing when scriptargs indicate that ctrl or cmd weren’t being held,
+since that means the light wasn’t created from the viewport camera. In
+that case we don’t currently have a good estimate of the required
+exposure.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="nodethemes.html" title="previous chapter">nodethemes module</a></li>
+      <li>Next: <a href="opnode_sum.html" title="next chapter">opnode_sum module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/objecttoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/objecttoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

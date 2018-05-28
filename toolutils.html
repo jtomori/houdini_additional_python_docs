@@ -1,0 +1,687 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>toolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="vexpressionmenu module" href="vexpressionmenu.html" />
+    <link rel="prev" title="toolprompts module" href="toolprompts.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-toolutils">
+<span id="toolutils-module"></span><h1>toolutils module<a class="headerlink" href="#module-toolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="toolutils.OrientInfo">
+<em class="property">class </em><code class="descclassname">toolutils.</code><code class="descname">OrientInfo</code><span class="sig-paren">(</span><em>parmname</em>, <em>defaultup=orientUpAxis.Y</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.OrientInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="toolutils.ToolboxTemplateGroup">
+<em class="property">class </em><code class="descclassname">toolutils.</code><code class="descname">ToolboxTemplateGroup</code><a class="headerlink" href="#toolutils.ToolboxTemplateGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a UI code block and a template group for toolbox hou.SceneViewer.selectObjects</p>
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.addFloatField">
+<code class="descname">addFloatField</code><span class="sig-paren">(</span><em>name</em>, <em>label</em>, <em>default_value</em>, <em>num_components=1</em>, <em>helpstr=''</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.addFloatField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a float field control with a label to the toolbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.addMenu">
+<code class="descname">addMenu</code><span class="sig-paren">(</span><em>name</em>, <em>label</em>, <em>values</em>, <em>default_value</em>, <em>helpstr=''</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.addMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a menu select control with a label to the toolbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.addToggle">
+<code class="descname">addToggle</code><span class="sig-paren">(</span><em>name</em>, <em>label</em>, <em>default_value</em>, <em>helpstr=''</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.addToggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a toggle control with a label to the toolbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.addToggleList">
+<code class="descname">addToggleList</code><span class="sig-paren">(</span><em>name</em>, <em>labels</em>, <em>default_value</em>, <em>helpstr=''</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.addToggleList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a TRS mask control with a label to the toolbox</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.buildHelpStr">
+<code class="descname">buildHelpStr</code><span class="sig-paren">(</span><em>h</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.buildHelpStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.getValue">
+<code class="descname">getValue</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.getValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a UI Toolbox value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.templategroup">
+<code class="descname">templategroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.templategroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the TemplateGroup</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.ui">
+<code class="descname">ui</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the UI code block</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="toolutils.ToolboxTemplateGroup.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>layout_opt='JUSTIFY(center</em>, <em>center)'</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ToolboxTemplateGroup.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates UI code block and TemplateGroup.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.activeCompositorPane">
+<code class="descclassname">toolutils.</code><code class="descname">activeCompositorPane</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.activeCompositorPane" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="toolutils.activePane">
+<code class="descclassname">toolutils.</code><code class="descname">activePane</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.activePane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current active pane. If the current tool was launched
+from a Tab menu, the “pane” scriptarg will be set, and indicates the
+active pane. Otherwise the tool was launched from the shelf and
+we have to look for an open viewer pane of the right type for the
+running tool.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.chooseNode">
+<code class="descclassname">toolutils.</code><code class="descname">chooseNode</code><span class="sig-paren">(</span><em>possible_nodes</em>, <em>title</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.chooseNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompts the user to select on of the given nodes. If there is only a
+single node, then that node is automatically returned. The title
+and message parameters determine what will show up in the prompt.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.compositorViewer">
+<code class="descclassname">toolutils.</code><code class="descname">compositorViewer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.compositorViewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an existing open Compositing Viewer pane if there is one. A
+Context viewer is also acceptable is no dedicated compositing viewer
+is found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.connectInputsAndOutputs">
+<code class="descclassname">toolutils.</code><code class="descname">connectInputsAndOutputs</code><span class="sig-paren">(</span><em>newnode</em>, <em>branch</em>, <em>inputitem</em>, <em>outputitem</em>, <em>inputindex</em>, <em>outputindex</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.connectInputsAndOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simplified version of connectMultiInputsAndOutputs that takes at
+most a single input and output. Provided for backward compatibility
+with code written before the Multi code was written.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.connectMultiInputsAndOutputs">
+<code class="descclassname">toolutils.</code><code class="descname">connectMultiInputsAndOutputs</code><span class="sig-paren">(</span><em>newnode</em>, <em>branch</em>, <em>inputs</em>, <em>outputs</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.connectMultiInputsAndOutputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wire the network so that new node connects to the provided inputs
+and outputs. This isn’t always possible, but get as close as we can.
+If branch is false, all of the inputs outputs will be made
+newnode’s outputs. Both inputs and outputs are optional.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.createModuleFromSection">
+<code class="descclassname">toolutils.</code><code class="descname">createModuleFromSection</code><span class="sig-paren">(</span><em>module_name</em>, <em>node_type</em>, <em>section_name</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.createModuleFromSection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return a module-like object with the given name from the
+contents of a section in an HDA.  This module will not appear in
+sys.modules.  If the source code has a syntax error, an exception will
+be raised.  Use this function to create submodules in the PythonModule
+section of an HDA.  For example:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>submod = toolutils.createModuleFromSection(</dt>
+<dd>‘submod’, kwargs[‘type’], ‘PythonSubmod’)</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.createNodeInContainer">
+<code class="descclassname">toolutils.</code><code class="descname">createNodeInContainer</code><span class="sig-paren">(</span><em>container</em>, <em>nodetypecategory</em>, <em>nodetypename</em>, <em>nodename</em>, <em>exact_node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.createNodeInContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function attempts to create a node of a given type category and
+type name in a given container. If the container does not allow a given 
+type category, this funciton creates a network of a correct type first,
+and then creates the required node within that network.
+If exact_node_type is true, it attempts to create a node of the exact
+nodetypename; otherwise, the nodtypename may be resolved to the
+preferred namespace or version of that typename.
+It retuns a pair of nodes, the fist being the node created in the
+container and the second being the node of a required operator type
+(which in most cases will be the same nodes).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.createOrShowPythonPanel">
+<code class="descclassname">toolutils.</code><code class="descname">createOrShowPythonPanel</code><span class="sig-paren">(</span><em>kwargs</em>, <em>pypanel_interface_name</em>, <em>floating_panel_label</em>, <em>split_type</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.createOrShowPythonPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates a new float panel from a pypanel interface name or
+make existing ones visible.</p>
+<p>split_type of 0, always creates a floating panel
+split_type of 1, adds a tab on the current panel
+split_type of 2, splits vertically and creates a new tab
+split_type of 3, splits horizontally and creates a new tab
+split_type of 4, splits vertically but only on viewports and creates a new tab
+Returns the python panels tab found</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.dataTree">
+<code class="descclassname">toolutils.</code><code class="descname">dataTree</code><span class="sig-paren">(</span><em>tree_type</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.dataTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an existing open Data Tree pane if there is one. If a tree
+type is provided, the Data Tree must be set to that tree type to be
+acceptable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findAllChildNodesOfType">
+<code class="descclassname">toolutils.</code><code class="descname">findAllChildNodesOfType</code><span class="sig-paren">(</span><em>parentnode</em>, <em>nodetype</em>, <em>dorecurse=False</em>, <em>findfirst=False</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findAllChildNodesOfType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all child nodes that match the given node
+type</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findAllChildNodesOfTypeWithParms">
+<code class="descclassname">toolutils.</code><code class="descname">findAllChildNodesOfTypeWithParms</code><span class="sig-paren">(</span><em>parentnode</em>, <em>nodetype</em>, <em>parmlist</em>, <em>dorecurse=False</em>, <em>findfirst=False</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findAllChildNodesOfTypeWithParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all nodes contained in parent that match
+the nodetype &amp; parmlist filters.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findAllConnectionChainsToInputNode">
+<code class="descclassname">toolutils.</code><code class="descname">findAllConnectionChainsToInputNode</code><span class="sig-paren">(</span><em>startnode</em>, <em>endnode</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findAllConnectionChainsToInputNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all chains of hou.Connections that lead to endnode.</p>
+<p>Returns an empty list if no such chain exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findAllConnectionChainsToOutputNode">
+<code class="descclassname">toolutils.</code><code class="descname">findAllConnectionChainsToOutputNode</code><span class="sig-paren">(</span><em>startnode</em>, <em>endnode</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findAllConnectionChainsToOutputNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all chains of hou.Connections that lead to endnode.</p>
+<p>Returns an empty list if no such chain exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findAllInputNodesOfTypeWithParms">
+<code class="descclassname">toolutils.</code><code class="descname">findAllInputNodesOfTypeWithParms</code><span class="sig-paren">(</span><em>endnode</em>, <em>nodetype</em>, <em>parmlist</em>, <em>includeme=False</em>, <em>findfirst=False</em>, <em>seennodes=None</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findAllInputNodesOfTypeWithParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all nodes that are an ancestor of endnode, match
+nodetype, and have the parameters &amp; value pairs listed in the
+parmlist dictionary.
+If basetypematch is true, only the node type’s base name is checked, 
+ie, node type’s namespace and version components are ignored
+when testing against the matchtype (eg, matchtype ‘hda’ will match
+node types ‘hda’, ‘hda::1.5’ and ‘userx::hda’, etc). Otherwise,
+the node type name must match exactly the matchtype string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findAncestorOfBaseType">
+<code class="descclassname">toolutils.</code><code class="descname">findAncestorOfBaseType</code><span class="sig-paren">(</span><em>startnode</em>, <em>category</em>, <em>nodetype</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findAncestorOfBaseType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return closest ancestor (or self) of ‘startnode’ with the specified
+category and type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findAncestorOfType">
+<code class="descclassname">toolutils.</code><code class="descname">findAncestorOfType</code><span class="sig-paren">(</span><em>startnode</em>, <em>category</em>, <em>nodetype</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findAncestorOfType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return closest ancestor (or self) of ‘startnode’ with the specified
+category and type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findChildNodeOfType">
+<code class="descclassname">toolutils.</code><code class="descname">findChildNodeOfType</code><span class="sig-paren">(</span><em>parentnode</em>, <em>nodetype</em>, <em>dorecurse=False</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findChildNodeOfType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does a search of the node container hierarchy
+(rather than connection hierarchy) searching for a matching
+node type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findChildNodeOfTypeWithParms">
+<code class="descclassname">toolutils.</code><code class="descname">findChildNodeOfTypeWithParms</code><span class="sig-paren">(</span><em>parentnode</em>, <em>nodetype</em>, <em>parmlist</em>, <em>dorecurse=False</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findChildNodeOfTypeWithParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does a search of the node container hierarchy
+(rather than connection hierarchy) searching for a matching
+node type which also has the given parameter list match.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findConnectedNodes">
+<code class="descclassname">toolutils.</code><code class="descname">findConnectedNodes</code><span class="sig-paren">(</span><em>startnode</em>, <em>connection_type</em>, <em>match_method</em>, <em>find_first=False</em>, <em>seennodes=None</em>, <em>includeme=False</em>, <em>incoming_conn=None</em>, <em>connection_chains=None</em>, <em>all_paths=False</em>, <em>connector_index=None</em>, <em>stop_method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findConnectedNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all nodes that are connected to startnode for which match_method
+returns True. Searches either inputs or outputs, depending on the value
+of connection_type (either ‘input’ or ‘output’).</p>
+<p>match_method may be a method taking a hou.Node as it’s argument.
+In that case only nodes for which it returns True are matched.</p>
+<p>If connection_chains is a list, for each node it’ll be populated with
+the hou.NodeConnections by which the node was found. If additionally
+all_paths is True, all paths to the node will be returned, so nodes
+may appear multiple times in the returned list.</p>
+<p>If find_first is True, the method will exit early as soon as a matching
+node is found. Having both find_first and all_paths True will raise
+a hou.Error.</p>
+<p>stop_method may be a method taking a hou.Node and a hou.NodeConnection
+by which that node was reached. If it returns True, the node and
+further connected nodes will be ignored.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findConnectionChainToInputNode">
+<code class="descclassname">toolutils.</code><code class="descname">findConnectionChainToInputNode</code><span class="sig-paren">(</span><em>startnode</em>, <em>endnode</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findConnectionChainToInputNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a chain of hou.Connections that lead to endnode.</p>
+<p>Returns None if no such chain exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findConnectionChainToOutputNode">
+<code class="descclassname">toolutils.</code><code class="descname">findConnectionChainToOutputNode</code><span class="sig-paren">(</span><em>startnode</em>, <em>endnode</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findConnectionChainToOutputNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a chain of hou.Connections that lead to endnode.</p>
+<p>Returns None if no such chain exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findGreatestCommonDescendent">
+<code class="descclassname">toolutils.</code><code class="descname">findGreatestCommonDescendent</code><span class="sig-paren">(</span><em>endnode</em>, <em>searchnodes</em>, <em>seennodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findGreatestCommonDescendent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starting from end node and heading up the input chain
+locate the first node that doesn’t have all of searchnodes
+on the same input wire.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findInputNode">
+<code class="descclassname">toolutils.</code><code class="descname">findInputNode</code><span class="sig-paren">(</span><em>endnode</em>, <em>searchnode</em>, <em>seennodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findInputNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function searches the endnode’s hierarchy to find if the
+given search node is connected</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findInputNodeOfBaseType">
+<code class="descclassname">toolutils.</code><code class="descname">findInputNodeOfBaseType</code><span class="sig-paren">(</span><em>endnode</em>, <em>nodetype</em>, <em>includeme=False</em>, <em>seennodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findInputNodeOfBaseType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does a depth first traversal of the node input hierarchy
+to find the first node whose type’s base name (ie, type name stripped of
+any namespace or version) matches the given type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findInputNodeOfType">
+<code class="descclassname">toolutils.</code><code class="descname">findInputNodeOfType</code><span class="sig-paren">(</span><em>endnode</em>, <em>nodetype</em>, <em>includeme=False</em>, <em>seennodes=None</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findInputNodeOfType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does a depth first traversal of the node input hierarchy
+to find the first node of a particular type.
+If basetypematch is true, only the node type’s base name is checked, 
+ie, node type’s namespace and version components are ignored
+when testing against the matchtype (eg, matchtype ‘hda’ will match
+node types ‘hda’, ‘hda::1.5’ and ‘userx::hda’, etc). Otherwise,
+the node type name must match exactly the matchtype string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findInputNodeOfTypeWithParms">
+<code class="descclassname">toolutils.</code><code class="descname">findInputNodeOfTypeWithParms</code><span class="sig-paren">(</span><em>endnode</em>, <em>nodetype</em>, <em>parmlist</em>, <em>includeme=False</em>, <em>seennodes=None</em>, <em>basetypematch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findInputNodeOfTypeWithParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds any nodes that are an ancestor of endnode, match
+nodetype, and have the parameters &amp; value pairs listed in the
+parmlist dictionary.
+If basetypematch is true, only the node type’s base name is checked, 
+ie, node type’s namespace and version components are ignored
+when testing against the matchtype (eg, matchtype ‘hda’ will match
+node types ‘hda’, ‘hda::1.5’ and ‘userx::hda’, etc). Otherwise,
+the node type name must match exactly the matchtype string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findOutputNodeOfBaseType">
+<code class="descclassname">toolutils.</code><code class="descname">findOutputNodeOfBaseType</code><span class="sig-paren">(</span><em>endnode</em>, <em>nodetype</em>, <em>includeme=False</em>, <em>seennodes=None</em>, <em>returnall=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findOutputNodeOfBaseType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does a depth first traversal of the node input hierarchy
+to find the first node whose type’s base name (ie, type name stripped of
+any namespace or version) matches the given type.
+If returnall is true, returns a list of all matches in depth
+first order, or an empty list if no matches are found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findOutputNodeOfType">
+<code class="descclassname">toolutils.</code><code class="descname">findOutputNodeOfType</code><span class="sig-paren">(</span><em>startnode</em>, <em>nodetype</em>, <em>includeme=False</em>, <em>seennodes=None</em>, <em>basetypematch=False</em>, <em>returnall=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findOutputNodeOfType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function does a depth first traversal of the node output
+hierarchy to find the first node that matches our search.
+If basetypematch is true, only the node type’s base name is checked, 
+ie, node type’s namespace and version components are ignored
+when testing against the matchtype (eg, matchtype ‘hda’ will match
+node types ‘hda’, ‘hda::1.5’ and ‘userx::hda’, etc). Otherwise,
+the node type name must match exactly the matchtype string.
+If returnall is true, returns a list of all matches in depth
+first order, or an empty list if no matches are found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.findOutputNodeOfTypeWithParms">
+<code class="descclassname">toolutils.</code><code class="descname">findOutputNodeOfTypeWithParms</code><span class="sig-paren">(</span><em>startnode</em>, <em>nodetype</em>, <em>parmlist</em>, <em>includeme=False</em>, <em>seennodes=None</em>, <em>basetypematch=False</em>, <em>returnall=False</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.findOutputNodeOfTypeWithParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds any nodes that are a descendent of startnode, match
+nodetype, and have the parameters &amp; value pairs listed in the
+parmlist dictionary.
+If basetypematch is true, only the node type’s base name is checked, 
+ie, node type’s namespace and version components are ignored
+when testing against the matchtype (eg, matchtype ‘hda’ will match
+node types ‘hda’, ‘hda::1.5’ and ‘userx::hda’, etc). Otherwise,
+the node type name must match exactly the matchtype string.
+If returnall is true, returns a list of all matches in depth
+first order, or an empty list if no matches are found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.generateToolScriptForNode">
+<code class="descclassname">toolutils.</code><code class="descname">generateToolScriptForNode</code><span class="sig-paren">(</span><em>nodepath_or_list</em>, <em>input_nodepath=None</em>, <em>output_nodepath=None</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.generateToolScriptForNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="toolutils.genericStateTool">
+<code class="descclassname">toolutils.</code><code class="descname">genericStateTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>statename</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.genericStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs a specific state in an open viewer pane.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.genericTool">
+<code class="descclassname">toolutils.</code><code class="descname">genericTool</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.genericTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the creation of any node in a Network Editor pane.</p>
+<p>This function is intended to instantiate a node of a given type from
+shelf tools, and thus, if exact_node_type argument is True, it creates 
+the node of the exact type specified by nodetypename. 
+However, if exact_node_type argument is False, then the base type may 
+get resolved to another namespace or another version, and 
+the created node may be of that resolved type (eg ‘hda’ may resolve to 
+‘mynamespace::hda::2.0’).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.getBestConnector">
+<code class="descclassname">toolutils.</code><code class="descname">getBestConnector</code><span class="sig-paren">(</span><em>innode</em>, <em>outidx</em>, <em>outnode</em>, <em>inidx</em>, <em>defaultidx</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.getBestConnector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="toolutils.getSubnetOutputNodes">
+<code class="descclassname">toolutils.</code><code class="descname">getSubnetOutputNodes</code><span class="sig-paren">(</span><em>subnet</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.getSubnetOutputNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of output nodes. The position of a node within the list
+corresponds to it’s output index.</p>
+<p>Intermediate entries that don’t have an output equal None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.homeToSelectionNetworkEditorsFor">
+<code class="descclassname">toolutils.</code><code class="descname">homeToSelectionNetworkEditorsFor</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.homeToSelectionNetworkEditorsFor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Homes to their selection all network editors to that are showing the 
+network that contains node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.mapTypeCategoriesToSubnetName">
+<code class="descclassname">toolutils.</code><code class="descname">mapTypeCategoriesToSubnetName</code><span class="sig-paren">(</span><em>nodetypecategory</em>, <em>acceptedtypecategory</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.mapTypeCategoriesToSubnetName" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a name of the subnet that accepts nodetypecategory
+as child type and can be created in a container whose child type is 
+acceptedtypecategory. 
+Returns None if these two categories are the same (ie, no need for 
+a subnet to accommodate nodetypecategory). Also returns None if
+the mapping has not been defined yet.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.minimizePythonPanel">
+<code class="descclassname">toolutils.</code><code class="descname">minimizePythonPanel</code><span class="sig-paren">(</span><em>kwargs</em>, <em>pypanel_interface_name</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.minimizePythonPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimize pypanel interfaces.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.moveNodesToGoodPosition">
+<code class="descclassname">toolutils.</code><code class="descname">moveNodesToGoodPosition</code><span class="sig-paren">(</span><em>movenodes</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.moveNodesToGoodPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves a list of nodes to good positions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.nodeNameFromTypeName">
+<code class="descclassname">toolutils.</code><code class="descname">nodeNameFromTypeName</code><span class="sig-paren">(</span><em>nodetypename</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.nodeNameFromTypeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an operator node type name, return a valid node name
+corresponding to that type. For example, if the type name contains
+any namespace or version components, they are stripped off.
+The returned node name contains only characters that are allowed
+to appear in the node names.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.nodeTypeBaseNameMatches">
+<code class="descclassname">toolutils.</code><code class="descname">nodeTypeBaseNameMatches</code><span class="sig-paren">(</span><em>node</em>, <em>matchtype</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.nodeTypeBaseNameMatches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the node’s type base name matches the given type.
+A matchtype of None is assumed to match any node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.nodeTypeNameBase">
+<code class="descclassname">toolutils.</code><code class="descname">nodeTypeNameBase</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.nodeTypeNameBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node type base name (stripped of namespace or version).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.nodeTypeNameComponentsMatch">
+<code class="descclassname">toolutils.</code><code class="descname">nodeTypeNameComponentsMatch</code><span class="sig-paren">(</span><em>node</em>, <em>matchtype</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.nodeTypeNameComponentsMatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the node’s type name components matches the given type.
+The components present in matchtype are checked against the node’s type,
+and this function returns true if they do match.  Eg, 
+matchtype ‘hda’ will match ‘hda’, ‘hda::1.5’, ‘userX::hda’, etc
+matchtype ‘userX::hda’ will match ‘userX::hda’, ‘userX::hda::1.5’, etc
+matchtype ‘hda::1.5’ will match ‘hda::1.5’, ‘userX::hda::1.5’, etc
+matchtype ‘::hda’ will match ‘hda’ and ‘hda::1.5’, but not ‘userX::hda’
+matchtype ‘hda::’ will match ‘hda’ and ‘userX::hda’ but not ‘hda::1.5’
+A matchtype of None is assumed to match any node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.nodeTypeNameMatches">
+<code class="descclassname">toolutils.</code><code class="descname">nodeTypeNameMatches</code><span class="sig-paren">(</span><em>node</em>, <em>matchtype</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.nodeTypeNameMatches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the node’s type base name matches the given type.
+A matchtype of None is assumed to match any node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.nodeTypeNameVersion">
+<code class="descclassname">toolutils.</code><code class="descname">nodeTypeNameVersion</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.nodeTypeNameVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node type version component.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.ocioColorSpaceMenu">
+<code class="descclassname">toolutils.</code><code class="descname">ocioColorSpaceMenu</code><span class="sig-paren">(</span><em>include_roles=True</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.ocioColorSpaceMenu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="toolutils.parseDialogScriptMenu">
+<code class="descclassname">toolutils.</code><code class="descname">parseDialogScriptMenu</code><span class="sig-paren">(</span><em>filename</em>, <em>defchoices=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.parseDialogScriptMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function parses a disk file specified by the filename.
+The file is parsed such that comments (‘#’) are stripped and
+lines containing exactly 2 arguments are printed out.  Quotes
+are handled.</p>
+<p>The function can be used by dialog script menus which want to
+generate dynamic menus based on disk files.</p>
+<dl class="docutils">
+<dt>The dynamic menu should have the script:</dt>
+<dd>echo <cite>pythonexprs(“__import__(‘toolutils’).parseDialogScriptMenu(filename, [(‘token1’, ‘label1’), (‘token2’, ‘label2’), …])”)</cite></dd>
+</dl>
+<p>the diskfile will be searched in the Houdini path.  If the disk
+file isn’t found, the default choices will be used instead.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.placeToolImmediately">
+<code class="descclassname">toolutils.</code><code class="descname">placeToolImmediately</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.placeToolImmediately" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the provided kwargs has a modifier key suggesting
+the tool be placed right away.  This is a ctrl click or a cmd click
+depending on the platform.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.recursiveShowPane">
+<code class="descclassname">toolutils.</code><code class="descname">recursiveShowPane</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.recursiveShowPane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximize all the parent Pane splits and make the given panel visible.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.reformatPermissionErrors">
+<code class="descclassname">toolutils.</code><code class="descname">reformatPermissionErrors</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.reformatPermissionErrors" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function decorator will trap any permission error exceptions and
+raise a different exception with a nicer message.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.removeDefaultGeometryObjectContents">
+<code class="descclassname">toolutils.</code><code class="descname">removeDefaultGeometryObjectContents</code><span class="sig-paren">(</span><em>objectnode</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.removeDefaultGeometryObjectContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy the File SOP that gets created inside a default Geometry
+Object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.replaceInputConnections">
+<code class="descclassname">toolutils.</code><code class="descname">replaceInputConnections</code><span class="sig-paren">(</span><em>olditem</em>, <em>oldinputindex</em>, <em>newnode</em>, <em>newinputindex</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.replaceInputConnections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stick the new node between the output node and the node it
+is connected to (insert operation). Note there can be only one.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.replaceOutputConnections">
+<code class="descclassname">toolutils.</code><code class="descname">replaceOutputConnections</code><span class="sig-paren">(</span><em>olditem</em>, <em>oldoutputindex</em>, <em>newnode</em>, <em>newoutputindex</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.replaceOutputConnections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stick the new node between the input node and all nodes it
+is connected to (insert operation).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.sceneViewer">
+<code class="descclassname">toolutils.</code><code class="descname">sceneViewer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.sceneViewer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an existing open Scene Viewer pane if there is one. A
+Context viewer is also acceptable is no dedicated scene viewer
+is found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.selectionPrompt">
+<code class="descclassname">toolutils.</code><code class="descname">selectionPrompt</code><span class="sig-paren">(</span><em>nodetypecategory</em>, <em>multisel=True</em>, <em>whichprompt=0</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.selectionPrompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a generic selection prompt string when no specific prompt
+string is available in the toolprompts module.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.setUpOrientation">
+<code class="descclassname">toolutils.</code><code class="descname">setUpOrientation</code><span class="sig-paren">(</span><em>node</em>, <em>parmname</em>, <em>defaultup</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.setUpOrientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assumes that the default value of the specified parameter in the given
+node corresponds to the orientation specified in defaultup and applies
+the necessary change to convert the node to the current orientation
+mode.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.testTool">
+<code class="descclassname">toolutils.</code><code class="descname">testTool</code><span class="sig-paren">(</span><em>tool</em>, <em>debug=False</em>, <em>kwargs=None</em>, <em>pane=None</em>, <em>ctrlclick=False</em>, <em>altclick=False</em>, <em>shiftclick=None</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.testTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>executes a shelf tool.</p>
+<p>If debug is True, the tool will be executed within pdb.run()</p>
+<p>If ‘kwargs’ is not None, it is passed to the tool script as is and the
+remaining parameters are ignored, along with everything described
+below.</p>
+<p>If ‘pane’ is None, hou.ui.paneTabOfType(hou.paneTabType.SceneViewer) is
+passed to the tool instead.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.updateBakeExtractImageFormat">
+<code class="descclassname">toolutils.</code><code class="descname">updateBakeExtractImageFormat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.updateBakeExtractImageFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obsolete as of H16.0 - but is required for old hip files</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.updateBakePlanes">
+<code class="descclassname">toolutils.</code><code class="descname">updateBakePlanes</code><span class="sig-paren">(</span><em>parm</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.updateBakePlanes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obsolete as of H16.0 - but is required for old hip files</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="toolutils.updatePlaneType">
+<code class="descclassname">toolutils.</code><code class="descname">updatePlaneType</code><span class="sig-paren">(</span><em>planeindex</em>, <em>variable</em><span class="sig-paren">)</span><a class="headerlink" href="#toolutils.updatePlaneType" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is intended to update deep raster plane parameters
+based on the newly set plane variable name.  Use this in a callback
+script as follows:</p>
+<p>callback “<cite>pythonexprs(“__import__(‘toolutils’).updatePlaneType($script_multiparm_index, ‘$script_value’)”)</cite>”</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="toolprompts.html" title="previous chapter">toolprompts module</a></li>
+      <li>Next: <a href="vexpressionmenu.html" title="next chapter">vexpressionmenu module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/toolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/toolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

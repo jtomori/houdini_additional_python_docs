@@ -1,0 +1,290 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>defaulttools module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="digitalassetsupport module" href="digitalassetsupport.html" />
+    <link rel="prev" title="defaulttoolmenus module" href="defaulttoolmenus.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-defaulttools">
+<span id="defaulttools-module"></span><h1>defaulttools module<a class="headerlink" href="#module-defaulttools" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="defaulttools.addRopNodeTypeKeywords">
+<code class="descclassname">defaulttools.</code><code class="descname">addRopNodeTypeKeywords</code><span class="sig-paren">(</span><em>nodetype</em>, <em>keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.addRopNodeTypeKeywords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.addShopNodeTypeLocationsAndKeywords">
+<code class="descclassname">defaulttools.</code><code class="descname">addShopNodeTypeLocationsAndKeywords</code><span class="sig-paren">(</span><em>nodetype</em>, <em>locations</em>, <em>keywords</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.addShopNodeTypeLocationsAndKeywords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.bboxString">
+<code class="descclassname">defaulttools.</code><code class="descname">bboxString</code><span class="sig-paren">(</span><em>minvec</em>, <em>maxvec</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.bboxString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.calculateBoundingBox">
+<code class="descclassname">defaulttools.</code><code class="descname">calculateBoundingBox</code><span class="sig-paren">(</span><em>obj</em>, <em>exclude_node_list=None</em>, <em>include_nondisplayed=False</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.calculateBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates a bounding box for a given object. The bounding box is used
+in the viewer to indicate the size of a object when it is being
+positioned on the construction plane prior to instantiating the object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.createDefaultHDATool">
+<code class="descclassname">defaulttools.</code><code class="descname">createDefaultHDATool</code><span class="sig-paren">(</span><em>shelffile</em>, <em>nodetype</em>, <em>toolname</em>, <em>usebbox=True</em>, <em>locations=('Digital Assets'</em>, <em>)</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.createDefaultHDATool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a default shelf tool for a given asset (identified by nodetype).
+The tool is given a specified name and is saved to the shelf file on the
+file system.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.createDefaultHDAToolsForOTL">
+<code class="descclassname">defaulttools.</code><code class="descname">createDefaultHDAToolsForOTL</code><span class="sig-paren">(</span><em>otlfile</em>, <em>delete_old_tool_section=False</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.createDefaultHDAToolsForOTL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a default shelf tool for each of the digital assets saved in a
+given otlfile, and saves the tool as part of the asset back in the otlfile.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.createDefaultNodeTypeTool">
+<code class="descclassname">defaulttools.</code><code class="descname">createDefaultNodeTypeTool</code><span class="sig-paren">(</span><em>shelffile</em>, <em>nodetype</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.createDefaultNodeTypeTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a default shelf tool for a given operator and saves it into
+a given file name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.createDefaultNodeTypeToolScript">
+<code class="descclassname">defaulttools.</code><code class="descname">createDefaultNodeTypeToolScript</code><span class="sig-paren">(</span><em>nodetype</em>, <em>toolfile</em>, <em>usebbox=True</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.createDefaultNodeTypeToolScript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each tool has a python script that is executed when the tool is invoked.
+This function returns a string that represents a python scrypt that should
+be executed when a user invokes a default tool for the given node type. The
+toolfile specifies the utility python module file that should be used by
+the returned script (such as ‘objecttoolutils’).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.createDefaultNodeTypeTools">
+<code class="descclassname">defaulttools.</code><code class="descname">createDefaultNodeTypeTools</code><span class="sig-paren">(</span><em>shelfdir</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.createDefaultNodeTypeTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates all the shelf tools that correspond to various operator types.
+The operators are grouped according to the type categories (ie,
+network types, such as OBJ, SOP), and the tools for operators in
+all such categories are generated and saved in corresponding files
+within the given shelf dir.
+The shelf tools that get generated usually instantiate the node to
+which the tool corresponds. And each node has one such tool.  These
+tools can be invoked from the top level shelf or from the TAB menus.</p>
+<p>Most of the native operators (and states) have a
+corresponding default tool generated automatically. The rest have a more
+complicated hand-crafted tools written for them. Such tools are stored
+in a shelf file. But, each operator needs to have a corresponding tool,
+because it is the only way to instantiate an operator/state in the GUI
+(though, the hscript or python could be used to create nodes too).
+This function generates all the default tools for all the operators
+that don’t have a corresponding hand-crafted tool (or other tool that
+has been already loaded into Houdini).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.createDefaultNodeTypeToolsForCategory">
+<code class="descclassname">defaulttools.</code><code class="descname">createDefaultNodeTypeToolsForCategory</code><span class="sig-paren">(</span><em>shelfdir</em>, <em>nodetypecategory</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.createDefaultNodeTypeToolsForCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates default shelf tools for all the operator types that exist
+within a given nodetypecategory (i.e., OBJ, SOP, etc.). All these
+tools are saved into a file that corresponds to the category name and
+that is saved in a given directory.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonCopFilterCode">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonCopFilterCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonCopFilterCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Python code for the PythonCook section of a newly created
+Python COP filter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonCopGeneratorCode">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonCopGeneratorCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonCopGeneratorCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Python code for the PythonCook section of a newly created
+Python COP generator.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonDopCode">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonDopCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonDopCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Python code for the PythonCook section of a newly created
+Python DOP.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonDopSolverBoilerplate">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonDopSolverBoilerplate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonDopSolverBoilerplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the boiler plate needed for solveForObjects() to be
+prepended.
+NOTE: This is used by the Script Solver in $SIMZ so do not
+change without taking that into consideration!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonDopSolverCode">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonDopSolverCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonDopSolverCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Python code for the PythonCook section of a newly created
+Python DOP solver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonDopSolverPrequel">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonDopSolverPrequel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonDopSolverPrequel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the solveForObjects() example for Python DOP solvers.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonObjectCode">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonObjectCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonObjectCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Python code for the PythonCook section of a newly created
+Python Object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.defaultPythonSopCode">
+<code class="descclassname">defaulttools.</code><code class="descname">defaultPythonSopCode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.defaultPythonSopCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Python code for the PythonCook section of a newly created
+Python SOP.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.getCopViewerCategories">
+<code class="descclassname">defaulttools.</code><code class="descname">getCopViewerCategories</code><span class="sig-paren">(</span><em>nodetype</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.getCopViewerCategories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains a list of type categories (network types such as OBJ, SOP, etc).
+The shelf tool corresponding to a given nodetype will appear in the TAB
+menu if the compositor viewer pane path points to a network whose type
+can be found in the list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.getNetworkOpTypeOrCategories">
+<code class="descclassname">defaulttools.</code><code class="descname">getNetworkOpTypeOrCategories</code><span class="sig-paren">(</span><em>nodetype</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.getNetworkOpTypeOrCategories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains an op_type string (may be empty) if the tool should appear in
+contexts in which the operator does. Or, if op_type string is empty,
+a list of type categories (network types such as OBJ, SOP, etc). 
+The shelf tool corresponding to a given nodetype will appear in the TAB
+menu if the network editor pane path points to a network that admits the
+opertor (if the returned type name string not empty) or whose type 
+can be found in the returned list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.getSceneViewerCategories">
+<code class="descclassname">defaulttools.</code><code class="descname">getSceneViewerCategories</code><span class="sig-paren">(</span><em>nodetype</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.getSceneViewerCategories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains a list of type categories (network types such as OBJ, SOP, etc).
+The shelf tool corresponding to a given nodetype will appear in the TAB
+menu if the scene viewer pane path points to a network whose type
+can be found in the list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.lsystemAdjustOrientation">
+<code class="descclassname">defaulttools.</code><code class="descname">lsystemAdjustOrientation</code><span class="sig-paren">(</span><em>nodename</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.lsystemAdjustOrientation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.objHasScales">
+<code class="descclassname">defaulttools.</code><code class="descname">objHasScales</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.objHasScales" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if an Object Node has any scales or shears up to 
+a tolerance.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaulttools.setHDAToolVariables">
+<code class="descclassname">defaulttools.</code><code class="descname">setHDAToolVariables</code><span class="sig-paren">(</span><em>tool</em>, <em>hdadef</em><span class="sig-paren">)</span><a class="headerlink" href="#defaulttools.setHDAToolVariables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the variables that evaluate to an asset-dependent values. The
+advantage of using variables is that copying or relabeling the asset does
+not invalidate the tool. If, instead, asset-specific values were used in
+the tool, then if the asset changes, the tool may not match the asset
+parameters (such as name, and label).</p>
+<p>This function replaces the hard-coded values with variable names within the
+tool.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="defaulttoolmenus.html" title="previous chapter">defaulttoolmenus module</a></li>
+      <li>Next: <a href="digitalassetsupport.html" title="next chapter">digitalassetsupport module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/defaulttools.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/defaulttools.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

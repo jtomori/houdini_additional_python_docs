@@ -1,0 +1,159 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>metaexpr module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mssbuild module" href="mssbuild.html" />
+    <link rel="prev" title="karmautils module" href="karmautils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-metaexpr">
+<span id="metaexpr-module"></span><h1>metaexpr module<a class="headerlink" href="#module-metaexpr" title="Permalink to this headline">¶</a></h1>
+<p>The geometry class in Houdini has an intrinsic “metaexpr_code”.  This
+represents a serialization of the metaball expression for the geometry.</p>
+<p>The metaball expression describes how to combine metaballs to form the
+surface.</p>
+<dl class="docutils">
+<dt>In HOM, you can access this with:</dt>
+<dd>geo.intrinsicValue(‘metaexpr_code’)</dd>
+<dt>in SOHO, you can access this with:</dt>
+<dd>geo.globalValue(‘intrinsic:metaexpr_code’)</dd>
+</dl>
+<p>The code in this module parses the metaball code into an expression tree
+structure, which is much more comprehensible.</p>
+<p>The intrinsic is both read/write, so it’s also possible to set the metaball
+expression this way (using the setIntrinsicValue method in HOM), though
+it’s probably more efficient to set the “metaExpression” detail attribute
+directly.</p>
+<dl class="function">
+<dt id="metaexpr.build">
+<code class="descclassname">metaexpr.</code><code class="descname">build</code><span class="sig-paren">(</span><em>opcodes</em><span class="sig-paren">)</span><a class="headerlink" href="#metaexpr.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an array of opcodes, build an expr</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="metaexpr.expr">
+<em class="property">class </em><code class="descclassname">metaexpr.</code><code class="descname">expr</code><span class="sig-paren">(</span><em>opcode</em><span class="sig-paren">)</span><a class="headerlink" href="#metaexpr.expr" title="Permalink to this definition">¶</a></dt>
+<dd><p>The expr class is used to represent the metaball expression.  Each node
+in the graph has:</p>
+<blockquote>
+<div><ul class="simple">
+<li>self.Op:  the operation</li>
+<li>self.Kids:  children (or operands)</li>
+</ul>
+</div></blockquote>
+<p>Each child will either be a sub-expression (i.e. an instance of an expr
+object) or an integer representing a primitive number.</p>
+<dl class="method">
+<dt id="metaexpr.expr.jsonString">
+<code class="descname">jsonString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metaexpr.expr.jsonString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize into a JSON string where the form for each node in the
+graph is [opcode,[children]] where children is a list of either
+primitive numbers or other child expressions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="metaexpr.expr.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><em>opcodes</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#metaexpr.expr.serialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize into an array of opcodes (i.e. the opposite of the build
+function).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="metaexpr.serialize">
+<code class="descclassname">metaexpr.</code><code class="descname">serialize</code><span class="sig-paren">(</span><em>expr</em>, <em>first_id</em><span class="sig-paren">)</span><a class="headerlink" href="#metaexpr.serialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an expression and a “first_id”, generate a serialization of the
+expression.  The first_id is usually set to the number of primitives in
+the geometry.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="metaexpr.test">
+<code class="descclassname">metaexpr.</code><code class="descname">test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#metaexpr.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Self-test</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="karmautils.html" title="previous chapter">karmautils module</a></li>
+      <li>Next: <a href="mssbuild.html" title="next chapter">mssbuild module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/metaexpr.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/metaexpr.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,240 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>cloud module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="cloudEULA module" href="cloudEULA.html" />
+    <link rel="prev" title="choptoolutils module" href="choptoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cloud">
+<span id="cloud-module"></span><h1>cloud module<a class="headerlink" href="#module-cloud" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cloud.AWSConnection">
+<em class="property">class </em><code class="descclassname">cloud.</code><code class="descname">AWSConnection</code><span class="sig-paren">(</span><em>cloud_region</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.AWSConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An Amazon Web Services connection.  Use getAWSConnection to get an
+instance of this class.</p>
+<dl class="classmethod">
+<dt id="cloud.AWSConnection.getErrorType">
+<em class="property">classmethod </em><code class="descname">getErrorType</code><span class="sig-paren">(</span><em>response</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.AWSConnection.getErrorType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloud.AWSConnection.getSSHKeyName">
+<code class="descname">getSSHKeyName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.AWSConnection.getSSHKeyName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloud.AWSConnection.getSSHKeyPath">
+<code class="descname">getSSHKeyPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.AWSConnection.getSSHKeyPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="cloud.CloudOperationFailed">
+<em class="property">exception </em><code class="descclassname">cloud.</code><code class="descname">CloudOperationFailed</code><a class="headerlink" href="#cloud.CloudOperationFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cloud.EC2InstanceType">
+<em class="property">class </em><code class="descclassname">cloud.</code><code class="descname">EC2InstanceType</code><span class="sig-paren">(</span><em>model</em>, <em>ec2_units</em>, <em>num_cpus</em>, <em>memory</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.EC2InstanceType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="cloud.EC2InstanceType.description">
+<code class="descname">description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.EC2InstanceType.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cloud.EC2Region">
+<em class="property">class </em><code class="descclassname">cloud.</code><code class="descname">EC2Region</code><span class="sig-paren">(</span><em>code</em>, <em>name</em>, <em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.EC2Region" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.forceEC2RegionDetection">
+<code class="descclassname">cloud.</code><code class="descname">forceEC2RegionDetection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.forceEC2RegionDetection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force detection of the region, bypassing the cache.  Returns None if
+the region could not be detected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloud.getAWSConnection">
+<code class="descclassname">cloud.</code><code class="descname">getAWSConnection</code><span class="sig-paren">(</span><em>cloud_region</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.getAWSConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an AWSConnection that has been tested to be valid, or None if the
+Amazon Web Services key could not be read or the key is not valid.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloud.getAWSKey">
+<code class="descclassname">cloud.</code><code class="descname">getAWSKey</code><span class="sig-paren">(</span><em>cloud_region</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.getAWSKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the access key id and secret access key if possible.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloud.getCachedDetectedEC2Region">
+<code class="descclassname">cloud.</code><code class="descname">getCachedDetectedEC2Region</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.getCachedDetectedEC2Region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the cached region that was detected, or None if nothing was
+cached.</p>
+<p>This function is also called from the rop.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloud.getCachedProjectParmsFromRop">
+<code class="descclassname">cloud.</code><code class="descname">getCachedProjectParmsFromRop</code><span class="sig-paren">(</span><em>rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.getCachedProjectParmsFromRop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.getDetectedEC2Region">
+<code class="descclassname">cloud.</code><code class="descname">getDetectedEC2Region</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.getDetectedEC2Region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the detected region, using the cached version if it exists.
+Returns None if nothing could be detected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloud.instanceIsRunningSESIImage">
+<code class="descclassname">cloud.</code><code class="descname">instanceIsRunningSESIImage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.instanceIsRunningSESIImage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.instanceLicenseCategory">
+<code class="descclassname">cloud.</code><code class="descname">instanceLicenseCategory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.instanceLicenseCategory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.loadAWSFile">
+<code class="descclassname">cloud.</code><code class="descname">loadAWSFile</code><span class="sig-paren">(</span><em>file_name</em>, <em>default_value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.loadAWSFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.loadReceiveEmailAndAddress">
+<code class="descclassname">cloud.</code><code class="descname">loadReceiveEmailAndAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.loadReceiveEmailAndAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the setting that says what email address to send notifications to.</p>
+<p>Return a tuple of two values: the first indicates if receiving emails is
+enabled, and the second indicates which email address to send to.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloud.preFlightScene">
+<code class="descclassname">cloud.</code><code class="descname">preFlightScene</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.preFlightScene" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.saveProjectParmsToRop">
+<code class="descclassname">cloud.</code><code class="descname">saveProjectParmsToRop</code><span class="sig-paren">(</span><em>rop_node</em>, <em>project_parms</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.saveProjectParmsToRop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.selectProjectParmsForCloudRender">
+<code class="descclassname">cloud.</code><code class="descname">selectProjectParmsForCloudRender</code><span class="sig-paren">(</span><em>rop_node</em>, <em>num_cloud_machines</em>, <em>machine_type</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.selectProjectParmsForCloudRender" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.setAccessKeyAndGetError">
+<code class="descclassname">cloud.</code><code class="descname">setAccessKeyAndGetError</code><span class="sig-paren">(</span><em>access_key_id</em>, <em>secret_access_key</em>, <em>cloud_region</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.setAccessKeyAndGetError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the access key and return an error message if it’s not valid, or
+None if it is.</p>
+<p>This function sets the global variables _access_key_id and
+_secret_access_key.  It is called from cloudsubmit when it reads the
+(decrypted) secret access key from a temporary file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloud.showFileReferenceDialog">
+<code class="descclassname">cloud.</code><code class="descname">showFileReferenceDialog</code><span class="sig-paren">(</span><em>rop_node</em>, <em>project_name</em>, <em>project_dir_variable</em>, <em>num_cloud_machines</em>, <em>machine_type</em><span class="sig-paren">)</span><a class="headerlink" href="#cloud.showFileReferenceDialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.showSetUpCloudDialog">
+<code class="descclassname">cloud.</code><code class="descname">showSetUpCloudDialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.showSetUpCloudDialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloud.showSetUpCloudDialogWithPassphrasePrompt">
+<code class="descclassname">cloud.</code><code class="descname">showSetUpCloudDialogWithPassphrasePrompt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloud.showSetUpCloudDialogWithPassphrasePrompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="choptoolutils.html" title="previous chapter">choptoolutils module</a></li>
+      <li>Next: <a href="cloudEULA.html" title="next chapter">cloudEULA module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/cloud.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/cloud.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

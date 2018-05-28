@@ -1,0 +1,179 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dopreltoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dopsbdtoolutils module" href="dopsbdtoolutils.html" />
+    <link rel="prev" title="doprbdtoolutils module" href="doprbdtoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-dopreltoolutils">
+<span id="dopreltoolutils-module"></span><h1>dopreltoolutils module<a class="headerlink" href="#module-dopreltoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="dopreltoolutils.checkNotPackedObject">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">checkNotPackedObject</code><span class="sig-paren">(</span><em>dopobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.checkNotPackedObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raises an error if the user attempts to create a constraint with
+RBD Packed Objects, which only support constraint networks.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.genericConstraint">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">genericConstraint</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>nodetypename</em>, <em>validateobjfunc</em>, <em>mutual</em>, <em>allowaffector</em>, <em>nodename</em>, <em>prompt</em>, <em>exact_node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.genericConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is similar to the standard DOP filter tool, but is for
+DOP relationships, which require selecting two sets of objects.
+Unlike the genericRelationship function, only one selection is
+requested of the user.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.genericConstraintTool">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">genericConstraintTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>validateobjfunc</em>, <em>mutual</em>, <em>allowaffector</em>, <em>nodename=None</em>, <em>prompt=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.genericConstraintTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delegates the creation of a DOP relationship node to the standard
+DOP node creation tool if we are in a network editor, or the
+specialized genericConstraint function if we are in a scene
+viewer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.genericRelToolSetParms">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">genericRelToolSetParms</code><span class="sig-paren">(</span><em>dopnode</em>, <em>affectedobjects</em>, <em>affectorobjects</em>, <em>mutual</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.genericRelToolSetParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the affector and affected object parameters on a relationship
+DOP node. These DOPs can have one of a few different names for the
+various parameters, so we test for the existence of various choices.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.genericRelationship">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">genericRelationship</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>nodetypename</em>, <em>validateobjfunc</em>, <em>mutual</em>, <em>wantaffector</em>, <em>needaffector</em>, <em>multiaffected</em>, <em>multiaffector</em>, <em>nodename</em>, <em>affected_prompt</em>, <em>affector_prompt</em>, <em>exact_node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.genericRelationship" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is similar to the standard DOP filter tool, but is for
+DOP relationships, which require selecting two sets of objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.genericRelationshipTool">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">genericRelationshipTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>validateobjfunc</em>, <em>mutual</em>, <em>wantaffector</em>, <em>needaffector</em>, <em>multiaffected</em>, <em>multiaffector</em>, <em>nodename=None</em>, <em>affected_prompt=None</em>, <em>affector_prompt=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.genericRelationshipTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delegates the creation of a DOP relationship node to the standard
+DOP node creation tool if we are in a network editor, or the
+specialized genericRelationship function if we are in a scene
+viewer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.validateBullet">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">validateBullet</code><span class="sig-paren">(</span><em>dopobject</em>, <em>affected</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.validateBullet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only Bullet affected objects, and any affector object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.validateCloth">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">validateCloth</code><span class="sig-paren">(</span><em>dopobject</em>, <em>affected</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.validateCloth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only cloth affected objects, and no affector objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.validateRBD">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">validateRBD</code><span class="sig-paren">(</span><em>dopobject</em>, <em>affected</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.validateRBD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only RBD affected objects, and any affector object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.validateRBDorBullet">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">validateRBDorBullet</code><span class="sig-paren">(</span><em>dopobject</em>, <em>affected</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.validateRBDorBullet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only RBD or Bullet affected objects, and any affector object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.validateSource">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">validateSource</code><span class="sig-paren">(</span><em>dopobject</em>, <em>affected</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.validateSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only smoke, fluid, and sand affected objects, and any affector
+object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopreltoolutils.validateWire">
+<code class="descclassname">dopreltoolutils.</code><code class="descname">validateWire</code><span class="sig-paren">(</span><em>dopobject</em>, <em>affected</em><span class="sig-paren">)</span><a class="headerlink" href="#dopreltoolutils.validateWire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only wire affected objects, and no affector objects.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="doprbdtoolutils.html" title="previous chapter">doprbdtoolutils module</a></li>
+      <li>Next: <a href="dopsbdtoolutils.html" title="next chapter">dopsbdtoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dopreltoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/dopreltoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

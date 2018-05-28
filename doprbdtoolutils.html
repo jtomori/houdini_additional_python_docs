@@ -1,0 +1,285 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>doprbdtoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dopreltoolutils module" href="dopreltoolutils.html" />
+    <link rel="prev" title="doppyrotoolutils module" href="doppyrotoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-doprbdtoolutils">
+<span id="doprbdtoolutils-module"></span><h1>doprbdtoolutils module<a class="headerlink" href="#module-doprbdtoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="doprbdtoolutils.addConstraintNetworkSolver">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">addConstraintNetworkSolver</code><span class="sig-paren">(</span><em>dopnet</em>, <em>name</em>, <em>constraintnet</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.addConstraintNetworkSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up a SOP Solver and wire it into the constraint network DOP.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.addGlueNetworkSolver">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">addGlueNetworkSolver</code><span class="sig-paren">(</span><em>dopnet</em>, <em>constraintnet</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.addGlueNetworkSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the default SOP Solver for glue constraint networks, which just
+deletes broken glue bonds.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.addRestNode">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">addRestNode</code><span class="sig-paren">(</span><em>dopimportnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.addRestNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a Rest Position node so we have good rest positions for
+any shaders the user wants to add.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.buildConstraintNetworkDOPNodes">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">buildConstraintNetworkDOPNodes</code><span class="sig-paren">(</span><em>dopnet</em>, <em>nodename</em>, <em>soppath</em>, <em>constraint_nodes</em>, <em>set_current=True</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.buildConstraintNetworkDOPNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the constraint network DOP and its associated nodes.
+Returns the constraint network DOP node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.buildGlueConstraintNode">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">buildGlueConstraintNode</code><span class="sig-paren">(</span><em>dopnet</em>, <em>strength=10000</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.buildGlueConstraintNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.buildGlueNetworkDOPNodes">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">buildGlueNetworkDOPNodes</code><span class="sig-paren">(</span><em>dopnet</em>, <em>nodename</em>, <em>soppath</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.buildGlueNetworkDOPNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up the constraint network DOP and its associated nodes for a glue
+constraint network.
+Returns the constraint network DOP node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.buildGlueNetworkFromObjects">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">buildGlueNetworkFromObjects</code><span class="sig-paren">(</span><em>objectlist</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.buildGlueNetworkFromObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of rbd objects, fetchs them into a new
+Object, glues them together, and sends the resulting
+constraint network back to DOPs</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.buildGlueNetworkGeometry">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">buildGlueNetworkGeometry</code><span class="sig-paren">(</span><em>sopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.buildGlueNetworkGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a SOP Node whose geometry has a ‘name’ primitive attribute, builds
+the constraint network geometry.
+Returns the last node of the SOP chain.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.buildPinConstraintNode">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">buildPinConstraintNode</code><span class="sig-paren">(</span><em>dopnet</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.buildPinConstraintNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.createGluedObject">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">createGluedObject</code><span class="sig-paren">(</span><em>kwargs</em>, <em>use_packed</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.createGluedObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an RBD Packed Object or RBD Fractured Object whose pieces are
+glued together.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.createPackedRBDInstances">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">createPackedRBDInstances</code><span class="sig-paren">(</span><em>objnode</em>, <em>pointsnode</em>, <em>geonode</em>, <em>nameprefix</em>, <em>attribstocopy</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.createPackedRBDInstances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up an RBD Packed Object for instancing.
+Returns the newly created DOP node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.createRBDGrains">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">createRBDGrains</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.createRBDGrains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an object and turn it into a pile of sand, simulated as RBD
+spheres.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.createRagdollConstraintNetwork">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">createRagdollConstraintNetwork</code><span class="sig-paren">(</span><em>dopnet</em>, <em>dopobjnode</em>, <em>sopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.createRagdollConstraintNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the constraint network for a ragdoll.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.createRagdollObject">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">createRagdollObject</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.createRagdollObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an RBD Packed Object from agent primitives, and set up
+constraints for ragdolls.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.createSphereObject">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">createSphereObject</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.createSphereObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.dopObjectInit">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">dopObjectInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>objectnode</em>, <em>sopnode</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.dopObjectInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specializes the DOP Object node initialization process for RBD
+Object creation nodes of various kinds (RBD Object, RBD Glue Object,
+etc).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.fracturedDopObjectInit">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">fracturedDopObjectInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>objectnode</em>, <em>sopnode</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.fracturedDopObjectInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specializes the DOP Object node initialization process for RBD
+Fractured and Glue Objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.getKeyframeDopForDopObject">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">getKeyframeDopForDopObject</code><span class="sig-paren">(</span><em>dopobject</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.getKeyframeDopForDopObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the RBD Keyframe Active DOP that controls the active state and
+position keyframing for a particular RBD Object. If no Keyframe Active
+DOP exists for this object, one is created.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.glueNetwork">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">glueNetwork</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.glueNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the RBD objects into a glue network.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.makeAutoFreeze">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">makeAutoFreeze</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.makeAutoFreeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the RBD objects to breakable one by adding
+rbdautofreeze object if not already present.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.makeBreakable">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">makeBreakable</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.makeBreakable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the RBD objects to breakable one by adding
+voronoifractureconfigure object if not already present.
+Do this by passing a list of object-creator pairs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.makeImpactAnalysis">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">makeImpactAnalysis</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.makeImpactAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add ImpactAnalysis Solver to RBD Objects in Dop Network</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.makeObjectAutoFreeze">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">makeObjectAutoFreeze</code><span class="sig-paren">(</span><em>rbdobject</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.makeObjectAutoFreeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giving the rbdnode, append a rbdautofreeze to it.
+No-op if one is already present.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.makeObjectBreakable">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">makeObjectBreakable</code><span class="sig-paren">(</span><em>rbdlist</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.makeObjectBreakable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giving the rbdnode, append a voronoifractureconfigureobject to it.
+No-op if one is already present.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.makeObjectImpactAnalysis">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">makeObjectImpactAnalysis</code><span class="sig-paren">(</span><em>rbdobject</em>, <em>rbdsolver</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.makeObjectImpactAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.packedDopObjectInit">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">packedDopObjectInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>objectnode</em>, <em>sopnode</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.packedDopObjectInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specializes the DOP Object node initialization process for RBD Packed
+Objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.setDopObjectActiveState">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">setDopObjectActiveState</code><span class="sig-paren">(</span><em>info</em>, <em>dopobject</em>, <em>active</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.setDopObjectActiveState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the active state of an RBD Object. This is done by creating
+(or modifying an existing) RBD Keyframe Active DOP that is associated
+with this one RBD Object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doprbdtoolutils.setGroupString">
+<code class="descclassname">doprbdtoolutils.</code><code class="descname">setGroupString</code><span class="sig-paren">(</span><em>rbdnode</em>, <em>node</em>, <em>groupstring</em><span class="sig-paren">)</span><a class="headerlink" href="#doprbdtoolutils.setGroupString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the group parameter of node to be groupstring.  Has
+the extra feature that if all of the rbdnode’s objects are
+accounted for in groupstring, it uses * instead</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="doppyrotoolutils.html" title="previous chapter">doppyrotoolutils module</a></li>
+      <li>Next: <a href="dopreltoolutils.html" title="next chapter">dopreltoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/doprbdtoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/doprbdtoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,232 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>doppoptoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="doppyrotoolutils module" href="doppyrotoolutils.html" />
+    <link rel="prev" title="dopparticlefluidtoolutils module" href="dopparticlefluidtoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-doppoptoolutils">
+<span id="doppoptoolutils-module"></span><h1>doppoptoolutils module<a class="headerlink" href="#module-doppoptoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="doppoptoolutils.addVortexFilaments">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">addVortexFilaments</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.addVortexFilaments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select geometry for vortex filaments, and then add a Source Filaments,
+POP Advect by Filaments, and Filament Solver to the simulation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.applyGeoModifier">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">applyGeoModifier</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>modifiernodetype</em>, <em>prompt=None</em>, <em>targetinput='vel'</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.applyGeoModifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a geometry and then a set of points to affect
+with that geometry, returning a tuple of the two.
+(node, geometry)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.applyModifier">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">applyModifier</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>modifiernodetype</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.applyModifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a set of points and apply a specified modifier
+to it, returning the modifier</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.buildDopObjectMenu">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">buildDopObjectMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.buildDopObjectMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a menu containing the names of the DOP objects in the
+simulation, which can be used for e.g. filtering collisions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.buildGroupMenu">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">buildGroupMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.buildGroupMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inspects this DOP node and returns a group menu suitable
+for the group script</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.computePointSeparation">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">computePointSeparation</code><span class="sig-paren">(</span><em>geo</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.computePointSeparation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute a sensible point separation for the Grain Source node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.createFireworksEmitter">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">createFireworksEmitter</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.createFireworksEmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an position and emit fireworks from it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.createLocationEmitter">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">createLocationEmitter</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.createLocationEmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an position and emit points from it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.createParticleSystem">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">createParticleSystem</code><span class="sig-paren">(</span><em>name</em>, <em>forcepoints=False</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.createParticleSystem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.createSandBox">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">createSandBox</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.createSandBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select a grid and turn it into a layer of sand.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.createSandSource">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">createSandSource</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>style</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.createSandSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an object and turn it into a pile of sand.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.createSandSourceFromObject">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">createSandSourceFromObject</code><span class="sig-paren">(</span><em>origobj</em>, <em>style</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.createSandSourceFromObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giving an OBJ_Node builds a sand object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.createSourceEmitter">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">createSourceEmitter</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.createSourceEmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select an object and emit points from it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.dopPopGeometryInit">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">dopPopGeometryInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>objectnode</em>, <em>sopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.dopPopGeometryInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specializes the DOP Object node initialization process for POP
+Objects created from a simple geometry selection. This creates
+a POP Object with a POP Shape Match force attached.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.dopPopParticleInit">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">dopPopParticleInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>objectnode</em>, <em>sopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.dopPopParticleInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specializes the DOP Object node initialization process for POP
+Objects created from a POP Network selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.findOrCreateParticleSystem">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">findOrCreateParticleSystem</code><span class="sig-paren">(</span><em>name</em>, <em>forcepoints=False</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.findOrCreateParticleSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to find an existing particle system in the current
+dop network, returns that if present.  Otherwise creates
+and returns one of the given name</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.findParticleSystem">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">findParticleSystem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.findParticleSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to find an existing particle system in the current
+dop network.  Returns the representative object if found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.generateSelectionString">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">generateSelectionString</code><span class="sig-paren">(</span><em>selection</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.generateSelectionString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a selection string from a selection. 
+If everything is selected (e.g., all points, all primitives), then
+the “*” string is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.linkInNode">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">linkInNode</code><span class="sig-paren">(</span><em>node</em>, <em>solvernode</em>, <em>input</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.linkInNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Links the given node into the provided named input of the solver
+node.  Will replace the Merge node if present.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.setupAutoFreeze">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">setupAutoFreeze</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.setupAutoFreeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns on auto-freezing for a solver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doppoptoolutils.twoStepPointSelection">
+<code class="descclassname">doppoptoolutils.</code><code class="descname">twoStepPointSelection</code><span class="sig-paren">(</span><em>activepane</em><span class="sig-paren">)</span><a class="headerlink" href="#doppoptoolutils.twoStepPointSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dopparticlefluidtoolutils.html" title="previous chapter">dopparticlefluidtoolutils module</a></li>
+      <li>Next: <a href="doppyrotoolutils.html" title="next chapter">doppyrotoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/doppoptoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/doppoptoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

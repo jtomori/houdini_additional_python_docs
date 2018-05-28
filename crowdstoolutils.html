@@ -1,0 +1,358 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>crowdstoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dbg module" href="dbg.html" />
+    <link rel="prev" title="copnettoolutils module" href="copnettoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-crowdstoolutils">
+<span id="crowdstoolutils-module"></span><h1>crowdstoolutils module<a class="headerlink" href="#module-crowdstoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="crowdstoolutils.addcollisionlayer">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">addcollisionlayer</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.addcollisionlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a collision layer to an agent.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.addobstacle">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">addobstacle</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.addobstacle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add obstacle object to the crowd simulation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.addterrain">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">addterrain</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.addterrain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add terrain object to the crowd simulation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.allowAgentBake">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">allowAgentBake</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.allowAgentBake" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.applyPresetForKnownAgents">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">applyPresetForKnownAgents</code><span class="sig-paren">(</span><em>node</em>, <em>agentname=None</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.applyPresetForKnownAgents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies presets for built-in characters such as mocapbiped1. If
+agentname is not specified, it will be determined by inspecting the
+input geometry’s attributes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.bakeAgent">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">bakeAgent</code><span class="sig-paren">(</span><em>subnet</em>, <em>agentname</em>, <em>clipname</em>, <em>foot_object_paths=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.bakeAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a ROP network containing the Agent ROP, and a geometry object
+containing an Agent SOP. Returns a tuple containing the ROP Network,
+the Agent ROP, and the Agent SOP.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.bakeAgentInteractive">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">bakeAgentInteractive</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.bakeAgentInteractive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildChannelMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildChannelMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildChannelMenu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildClipMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildClipMenu</code><span class="sig-paren">(</span><em>node</em>, <em>clip_properties_input=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildClipMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a menu containing the available clip names for an agent.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildDopClipMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildDopClipMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildDopClipMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a menu containing the available clip names for an agent in the
+processed DOP object, including those defined in the clip properties.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildDopStateMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildDopStateMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildDopStateMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a menu containing the states in the crowd simulation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildDopTransformGroupMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildDopTransformGroupMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildDopTransformGroupMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a menu containing the available transform groups for an agent in
+the processed DOP object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildLayerMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildLayerMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildLayerMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a menu containing the available layer names.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildMenuStringList">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildMenuStringList</code><span class="sig-paren">(</span><em>names</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildMenuStringList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicates each element in a list of strings.
+For example, [“walk”, “run”] becomes [“walk”, “walk”, “run”, “run”]</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildTransformGroupMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildTransformGroupMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildTransformGroupMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a menu containing the available transform groups.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.buildTransformMenu">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">buildTransformMenu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.buildTransformMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a menu containing the transform names from an agent’s rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.chooseStatesToCreate">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">chooseStatesToCreate</code><span class="sig-paren">(</span><em>source_geo</em>, <em>dopnet</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.chooseStatesToCreate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.computeRotationLimits">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">computeRotationLimits</code><span class="sig-paren">(</span><em>node</em>, <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.computeRotationLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine joint limits by analyzing the agent’s animation clips.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.configurejoints">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">configurejoints</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.configurejoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an Agent Configure Joints node and a test simulation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.createLimitsForCollisionLayer">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">createLimitsForCollisionLayer</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.createLimitsForCollisionLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an auto-computed joint limit for each non-root transform with a
+shape attached to it in the collision layer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.crowdagentcam">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">crowdagentcam</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.crowdagentcam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create cameras attached to the agent transforms</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.crowdlookat">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">crowdlookat</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.crowdlookat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask user for lookat object and which state to add it to the crowd sim</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.crowdpaintdensity">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">crowdpaintdensity</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.crowdpaintdensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create setup to paint density for crowdsource</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.crowdpath">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">crowdpath</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.crowdpath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask user for curve object and add it as path to the crowd sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.crowdtargetposition">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">crowdtargetposition</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.crowdtargetposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a target position steering force that agents will try to reach</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findAgent">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findAgent</code><span class="sig-paren">(</span><em>geo</em>, <em>group_str=''</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the agent primitive from the given geometry, or returns None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findAgentDefinitions">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findAgentDefinitions</code><span class="sig-paren">(</span><em>geo</em>, <em>group_str=''</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findAgentDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper around hou.crowds.findAgentDefinitions that does some exception
+handling.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findCrowdObject">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findCrowdObject</code><span class="sig-paren">(</span><em>dopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findCrowdObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findCrowdSim">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findCrowdSim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findCrowdSim" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findCrowdSolver">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findCrowdSolver</code><span class="sig-paren">(</span><em>dopnet</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findCrowdSolver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findDopAgentDefinitions">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findDopAgentDefinitions</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findDopAgentDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the unique agent definitions in the processed DOP object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findInputAgent">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findInputAgent</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findInputAgent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the agent primitive from the node’s input geometry, or returns
+None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findInputAgentDefinitions">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findInputAgentDefinitions</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findInputAgentDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the unique agent definitions from the node’s input geometry.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findInputTriggerName">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findInputTriggerName</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findInputTriggerName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.findStates">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">findStates</code><span class="sig-paren">(</span><em>dopnet</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.findStates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of the crowd state nodes and state names.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.populate">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">populate</code><span class="sig-paren">(</span><em>agent_objects</em>, <em>source_object</em>, <em>default_state=''</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.populate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.populateInteractive">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">populateInteractive</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.populateInteractive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.selectJoint">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">selectJoint</code><span class="sig-paren">(</span><em>node</em>, <em>parmtuple</em>, <em>exclusive=True</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.selectJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a tree chooser to select a joint name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.selectSOPGeometry">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">selectSOPGeometry</code><span class="sig-paren">(</span><em>prompt</em>, <em>allow_multisel=False</em>, <em>allowed_types=('geo'</em>, <em>)</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.selectSOPGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompts the user for a geometry object selection, and verifies that the
+objects are non-empty. Returns the list of selected objects (if
+allow_multisel is True), or the single selected object otherwise.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.selectState">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">selectState</code><span class="sig-paren">(</span><em>dopnet</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.selectState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompts the user to select one of the states in the crowd simulation
+(or all states). Returns the crowd state DOP, or None if all states
+were selected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.simulate">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">simulate</code><span class="sig-paren">(</span><em>source_object</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.simulate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up a crowd simulation for the agents in source_object.
+Returns the merge nodes for states and transitions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.simulateInteractive">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">simulateInteractive</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.simulateInteractive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create crowd dop sim based on user input or default setup if none</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crowdstoolutils.wireNodeInState">
+<code class="descclassname">crowdstoolutils.</code><code class="descname">wireNodeInState</code><span class="sig-paren">(</span><em>node</em>, <em>state_node</em>, <em>crowdsolver</em><span class="sig-paren">)</span><a class="headerlink" href="#crowdstoolutils.wireNodeInState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wire the given node into the state’s stream. If state_node is None, the
+node is wired just before the crowd solver’s state input, so it will
+apply to all states.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="copnettoolutils.html" title="previous chapter">copnettoolutils module</a></li>
+      <li>Next: <a href="dbg.html" title="next chapter">dbg module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/crowdstoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/crowdstoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

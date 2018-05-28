@@ -1,0 +1,986 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>EC2 module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="assetauthortools module" href="assetauthortools.html" />
+    <link rel="prev" title="houdini_libs" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-EC2">
+<span id="ec2-module"></span><h1>EC2 module<a class="headerlink" href="#module-EC2" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="EC2.AWSAuthConnection">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">AWSAuthConnection</code><span class="sig-paren">(</span><em>aws_access_key_id</em>, <em>aws_secret_access_key</em>, <em>is_secure=True</em>, <em>server='ec2.amazonaws.com'</em>, <em>iam_server='iam.amazonaws.com'</em>, <em>port=None</em>, <em>region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Creates an authorized connection to EC2 containing wrappers for
+Query API calls.</p>
+<p>Each API call has a matching method on this class to perform the
+appropriate E2 action.</p>
+<p>&#64;ivar verbose: Verbosity flag, defaults to false.  If set to true,
+some debug information is printed.</p>
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.add_role_to_instance_profile">
+<code class="descname">add_role_to_instance_profile</code><span class="sig-paren">(</span><em>instance_profile_name</em>, <em>role_name</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.add_role_to_instance_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an IAM C{AddRoleToInstanceProfile} call.</p>
+<p>&#64;param name: The name of the instance profile to update.</p>
+<p>&#64;param name: The name of the role to add.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.allocate_address">
+<code class="descname">allocate_address</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.allocate_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an C{AllocateAddress} call.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.associate_address">
+<code class="descname">associate_address</code><span class="sig-paren">(</span><em>publicIp</em>, <em>instanceId</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.associate_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an C{AssociateAddress} call.</p>
+<p>&#64;param publicIp: Address to associate
+&#64;param instanceId: Instance to associate address with</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.attach_role_policy">
+<code class="descname">attach_role_policy</code><span class="sig-paren">(</span><em>policy_arn</em>, <em>role_name</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.attach_role_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an IAM C{AttachRolePolicy} call.</p>
+<p>&#64;param policy_arn: The Amazon Resource Name (ARN).</p>
+<p>&#64;param role_name: The name (friendly name, not ARN) of the role to
+attach the policy to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.auth_revoke_impl">
+<code class="descname">auth_revoke_impl</code><span class="sig-paren">(</span><em>groupName</em>, <em>ipProtocol=None</em>, <em>fromPort=None</em>, <em>toPort=None</em>, <em>cidrIp=None</em>, <em>sourceSecurityGroupName=None</em>, <em>sourceSecurityGroupOwnerId=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.auth_revoke_impl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes parameters for C{authorize} and C{revoke}.</p>
+<p>&#64;param groupName: Name of security group to modify.</p>
+<p>&#64;param ipProtocol: IP protocol in rule.  Valid vlaues are
+C{‘tcp’}, C{‘udp’} and C{‘icmp’}.</p>
+<p>&#64;param fromPort: Bottom of IP port range in rule.</p>
+<p>&#64;param toPort: Top of IP port range in rule.</p>
+<p>&#64;param cidrIp: CIDR IP range in rule.</p>
+<p>&#64;param sourceSecurityGroupName: Security group name in rule.</p>
+<p>&#64;param sourceSecurityGroupOwnerId: User id of security group
+in rule.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.authorize">
+<code class="descname">authorize</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.authorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an C{AuthorizeSecurityGroupIngress} call.</p>
+<p>L{authorize} and L{revoke} share parameter parsing code.
+See L{auth_revoke_impl} for parameters.  Also, see API docs
+for details of valid parameter combinations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.confirm_product_instance">
+<code class="descname">confirm_product_instance</code><span class="sig-paren">(</span><em>productCode</em>, <em>instanceId</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.confirm_product_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{ConfirmProdcutInstance} call.</p>
+<p>&#64;param productCode: The product code to confirm</p>
+<p>&#64;param instanceId: The instance for which to confirm the product code.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.create_instance_profile">
+<code class="descname">create_instance_profile</code><span class="sig-paren">(</span><em>name</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.create_instance_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an IAM C{CreateInstanceProfile} call.</p>
+<p>&#64;param name: The name of the instance profile to create.</p>
+<p>&#64;path: The path to the instance profile.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.create_keypair">
+<code class="descname">create_keypair</code><span class="sig-paren">(</span><em>keyName</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.create_keypair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{CreateKeypair} call.</p>
+<p>&#64;param keyName: Name for the new keypair.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.create_role">
+<code class="descname">create_role</code><span class="sig-paren">(</span><em>name</em>, <em>policy</em>, <em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.create_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an IAM C{CreateRole} call.</p>
+<p>&#64;param name: The name of the role to create.</p>
+<p>&#64;param policy: String containing the trust relationship policy document
+that grants an entity permission to assume the role.</p>
+<p>&#64;path: The path to the role.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.create_securitygroup">
+<code class="descname">create_securitygroup</code><span class="sig-paren">(</span><em>groupName</em>, <em>groupDescription</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.create_securitygroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{CreateSecurityGroup} call.</p>
+<p>&#64;param groupName: Name of group to create.</p>
+<p>&#64;param groupDescription: Brief description of security group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.delete_keypair">
+<code class="descname">delete_keypair</code><span class="sig-paren">(</span><em>keyName</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.delete_keypair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DeleteKeypair} call.</p>
+<p>&#64;param keyName: Name of keypair to delete.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.delete_securitygroup">
+<code class="descname">delete_securitygroup</code><span class="sig-paren">(</span><em>groupName</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.delete_securitygroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DeleteSecurityGroup} call.</p>
+<p>&#64;param groupName: Name of security group to delete.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.deregister_image">
+<code class="descname">deregister_image</code><span class="sig-paren">(</span><em>imageId</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.deregister_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DeregisterImage} call.</p>
+<p>&#64;param imageId: The image id to deregister.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_addresses">
+<code class="descname">describe_addresses</code><span class="sig-paren">(</span><em>publicIps=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeAddresses} call.</p>
+<p>&#64;param publicIps: List of addresses to describe.  If empty or
+omitted, all addresses will be described.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_availability_zones">
+<code class="descname">describe_availability_zones</code><span class="sig-paren">(</span><em>zoneNames=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_availability_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeAvailabilityZones} call.</p>
+<p>&#64;param zoneNames: List of availability zones to describe.  If
+empty or omitted, all availability zones will be described.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_image_attribute">
+<code class="descname">describe_image_attribute</code><span class="sig-paren">(</span><em>imageId</em>, <em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_image_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeImageAttribute} call.</p>
+<p>&#64;param imageId: AMI to describe attribute of.</p>
+<p>&#64;param attribute: Name of attribute to describe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_images">
+<code class="descname">describe_images</code><span class="sig-paren">(</span><em>imageIds=None</em>, <em>owners=None</em>, <em>executableBy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeImages} call.</p>
+<p>&#64;param imageIds: List of images to describe.  If empty or omitted, all
+images visible to the user are returned.</p>
+<p>&#64;param owners: List of users to filter returned images by
+owner.  If empty or omitted, no filtering is done.</p>
+<p>&#64;param executableBy: List of users (or user groups) to filter
+returned images by execution permissions.  If empty or
+omitted, no filtering is done.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_instance_attribute">
+<code class="descname">describe_instance_attribute</code><span class="sig-paren">(</span><em>instanceId</em>, <em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_instance_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeInstanceAttribute} call.</p>
+<p>&#64;param instanceId: instance to retrieve the attribute from</p>
+<p>&#64;param attribute: Name of attribute to retrieve</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_instances">
+<code class="descname">describe_instances</code><span class="sig-paren">(</span><em>instanceIds=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeInstances} call.</p>
+<p>&#64;param instanceIds: List of instances to describe.  If empty
+or omitted, all instances will be returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_keypairs">
+<code class="descname">describe_keypairs</code><span class="sig-paren">(</span><em>keyNames=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_keypairs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeKeypairs} call.</p>
+<p>&#64;param keyNames: List of keypairs to describe.  If empty or
+omitted, all keypairs are returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.describe_securitygroups">
+<code class="descname">describe_securitygroups</code><span class="sig-paren">(</span><em>groupNames=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.describe_securitygroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DescribeSecurityGroups} call.</p>
+<p>&#64;param groupNames: List of security groups to describe.  If
+empty or omitted, all security groups will be described.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.disassociate_address">
+<code class="descname">disassociate_address</code><span class="sig-paren">(</span><em>publicIp</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.disassociate_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{DisassociateAddress} call.</p>
+<p>&#64;param publicIp: Address to disassociate</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.encode">
+<code class="descname">encode</code><span class="sig-paren">(</span><em>aws_secret_access_key</em>, <em>str</em>, <em>urlencode=True</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.encode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.encoded_params">
+<code class="descname">encoded_params</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.encoded_params" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.get_aws_auth_param">
+<code class="descname">get_aws_auth_param</code><span class="sig-paren">(</span><em>params</em>, <em>aws_secret_access_key</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.get_aws_auth_param" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.get_console_output">
+<code class="descname">get_console_output</code><span class="sig-paren">(</span><em>instanceId</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.get_console_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{GetConsoleOutput} call.</p>
+<p>&#64;param instanceId: Instance from which to get console output.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.get_instance_profile">
+<code class="descname">get_instance_profile</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.get_instance_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an IAM C{GetInstanceProfile} call.</p>
+<p>&#64;param name: The name of the instance profile to get information about.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.get_role">
+<code class="descname">get_role</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.get_role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an IAM C{GetRole} call.</p>
+<p>&#64;param name: The name of the role to get information about.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.get_signature_version_2">
+<code class="descname">get_signature_version_2</code><span class="sig-paren">(</span><em>params</em>, <em>aws_secret_access_key</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.get_signature_version_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.get_signature_version_4">
+<code class="descname">get_signature_version_4</code><span class="sig-paren">(</span><em>params</em>, <em>service</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.get_signature_version_4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.make_request">
+<code class="descname">make_request</code><span class="sig-paren">(</span><em>action</em>, <em>params</em>, <em>data=''</em>, <em>service='ec2'</em>, <em>signature_version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.make_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.modify_image_attribute">
+<code class="descname">modify_image_attribute</code><span class="sig-paren">(</span><em>imageId</em>, <em>attribute</em>, <em>operationType</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.modify_image_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{ModifyImageAttribute} call.</p>
+<p>&#64;param imageId: AMI to modify attribute of.</p>
+<p>&#64;param attribute: Name of attribute to modify.</p>
+<p>&#64;param operationType: Operation to perform on attribute.</p>
+<p>&#64;param kwargs: Values for the attribute operation, documented below.</p>
+<p>&#64;kwarg userIds: List of userIds (valid with
+C{‘launchPermission’} attribute.)</p>
+<p>&#64;kwarg userGroups: List of userGroups (valid with
+C{‘launchPermission’} attribute.)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.pathlist">
+<code class="descname">pathlist</code><span class="sig-paren">(</span><em>key</em>, <em>arr</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.pathlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a key and an array of values into AWS query param format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.reboot_instances">
+<code class="descname">reboot_instances</code><span class="sig-paren">(</span><em>instanceIds</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.reboot_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{RebootInstances} call.</p>
+<p>&#64;param instanceIds: List of instances to reboot.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.register_image">
+<code class="descname">register_image</code><span class="sig-paren">(</span><em>imageLocation</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.register_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{RegisterImage} call.</p>
+<p>&#64;param imageLocation: The location of the image manifest to
+register in S3.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.release_address">
+<code class="descname">release_address</code><span class="sig-paren">(</span><em>publicIp</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.release_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{ReleaseAddress} call.</p>
+<p>&#64;param publicIp: Address to release</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.reset_image_attribute">
+<code class="descname">reset_image_attribute</code><span class="sig-paren">(</span><em>imageId</em>, <em>attribute</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.reset_image_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{ResetImageAttribute} call.</p>
+<p>&#64;param imageId: AMI to reset attribute of.</p>
+<p>&#64;param attribute: Name of attribute to reset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.revoke">
+<code class="descname">revoke</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.revoke" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes an C{RevokeSecurityGroupIngress} call.</p>
+<p>L{authorize} and L{revoke} share parameter parsing code.
+See L{auth_revoke_impl} for parameters.  Also, see API docs
+for details of valid parameter combinations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.run_instances">
+<code class="descname">run_instances</code><span class="sig-paren">(</span><em>imageId</em>, <em>minCount=1</em>, <em>maxCount=1</em>, <em>keyName=None</em>, <em>groupIds=None</em>, <em>userData=None</em>, <em>base64Encode=True</em>, <em>addressingType=None</em>, <em>instanceType=None</em>, <em>availabilityZone=None</em>, <em>kernelId=None</em>, <em>ramdiskId=None</em>, <em>blockDeviceMapping=None</em>, <em>iamInstanceProfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.run_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{RunInstances} call.</p>
+<p>&#64;param imageId: AMI id to launch instances of.</p>
+<p>&#64;param minCount: Minimum number of instances to launch.  If
+EC2 cannot launch at least this many, the call will fail.</p>
+<p>&#64;param maxCount: Maximum number of instances to launch.  EC2
+will make a best-effort attempt to launch this many instances,
+but will not fail unless fewer than C{minCount} are available.</p>
+<p>&#64;param keyName: Name of keypair to launch instances with.</p>
+<p>&#64;param groupIds: List of security groups to launch instances
+in.</p>
+<p>&#64;param userData: String containing user data to inject into
+launched instances.</p>
+<p>&#64;param base64Encode: Specifies whether C{userData} string
+qshould be base64 encoded.  Defaults to True.</p>
+<p>&#64;param addressingType: Specifies the address scheme to use for
+the instance. The supported (default) type is C{“public”}, or
+C{None} for the default. See the “Instance Addressing” section
+of the latest developer guide for more information.</p>
+<p>&#64;param availabilityZone: Specifies the availability zone to
+launch in.</p>
+<p>&#64;param kernelId: Kernel to launch the instances with.</p>
+<p>&#64;param ramdiskId: Ramdisk to launch the instances with.</p>
+<p>&#64;param blockDeviceMapping: Specifies the virtual block device
+mapping. This parameter is a list of two element lists or
+tuples. The first element is the virtual name and the second
+is the device name.</p>
+<p>&#64;param iamInstanceProfile: The IAM instance profile.  This is used to
+grant the instances permission to access AWS services.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.sign">
+<code class="descname">sign</code><span class="sig-paren">(</span><em>key</em>, <em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.sign" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.signature_key">
+<code class="descname">signature_key</code><span class="sig-paren">(</span><em>key</em>, <em>dateStamp</em>, <em>regionName</em>, <em>serviceName</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.signature_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.AWSAuthConnection.terminate_instances">
+<code class="descname">terminate_instances</code><span class="sig-paren">(</span><em>instanceIds</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AWSAuthConnection.terminate_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes a C{TerminateInstances} call.</p>
+<p>&#64;param instanceIds: List of instances to terminate.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.AddRoleToInstanceProfileResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">AddRoleToInstanceProfileResponse</code><span class="sig-paren">(</span><em>http_response</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AddRoleToInstanceProfileResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{AddRoleToInstanceProfile} API call.</p>
+<dl class="method">
+<dt id="EC2.AddRoleToInstanceProfileResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AddRoleToInstanceProfileResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.AllocateAddressResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">AllocateAddressResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AllocateAddressResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{AllocateAddress} API call.</p>
+<dl class="method">
+<dt id="EC2.AllocateAddressResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AllocateAddressResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.AssociateAddressResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">AssociateAddressResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AssociateAddressResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{AssociateAddress} API call.</p>
+<dl class="method">
+<dt id="EC2.AssociateAddressResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AssociateAddressResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.AttachRolePolicyResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">AttachRolePolicyResponse</code><span class="sig-paren">(</span><em>http_response</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AttachRolePolicyResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{AttachRolePolicy} API call.</p>
+<dl class="method">
+<dt id="EC2.AttachRolePolicyResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AttachRolePolicyResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.AuthorizeSecurityGroupIngressResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">AuthorizeSecurityGroupIngressResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AuthorizeSecurityGroupIngressResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{AuthorizeSecurityGroupIngress} API call.</p>
+<dl class="method">
+<dt id="EC2.AuthorizeSecurityGroupIngressResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.AuthorizeSecurityGroupIngressResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.ConfirmProductInstanceResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">ConfirmProductInstanceResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ConfirmProductInstanceResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{ConfirmProductInstance} API call.</p>
+<dl class="method">
+<dt id="EC2.ConfirmProductInstanceResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ConfirmProductInstanceResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.CreateInstanceProfileResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">CreateInstanceProfileResponse</code><span class="sig-paren">(</span><em>http_response</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateInstanceProfileResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{CreateInstanceProfile} API call.</p>
+<dl class="method">
+<dt id="EC2.CreateInstanceProfileResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateInstanceProfileResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.CreateKeyPairResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">CreateKeyPairResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateKeyPairResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{CreateKeyPair} API call.</p>
+<dl class="method">
+<dt id="EC2.CreateKeyPairResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateKeyPairResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.CreateRoleResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">CreateRoleResponse</code><span class="sig-paren">(</span><em>http_response</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateRoleResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{CreateRole} API call.</p>
+<dl class="method">
+<dt id="EC2.CreateRoleResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateRoleResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.CreateSecurityGroupResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">CreateSecurityGroupResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateSecurityGroupResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{CreateSecurityGroup} API call.</p>
+<dl class="method">
+<dt id="EC2.CreateSecurityGroupResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.CreateSecurityGroupResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DeleteKeyPairResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DeleteKeyPairResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DeleteKeyPairResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DeleteKeyPair} API call.</p>
+<dl class="method">
+<dt id="EC2.DeleteKeyPairResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DeleteKeyPairResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DeleteSecurityGroupResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DeleteSecurityGroupResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DeleteSecurityGroupResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DeleteSecurityGroup} API call.</p>
+<dl class="method">
+<dt id="EC2.DeleteSecurityGroupResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DeleteSecurityGroupResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DeregisterImageResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DeregisterImageResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DeregisterImageResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DeregisterImage} API call.</p>
+<dl class="method">
+<dt id="EC2.DeregisterImageResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DeregisterImageResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeAddressesResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeAddressesResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeAddressesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DescribeAddresses} API call.</p>
+<dl class="attribute">
+<dt id="EC2.DescribeAddressesResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'addressesSet/item'</em><a class="headerlink" href="#EC2.DescribeAddressesResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.DescribeAddressesResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeAddressesResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeAvailabilityZonesResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeAvailabilityZonesResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeAvailabilityZonesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DescribeAvailabilityZones} API call.</p>
+<dl class="attribute">
+<dt id="EC2.DescribeAvailabilityZonesResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'availabilityZoneInfo/item'</em><a class="headerlink" href="#EC2.DescribeAvailabilityZonesResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.DescribeAvailabilityZonesResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeAvailabilityZonesResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeImageAttributeResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeImageAttributeResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeImageAttributeResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DescribeImageAttribute} API call.</p>
+<dl class="method">
+<dt id="EC2.DescribeImageAttributeResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeImageAttributeResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeImagesResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeImagesResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeImagesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DescribeImages} API call.</p>
+<dl class="attribute">
+<dt id="EC2.DescribeImagesResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'imagesSet/item'</em><a class="headerlink" href="#EC2.DescribeImagesResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.DescribeImagesResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeImagesResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.DescribeImagesResponse.translate_isPublic">
+<code class="descname">translate_isPublic</code><span class="sig-paren">(</span><em>isPublic</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeImagesResponse.translate_isPublic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeInstanceAttributeResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeInstanceAttributeResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeInstanceAttributeResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DescribeInstanceAttribute} API call.</p>
+<dl class="method">
+<dt id="EC2.DescribeInstanceAttributeResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeInstanceAttributeResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeInstancesResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeInstancesResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeInstancesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.InstanceSetResponse" title="EC2.InstanceSetResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.InstanceSetResponse</span></code></a></p>
+<p>Response parser class for C{DescribeInstances} API call.</p>
+<dl class="attribute">
+<dt id="EC2.DescribeInstancesResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'reservationSet/item'</em><a class="headerlink" href="#EC2.DescribeInstancesResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.DescribeInstancesResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeInstancesResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeKeyPairsResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeKeyPairsResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeKeyPairsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DescribeKeyPairs} API call.</p>
+<dl class="attribute">
+<dt id="EC2.DescribeKeyPairsResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'keySet/item'</em><a class="headerlink" href="#EC2.DescribeKeyPairsResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.DescribeKeyPairsResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeKeyPairsResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DescribeSecurityGroupsResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DescribeSecurityGroupsResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeSecurityGroupsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DescribeSecurityGroups} API call.</p>
+<dl class="attribute">
+<dt id="EC2.DescribeSecurityGroupsResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'securityGroupInfo/item'</em><a class="headerlink" href="#EC2.DescribeSecurityGroupsResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.DescribeSecurityGroupsResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DescribeSecurityGroupsResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.DisassociateAddressResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">DisassociateAddressResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DisassociateAddressResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{DisassociateAddress} API call.</p>
+<dl class="method">
+<dt id="EC2.DisassociateAddressResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.DisassociateAddressResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.GetConsoleOutputResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">GetConsoleOutputResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.GetConsoleOutputResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<dl class="method">
+<dt id="EC2.GetConsoleOutputResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.GetConsoleOutputResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.GetInstanceProfileResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">GetInstanceProfileResponse</code><span class="sig-paren">(</span><em>http_response</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.GetInstanceProfileResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{GetInstanceProfile} API call.</p>
+<dl class="attribute">
+<dt id="EC2.GetInstanceProfileResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'GetInstanceProfileResult/InstanceProfile'</em><a class="headerlink" href="#EC2.GetInstanceProfileResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.GetInstanceProfileResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.GetInstanceProfileResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.GetRoleResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">GetRoleResponse</code><span class="sig-paren">(</span><em>http_response</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.GetRoleResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{GetRole} API call.</p>
+<dl class="attribute">
+<dt id="EC2.GetRoleResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'GetRoleResult/Role'</em><a class="headerlink" href="#EC2.GetRoleResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.GetRoleResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.GetRoleResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.InstanceSetResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">InstanceSetResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.InstanceSetResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response containing instance set items</p>
+<dl class="method">
+<dt id="EC2.InstanceSetResponse.parseInstanceSet">
+<code class="descname">parseInstanceSet</code><span class="sig-paren">(</span><em>root</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.InstanceSetResponse.parseInstanceSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a set of instanceSet/item nodes</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.ModifyImageAttributeResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">ModifyImageAttributeResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ModifyImageAttributeResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{ModifyImageAttribute} API call.</p>
+<dl class="method">
+<dt id="EC2.ModifyImageAttributeResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ModifyImageAttributeResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.RebootInstancesResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">RebootInstancesResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RebootInstancesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{RebootInstances} API call.</p>
+<dl class="method">
+<dt id="EC2.RebootInstancesResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RebootInstancesResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.RegisterImageResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">RegisterImageResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RegisterImageResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{RegisterImage} API call.</p>
+<dl class="attribute">
+<dt id="EC2.RegisterImageResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'imageId'</em><a class="headerlink" href="#EC2.RegisterImageResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.RegisterImageResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RegisterImageResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.ReleaseAddressResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">ReleaseAddressResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ReleaseAddressResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{ReleaseAddress} API call.</p>
+<dl class="method">
+<dt id="EC2.ReleaseAddressResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ReleaseAddressResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.ResetImageAttributeResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">ResetImageAttributeResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ResetImageAttributeResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{ResetImageAttribute} API call.</p>
+<dl class="method">
+<dt id="EC2.ResetImageAttributeResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.ResetImageAttributeResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.Response">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">Response</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for XML response parsers.</p>
+<p>This class does everything except the API-call dependent parsing,
+which is handled in the child classes below.  Each child class
+should override the L{parse} method.</p>
+<dl class="attribute">
+<dt id="EC2.Response.ERROR_XPATH">
+<code class="descname">ERROR_XPATH</code><em class="property"> = 'Errors/Error'</em><a class="headerlink" href="#EC2.Response.ERROR_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EC2.Response.IAM_ERROR_XPATH">
+<code class="descname">IAM_ERROR_XPATH</code><em class="property"> = 'Error'</em><a class="headerlink" href="#EC2.Response.IAM_ERROR_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EC2.Response.IAM_NAMESPACE">
+<code class="descname">IAM_NAMESPACE</code><em class="property"> = 'https://iam.amazonaws.com/doc/2010-05-08/'</em><a class="headerlink" href="#EC2.Response.IAM_NAMESPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="EC2.Response.NAMESPACE">
+<code class="descname">NAMESPACE</code><em class="property"> = 'http://ec2.amazonaws.com/doc/2013-10-01/'</em><a class="headerlink" href="#EC2.Response.NAMESPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.Response.find">
+<code class="descname">find</code><span class="sig-paren">(</span><em>element</em>, <em>xpath</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response.find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.Response.findall">
+<code class="descname">findall</code><span class="sig-paren">(</span><em>element</em>, <em>xpath</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response.findall" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.Response.findtext">
+<code class="descname">findtext</code><span class="sig-paren">(</span><em>element</em>, <em>xpath</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response.findtext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.Response.fixnone">
+<code class="descname">fixnone</code><span class="sig-paren">(</span><em>strnone</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response.fixnone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.Response.fixxpath">
+<code class="descname">fixxpath</code><span class="sig-paren">(</span><em>xpath</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response.fixxpath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.Response.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.Response.parse_error">
+<code class="descname">parse_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.Response.parse_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.RevokeSecurityGroupIngressResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">RevokeSecurityGroupIngressResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RevokeSecurityGroupIngressResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{RevokeSecurityGroupIngress} API call.</p>
+<dl class="method">
+<dt id="EC2.RevokeSecurityGroupIngressResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RevokeSecurityGroupIngressResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.RunInstancesResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">RunInstancesResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RunInstancesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.InstanceSetResponse" title="EC2.InstanceSetResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.InstanceSetResponse</span></code></a></p>
+<p>Response parser class for C{RunInstances} API call.</p>
+<dl class="method">
+<dt id="EC2.RunInstancesResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.RunInstancesResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="EC2.TerminateInstancesResponse">
+<em class="property">class </em><code class="descclassname">EC2.</code><code class="descname">TerminateInstancesResponse</code><span class="sig-paren">(</span><em>http_response</em>, <em>service='ec2'</em><span class="sig-paren">)</span><a class="headerlink" href="#EC2.TerminateInstancesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#EC2.Response" title="EC2.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">EC2.Response</span></code></a></p>
+<p>Response parser class for C{TerminateInstances} API call.</p>
+<dl class="attribute">
+<dt id="EC2.TerminateInstancesResponse.ELEMENT_XPATH">
+<code class="descname">ELEMENT_XPATH</code><em class="property"> = 'instancesSet/item'</em><a class="headerlink" href="#EC2.TerminateInstancesResponse.ELEMENT_XPATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="EC2.TerminateInstancesResponse.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EC2.TerminateInstancesResponse.parse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">houdini_libs</a></li>
+      <li>Next: <a href="assetauthortools.html" title="next chapter">assetauthortools module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/EC2.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/EC2.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,423 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>poster package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pyro2 module" href="pyro2.html" />
+    <link rel="prev" title="poptoolutils module" href="poptoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="poster-package">
+<h1>poster package<a class="headerlink" href="#poster-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-poster.encode">
+<span id="poster-encode-module"></span><h2>poster.encode module<a class="headerlink" href="#module-poster.encode" title="Permalink to this headline">¶</a></h2>
+<p>multipart/form-data encoding module</p>
+<p>This module provides functions that faciliate encoding name/value pairs
+as multipart/form-data suitable for a HTTP POST or PUT request.</p>
+<p>multipart/form-data is the standard way to upload files over HTTP</p>
+<dl class="function">
+<dt id="poster.encode.gen_boundary">
+<code class="descclassname">poster.encode.</code><code class="descname">gen_boundary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.gen_boundary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a random string to use as the boundary for a message</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poster.encode.encode_and_quote">
+<code class="descclassname">poster.encode.</code><code class="descname">encode_and_quote</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.encode_and_quote" title="Permalink to this definition">¶</a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">data</span></code> is unicode, return urllib.quote_plus(data.encode(“utf-8”))
+otherwise return urllib.quote_plus(data)</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="poster.encode.MultipartParam">
+<em class="property">class </em><code class="descclassname">poster.encode.</code><code class="descname">MultipartParam</code><span class="sig-paren">(</span><em>name</em>, <em>value=None</em>, <em>filename=None</em>, <em>filetype=None</em>, <em>filesize=None</em>, <em>fileobj=None</em>, <em>cb=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a single parameter in a multipart/form-data request</p>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code> is the name of this parameter.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">value</span></code> is set, it must be a string or unicode object to use as the
+data for this parameter.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">filename</span></code> is set, it is what to say that this parameter’s filename
+is.  Note that this does not have to be the actual filename any local file.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">filetype</span></code> is set, it is used as the Content-Type for this parameter.
+If unset it defaults to “text/plain; charset=utf8”</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">filesize</span></code> is set, it specifies the length of the file <code class="docutils literal notranslate"><span class="pre">fileobj</span></code></p>
+<p>If <code class="docutils literal notranslate"><span class="pre">fileobj</span></code> is set, it must be a file-like object that supports
+.read().</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">value</span></code> and <code class="docutils literal notranslate"><span class="pre">fileobj</span></code> must not be set, doing so will
+raise a ValueError assertion.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">fileobj</span></code> is set, and <code class="docutils literal notranslate"><span class="pre">filesize</span></code> is not specified, then
+the file’s size will be determined first by stat’ing <code class="docutils literal notranslate"><span class="pre">fileobj</span></code>’s
+file descriptor, and if that fails, by seeking to the end of the file,
+recording the current position as the size, and then by seeking back to the
+beginning of the file.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cb</span></code> is a callable which will be called from iter_encode with (self,
+current, total), representing the current parameter, current amount
+transferred, and the total size.</p>
+<dl class="method">
+<dt id="poster.encode.MultipartParam.encode">
+<code class="descname">encode</code><span class="sig-paren">(</span><em>boundary</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam.encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string encoding of this parameter</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poster.encode.MultipartParam.encode_hdr">
+<code class="descname">encode_hdr</code><span class="sig-paren">(</span><em>boundary</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam.encode_hdr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the header of the encoding of this parameter</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="poster.encode.MultipartParam.from_file">
+<em class="property">classmethod </em><code class="descname">from_file</code><span class="sig-paren">(</span><em>paramname</em>, <em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam.from_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new MultipartParam object constructed from the local
+file at <code class="docutils literal notranslate"><span class="pre">filename</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">filesize</span></code> is determined by os.path.getsize(<code class="docutils literal notranslate"><span class="pre">filename</span></code>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">filetype</span></code> is determined by mimetypes.guess_type(<code class="docutils literal notranslate"><span class="pre">filename</span></code>)[0]</p>
+<p><code class="docutils literal notranslate"><span class="pre">filename</span></code> is set to os.path.basename(<code class="docutils literal notranslate"><span class="pre">filename</span></code>)</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="poster.encode.MultipartParam.from_params">
+<em class="property">classmethod </em><code class="descname">from_params</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam.from_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of MultipartParam objects from a sequence of
+name, value pairs, MultipartParam instances,
+or from a mapping of names to values</p>
+<p>The values may be strings or file objects, or MultipartParam objects.
+MultipartParam object names must match the given names in the
+name,value pairs or mapping, if applicable.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poster.encode.MultipartParam.get_size">
+<code class="descname">get_size</code><span class="sig-paren">(</span><em>boundary</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam.get_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size in bytes that this param will be when encoded
+with the given boundary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poster.encode.MultipartParam.iter_encode">
+<code class="descname">iter_encode</code><span class="sig-paren">(</span><em>boundary</em>, <em>blocksize=4096</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam.iter_encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields the encoding of this parameter
+If self.fileobj is set, then blocks of <code class="docutils literal notranslate"><span class="pre">blocksize</span></code> bytes are read and
+yielded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poster.encode.MultipartParam.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.MultipartParam.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="poster.encode.encode_string">
+<code class="descclassname">poster.encode.</code><code class="descname">encode_string</code><span class="sig-paren">(</span><em>boundary</em>, <em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.encode_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code> encoded as a multipart/form-data
+variable.  <code class="docutils literal notranslate"><span class="pre">boundary</span></code> is the boundary string used throughout
+a single request to separate variables.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poster.encode.encode_file_header">
+<code class="descclassname">poster.encode.</code><code class="descname">encode_file_header</code><span class="sig-paren">(</span><em>boundary</em>, <em>paramname</em>, <em>filesize</em>, <em>filename=None</em>, <em>filetype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.encode_file_header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the leading data for a multipart/form-data field that contains
+file data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">boundary</span></code> is the boundary string used throughout a single request to
+separate variables.</p>
+<p><code class="docutils literal notranslate"><span class="pre">paramname</span></code> is the name of the variable in this request.</p>
+<p><code class="docutils literal notranslate"><span class="pre">filesize</span></code> is the size of the file data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">filename</span></code> if specified is the filename to give to this field.  This
+field is only useful to the server for determining the original filename.</p>
+<p><code class="docutils literal notranslate"><span class="pre">filetype</span></code> if specified is the MIME type of this file.</p>
+<p>The actual file data should be sent after this header has been sent.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poster.encode.get_body_size">
+<code class="descclassname">poster.encode.</code><code class="descname">get_body_size</code><span class="sig-paren">(</span><em>params</em>, <em>boundary</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.get_body_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of bytes that the multipart/form-data encoding
+of <code class="docutils literal notranslate"><span class="pre">params</span></code> will be.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poster.encode.get_headers">
+<code class="descclassname">poster.encode.</code><code class="descname">get_headers</code><span class="sig-paren">(</span><em>params</em>, <em>boundary</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.get_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dictionary with Content-Type and Content-Length headers
+for the multipart/form-data encoding of <code class="docutils literal notranslate"><span class="pre">params</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poster.encode.multipart_encode">
+<code class="descclassname">poster.encode.</code><code class="descname">multipart_encode</code><span class="sig-paren">(</span><em>params</em>, <em>boundary=None</em>, <em>cb=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.encode.multipart_encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode <code class="docutils literal notranslate"><span class="pre">params</span></code> as multipart/form-data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">params</span></code> should be a sequence of (name, value) pairs or MultipartParam
+objects, or a mapping of names to values.
+Values are either strings parameter values, or file-like objects to use as
+the parameter value.  The file-like objects must support .read() and either
+.fileno() or both .seek() and .tell().</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">boundary</span></code> is set, then it as used as the MIME boundary.  Otherwise
+a randomly generated boundary will be used.  In either case, if the
+boundary string appears in the parameter values a ValueError will be
+raised.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">cb</span></code> is set, it should be a callback which will get called as blocks
+of data are encoded.  It will be called with (param, current, total),
+indicating the current parameter being encoded, the current amount encoded,
+and the total amount to encode.</p>
+<p>Returns a tuple of <cite>datagen</cite>, <cite>headers</cite>, where <cite>datagen</cite> is a
+generator that will yield blocks of data that make up the encoded
+parameters, and <cite>headers</cite> is a dictionary with the assoicated
+Content-Type and Content-Length headers.</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">datagen</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">multipart_encode</span><span class="p">(</span> <span class="p">[(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;value1&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;value2&quot;</span><span class="p">)]</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datagen</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="s2">&quot;value2&quot;</span> <span class="ow">in</span> <span class="n">s</span> <span class="ow">and</span> <span class="s2">&quot;value1&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">MultipartParam</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;value2&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datagen</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">multipart_encode</span><span class="p">(</span> <span class="p">[(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="s2">&quot;value1&quot;</span><span class="p">),</span> <span class="n">p</span><span class="p">]</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datagen</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="s2">&quot;value2&quot;</span> <span class="ow">in</span> <span class="n">s</span> <span class="ow">and</span> <span class="s2">&quot;value1&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">datagen</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">multipart_encode</span><span class="p">(</span> <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">}</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">datagen</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="s2">&quot;value2&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span> <span class="ow">and</span> <span class="s2">&quot;value1&quot;</span> <span class="ow">in</span> <span class="n">s</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-poster.streaminghttp">
+<span id="poster-streaminghttp-module"></span><h2>poster.streaminghttp module<a class="headerlink" href="#module-poster.streaminghttp" title="Permalink to this headline">¶</a></h2>
+<p>Streaming HTTP uploads module.</p>
+<p>This module extends the standard httplib and urllib2 objects so that
+iterable objects can be used in the body of HTTP requests.</p>
+<p>In most cases all one should have to do is call <a class="reference internal" href="#poster.streaminghttp.register_openers" title="poster.streaminghttp.register_openers"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_openers()</span></code></a>
+to register the new streaming http handlers which will take priority over
+the default handlers, and then you can use iterable objects in the body
+of HTTP requests.</p>
+<p><strong>N.B.</strong> You must specify a Content-Length header if using an iterable object
+since there is no way to determine in advance the total size that will be
+yielded, and there is no way to reset an interator.</p>
+<p>Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">StringIO</span> <span class="k">import</span> <span class="n">StringIO</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">urllib2</span><span class="o">,</span> <span class="nn">poster.streaminghttp</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">opener</span> <span class="o">=</span> <span class="n">poster</span><span class="o">.</span><span class="n">streaminghttp</span><span class="o">.</span><span class="n">register_openers</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Test file data&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s2">&quot;http://localhost:5000&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span>
+<span class="gp">... </span>                      <span class="p">{</span><span class="s1">&#39;Content-Length&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">))})</span>
+</pre></div>
+</div>
+<dl class="class">
+<dt id="poster.streaminghttp.StreamingHTTPConnection">
+<em class="property">class </em><code class="descclassname">poster.streaminghttp.</code><code class="descname">StreamingHTTPConnection</code><span class="sig-paren">(</span><em>host</em>, <em>port=None</em>, <em>strict=None</em>, <em>timeout=&lt;object object&gt;</em>, <em>source_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">poster.streaminghttp._StreamingHTTPMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">httplib.HTTPConnection</span></code></p>
+<p>Subclass of <cite>httplib.HTTPConnection</cite> that overrides the <cite>send()</cite> method
+to support iterable body objects</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="poster.streaminghttp.StreamingHTTPRedirectHandler">
+<em class="property">class </em><code class="descclassname">poster.streaminghttp.</code><code class="descname">StreamingHTTPRedirectHandler</code><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPRedirectHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">urllib2.HTTPRedirectHandler</span></code></p>
+<p>Subclass of <cite>urllib2.HTTPRedirectHandler</cite> that overrides the
+<cite>redirect_request</cite> method to properly handle redirected POST requests</p>
+<p>This class is required because python 2.5’s HTTPRedirectHandler does
+not remove the Content-Type or Content-Length headers when requesting
+the new resource, but the body of the original request is not preserved.</p>
+<dl class="attribute">
+<dt id="poster.streaminghttp.StreamingHTTPRedirectHandler.handler_order">
+<code class="descname">handler_order</code><em class="property"> = 499</em><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPRedirectHandler.handler_order" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poster.streaminghttp.StreamingHTTPRedirectHandler.redirect_request">
+<code class="descname">redirect_request</code><span class="sig-paren">(</span><em>req</em>, <em>fp</em>, <em>code</em>, <em>msg</em>, <em>headers</em>, <em>newurl</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPRedirectHandler.redirect_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a Request or None in response to a redirect.</p>
+<p>This is called by the http_error_30x methods when a
+redirection response is received.  If a redirection should
+take place, return a new Request to allow http_error_30x to
+perform the redirect.  Otherwise, raise HTTPError if no-one
+else should try to handle this url.  Return None if you can’t
+but another Handler might.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="poster.streaminghttp.StreamingHTTPHandler">
+<em class="property">class </em><code class="descclassname">poster.streaminghttp.</code><code class="descname">StreamingHTTPHandler</code><span class="sig-paren">(</span><em>debuglevel=0</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">urllib2.HTTPHandler</span></code></p>
+<p>Subclass of <cite>urllib2.HTTPHandler</cite> that uses
+StreamingHTTPConnection as its http connection class.</p>
+<dl class="attribute">
+<dt id="poster.streaminghttp.StreamingHTTPHandler.handler_order">
+<code class="descname">handler_order</code><em class="property"> = 499</em><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPHandler.handler_order" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poster.streaminghttp.StreamingHTTPHandler.http_open">
+<code class="descname">http_open</code><span class="sig-paren">(</span><em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPHandler.http_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a StreamingHTTPConnection for the given request</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poster.streaminghttp.StreamingHTTPHandler.http_request">
+<code class="descname">http_request</code><span class="sig-paren">(</span><em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPHandler.http_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle a HTTP request.  Make sure that Content-Length is specified
+if we’re using an interable value</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="poster.streaminghttp.register_openers">
+<code class="descclassname">poster.streaminghttp.</code><code class="descname">register_openers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.register_openers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register the streaming http handlers in the global urllib2 default
+opener object.</p>
+<p>Returns the created OpenerDirector object.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="poster.streaminghttp.StreamingHTTPSHandler">
+<em class="property">class </em><code class="descclassname">poster.streaminghttp.</code><code class="descname">StreamingHTTPSHandler</code><span class="sig-paren">(</span><em>debuglevel=0</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">urllib2.HTTPSHandler</span></code></p>
+<p>Subclass of <cite>urllib2.HTTPSHandler</cite> that uses
+StreamingHTTPSConnection as its http connection class.</p>
+<dl class="attribute">
+<dt id="poster.streaminghttp.StreamingHTTPSHandler.handler_order">
+<code class="descname">handler_order</code><em class="property"> = 499</em><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler.handler_order" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poster.streaminghttp.StreamingHTTPSHandler.https_open">
+<code class="descname">https_open</code><span class="sig-paren">(</span><em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler.https_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poster.streaminghttp.StreamingHTTPSHandler.https_request">
+<code class="descname">https_request</code><span class="sig-paren">(</span><em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler.https_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="poster.streaminghttp.StreamingHTTPSConnection">
+<em class="property">class </em><code class="descclassname">poster.streaminghttp.</code><code class="descname">StreamingHTTPSConnection</code><span class="sig-paren">(</span><em>host</em>, <em>port=None</em>, <em>key_file=None</em>, <em>cert_file=None</em>, <em>strict=None</em>, <em>timeout=&lt;object object&gt;</em>, <em>source_address=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">poster.streaminghttp._StreamingHTTPMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">httplib.HTTPSConnection</span></code></p>
+<p>Subclass of <cite>httplib.HTTSConnection</cite> that overrides the <cite>send()</cite>
+method to support iterable body objects</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-poster">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-poster" title="Permalink to this headline">¶</a></h2>
+<p>poster module</p>
+<p>Support for streaming HTTP uploads, and multipart/form-data encoding</p>
+<p><code class="docutils literal notranslate"><span class="pre">`poster.version`</span></code> is a 3-tuple of integers representing the version number.
+New releases of poster will always have a version number that compares greater
+than an older version of poster.
+New in version 0.6.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">poster package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-poster.encode">poster.encode module</a></li>
+<li><a class="reference internal" href="#module-poster.streaminghttp">poster.streaminghttp module</a></li>
+<li><a class="reference internal" href="#module-poster">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="poptoolutils.html" title="previous chapter">poptoolutils module</a></li>
+      <li>Next: <a href="pyro2.html" title="next chapter">pyro2 module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/poster.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/poster.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

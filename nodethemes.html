@@ -1,0 +1,218 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nodethemes module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="objecttoolutils module" href="objecttoolutils.html" />
+    <link rel="prev" title="nodeselectionutil module" href="nodeselectionutil.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nodethemes">
+<span id="nodethemes-module"></span><h1>nodethemes module<a class="headerlink" href="#module-nodethemes" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nodethemes.ThemeData">
+<em class="property">class </em><code class="descclassname">nodethemes.</code><code class="descname">ThemeData</code><span class="sig-paren">(</span><em>name=None</em>, <em>filepath=None</em>, <em>data=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="nodethemes.ThemeData.addData">
+<code class="descname">addData</code><span class="sig-paren">(</span><em>keys</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.addData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodethemes.ThemeData.addKeyValue">
+<code class="descname">addKeyValue</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.addKeyValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodethemes.ThemeData.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodethemes.ThemeData.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><em>newname</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodethemes.ThemeData.exactMap">
+<code class="descname">exactMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.exactMap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodethemes.ThemeData.getValue">
+<code class="descname">getValue</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.getValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodethemes.ThemeData.hasPattern">
+<code class="descname">hasPattern</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.hasPattern" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodethemes.ThemeData.hasPatternValues">
+<code class="descname">hasPatternValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeData.hasPatternValues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodethemes.ThemeType">
+<em class="property">class </em><code class="descclassname">nodethemes.</code><code class="descname">ThemeType</code><span class="sig-paren">(</span><em>ext</em>, <em>callback</em>, <em>description</em>, <em>default</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.ThemeType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.addDataToCurrentTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">addDataToCurrentTheme</code><span class="sig-paren">(</span><em>ext</em>, <em>keys</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.addDataToCurrentTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.addRulesToColorTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">addRulesToColorTheme</code><span class="sig-paren">(</span><em>nodetypes</em>, <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.addRulesToColorTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.addRulesToShapeTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">addRulesToShapeTheme</code><span class="sig-paren">(</span><em>nodetypes</em>, <em>shape</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.addRulesToShapeTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.applyNodeColorTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">applyNodeColorTheme</code><span class="sig-paren">(</span><em>theme</em>, <em>node_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.applyNodeColorTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.applyNodeShapeTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">applyNodeShapeTheme</code><span class="sig-paren">(</span><em>theme</em>, <em>node_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.applyNodeShapeTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.applyWireStyleTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">applyWireStyleTheme</code><span class="sig-paren">(</span><em>theme</em>, <em>node_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.applyWireStyleTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.deleteCurrentTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">deleteCurrentTheme</code><span class="sig-paren">(</span><em>ext</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.deleteCurrentTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.duplicateCurrentTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">duplicateCurrentTheme</code><span class="sig-paren">(</span><em>ext</em>, <em>newname=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.duplicateCurrentTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.getKeys">
+<code class="descclassname">nodethemes.</code><code class="descname">getKeys</code><span class="sig-paren">(</span><em>nodetypes</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.getKeys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.getThemeTypes">
+<code class="descclassname">nodethemes.</code><code class="descname">getThemeTypes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.getThemeTypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.initializeThemes">
+<code class="descclassname">nodethemes.</code><code class="descname">initializeThemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.initializeThemes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.loadThemes">
+<code class="descclassname">nodethemes.</code><code class="descname">loadThemes</code><span class="sig-paren">(</span><em>ext</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.loadThemes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.nodeTypeAdded">
+<code class="descclassname">nodethemes.</code><code class="descname">nodeTypeAdded</code><span class="sig-paren">(</span><em>category_name</em>, <em>type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.nodeTypeAdded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.saveCurrentThemes">
+<code class="descclassname">nodethemes.</code><code class="descname">saveCurrentThemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.saveCurrentThemes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodethemes.setCurrentTheme">
+<code class="descclassname">nodethemes.</code><code class="descname">setCurrentTheme</code><span class="sig-paren">(</span><em>ext</em>, <em>themename</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#nodethemes.setCurrentTheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="nodeselectionutil.html" title="previous chapter">nodeselectionutil module</a></li>
+      <li>Next: <a href="objecttoolutils.html" title="next chapter">objecttoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodethemes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/nodethemes.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

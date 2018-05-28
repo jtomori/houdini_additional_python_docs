@@ -1,0 +1,355 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>rendertracker module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="rigtoolutils package" href="rigtoolutils.html" />
+    <link rel="prev" title="radialmenu module" href="radialmenu.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-rendertracker">
+<span id="rendertracker-module"></span><h1>rendertracker module<a class="headerlink" href="#module-rendertracker" title="Permalink to this headline">¶</a></h1>
+<p>This program provides an RPC interface to track the status of different
+renders.  Different concurrent renders are divided into projects that each
+have one or more frames.  A project is identified by a unique name (e.g. the
+path to the hip file on the shared file server).  Re-rendering a project clears
+all previous knowledge about it.</p>
+<p>This render tracker program runs on the same machine as the HQueue server.
+The scripts invoked by the HQueue Render ROPs communicate with this tracker to
+log the status of frames as they render.  The local render monitor also
+retrieves information from this tracker to display the state of the render.</p>
+<dl class="class">
+<dt id="rendertracker.Frame">
+<em class="property">class </em><code class="descclassname">rendertracker.</code><code class="descname">Frame</code><span class="sig-paren">(</span><em>project</em>, <em>number</em>, <em>job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A frame in a render project.</p>
+<p>A Frame represents the current state and log of notable events for one
+frame in a render.</p>
+<dl class="method">
+<dt id="rendertracker.Frame.setDownloadFraction">
+<code class="descname">setDownloadFraction</code><span class="sig-paren">(</span><em>fraction</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Frame.setDownloadFraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record how complete the download is.</p>
+<p>The fraction is a float from 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.Frame.setErrorMessage">
+<code class="descname">setErrorMessage</code><span class="sig-paren">(</span><em>error_message</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Frame.setErrorMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark this frame as having generated an error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.Frame.setRenderFraction">
+<code class="descname">setRenderFraction</code><span class="sig-paren">(</span><em>fraction</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Frame.setRenderFraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record how complete the render is.</p>
+<p>The fraction is a float from 0.0 to 1.0.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.Frame.setStatus">
+<code class="descname">setStatus</code><span class="sig-paren">(</span><em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Frame.setStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the status, logging an appropriate event.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="rendertracker.Project">
+<em class="property">class </em><code class="descclassname">rendertracker.</code><code class="descname">Project</code><span class="sig-paren">(</span><em>rpc_service</em>, <em>name</em>, <em>frame_numbers</em>, <em>generate_ifds</em>, <em>job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A render project.</p>
+<p>A Project contains one or more frames and is identified by a unique
+name.</p>
+<dl class="method">
+<dt id="rendertracker.Project.getChangedFrames">
+<code class="descname">getChangedFrames</code><span class="sig-paren">(</span><em>since_event_id</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Project.getChangedFrames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.Project.incrementAndGetLastEventId">
+<code class="descname">incrementAndGetLastEventId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Project.incrementAndGetLastEventId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.Project.isDone">
+<code class="descname">isDone</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.Project.isDone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="rendertracker.RPCService">
+<em class="property">class </em><code class="descclassname">rendertracker.</code><code class="descname">RPCService</code><a class="headerlink" href="#rendertracker.RPCService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="rendertracker.RPCService.doesProjectGenerateIFDs">
+<code class="descname">doesProjectGenerateIFDs</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.doesProjectGenerateIFDs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the project generates IFDs before rendering.</p>
+<p>Return False if the given project name is not registered
+with the render tracker.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.endedGeneratingFrameIFD">
+<code class="descname">endedGeneratingFrameIFD</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.endedGeneratingFrameIFD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record that an IFD is finished being generated for a frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.getAllFramesInfo">
+<code class="descname">getAllFramesInfo</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.getAllFramesInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of 3-tuples containing the frame number, status,
+and fraction complete.</p>
+<p>Note that we use a more compact representation for the frame states by
+returning the index of the enumeration value.  You can index into the
+enumeration to get the enumerated value back.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.getAllProjects">
+<code class="descname">getAllProjects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.getAllProjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a sorted list of all project names.</p>
+<p>Note that some of these projects may have completed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.getChangedFrames">
+<code class="descname">getChangedFrames</code><span class="sig-paren">(</span><em>project_name</em>, <em>since_event_id</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.getChangedFrames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return information about the frames that have changed since a
+particular event id.</p>
+<p>Return a dictionary containing the changes and a new event id to
+pass in to the next call to this function.</p>
+<p>The caller can pass in 0 for ‘since_event_id’ to get all the frames.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.getEstimatedRenderSecondsLeft">
+<code class="descname">getEstimatedRenderSecondsLeft</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.getEstimatedRenderSecondsLeft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.getFrameJobID">
+<code class="descname">getFrameJobID</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.getFrameJobID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the HQueue job id for a frame.</p>
+<p>Note that we update this job id as frame-specific jobs are started.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.getFrameLog">
+<code class="descname">getFrameLog</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.getFrameLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the message log for a particular frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.getImagePath">
+<code class="descname">getImagePath</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.getImagePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path to the output image, or None if it is not set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.incrementAndGetLastEventId">
+<code class="descname">incrementAndGetLastEventId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.incrementAndGetLastEventId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.isProjectDone">
+<code class="descname">isProjectDone</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.isProjectDone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether all frames in the project are done.  The name must be
+for a project that exists.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.isProjectRunning">
+<code class="descname">isProjectRunning</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.isProjectRunning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the project name is valid and it is still running.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.isRunning">
+<code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.isRunning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether or not the RPC server is running.</p>
+<p>The caller can check if this server is running by creating an RPC
+connection to it, calling a function, and catching a socket.error
+exception.  This is the recommended function to call.</p>
+<p>Note that the dummy connection returned from hqlib.getRenderTrackerRPC
+implements this function and returns False, so you can use this
+function to differentiate between a real render tracker and a dummy
+one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.removeProject">
+<code class="descname">removeProject</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.removeProject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.setFrameDownloadFraction">
+<code class="descname">setFrameDownloadFraction</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em>, <em>fraction</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.setFrameDownloadFraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the fraction completed for a frame being downloaded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.setFrameError">
+<code class="descname">setFrameError</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em>, <em>error_message</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.setFrameError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an error message for a frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.setFrameRenderFraction">
+<code class="descname">setFrameRenderFraction</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em>, <em>fraction</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.setFrameRenderFraction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the fraction completed for a frame being rendered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.setProjectError">
+<code class="descname">setProjectError</code><span class="sig-paren">(</span><em>project_name</em>, <em>error_message</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.setProjectError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an error message for all frames in the project.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.startedFrameRender">
+<code class="descname">startedFrameRender</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em>, <em>job_id</em>, <em>image_path</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.startedFrameRender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record a frame is starting to be rendered.</p>
+<p>job_id – for the HQueue job rendering the frame
+image_path – the full path on the server to the output image</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.startedGeneratingFrameIFD">
+<code class="descname">startedGeneratingFrameIFD</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.startedGeneratingFrameIFD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record that an IFD is being generated for a frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.startedRenderProject">
+<code class="descname">startedRenderProject</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_numbers</em>, <em>generate_ifds</em>, <em>job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.startedRenderProject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record that a project to render frames has started.</p>
+<p>It is up to the caller to make sure any previous project with this
+name has completed.  We blow away the old project and create a new
+one.</p>
+<dl class="docutils">
+<dt>job_id – either for the job generating ifds or for the job that will</dt>
+<dd>submit the jobs to render directly from the hip files</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="rendertracker.RPCService.suggestInactiveProjectName">
+<code class="descname">suggestInactiveProjectName</code><span class="sig-paren">(</span><em>requested_project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.RPCService.suggestInactiveProjectName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a name for a project that isn’t being rendered.</p>
+<p>If the requested name is available, it is returned.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="rendertracker.applyProjectNameFormula">
+<code class="descclassname">rendertracker.</code><code class="descname">applyProjectNameFormula</code><span class="sig-paren">(</span><em>user</em>, <em>local_hip_path</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.applyProjectNameFormula" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the formula to generate a project name.</p>
+<p>Note that this formula does not guarantee that the project name is unique.
+To get a unique name, call suggestInactiveProjectName on the active
+render tracker.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="rendertracker.getConnection">
+<code class="descclassname">rendertracker.</code><code class="descname">getConnection</code><span class="sig-paren">(</span><em>machine_name</em>, <em>port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.getConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a connection to the render tracker’s RPC server.</p>
+<p>This function is called by users of this module, not by the render tracker
+process.</p>
+<p>Return None if the render tracker is not running.  May return a cached
+cached connection from the previous successful call.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="rendertracker.start">
+<code class="descclassname">rendertracker.</code><code class="descname">start</code><span class="sig-paren">(</span><em>debug</em>, <em>verbose</em><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="rendertracker.startWithSysArgs">
+<code class="descclassname">rendertracker.</code><code class="descname">startWithSysArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rendertracker.startWithSysArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="radialmenu.html" title="previous chapter">radialmenu module</a></li>
+      <li>Next: <a href="rigtoolutils.html" title="next chapter">rigtoolutils package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/rendertracker.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/rendertracker.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

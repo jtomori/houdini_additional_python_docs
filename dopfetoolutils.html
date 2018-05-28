@@ -1,0 +1,172 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dopfetoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dopgeofiltertoolutils module" href="dopgeofiltertoolutils.html" />
+    <link rel="prev" title="dopclothtoolutils module" href="dopclothtoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-dopfetoolutils">
+<span id="dopfetoolutils-module"></span><h1>dopfetoolutils module<a class="headerlink" href="#module-dopfetoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="dopfetoolutils.applySolidObjectPreset">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">applySolidObjectPreset</code><span class="sig-paren">(</span><em>dopobject</em>, <em>preset</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.applySolidObjectPreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.applyYoungPoisson">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">applyYoungPoisson</code><span class="sig-paren">(</span><em>node</em>, <em>youngs_modulus</em>, <em>poisson_ratio</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.applyYoungPoisson" title="Permalink to this definition">¶</a></dt>
+<dd><p>apply young’s modulus (in Pascal units) and poisson ratio in [0, 0.5) to a Solid Object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.createFEFuseConstraint">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">createFEFuseConstraint</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetype</em>, <em>objecttypename</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.createFEFuseConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create hard/soft constraints between points of a finite element object
+and points on another dynamics object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.createRegionConstraint">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">createRegionConstraint</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetype</em>, <em>objecttypename</em>, <em>goalseltype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.createRegionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrain part of a simulated object to a simulated object or an animated objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.createTargetConstraint">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">createTargetConstraint</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetype</em>, <em>objecttypename</em>, <em>goalseltype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.createTargetConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create soft/hard constraint that makes the simulated object follow the target position and velocity.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.createVisualization">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">createVisualization</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>objecttypename</em>, <em>goalseltype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.createVisualization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a setup where output attributes are generated and visualized.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.dividePhysicalParm">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">dividePhysicalParm</code><span class="sig-paren">(</span><em>parm</em>, <em>scalar</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.dividePhysicalParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility to divide the parm that represents a physical quantity by ‘scalar’</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.selectAndCreateHybridObjects">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">selectAndCreateHybridObjects</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>objecttype</em>, <em>behavior</em>, <em>objectdescriptor</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.selectAndCreateHybridObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a selection of geometry objects, ensure that corresponding DOP Objects with a specific behavior exist.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.selectAndCreateSolidObjects">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">selectAndCreateSolidObjects</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>objecttype</em>, <em>behavior</em>, <em>objectdescriptor</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.selectAndCreateSolidObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a selection of geometry objects, ensure that corresponding DOP Objects with a specific behavior exist.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.selectAndCreateSurfaceCollider">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">selectAndCreateSurfaceCollider</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.selectAndCreateSurfaceCollider" title="Permalink to this definition">¶</a></dt>
+<dd><p>This turns a deforming geometry into a surface collider.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.selectAndCreateVolumeCollider">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">selectAndCreateVolumeCollider</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.selectAndCreateVolumeCollider" title="Permalink to this definition">¶</a></dt>
+<dd><p>This turns a rigid geometry into a volume collider.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.selectionPrompt">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">selectionPrompt</code><span class="sig-paren">(</span><em>element_type</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.selectionPrompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string for prompting the user to make a selection in the
+viewport for the stitch constraint tool.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopfetoolutils.setParm">
+<code class="descclassname">dopfetoolutils.</code><code class="descname">setParm</code><span class="sig-paren">(</span><em>node</em>, <em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#dopfetoolutils.setParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safely sets a parameter value, if that parameter exists.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dopclothtoolutils.html" title="previous chapter">dopclothtoolutils module</a></li>
+      <li>Next: <a href="dopgeofiltertoolutils.html" title="next chapter">dopgeofiltertoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dopfetoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/dopfetoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

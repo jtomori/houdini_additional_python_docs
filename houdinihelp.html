@@ -1,0 +1,2320 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>houdinihelp package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="houdiniinternals module" href="houdiniinternals.html" />
+    <link rel="prev" title="houdiniengineutils module" href="houdiniengineutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="houdinihelp-package">
+<h1>houdinihelp package<a class="headerlink" href="#houdinihelp-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-houdinihelp.api">
+<span id="houdinihelp-api-module"></span><h2>houdinihelp.api module<a class="headerlink" href="#module-houdinihelp.api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.api.NodeInfo">
+<em class="property">class </em><code class="descclassname">houdinihelp.api.</code><code class="descname">NodeInfo</code><span class="sig-paren">(</span><em>table</em>, <em>scopeop</em>, <em>namespace</em>, <em>corename</em>, <em>version</em>, <em>ext</em>, <em>section</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.NodeInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="houdinihelp.api.NodeInfo.corename">
+<code class="descname">corename</code><a class="headerlink" href="#houdinihelp.api.NodeInfo.corename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.api.NodeInfo.ext">
+<code class="descname">ext</code><a class="headerlink" href="#houdinihelp.api.NodeInfo.ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.api.NodeInfo.namespace">
+<code class="descname">namespace</code><a class="headerlink" href="#houdinihelp.api.NodeInfo.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.api.NodeInfo.scopeop">
+<code class="descname">scopeop</code><a class="headerlink" href="#houdinihelp.api.NodeInfo.scopeop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.api.NodeInfo.section">
+<code class="descname">section</code><a class="headerlink" href="#houdinihelp.api.NodeInfo.section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 6</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.api.NodeInfo.table">
+<code class="descname">table</code><a class="headerlink" href="#houdinihelp.api.NodeInfo.table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.api.NodeInfo.version">
+<code class="descname">version</code><a class="headerlink" href="#houdinihelp.api.NodeInfo.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.components_to_path">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">components_to_path</code><span class="sig-paren">(</span><em>table</em>, <em>scopeop</em>, <em>ns</em>, <em>name</em>, <em>version</em>, <em>snap_version=False</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.components_to_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.find_parm">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">find_parm</code><span class="sig-paren">(</span><em>root</em>, <em>parmid</em>, <em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.find_parm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to find a parameter in a help document, based on the parameter ID and
+its label.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.gather_node_paths">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">gather_node_paths</code><span class="sig-paren">(</span><em>node</em>, <em>pathset</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.gather_node_paths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.getFormattedTooltip">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">getFormattedTooltip</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.getFormattedTooltip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.getHelpForId">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">getHelpForId</code><span class="sig-paren">(</span><em>helpid</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.getHelpForId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.getParmTooltip">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">getParmTooltip</code><span class="sig-paren">(</span><em>op_table_name</em>, <em>op_type</em>, <em>version</em>, <em>namespace</em>, <em>scopeop</em>, <em>parm_token</em>, <em>parm_label</em>, <em>is_spare</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.getParmTooltip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.getParsedHtmlHelp">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">getParsedHtmlHelp</code><span class="sig-paren">(</span><em>url</em>, <em>content</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.getParsedHtmlHelp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.getParsedTooltip">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">getParsedTooltip</code><span class="sig-paren">(</span><em>url</em>, <em>content</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.getParsedTooltip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.getTooltip">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">getTooltip</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.getTooltip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.get_pages">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">get_pages</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.get_pages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.get_searcher">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">get_searcher</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.get_searcher" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.hasHelp">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">hasHelp</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.hasHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the URL is something the help system can handle, e.g.
+“op:Object/geo”.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.hstring">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">hstring</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.hstring" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.initialize">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">initialize</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.initialize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.load_example">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">load_example</code><span class="sig-paren">(</span><em>source</em>, <em>launch=False</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.load_example" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.load_module_from_houdini">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">load_module_from_houdini</code><span class="sig-paren">(</span><em>module_name</em>, <em>search_distro=True</em>, <em>search_houdini_modules=True</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.load_module_from_houdini" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.memoize">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">memoize</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.memoize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.nodeHelpTemplate">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">nodeHelpTemplate</code><span class="sig-paren">(</span><em>table</em>, <em>namespace</em>, <em>name</em>, <em>version</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.nodeHelpTemplate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.nodetype_to_path">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">nodetype_to_path</code><span class="sig-paren">(</span><em>nodetype</em>, <em>snap_version=False</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.nodetype_to_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a <code class="docutils literal notranslate"><span class="pre">hou.NodeType</span></code> object and returns the equivalent help path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.open_wiki_preview">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">open_wiki_preview</code><span class="sig-paren">(</span><em>baseurl</em>, <em>path</em>, <em>content</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.open_wiki_preview" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.patch_socket_server_error_handler">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">patch_socket_server_error_handler</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.patch_socket_server_error_handler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.path_to_components">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">path_to_components</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.path_to_components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a help path and returns a named tuple of the following components:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">table</span></code> - the node category name, e.g. <code class="docutils literal notranslate"><span class="pre">Object</span></code>.</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">scopeop</span></code> - if the node has a scope, the name of the scope node,</dt>
+<dd>otherwise an empty string.</dd>
+</dl>
+</li>
+<li><code class="docutils literal notranslate"><span class="pre">namespace</span></code> - the node’s namespace, or an empty string.</li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code> - the node’s “core” name.</li>
+<li><code class="docutils literal notranslate"><span class="pre">version</span></code> - the node’s version string.</li>
+<li><code class="docutils literal notranslate"><span class="pre">ext</span></code> - the filename extension given in the path (if any).</li>
+<li><code class="docutils literal notranslate"><span class="pre">section</span></code> - an asset section name, or an empty string.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.path_to_nodetype">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">path_to_nodetype</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.path_to_nodetype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.startHelpServer">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">startHelpServer</code><span class="sig-paren">(</span><em>port=48626</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.startHelpServer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.api.urlToPath">
+<code class="descclassname">houdinihelp.api.</code><code class="descname">urlToPath</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.api.urlToPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translates a URL from Houdini (e.g. “op:Sop/copy”) and translates it into
+a help server path (e.g. “/nodes/sop/copy”).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.cli">
+<span id="houdinihelp-cli-module"></span><h2>houdinihelp.cli module<a class="headerlink" href="#module-houdinihelp.cli" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.cli.Dots">
+<em class="property">class </em><code class="descclassname">houdinihelp.cli.</code><code class="descname">Dots</code><span class="sig-paren">(</span><em>width=72</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.cli.Dots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="houdinihelp.cli.Dots.dot">
+<code class="descname">dot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.cli.Dots.dot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.cli.create_app">
+<code class="descclassname">houdinihelp.cli.</code><code class="descname">create_app</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.cli.create_app" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.cli.runhelp">
+<code class="descclassname">houdinihelp.cli.</code><code class="descname">runhelp</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.cli.runhelp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.examples">
+<span id="houdinihelp-examples-module"></span><h2>houdinihelp.examples module<a class="headerlink" href="#module-houdinihelp.examples" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.examples.ExampleRef">
+<em class="property">class </em><code class="descclassname">houdinihelp.examples.</code><code class="descname">ExampleRef</code><span class="sig-paren">(</span><em>category</em>, <em>target</em>, <em>hdafile</em>, <em>typename</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.ExampleRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="houdinihelp.examples.ExampleRef.create_in">
+<code class="descname">create_in</code><span class="sig-paren">(</span><em>network</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.ExampleRef.create_in" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.examples.ExampleRef.description">
+<code class="descname">description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.ExampleRef.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.examples.ExampleRef.example_type">
+<code class="descname">example_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.ExampleRef.example_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.examples.ExampleRef.from_definition">
+<em class="property">classmethod </em><code class="descname">from_definition</code><span class="sig-paren">(</span><em>defn</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.ExampleRef.from_definition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.examples.ExampleRef.target_type">
+<code class="descname">target_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.ExampleRef.target_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.add_examples_from_hdafile">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">add_examples_from_hdafile</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.add_examples_from_hdafile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.can_have_example">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">can_have_example</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.can_have_example" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.create_example">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">create_example</code><span class="sig-paren">(</span><em>fornode</em>, <em>typename</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.create_example" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.examples_for">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">examples_for</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.examples_for" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.examples_menu">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">examples_menu</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.examples_menu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.examples_menu_choice">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">examples_menu_choice</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.examples_menu_choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.rebuild_example_index">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">rebuild_example_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.rebuild_example_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.refs_for_hdafile">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">refs_for_hdafile</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.refs_for_hdafile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.remove_examples_from_hdafile">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">remove_examples_from_hdafile</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.remove_examples_from_hdafile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.save_node_example">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">save_node_example</code><span class="sig-paren">(</span><em>subnet</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.save_node_example" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.setup_examples">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">setup_examples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.setup_examples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.start_node_example">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">start_node_example</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.start_node_example" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.examples.update_examples_callback">
+<code class="descclassname">houdinihelp.examples.</code><code class="descname">update_examples_callback</code><span class="sig-paren">(</span><em>event_type</em>, <em>library_path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.examples.update_examples_callback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.hcoloring">
+<span id="houdinihelp-hcoloring-module"></span><h2>houdinihelp.hcoloring module<a class="headerlink" href="#module-houdinihelp.hcoloring" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.hcoloring.HScriptLexer">
+<em class="property">class </em><code class="descclassname">houdinihelp.hcoloring.</code><code class="descname">HScriptLexer</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hcoloring.HScriptLexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pygments.lexer.RegexLexer</span></code></p>
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.HScriptLexer.aliases">
+<code class="descname">aliases</code><em class="property"> = ['hscript', 'Hscript']</em><a class="headerlink" href="#houdinihelp.hcoloring.HScriptLexer.aliases" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.HScriptLexer.filenames">
+<code class="descname">filenames</code><em class="property"> = ['*.cmd']</em><a class="headerlink" href="#houdinihelp.hcoloring.HScriptLexer.filenames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.HScriptLexer.mimetypes">
+<code class="descname">mimetypes</code><em class="property"> = ['application/x-hscript']</em><a class="headerlink" href="#houdinihelp.hcoloring.HScriptLexer.mimetypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.HScriptLexer.name">
+<code class="descname">name</code><em class="property"> = 'HScript'</em><a class="headerlink" href="#houdinihelp.hcoloring.HScriptLexer.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.HScriptLexer.tokens">
+<code class="descname">tokens</code><em class="property"> = {'curly': [('}', Token.Keyword, '#pop'), (':-', Token.Keyword), ('[^}:]+', Token.Punctuation), (':', Token.Punctuation)], 'paren': [('\\)', Token.Keyword, '#pop'), ('[^)]*', Token.Punctuation)], 'root': [('\\b(set|if|then|else|endif|for|to|step|foreach|while|end|break|continue)\\s*\\b', Token.Keyword), ('^\\s*([A-Za-z][A-Za-z0-9_]+)\\s*\\b', Token.Name.Builtin), ('\\s(-[A-Za-z][A-Za-z0-9_]*)', Token.Operator.Word), ('#.*\\n', Token.Comment), ('(\\b\\w+\\s*)(=)', &lt;function callback at 0x7f4393976848&gt;), ('[\\[\\]{}\\(\\)=]+', Token.Operator), ('(==|!=|&lt;|&gt;|&lt;=|&gt;=|&amp;&amp;|\\|\\|)', Token.Operator), ('\\$\\(', Token.Keyword, 'paren'), ('\\${', Token.Keyword, 'curly'), ('`.+`', Token.Literal.String.Backtick), ('(\\d+\\.)?(\\d+)(?= |\\Z)', Token.Literal.Number), ('\\$#?(\\w+|.)', Token.Name.Variable), ('&quot;(\\\\\\\\|\\\\[0-7]+|\\\\.|[^&quot;])*&quot;', Token.Literal.String.Double), (&quot;'(\\\\\\\\|\\\\[0-7]+|\\\\.|[^'])*'&quot;, Token.Literal.String.Single), ('\\s+', Token.Text), ('[^=\\s\\n]+', Token.Text)]}</em><a class="headerlink" href="#houdinihelp.hcoloring.HScriptLexer.tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hcoloring.VexLexer">
+<em class="property">class </em><code class="descclassname">houdinihelp.hcoloring.</code><code class="descname">VexLexer</code><span class="sig-paren">(</span><em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hcoloring.VexLexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pygments.lexer.RegexLexer</span></code></p>
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.VexLexer.aliases">
+<code class="descname">aliases</code><em class="property"> = ['vex']</em><a class="headerlink" href="#houdinihelp.hcoloring.VexLexer.aliases" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.VexLexer.filenames">
+<code class="descname">filenames</code><em class="property"> = ['*.vex']</em><a class="headerlink" href="#houdinihelp.hcoloring.VexLexer.filenames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.VexLexer.mimetypes">
+<code class="descname">mimetypes</code><em class="property"> = ['application/x-vex']</em><a class="headerlink" href="#houdinihelp.hcoloring.VexLexer.mimetypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.VexLexer.name">
+<code class="descname">name</code><em class="property"> = 'VEX'</em><a class="headerlink" href="#houdinihelp.hcoloring.VexLexer.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hcoloring.VexLexer.tokens">
+<code class="descname">tokens</code><em class="property"> = {'dqstring': [('&quot;', Token.Literal.String, '#pop'), ('\\\\([\\\\abfnrtv&quot;\\\']|x[a-fA-F0-9]{2,4}|[0-7]{1,3})', Token.Literal.String.Escape), ('[^\\\\&quot;\\n]+', Token.Literal.String), ('\\\\\\n', Token.Literal.String), ('\\\\', Token.Literal.String)], 'function': ['whitespace', 'statements', (';', Token.Text), ('{', Token.Keyword, '#push'), ('}', Token.Keyword, '#pop')], 'if0': [('^\\s*#if.*?(?&lt;!\\\\)\\n', Token.Comment, '#push'), ('^\\s*#endif.*?(?&lt;!\\\\)\\n', Token.Comment, '#pop'), ('.*?\\n', Token.Comment)], 'macro': [('[^/\\n]+', Token.Comment.Preproc), ('/[*](.|\\n)*?[*]/', Token.Comment), ('//.*?\\n', Token.Comment, '#pop'), ('/', Token.Comment.Preproc), ('(?&lt;=\\\\)\\n', Token.Comment.Preproc), ('\\n', Token.Comment.Preproc, '#pop')], 'rdqstring': [('&quot;', Token.Literal.String, '#pop'), ('[^\\\\&quot;\\n]+', Token.Literal.String), ('\\\\\\n', Token.Literal.String), ('\\\\', Token.Literal.String)], 'root': ['whitespace', ('((?:[a-zA-Z0-9_*\\s])+?(?:\\s|[*]))([a-zA-Z_][a-zA-Z0-9_]*)(\\s*\\([^;]*?\\))((?:\\s|//.*?\\n|/[*].*?[*]/)+)({)', &lt;function callback at 0x7f4393976668&gt;, 'function'), ('((?:[a-zA-Z0-9_*\\s])+?(?:\\s|[*]))([a-zA-Z_][a-zA-Z0-9_]*)(\\s*\\([^;]*?\\))((?:\\s|//.*?\\n|/[*].*?[*]/)+)(;)', &lt;function callback at 0x7f43939767d0&gt;), ('', Token.Text, 'statement')], 'rsqstring': [('[\\\'&quot;]', Token.Literal.String, '#pop'), (&quot;[^\\\\\\'\\n]+&quot;, Token.Literal.String), ('\\\\\\n', Token.Literal.String), ('\\\\', Token.Literal.String)], 'sqstring': [('[\\\'&quot;]', Token.Literal.String, '#pop'), ('\\\\([\\\\abfnrtv&quot;\\\']|x[a-fA-F0-9]{2,4}|[0-7]{1,3})', Token.Literal.String.Escape), (&quot;[^\\\\\\'\\n]+&quot;, Token.Literal.String), ('\\\\\\n', Token.Literal.String), ('\\\\', Token.Literal.String)], 'statement': ['whitespace', 'statements', ('[{}]', Token.Keyword), (';', Token.Text, '#pop')], 'statements': [('&quot;', Token.Literal.String, 'dqstring'), (&quot;\\'&quot;, Token.Literal.String, 'sqstring'), ('r&quot;', Token.Literal.String, 'rdqstring'), (&quot;r\\'&quot;, Token.Literal.String, 'rsqstring'), ('(0x[0-9a-fA-F]|0[0-7]+|(\\d+\\.\\d*|\\.\\d+)|\\d+)e[+-]\\d+[lL]?', Token.Literal.Number.Float), ('0x[0-9a-fA-F]+[Ll]?', Token.Literal.Number.Hex), ('0[0-7]+[Ll]?', Token.Literal.Number.Oct), ('(\\d+\\.\\d*|\\.\\d+)', Token.Literal.Number.Float), ('\\d+', Token.Literal.Number.Integer), ('[~!%^&amp;*()+=|\\[\\]:,.&lt;&gt;/?-]', Token.Text), ('(break|continue|do|else|export|forpoints|illuminance|gather|for|foreach|if|return|while|const|_Pragma)\\b', Token.Keyword), ('(int|float|vector|vector2|vector4|matrix|matrix3|string|bsdf|void)\\b', Token.Keyword.Type), ('__(vex|vex_major|vex_minor)\\b', Token.Keyword.Reserved), ('__(LINE|FILE|DATE|TIME)__\\b', Token.Keyword.Reserved), ('[a-zA-Z_][a-zA-Z0-9_]*:', Token.Name.Label), ('[a-zA-Z_][a-zA-Z0-9_]*', Token.Name)], 'whitespace': [('^\\s*#if\\s+0', Token.Comment.Preproc, 'if0'), ('^\\s*#', Token.Comment.Preproc, 'macro'), ('\\n', Token.Text), ('\\s+', Token.Text), ('\\\\\\n', Token.Text), ('//.*?\\n', Token.Comment), ('/[*](.|\\n)*?[*]/', Token.Comment)]}</em><a class="headerlink" href="#houdinihelp.hcoloring.VexLexer.tokens" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.hconfig">
+<span id="houdinihelp-hconfig-module"></span><h2>houdinihelp.hconfig module<a class="headerlink" href="#module-houdinihelp.hconfig" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig">
+<em class="property">class </em><code class="descclassname">houdinihelp.hconfig.</code><code class="descname">HoudiniAppConfig</code><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.hconfig.HoudiniBaseConfig" title="houdinihelp.hconfig.HoudiniBaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.hconfig.HoudiniBaseConfig</span></code></a></p>
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig.AUTO_COMPILE_SCSS">
+<code class="descname">AUTO_COMPILE_SCSS</code><em class="property"> = False</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig.AUTO_COMPILE_SCSS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig.CACHE_DIR">
+<code class="descname">CACHE_DIR</code><em class="property"> = '/home/juraj/houdini16.5/config/Help'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig.CACHE_DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig.DEBUG">
+<code class="descname">DEBUG</code><em class="property"> = False</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig.DEBUG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig.DOCUMENTS">
+<code class="descname">DOCUMENTS</code><em class="property"> = ['/opt/hfs16.5.378/houdini/help', {'type': 'object', 'class': &lt;class 'houdinihelp.hstores.HoudiniPathStore'&gt;}, {'type': 'object', 'class': &lt;class 'houdinihelp.hstores.AssetStore'&gt;}, {'type': 'object', 'class': &lt;class 'houdinihelp.hstores.ShelfStore'&gt;}, {'args': {'dirpath': '/opt/hfs16.5.378/houdini/help'}, 'type': 'object', 'class': &lt;class 'bookish.stores.ZipTree'&gt;}]</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig.DOCUMENTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig.ENABLE_BACKGROUND_INDEXING">
+<code class="descname">ENABLE_BACKGROUND_INDEXING</code><em class="property"> = False</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig.ENABLE_BACKGROUND_INDEXING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig.INDEX_DIR">
+<code class="descname">INDEX_DIR</code><em class="property"> = '/opt/hfs16.5.378/houdini/config/Help/index'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig.INDEX_DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniAppConfig.LOGLEVEL">
+<code class="descname">LOGLEVEL</code><em class="property"> = 'WARNING'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniAppConfig.LOGLEVEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig">
+<em class="property">class </em><code class="descclassname">houdinihelp.hconfig.</code><code class="descname">HoudiniBaseConfig</code><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.config.DefaultConfig" title="bookish.config.DefaultConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.config.DefaultConfig</span></code></a></p>
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.AUTO_COMPILE_SCSS">
+<code class="descname">AUTO_COMPILE_SCSS</code><em class="property"> = False</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.AUTO_COMPILE_SCSS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.CATEGORIES">
+<code class="descname">CATEGORIES</code><em class="property"> = '\n    _ tool\n    node/sop node/dop node/obj node/vop node/out node/cop2 node/chop node/vex\n    attribute vex example homclass hommethod homfunction hommodule\n    expression hscript property env_variable\n    '</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.CATEGORIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.DEFAULT_TEMPLATE">
+<code class="descname">DEFAULT_TEMPLATE</code><em class="property"> = '/templates/hpage.jinja2'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.DEFAULT_TEMPLATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.EXTRA_SHORTCUTS">
+<code class="descname">EXTRA_SHORTCUTS</code><em class="property"> = []</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.EXTRA_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_BUILD_VERSION">
+<code class="descname">HOUDINI_BUILD_VERSION</code><em class="property"> = '378'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_BUILD_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_MAJOR_VERSION">
+<code class="descname">HOUDINI_MAJOR_VERSION</code><em class="property"> = '16'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_MAJOR_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_MINOR_VERSION">
+<code class="descname">HOUDINI_MINOR_VERSION</code><em class="property"> = '5'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_MINOR_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_VERSION">
+<code class="descname">HOUDINI_VERSION</code><em class="property"> = '16.5.378'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.HOUDINI_VERSION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.HSCRIPT_LEXER">
+<code class="descname">HSCRIPT_LEXER</code><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.HSCRIPT_LEXER" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#houdinihelp.hcoloring.HScriptLexer" title="houdinihelp.hcoloring.HScriptLexer"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.hcoloring.HScriptLexer</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.PAGES_CLASS">
+<code class="descname">PAGES_CLASS</code><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.PAGES_CLASS" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#houdinihelp.hpages.HoudiniPages" title="houdinihelp.hpages.HoudiniPages"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.hpages.HoudiniPages</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.SEARCHABLES">
+<code class="descname">SEARCHABLES</code><em class="property"> = &lt;houdinihelp.hsearch.HoudiniSearchables object&gt;</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.SEARCHABLES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.SEARCH_TEMPLATE">
+<code class="descname">SEARCH_TEMPLATE</code><em class="property"> = '/templates/hresults.jinja2'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.SEARCH_TEMPLATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.SHORTCUTS">
+<code class="descname">SHORTCUTS</code><em class="property"> = [{'query': 'type:node', 'shortcut': 'n', 'desc': 'All nodes'}, {'query': 'category:node/sop', 'shortcut': 's', 'desc': 'Geometry nodes (SOPs)'}, {'query': 'category:node/dop', 'shortcut': 'd', 'desc': 'Dynamics nodes (DOPs)'}, {'query': 'category:node/obj', 'shortcut': 'o', 'desc': 'Object nodes'}, {'query': '(category:vex OR category:node/vop)', 'shortcut': 'v', 'desc': 'VEX and VOPs'}, {'query': 'category:node/vop', 'shortcut': 'vo', 'desc': 'VOPs'}, {'query': 'category:vex', 'shortcut': 'vx', 'desc': 'VEX functions'}, {'query': '(category:node/out OR type:property)', 'shortcut': 'r', 'desc': 'Render nodes and properties'}, {'query': 'category:hom*', 'shortcut': 'p', 'desc': 'Python scripting (HOM)'}, {'query': 'type:expression', 'shortcut': 'e', 'desc': 'Expression functions'}]</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.SUPPORT_DOCUMENTS">
+<code class="descname">SUPPORT_DOCUMENTS</code><em class="property"> = [{'source': '/home/juraj/Programovanie/h_docs_test/houdini_libs/bookish/templates', 'type': 'mount', 'target': '/templates'}, {'source': '/home/juraj/Programovanie/h_docs_test/houdini_libs/bookish/grammars', 'type': 'mount', 'target': '/grammars'}, {'source': '/home/juraj/Programovanie/h_docs_test/houdini_libs/bookish/static', 'static': True, 'type': 'mount', 'target': '/static'}, {'source': '/home/juraj/Programovanie/h_docs_test/houdini_libs/houdinihelp/templates', 'type': 'mount', 'target': '/templates'}, {'source': '/home/juraj/Programovanie/h_docs_test/houdini_libs/houdinihelp/static', 'static': True, 'type': 'mount', 'target': '/static'}]</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.SUPPORT_DOCUMENTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.TEXTIFY_CLASS">
+<code class="descname">TEXTIFY_CLASS</code><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.TEXTIFY_CLASS" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#houdinihelp.htextify.HoudiniTextifier" title="houdinihelp.htextify.HoudiniTextifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.htextify.HoudiniTextifier</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.VEX_LEXER">
+<code class="descname">VEX_LEXER</code><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.VEX_LEXER" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#houdinihelp.hcoloring.VexLexer" title="houdinihelp.hcoloring.VexLexer"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.hcoloring.VexLexer</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniBaseConfig.WIKI_STYLE">
+<code class="descname">WIKI_STYLE</code><em class="property"> = '/templates/hwiki.jinja2'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniBaseConfig.WIKI_STYLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig">
+<em class="property">class </em><code class="descclassname">houdinihelp.hconfig.</code><code class="descname">HoudiniDevConfig</code><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.hconfig.HoudiniBaseConfig" title="houdinihelp.hconfig.HoudiniBaseConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.hconfig.HoudiniBaseConfig</span></code></a></p>
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.AUTO_COMPILE_SCSS">
+<code class="descname">AUTO_COMPILE_SCSS</code><em class="property"> = False</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.AUTO_COMPILE_SCSS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.CACHE_DIR">
+<code class="descname">CACHE_DIR</code><em class="property"> = '/home/juraj/Programovanie/h_docs_test/$SH/help/build/cache'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.CACHE_DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.DEBUG">
+<code class="descname">DEBUG</code><em class="property"> = True</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.DEBUG" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.DOCUMENTS">
+<code class="descname">DOCUMENTS</code><em class="property"> = [('/home/juraj/Programovanie/h_docs_test/$SH/help/documents',), {'source': '/home/juraj/Programovanie/h_docs_test/$SH/support/icons', 'static': True, 'type': 'mount', 'target': '/icons'}]</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.DOCUMENTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.EDITABLE">
+<code class="descname">EDITABLE</code><em class="property"> = True</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.EDITABLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.EDIT_STORE">
+<code class="descname">EDIT_STORE</code><em class="property"> = ('/home/juraj/Programovanie/h_docs_test/$SH/help/documents',)</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.EDIT_STORE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.ENABLE_BACKGROUND_INDEXING">
+<code class="descname">ENABLE_BACKGROUND_INDEXING</code><em class="property"> = False</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.ENABLE_BACKGROUND_INDEXING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.INDEX_DIR">
+<code class="descname">INDEX_DIR</code><em class="property"> = '/home/juraj/Programovanie/h_docs_test/$SH/help/build/index'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.INDEX_DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.build_dir">
+<code class="descname">build_dir</code><em class="property"> = '/home/juraj/Programovanie/h_docs_test/$SH/help/build'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.build_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.main_docs">
+<code class="descname">main_docs</code><em class="property"> = ('/home/juraj/Programovanie/h_docs_test/$SH/help/documents',)</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.main_docs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hconfig.HoudiniDevConfig.source_base">
+<code class="descname">source_base</code><em class="property"> = '/home/juraj/Programovanie/h_docs_test/$SH'</em><a class="headerlink" href="#houdinihelp.hconfig.HoudiniDevConfig.source_base" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.hotkeys">
+<span id="houdinihelp-hotkeys-module"></span><h2>houdinihelp.hotkeys module<a class="headerlink" href="#module-houdinihelp.hotkeys" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser">
+<em class="property">class </em><code class="descclassname">houdinihelp.hotkeys.</code><code class="descname">HotkeyFileParser</code><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser.ctx_exp">
+<code class="descname">ctx_exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser.ctx_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser.json_obj">
+<code class="descname">json_obj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser.json_obj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser.json_text">
+<code class="descname">json_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser.json_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser.key_exp">
+<code class="descname">key_exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser.key_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser.parse_dir">
+<code class="descname">parse_dir</code><span class="sig-paren">(</span><em>dirpath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser.parse_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser.parse_file">
+<code class="descname">parse_file</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser.parse_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hotkeys.HotkeyFileParser.print_json">
+<code class="descname">print_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.HotkeyFileParser.print_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hotkeys.actions_to_json">
+<code class="descclassname">houdinihelp.hotkeys.</code><code class="descname">actions_to_json</code><span class="sig-paren">(</span><em>actions</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.actions_to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hotkeys.find_actions">
+<code class="descclassname">houdinihelp.hotkeys.</code><code class="descname">find_actions</code><span class="sig-paren">(</span><em>pages</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.find_actions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hotkeys.hotkey_json_from_docs">
+<code class="descclassname">houdinihelp.hotkeys.</code><code class="descname">hotkey_json_from_docs</code><span class="sig-paren">(</span><em>pages</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.hotkey_json_from_docs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hotkeys.hotkey_json_from_file">
+<code class="descclassname">houdinihelp.hotkeys.</code><code class="descname">hotkey_json_from_file</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.hotkey_json_from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hotkeys.hotkey_to_wiki">
+<code class="descclassname">houdinihelp.hotkeys.</code><code class="descname">hotkey_to_wiki</code><span class="sig-paren">(</span><em>hotkey</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.hotkey_to_wiki" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hotkeys.parse_key">
+<code class="descclassname">houdinihelp.hotkeys.</code><code class="descname">parse_key</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hotkeys.parse_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.hpages">
+<span id="houdinihelp-hpages-module"></span><h2>houdinihelp.hpages module<a class="headerlink" href="#module-houdinihelp.hpages" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.hpages.Actions">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">Actions</code><a class="headerlink" href="#houdinihelp.hpages.Actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<dl class="method">
+<dt id="houdinihelp.hpages.Actions.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em>, <em>action_context=''</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.Actions.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Actions.before">
+<code class="descname">before</code><em class="property"> = ('groups',)</em><a class="headerlink" href="#houdinihelp.hpages.Actions.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Actions.name">
+<code class="descname">name</code><em class="property"> = 'hactions'</em><a class="headerlink" href="#houdinihelp.hpages.Actions.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.ContentFroms">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">ContentFroms</code><a class="headerlink" href="#houdinihelp.hpages.ContentFroms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Modifier" title="bookish.pipeline.Modifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Modifier</span></code></a></p>
+<p>Finds the “#contentfrom:” property and replaces it with an include.</p>
+<dl class="attribute">
+<dt id="houdinihelp.hpages.ContentFroms.after">
+<code class="descname">after</code><em class="property"> = ('hierarchy',)</em><a class="headerlink" href="#houdinihelp.hpages.ContentFroms.after" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.ContentFroms.before">
+<code class="descname">before</code><em class="property"> = ('properties', 'includes')</em><a class="headerlink" href="#houdinihelp.hpages.ContentFroms.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hpages.ContentFroms.modify">
+<code class="descname">modify</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.ContentFroms.modify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.ContentFroms.name">
+<code class="descname">name</code><em class="property"> = 'hcontentfrom'</em><a class="headerlink" href="#houdinihelp.hpages.ContentFroms.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.ExampleFiles">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">ExampleFiles</code><a class="headerlink" href="#houdinihelp.hpages.ExampleFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<p>For example files, computes the nodes and example files and adds them as
+annotations on the document.</p>
+<p>For node docs, searches for examples related to the node.</p>
+<p>For everything else, looks for example loader markup.</p>
+<dl class="method">
+<dt id="houdinihelp.hpages.ExampleFiles.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.ExampleFiles.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.ExampleFiles.before">
+<code class="descname">before</code><em class="property"> = ('includes',)</em><a class="headerlink" href="#houdinihelp.hpages.ExampleFiles.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.ExampleFiles.name">
+<code class="descname">name</code><em class="property"> = 'hexamples'</em><a class="headerlink" href="#houdinihelp.hpages.ExampleFiles.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.HomClasses">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">HomClasses</code><a class="headerlink" href="#houdinihelp.hpages.HomClasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<p>Post-processor for several features related to HOM pages, such as listing
+subclasses and methods inherited from superclasses.</p>
+<dl class="method">
+<dt id="houdinihelp.hpages.HomClasses.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HomClasses.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HomClasses.before">
+<code class="descname">before</code><em class="property"> = ('annotate',)</em><a class="headerlink" href="#houdinihelp.hpages.HomClasses.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HomClasses.name">
+<code class="descname">name</code><em class="property"> = 'homclasses'</em><a class="headerlink" href="#houdinihelp.hpages.HomClasses.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.HomTitles">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">HomTitles</code><a class="headerlink" href="#houdinihelp.hpages.HomTitles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<p>Aesthetic processor that just takes the dotted prefix of a class/function
+name (e.g. hou.Node) and puts the part up to the last dot in the pre-title.</p>
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HomTitles.after">
+<code class="descname">after</code><em class="property"> = ('properties',)</em><a class="headerlink" href="#houdinihelp.hpages.HomTitles.after" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hpages.HomTitles.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HomTitles.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HomTitles.before">
+<code class="descname">before</code><em class="property"> = ('title',)</em><a class="headerlink" href="#houdinihelp.hpages.HomTitles.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HomTitles.name">
+<code class="descname">name</code><em class="property"> = 'homtitles'</em><a class="headerlink" href="#houdinihelp.hpages.HomTitles.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.HoudiniIds">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">HoudiniIds</code><a class="headerlink" href="#houdinihelp.hpages.HoudiniIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<p>Pre-processor for converting names of methods etc. into IDs.</p>
+<dl class="method">
+<dt id="houdinihelp.hpages.HoudiniIds.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HoudiniIds.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniIds.name">
+<code class="descname">name</code><em class="property"> = 'hids'</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniIds.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.HoudiniNodes">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">HoudiniNodes</code><a class="headerlink" href="#houdinihelp.hpages.HoudiniNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<p>Sets any missing node-specific information based on HOM calls.</p>
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniNodes.after">
+<code class="descname">after</code><em class="property"> = ('properties', 'includes')</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniNodes.after" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hpages.HoudiniNodes.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HoudiniNodes.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniNodes.name">
+<code class="descname">name</code><em class="property"> = 'nodes'</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniNodes.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.HoudiniPages">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">HoudiniPages</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HoudiniPages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.wikipages.WikiPages" title="bookish.wikipages.WikiPages"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.wikipages.WikiPages</span></code></a></p>
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniPages.use_hou">
+<code class="descname">use_hou</code><em class="property"> = True</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniPages.use_hou" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.HoudiniPagesWithoutHou">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">HoudiniPagesWithoutHou</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HoudiniPagesWithoutHou" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.hpages.HoudiniPages" title="houdinihelp.hpages.HoudiniPages"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.hpages.HoudiniPages</span></code></a></p>
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniPagesWithoutHou.use_hou">
+<code class="descname">use_hou</code><em class="property"> = False</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniPagesWithoutHou.use_hou" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.HoudiniShortcuts">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">HoudiniShortcuts</code><span class="sig-paren">(</span><em>use_hou=True</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HoudiniShortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.TextModifier" title="bookish.pipeline.TextModifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.TextModifier</span></code></a></p>
+<p>Implements Houdini-specific link features such as “opdef:” syntax and
+convenience schemes such as “Node:” and “Hom:”.</p>
+<dl class="method">
+<dt id="houdinihelp.hpages.HoudiniShortcuts.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HoudiniShortcuts.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniShortcuts.before">
+<code class="descname">before</code><em class="property"> = ('promote', 'includes', 'joinkeys')</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniShortcuts.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniShortcuts.do_properties">
+<code class="descname">do_properties</code><em class="property"> = ('icon',)</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniShortcuts.do_properties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniShortcuts.name">
+<code class="descname">name</code><em class="property"> = 'hshortcuts'</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniShortcuts.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.HoudiniShortcuts.opdef_exp">
+<code class="descname">opdef_exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.hpages.HoudiniShortcuts.opdef_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hpages.HoudiniShortcuts.text">
+<code class="descname">text</code><span class="sig-paren">(</span><em>text</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.HoudiniShortcuts.text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.Itemize">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">Itemize</code><a class="headerlink" href="#houdinihelp.hpages.Itemize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Itemize.after">
+<code class="descname">after</code><em class="property"> = ('properties', 'sections', 'includes', 'sortheadings')</em><a class="headerlink" href="#houdinihelp.hpages.Itemize.after" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hpages.Itemize.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.Itemize.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Itemize.before">
+<code class="descname">before</code><em class="property"> = ('groups',)</em><a class="headerlink" href="#houdinihelp.hpages.Itemize.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Itemize.name">
+<code class="descname">name</code><em class="property"> = 'itemize'</em><a class="headerlink" href="#houdinihelp.hpages.Itemize.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Itemize.sections">
+<code class="descname">sections</code><em class="property"> = ('parameters', 'attributes')</em><a class="headerlink" href="#houdinihelp.hpages.Itemize.sections" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.Replacements">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">Replacements</code><a class="headerlink" href="#houdinihelp.hpages.Replacements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<p>If a searcher is available, this processor finds any documents that
+“replace” the current path, and adds information about them to a
+“replacedby” list on the document root, making them available to display
+in the document. This is to support linking from HScript commands to the
+replacement HOM equivalents.</p>
+<dl class="method">
+<dt id="houdinihelp.hpages.Replacements.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.Replacements.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Replacements.fields">
+<code class="descname">fields</code><em class="property"> = ('title', 'path', 'type', 'summary', 'icon')</em><a class="headerlink" href="#houdinihelp.hpages.Replacements.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Replacements.name">
+<code class="descname">name</code><em class="property"> = 'hreplacements'</em><a class="headerlink" href="#houdinihelp.hpages.Replacements.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Replacements.prefixes">
+<code class="descname">prefixes</code><em class="property"> = ('/commands/', '/expressions/', '/nodes/')</em><a class="headerlink" href="#houdinihelp.hpages.Replacements.prefixes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.RewriteReplaces">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">RewriteReplaces</code><a class="headerlink" href="#houdinihelp.hpages.RewriteReplaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<p>A long time ago, instead of putting /commands/ophide as the path in a
+replaces property, someone wrote Cmd:ophide somehow assuming that would
+work. I should really go back and just replace them all, but rewriting 
+them at runtime isn’t so bad, and who knows who might try the same thing
+again someday, so I might as well make it work.</p>
+<p>Also, someone else decided they wanted that instead of using a page
+property, they wanted to write a &#64;replaces section with links inside, so
+I have to support that too. This processor looks for such a section and
+translates it into a page property.</p>
+<p>This has to run as a preprocessor (so the results are visible to the
+indexer, which currently skips postprocessing), so it’s split from the
+“Replacments” post-processor which does the reverse lookup on “replaced”
+pages.</p>
+<dl class="method">
+<dt id="houdinihelp.hpages.RewriteReplaces.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em>, <em>root=None</em>, <em>in_replaces=False</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.RewriteReplaces.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.RewriteReplaces.fields">
+<code class="descname">fields</code><em class="property"> = ('title', 'path', 'type', 'summary', 'icon')</em><a class="headerlink" href="#houdinihelp.hpages.RewriteReplaces.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.RewriteReplaces.name">
+<code class="descname">name</code><em class="property"> = 'hreplaces'</em><a class="headerlink" href="#houdinihelp.hpages.RewriteReplaces.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.RewriteReplaces.split_expr">
+<code class="descname">split_expr</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.hpages.RewriteReplaces.split_expr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.Suites">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">Suites</code><a class="headerlink" href="#houdinihelp.hpages.Suites" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<dl class="method">
+<dt id="houdinihelp.hpages.Suites.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.Suites.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Suites.name">
+<code class="descname">name</code><em class="property"> = 'suites'</em><a class="headerlink" href="#houdinihelp.hpages.Suites.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.Suites.retain">
+<code class="descname">retain</code><em class="property"> = {'vexsuite': ['summary', 'usage_group', 'arg_group']}</em><a class="headerlink" href="#houdinihelp.hpages.Suites.retain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hpages.VexPages">
+<em class="property">class </em><code class="descclassname">houdinihelp.hpages.</code><code class="descname">VexPages</code><a class="headerlink" href="#houdinihelp.hpages.VexPages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.pipeline.Processor" title="bookish.pipeline.Processor"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.pipeline.Processor</span></code></a></p>
+<dl class="attribute">
+<dt id="houdinihelp.hpages.VexPages.after">
+<code class="descname">after</code><em class="property"> = ('hierarchy',)</em><a class="headerlink" href="#houdinihelp.hpages.VexPages.after" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hpages.VexPages.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>block</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.VexPages.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.VexPages.before">
+<code class="descname">before</code><em class="property"> = ('groups',)</em><a class="headerlink" href="#houdinihelp.hpages.VexPages.before" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hpages.VexPages.name">
+<code class="descname">name</code><em class="property"> = 'vex'</em><a class="headerlink" href="#houdinihelp.hpages.VexPages.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hpages.get_shortcut">
+<code class="descclassname">houdinihelp.hpages.</code><code class="descname">get_shortcut</code><span class="sig-paren">(</span><em>scheme</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.get_shortcut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hpages.parse_shortcut">
+<code class="descclassname">houdinihelp.hpages.</code><code class="descname">parse_shortcut</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hpages.parse_shortcut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.hsearch">
+<span id="houdinihelp-hsearch-module"></span><h2>houdinihelp.hsearch module<a class="headerlink" href="#module-houdinihelp.hsearch" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.hsearch.HoudiniSearchables">
+<em class="property">class </em><code class="descclassname">houdinihelp.hsearch.</code><code class="descname">HoudiniSearchables</code><a class="headerlink" href="#houdinihelp.hsearch.HoudiniSearchables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.search.Searchables" title="bookish.search.Searchables"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.search.Searchables</span></code></a></p>
+<dl class="method">
+<dt id="houdinihelp.hsearch.HoudiniSearchables.schema">
+<code class="descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hsearch.HoudiniSearchables.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hsearch.find_parms">
+<code class="descclassname">houdinihelp.hsearch.</code><code class="descname">find_parms</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hsearch.find_parms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively finds dt blocks inside containers (but doesn’t recurse inside
+the dt blocks). This is necessary because for bad historical reasons nodes
+docs don’t mark parameters as items like they should.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.hsearch.usages_for_otl">
+<code class="descclassname">houdinihelp.hsearch.</code><code class="descname">usages_for_otl</code><span class="sig-paren">(</span><em>otlpath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hsearch.usages_for_otl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.hstores">
+<span id="houdinihelp-hstores-module"></span><h2>houdinihelp.hstores module<a class="headerlink" href="#module-houdinihelp.hstores" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.hstores.AssetStore">
+<em class="property">class </em><code class="descclassname">houdinihelp.hstores.</code><code class="descname">AssetStore</code><a class="headerlink" href="#houdinihelp.hstores.AssetStore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.stores.StringStore" title="bookish.stores.StringStore"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.stores.StringStore</span></code></a></p>
+<p>Maps assets (and HDK nodes with embedded help) onto paths under /nodes/ in
+the virtual file system.</p>
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.content">
+<code class="descname">content</code><span class="sig-paren">(</span><em>path</em>, <em>encoding='utf8'</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method to return the string content of the file at the
+given path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>encoding</strong> – <p>the name of the encoding to use to decode the file’s
+bytes. Default is <code class="docutils literal notranslate"><span class="pre">&quot;utf8&quot;</span></code>. If you use <code class="docutils literal notranslate"><span class="pre">encoding=None</span></code> the</p>
+<blockquote>
+<div>method returns the raw bytestring.</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the underlying file for the given path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.etag">
+<code class="descname">etag</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.etag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.exists">
+<code class="descname">exists</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the given path exists in this store.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.is_dir">
+<code class="descname">is_dir</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.is_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the given path represents a directory in this store.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.last_modified">
+<code class="descname">last_modified</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.last_modified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a datetime object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.list_all">
+<code class="descname">list_all</code><span class="sig-paren">(</span><em>path='/'</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.list_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.writable">
+<code class="descname">writable</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.writable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the given path can be created/overwritten.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.AssetStore.write_file">
+<code class="descname">write_file</code><span class="sig-paren">(</span><em>path</em>, <em>bytestring</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.AssetStore.write_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hstores.HoudiniPathStore">
+<em class="property">class </em><code class="descclassname">houdinihelp.hstores.</code><code class="descname">HoudiniPathStore</code><span class="sig-paren">(</span><em>path='help'</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.HoudiniPathStore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.stores.OverlayStore" title="bookish.stores.OverlayStore"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.stores.OverlayStore</span></code></a></p>
+<p>Overlays HOUDINIPATH/help directories onto the virtual file system.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.hstores.ShelfStore">
+<em class="property">class </em><code class="descclassname">houdinihelp.hstores.</code><code class="descname">ShelfStore</code><a class="headerlink" href="#houdinihelp.hstores.ShelfStore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.stores.StringStore" title="bookish.stores.StringStore"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.stores.StringStore</span></code></a></p>
+<p>A provider which translates requests for help under /shelf/ into calls
+to HOM to load embedded help content from shelf tools.</p>
+<dl class="method">
+<dt id="houdinihelp.hstores.ShelfStore.content">
+<code class="descname">content</code><span class="sig-paren">(</span><em>path</em>, <em>encoding='utf8'</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method to return the string content of the file at the
+given path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>encoding</strong> – <p>the name of the encoding to use to decode the file’s
+bytes. Default is <code class="docutils literal notranslate"><span class="pre">&quot;utf8&quot;</span></code>. If you use <code class="docutils literal notranslate"><span class="pre">encoding=None</span></code> the</p>
+<blockquote>
+<div>method returns the raw bytestring.</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.ShelfStore.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the underlying file for the given path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.ShelfStore.exists">
+<code class="descname">exists</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the given path exists in this store.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.ShelfStore.is_dir">
+<code class="descname">is_dir</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.is_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the given path represents a directory in this store.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.ShelfStore.list_dir">
+<code class="descname">list_dir</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.list_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the file names under the given path.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hstores.ShelfStore.nodeexp">
+<code class="descname">nodeexp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.nodeexp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.hstores.ShelfStore.prefix">
+<code class="descname">prefix</code><em class="property"> = '/shelf/'</em><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.prefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.hstores.ShelfStore.write_file">
+<code class="descname">write_file</code><span class="sig-paren">(</span><em>path</em>, <em>bytestring</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.hstores.ShelfStore.write_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.htextify">
+<span id="houdinihelp-htextify-module"></span><h2>houdinihelp.htextify module<a class="headerlink" href="#module-houdinihelp.htextify" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.htextify.HoudiniFormattedTextifier">
+<em class="property">class </em><code class="descclassname">houdinihelp.htextify.</code><code class="descname">HoudiniFormattedTextifier</code><span class="sig-paren">(</span><em>root</em>, <em>left=0</em>, <em>top=0</em>, <em>bottom=0</em>, <em>width=72</em>, <em>vars=None</em>, <em>charfilter=True</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniFormattedTextifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.htextify.HoudiniTextifier" title="houdinihelp.htextify.HoudiniTextifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.htextify.HoudiniTextifier</span></code></a></p>
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniFormattedTextifier.code_span">
+<code class="descname">code_span</code><span class="sig-paren">(</span><em>span</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniFormattedTextifier.code_span" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniFormattedTextifier.em_span">
+<code class="descname">em_span</code><span class="sig-paren">(</span><em>span</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniFormattedTextifier.em_span" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniFormattedTextifier.strong_span">
+<code class="descname">strong_span</code><span class="sig-paren">(</span><em>span</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniFormattedTextifier.strong_span" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniFormattedTextifier.var_span">
+<code class="descname">var_span</code><span class="sig-paren">(</span><em>span</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniFormattedTextifier.var_span" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.htextify.HoudiniTextifier">
+<em class="property">class </em><code class="descclassname">houdinihelp.htextify.</code><code class="descname">HoudiniTextifier</code><span class="sig-paren">(</span><em>root</em>, <em>left=0</em>, <em>top=0</em>, <em>bottom=0</em>, <em>width=72</em>, <em>vars=None</em>, <em>charfilter=True</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniTextifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bookish.html#bookish.textify.BookishTextifier" title="bookish.textify.BookishTextifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">bookish.textify.BookishTextifier</span></code></a></p>
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniTextifier.root_block">
+<code class="descname">root_block</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniTextifier.root_block" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniTextifier.summary_block">
+<code class="descname">summary_block</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniTextifier.summary_block" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniTextifier.title_block">
+<code class="descname">title_block</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniTextifier.title_block" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniTextifier.usage_block">
+<code class="descname">usage_block</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniTextifier.usage_block" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.htextify.HoudiniTextifier.usage_group_block">
+<code class="descname">usage_group_block</code><span class="sig-paren">(</span><em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.htextify.HoudiniTextifier.usage_group_block" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.server">
+<span id="houdinihelp-server-module"></span><h2>houdinihelp.server module<a class="headerlink" href="#module-houdinihelp.server" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="houdinihelp.server.get_houdini_app">
+<code class="descclassname">houdinihelp.server.</code><code class="descname">get_houdini_app</code><span class="sig-paren">(</span><em>dev=None</em>, <em>use_houdini_path=True</em>, <em>auto_compile_scss=None</em>, <em>bgindex=None</em>, <em>config_file=None</em>, <em>config_obj=None</em>, <em>logfile=None</em>, <em>loglevel=None</em>, <em>debug=None</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.server.get_houdini_app" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.server.is_dev">
+<code class="descclassname">houdinihelp.server.</code><code class="descname">is_dev</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.server.is_dev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.server.start_app_server">
+<code class="descclassname">houdinihelp.server.</code><code class="descname">start_app_server</code><span class="sig-paren">(</span><em>host='0.0.0.0'</em>, <em>port=48626</em>, <em>debug=None</em>, <em>bgindex=None</em>, <em>config_file=None</em>, <em>config_obj=None</em>, <em>dev=None</em>, <em>auto_compile_scss=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.server.start_app_server" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.server.start_dev_server">
+<code class="descclassname">houdinihelp.server.</code><code class="descname">start_dev_server</code><span class="sig-paren">(</span><em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=None</em>, <em>bgindex=None</em>, <em>config_file=None</em>, <em>config_obj=None</em>, <em>dev=None</em>, <em>auto_compile_scss=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.server.start_dev_server" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.server.start_server">
+<code class="descclassname">houdinihelp.server.</code><code class="descname">start_server</code><span class="sig-paren">(</span><em>host='0.0.0.0'</em>, <em>port=8080</em>, <em>debug=False</em>, <em>bgindex=None</em>, <em>config_file=None</em>, <em>config_obj=None</em>, <em>dev=None</em>, <em>use_houdini_path=True</em>, <em>auto_compile_scss=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.server.start_server" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp.vex">
+<span id="houdinihelp-vex-module"></span><h2>houdinihelp.vex module<a class="headerlink" href="#module-houdinihelp.vex" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="houdinihelp.vex.AnyType">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">AnyType</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.AnyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.RegexVexPart" title="houdinihelp.vex.RegexVexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.RegexVexPart</span></code></a></p>
+<p>Represents a metasyntactic wilcard matching any type, e.g. &lt;type&gt;. This is
+not actually part of VEX, but is used in the documentation to the docs
+clearer and more compact.</p>
+<dl class="attribute">
+<dt id="houdinihelp.vex.AnyType.exp">
+<code class="descname">exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.vex.AnyType.exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.AnyType.expected">
+<em class="property">classmethod </em><code class="descname">expected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.AnyType.expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.AnyType.is_meta">
+<code class="descname">is_meta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.AnyType.is_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.AnyType.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.AnyType.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.AnyType.meta_name">
+<code class="descname">meta_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.AnyType.meta_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.AnyType.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.AnyType.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.AnyType.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.AnyType.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.Argument">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">Argument</code><span class="sig-paren">(</span><em>t</em>, <em>out</em>, <em>ident</em>, <em>optional=None</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+<p>Represents an argument in the function signature. This is a compound object
+containing the various parts of the argument (type, output indicator, name,
+optional).</p>
+<dl class="method">
+<dt id="houdinihelp.vex.Argument.basetype">
+<code class="descname">basetype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument.basetype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.vex.Argument.eq_exp">
+<code class="descname">eq_exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.vex.Argument.eq_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Argument.is_meta">
+<code class="descname">is_meta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument.is_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Argument.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Argument.meta_name">
+<code class="descname">meta_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument.meta_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Argument.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Argument.typecode">
+<code class="descname">typecode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument.typecode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Argument.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Argument.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.ArgumentList">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">ArgumentList</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArgumentList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+<p>Represents zero or more arguments in a function signature.</p>
+<dl class="method">
+<dt id="houdinihelp.vex.ArgumentList.check_meta_types">
+<code class="descname">check_meta_types</code><span class="sig-paren">(</span><em>arglist</em>, <em>typemap</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArgumentList.check_meta_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArgumentList.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArgumentList.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.vex.ArgumentList.separator_exp">
+<code class="descname">separator_exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.vex.ArgumentList.separator_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArgumentList.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArgumentList.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArgumentList.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArgumentList.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.ArrayType">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">ArrayType</code><span class="sig-paren">(</span><em>subtype</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+<p>Represents an array type. This is a wrapper around a VexPart instance
+representing the item type.</p>
+<dl class="method">
+<dt id="houdinihelp.vex.ArrayType.basetype">
+<code class="descname">basetype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.basetype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.ArrayType.expected">
+<em class="property">classmethod </em><code class="descname">expected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArrayType.is_meta">
+<code class="descname">is_meta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.is_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArrayType.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArrayType.meta_name">
+<code class="descname">meta_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.meta_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArrayType.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArrayType.typecode">
+<code class="descname">typecode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.typecode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.ArrayType.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ArrayType.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.Context">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">Context</code><span class="sig-paren">(</span><em>doc_mode=True</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Used the pass configuration down to the various parsing parts.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>doc_mode</strong> – True if we are parsing a documentation template, False if
+we are parsing a signature from <cite>vcc -X</cite>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.ContextRewriteReporter">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">ContextRewriteReporter</code><span class="sig-paren">(</span><em>funcdir</em>, <em>extension='.txt'</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ContextRewriteReporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.Reporter" title="houdinihelp.vex.Reporter"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.Reporter</span></code></a></p>
+<dl class="method">
+<dt id="houdinihelp.vex.ContextRewriteReporter.wrong_contexts">
+<code class="descname">wrong_contexts</code><span class="sig-paren">(</span><em>fnname</em>, <em>stated</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.ContextRewriteReporter.wrong_contexts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.GlobalVar">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">GlobalVar</code><span class="sig-paren">(</span><em>type_</em>, <em>name</em>, <em>readable</em>, <em>writable</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.GlobalVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.Identifier">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">Identifier</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.RegexVexPart" title="houdinihelp.vex.RegexVexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.RegexVexPart</span></code></a></p>
+<p>Function name or argument name.</p>
+<dl class="attribute">
+<dt id="houdinihelp.vex.Identifier.exp">
+<code class="descname">exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.vex.Identifier.exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.Identifier.expected">
+<em class="property">classmethod </em><code class="descname">expected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Identifier.expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Identifier.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Identifier.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Identifier.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Identifier.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Identifier.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Identifier.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.MissingIdentifier">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">MissingIdentifier</code><a class="headerlink" href="#houdinihelp.vex.MissingIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+<p>Represents a missing name (as in a target parsed from <cite>vcc -X</cite> output, which
+doesn’t have argument names).</p>
+<dl class="classmethod">
+<dt id="houdinihelp.vex.MissingIdentifier.expected">
+<em class="property">classmethod </em><code class="descname">expected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.MissingIdentifier.expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.MissingIdentifier.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.MissingIdentifier.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.MissingIdentifier.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.MissingIdentifier.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.MissingIdentifier.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.MissingIdentifier.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="houdinihelp.vex.NoMatch">
+<em class="property">exception </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">NoMatch</code><span class="sig-paren">(</span><em>cls</em>, <em>string</em>, <em>pos</em>, <em>expected</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.NoMatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+<p>Raised by a VexPart when what it’s trying to parse doesn’t match the given
+string. This is usually caught by a caller so the caller can try a different
+pattern, but it may bubble all the way up if the given string is not a valid
+VEX signature.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.PrintReporter">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">PrintReporter</code><span class="sig-paren">(</span><em>file=None</em>, <em>print_footer=True</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.Reporter" title="houdinihelp.vex.Reporter"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.Reporter</span></code></a></p>
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.extra_context">
+<code class="descname">extra_context</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.extra_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.extra_doc">
+<code class="descname">extra_doc</code><span class="sig-paren">(</span><em>fnname</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.extra_doc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.extra_doc_signature">
+<code class="descname">extra_doc_signature</code><span class="sig-paren">(</span><em>fnname</em>, <em>sig</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.extra_doc_signature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.extra_global">
+<code class="descname">extra_global</code><span class="sig-paren">(</span><em>glob</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.extra_global" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.finish">
+<code class="descname">finish</code><span class="sig-paren">(</span><em>checker</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.missing_doc">
+<code class="descname">missing_doc</code><span class="sig-paren">(</span><em>fnname</em>, <em>contexts</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.missing_doc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.missing_doc_signature">
+<code class="descname">missing_doc_signature</code><span class="sig-paren">(</span><em>fnname</em>, <em>vccsig</em>, <em>docsigs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.missing_doc_signature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.missing_global">
+<code class="descname">missing_global</code><span class="sig-paren">(</span><em>glob</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.missing_global" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.missing_statement_doc">
+<code class="descname">missing_statement_doc</code><span class="sig-paren">(</span><em>sname</em>, <em>contexts</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.missing_statement_doc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.parser_error">
+<code class="descname">parser_error</code><span class="sig-paren">(</span><em>fnname</em>, <em>string</em>, <em>exception</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.parser_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.wrong_contexts">
+<code class="descname">wrong_contexts</code><span class="sig-paren">(</span><em>fnname</em>, <em>stated</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.wrong_contexts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.PrintReporter.wrong_function_name">
+<code class="descname">wrong_function_name</code><span class="sig-paren">(</span><em>fnname</em>, <em>wrong_string</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.PrintReporter.wrong_function_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.RegexVexPart">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">RegexVexPart</code><a class="headerlink" href="#houdinihelp.vex.RegexVexPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+<p>Middleware class for subclasses that parse using a regex.</p>
+<dl class="attribute">
+<dt id="houdinihelp.vex.RegexVexPart.exp">
+<code class="descname">exp</code><em class="property"> = None</em><a class="headerlink" href="#houdinihelp.vex.RegexVexPart.exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.RegexVexPart.expected">
+<em class="property">classmethod </em><code class="descname">expected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.RegexVexPart.expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.RegexVexPart.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.RegexVexPart.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.RegexVexPart.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.RegexVexPart.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.RegexVexPart.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.RegexVexPart.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.Reporter">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">Reporter</code><a class="headerlink" href="#houdinihelp.vex.Reporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.compared_signatures">
+<code class="descname">compared_signatures</code><span class="sig-paren">(</span><em>docsig</em>, <em>vccsig</em>, <em>matched</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.compared_signatures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.extra_context">
+<code class="descname">extra_context</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.extra_context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.extra_doc">
+<code class="descname">extra_doc</code><span class="sig-paren">(</span><em>fnname</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.extra_doc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.extra_doc_signature">
+<code class="descname">extra_doc_signature</code><span class="sig-paren">(</span><em>fnname</em>, <em>sig</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.extra_doc_signature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.extra_global">
+<code class="descname">extra_global</code><span class="sig-paren">(</span><em>glob</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.extra_global" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.finish">
+<code class="descname">finish</code><span class="sig-paren">(</span><em>checker</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.finish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.marked_deprecated">
+<code class="descname">marked_deprecated</code><span class="sig-paren">(</span><em>fnname</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.marked_deprecated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.missing_doc">
+<code class="descname">missing_doc</code><span class="sig-paren">(</span><em>fnname</em>, <em>contexts</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.missing_doc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.missing_doc_signature">
+<code class="descname">missing_doc_signature</code><span class="sig-paren">(</span><em>fnname</em>, <em>vccsig</em>, <em>docsigs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.missing_doc_signature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.missing_global">
+<code class="descname">missing_global</code><span class="sig-paren">(</span><em>glob</em>, <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.missing_global" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.missing_statement_doc">
+<code class="descname">missing_statement_doc</code><span class="sig-paren">(</span><em>statementname</em>, <em>contexts</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.missing_statement_doc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.parsed_doc_page">
+<code class="descname">parsed_doc_page</code><span class="sig-paren">(</span><em>fnname</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.parsed_doc_page" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.parsed_doc_sig">
+<code class="descname">parsed_doc_sig</code><span class="sig-paren">(</span><em>sig</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.parsed_doc_sig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.parsed_signature">
+<code class="descname">parsed_signature</code><span class="sig-paren">(</span><em>context</em>, <em>sig</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.parsed_signature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.parser_error">
+<code class="descname">parser_error</code><span class="sig-paren">(</span><em>fnname</em>, <em>string</em>, <em>exception</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.parser_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.start">
+<code class="descname">start</code><span class="sig-paren">(</span><em>checker</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.wrong_contexts">
+<code class="descname">wrong_contexts</code><span class="sig-paren">(</span><em>fnname</em>, <em>stated</em>, <em>actual</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.wrong_contexts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Reporter.wrong_function_name">
+<code class="descname">wrong_function_name</code><span class="sig-paren">(</span><em>fnname</em>, <em>wrong_string</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Reporter.wrong_function_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.Signature">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">Signature</code><span class="sig-paren">(</span><em>rtype</em>, <em>ident</em>, <em>arglist</em>, <em>original=None</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+<p>Top-level object represents the entire signature. Contains the return type,
+function name, and argument list.</p>
+<dl class="method">
+<dt id="houdinihelp.vex.Signature.check_meta_types">
+<code class="descname">check_meta_types</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Signature.check_meta_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Signature.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Signature.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.Signature.parse_concrete">
+<em class="property">classmethod </em><code class="descname">parse_concrete</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Signature.parse_concrete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.Signature.parse_template">
+<em class="property">classmethod </em><code class="descname">parse_template</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Signature.parse_template" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Signature.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Signature.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.Signature.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.Signature.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.TypeAtom">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">TypeAtom</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeAtom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.RegexVexPart" title="houdinihelp.vex.RegexVexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.RegexVexPart</span></code></a></p>
+<p>Represents an atomic type or struct.</p>
+<dl class="method">
+<dt id="houdinihelp.vex.TypeAtom.basetype">
+<code class="descname">basetype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeAtom.basetype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.vex.TypeAtom.exp">
+<code class="descname">exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.vex.TypeAtom.exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeAtom.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeAtom.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeAtom.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeAtom.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeAtom.typecode">
+<code class="descname">typecode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeAtom.typecode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeAtom.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeAtom.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.TypeChoice">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">TypeChoice</code><span class="sig-paren">(</span><em>names</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeChoice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.RegexVexPart" title="houdinihelp.vex.RegexVexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.RegexVexPart</span></code></a></p>
+<p>Reresents a choice between two or more types, e.g. int|float. This is not
+actually part of VEX, but is used in the documentation to the docs clearer
+and more compact.</p>
+<dl class="attribute">
+<dt id="houdinihelp.vex.TypeChoice.atom_pattern">
+<code class="descname">atom_pattern</code><em class="property"> = '(int|float|vector|vector2|vector4|matrix2|matrix3|matrix4|matrix|string|bsdf|light|material|void)'</em><a class="headerlink" href="#houdinihelp.vex.TypeChoice.atom_pattern" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.vex.TypeChoice.exp">
+<code class="descname">exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.vex.TypeChoice.exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.TypeChoice.expected">
+<em class="property">classmethod </em><code class="descname">expected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeChoice.expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeChoice.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeChoice.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeChoice.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeChoice.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeChoice.typecode">
+<code class="descname">typecode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeChoice.typecode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.TypeChoice.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.TypeChoice.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.VariadicArgs">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">VariadicArgs</code><span class="sig-paren">(</span><em>pairs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VariadicArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+<p>Represents variadic arguments (…) in a function signature.</p>
+<dl class="method">
+<dt id="houdinihelp.vex.VariadicArgs.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VariadicArgs.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VariadicArgs.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VariadicArgs.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VariadicArgs.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VariadicArgs.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.VexChecker">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">VexChecker</code><span class="sig-paren">(</span><em>reporter=None</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.add_signature">
+<code class="descname">add_signature</code><span class="sig-paren">(</span><em>context</em>, <em>sig</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.add_signature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>vccpath</em>, <em>app</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.check_contexts">
+<code class="descname">check_contexts</code><span class="sig-paren">(</span><em>fnname</em>, <em>contexts</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.check_contexts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.check_statements">
+<code class="descname">check_statements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.check_statements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.compare_function_names">
+<code class="descname">compare_function_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.compare_function_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.context_set_to_string">
+<code class="descname">context_set_to_string</code><span class="sig-paren">(</span><em>contextset</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.context_set_to_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.match_all_signatures">
+<code class="descname">match_all_signatures</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.match_all_signatures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.match_globals">
+<code class="descname">match_globals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.match_globals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.match_signatures">
+<code class="descname">match_signatures</code><span class="sig-paren">(</span><em>fnname</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.match_signatures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.overdocumented">
+<code class="descname">overdocumented</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.overdocumented" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.parse_vcc_output">
+<code class="descname">parse_vcc_output</code><span class="sig-paren">(</span><em>vccpath</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.parse_vcc_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.parse_vex_docs">
+<code class="descname">parse_vex_docs</code><span class="sig-paren">(</span><em>app</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.parse_vex_docs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.string_to_context_set">
+<code class="descname">string_to_context_set</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.string_to_context_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexChecker.undocumented">
+<code class="descname">undocumented</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexChecker.undocumented" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.VexPart">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">VexPart</code><a class="headerlink" href="#houdinihelp.vex.VexPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for parsing bits of a VEX signature. The parsing methods are
+class methods that return a tree of instances representing the parsed
+signature.</p>
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.choice">
+<em class="property">classmethod </em><code class="descname">choice</code><span class="sig-paren">(</span><em>ctx</em>, <em>string</em>, <em>pos</em>, <em>choices</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.choice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.expect">
+<em class="property">classmethod </em><code class="descname">expect</code><span class="sig-paren">(</span><em>string</em>, <em>pos</em>, <em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.expect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.expect_regex">
+<em class="property">classmethod </em><code class="descname">expect_regex</code><span class="sig-paren">(</span><em>string</em>, <em>pos</em>, <em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.expect_regex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.expected">
+<em class="property">classmethod </em><code class="descname">expected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.expected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexPart.is_meta">
+<code class="descname">is_meta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.is_meta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexPart.matches">
+<code class="descname">matches</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.matches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if this “template” signature matches the given “target”
+signature.</p>
+<p>Note that this is NOT the same as being equal to other. Equality testing
+is exact, whereas this method tests whether other can match this
+object’s template pattern.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.optional">
+<em class="property">classmethod </em><code class="descname">optional</code><span class="sig-paren">(</span><em>ctx</em>, <em>string</em>, <em>pos</em>, <em>optcls</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.optional" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.optional_text">
+<em class="property">classmethod </em><code class="descname">optional_text</code><span class="sig-paren">(</span><em>string</em>, <em>pos</em>, <em>optstring</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.optional_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.parse">
+<em class="property">classmethod </em><code class="descname">parse</code><span class="sig-paren">(</span><em>string</em>, <em>pos=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the given string and returns a VexPart tree or raises NoMatch.
+Any keyword arguments are passed to the <cite>Context()</cite> constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexPart.string">
+<code class="descname">string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a plain string representation of the part.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.take">
+<em class="property">classmethod </em><code class="descname">take</code><span class="sig-paren">(</span><em>ctx</em>, <em>string</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.take" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.take_type">
+<em class="property">classmethod </em><code class="descname">take_type</code><span class="sig-paren">(</span><em>ctx</em>, <em>string</em>, <em>pos</em>, <em>allow_array=True</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.take_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexPart.typecode">
+<code class="descname">typecode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.typecode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houdinihelp.vex.VexPart.wiki">
+<code class="descname">wiki</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki text representation of the part.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="houdinihelp.vex.VexPart.ws">
+<em class="property">classmethod </em><code class="descname">ws</code><span class="sig-paren">(</span><em>string</em>, <em>pos</em>, <em>required=False</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.VexPart.ws" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="houdinihelp.vex.VexPart.ws_exp">
+<code class="descname">ws_exp</code><em class="property"> = &lt;_sre.SRE_Pattern object&gt;</em><a class="headerlink" href="#houdinihelp.vex.VexPart.ws_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houdinihelp.vex.VexType">
+<em class="property">class </em><code class="descclassname">houdinihelp.vex.</code><code class="descname">VexType</code><a class="headerlink" href="#houdinihelp.vex.VexType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#houdinihelp.vex.VexPart" title="houdinihelp.vex.VexPart"><code class="xref py py-class docutils literal notranslate"><span class="pre">houdinihelp.vex.VexPart</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.vex.parse_vex">
+<code class="descclassname">houdinihelp.vex.</code><code class="descname">parse_vex</code><span class="sig-paren">(</span><em>vexstring</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.parse_vex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the given signature string into a VexPart object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.vex.vex_to_wiki">
+<code class="descclassname">houdinihelp.vex.</code><code class="descname">vex_to_wiki</code><span class="sig-paren">(</span><em>vexstring</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.vex_to_wiki" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the given signature string and returns a wiki json representation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.vex.wikiconcat">
+<code class="descclassname">houdinihelp.vex.</code><code class="descname">wikiconcat</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.wikiconcat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenates pieces of wiki text and returns a new wiki text list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="houdinihelp.vex.wikispan">
+<code class="descclassname">houdinihelp.vex.</code><code class="descname">wikispan</code><span class="sig-paren">(</span><em>text</em>, <em>typename</em>, <em>role='vexmarkup'</em><span class="sig-paren">)</span><a class="headerlink" href="#houdinihelp.vex.wikispan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a wiki json span with the given type and role.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-houdinihelp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-houdinihelp" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">houdinihelp package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.api">houdinihelp.api module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.cli">houdinihelp.cli module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.examples">houdinihelp.examples module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.hcoloring">houdinihelp.hcoloring module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.hconfig">houdinihelp.hconfig module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.hotkeys">houdinihelp.hotkeys module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.hpages">houdinihelp.hpages module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.hsearch">houdinihelp.hsearch module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.hstores">houdinihelp.hstores module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.htextify">houdinihelp.htextify module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.server">houdinihelp.server module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp.vex">houdinihelp.vex module</a></li>
+<li><a class="reference internal" href="#module-houdinihelp">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="houdiniengineutils.html" title="previous chapter">houdiniengineutils module</a></li>
+      <li>Next: <a href="houdiniinternals.html" title="next chapter">houdiniinternals module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/houdinihelp.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/houdinihelp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

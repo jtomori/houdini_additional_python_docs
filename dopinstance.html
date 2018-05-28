@@ -1,0 +1,136 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dopinstance module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dopparticlefluidtoolutils module" href="dopparticlefluidtoolutils.html" />
+    <link rel="prev" title="dopgeofiltertoolutils module" href="dopgeofiltertoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-dopinstance">
+<span id="dopinstance-module"></span><h1>dopinstance module<a class="headerlink" href="#module-dopinstance" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="dopinstance.containersize">
+<code class="descclassname">dopinstance.</code><code class="descname">containersize</code><span class="sig-paren">(</span><em>hda=None</em>, <em>index=0</em>, <em>attrib='scale'</em><span class="sig-paren">)</span><a class="headerlink" href="#dopinstance.containersize" title="Permalink to this definition">¶</a></dt>
+<dd><p>If Instancing is enabled, fetch the point geometry of the object to instance containers on,
+Get the Current Point to Fetch Position and Size and apply these settings to the container
+Otherwise use Asset Defined values</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopinstance.defaults">
+<code class="descclassname">dopinstance.</code><code class="descname">defaults</code><span class="sig-paren">(</span><em>hda=None</em>, <em>attrib='scale'</em><span class="sig-paren">)</span><a class="headerlink" href="#dopinstance.defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves Fluid or Smoke object defaults, defined by the node
+Default is scale.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopinstance.objectactivation">
+<code class="descclassname">dopinstance.</code><code class="descname">objectactivation</code><span class="sig-paren">(</span><em>hda=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopinstance.objectactivation" title="Permalink to this definition">¶</a></dt>
+<dd><p>If Instancing is enabled and continuous, create object relative to available points that frame,
+If Instancing is enabled but not continuous, create objects for points available at creation frame
+Otherwise use Asset Defined values</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopinstance.objectcount">
+<code class="descclassname">dopinstance.</code><code class="descname">objectcount</code><span class="sig-paren">(</span><em>hda=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopinstance.objectcount" title="Permalink to this definition">¶</a></dt>
+<dd><p>If Instancing is enabled, number of objects = number of available points,
+Else objects = asset defined values</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopinstance.objectname">
+<code class="descclassname">dopinstance.</code><code class="descname">objectname</code><span class="sig-paren">(</span><em>hda=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopinstance.objectname" title="Permalink to this definition">¶</a></dt>
+<dd><p>If Instancing is enabled, set name using objectname + objid</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopinstance.pathcheck">
+<code class="descclassname">dopinstance.</code><code class="descname">pathcheck</code><span class="sig-paren">(</span><em>parm</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#dopinstance.pathcheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function evaluates a path bound to a parameter and returns the node if found
+Otherwise None</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dopgeofiltertoolutils.html" title="previous chapter">dopgeofiltertoolutils module</a></li>
+      <li>Next: <a href="dopparticlefluidtoolutils.html" title="next chapter">dopparticlefluidtoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dopinstance.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/dopinstance.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

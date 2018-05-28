@@ -1,0 +1,131 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>defaultstatetools module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="defaulttoolmenus module" href="defaulttoolmenus.html" />
+    <link rel="prev" title="dbg module" href="dbg.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-defaultstatetools">
+<span id="defaultstatetools-module"></span><h1>defaultstatetools module<a class="headerlink" href="#module-defaultstatetools" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="defaultstatetools.createDefaultStateTool">
+<code class="descclassname">defaultstatetools.</code><code class="descname">createDefaultStateTool</code><span class="sig-paren">(</span><em>shelffile</em>, <em>nodetypecategory</em>, <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#defaultstatetools.createDefaultStateTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a default shelf tool for a given state and saves it into
+a given file name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaultstatetools.createDefaultStateToolScript">
+<code class="descclassname">defaultstatetools.</code><code class="descname">createDefaultStateToolScript</code><span class="sig-paren">(</span><em>state</em>, <em>nodetypecategory</em><span class="sig-paren">)</span><a class="headerlink" href="#defaultstatetools.createDefaultStateToolScript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string representing a default python scrypt for a tool
+associated with a given state. Each tool has a python script that gets
+executed when the tool is invoked, and in this case the tool script
+will cause the appropriate viewer to enter the given state.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaultstatetools.createDefaultStateTools">
+<code class="descclassname">defaultstatetools.</code><code class="descname">createDefaultStateTools</code><span class="sig-paren">(</span><em>shelfdir</em><span class="sig-paren">)</span><a class="headerlink" href="#defaultstatetools.createDefaultStateTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates all the shelf tools that correspond to various viewer states.
+The viewer states are grouped according to the node type categories (ie,
+network types, such as OBJ, SOP, POP), and the state tools for all such
+categories are generated and saved in corresponding files within the
+given shelf dir.
+The shelf tools that get generated cause the viewers to enter various
+states, each of which correspons to one shelf tool. These tools can be
+invoked from the top level shelf or from the TAB menus.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="defaultstatetools.createDefaultStateToolsForCategory">
+<code class="descclassname">defaultstatetools.</code><code class="descname">createDefaultStateToolsForCategory</code><span class="sig-paren">(</span><em>shelfdir</em>, <em>nodetypecategory</em><span class="sig-paren">)</span><a class="headerlink" href="#defaultstatetools.createDefaultStateToolsForCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates default shelf tools for all the viewer states that exist
+within a given nodetypecategory (i.e., OBJ, SOP, etc.). All these
+tools are saved into a file that corresponds to the category name and
+that is saved in a given directory.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dbg.html" title="previous chapter">dbg module</a></li>
+      <li>Next: <a href="defaulttoolmenus.html" title="next chapter">defaulttoolmenus module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/defaultstatetools.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/defaultstatetools.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

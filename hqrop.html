@@ -1,0 +1,371 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>hqrop module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hqueue package" href="hqueue.html" />
+    <link rel="prev" title="houxmlrpc module" href="houxmlrpc.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-hqrop">
+<span id="hqrop-module"></span><h1>hqrop module<a class="headerlink" href="#module-hqrop" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="hqrop.buildContainingJobSpec">
+<code class="descclassname">hqrop.</code><code class="descname">buildContainingJobSpec</code><span class="sig-paren">(</span><em>job_name</em>, <em>hq_cmds</em>, <em>parms</em>, <em>child_job</em>, <em>apply_conditions_to_children=True</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.buildContainingJobSpec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a job spec that submits the child job and waits for it.</p>
+<p>The job containing the child job will not run any command.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.checkBaseParameters">
+<code class="descclassname">hqrop.</code><code class="descname">checkBaseParameters</code><span class="sig-paren">(</span><em>parms</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.checkBaseParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the values of the given parameters.</p>
+<p>Return True if all the parameter values are valid and False otherwise.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.checkForRecursiveChain">
+<code class="descclassname">hqrop.</code><code class="descname">checkForRecursiveChain</code><span class="sig-paren">(</span><em>hq_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.checkForRecursiveChain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if the HQueue node is an ancestor to its output driver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.checkOutputDriver">
+<code class="descclassname">hqrop.</code><code class="descname">checkOutputDriver</code><span class="sig-paren">(</span><em>output_driver_string</em>, <em>_visited_nodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.checkOutputDriver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqrop.checkPath">
+<code class="descclassname">hqrop.</code><code class="descname">checkPath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.checkPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name ofthe Houdini variable that the given path starts with,
+without the trailing /.</p>
+<p>Returns None if no valid output directory variable could be determined.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.copyProjectFilesToSharedFolder">
+<code class="descclassname">hqrop.</code><code class="descname">copyProjectFilesToSharedFolder</code><span class="sig-paren">(</span><em>hq_rop</em>, <em>parms</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.copyProjectFilesToSharedFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the render project’s files to the target location
+specified in <cite>parms</cite>.</p>
+<p>Return True if the copy is successful.  Return False otherwise.
+The user is first prompted by the file dependency dialog to
+choose the files to be copied to the shared folder.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.displayError">
+<code class="descclassname">hqrop.</code><code class="descname">displayError</code><span class="sig-paren">(</span><em>msg</em>, <em>exception=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.displayError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pop up a message dialog to display the given error message.</p>
+<p>If the ui is unavailable, then it writes the message to the console.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.displayMessage">
+<code class="descclassname">hqrop.</code><code class="descname">displayMessage</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.displayMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pop up a message dialog to display the given message.</p>
+<p>If the ui is unavailable, then it writes the message to the console.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.doesHQServerExists">
+<code class="descclassname">hqrop.</code><code class="descname">doesHQServerExists</code><span class="sig-paren">(</span><em>hq_server</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.doesHQServerExists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that the given HQ server can be connected to.</p>
+<p>Returns True if the server exists and False if it does not. Furthermore,
+it will display an error message if it does not exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.expandHQROOT">
+<code class="descclassname">hqrop.</code><code class="descname">expandHQROOT</code><span class="sig-paren">(</span><em>path</em>, <em>hq_server</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.expandHQROOT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the given file path with instances of $HQROOT expanded
+out to the mount point for the HQueue shared folder root.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getBaseParameters">
+<code class="descclassname">hqrop.</code><code class="descname">getBaseParameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getBaseParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionary of the base parameters used by all HQueue ROPs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getDirectoriesToCreate">
+<code class="descclassname">hqrop.</code><code class="descname">getDirectoriesToCreate</code><span class="sig-paren">(</span><em>hq_node</em>, <em>expand=True</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getDirectoriesToCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of directory paths that should be created on the farm.</p>
+<p>The result is based on the contents of the “Create Directories” parameter.
+If <cite>expand</cite> is True, then return a list of directories with all
+variables expanded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getEnvVariablesToSet">
+<code class="descclassname">hqrop.</code><code class="descname">getEnvVariablesToSet</code><span class="sig-paren">(</span><em>hq_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getEnvVariablesToSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a dictionary of environment variables to set on the client
+machine when processing a job.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getFileInfosFromFileReferences">
+<code class="descclassname">hqrop.</code><code class="descname">getFileInfosFromFileReferences</code><span class="sig-paren">(</span><em>file_references</em>, <em>hq_rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getFileInfosFromFileReferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a sequence of file_info dictionaries corresponding to the
+files matching the given file references.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getFrames">
+<code class="descclassname">hqrop.</code><code class="descname">getFrames</code><span class="sig-paren">(</span><em>hq_rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getFrames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a tuple of frame numbers that the given HQueue ROP node
+is configured to render.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getHFS">
+<code class="descclassname">hqrop.</code><code class="descname">getHFS</code><span class="sig-paren">(</span><em>parms</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getHFS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the hfs paths, prefixed with $HQROOT if possible.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getHQROOT">
+<code class="descclassname">hqrop.</code><code class="descname">getHQROOT</code><span class="sig-paren">(</span><em>hq_server</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getHQROOT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query the HQueue server and return the mount point path 
+to the HQueue shared folder root.</p>
+<p>Return None if the path cannot be retrieved from the server.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getHQueueCommands">
+<code class="descclassname">hqrop.</code><code class="descname">getHQueueCommands</code><span class="sig-paren">(</span><em>remote_hfs</em>, <em>num_cpus=0</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getHQueueCommands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dictionary of commands to start hython, Python, and mantra.</p>
+<p>Return None if an error occurs when reading the commands
+from the HQueueCommands file.</p>
+<p>If <cite>num_cpus</cite> is greater than 0, then we add a -j option
+to each command so that the application is run with a maximum
+number of threads.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getHQueueServerMachineFromURL">
+<code class="descclassname">hqrop.</code><code class="descname">getHQueueServerMachineFromURL</code><span class="sig-paren">(</span><em>hq_server_url</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getHQueueServerMachineFromURL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getHipFileAndHFS">
+<code class="descclassname">hqrop.</code><code class="descname">getHipFileAndHFS</code><span class="sig-paren">(</span><em>parms</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getHipFileAndHFS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the hip file and hfs paths, prefixed with $HQROOT if possible.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getJobCommands">
+<code class="descclassname">hqrop.</code><code class="descname">getJobCommands</code><span class="sig-paren">(</span><em>hq_cmds</em>, <em>cmd_key</em>, <em>script=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getJobCommands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return platform-specific job commands defined by <cite>cmd_key</cite> and <cite>script</cite>.</p>
+<p>Return a dictionary where the keys are the supported platforms
+(i.e. linux, windows, macosx) and the values are the shell commands to be 
+executed for the job.  <cite>cmd_key</cite> is a key into the <cite>hq_cmds</cite> dictionary and
+should be either “hythonComands”, “pythonCommands” or “mantraCommands”.</p>
+<p>The optional <cite>script</cite> argument indicates whether the job should
+execute a script file.  If <cite>script</cite> is None, then the job should run
+the commands from hq_cmds[cmd_key] as-is.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getOutputDirVariable">
+<code class="descclassname">hqrop.</code><code class="descname">getOutputDirVariable</code><span class="sig-paren">(</span><em>rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getOutputDirVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the name of the Houdini variable that expands to the 
+output directory of the given ROP node, without a trailing /.</p>
+<p>Return None if no valid output directory variable could be determined.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getOutputDriver">
+<code class="descclassname">hqrop.</code><code class="descname">getOutputDriver</code><span class="sig-paren">(</span><em>rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getOutputDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node which does the rendering/simulation work.</p>
+<p>For eg, if a hq_sim ROP points to a wedge ROP which points to a
+Geometry ROP, then this function will return the Geometry ROP.</p>
+<p>This function skips over all “pointer” ROPs.</p>
+<p>Return None if the Output Driver parameter is empty or points to
+a node path that does not exist.  Also return None <cite>hq_rop_node</cite> is None
+or if the Output Driver parameter does not exist.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getOutputDriverString">
+<code class="descclassname">hqrop.</code><code class="descname">getOutputDriverString</code><span class="sig-paren">(</span><em>rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getOutputDriverString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the node set in the Output Driver parameter of ‘rop node’.</p>
+<p>Returns None if the there is no Output Driver parameter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getOutputParm">
+<code class="descclassname">hqrop.</code><code class="descname">getOutputParm</code><span class="sig-paren">(</span><em>rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getOutputParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the output file parameter from the given ROP node.</p>
+<p>Return None if <cite>rop_node</cite> is None or if it is not a recognized
+output driver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getOutputParmPattern">
+<code class="descclassname">hqrop.</code><code class="descname">getOutputParmPattern</code><span class="sig-paren">(</span><em>rop_node</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getOutputParmPattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the file pattern in the ROP node’s output parameter.</p>
+<p>Return None if no output parameter could be found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getSelectedFileReferences">
+<code class="descclassname">hqrop.</code><code class="descname">getSelectedFileReferences</code><span class="sig-paren">(</span><em>output_dir_variable</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getSelectedFileReferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the required file references when
+the file dependency dialog is to be skipped.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.getUnexpandedStringParmVal">
+<code class="descclassname">hqrop.</code><code class="descname">getUnexpandedStringParmVal</code><span class="sig-paren">(</span><em>parm</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.getUnexpandedStringParmVal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value for the given string parameter without 
+expanding any variables.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.selectClientGroups">
+<code class="descclassname">hqrop.</code><code class="descname">selectClientGroups</code><span class="sig-paren">(</span><em>hq_server</em>, <em>client_groups_parm</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.selectClientGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select client groups on the HQueue server from a list.</p>
+<p>A modal dialog pops-up displaying a list of all the client groups
+on the HQueue farm.  The user selects the groups from the list
+and clicks on OK to populate the <cite>client_groups_parm</cite> parameter with the
+selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.selectClients">
+<code class="descclassname">hqrop.</code><code class="descname">selectClients</code><span class="sig-paren">(</span><em>hq_server</em>, <em>clients_parm</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.selectClients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select clients registered on the HQueue server from a list.</p>
+<p>A modal dialog pops-up displaying a list of all the client machines 
+on the HQueue farm.  The user selects the machines from the list
+and clicks on OK to populate the <cite>clients_parm</cite> parameter with the
+selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.sendJob">
+<code class="descclassname">hqrop.</code><code class="descname">sendJob</code><span class="sig-paren">(</span><em>hq_server</em>, <em>main_job</em>, <em>open_browser</em>, <em>report_submitted_job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.sendJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send the given job to the HQ server.</p>
+<p>If the ui is available, either display the HQ web interface or display the
+id of the submitted job depending on the value of <cite>open_browser</cite> and 
+‘report_submitted_job_id’.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.submitJob">
+<code class="descclassname">hqrop.</code><code class="descname">submitJob</code><span class="sig-paren">(</span><em>parms</em>, <em>submit_function</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.submitJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submits a job with the given parameters and function after checking to
+see if the project files need to be copied or not.</p>
+<p>submit_function will be passed parms</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.substituteNonHQVariables">
+<code class="descclassname">hqrop.</code><code class="descname">substituteNonHQVariables</code><span class="sig-paren">(</span><em>file_path</em>, <em>expand_frame_variables=True</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.substituteNonHQVariables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the file path with all the variables that are not HQ specfic
+expanded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.substituteWithHQROOT">
+<code class="descclassname">hqrop.</code><code class="descname">substituteWithHQROOT</code><span class="sig-paren">(</span><em>hq_server</em>, <em>file_path</em>, <em>expand_frame_variables=True</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.substituteWithHQROOT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace the beginning of the given path with “$HQROOT”.</p>
+<p>Return the new path.  If the original path is not under HQueue’s shared
+network file system, return the original path.  Return None if an error
+occurs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqrop.warnOrAutoSaveHipFile">
+<code class="descclassname">hqrop.</code><code class="descname">warnOrAutoSaveHipFile</code><span class="sig-paren">(</span><em>parms</em><span class="sig-paren">)</span><a class="headerlink" href="#hqrop.warnOrAutoSaveHipFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically save the current .hip file or display a warning
+to the user about unsaved changes.</p>
+<p>This function is meant to be called before an HQueue job submission
+as a way of informing the user about unsaved changes that may not
+trickle down to the HQueue farm.</p>
+<p>Return True if the job submission should continue on.
+Return False if the user chose to cancel the job submission.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="houxmlrpc.html" title="previous chapter">houxmlrpc module</a></li>
+      <li>Next: <a href="hqueue.html" title="next chapter">hqueue package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/hqrop.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/hqrop.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,330 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>hqueue package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hrpyc module" href="hrpyc.html" />
+    <link rel="prev" title="hqrop module" href="hqrop.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hqueue-package">
+<h1>hqueue package<a class="headerlink" href="#hqueue-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-hqueue.houdini">
+<span id="hqueue-houdini-module"></span><h2>hqueue.houdini module<a class="headerlink" href="#module-hqueue.houdini" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="hqueue.houdini.enableProgressReporting">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">enableProgressReporting</code><span class="sig-paren">(</span><em>rop</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.enableProgressReporting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable progress reporting on the given ROP node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.getNode">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">getNode</code><span class="sig-paren">(</span><em>node_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.getNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the node matching the specified node path.</p>
+<p>Raise an exception if no such node exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.getRopNodeAndTileCallbackParm">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">getRopNodeAndTileCallbackParm</code><span class="sig-paren">(</span><em>rop_path</em>, <em>enable_checkpoints</em>, <em>get_tile_callback=True</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.getRopNodeAndTileCallbackParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the requested ROP node.</p>
+<p>Also return the ROP node’s tile callback parameter if it has
+a tile callback parameter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.hqScriptsDirPath">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">hqScriptsDirPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.hqScriptsDirPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the unexpanded directory containing the HQueue scripts.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.loadHipFile">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">loadHipFile</code><span class="sig-paren">(</span><em>hip_file</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.loadHipFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the specified .hip file.</p>
+<p>Raise an exception if the file could not be found or loaded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.render">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">render</code><span class="sig-paren">(</span><em>node</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render the specified node.</p>
+<p>Raise an exception if the node could not be rendered.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.setParmValue">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">setParmValue</code><span class="sig-paren">(</span><em>parm</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.setParmValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a parm with the given value.</p>
+<p>Will handle parmTuples and cases where the parm has an expression set.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.setParmValueInRopNodeAndInputs">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">setParmValueInRopNodeAndInputs</code><span class="sig-paren">(</span><em>rop</em>, <em>parm_name</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.setParmValueInRopNodeAndInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value for the given parameter in the specified ROP node
+and recursively in each of its ROP input nodes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.houdini.setTileCallbackParmValue">
+<code class="descclassname">hqueue.houdini.</code><code class="descname">setTileCallbackParmValue</code><span class="sig-paren">(</span><em>parm</em>, <em>frame_index</em>, <em>frame_number</em>, <em>num_frames</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.houdini.setTileCallbackParmValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified tile callback parameter
+using the given arguments.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hqueue.rendertrackerrpc">
+<span id="hqueue-rendertrackerrpc-module"></span><h2>hqueue.rendertrackerrpc module<a class="headerlink" href="#module-hqueue.rendertrackerrpc" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.endedGeneratingFrameIFD">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">endedGeneratingFrameIFD</code><span class="sig-paren">(</span><em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.endedGeneratingFrameIFD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.getProjectName">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">getProjectName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.getProjectName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.init">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">init</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the global RPC connection to the HQueue render tracker.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.setCurrentFrameError">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">setCurrentFrameError</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.setCurrentFrameError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.setFrameRenderFraction">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">setFrameRenderFraction</code><span class="sig-paren">(</span><em>frame</em>, <em>fraction</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.setFrameRenderFraction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.setProjectError">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">setProjectError</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.setProjectError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.startedFrameRender">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">startedFrameRender</code><span class="sig-paren">(</span><em>frame</em>, <em>job_id</em>, <em>image_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.startedFrameRender" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.startedGeneratingFrameIFD">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">startedGeneratingFrameIFD</code><span class="sig-paren">(</span><em>frame</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.startedGeneratingFrameIFD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hqueue.rendertrackerrpc.startedRenderProject">
+<code class="descclassname">hqueue.rendertrackerrpc.</code><code class="descname">startedRenderProject</code><span class="sig-paren">(</span><em>frames</em>, <em>generate_ifds</em>, <em>job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.rendertrackerrpc.startedRenderProject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hqueue.server">
+<span id="hqueue-server-module"></span><h2>hqueue.server module<a class="headerlink" href="#module-hqueue.server" title="Permalink to this headline">¶</a></h2>
+<p>This module contains functionality that requires connecting to the
+HQueue server.</p>
+<dl class="function">
+<dt id="hqueue.server.connection">
+<code class="descclassname">hqueue.server.</code><code class="descname">connection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.server.connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a proxy connection to the HQueue server.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.server.getJobCPUAndTagInfo">
+<code class="descclassname">hqueue.server.</code><code class="descname">getJobCPUAndTagInfo</code><span class="sig-paren">(</span><em>job_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.server.getJobCPUAndTagInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the CPU and tag info for the specified job.</p>
+<p>If <cite>job_id</cite> is None then return info on the current job running
+this process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.server.getJobInfo">
+<code class="descclassname">hqueue.server.</code><code class="descname">getJobInfo</code><span class="sig-paren">(</span><em>job_id</em>, <em>attribs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.server.getJobInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return information on the requested attributes for the specified job.</p>
+<p>Attribute information is returned as a dictionary.</p>
+<p><cite>attribs</cite> can be a list of attribute names.
+If <cite>attribs</cite> is None then all attribute information is returned.</p>
+<p>If <cite>job_id</cite> is None then information on the current job running
+this process is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.server.getParentJobID">
+<code class="descclassname">hqueue.server.</code><code class="descname">getParentJobID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.server.getParentJobID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return current job’s parent job id.</p>
+<p>The current job is the one running this process.
+If the current job has multiple parents then return the first parent.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.server.submitJobs">
+<code class="descclassname">hqueue.server.</code><code class="descname">submitJobs</code><span class="sig-paren">(</span><em>job_specs</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.server.submitJobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit jobs to the HQueue server.</p>
+<p>Return a sequence of job ids for the new job(s) or None if the submission
+failed.</p>
+<p><cite>job_specs</cite> can either be a dictionary representing a single job
+specification or a tuple/list of dictionary objects representing
+multiple job specifications.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hqueue.utils">
+<span id="hqueue-utils-module"></span><h2>hqueue.utils module<a class="headerlink" href="#module-hqueue.utils" title="Permalink to this headline">¶</a></h2>
+<p>This module contains miscellaneous utility functions pertaining to HQueue.</p>
+<dl class="function">
+<dt id="hqueue.utils.failWithError">
+<code class="descclassname">hqueue.utils.</code><code class="descname">failWithError</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.utils.failWithError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the specified message to stderr and then exit the process
+with a non-zero error code.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.utils.getJobArgs">
+<code class="descclassname">hqueue.utils.</code><code class="descname">getJobArgs</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.utils.getJobArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scans the job environment for the given list of arguments
+and returns a dictionary mapping argument names to their values.</p>
+<p>If an argument does not exist in the environment then an error
+is raised and the job fails.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.utils.logInfo">
+<code class="descclassname">hqueue.utils.</code><code class="descname">logInfo</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.utils.logInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log the specified message.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.utils.logWarning">
+<code class="descclassname">hqueue.utils.</code><code class="descname">logWarning</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.utils.logWarning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log the specified warning message.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.utils.replaceWithHQROOT">
+<code class="descclassname">hqueue.utils.</code><code class="descname">replaceWithHQROOT</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.utils.replaceWithHQROOT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace the beginning of the given path with $HQROOT.</p>
+<p>If the path is not under HQ’s shared network file system return the
+original path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.utils.setPreservedEnvVar">
+<code class="descclassname">hqueue.utils.</code><code class="descname">setPreservedEnvVar</code><span class="sig-paren">(</span><em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.utils.setPreservedEnvVar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an environment variable that will be preserved in child jobs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hqueue.utils.updateJobEnvWithPreservedVars">
+<code class="descclassname">hqueue.utils.</code><code class="descname">updateJobEnvWithPreservedVars</code><span class="sig-paren">(</span><em>job_spec</em><span class="sig-paren">)</span><a class="headerlink" href="#hqueue.utils.updateJobEnvWithPreservedVars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a job spec to set environment variables that are to be preserved.</p>
+<p>The variables to preserve are in the HQ_PRESERVE_ENV_VARS environment
+variable in a comma-separated list, and HQ_PRESERVE_ENV_VARS is not
+explicitly in this list.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hqueue">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hqueue" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">hqueue package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-hqueue.houdini">hqueue.houdini module</a></li>
+<li><a class="reference internal" href="#module-hqueue.rendertrackerrpc">hqueue.rendertrackerrpc module</a></li>
+<li><a class="reference internal" href="#module-hqueue.server">hqueue.server module</a></li>
+<li><a class="reference internal" href="#module-hqueue.utils">hqueue.utils module</a></li>
+<li><a class="reference internal" href="#module-hqueue">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="hqrop.html" title="previous chapter">hqrop module</a></li>
+      <li>Next: <a href="hrpyc.html" title="next chapter">hrpyc module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/hqueue.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/hqueue.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

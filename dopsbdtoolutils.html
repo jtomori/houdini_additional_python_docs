@@ -1,0 +1,221 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dopsbdtoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dopsmoketoolutils module" href="dopsmoketoolutils.html" />
+    <link rel="prev" title="dopreltoolutils module" href="dopreltoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-dopsbdtoolutils">
+<span id="dopsbdtoolutils-module"></span><h1>dopsbdtoolutils module<a class="headerlink" href="#module-dopsbdtoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="dopsbdtoolutils.attachConstraint">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">attachConstraint</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.attachConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects existing SBD constraints and changes their goal.  The “mode”
+parameter describes the new type of goal.  Mode can be one of:
+“animation”, “point”, “worldspace”, or “rbd”.  If the mode is “point”
+or “rbd” a goal object is also selected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.createConstraint">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">createConstraint</code><span class="sig-paren">(</span><em>container</em>, <em>nodetypename</em>, <em>nodename</em>, <em>group</em>, <em>ptgroup</em>, <em>useanimationdefault</em>, <em>exact_node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.createConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends an SBD Constraint to the displayed DOP node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.createSBDAttachmentConstraints">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">createSBDAttachmentConstraints</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetype</em>, <em>objecttypename</em>, <em>goalseltype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.createSBDAttachmentConstraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create spring/pin constraints between a set of points and the nearest
+points on a selected dynamics object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.createSBDConstraint">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">createSBDConstraint</code><span class="sig-paren">(</span><em>container</em>, <em>nodetype</em>, <em>nodename</em>, <em>group</em>, <em>ptgroup</em>, <em>useanimationdefault</em>, <em>exact_node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.createSBDConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends an SBD Constraint to the displayed DOP node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.deleteConstraint">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">deleteConstraint</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.deleteConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects existing SBD constraints and deletes them.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.farmSimulation">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">farmSimulation</code><span class="sig-paren">(</span><em>sbdobjects</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.farmSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets up the SBD object to be run on a farm. Creates a new
+place holder to import the object, save it to disk, and then
+reload it.  Creates HQueue node setup pointing to this
+resulting node.  Since we don’t have multi-machine
+distribution, no controls node is necessary.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.generateConstraintSelection">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">generateConstraintSelection</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.generateConstraintSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects existing SBD constraints and validates selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.generateSBDAttachmentGoalPTGroup">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">generateSBDAttachmentGoalPTGroup</code><span class="sig-paren">(</span><em>goalSelectionData</em>, <em>constrainedDopObject</em>, <em>constrainedGroup</em>, <em>constrainedPTgroup</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.generateSBDAttachmentGoalPTGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a closest-point point group based on a given dynamics 
+object selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.generateSBDAttachmentGoalSelection">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">generateSBDAttachmentGoalSelection</code><span class="sig-paren">(</span><em>activepane</em>, <em>prompt</em>, <em>seltype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.generateSBDAttachmentGoalSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a selection specific to SBD Attachment Constraints.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.generateSelectionString">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">generateSelectionString</code><span class="sig-paren">(</span><em>selection</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.generateSelectionString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a selection string from a selection. 
+If everything is selected (e.g., all points, all primitives), then
+the “*” string is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.genericConstraintTool">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">genericConstraintTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.genericConstraintTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is similar to the standard DOP filter tool, but is for
+DOP constraints, which allow selecting a set of points from an object.
+Unlike the genericRelationship function, only one selection is
+requested of the user.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.getParm">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">getParm</code><span class="sig-paren">(</span><em>node</em>, <em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.getParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safely get a parameter, checking if it exists first.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.groupCentroid">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">groupCentroid</code><span class="sig-paren">(</span><em>dopnet</em>, <em>objname</em>, <em>ptgroup</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.groupCentroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the centroid of a group of points.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.modifierGroupCentroid">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">modifierGroupCentroid</code><span class="sig-paren">(</span><em>modifier</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.modifierGroupCentroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the centroid of the point selection of a particular node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.performTwoStepDynamicsPointSelection">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">performTwoStepDynamicsPointSelection</code><span class="sig-paren">(</span><em>activepane</em>, <em>alsoselconstraints</em>, <em>use_existing_selection</em>, <em>objprompt</em>, <em>specprompt</em>, <em>specseltype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.performTwoStepDynamicsPointSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.selectedPointNumbers">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">selectedPointNumbers</code><span class="sig-paren">(</span><em>geopath</em>, <em>pattern</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.selectedPointNumbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns a point selection string into an array of point numbers. 
+The * pattern represents all points here.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.selectionPrompt">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">selectionPrompt</code><span class="sig-paren">(</span><em>element_type</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.selectionPrompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a selection prompt string for functions in this module.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.setParm">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">setParm</code><span class="sig-paren">(</span><em>node</em>, <em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.setParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safely set a parameter, checking if it exists first.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsbdtoolutils.setParmTuple">
+<code class="descclassname">dopsbdtoolutils.</code><code class="descname">setParmTuple</code><span class="sig-paren">(</span><em>node</em>, <em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsbdtoolutils.setParmTuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safely set a parameter tuple, checking if it exists first.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dopreltoolutils.html" title="previous chapter">dopreltoolutils module</a></li>
+      <li>Next: <a href="dopsmoketoolutils.html" title="next chapter">dopsmoketoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dopsbdtoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/dopsbdtoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

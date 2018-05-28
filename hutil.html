@@ -1,0 +1,1944 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>hutil package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="images2gif module" href="images2gif.html" />
+    <link rel="prev" title="hscp module" href="hscp.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hutil-package">
+<h1>hutil package<a class="headerlink" href="#hutil-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-hutil.Qt">
+<span id="hutil-qt-module"></span><h2>hutil.Qt module<a class="headerlink" href="#module-hutil.Qt" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-hutil.api">
+<span id="hutil-api-module"></span><h2>hutil.api module<a class="headerlink" href="#module-hutil.api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="hutil.api.API">
+<em class="property">class </em><code class="descclassname">hutil.api.</code><code class="descname">API</code><a class="headerlink" href="#hutil.api.API" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Methods of this class define the API that is invoked by URLs using
+the custom URL scheme.</p>
+<dl class="exception">
+<dt id="hutil.api.API.Error">
+<em class="property">exception </em><code class="descname">Error</code><a class="headerlink" href="#hutil.api.API.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hutil.api.API.api_functions">
+<code class="descname">api_functions</code><em class="property"> = {}</em><a class="headerlink" href="#hutil.api.API.api_functions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.api.API.find_api_function">
+<code class="descname">find_api_function</code><span class="sig-paren">(</span><em>function_name</em>, <em>desired_api_version</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.api.API.find_api_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look up an API function with the given name, returning None if no
+such function exists.  If a function with the matching API version is
+found it is returned.  Otherwise, the function with the next lowest API
+version is returned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.api.API.find_api_function_and_validate_args">
+<code class="descname">find_api_function_and_validate_args</code><span class="sig-paren">(</span><em>function_name</em>, <em>kwargs</em>, <em>api_version</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.api.API.find_api_function_and_validate_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure the given API function name is valid, and make sure exactly
+the right keyword arguments are being passed to it.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="hutil.api.API.register_api_function">
+<em class="property">classmethod </em><code class="descname">register_api_function</code><span class="sig-paren">(</span><em>api_version</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.api.API.register_api_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a decorator that marks a method as being part of a particular
+version of the API.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.api.APICallFailed">
+<em class="property">exception </em><code class="descclassname">hutil.api.</code><code class="descname">APICallFailed</code><a class="headerlink" href="#hutil.api.APICallFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.api.APIUnavailable">
+<em class="property">exception </em><code class="descclassname">hutil.api.</code><code class="descname">APIUnavailable</code><a class="headerlink" href="#hutil.api.APIUnavailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.api.ClientAPIConnection">
+<em class="property">class </em><code class="descclassname">hutil.api.</code><code class="descname">ClientAPIConnection</code><span class="sig-paren">(</span><em>server_url</em>, <em>session_data</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.api.ClientAPIConnection" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="class">
+<dt id="hutil.api.ClientAPIConnection.FileArg">
+<em class="property">class </em><code class="descname">FileArg</code><span class="sig-paren">(</span><em>contents</em>, <em>file_name</em>, <em>content_type='application/octet-stream'</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.api.ClientAPIConnection.FileArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provides a way for the user to encode a file when passed
+as a value into encode_multipart_form_data.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.api.ClientSessionData">
+<em class="property">class </em><code class="descclassname">hutil.api.</code><code class="descname">ClientSessionData</code><span class="sig-paren">(</span><em>session_key</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.api.ClientSessionData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.cppinline">
+<span id="hutil-cppinline-module"></span><h2>hutil.cppinline module<a class="headerlink" href="#module-hutil.cppinline" title="Permalink to this headline">¶</a></h2>
+<p>This module lets you write functions in C++ that are accessible from Python.
+When necessary, your C++ code is automatically compiled into a library and
+the library is loaded, but the code won’t be compiled when the library already
+exists, and the library won’t be reloaded when it’s already loaded.</p>
+<dl class="docutils">
+<dt>NOTE: The Python ctypes module does not support 64-bit Windows in Python 2.5,</dt>
+<dd>so this module requires Python 2.6 on 64-bit Windows.</dd>
+<dt>Consider this example:</dt>
+<dd><dl class="first docutils">
+<dt>myrandomlib = hutil.cppinline.create_library(</dt>
+<dd>name=”myrandomlib”,
+includes=”#include &lt;stdlib.h&gt;”,
+function_sources=[</dd>
+</dl>
+<p>“””
+int myrandom(int num_possible_results)
+{</p>
+<blockquote>
+<div>return random() % num_possible_results;</div></blockquote>
+<p>}
+“”“])</p>
+<p># Print ten random numbers, each between 0 and 9 inclusive.
+for i in range(10):</p>
+<blockquote class="last">
+<div>print myrandomlib.myrandom(10)</div></blockquote>
+</dd>
+</dl>
+<p>The call to hutil.cppinline.create_library receives your C++ source code and
+returns a module-like object (assigned to the variable myrandomlib).  You can
+then call myrandomlib.rand to invoke the corresponding C++ function.  If you
+forget which parameters to pass to rand, you can get the C++ signature with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">myrandomlib</span><span class="o">.</span><span class="n">myrandom</span><span class="o">.</span><span class="n">signature</span><span class="p">()</span>
+<span class="go">&#39;int rand(int num_posible_results)&#39;</span>
+</pre></div>
+</div>
+<p>Note that subsequent calls to create_lib with the exact same parameters will
+not recompile your module, and will not reload it if it’s been loaded in the
+current session.</p>
+<p>If your code contains a compiler error, this module raises a CompilerError
+exception.  You can compile your code with debugging enabled by passing
+debug=True to create_library.</p>
+<p>If you want to check for compiler warnings, call the _compiler_output method
+of the module-like object.  Note that if the library was already compiled when
+it was loaded, calling _compiler_output will force it to be recompiled.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">myrandomlib</span><span class="o">.</span><span class="n">_compiler_output</span><span class="p">()</span>
+<span class="go">Making /home/user/houdiniX.Y/inlinecpp/example_string_library_Linux_x86_64_j5c9Dz</span>
+<span class="go">T525OU0VdJ5uL0kw.o and /home/user/houdiniX.Y/inlinecpp/example_string_library_Lin</span>
+<span class="go">ux_x86_64_j5c9DzT525OU0VdJ5uL0kw.so from /home/user/houdiniX.Y/inlinecpp/example_</span>
+<span class="go">string_library_Linux_x86_64_j5c9DzT525OU0VdJ5uL0kw.C</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Your C++ functions may have the following parameter types:</dt>
+<dd>int
+float               (pass a Python float)
+double              (pass a Python float)
+const char *        (pass a Python str object)
+bool                (Python 2.6 and up only)
+any other kind of * (pass a valid address e.g. from a numpy or array object)</dd>
+<dt>Your C++ functions may have one of the following return values:</dt>
+<dd>void
+int
+float
+double
+const char *       (a null-terminated string that will not be freed)
+char *             (a null-terminated string that will be freed with free())
+bool               (Python 2.6 and up only)
+a custom structure type</dd>
+</dl>
+<p>The shared library file (.so on Linux, .dll on Windows, and .dylib on Mac) is
+put in your $HOME/.cppinline directory (unless you provide a separate compiler
+hook).  It is named</p>
+<blockquote>
+<div>&lt;name&gt;_&lt;platform&gt;_&lt;processor&gt;_&lt;version_info&gt;_&lt;checksum&gt;.{so|dll|dylib}</div></blockquote>
+<p>where the name is the name you pass to create_library and the checksum is based
+on the C++ source code.  When you change the source code, the shared library
+name will be different, and this module recompiles the new library and
+automatically deletes any old libraries.  As long as the C++ source code
+doesn’t change (for example, if it’s embedded inside a digital asset), you can
+be sure the checksum won’t change and you can distribute the library within
+your facility as you would with any other HDK library.</p>
+<dl class="exception">
+<dt id="hutil.cppinline.CompilerError">
+<em class="property">exception </em><code class="descclassname">hutil.cppinline.</code><code class="descname">CompilerError</code><a class="headerlink" href="#hutil.cppinline.CompilerError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.cppinline.CompilerHook">
+<em class="property">class </em><code class="descclassname">hutil.cppinline.</code><code class="descname">CompilerHook</code><a class="headerlink" href="#hutil.cppinline.CompilerHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is the base class for compiler hooks that let you use
+specific compilers to compile and link C++ code.</p>
+<dl class="method">
+<dt id="hutil.cppinline.CompilerHook.clean_up_after_compiling">
+<code class="descname">clean_up_after_compiling</code><span class="sig-paren">(</span><em>cpp_file_path</em>, <em>output_shared_library_path</em>, <em>debug</em>, <em>include_dirs</em>, <em>link_dirs</em>, <em>link_libs</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.CompilerHook.clean_up_after_compiling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove any temporary files that were created during the compilation
+process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.cppinline.CompilerHook.default_shared_library_directory">
+<code class="descname">default_shared_library_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.CompilerHook.default_shared_library_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a full path to the directory where shared libraries will
+be placed when initially compiled.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.cppinline.CompilerHook.find_shared_library">
+<code class="descname">find_shared_library</code><span class="sig-paren">(</span><em>shared_library_file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.CompilerHook.find_shared_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for a shared library with the given name, returning its
+full path or None if it couldn’t be found.  This method lets you
+search for the library in more than the default directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.cppinline.CompilerHook.get_compile_command">
+<code class="descname">get_compile_command</code><span class="sig-paren">(</span><em>cpp_file_path</em>, <em>output_shared_library_path</em>, <em>debug</em>, <em>include_dirs</em>, <em>link_dirs</em>, <em>link_libs</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.CompilerHook.get_compile_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string containing the command to compile, and optionally
+also link, the given C++ file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.cppinline.CompilerHook.get_link_command">
+<code class="descname">get_link_command</code><span class="sig-paren">(</span><em>cpp_file_path</em>, <em>output_shared_library_path</em>, <em>debug</em>, <em>include_dirs</em>, <em>link_dirs</em>, <em>link_libs</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.CompilerHook.get_link_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string to link the given C++ library, or None if the
+compile command also performed the linking.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.cppinline.Config">
+<em class="property">class </em><code class="descclassname">hutil.cppinline.</code><code class="descname">Config</code><a class="headerlink" href="#hutil.cppinline.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create an instance of this class and pass it to create_library via the
+config parameter to customize how cppinline works.</p>
+<p>In addition to calling the methods of this class, you can change the
+following attributes:</p>
+<dl class="docutils">
+<dt>compiler_hook</dt>
+<dd>An instance of a CompilerHook subclass that controls which compiler
+is used to compile and link C++ code.</dd>
+<dt>cpp_source_boilerplate_prefix</dt>
+<dd>Set this to a string that is inserted at the beginning of the C++
+code that gets compiled.</dd>
+<dt>cpp_source_filtering_function</dt>
+<dd>Set this to a callable object that modifies the source code for each
+C++ function being wrapped by cppinline.  The callable object should
+receive the original source code and return the modified code.  You
+can set this attribute to None to indicate that no filtering should
+occur.</dd>
+<dt>error_trapping_function</dt>
+<dd>Set this to a callable object that is used to invoke the C++ ctypes
+function.  You can use this function to detect and trap faults/
+signals generated by the C++ code.  The callable object receives
+as a parameter a function taking no parameters, and it should return
+the result of that function.  You can set this attribute to None to
+indicate that no error trapping should occur.</dd>
+<dt>known_typedefs_dict</dt>
+<dd>Set this to a dictionary mapping typedef names to C++ type names
+for type names you pass to register_type_conversion that are actually
+typedef’d types.</dd>
+<dt>version_info_string</dt>
+<dd>Set this to a string that is appended to the shared library name.
+By using different version strings, you can prevent cppinline from
+loading libraries that may have already been compiled and linked.</dd>
+</dl>
+<dl class="method">
+<dt id="hutil.cppinline.Config.register_handle_type">
+<code class="descname">register_handle_type</code><span class="sig-paren">(</span><em>cpp_type_name</em>, <em>handle_class</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.Config.register_handle_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.cppinline.Config.register_type_conversion">
+<code class="descname">register_type_conversion</code><span class="sig-paren">(</span><em>py_class</em>, <em>cpp_type_name</em>, <em>conversion_function</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.Config.register_type_conversion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.cppinline.ConverterHandle">
+<em class="property">class </em><code class="descclassname">hutil.cppinline.</code><code class="descname">ConverterHandle</code><span class="sig-paren">(</span><em>py_object</em>, <em>py_class</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.ConverterHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Users of this module can create subclasses of this class and register
+them using Config.register_handle_type.  These classes are used when
+converting from Python objects to C++ objects, where the C++ object’s
+lifetime can only be ensured when holding a handle to it.</p>
+<p>Subclasses must implement as_pointer() and destroy() methods.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.cppinline.GPlusPlusCompilerHook">
+<em class="property">class </em><code class="descclassname">hutil.cppinline.</code><code class="descname">GPlusPlusCompilerHook</code><a class="headerlink" href="#hutil.cppinline.GPlusPlusCompilerHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.cppinline.CompilerHook" title="hutil.cppinline.CompilerHook"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.cppinline.CompilerHook</span></code></a></p>
+<p>This default compiler hook uses g++ to compile and link a library.</p>
+<dl class="method">
+<dt id="hutil.cppinline.GPlusPlusCompilerHook.get_compile_command">
+<code class="descname">get_compile_command</code><span class="sig-paren">(</span><em>cpp_file_path</em>, <em>output_shared_library_path</em>, <em>debug</em>, <em>include_dirs</em>, <em>link_dirs</em>, <em>link_libs</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.GPlusPlusCompilerHook.get_compile_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string containing the command to compile, and optionally
+also link, the given C++ file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.cppinline.GPlusPlusCompilerHook.get_link_command">
+<code class="descname">get_link_command</code><span class="sig-paren">(</span><em>cpp_file_path</em>, <em>output_shared_library_path</em>, <em>debug</em>, <em>include_dirs</em>, <em>link_dirs</em>, <em>link_libs</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.GPlusPlusCompilerHook.get_link_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string to link the given C++ library, or None if the
+compile command also performed the linking.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.cppinline.UnconvertedCharP">
+<em class="property">class </em><code class="descclassname">hutil.cppinline.</code><code class="descname">UnconvertedCharP</code><a class="headerlink" href="#hutil.cppinline.UnconvertedCharP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ctypes.c_char_p</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.cppinline.create_library">
+<code class="descclassname">hutil.cppinline.</code><code class="descname">create_library</code><span class="sig-paren">(</span><em>name</em>, <em>includes=''</em>, <em>function_sources=()</em>, <em>debug=False</em>, <em>catch_crashes=None</em>, <em>acquire_hom_lock=False</em>, <em>structs=()</em>, <em>include_dirs=()</em>, <em>link_dirs=()</em>, <em>link_libs=()</em>, <em>config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.cppinline.create_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a library of C++ functions from C++ source, returning it if
+it’s already loaded, compiling it only if it hasn’t already been compiled.</p>
+<dl class="docutils">
+<dt>name:</dt>
+<dd>A unique name used to build the shared object file’s name.</dd>
+<dt>includes:</dt>
+<dd>A string containing #include lines to go before your functions.  You
+can also put helper functions in this string that can be called from
+your functions but are not exposed to Python.</dd>
+<dt>function_sources:</dt>
+<dd>A sequence of strings, with each string containing the source code
+to one of your functions.  The string must begin with the signature
+for your function so it can be parsed out.</dd>
+<dt>debug:</dt>
+<dd>If True, the code will be compiled with debug information.  If True
+and you do not specify a value for catch_crashes, Houdini will also
+attempt to convert crashes in your C++ code into Python RuntimeError
+exceptions.</dd>
+<dt>catch_crashes:</dt>
+<dd>If True, Houdini will attempt to catch crashes in your C++ code and
+convert them into Python RuntimeError exceptions containing a C++ stack
+trace.  There is no guarantee that Houdini can always recover from
+crashes in your C++ code, so Houdini may still crash even if this
+parameter is set to True.  Setting this parameter to None (the default)
+will make it use the same setting as the debug parameter.</dd>
+<dt>structs:</dt>
+<dd><p class="first">A sequence of descriptions of C structures that can be used as return
+values.  Each structure description is a pair, where the first element
+is the name of the structure and the second is a sequence of member
+descriptions.  Each member description is a pair of strings containing
+the member name and type.</p>
+<p>Member types may be one of:
+- A format characters used by Python’s struct module (e.g. “i” for</p>
+<blockquote>
+<div>integer, “d” for double, “c” for character, etc.).</div></blockquote>
+<ul class="simple">
+<li>A format character preceded by a “*”, to indicate an array of
+those elements.  For example, “<a href="#id1"><span class="problematic" id="id2">*</span></a>i” is an array of integers.</li>
+<li>The name of an earlier type in the sequence of structs.</li>
+</ul>
+<p>Note that, instead of a sequence of member descriptions, the second
+element of a struct description may be a string.  In this case,
+the type will be a typedef.  These typedefs are useful to create
+type names for arrays of values.</p>
+<p>For example, the following sequence creates a Point struct with two
+integer members x and y, and a Data struct containing members named
+“tolerance” (a double), “single_point” (a Point), and “points” (an
+array of Points.  One of your C++ functions could return a “Data”
+value that is automatically converted into Python objects.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>(</dt>
+<dd><dl class="first docutils">
+<dt>(“Point”, (</dt>
+<dd>(“x”, “i”),
+(“y”, “i”),</dd>
+</dl>
+<p>)),
+(“Data”, (</p>
+<blockquote>
+<div>(“tolerance”, “d”),
+(“single_point”, “Point”),
+(“points”, “<a href="#id3"><span class="problematic" id="id4">*</span></a>Point”),</div></blockquote>
+<p class="last">)),</p>
+</dd>
+</dl>
+<p>)</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>The following sequence creates an IntArray struct:</dt>
+<dd>((“IntArray”, “<a href="#id5"><span class="problematic" id="id6">*</span></a>i”),)</dd>
+</dl>
+<p class="last">One of your C++ functions could then use IntArray as the return type
+and return a std::vector&lt;int&gt;.</p>
+</dd>
+<dt>include_dirs:</dt>
+<dd>A sequence of extra directory paths to be used to search for include
+files.  These paths are passed as -I options to the hcustom command
+when compiling the C++ code.</dd>
+<dt>link_dirs:</dt>
+<dd>A sequence of extra directory paths to be used to search for shared or
+static libraries that the C++ code links against.  These paths are
+passed as -L options to the hcustom command.</dd>
+<dt>link_libs:</dt>
+<dd>A sequence of names of extra libraries that the C++ code needs to link
+against.  These library names are passed as -l options to the hcustom
+command.</dd>
+<dt>config:</dt>
+<dd>Either a cppinline.Config object to customize how cppinline works, or
+None.</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.daemon">
+<span id="hutil-daemon-module"></span><h2>hutil.daemon module<a class="headerlink" href="#module-hutil.daemon" title="Permalink to this headline">¶</a></h2>
+<p>Daemon process behaviour.</p>
+<dl class="class">
+<dt id="hutil.daemon.DaemonContext">
+<em class="property">class </em><code class="descclassname">hutil.daemon.</code><code class="descname">DaemonContext</code><span class="sig-paren">(</span><em>chroot_directory=None</em>, <em>working_directory='/'</em>, <em>umask=0</em>, <em>uid=None</em>, <em>gid=None</em>, <em>detach_process=None</em>, <em>files_preserve=None</em>, <em>pidfile=None</em>, <em>stdin=None</em>, <em>stdout=None</em>, <em>stderr=None</em>, <em>signal_map=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.DaemonContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Context for turning the current program into a daemon process.</p>
+<p>A <cite>DaemonContext</cite> instance represents the behaviour settings and
+process context for the program when it becomes a daemon. The
+behaviour and environment is customised by setting options on the
+instance, before calling the <cite>open</cite> method.</p>
+<p>Each option can be passed as a keyword argument to the <cite>DaemonContext</cite>
+constructor, or subsequently altered by assigning to an attribute on
+the instance at any time prior to calling <cite>open</cite>. That is, for
+options named <cite>wibble</cite> and <cite>wubble</cite>, the following invocation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">daemon</span><span class="o">.</span><span class="n">DaemonContext</span><span class="p">(</span><span class="n">wibble</span><span class="o">=</span><span class="n">bar</span><span class="p">,</span> <span class="n">wubble</span><span class="o">=</span><span class="n">baz</span><span class="p">)</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">daemon</span><span class="o">.</span><span class="n">DaemonContext</span><span class="p">()</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">wibble</span> <span class="o">=</span> <span class="n">bar</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">wubble</span> <span class="o">=</span> <span class="n">baz</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The following options are defined.</p>
+<dl class="docutils">
+<dt><cite>files_preserve</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>List of files that should <em>not</em> be closed when starting the
+daemon. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all open file descriptors will be closed.</p>
+<p class="last">Elements of the list are file descriptors (as returned by a file
+object’s <cite>fileno()</cite> method) or Python <cite>file</cite> objects. Each
+specifies a file that is not to be closed during daemon start.</p>
+</dd>
+<dt><cite>chroot_directory</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+<p class="last">Full path to a directory to set as the effective root directory of
+the process. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, specifies that the root directory is not
+to be changed.</p>
+</dd>
+<dt><cite>working_directory</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">'/'</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Full path of the working directory to which the process should
+change on daemon start.</p>
+<p class="last">Since a filesystem cannot be unmounted if a process has its
+current working directory on that filesystem, this should either
+be left at default or set to a directory that is a sensible “home
+directory” for the daemon while it is running.</p>
+</dd>
+<dt><cite>umask</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">0</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>File access creation mask (“umask”) to set for the process on
+daemon start.</p>
+<p class="last">Since a process inherits its umask from its parent process,
+starting the daemon will reset the umask to this value so that
+files are created by the daemon with access modes as it expects.</p>
+</dd>
+<dt><cite>pidfile</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+<p class="last">Context manager for a PID lock file. When the daemon context opens
+and closes, it enters and exits the <cite>pidfile</cite> context manager.</p>
+</dd>
+<dt><cite>detach_process</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, detach the process context when opening the daemon
+context; if <code class="docutils literal notranslate"><span class="pre">False</span></code>, do not detach.</p>
+<p class="last">If unspecified (<code class="docutils literal notranslate"><span class="pre">None</span></code>) during initialisation of the instance,
+this will be set to <code class="docutils literal notranslate"><span class="pre">True</span></code> by default, and <code class="docutils literal notranslate"><span class="pre">False</span></code> only if
+detaching the process is determined to be redundant; for example,
+in the case when the process was started by <cite>init</cite>, by <cite>initd</cite>, or
+by <cite>inetd</cite>.</p>
+</dd>
+<dt><cite>signal_map</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body">system-dependent</td>
+</tr>
+</tbody>
+</table>
+<p>Mapping from operating system signals to callback actions.</p>
+<p>The mapping is used when the daemon context opens, and determines
+the action for each signal’s signal handler:</p>
+<ul class="simple">
+<li>A value of <code class="docutils literal notranslate"><span class="pre">None</span></code> will ignore the signal (by setting the
+signal action to <code class="docutils literal notranslate"><span class="pre">signal.SIG_IGN</span></code>).</li>
+<li>A string value will be used as the name of an attribute on the
+<code class="docutils literal notranslate"><span class="pre">DaemonContext</span></code> instance. The attribute’s value will be used
+as the action for the signal handler.</li>
+<li>Any other value will be used as the action for the signal
+handler.</li>
+</ul>
+<p>The default value depends on which signals are defined on the
+running system. Each item from the list below whose signal is
+actually defined in the <code class="docutils literal notranslate"><span class="pre">signal</span></code> module will appear in the
+default map:</p>
+<ul class="last simple">
+<li><code class="docutils literal notranslate"><span class="pre">signal.SIGCLD</span></code>: <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">signal.SIGTTIN</span></code>: <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">signal.SIGTTOU</span></code>: <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">signal.SIGTSTP</span></code>: <code class="docutils literal notranslate"><span class="pre">None</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">signal.SIGTERM</span></code>: <code class="docutils literal notranslate"><span class="pre">'terminate'</span></code></li>
+</ul>
+</dd>
+<dt><cite>uid</cite></dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">os.getuid()</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt><cite>gid</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">os.getgid()</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>The user ID (“UID”) value and group ID (“GID”) value to switch
+the process to on daemon start.</p>
+<p class="last">The default values, the real UID and GID of the process, will
+relinquish any effective privilege elevation inherited by the
+process.</p>
+</dd>
+<dt><cite>prevent_core</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">True</span></code></td>
+</tr>
+</tbody>
+</table>
+<p class="last">If true, prevents the generation of core files, in order to avoid
+leaking sensitive information from daemons run as <cite>root</cite>.</p>
+</dd>
+<dt><cite>stdin</cite></dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt><cite>stdout</cite></dt>
+<dd><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt><cite>stderr</cite></dt>
+<dd><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Default:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Each of <cite>stdin</cite>, <cite>stdout</cite>, and <cite>stderr</cite> is a file-like object
+which will be used as the new file for the standard I/O stream
+<cite>sys.stdin</cite>, <cite>sys.stdout</cite>, and <cite>sys.stderr</cite> respectively. The file
+should therefore be open, with a minimum of mode ‘r’ in the case
+of <cite>stdin</cite>, and mode ‘w+’ in the case of <cite>stdout</cite> and <cite>stderr</cite>.</p>
+<p>If the object has a <cite>fileno()</cite> method that returns a file
+descriptor, the corresponding file will be excluded from being
+closed during daemon start (that is, it will be treated as though
+it were listed in <cite>files_preserve</cite>).</p>
+<p class="last">If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the corresponding system stream is re-bound to the
+file named by <cite>os.devnull</cite>.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="hutil.daemon.DaemonContext.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.DaemonContext.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit the daemon process context.
+:Return: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Close the daemon context. This performs the following steps:</p>
+<ul class="simple">
+<li>If this instance’s <cite>is_open</cite> property is false, return
+immediately. This makes it safe to call <cite>close</cite> multiple times
+on an instance.</li>
+<li>If the <cite>pidfile</cite> attribute is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, exit its context
+manager.</li>
+<li>Mark this instance as closed (for the purpose of future <cite>open</cite>
+and <cite>close</cite> calls).</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hutil.daemon.DaemonContext.is_open">
+<code class="descname">is_open</code><a class="headerlink" href="#hutil.daemon.DaemonContext.is_open" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the instance is currently open.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.daemon.DaemonContext.open">
+<code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.DaemonContext.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Become a daemon process.
+:Return: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Open the daemon context, turning the current program into a daemon
+process. This performs the following steps:</p>
+<ul>
+<li><p class="first">If this instance’s <cite>is_open</cite> property is true, return
+immediately. This makes it safe to call <cite>open</cite> multiple times on
+an instance.</p>
+</li>
+<li><p class="first">If the <cite>prevent_core</cite> attribute is true, set the resource limits
+for the process to prevent any core dump from the process.</p>
+</li>
+<li><p class="first">If the <cite>chroot_directory</cite> attribute is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, set the
+effective root directory of the process to that directory (via
+<cite>os.chroot</cite>).</p>
+<p>This allows running the daemon process inside a “chroot gaol”
+as a means of limiting the system’s exposure to rogue behaviour
+by the process. Note that the specified directory needs to
+already be set up for this purpose.</p>
+</li>
+<li><p class="first">Set the process UID and GID to the <cite>uid</cite> and <cite>gid</cite> attribute
+values.</p>
+</li>
+<li><p class="first">Close all open file descriptors. This excludes those listed in
+the <cite>files_preserve</cite> attribute, and those that correspond to the
+<cite>stdin</cite>, <cite>stdout</cite>, or <cite>stderr</cite> attributes.</p>
+</li>
+<li><p class="first">Change current working directory to the path specified by the
+<cite>working_directory</cite> attribute.</p>
+</li>
+<li><p class="first">Reset the file access creation mask to the value specified by
+the <cite>umask</cite> attribute.</p>
+</li>
+<li><p class="first">If the <cite>detach_process</cite> option is true, detach the current
+process into its own process group, and disassociate from any
+controlling terminal.</p>
+</li>
+<li><p class="first">Set signal handlers as specified by the <cite>signal_map</cite> attribute.</p>
+</li>
+<li><p class="first">If any of the attributes <cite>stdin</cite>, <cite>stdout</cite>, <cite>stderr</cite> are not
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, bind the system streams <cite>sys.stdin</cite>, <cite>sys.stdout</cite>,
+and/or <cite>sys.stderr</cite> to the files represented by the
+corresponding attributes. Where the attribute has a file
+descriptor, the descriptor is duplicated (instead of re-binding
+the name).</p>
+</li>
+<li><p class="first">If the <cite>pidfile</cite> attribute is not <code class="docutils literal notranslate"><span class="pre">None</span></code>, enter its context
+manager.</p>
+</li>
+<li><p class="first">Mark this instance as open (for the purpose of future <cite>open</cite> and
+<cite>close</cite> calls).</p>
+</li>
+<li><p class="first">Register the <cite>close</cite> method to be called during Python’s exit
+processing.</p>
+</li>
+</ul>
+<p>When the function returns, the running program is a daemon
+process.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="hutil.daemon.DaemonContext.registerPostOpenCallback">
+<em class="property">static </em><code class="descname">registerPostOpenCallback</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.DaemonContext.registerPostOpenCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="hutil.daemon.DaemonContext.registerPreOpenCallback">
+<em class="property">static </em><code class="descname">registerPreOpenCallback</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.DaemonContext.registerPreOpenCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.daemon.DaemonContext.terminate">
+<code class="descname">terminate</code><span class="sig-paren">(</span><em>signal_number</em>, <em>stack_frame</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.DaemonContext.terminate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signal handler for end-process signals.
+:Return: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Signal handler for the <code class="docutils literal notranslate"><span class="pre">signal.SIGTERM</span></code> signal. Performs the
+following step:</p>
+<ul class="simple">
+<li>Raise a <code class="docutils literal notranslate"><span class="pre">SystemExit</span></code> exception explaining the signal.</li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.daemon.DaemonError">
+<em class="property">exception </em><code class="descclassname">hutil.daemon.</code><code class="descname">DaemonError</code><a class="headerlink" href="#hutil.daemon.DaemonError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+<p>Base exception class for errors from this module.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.daemon.DaemonOSEnvironmentError">
+<em class="property">exception </em><code class="descclassname">hutil.daemon.</code><code class="descname">DaemonOSEnvironmentError</code><a class="headerlink" href="#hutil.daemon.DaemonOSEnvironmentError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.daemon.DaemonError" title="hutil.daemon.DaemonError"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.daemon.DaemonError</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.OSError</span></code></p>
+<p>Exception raised when daemon OS environment setup receives error.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.daemon.DaemonProcessDetachError">
+<em class="property">exception </em><code class="descclassname">hutil.daemon.</code><code class="descname">DaemonProcessDetachError</code><a class="headerlink" href="#hutil.daemon.DaemonProcessDetachError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.daemon.DaemonError" title="hutil.daemon.DaemonError"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.daemon.DaemonError</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.OSError</span></code></p>
+<p>Exception raised when process detach fails.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.change_file_creation_mask">
+<code class="descclassname">hutil.daemon.</code><code class="descname">change_file_creation_mask</code><span class="sig-paren">(</span><em>mask</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.change_file_creation_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the file creation mask for this process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.change_process_owner">
+<code class="descclassname">hutil.daemon.</code><code class="descname">change_process_owner</code><span class="sig-paren">(</span><em>uid</em>, <em>gid</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.change_process_owner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the owning UID and GID of this process.</p>
+<p>Sets the GID then the UID of the process (in that order, to
+avoid permission errors) to the specified <cite>gid</cite> and <cite>uid</cite>
+values. Requires appropriate OS privileges for this process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.change_root_directory">
+<code class="descclassname">hutil.daemon.</code><code class="descname">change_root_directory</code><span class="sig-paren">(</span><em>directory</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.change_root_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the root directory of this process.</p>
+<p>Sets the current working directory, then the process root
+directory, to the specified <cite>directory</cite>. Requires appropriate
+OS privileges for this process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.change_working_directory">
+<code class="descclassname">hutil.daemon.</code><code class="descname">change_working_directory</code><span class="sig-paren">(</span><em>directory</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.change_working_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the working directory of this process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.close_all_open_files">
+<code class="descclassname">hutil.daemon.</code><code class="descname">close_all_open_files</code><span class="sig-paren">(</span><em>exclude=set([])</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.close_all_open_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close all open file descriptors.</p>
+<p>Closes every file descriptor (if open) of this process. If
+specified, <cite>exclude</cite> is a set of file descriptors to <em>not</em>
+close.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.close_file_descriptor_if_open">
+<code class="descclassname">hutil.daemon.</code><code class="descname">close_file_descriptor_if_open</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.close_file_descriptor_if_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close a file descriptor if already open.</p>
+<p>Close the file descriptor <cite>fd</cite>, suppressing an error in the
+case the file was not open.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.detach_process_context">
+<code class="descclassname">hutil.daemon.</code><code class="descname">detach_process_context</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.detach_process_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detach the process context from parent and session.</p>
+<p>Detach from the parent process and session group, allowing the
+parent to exit while this process continues running.</p>
+<p>Reference: “Advanced Programming in the Unix Environment”,
+section 13.3, by W. Richard Stevens, published 1993 by
+Addison-Wesley.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.get_maximum_file_descriptors">
+<code class="descclassname">hutil.daemon.</code><code class="descname">get_maximum_file_descriptors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.get_maximum_file_descriptors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the maximum number of open file descriptors for this process.</p>
+<p>Return the process hard resource limit of maximum number of
+open file descriptors. If the limit is “infinity”, a default
+value of <code class="docutils literal notranslate"><span class="pre">MAXFD</span></code> is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.is_detach_process_context_required">
+<code class="descclassname">hutil.daemon.</code><code class="descname">is_detach_process_context_required</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.is_detach_process_context_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine whether detaching process context is required.</p>
+<p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the process environment indicates the
+process is already detached:</p>
+<ul class="simple">
+<li>Process was started by <cite>init</cite>; or</li>
+<li>Process was started by <cite>inetd</cite>.</li>
+</ul>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.is_process_started_by_init">
+<code class="descclassname">hutil.daemon.</code><code class="descname">is_process_started_by_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.is_process_started_by_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the current process is started by <cite>init</cite>.</p>
+<p>The <cite>init</cite> process has the process ID of 1; if that is our
+parent process ID, return <code class="docutils literal notranslate"><span class="pre">True</span></code>, otherwise <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.is_process_started_by_superserver">
+<code class="descclassname">hutil.daemon.</code><code class="descname">is_process_started_by_superserver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.is_process_started_by_superserver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the current process is started by the superserver.</p>
+<p>The internet superserver creates a network socket, and
+attaches it to the standard streams of the child process. If
+that is the case for this process, return <code class="docutils literal notranslate"><span class="pre">True</span></code>, otherwise
+<code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.is_socket">
+<code class="descclassname">hutil.daemon.</code><code class="descname">is_socket</code><span class="sig-paren">(</span><em>fd</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.is_socket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the file descriptor is a socket.</p>
+<p>Return <code class="docutils literal notranslate"><span class="pre">False</span></code> if querying the socket type of <cite>fd</cite> raises an
+error; otherwise return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.make_default_signal_map">
+<code class="descclassname">hutil.daemon.</code><code class="descname">make_default_signal_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.make_default_signal_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the default signal map for this system.</p>
+<p>The signals available differ by system. The map will not
+contain any signals not defined on the running system.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.prevent_core_dump">
+<code class="descclassname">hutil.daemon.</code><code class="descname">prevent_core_dump</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.prevent_core_dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prevent this process from generating a core dump.</p>
+<p>Sets the soft and hard limits for core dump size to zero. On
+Unix, this prevents the process from creating core dump
+altogether.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.redirect_stream">
+<code class="descclassname">hutil.daemon.</code><code class="descname">redirect_stream</code><span class="sig-paren">(</span><em>system_stream</em>, <em>target_stream</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.redirect_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redirect a system stream to a specified file.</p>
+<p><cite>system_stream</cite> is a standard system stream such as
+<code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code>. <cite>target_stream</cite> is an open file object that
+should replace the corresponding system stream object.</p>
+<p>If <cite>target_stream</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, defaults to opening the
+operating system’s null device and using its file descriptor.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.register_atexit_function">
+<code class="descclassname">hutil.daemon.</code><code class="descname">register_atexit_function</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.register_atexit_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a function for processing at program exit.</p>
+<p>The function <cite>func</cite> is registered for a call with no arguments
+at program exit.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.daemon.set_signal_handlers">
+<code class="descclassname">hutil.daemon.</code><code class="descname">set_signal_handlers</code><span class="sig-paren">(</span><em>signal_handler_map</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.daemon.set_signal_handlers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the signal handlers as specified.</p>
+<p>The <cite>signal_handler_map</cite> argument is a map from signal number
+to signal handler. See the <cite>signal</cite> module for details.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.debug">
+<span id="hutil-debug-module"></span><h2>hutil.debug module<a class="headerlink" href="#module-hutil.debug" title="Permalink to this headline">¶</a></h2>
+<p>Allows you to get a stack trace and inspect variables of a running Python
+program by sending it a SIGUSR1 signal (non-Windows only).</p>
+<dl class="docutils">
+<dt>For non-dameon programs:</dt>
+<dd>From the Python program, call hutil.debug.enableUserSignalHandling().
+Debug the process by running “kill -USR1 &lt;pid&gt;”.</dd>
+<dt>For daemon programs:</dt>
+<dd><dl class="first last docutils">
+<dt>From the Python program, call</dt>
+<dd>hutil.debug.enableUserSignalHandling(as_daemon=True)</dd>
+<dt>To debug the process, run</dt>
+<dd>“hython -m htuil.debug &lt;pid&gt;”</dd>
+</dl>
+</dd>
+</dl>
+<dl class="function">
+<dt id="hutil.debug.enableUserSignalHandling">
+<code class="descclassname">hutil.debug.</code><code class="descname">enableUserSignalHandling</code><span class="sig-paren">(</span><em>as_daemon=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.debug.enableUserSignalHandling" title="Permalink to this definition">¶</a></dt>
+<dd><p>All this program to respond to a SIGUSR1 signal by printing a stack trace
+and launching an interactive Python session.</p>
+<p>Note that SIGUSR1 is not available on Windows.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.enum">
+<span id="hutil-enum-module"></span><h2>hutil.enum module<a class="headerlink" href="#module-hutil.enum" title="Permalink to this headline">¶</a></h2>
+<p>Provides a simple enumeration class.</p>
+<dl class="docutils">
+<dt>Example usage;</dt>
+<dd><p class="first">State = hutil.enum.Enumeration(“not_started”, “started”, “done”)</p>
+<p>s1 = State.not_started
+s2 = State.started
+if s1 != s2:</p>
+<blockquote>
+<div>print “s1 != s2”</div></blockquote>
+<p>print s1
+# prints “not_started”</p>
+<dl class="last docutils">
+<dt>for s in State:</dt>
+<dd>print s</dd>
+</dl>
+</dd>
+</dl>
+<dl class="class">
+<dt id="hutil.enum.Enumeration">
+<em class="property">class </em><code class="descclassname">hutil.enum.</code><code class="descname">Enumeration</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.enum.Enumeration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.file">
+<span id="hutil-file-module"></span><h2>hutil.file module<a class="headerlink" href="#module-hutil.file" title="Permalink to this headline">¶</a></h2>
+<p>File-related utility functions.</p>
+<dl class="function">
+<dt id="hutil.file.checksum">
+<code class="descclassname">hutil.file.</code><code class="descname">checksum</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.checksum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a file path, return a checksum of the contents of the file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.file.convertToWinPath">
+<code class="descclassname">hutil.file.</code><code class="descname">convertToWinPath</code><span class="sig-paren">(</span><em>path</em>, <em>var_notation='%'</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.convertToWinPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a path, convert it to a Windows path and return it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.file.ensureDirExists">
+<code class="descclassname">hutil.file.</code><code class="descname">ensureDirExists</code><span class="sig-paren">(</span><em>dir_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.ensureDirExists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hutil.file.humanReadableSize">
+<code class="descclassname">hutil.file.</code><code class="descname">humanReadableSize</code><span class="sig-paren">(</span><em>num_bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.humanReadableSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a size in bytes, return a string describing that size.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.file.insertFileSuffix">
+<code class="descclassname">hutil.file.</code><code class="descname">insertFileSuffix</code><span class="sig-paren">(</span><em>filename</em>, <em>file_suffix</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.insertFileSuffix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hutil.file.readFile">
+<code class="descclassname">hutil.file.</code><code class="descname">readFile</code><span class="sig-paren">(</span><em>file_name</em>, <em>binary=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.readFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read in a file and return its contents as a string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.file.splitVersionSuffix">
+<code class="descclassname">hutil.file.</code><code class="descname">splitVersionSuffix</code><span class="sig-paren">(</span><em>filename</em>, <em>version_separator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.splitVersionSuffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split the basename and the version suffix from the given filename.</p>
+<p>Return a 2-tuple of (basename, version).  If there is no version
+suffix, then (basename, None) is returned.  Paths and file extensions
+are excluded from the basename.</p>
+<p>The version suffix is the largest set of digits at the end of the
+filename (excluding the extension).  If <cite>version_separator</cite> is
+set to a single character, then the version suffix is the largest
+set of digits at the end of the filename AND immediately after
+the character.  The <cite>version_separator</cite> is excluded from the basename.</p>
+<dl class="docutils">
+<dt>Some examples:</dt>
+<dd>splitVersionSuffix(“myFilename.txt”) =&gt; (“myFilename”, None)
+splitVersionSuffix(“myFilename2.txt”) =&gt; (“myFilename”, “2”)
+splitVersionSuffix(“myFilename_2.txt”) =&gt; (“<a href="#id7"><span class="problematic" id="id8">myFilename_</span></a>”, “2”)
+splitVersionSuffix(“myFilename_2.txt”, ‘_’) =&gt; (“myFilename”, “2”)
+splitVersionSuffix(“myFilename2.txt”, ‘_’) =&gt; (“myFilename2”, None)</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.file.writeFile">
+<code class="descclassname">hutil.file.</code><code class="descname">writeFile</code><span class="sig-paren">(</span><em>file_name</em>, <em>contents</em>, <em>binary=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.file.writeFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the given string to a file.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.ipaddress">
+<span id="hutil-ipaddress-module"></span><h2>hutil.ipaddress module<a class="headerlink" href="#module-hutil.ipaddress" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="hutil.ipaddress.doesAddressMatchNetMask">
+<code class="descclassname">hutil.ipaddress.</code><code class="descname">doesAddressMatchNetMask</code><span class="sig-paren">(</span><em>address</em>, <em>mask</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.ipaddress.doesAddressMatchNetMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the address (xxx.xxx.xxx.xxx) matches the given CIDR
+netmask (xxx.xxx.xxx.xxx/xx).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.ipaddress.getMyIPAddress">
+<code class="descclassname">hutil.ipaddress.</code><code class="descname">getMyIPAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.ipaddress.getMyIPAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get my IP address from an external web server that displays it.</p>
+<p>Unfortunately, the only way to get this machine’s externally-visible IP
+address is to get another machine on the internet to tell it to us.</p>
+<p>Return None if the IP address could not be determined.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.ipaddress.getMyLatLong">
+<code class="descclassname">hutil.ipaddress.</code><code class="descname">getMyLatLong</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.ipaddress.getMyLatLong" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a tuple of (latitude, longitude) values for our location, based
+off my IP address.</p>
+<p>Return None if the location could not be determined.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.ipaddress.getMyTimezoneOffset">
+<code class="descclassname">hutil.ipaddress.</code><code class="descname">getMyTimezoneOffset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.ipaddress.getMyTimezoneOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the offset of this timezone from GMT, accounting for whether or
+not daylight savings time is in effect.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.json">
+<span id="hutil-json-module"></span><h2>hutil.json module<a class="headerlink" href="#module-hutil.json" title="Permalink to this headline">¶</a></h2>
+<p>JSON-related utility and wrapper functions.</p>
+<p>This module will wrap one of the standard json module, simplejson, or demjson,
+preferring the standard json.  Note that the types of exceptions raised can
+vary depending on which library is wrapped.</p>
+<p>To guarantee utf8-encoded strings instead of unicode strings, use the utf8*
+versions of the functions.</p>
+<dl class="class">
+<dt id="hutil.json.DictAsObject">
+<em class="property">class </em><code class="descclassname">hutil.json.</code><code class="descname">DictAsObject</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.json.DictAsObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.json.dumpToFile">
+<code class="descclassname">hutil.json.</code><code class="descname">dumpToFile</code><span class="sig-paren">(</span><em>obj</em>, <em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.json.dumpToFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the JSON-encoded representation of an object to a file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.json.loadFromFile">
+<code class="descclassname">hutil.json.</code><code class="descname">loadFromFile</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.json.loadFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a file containing JSON-encoded data, return the decoded object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.json.object_from_json_data">
+<code class="descclassname">hutil.json.</code><code class="descname">object_from_json_data</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.json.object_from_json_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a decoded JSON data structure into one with smart dictionaries
+that support attribute lookups to access dictionary values.  For example,
+if:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>o = object_from_json_data({</dt>
+<dd><blockquote class="first">
+<div><p>“name”: “Joe”,
+“children”: [</p>
+<blockquote>
+<div>{“name”: “Bob”},
+{“name”: “Sally”},</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p class="last">})</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>one could write:</dt>
+<dd>o[“name”]
+o[“children”][0][“name”]</dd>
+<dt>but the output from this function also lets you write:</dt>
+<dd>o.name
+o.children[0].name</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.json.utf8Dumps">
+<code class="descclassname">hutil.json.</code><code class="descname">utf8Dumps</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.json.utf8Dumps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like dumps, but ensures that the result is not a unicode object by
+utf-8 encoding it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.json.utf8LoadFromFile">
+<code class="descclassname">hutil.json.</code><code class="descname">utf8LoadFromFile</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.json.utf8LoadFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like loadFromFile, except the strings in the decoded object are utf8-
+encoded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.json.utf8Loads">
+<code class="descclassname">hutil.json.</code><code class="descname">utf8Loads</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.json.utf8Loads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like loads, but all strings in the result object are utf8-encoded
+and not unicode.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.log">
+<span id="hutil-log-module"></span><h2>hutil.log module<a class="headerlink" href="#module-hutil.log" title="Permalink to this headline">¶</a></h2>
+<p>Contains a function to create and set up a logger that provides consistent
+also captures stdout and stderr.</p>
+<dl class="function">
+<dt id="hutil.log.createLogger">
+<code class="descclassname">hutil.log.</code><code class="descname">createLogger</code><span class="sig-paren">(</span><em>debug</em>, <em>verbose</em>, <em>name</em>, <em>log_file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.log.createLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return a logger, and also redirect stdout and stderr to
+the logger.  If debug is True, the logging level is set to logging.DEBUG;
+otherwise it is set to logging.INFO.  If verbose is True, log output is
+also sent to stdout.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.parsecppsig">
+<span id="hutil-parsecppsig-module"></span><h2>hutil.parsecppsig module<a class="headerlink" href="#module-hutil.parsecppsig" title="Permalink to this headline">¶</a></h2>
+<p>This module contains code to parse C++ types and function signatures.</p>
+<dl class="class">
+<dt id="hutil.parsecppsig.CPPNativeType">
+<em class="property">class </em><code class="descclassname">hutil.parsecppsig.</code><code class="descname">CPPNativeType</code><span class="sig-paren">(</span><em>base_type_name</em>, <em>type_qualifier</em>, <em>is_unsigned</em>, <em>is_const</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPNativeType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.parsecppsig.CPPType" title="hutil.parsecppsig.CPPType"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.parsecppsig.CPPType</span></code></a></p>
+<p>A class representing a native data type in C++.</p>
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPNativeType.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPNativeType.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPNativeType.ctype">
+<code class="descname">ctype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPNativeType.ctype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPNativeType.msvc_mangled_name">
+<code class="descname">msvc_mangled_name</code><span class="sig-paren">(</span><em>is_return_type=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPNativeType.msvc_mangled_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPNativeType.name_without_const">
+<code class="descname">name_without_const</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPNativeType.name_without_const" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.parsecppsig.CPPPointerType">
+<em class="property">class </em><code class="descclassname">hutil.parsecppsig.</code><code class="descname">CPPPointerType</code><span class="sig-paren">(</span><em>referenced_type</em>, <em>is_const</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPPointerType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.parsecppsig.CPPType" title="hutil.parsecppsig.CPPType"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.parsecppsig.CPPType</span></code></a></p>
+<p>A class representing a C++ pointer type.</p>
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPPointerType.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPPointerType.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPPointerType.ctype">
+<code class="descname">ctype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPPointerType.ctype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPPointerType.is_pointer">
+<code class="descname">is_pointer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPPointerType.is_pointer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPPointerType.msvc_mangled_name">
+<code class="descname">msvc_mangled_name</code><span class="sig-paren">(</span><em>is_return_type=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPPointerType.msvc_mangled_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.parsecppsig.CPPSignature">
+<em class="property">class </em><code class="descclassname">hutil.parsecppsig.</code><code class="descname">CPPSignature</code><span class="sig-paren">(</span><em>function_name</em>, <em>return_cpp_type</em>, <em>parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPSignature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPSignature.as_code">
+<code class="descname">as_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPSignature.as_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPSignature.msvc_mangled_name">
+<code class="descname">msvc_mangled_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPSignature.msvc_mangled_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.parsecppsig.CPPType">
+<em class="property">class </em><code class="descclassname">hutil.parsecppsig.</code><code class="descname">CPPType</code><span class="sig-paren">(</span><em>is_const</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The base class that represents a C++ type.</p>
+<dl class="classmethod">
+<dt id="hutil.parsecppsig.CPPType.is_native_type">
+<em class="property">classmethod </em><code class="descname">is_native_type</code><span class="sig-paren">(</span><em>base_type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPType.is_native_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPType.is_pointer">
+<code class="descname">is_pointer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPType.is_pointer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="hutil.parsecppsig.CPPType.is_type_keyword">
+<em class="property">classmethod </em><code class="descname">is_type_keyword</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPType.is_type_keyword" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPType.is_user_type">
+<code class="descname">is_user_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPType.is_user_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPType.name">
+<code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.parsecppsig.CPPTypeAndName">
+<em class="property">class </em><code class="descclassname">hutil.parsecppsig.</code><code class="descname">CPPTypeAndName</code><span class="sig-paren">(</span><em>cpp_type</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPTypeAndName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A pair storing a CPPType object and a name.  This pair can represent
+a parameter in a function signature or a member in a struct.</p>
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPTypeAndName.as_code">
+<code class="descname">as_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPTypeAndName.as_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.parsecppsig.CPPUserType">
+<em class="property">class </em><code class="descclassname">hutil.parsecppsig.</code><code class="descname">CPPUserType</code><span class="sig-paren">(</span><em>base_type_name</em>, <em>is_const</em>, <em>template_types=()</em>, <em>members=()</em>, <em>extra_ctypes_class_members={}</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.parsecppsig.CPPType" title="hutil.parsecppsig.CPPType"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.parsecppsig.CPPType</span></code></a></p>
+<p>A class representing a user-defined data type in C++ (a class, struct,
+or typedef).  If it represents a class, it may or may not be templated.  If
+it represents a class or struct whose members are known, the number of
+members will not be zero.  If the number of members is not zero, the
+object doesn’t not represent a typedef.</p>
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPUserType.class_definition_code">
+<code class="descname">class_definition_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType.class_definition_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPUserType.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPUserType.ctype">
+<code class="descname">ctype</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType.ctype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPUserType.is_pointer">
+<code class="descname">is_pointer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType.is_pointer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPUserType.is_user_type">
+<code class="descname">is_user_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType.is_user_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPUserType.msvc_mangled_name">
+<code class="descname">msvc_mangled_name</code><span class="sig-paren">(</span><em>is_return_type=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType.msvc_mangled_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.parsecppsig.CPPUserType.name_without_const">
+<code class="descname">name_without_const</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.CPPUserType.name_without_const" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.parsecppsig.ParseError">
+<em class="property">exception </em><code class="descclassname">hutil.parsecppsig.</code><code class="descname">ParseError</code><a class="headerlink" href="#hutil.parsecppsig.ParseError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.parsecppsig.parse_cpp_signature">
+<code class="descclassname">hutil.parsecppsig.</code><code class="descname">parse_cpp_signature</code><span class="sig-paren">(</span><em>cpp_source</em>, <em>named_types_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.parse_cpp_signature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the C++ source code for a function, parse out the function
+signature and return a CPPSignature object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.parsecppsig.parse_cpp_type">
+<code class="descclassname">hutil.parsecppsig.</code><code class="descname">parse_cpp_type</code><span class="sig-paren">(</span><em>cpp_type_name</em>, <em>named_types_dict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.parsecppsig.parse_cpp_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hutil.pidfile">
+<span id="hutil-pidfile-module"></span><h2>hutil.pidfile module<a class="headerlink" href="#module-hutil.pidfile" title="Permalink to this headline">¶</a></h2>
+<p>This module is to be used in conjunction with the daemon module.</p>
+<dl class="docutils">
+<dt>For example,</dt>
+<dd><dl class="first last docutils">
+<dt>daemon_context = hutil.daemon.DaemonContext(</dt>
+<dd>uid=nobody_uid, gid=nobody_uid,
+pidfile=hutil.pidfile.PidFileCheck(“/tmp/your_daemon.pid”))</dd>
+</dl>
+</dd>
+</dl>
+<dl class="class">
+<dt id="hutil.pidfile.PidFileCheck">
+<em class="property">class </em><code class="descclassname">hutil.pidfile.</code><code class="descname">PidFileCheck</code><span class="sig-paren">(</span><em>pidfile_name</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pidfile.PidFileCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.pyrpc">
+<span id="hutil-pyrpc-module"></span><h2>hutil.pyrpc module<a class="headerlink" href="#module-hutil.pyrpc" title="Permalink to this headline">¶</a></h2>
+<p>A module to provide transparent Python-to-Python Remote Procedure Calls (RPC).
+This method is not to be confused with hrpyc, which is built on RPyC.</p>
+<dl class="docutils">
+<dt>From the server, start a thread to listen on socket connections with:</dt>
+<dd>hpyrpc.start_server()</dd>
+<dt>From the client, import a module that exists on the server and use it:</dt>
+<dd>hou = hpyrpc.import_remote_module(“hou”)
+print(hou.node(“/obj”).name())</dd>
+</dl>
+<dl class="class">
+<dt id="hutil.pyrpc.Boxed">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">Boxed</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Boxed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="classmethod">
+<dt id="hutil.pyrpc.Boxed.decode">
+<em class="property">classmethod </em><code class="descname">decode</code><span class="sig-paren">(</span><em>decoder</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Boxed.decode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.Boxed.encode">
+<code class="descname">encode</code><span class="sig-paren">(</span><em>encoder</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Boxed.encode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.BoxedFromProxy">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">BoxedFromProxy</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.BoxedFromProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.Boxed" title="hutil.pyrpc.Boxed"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.Boxed</span></code></a></p>
+<p>A proxy to an object that exists on the server, boxed up to be sent back
+to the server.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.BoxedFromProxy.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id',)</em><a class="headerlink" href="#hutil.pyrpc.BoxedFromProxy.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.BoxedToClassProxy">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">BoxedToClassProxy</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.BoxedToClassProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.Boxed" title="hutil.pyrpc.Boxed"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.Boxed</span></code></a></p>
+<p>A class that exists on the server, boxed up to be sent to the client
+as a proxy.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.BoxedToClassProxy.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('class_object_id',)</em><a class="headerlink" href="#hutil.pyrpc.BoxedToClassProxy.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.BoxedToObjectProxy">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">BoxedToObjectProxy</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.BoxedToObjectProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.Boxed" title="hutil.pyrpc.Boxed"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.Boxed</span></code></a></p>
+<p>An object that exists on the server, boxed up to be sent to the client
+as a proxy.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.BoxedToObjectProxy.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id', 'class_object_id')</em><a class="headerlink" href="#hutil.pyrpc.BoxedToObjectProxy.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.CallMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">CallMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.CallMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.MessageOnObject" title="hutil.pyrpc.MessageOnObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.MessageOnObject</span></code></a></p>
+<p>Call an object.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.CallMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id', 'marshalled_args', 'marshalled_kwargs_items')</em><a class="headerlink" href="#hutil.pyrpc.CallMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.CallMessage.handle_ignoring_exceptions">
+<code class="descname">handle_ignoring_exceptions</code><span class="sig-paren">(</span><em>obj</em>, <em>args</em>, <em>kwargs_items</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.CallMessage.handle_ignoring_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.CallMethodMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">CallMethodMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.CallMethodMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.MessageOnObject" title="hutil.pyrpc.MessageOnObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.MessageOnObject</span></code></a></p>
+<p>Call a method on a object.</p>
+<p>This message is only used to invoke the __getattribute__, __setattr__, and
+__delattr__ methods.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.CallMethodMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id', 'method_name', 'marshalled_args')</em><a class="headerlink" href="#hutil.pyrpc.CallMethodMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.CallMethodMessage.handle_ignoring_exceptions">
+<code class="descname">handle_ignoring_exceptions</code><span class="sig-paren">(</span><em>obj</em>, <em>method_name</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.CallMethodMessage.handle_ignoring_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.CallUnboundMethodMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">CallUnboundMethodMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.CallUnboundMethodMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.MessageOnObject" title="hutil.pyrpc.MessageOnObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.MessageOnObject</span></code></a></p>
+<p>Call a method on a object, explicitly passing in the object as the
+first parameter.</p>
+<p>This message is only used to invoke the __getattribute__, __setattr__, and
+__delattr__ methods.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.CallUnboundMethodMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id', 'method_name', 'marshalled_args')</em><a class="headerlink" href="#hutil.pyrpc.CallUnboundMethodMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.CallUnboundMethodMessage.handle_ignoring_exceptions">
+<code class="descname">handle_ignoring_exceptions</code><span class="sig-paren">(</span><em>obj</em>, <em>method_name</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.CallUnboundMethodMessage.handle_ignoring_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.pyrpc.ConnectionError">
+<em class="property">exception </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">ConnectionError</code><a class="headerlink" href="#hutil.pyrpc.ConnectionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.DataSerializer">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">DataSerializer</code><a class="headerlink" href="#hutil.pyrpc.DataSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.DataSerializer.builtin_ids_to_names">
+<code class="descname">builtin_ids_to_names</code><em class="property"> = {139928754475008: 'FloatingPointError', 139928754475424: 'Warning', 139928754475840: 'DeprecationWarning', 139928754507040: 'RuntimeWarning', 139928754507936: 'OSError', 139928754510048: 'KeyboardInterrupt', 139928754510464: 'RuntimeError', 139928754535680: 'StopIteration', 139928754536736: 'BufferError', 139928754564192: 'IndexError', 139928754605600: 'NameError', 139928754606016: 'UnboundLocalError', 139928754620128: 'NotImplementedError', 139928754640896: 'UnicodeWarning', 139928754780544: 'SystemError', 139928754781056: 'SystemExit', 139928754781952: 'LookupError', 139928754782368: 'KeyError', 139928754783584: 'EnvironmentError', 139928754784000: 'EOFError', 139928754784416: 'IOError', 139928754784832: 'ImportError', 139928754785664: 'MemoryError', 139928754786080: 'ValueError', 139928754786496: 'ArithmeticError', 139928754786912: 'OverflowError', 139928754787328: 'AttributeError', 139928754788128: 'Exception', 139928754788544: 'StandardError', 139928754788960: 'TypeError', 139928754815216: 'NotImplemented', 139928754815248: 'None', 139928754816992: 'BaseException', 139928754817392: 'Ellipsis', 139928754820032: 'tuple', 139928754820448: 'basestring', 139928754820864: 'str', 139928754821696: 'slice', 139928754822112: 'xrange', 139928754823360: 'memoryview', 139928754826368: 'long', 139928754828448: 'staticmethod', 139928754828864: 'classmethod', 139928754830112: 'float', 139928754830528: 'file', 139928754831360: 'enumerate', 139928754831776: 'reversed', 139928754833856: 'property', 139928754834272: 'complex', 139928754839200: 'bytearray', 139928754839616: 'buffer', 139928754840032: 'int', 139928754840448: 'bool', 139928754840864: 'super', 139928754841264: 'False', 139928754842144: 'object', 139928754842976: 'unicode', 139928754843808: 'list', 139928754844224: 'dict', 139928754845472: 'type', 139928754845872: 'True', 139928754845920: 'frozenset', 139928754846336: 'set', 139928754880544: 'TabError', 139928754880960: 'IndentationError', 139928754881664: 'SyntaxError', 139928754882080: 'SyntaxWarning', 139928754884224: 'ReferenceError', 139928754897952: 'ImportWarning', 139928754899904: 'FutureWarning', 139928754900320: 'AssertionError', 139928754900736: 'GeneratorExit', 139928754901344: 'ZeroDivisionError', 139928754929792: 'UserWarning', 139928754930208: 'BytesWarning', 139928754930624: 'PendingDeprecationWarning', 139928754932544: 'UnicodeTranslateError', 139928754932960: 'UnicodeDecodeError', 139928754933376: 'UnicodeError', 139928754934048: 'UnicodeEncodeError', 139929179850640: 'license', 139929179850768: 'help', 139929180359632: 'quit', 139929180479568: 'copyright', 139929180480208: 'exit', 139929180481168: 'credits', 139929180766152: '__import__', 139929180779024: '__name__', 139929180794960: 'abs', 139929180795032: 'all', 139929180795104: 'any', 139929180795176: 'apply', 139929180795248: 'bin', 139929180795320: 'callable', 139929180795392: 'chr', 139929180795464: 'cmp', 139929180795536: 'coerce', 139929180795608: 'compile', 139929180795680: 'delattr', 139929180795752: 'dir', 139929180795824: 'divmod', 139929180795896: 'eval', 139929180795968: 'execfile', 139929180796040: 'filter', 139929180796112: 'format', 139929180796184: 'getattr', 139929180796256: 'globals', 139929180796328: 'hasattr', 139929180796400: 'hash', 139929180796472: 'hex', 139929180796544: 'id', 139929180796616: 'input', 139929180796688: 'intern', 139929180796760: 'isinstance', 139929180796832: 'issubclass', 139929180796904: 'iter', 139929180796976: 'len', 139929180797048: 'locals', 139929180797120: 'map', 139929180797192: 'max', 139929180797264: 'min', 139929180797336: 'next', 139929180797408: 'oct', 139929180797480: 'open', 139929180797552: 'ord', 139929180797624: 'pow', 139929180797696: 'print', 139929180797768: 'range', 139929180797840: 'raw_input', 139929180797912: 'reduce', 139929180797984: 'reload', 139929180798056: 'repr', 139929180798128: 'round', 139929180798200: 'setattr', 139929180798272: 'sorted', 139929180798344: 'sum', 139929180798416: 'unichr', 139929180798488: 'vars', 139929180798560: 'zip', 139929180799024: '__doc__'}</em><a class="headerlink" href="#hutil.pyrpc.DataSerializer.builtin_ids_to_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.DataSerializer.decode_from_socket">
+<code class="descname">decode_from_socket</code><span class="sig-paren">(</span><em>sock</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DataSerializer.decode_from_socket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.DataSerializer.decode_sub_object">
+<code class="descname">decode_sub_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DataSerializer.decode_sub_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.DataSerializer.encode">
+<code class="descname">encode</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DataSerializer.encode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.DataSerializer.encode_sub_object">
+<code class="descname">encode_sub_object</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DataSerializer.encode_sub_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.DelProxyMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">DelProxyMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DelProxyMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.MessageOnObject" title="hutil.pyrpc.MessageOnObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.MessageOnObject</span></code></a></p>
+<p>Remove a proxy to a remote object.</p>
+<dl class="method">
+<dt id="hutil.pyrpc.DelProxyMessage.handle_ignoring_exceptions">
+<code class="descname">handle_ignoring_exceptions</code><span class="sig-paren">(</span><em>ignored_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DelProxyMessage.handle_ignoring_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.DirMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">DirMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DirMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.MessageOnObject" title="hutil.pyrpc.MessageOnObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.MessageOnObject</span></code></a></p>
+<p>Return the result of dir on the remote object.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.DirMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id',)</em><a class="headerlink" href="#hutil.pyrpc.DirMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.DirMessage.handle_ignoring_exceptions">
+<code class="descname">handle_ignoring_exceptions</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.DirMessage.handle_ignoring_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.GetClassInfoMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">GetClassInfoMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.GetClassInfoMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.Message" title="hutil.pyrpc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.Message</span></code></a></p>
+<p>Return information about a remote class.  This message is invoked on
+with the class object’s object id.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.GetClassInfoMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('class_object_id',)</em><a class="headerlink" href="#hutil.pyrpc.GetClassInfoMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.GetClassInfoMessage.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.GetClassInfoMessage.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.ImportModuleMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">ImportModuleMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.ImportModuleMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.Message" title="hutil.pyrpc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.Message</span></code></a></p>
+<p>Import a remote module.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.ImportModuleMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('module_name',)</em><a class="headerlink" href="#hutil.pyrpc.ImportModuleMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.ImportModuleMessage.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.ImportModuleMessage.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.InstanceCheckMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">InstanceCheckMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.InstanceCheckMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.MessageOnObject" title="hutil.pyrpc.MessageOnObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.MessageOnObject</span></code></a></p>
+<p>Return whether a proxy to a remote object is an instance of a proxy
+to a remote class.  This message is invoked on the proxy to the remote
+class.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.InstanceCheckMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id', 'marshalled_object')</em><a class="headerlink" href="#hutil.pyrpc.InstanceCheckMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.InstanceCheckMessage.handle_ignoring_exceptions">
+<code class="descname">handle_ignoring_exceptions</code><span class="sig-paren">(</span><em>cls</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.InstanceCheckMessage.handle_ignoring_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="hutil.pyrpc.InvalidSession">
+<em class="property">exception </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">InvalidSession</code><a class="headerlink" href="#hutil.pyrpc.InvalidSession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+<p>This exception is raised when the client uses proxies from a different
+RPC Session.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.Message">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">Message</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="classmethod">
+<dt id="hutil.pyrpc.Message.receive">
+<em class="property">classmethod </em><code class="descname">receive</code><span class="sig-paren">(</span><em>session</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Message.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build an instance of a Message subclass from the data decoded from
+the socket and handle that message.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.Message.send">
+<code class="descname">send</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Message.send" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.Message.send_and_receive">
+<code class="descname">send_and_receive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Message.send_and_receive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.MessageOnObject">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">MessageOnObject</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.MessageOnObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.Message" title="hutil.pyrpc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.Message</span></code></a></p>
+<p>A helper base class for messages involving a proxy to a remote object.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.MessageOnObject.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('object_id',)</em><a class="headerlink" href="#hutil.pyrpc.MessageOnObject.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.MessageOnObject.handle">
+<code class="descname">handle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.MessageOnObject.handle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.RPCServer">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">RPCServer</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.RPCServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SocketServer.TCPServer</span></code></p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.RPCServer.allow_reuse_address">
+<code class="descname">allow_reuse_address</code><em class="property"> = True</em><a class="headerlink" href="#hutil.pyrpc.RPCServer.allow_reuse_address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.RPCServer.finish_request">
+<code class="descname">finish_request</code><span class="sig-paren">(</span><em>sock</em>, <em>client_address</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.RPCServer.finish_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.RemoteClassProxy">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">RemoteClassProxy</code><a class="headerlink" href="#hutil.pyrpc.RemoteClassProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABCMeta</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.RemoteObjectProxy">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">RemoteObjectProxy</code><span class="sig-paren">(</span><em>session</em>, <em>remote_object_id</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.RemoteObjectProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.ReturnMessage">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">ReturnMessage</code><span class="sig-paren">(</span><em>session</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.ReturnMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#hutil.pyrpc.Message" title="hutil.pyrpc.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.pyrpc.Message</span></code></a></p>
+<p>Receiving this message unmarshals and returns its value, or raises
+an exception if it represents a raised exception.</p>
+<dl class="attribute">
+<dt id="hutil.pyrpc.ReturnMessage.arg_names">
+<code class="descname">arg_names</code><em class="property"> = ('marshalled_value', 'is_exception')</em><a class="headerlink" href="#hutil.pyrpc.ReturnMessage.arg_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.ReturnMessage.extract_result">
+<code class="descname">extract_result</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.ReturnMessage.extract_result" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.Session">
+<em class="property">class </em><code class="descclassname">hutil.pyrpc.</code><code class="descname">Session</code><span class="sig-paren">(</span><em>sock</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Both the client and the server create Session objects.</p>
+<dl class="class">
+<dt id="hutil.pyrpc.Session.ObjectAndCount">
+<em class="property">class </em><code class="descname">ObjectAndCount</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Session.ObjectAndCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stores an object and its reference count (i.e. the number of
+proxy objects on the client that refer to it.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hutil.pyrpc.Session.RemoteClassInfo">
+<em class="property">class </em><code class="descname">RemoteClassInfo</code><span class="sig-paren">(</span><em>session</em>, <em>class_object_id</em>, <em>class_name</em>, <em>base_builtin_class_name</em>, <em>special_method_names</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Session.RemoteClassInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stores information about a class on the remote server, including
+how to construct a proxy for an instance of the class and for the
+class itself.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.Session.get_class_by_id">
+<code class="descname">get_class_by_id</code><span class="sig-paren">(</span><em>class_object_id</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Session.get_class_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.Session.marshal">
+<code class="descname">marshal</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Session.marshal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an object that can be encoded by DataSerializer to be
+sent remotely.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.Session.remove_object_by_id">
+<code class="descname">remove_object_by_id</code><span class="sig-paren">(</span><em>object_id</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Session.remove_object_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hutil.pyrpc.Session.unmarshal">
+<code class="descname">unmarshal</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.Session.unmarshal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given data decoded by DataSerializer, return a value to be
+used by the client.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.pyrpc.import_remote_module">
+<code class="descclassname">hutil.pyrpc.</code><code class="descname">import_remote_module</code><span class="sig-paren">(</span><em>module_name</em>, <em>server_name='127.0.0.1'</em>, <em>port=10888</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.import_remote_module" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hutil.pyrpc.start_server">
+<code class="descclassname">hutil.pyrpc.</code><code class="descname">start_server</code><span class="sig-paren">(</span><em>port=10888</em>, <em>use_thread=True</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.pyrpc.start_server" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hutil.username">
+<span id="hutil-username-module"></span><h2>hutil.username module<a class="headerlink" href="#module-hutil.username" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="hutil.username.currentUserName">
+<code class="descclassname">hutil.username.</code><code class="descname">currentUserName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hutil.username.currentUserName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the login name of the current user, or “unknown” if it couldn’t
+be determined.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil.web">
+<span id="hutil-web-module"></span><h2>hutil.web module<a class="headerlink" href="#module-hutil.web" title="Permalink to this headline">¶</a></h2>
+<p>Web-related utility functions.</p>
+<dl class="class">
+<dt id="hutil.web.FileArg">
+<em class="property">class </em><code class="descclassname">hutil.web.</code><code class="descname">FileArg</code><span class="sig-paren">(</span><em>contents</em>, <em>file_name</em>, <em>content_type='application/octet-stream'</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.web.FileArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provides a way for the user to encode a file when passed
+as a value into encode_multipart_form_data.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.web.encode_multipart_form_data">
+<code class="descclassname">hutil.web.</code><code class="descname">encode_multipart_form_data</code><span class="sig-paren">(</span><em>fields</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.web.encode_multipart_form_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a sequence of (field_name, field_value) pairs, return a
+(content_type, post_data) tuple.  The content type header is
+necessary because it identifies the data as multipart/text and it
+contains the boundary.</p>
+<p>Note that field_value may be a FileArg instance.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.web.readURL">
+<code class="descclassname">hutil.web.</code><code class="descname">readURL</code><span class="sig-paren">(</span><em>url</em>, <em>post_data=None</em>, <em>extra_headers=()</em>, <em>require_content_length=False</em>, <em>timeout=None</em>, <em>disable_proxy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.web.readURL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the contents of a URL and return an (http_response_code,
+content_type, content) tuple.  If the connection generated a socket error
+then it raises urllib2.URLError.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.web.readURLContents">
+<code class="descclassname">hutil.web.</code><code class="descname">readURLContents</code><span class="sig-paren">(</span><em>url</em>, <em>post_data=None</em>, <em>extra_headers=()</em>, <em>require_content_length=False</em>, <em>disable_proxy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.web.readURLContents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the data at a URL.  Return None if the URL could not be read.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.web.read_url">
+<code class="descclassname">hutil.web.</code><code class="descname">read_url</code><span class="sig-paren">(</span><em>url</em>, <em>post_data=None</em>, <em>extra_headers=()</em>, <em>require_content_length=False</em>, <em>timeout=None</em>, <em>disable_proxy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.web.read_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the contents of a URL and return an (http_response_code,
+content_type, content) tuple.  If the connection generated a socket error
+then it raises urllib2.URLError.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.web.read_url_contents">
+<code class="descclassname">hutil.web.</code><code class="descname">read_url_contents</code><span class="sig-paren">(</span><em>url</em>, <em>post_data=None</em>, <em>extra_headers=()</em>, <em>require_content_length=False</em>, <em>disable_proxy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.web.read_url_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the data at a URL.  Return None if the URL could not be read.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="hutil.web.save_url_to_file">
+<code class="descclassname">hutil.web.</code><code class="descname">save_url_to_file</code><span class="sig-paren">(</span><em>url</em>, <em>file_name</em>, <em>post_data=None</em>, <em>extra_headers=()</em>, <em>progress_callback=None</em>, <em>callback_additional_kwargs={}</em>, <em>disable_proxy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#hutil.web.save_url_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>This helper function reads the contents of a URL and saves it to a file.</p>
+<p>On an error, it raises an urllib2.URLError exception.  Possible errors
+are a non-200 http response or a missing Content-Length header.</p>
+<dl class="docutils">
+<dt>If progress_callback is provided, it will be called periodically as follows:</dt>
+<dd>progress_callback(bytes_downloaded, total_num_bytes,
+callback_additional_kwargs)</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-hutil">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hutil" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">hutil package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-hutil.Qt">hutil.Qt module</a></li>
+<li><a class="reference internal" href="#module-hutil.api">hutil.api module</a></li>
+<li><a class="reference internal" href="#module-hutil.cppinline">hutil.cppinline module</a></li>
+<li><a class="reference internal" href="#module-hutil.daemon">hutil.daemon module</a></li>
+<li><a class="reference internal" href="#module-hutil.debug">hutil.debug module</a></li>
+<li><a class="reference internal" href="#module-hutil.enum">hutil.enum module</a></li>
+<li><a class="reference internal" href="#module-hutil.file">hutil.file module</a></li>
+<li><a class="reference internal" href="#module-hutil.ipaddress">hutil.ipaddress module</a></li>
+<li><a class="reference internal" href="#module-hutil.json">hutil.json module</a></li>
+<li><a class="reference internal" href="#module-hutil.log">hutil.log module</a></li>
+<li><a class="reference internal" href="#module-hutil.parsecppsig">hutil.parsecppsig module</a></li>
+<li><a class="reference internal" href="#module-hutil.pidfile">hutil.pidfile module</a></li>
+<li><a class="reference internal" href="#module-hutil.pyrpc">hutil.pyrpc module</a></li>
+<li><a class="reference internal" href="#module-hutil.username">hutil.username module</a></li>
+<li><a class="reference internal" href="#module-hutil.web">hutil.web module</a></li>
+<li><a class="reference internal" href="#module-hutil">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="hscp.html" title="previous chapter">hscp module</a></li>
+      <li>Next: <a href="images2gif.html" title="next chapter">images2gif module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/hutil.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/hutil.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

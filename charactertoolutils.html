@@ -1,0 +1,160 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>charactertoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="charpicker package" href="charpicker.html" />
+    <link rel="prev" title="channelwranglesnippet module" href="channelwranglesnippet.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-charactertoolutils">
+<span id="charactertoolutils-module"></span><h1>charactertoolutils module<a class="headerlink" href="#module-charactertoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="charactertoolutils.addPoseScopeValues">
+<code class="descclassname">charactertoolutils.</code><code class="descname">addPoseScopeValues</code><span class="sig-paren">(</span><em>attribname</em>, <em>geo</em>, <em>primgrouppattern</em>, <em>channels</em>, <em>pickscripts</em><span class="sig-paren">)</span><a class="headerlink" href="#charactertoolutils.addPoseScopeValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>adds the channels and pickscripts to the pose scope attribute on the primitives 
+specified by the primgrouppattern. attribname is a string, geo is a hou.Geometry object,
+primgrouppattern is a string (the pattern format is the same one used by the group
+fields on SOP nodes that take primitive selections), channels is a list of strings (full path
+to given channels - Ie. /obj/null1/tx), and pickscripts is a list of strings (in json format
+as specified in createPoseScopePickscript).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charactertoolutils.changePathRelToOwner">
+<code class="descclassname">charactertoolutils.</code><code class="descname">changePathRelToOwner</code><span class="sig-paren">(</span><em>sop_node</em>, <em>channels</em><span class="sig-paren">)</span><a class="headerlink" href="#charactertoolutils.changePathRelToOwner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of channel pattern strings and a hou.SopNode, expand to a
+list of paths relative to the owner object.  If add_warnings is True,
+then patterns which expand to nothing will get warnings added to
+sop_node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charactertoolutils.createPoseScopeAttrib">
+<code class="descclassname">charactertoolutils.</code><code class="descname">createPoseScopeAttrib</code><span class="sig-paren">(</span><em>attribname</em>, <em>geo</em><span class="sig-paren">)</span><a class="headerlink" href="#charactertoolutils.createPoseScopeAttrib" title="Permalink to this definition">¶</a></dt>
+<dd><p>create the pose scope attribute, if it does not already exist, using the given attribname 
+or the default ‘pose_scope’ otherwise. attribname should be a string and geo should be a
+hou.Geometry object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charactertoolutils.createPoseScopePickscript">
+<code class="descclassname">charactertoolutils.</code><code class="descname">createPoseScopePickscript</code><span class="sig-paren">(</span><em>label</em>, <em>language</em>, <em>script</em><span class="sig-paren">)</span><a class="headerlink" href="#charactertoolutils.createPoseScopePickscript" title="Permalink to this definition">¶</a></dt>
+<dd><p>create the correctly formatted json string for the pose scope pickscript.
+label, language, and script are all strings. The correct format is:
+{ “label”: “…”, “language”: “…”, “script”: “…” }</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charactertoolutils.genericPointMuscleTool">
+<code class="descclassname">charactertoolutils.</code><code class="descname">genericPointMuscleTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#charactertoolutils.genericPointMuscleTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Point Muscle asset and allows the user to select the 
+parent objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charactertoolutils.multiTypeSelectionTool">
+<code class="descclassname">charactertoolutils.</code><code class="descname">multiTypeSelectionTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>type_list</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charactertoolutils.multiTypeSelectionTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a list of node type descriptions that can be selected from
+when a shift click from a tool is detected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charactertoolutils.selectInteriorPoint">
+<code class="descclassname">charactertoolutils.</code><code class="descname">selectInteriorPoint</code><span class="sig-paren">(</span><em>method</em><span class="sig-paren">)</span><a class="headerlink" href="#charactertoolutils.selectInteriorPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Based on a point selection within the viewport, it returns the world 
+space coordinate of the center/interior of the selected geometry based 
+on either the viewing direction or the normal of the first intersection 
+point. If the selected point does not intersect any geometry, nothing 
+will be returned. The selection method (view or normal) must be 
+specified as an argument.
+Ie. import charactertoolutils as c</p>
+<blockquote>
+<div>view = c.placementMethod.get(‘view’)
+normal = c.placementMethod.get(‘normal’)
+view_pt = c.selectInteriorPoint(view)
+normal_pt = c.selectInteriorPoint(normal)</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="channelwranglesnippet.html" title="previous chapter">channelwranglesnippet module</a></li>
+      <li>Next: <a href="charpicker.html" title="next chapter">charpicker package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/charactertoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/charactertoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,779 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>charpicker package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="chopnettoolutils module" href="chopnettoolutils.html" />
+    <link rel="prev" title="charactertoolutils module" href="charactertoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="charpicker-package">
+<h1>charpicker package<a class="headerlink" href="#charpicker-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-charpicker.controlbutton">
+<span id="charpicker-controlbutton-module"></span><h2>charpicker.controlbutton module<a class="headerlink" href="#module-charpicker.controlbutton" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="charpicker.controlbutton.ControlButton">
+<em class="property">class </em><code class="descclassname">charpicker.controlbutton.</code><code class="descname">ControlButton</code><span class="sig-paren">(</span><em>parent</em>, <em>myId</em>, <em>init_edit_mode</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QToolButton</span></code></p>
+<p>Custom signals for control button class</p>
+<dl class="attribute">
+<dt id="charpicker.controlbutton.ControlButton.cbDeleteSignal">
+<code class="descname">cbDeleteSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.controlbutton.ControlButton.cbDeleteSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.controlbutton.ControlButton.cbMultiSelectionSignal">
+<code class="descname">cbMultiSelectionSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.controlbutton.ControlButton.cbMultiSelectionSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.controlbutton.ControlButton.cbNodesTriggeredSignal">
+<code class="descname">cbNodesTriggeredSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.controlbutton.ControlButton.cbNodesTriggeredSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.controlbutton.ControlButton.cbTriggeredSignal">
+<code class="descname">cbTriggeredSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.controlbutton.ControlButton.cbTriggeredSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.controlbutton.ControlButton.cbUnsavedChangesSignal">
+<code class="descname">cbUnsavedChangesSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.controlbutton.ControlButton.cbUnsavedChangesSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends delete signal when deletion is triggered.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.deselect">
+<code class="descname">deselect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.deselect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deselects all nodes associated with this button.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.mouseMoveEvent">
+<code class="descname">mouseMoveEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.mousePressEvent">
+<code class="descname">mousePressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles mouse press on button, depending on mode and
+modifiers, sends process to helper functions. Only accepts
+left mouse button for all actions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.mouseReleaseEvent">
+<code class="descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.removeButtonCallbacks">
+<code class="descname">removeButtonCallbacks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.removeButtonCallbacks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.select">
+<code class="descname">select</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects all of the nodes and sets the transform view if any. Emits this object
+as well as the keyboard modifier used to trigger it. This is used to handle 
+multiple selection / deselection by ‘tabview’</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.setBehaviorMode">
+<code class="descname">setBehaviorMode</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.setBehaviorMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles triggers from the default behavior sub menu.
+Checks against the cpglobals._PYS strings and sets the values to
+cpglobals._JSON strings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.setButtonColor">
+<code class="descname">setButtonColor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.setButtonColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens up the Qt color picker dialog and sets
+the style sheet to the returned hex color. The Qt dialog
+will return pure black if the user hits cancel, if that is the case
+revert the stylesheet to default</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.setButtonFromMap">
+<code class="descname">setButtonFromMap</code><span class="sig-paren">(</span><em>button_map</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.setButtonFromMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the button’s attributes based on the map read in from
+the JSON file. The attribute names are specified as globals with
+the prefix cpglobals._JSON.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.setButtonLabel">
+<code class="descname">setButtonLabel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.setButtonLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open dialog to input button label text</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.setNodePath">
+<code class="descname">setNodePath</code><span class="sig-paren">(</span><em>set_from_update=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.setNodePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the houdini node dialog, sets myNode, and breaks up the
+returned node name to set myCharPath and myControlPath
+set_from_update will be</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.controlbutton.ControlButton.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#charpicker.controlbutton.ControlButton.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlbutton.ControlButton.updateMyNode">
+<code class="descname">updateMyNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlbutton.ControlButton.updateMyNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple update method, used to reload the button’s node. should be called
+when charpath or controlpath is changed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-charpicker.controlslider">
+<span id="charpicker-controlslider-module"></span><h2>charpicker.controlslider module<a class="headerlink" href="#module-charpicker.controlslider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="charpicker.controlslider.ControlSlider">
+<em class="property">class </em><code class="descclassname">charpicker.controlslider.</code><code class="descname">ControlSlider</code><span class="sig-paren">(</span><em>parent</em>, <em>is_horizontal</em>, <em>myId</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<p>Custom signals for control button class</p>
+<dl class="attribute">
+<dt id="charpicker.controlslider.ControlSlider.csDeleteSignal">
+<code class="descname">csDeleteSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.controlslider.ControlSlider.csDeleteSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.controlslider.ControlSlider.csTriggeredSignal">
+<code class="descname">csTriggeredSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.controlslider.ControlSlider.csTriggeredSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.delete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.mouseMoveEvent">
+<code class="descname">mouseMoveEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles drag and drop for repositioning the button
+with absolute positioning. Only accepts right mouse button</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.mousePressEvent">
+<code class="descname">mousePressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles mouse press on button, depending on mode and
+modifiers, sends process to helper functions. Only accepts
+left mouse button for all actions.
+Needs to emit a tuple for the tabview to handle correctly. This is because
+controlbutton will use modifiers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.setLabel">
+<code class="descname">setLabel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Sets the text of the label widget. If it is currently invisible, shows it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.setParameter">
+<code class="descname">setParameter</code><span class="sig-paren">(</span><em>set_from_update=False</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.setParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the tree menu to select the parameter to link to. Optionally
+sets the parameter from update which will not open the menu and will 
+use myParmPath as the parameter. This is useful when myParmPath is changed
+outside of this widget. Updates the tooltip display text.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.setRange">
+<code class="descname">setRange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.setRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens an input dialog and sets the range of the slider values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.setSliderFromMap">
+<code class="descname">setSliderFromMap</code><span class="sig-paren">(</span><em>input_map</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.setSliderFromMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the slider’s parameters based on the map loaded from a file or HDA.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.controlslider.ControlSlider.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#charpicker.controlslider.ControlSlider.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.updateValueFromSlider">
+<code class="descname">updateValueFromSlider</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.updateValueFromSlider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the value of the spinbox based on the value of the slider.
+Since sliders can only have integer values, divides the slider’s value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.controlslider.ControlSlider.updateValueFromSpinbox">
+<code class="descname">updateValueFromSpinbox</code><span class="sig-paren">(</span><em>value</em>, <em>from_playbar_update=False</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.controlslider.ControlSlider.updateValueFromSpinbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the value of the parameter.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-charpicker.cpglobals">
+<span id="charpicker-cpglobals-module"></span><h2>charpicker.cpglobals module<a class="headerlink" href="#module-charpicker.cpglobals" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="charpicker.cpglobals.confirmDialog">
+<code class="descclassname">charpicker.cpglobals.</code><code class="descname">confirmDialog</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.cpglobals.confirmDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a confirm dialog with the options of “Save”, “Discard” and 
+“Cancel”. Returns the option number chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charpicker.cpglobals.errorDialog">
+<code class="descclassname">charpicker.cpglobals.</code><code class="descname">errorDialog</code><span class="sig-paren">(</span><em>main_message</em>, <em>additional_message=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.cpglobals.errorDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an error dialog with the given message(s) and return if OK was
+pressed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charpicker.cpglobals.inputDialog">
+<code class="descclassname">charpicker.cpglobals.</code><code class="descname">inputDialog</code><span class="sig-paren">(</span><em>text</em>, <em>title</em>, <em>initial_contents=''</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.cpglobals.inputDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a popup dialog with the given properties
+and return the result or None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charpicker.cpglobals.multiInputDialog">
+<code class="descclassname">charpicker.cpglobals.</code><code class="descname">multiInputDialog</code><span class="sig-paren">(</span><em>text</em>, <em>input_labels</em>, <em>title</em>, <em>initial_contents</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.cpglobals.multiInputDialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="charpicker.cpglobals.saveOptionsDialog">
+<code class="descclassname">charpicker.cpglobals.</code><code class="descname">saveOptionsDialog</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.cpglobals.saveOptionsDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a save options dialog where the user can choose to save the 
+layout to HDA or to file, or cancel. Returns the option number chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="charpicker.cpglobals.warningDialog">
+<code class="descclassname">charpicker.cpglobals.</code><code class="descname">warningDialog</code><span class="sig-paren">(</span><em>message</em>, <em>true_button='OK'</em>, <em>false_button='Cancel'</em>, <em>show_cancel=True</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.cpglobals.warningDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a warning dialog with the given properties
+and return if true_button or OK was pressed.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-charpicker.mainwidget">
+<span id="charpicker-mainwidget-module"></span><h2>charpicker.mainwidget module<a class="headerlink" href="#module-charpicker.mainwidget" title="Permalink to this headline">¶</a></h2>
+<p>This is the top most parent widget for the character picker. It handles loading
+and saving, and setting up the child widgets. It also handles triggering <cite>Edit Mode</cite>.</p>
+<dl class="class">
+<dt id="charpicker.mainwidget.CharacterPicker">
+<em class="property">class </em><code class="descclassname">charpicker.mainwidget.</code><code class="descname">CharacterPicker</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QFrame</span></code></p>
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.addCharacter">
+<code class="descname">addCharacter</code><span class="sig-paren">(</span><em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.addCharacter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.cleanup">
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.cleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is called by the Python Panel when the interface is
+about to be destroyed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.clearAllTabs">
+<code class="descname">clearAllTabs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.clearAllTabs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears all of the tabs from myTabWindow and deletes
+all children widgets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.createJSONString">
+<code class="descname">createJSONString</code><span class="sig-paren">(</span><em>pretty_print=False</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.createJSONString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterates through all of the tabs and constructs the json encoded string given
+all of the parameters of the child widgets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.dragEnterEvent">
+<code class="descname">dragEnterEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.dragEnterEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.dropEvent">
+<code class="descname">dropEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.dropEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.handleHDAEvent">
+<code class="descname">handleHDAEvent</code><span class="sig-paren">(</span><em>event_type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.handleHDAEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback handler for HDA events.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.handleHipFileEvent">
+<code class="descname">handleHipFileEvent</code><span class="sig-paren">(</span><em>event_type</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.handleHipFileEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback handler for .hip file events.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.historyAction">
+<code class="descname">historyAction</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.historyAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when an item from the history list is selected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.loadFromHDA">
+<code class="descname">loadFromHDA</code><span class="sig-paren">(</span><em>path=None</em>, <em>warn=True</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.loadFromHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads in the json string from the supplied HDA</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.loadFromJSONFile">
+<code class="descname">loadFromJSONFile</code><span class="sig-paren">(</span><em>fileName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.loadFromJSONFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads in the json string from the supplied file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.menuActions">
+<code class="descname">menuActions</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.menuActions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the menu actions for the main menu bar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.promptToSave">
+<code class="descname">promptToSave</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.promptToSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt the user to save the current character picker layout
+if there are unsaved changes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.quickSave">
+<code class="descname">quickSave</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.quickSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the current character layout to wherever it was loaded from or
+last saved to.  If there is no save destination, the user will be
+prompted with a dialog. Returns True if save was successful.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the pose library to its default state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.saveToFile">
+<code class="descname">saveToFile</code><span class="sig-paren">(</span><em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.saveToFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the json string to a file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.saveToHDA">
+<code class="descname">saveToHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.saveToHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the json string to the section in the HDA</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.selectCharacter">
+<code class="descname">selectCharacter</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.selectCharacter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.setEditModeCheckbox">
+<code class="descname">setEditModeCheckbox</code><span class="sig-paren">(</span><em>is_active</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.setEditModeCheckbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the check state of the checkbox widget according to
+the state of Edit mode</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.showHelp">
+<code class="descname">showHelp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.showHelp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.mainwidget.CharacterPicker.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.mainwidget.CharacterPicker.toggleEditMode">
+<code class="descname">toggleEditMode</code><span class="sig-paren">(</span><em>is_active=None</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.mainwidget.CharacterPicker.toggleEditMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the edit mode attribute for ALL sub widgets and displays 
+or hides all of the related content, i.e. the button drop down menu and the
+TabView tool bar. Both the TabView widget and ControlButton widget have <cite>myEditMode</cite>
+boolean attributes that have to be updated in order to activate the menu displays.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-charpicker.tabview">
+<span id="charpicker-tabview-module"></span><h2>charpicker.tabview module<a class="headerlink" href="#module-charpicker.tabview" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="charpicker.tabview.TabView">
+<em class="property">class </em><code class="descclassname">charpicker.tabview.</code><code class="descname">TabView</code><span class="sig-paren">(</span><em>parent</em>, <em>parent_tab_name</em>, <em>_id</em>, <em>splitter_index</em>, <em>character_path</em>, <em>init_edit_mode</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QLabel</span></code></p>
+<dl class="method">
+<dt id="charpicker.tabview.TabView.addNewButton">
+<code class="descname">addNewButton</code><span class="sig-paren">(</span><em>called_from_read=False</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.addNewButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new control button, adds it to the dictionary,
+and attaches the appropriate signals. Adds all of the groups
+in this tab to the button with their state set to False.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.addNewSlider">
+<code class="descname">addNewSlider</code><span class="sig-paren">(</span><em>is_horizontal=True</em>, <em>called_from_read=False</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.addNewSlider" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.deleteButton">
+<code class="descname">deleteButton</code><span class="sig-paren">(</span><em>id_number</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.deleteButton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the button from the dictionary, makes it invisible
+(possibly not necessary), and deletes it</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.deleteSlider">
+<code class="descname">deleteSlider</code><span class="sig-paren">(</span><em>id_number</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.deleteSlider" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.dragMoveEvent">
+<code class="descname">dragMoveEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.dragMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Repositions the current button based on the current mouse position.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.mousePressEvent">
+<code class="descname">mousePressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles clicks on the image/backgound. If the user clicks the backgound
+the selection is reset and all highlights are removed. If the user
+shift clicks the background, all of the buttons are selected.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.tabview.TabView.myEditMode">
+<code class="descname">myEditMode</code><em class="property"> = False</em><a class="headerlink" href="#charpicker.tabview.TabView.myEditMode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.refreshSelection">
+<code class="descname">refreshSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.refreshSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reselects all the currently selected nodes. This method should be used
+when node paths are updated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.removeAllButtonCallbacks">
+<code class="descname">removeAllButtonCallbacks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.removeAllButtonCallbacks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.resetSelectionHighlights">
+<code class="descname">resetSelectionHighlights</code><span class="sig-paren">(</span><em>multiple_selection</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.resetSelectionHighlights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the style sheet of the buttons in this view
+if the user is not selecting multiple buttons or using control groups.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.resetSharedNodes">
+<code class="descname">resetSharedNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.resetSharedNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function resets the highlights of all of the nodes and will reapply
+them to selected controls. This is activated when the user ctrl clicks a node
+and removes it from the selection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.resizeView">
+<code class="descname">resizeView</code><span class="sig-paren">(</span><em>resize_value</em>, <em>change_buttons=True</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.resizeView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resizes the bacgkround image based on the scaling value
+and repositions the buttons based on their relative positions
+If reading from file, change_buttons will be False because the button
+positions are directly written out to the save file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.setBackgroundAction">
+<code class="descname">setBackgroundAction</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.setBackgroundAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the actions from the Set Background menu.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.setBackgroundImage">
+<code class="descname">setBackgroundImage</code><span class="sig-paren">(</span><em>b64_array</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.setBackgroundImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the background image data and redraws the image. If any of the
+buttons are outside the view of the image, they will be moved.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.setChanged">
+<code class="descname">setChanged</code><span class="sig-paren">(</span><em>has_changed</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.setChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.setCurrentWidget">
+<code class="descname">setCurrentWidget</code><span class="sig-paren">(</span><em>widget_mod_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.setCurrentWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for setting the current widget. This is necessary for moving the
+widgets around inside of the tabview.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.setImageFromFile">
+<code class="descname">setImageFromFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.setImageFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens houdini file browser, reads in the file as a base64
+array and sets the background.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.setImageURL">
+<code class="descname">setImageURL</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.setImageURL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the background given the input URL. 
+ADD CHECKS FOR INVALID URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.setImageViewport">
+<code class="descname">setImageViewport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.setImageViewport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the open viewport and saves out a temporary file.
+Reads in that file and converts to a base64 array. Passes that file
+to set background and deletes the written out image.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabview.TabView.showSharedNodes">
+<code class="descname">showSharedNodes</code><span class="sig-paren">(</span><em>current_button</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabview.TabView.showSharedNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highlights all of the other control buttons that share a node with
+current_button’s node selection.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.tabview.TabView.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#charpicker.tabview.TabView.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.tabview.TabView.tvTriggeredSignal">
+<code class="descname">tvTriggeredSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.tabview.TabView.tvTriggeredSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.tabview.TabView.tvUnsavedChangesSignal">
+<code class="descname">tvUnsavedChangesSignal</code><em class="property"> = &lt;PySide2.QtCore.Signal object&gt;</em><a class="headerlink" href="#charpicker.tabview.TabView.tvUnsavedChangesSignal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-charpicker.tabwindow">
+<span id="charpicker-tabwindow-module"></span><h2>charpicker.tabwindow module<a class="headerlink" href="#module-charpicker.tabwindow" title="Permalink to this headline">¶</a></h2>
+<p>This widget is the parent widget for all of the TabViews. It manages the current tab, 
+deleting tabs, and adding tabs. When the JSON file is read in by the Main widget, this module
+will handle creating the tabs within the QTabWidget</p>
+<dl class="class">
+<dt id="charpicker.tabwindow.TabWindow">
+<em class="property">class </em><code class="descclassname">charpicker.tabwindow.</code><code class="descname">TabWindow</code><span class="sig-paren">(</span><em>init_edit_mode</em>, <em>quick_save_callback</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.addNewTab">
+<code class="descname">addNewTab</code><span class="sig-paren">(</span><em>is_single_view</em>, <em>new_tab_name=None</em>, <em>file_read_map=None</em>, <em>sizes=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.addNewTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new tab to the tab window. If file_read_map is none, then the
+tab is being added by the user, otherwise it will be the map read in from the JSON
+file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.cleanUpUponClose">
+<code class="descname">cleanUpUponClose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.cleanUpUponClose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.deleteTab">
+<code class="descname">deleteTab</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.deleteTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the currently opened tab. This method is called when the close 
+button on the tab widget is clicked.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.getTabViewList">
+<code class="descname">getTabViewList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.getTabViewList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.handleContextMenu">
+<code class="descname">handleContextMenu</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.handleContextMenu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.mousePressEvent">
+<code class="descname">mousePressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.setAllTabViewsChanged">
+<code class="descname">setAllTabViewsChanged</code><span class="sig-paren">(</span><em>has_changed</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.setAllTabViewsChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.setChanged">
+<code class="descname">setChanged</code><span class="sig-paren">(</span><em>has_changed</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.setChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.setCurrentIndex">
+<code class="descname">setCurrentIndex</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.setCurrentIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.setCurrentView">
+<code class="descname">setCurrentView</code><span class="sig-paren">(</span><em>current_view</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.setCurrentView" title="Permalink to this definition">¶</a></dt>
+<dd><p>This slot sets the current tab view when the tab is clicked. This is used 
+when a tabwindow has multiple children TabViews in split view widgets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.setEditMode">
+<code class="descname">setEditMode</code><span class="sig-paren">(</span><em>edit_mode</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.setEditMode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.showContextMenu">
+<code class="descname">showContextMenu</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.showContextMenu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="charpicker.tabwindow.TabWindow.staticMetaObject">
+<code class="descname">staticMetaObject</code><em class="property"> = &lt;PySide2.QtCore.QMetaObject object&gt;</em><a class="headerlink" href="#charpicker.tabwindow.TabWindow.staticMetaObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="charpicker.tabwindow.TabWindow.tabChanged">
+<code class="descname">tabChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#charpicker.tabwindow.TabWindow.tabChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets myCurrentTabView to the first child TabView widget of the
+currently open tab.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-charpicker">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-charpicker" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">charpicker package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-charpicker.controlbutton">charpicker.controlbutton module</a></li>
+<li><a class="reference internal" href="#module-charpicker.controlslider">charpicker.controlslider module</a></li>
+<li><a class="reference internal" href="#module-charpicker.cpglobals">charpicker.cpglobals module</a></li>
+<li><a class="reference internal" href="#module-charpicker.mainwidget">charpicker.mainwidget module</a></li>
+<li><a class="reference internal" href="#module-charpicker.tabview">charpicker.tabview module</a></li>
+<li><a class="reference internal" href="#module-charpicker.tabwindow">charpicker.tabwindow module</a></li>
+<li><a class="reference internal" href="#module-charpicker">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="charactertoolutils.html" title="previous chapter">charactertoolutils module</a></li>
+      <li>Next: <a href="chopnettoolutils.html" title="next chapter">chopnettoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/charpicker.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/charpicker.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

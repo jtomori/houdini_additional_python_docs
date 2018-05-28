@@ -1,0 +1,532 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>doptoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dopwiretoolutils module" href="dopwiretoolutils.html" />
+    <link rel="prev" title="dopstatictoolutils module" href="dopstatictoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-doptoolutils">
+<span id="doptoolutils-module"></span><h1>doptoolutils module<a class="headerlink" href="#module-doptoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="doptoolutils.ObjectTypeInfo">
+<em class="property">class </em><code class="descclassname">doptoolutils.</code><code class="descname">ObjectTypeInfo</code><a class="headerlink" href="#doptoolutils.ObjectTypeInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.addMeltOutputProcessing">
+<code class="descclassname">doptoolutils.</code><code class="descname">addMeltOutputProcessing</code><span class="sig-paren">(</span><em>dopobjectnode</em>, <em>inputnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.addMeltOutputProcessing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.addObjectToSolver">
+<code class="descclassname">doptoolutils.</code><code class="descname">addObjectToSolver</code><span class="sig-paren">(</span><em>dopobjectnode</em>, <em>solvernode</em>, <em>mergeobjects</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.addObjectToSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a DOP Object to an existing DOP Solver node. This function
+creates a merge node if necessary.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.addTemperatureToEmitColor">
+<code class="descclassname">doptoolutils.</code><code class="descname">addTemperatureToEmitColor</code><span class="sig-paren">(</span><em>inputnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.addTemperatureToEmitColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.addTemperatureToViscosity">
+<code class="descclassname">doptoolutils.</code><code class="descname">addTemperatureToViscosity</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>solvernode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.addTemperatureToViscosity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.buildControlNull">
+<code class="descclassname">doptoolutils.</code><code class="descname">buildControlNull</code><span class="sig-paren">(</span><em>ownernode</em>, <em>name</em>, <em>parmlist</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.buildControlNull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a null of the given name and coloured a pleasant blue.
+Then populates it with parmlist, a list of tuples of
+(type, name, label, vectorsize, default)
+type is a string from ‘toggle’, ‘string’, ‘int’, ‘float’.
+default must be a tuple.
+Resulting node returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.checkDopNetworkIsPlayer">
+<code class="descclassname">doptoolutils.</code><code class="descname">checkDopNetworkIsPlayer</code><span class="sig-paren">(</span><em>dopnet</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.checkDopNetworkIsPlayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.chooseImportNodeForDistribution">
+<code class="descclassname">doptoolutils.</code><code class="descname">chooseImportNodeForDistribution</code><span class="sig-paren">(</span><em>creator</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.chooseImportNodeForDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets the user choose a node that is importing the given creator node.</p>
+<p>Returns None if there are no such nodes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.convertToDeformingObject">
+<code class="descclassname">doptoolutils.</code><code class="descname">convertToDeformingObject</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>isdeforming</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.convertToDeformingObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a StaticObject DOP setup for deforming geometry.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.convertToGrains">
+<code class="descclassname">doptoolutils.</code><code class="descname">convertToGrains</code><span class="sig-paren">(</span><em>dopobjectnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.convertToGrains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Customize particle fluid dopnet for grains</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.createLavaMaterial">
+<code class="descclassname">doptoolutils.</code><code class="descname">createLavaMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.createLavaMaterial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.createNewDopNetwork">
+<code class="descclassname">doptoolutils.</code><code class="descname">createNewDopNetwork</code><span class="sig-paren">(</span><em>root=&lt;hou.Node at /obj&gt;</em>, <em>name=None</em>, <em>init_dopnet=True</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.createNewDopNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the AutoDopNetwork.</p>
+<p>By default, the dop network is created at ‘/obj’ with the name
+‘AutoDopNetwork’.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.createNewSimulation">
+<code class="descclassname">doptoolutils.</code><code class="descname">createNewSimulation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.createNewSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is called by the Create New Simulation menu button
+under the simulation (brain) icon.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.createObjectImportingDop">
+<code class="descclassname">doptoolutils.</code><code class="descname">createObjectImportingDop</code><span class="sig-paren">(</span><em>dopobjectnode</em>, <em>objname</em>, <em>sopnode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.createObjectImportingDop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new object that will hold a DOP import SOP for pulling
+the infomation from a DOP object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.createSolver">
+<code class="descclassname">doptoolutils.</code><code class="descname">createSolver</code><span class="sig-paren">(</span><em>dopsolvertype</em>, <em>mergeobjects</em>, <em>secondarysolvers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.createSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a DOP Solver node for the specified solver type. If the
+mergeobjects parameter is True, then all object for this solver
+type should be fed through the same solver node, and so we will
+return any existing DOP Solver node of this type. Otherwise we
+create a new solver node for each object.
+The secondarysolvers parameter specifies a list of additional solver
+types to use when searching for an existing solver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.dopModifiersRemoveFromSimulation">
+<code class="descclassname">doptoolutils.</code><code class="descname">dopModifiersRemoveFromSimulation</code><span class="sig-paren">(</span><em>dopmodifiers</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.dopModifiersRemoveFromSimulation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.dopObjectsRemoveFromSimulation">
+<code class="descclassname">doptoolutils.</code><code class="descname">dopObjectsRemoveFromSimulation</code><span class="sig-paren">(</span><em>dopobjects</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.dopObjectsRemoveFromSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all specified DOP Objects from the simulation. This involves
+deleting DOP nodes associated with these DOP Object, and deleting
+any SOP nodes that extract information about these DOP Objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.enforceWiringOrder">
+<code class="descclassname">doptoolutils.</code><code class="descname">enforceWiringOrder</code><span class="sig-paren">(</span><em>firstnode</em>, <em>secondnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.enforceWiringOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mandates that first node is to the left of second node in
+the merge node that first accepts the two instances.
+One trick is that we want this in the direction of
+the displayNode, this simplifies the problem a fair bit</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.ensureAllOrNoneObjectsListed">
+<code class="descclassname">doptoolutils.</code><code class="descname">ensureAllOrNoneObjectsListed</code><span class="sig-paren">(</span><em>dopobjects</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.ensureAllOrNoneObjectsListed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go through every selected DOP object and make sure that
+for each creator DOP node, either all or none of the objects on
+that node have been selected.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.findOrCreateMergeInput">
+<code class="descclassname">doptoolutils.</code><code class="descname">findOrCreateMergeInput</code><span class="sig-paren">(</span><em>solvernode</em>, <em>inputnum</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.findOrCreateMergeInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a merge node as inputnum input to the solvernode.  If a
+merge node already exists, return it.  If a non merge node
+exists, it is made the first input of the new merge node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.findOrCreateNamedMerge">
+<code class="descclassname">doptoolutils.</code><code class="descname">findOrCreateNamedMerge</code><span class="sig-paren">(</span><em>solvernode</em>, <em>mergetype</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.findOrCreateNamedMerge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a merge node as an input to the given solvernode.
+This function tries to resolve the different meanings of
+green inputs as they aren’t always at the same absolute
+offset.</p>
+<p>Valid mergetypes are pre,advect, vel, post, and force.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.findSolverInInput">
+<code class="descclassname">doptoolutils.</code><code class="descname">findSolverInInput</code><span class="sig-paren">(</span><em>dopnode</em>, <em>solvertype</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.findSolverInInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a node of the given solver type attached to the inputs
+of dopnode.  Will detect if the dopnode is a multisolver, in
+which case the first input is ignored.
+This function looks for node type name component matches, which means 
+that if solvertype specifies only a basename, eg ‘hda’, then 
+it will also find higher versions and operators in non-global namespace,
+eg ‘hda::1.5’, ‘userx::hda’, ‘usery::hda::1.2’, etc.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.findSolverNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">findSolverNode</code><span class="sig-paren">(</span><em>dopnode</em>, <em>solvertype</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.findSolverNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks all the ouputs of dopnode to see if their is a node
+of solver type.  It also, however, will detect multisolvers
+and then chase up their solver branches looking
+for any solvers attached of this type.
+This function looks for a node whose type base name matches the given
+solvertype, which means that, for example, solvertype ‘hda’ will try 
+to find higher versions and operators in non-global namespace as well,
+eg ‘hda::1.5’, ‘userx::hda’, ‘usery::hda::1.5’, etc.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.genericConvertToDopObject">
+<code class="descclassname">doptoolutils.</code><code class="descname">genericConvertToDopObject</code><span class="sig-paren">(</span><em>objectnode</em>, <em>dopobjecttype</em>, <em>nodename</em>, <em>exact_node_type=True</em>, <em>nosopcooking=False</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.genericConvertToDopObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a DOP Object from a scene level object. The specific type
+of DOP Object to create is determined by the dopobjecttype parameter,
+which is the name od a DOP node type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.genericDopConverterTool">
+<code class="descclassname">doptoolutils.</code><code class="descname">genericDopConverterTool</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>dopobjecttype</em>, <em>nodename</em>, <em>prompt=None</em>, <em>exact_node_type=True</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.genericDopConverterTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates DOP Objects of a particular type from a scene level object
+selection.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.genericDopFilterCreate">
+<code class="descclassname">doptoolutils.</code><code class="descname">genericDopFilterCreate</code><span class="sig-paren">(</span><em>dopobjects</em>, <em>nodetypename</em>, <em>nodename</em>, <em>setgroup</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.genericDopFilterCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a generic DOP node that modifies a group of DOP Objects.
+This includes most forces like Gravity and Fan, as well as many
+other simple DOP nodes which don’t require extra selections or
+user input.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.genericDopFilterTool">
+<code class="descclassname">doptoolutils.</code><code class="descname">genericDopFilterTool</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>nodetypename</em>, <em>nodename</em>, <em>prompt=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.genericDopFilterTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generic tool for creating DOP nodes that modify a group of DOP
+Objects. This function prompts the user to select a group of DOP
+Objects, then creates the filter DOP node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.genericDopObjectImport">
+<code class="descclassname">doptoolutils.</code><code class="descname">genericDopObjectImport</code><span class="sig-paren">(</span><em>dopobjectnode</em>, <em>objectnode</em>, <em>sopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.genericDopObjectImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a DOP Import SOP for pulling the information from a DOP
+Object back into the source scene level object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.genericDopObjectInit">
+<code class="descclassname">doptoolutils.</code><code class="descname">genericDopObjectInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>objectnode</em>, <em>sopnode</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.genericDopObjectInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic initialization of dop objects.  Creates a dopimport
+and sets up the usetransform flag.  Returns the resulting
+dopimport.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.genericSetDopObjectActiveState">
+<code class="descclassname">doptoolutils.</code><code class="descname">genericSetDopObjectActiveState</code><span class="sig-paren">(</span><em>info</em>, <em>dopobject</em>, <em>active</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.genericSetDopObjectActiveState" title="Permalink to this definition">¶</a></dt>
+<dd><p>There is no standard method for changing the active state of a DOP
+object. Only specialized versions of this function can actually
+change an object’s active state.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getCurrentDopNetwork">
+<code class="descclassname">doptoolutils.</code><code class="descname">getCurrentDopNetwork</code><span class="sig-paren">(</span><em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getCurrentDopNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the DOP Network that is to contain the automatically 
+generated DOP nodes for our interactive DOP tools.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getDopDataCreator">
+<code class="descclassname">doptoolutils.</code><code class="descname">getDopDataCreator</code><span class="sig-paren">(</span><em>dopdata</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getDopDataCreator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the DOP node that created the supplied piece of DOP data.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getDopNodeSolverNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">getDopNodeSolverNode</code><span class="sig-paren">(</span><em>dopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getDopNodeSolverNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getDopObjectCreator">
+<code class="descclassname">doptoolutils.</code><code class="descname">getDopObjectCreator</code><span class="sig-paren">(</span><em>dopobject</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getDopObjectCreator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the DOP node that created the supplied DOP Object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getDopObjectSolverNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">getDopObjectSolverNode</code><span class="sig-paren">(</span><em>dopobject</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getDopObjectSolverNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node for the solver attached to a given DOP Object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getGroupString">
+<code class="descclassname">doptoolutils.</code><code class="descname">getGroupString</code><span class="sig-paren">(</span><em>dopobjects</em>, <em>useglob</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getGroupString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the selected DOP objects are all the objects in the
+simulation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getNodesImportingCreator">
+<code class="descclassname">doptoolutils.</code><code class="descname">getNodesImportingCreator</code><span class="sig-paren">(</span><em>creator_object</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getNodesImportingCreator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all the nodes that are importing the given object and have the
+the render flag set.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getNodesToDestroyWhenRemovingModifiers">
+<code class="descclassname">doptoolutils.</code><code class="descname">getNodesToDestroyWhenRemovingModifiers</code><span class="sig-paren">(</span><em>dopmodifiers</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getNodesToDestroyWhenRemovingModifiers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getObjectSolverType">
+<code class="descclassname">doptoolutils.</code><code class="descname">getObjectSolverType</code><span class="sig-paren">(</span><em>dopobject</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getObjectSolverType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the DOP data type for the solver attached to a
+given DOP Object.
+This will return the multisolver, if present, so likely you should
+use hasObjectSolverType instead.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getSimulatedDopNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">getSimulatedDopNode</code><span class="sig-paren">(</span><em>objectnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getSimulatedDopNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if the object is associated with a DOP object.
+If so, returns the DOP Node it is associated with.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getSimulatedDopObject">
+<code class="descclassname">doptoolutils.</code><code class="descname">getSimulatedDopObject</code><span class="sig-paren">(</span><em>objectnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getSimulatedDopObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see if the object is associated with a DOP object.
+If so, returns the DOP Object it is associated with.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getSolverPosition">
+<code class="descclassname">doptoolutils.</code><code class="descname">getSolverPosition</code><span class="sig-paren">(</span><em>dopsolvernode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getSolverPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the supplied solver in the standard ordering 
+of DOP Solver types. This ordering is designed to provide the
+best results in the majority of situations for having solvers that
+interact with each other.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.getSourceObjectNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">getSourceObjectNode</code><span class="sig-paren">(</span><em>dopobject</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.getSourceObjectNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the top level DOP node that created the supplied DOP Object.
+This starts with the DOP node that created the object, but this will
+almost always be an Empty Object DOP. From that starting point we
+climb up out of digital assets to find the node we really want (such
+as the RBD Object node).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.hasObjectSolverType">
+<code class="descclassname">doptoolutils.</code><code class="descname">hasObjectSolverType</code><span class="sig-paren">(</span><em>dopobject</em>, <em>searchsolvertype</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.hasObjectSolverType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the given dop data type exists as solver data
+on the given dop object.  This includes all subdata of the Solver,
+so this works through multisolvers</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.initDopNetwork">
+<code class="descclassname">doptoolutils.</code><code class="descname">initDopNetwork</code><span class="sig-paren">(</span><em>dopnet</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.initDopNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes a dopnetwork with gravity</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.isObjectSimulated">
+<code class="descclassname">doptoolutils.</code><code class="descname">isObjectSimulated</code><span class="sig-paren">(</span><em>objectnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.isObjectSimulated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the object is already associated with a DOP object.
+Any geometry with a dopobject attribute and an DOP Import SOP in
+the SOP cook chain is assumed to be simulated. Empty geometry
+isn’t simulated.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.makeMoltenLiquid">
+<code class="descclassname">doptoolutils.</code><code class="descname">makeMoltenLiquid</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>solvernode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.makeMoltenLiquid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.mergeSolver">
+<code class="descclassname">doptoolutils.</code><code class="descname">mergeSolver</code><span class="sig-paren">(</span><em>solvernode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.mergeSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects a DOP Solver node into the final merge node in a generated
+DOP Network. Solvers are connected in a particular order based on
+the solver type, so we can’t simply connect the solver to the merge
+node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.nodeFluidSolverNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">nodeFluidSolverNode</code><span class="sig-paren">(</span><em>dopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.nodeFluidSolverNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Heuristics to determine the fluid solver node attached
+most directly to the given dopnode.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.nodeFluidType">
+<code class="descclassname">doptoolutils.</code><code class="descname">nodeFluidType</code><span class="sig-paren">(</span><em>dopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.nodeFluidType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Heuristics to determine the type of fluid you have.
+Results are particlefluid, fluid, smoke, fire.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.nodeHasSolverNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">nodeHasSolverNode</code><span class="sig-paren">(</span><em>dopnode</em>, <em>solvertype</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.nodeHasSolverNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the given dop node has the given
+solver connected as a descendent.  This is likely the safest
+way to see if something is a particle fluid, for example.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.objectFluidType">
+<code class="descclassname">doptoolutils.</code><code class="descname">objectFluidType</code><span class="sig-paren">(</span><em>dopobject</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.objectFluidType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Heuristics to determine the type of fluid you have.
+Results are particlefluid, fluid, smoke, fire.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.objectHasGeometry">
+<code class="descclassname">doptoolutils.</code><code class="descname">objectHasGeometry</code><span class="sig-paren">(</span><em>objectnode</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.objectHasGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a scene level object node contains any SOP nodes, and
+therefore creates any geometry.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.objectHasSolverNode">
+<code class="descclassname">doptoolutils.</code><code class="descname">objectHasSolverNode</code><span class="sig-paren">(</span><em>dopobject</em>, <em>solvertype</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.objectHasSolverNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the given dop object’s node creator has the given
+solver connected as a descendent.  This is likely the safest
+way to see if something is a particle fluid, for example.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.particlefluidDopInit">
+<code class="descclassname">doptoolutils.</code><code class="descname">particlefluidDopInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.particlefluidDopInit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.particlefluidDopObjectInit">
+<code class="descclassname">doptoolutils.</code><code class="descname">particlefluidDopObjectInit</code><span class="sig-paren">(</span><em>info</em>, <em>dopobjectnode</em>, <em>solvernode</em>, <em>objectnode</em>, <em>sopnode</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.particlefluidDopObjectInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the particle fluid specific parameters
+Note that info, objectnode, and sopnode may be None.
+A None for objectnode implies an empty fluid should be created.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.removeDopObjectsFromSimulation">
+<code class="descclassname">doptoolutils.</code><code class="descname">removeDopObjectsFromSimulation</code><span class="sig-paren">(</span><em>dopnode</em>, <em>dopobjects</em>, <em>changes</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.removeDopObjectsFromSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function destroys nodes or changes their group fields to
+eliminate all processing of the objects being removed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.selectedDopObjectsRemoveFromSimulation">
+<code class="descclassname">doptoolutils.</code><code class="descname">selectedDopObjectsRemoveFromSimulation</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>prompt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.selectedDopObjectsRemoveFromSimulation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.selectedDopObjectsSetActiveState">
+<code class="descclassname">doptoolutils.</code><code class="descname">selectedDopObjectsSetActiveState</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>active</em>, <em>prompt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.selectedDopObjectsSetActiveState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the active state of a group of DOP Objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="doptoolutils.wireNodeAtEnd">
+<code class="descclassname">doptoolutils.</code><code class="descname">wireNodeAtEnd</code><span class="sig-paren">(</span><em>dopnet</em>, <em>newdopnode</em>, <em>set_current=True</em><span class="sig-paren">)</span><a class="headerlink" href="#doptoolutils.wireNodeAtEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wires up the node after the current display DOP, but keeps it above the
+Output DOP (if one exists).</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dopstatictoolutils.html" title="previous chapter">dopstatictoolutils module</a></li>
+      <li>Next: <a href="dopwiretoolutils.html" title="next chapter">dopwiretoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/doptoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/doptoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,237 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>parmutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="particletoolutils module" href="particletoolutils.html" />
+    <link rel="prev" title="opnode_sum module" href="opnode_sum.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-parmutils">
+<span id="parmutils-module"></span><h1>parmutils module<a class="headerlink" href="#module-parmutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="parmutils.addParmAndContainingFolders">
+<code class="descclassname">parmutils.</code><code class="descname">addParmAndContainingFolders</code><span class="sig-paren">(</span><em>ptg</em>, <em>parm_template</em>, <em>folder_labels_or_templates</em>, <em>folder_type=folderType.Tabs</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.addParmAndContainingFolders" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.collectParms">
+<code class="descclassname">parmutils.</code><code class="descname">collectParms</code><span class="sig-paren">(</span><em>nodes</em>, <em>parm_name</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.collectParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.decodeConditional">
+<code class="descclassname">parmutils.</code><code class="descname">decodeConditional</code><span class="sig-paren">(</span><em>cond</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.decodeConditional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decodes the conditional string into a list of groups containing lists
+of conditions.</p>
+<p>The conditions consist of a list in the form [parm, op, value]</p>
+<p>For example, { x != 0 } { y &gt; 1 z 3 } decodes to:</p>
+<dl class="docutils">
+<dt>[</dt>
+<dd><dl class="first docutils">
+<dt>[</dt>
+<dd>[‘x’, ‘!=’, ‘0’]</dd>
+</dl>
+<p>],
+[</p>
+<blockquote>
+<div>[‘y’, ‘&gt;’, ‘1’],
+[‘z’, ‘==’, ‘3’]</div></blockquote>
+<p class="last">]</p>
+</dd>
+</dl>
+<p>]</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.encodeConditional">
+<code class="descclassname">parmutils.</code><code class="descname">encodeConditional</code><span class="sig-paren">(</span><em>cond</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.encodeConditional" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.getAllParmTemplates">
+<code class="descclassname">parmutils.</code><code class="descname">getAllParmTemplates</code><span class="sig-paren">(</span><em>group_or_folder</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.getAllParmTemplates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.getContainingFolderLabels">
+<code class="descclassname">parmutils.</code><code class="descname">getContainingFolderLabels</code><span class="sig-paren">(</span><em>parm_template_group</em>, <em>parm_name</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.getContainingFolderLabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.getContainingFolders">
+<code class="descclassname">parmutils.</code><code class="descname">getContainingFolders</code><span class="sig-paren">(</span><em>parm_template_group</em>, <em>parm_name</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.getContainingFolders" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.getDeepestCommonFolder">
+<code class="descclassname">parmutils.</code><code class="descname">getDeepestCommonFolder</code><span class="sig-paren">(</span><em>folder_hierarchies</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.getDeepestCommonFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of folder strings (slash separated folder labels),
+return the string of deepest common folders.</p>
+<p>If the list is empty an empty string is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.getFoldersFromString">
+<code class="descclassname">parmutils.</code><code class="descname">getFoldersFromString</code><span class="sig-paren">(</span><em>folder_string</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.getFoldersFromString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turns a list of slash separated folder labels into  a list of
+FolderParmTemplates</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.moveParameterToFolder">
+<code class="descclassname">parmutils.</code><code class="descname">moveParameterToFolder</code><span class="sig-paren">(</span><em>ptg</em>, <em>parm_name</em>, <em>in_folders</em>, <em>folder_type=folderType.Tabs</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.moveParameterToFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the parameter to the folders specified by in_folders. The parameter
+is always moved to the bottom of it’s folder.</p>
+<p>folder_type sets the type of newly added folders.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.parmPrepend">
+<code class="descclassname">parmutils.</code><code class="descname">parmPrepend</code><span class="sig-paren">(</span><em>nodes</em>, <em>parm_name</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.parmPrepend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.parmReplace">
+<code class="descclassname">parmutils.</code><code class="descname">parmReplace</code><span class="sig-paren">(</span><em>nodes</em>, <em>parm_name</em>, <em>old_string</em>, <em>new_string</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.parmReplace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.parmSub">
+<code class="descclassname">parmutils.</code><code class="descname">parmSub</code><span class="sig-paren">(</span><em>nodes</em>, <em>parm_name</em>, <em>pattern</em>, <em>new_string</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.parmSub" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.printFolderHierarchy">
+<code class="descclassname">parmutils.</code><code class="descname">printFolderHierarchy</code><span class="sig-paren">(</span><em>ptg</em>, <em>level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.printFolderHierarchy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.replaceParm">
+<code class="descclassname">parmutils.</code><code class="descname">replaceParm</code><span class="sig-paren">(</span><em>ptg</em>, <em>indices</em>, <em>parm_template</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.replaceParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the parm at ‘indices’ with ‘parm_template’ and updates all
+containing folders</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.selectLocalAttribAndCreateReferencesFromParms">
+<code class="descclassname">parmutils.</code><code class="descname">selectLocalAttribAndCreateReferencesFromParms</code><span class="sig-paren">(</span><em>parms</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.selectLocalAttribAndCreateReferencesFromParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt to select a local attribute that is visible to the parameter’s
+node and create expressions on the specified parameters to reference
+the selected attribute.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.selectLocalVarAndCreateReferenceFromParm">
+<code class="descclassname">parmutils.</code><code class="descname">selectLocalVarAndCreateReferenceFromParm</code><span class="sig-paren">(</span><em>parm</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.selectLocalVarAndCreateReferenceFromParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt to select a local variable that is visible to the parameter’s
+node and create an expression on the specified parameter to reference
+the selected component.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.selectSceneDataAndCreateParmReference">
+<code class="descclassname">parmutils.</code><code class="descname">selectSceneDataAndCreateParmReference</code><span class="sig-paren">(</span><em>parm_or_parm_tuple</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.selectSceneDataAndCreateParmReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt to select node data and create a reference to the data from
+the given parameters by creating parameter expressions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="parmutils.setAllFolderTypes">
+<code class="descclassname">parmutils.</code><code class="descname">setAllFolderTypes</code><span class="sig-paren">(</span><em>ptg</em>, <em>folder_type</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.setAllFolderTypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.setParmTemplates">
+<code class="descclassname">parmutils.</code><code class="descname">setParmTemplates</code><span class="sig-paren">(</span><em>ptg</em>, <em>parm_templates</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.setParmTemplates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="parmutils.shiftParmIndices">
+<code class="descclassname">parmutils.</code><code class="descname">shiftParmIndices</code><span class="sig-paren">(</span><em>ptg</em>, <em>current_indices</em>, <em>target_indices</em><span class="sig-paren">)</span><a class="headerlink" href="#parmutils.shiftParmIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shifts each folder in the hierarchy to the specified index within it’s
+parent folder.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="opnode_sum.html" title="previous chapter">opnode_sum module</a></li>
+      <li>Next: <a href="particletoolutils.html" title="next chapter">particletoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/parmutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/parmutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

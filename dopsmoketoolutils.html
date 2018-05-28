@@ -1,0 +1,732 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dopsmoketoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dopstatictoolutils module" href="dopstatictoolutils.html" />
+    <link rel="prev" title="dopsbdtoolutils module" href="dopsbdtoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-dopsmoketoolutils">
+<span id="dopsmoketoolutils-module"></span><h1>dopsmoketoolutils module<a class="headerlink" href="#module-dopsmoketoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="dopsmoketoolutils.addField">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">addField</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.addField" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects an object and prompts for the type of field to add.
+Then adds it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.addFieldImport">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">addFieldImport</code><span class="sig-paren">(</span><em>dopionode</em>, <em>objname</em>, <em>fieldname</em>, <em>visible</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.addFieldImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.addFieldToObject">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">addFieldToObject</code><span class="sig-paren">(</span><em>fluidobject</em>, <em>fieldname</em>, <em>fieldvizname</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.addFieldToObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add Field inside the given fluid object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.addfluidsource">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">addfluidsource</code><span class="sig-paren">(</span><em>objecttoconvert</em>, <em>merge</em>, <em>preset</em>, <em>mode='Auto'</em>, <em>volumeattribute=''</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.addfluidsource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.applySourceSink">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">applySourceSink</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>objectnode</em>, <em>sourcesink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.applySourceSink" title="Permalink to this definition">¶</a></dt>
+<dd><p>A sourceapply is added to the fluid object.  This will
+directly import the objectnode if it isn’t simulated.  If
+the object node is a live simulation, it will add the name
+of it to the sourceapply source object.</p>
+<p>The assumption is we have been prefixed by a
+convertObjectToSourceSink</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.applysopSourceSink">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">applysopSourceSink</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>sourcenode</em>, <em>sourcesink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.applysopSourceSink" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.buildCombustionModel">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">buildCombustionModel</code><span class="sig-paren">(</span><em>objnode</em>, <em>firenode</em>, <em>smokenode</em>, <em>flamescale</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.buildCombustionModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a live version of obj node that updates the combustion
+model.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.buildFluidBoxWithUpres">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">buildFluidBoxWithUpres</code><span class="sig-paren">(</span><em>kwargs</em>, <em>fluidtype</em>, <em>buildmat=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.buildFluidBoxWithUpres" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a fluid solver and fluid box complete with a tame
+upres choice.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.buildMotionOverride">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">buildMotionOverride</code><span class="sig-paren">(</span><em>name</em>, <em>bypass</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.buildMotionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a SIM_Motion setup to be keyframeable with
+no extra channels.  Bypasses by default if so requested.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.buildNodeName">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">buildNodeName</code><span class="sig-paren">(</span><em>result</em>, <em>field_name</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.buildNodeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suffixes first paramater with second, but handles cases
+of first parm being None</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.buildRelationshipExpression">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">buildRelationshipExpression</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.buildRelationshipExpression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds the appropriate expression to refer to this node inside
+a relationship string.  Ie, dopobjscreatedby for fluidnodes
+and chs() for group nodes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.buildRenameNode">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">buildRenameNode</code><span class="sig-paren">(</span><em>objectnode</em>, <em>fromfield</em>, <em>tofield</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.buildRenameNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new node, a child of object node, that will rename
+the field fromfield to the field tofield.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.burstSelectedIntoFlame">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">burstSelectedIntoFlame</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.burstSelectedIntoFlame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a properly centered flame and smoke boxes
+for the given object and sets up the proper embedding
+relationship</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.calculateDiameter">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">calculateDiameter</code><span class="sig-paren">(</span><em>diamobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.calculateDiameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the approximated diameter of the specified object
+If the diameter is 0, return 1</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.computeFluidDiameter">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">computeFluidDiameter</code><span class="sig-paren">(</span><em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.computeFluidDiameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimates a diameter for a fluid container</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.convertObjectToFluidtype">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">convertObjectToFluidtype</code><span class="sig-paren">(</span><em>fluidobject</em>, <em>objectnode</em>, <em>fluidtype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.convertObjectToFluidtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>object node is used as initial conditions into fluidobject
+according to the fluid type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.convertObjectToSourceSink">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">convertObjectToSourceSink</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>objectnode</em>, <em>sourcesink</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.convertObjectToSourceSink" title="Permalink to this definition">¶</a></dt>
+<dd><p>The chosen object is added to the simulation as a static
+object and set as a source or sink relationship to the rest of
+the simulation.</p>
+<p>sourcesink can be Source, Sink, Pump for the static object
+approach.  Prefixing <a href="#id1"><span class="problematic" id="id2">Apply_</span></a> will instead use a sourceapply.
+Postfixing _Surface to an <a href="#id3"><span class="problematic" id="id4">Apply_</span></a> will setup for emission
+from the surface.</p>
+<p>Ideally, it is to be added to the target fluid’s source
+relationship, but for technical constraints we only guarantee
+it is added to that network.  Since selection will change
+the current fluid network, we don’t have to worry about
+setting the network.</p>
+<p>We special case particle fluids when they are the target
+as we have special source/sink nodes in these cases.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.convertRelTypeToToken">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">convertRelTypeToToken</code><span class="sig-paren">(</span><em>reltype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.convertRelTypeToToken" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a relationship type, such as Source, into the
+appropriate token such as SIM_RelationshipoSource.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.convertSelectedToFluidtype">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">convertSelectedToFluidtype</code><span class="sig-paren">(</span><em>kwargs</em>, <em>fluidtype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.convertSelectedToFluidtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select geometry and apply convertToFluid to it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.convertmodeto">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">convertmodeto</code><span class="sig-paren">(</span><em>sourcesink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.convertmodeto" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.converttypeto">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">converttypeto</code><span class="sig-paren">(</span><em>sourcesink</em>, <em>solvernode='smokesolver::2.0'</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.converttypeto" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the correct preset values used for setting up the fluidsource operator</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.converttypetodop">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">converttypetodop</code><span class="sig-paren">(</span><em>sourcesink</em>, <em>solvernode='smokesolver::2.0'</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.converttypetodop" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the correct preset used for setting up the source volume operator</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.count">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">count</code><span class="sig-paren">(</span><em>objecttoconvert</em>, <em>mode='Volume'</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createBillowySmokeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createBillowySmokeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createBillowySmokeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official smoke material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createBlackSmokeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createBlackSmokeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createBlackSmokeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official smoke material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createBlueConeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createBlueConeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createBlueConeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official blue cone material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createDSDFlameMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createDSDFlameMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createDSDFlameMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official flame material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createEmptyFluidBox">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createEmptyFluidBox</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>fluidtype</em>, <em>buildmat=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createEmptyFluidBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new fluid object in DOPs and exports appropriately
+to Objects.  Returns the (dopnode, fieldnode) creating/importing
+the fluid.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createFlameMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createFlameMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createFlameMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official flame material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createFlameSmokeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createFlameSmokeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createFlameSmokeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official smoke material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createForSourceSink">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createForSourceSink</code><span class="sig-paren">(</span><em>createtype</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createForSourceSink" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createHotSmokeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createHotSmokeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createHotSmokeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official smoke material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createLiquidMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createLiquidMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createLiquidMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official liquid surface material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createLiquidSmokeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createLiquidSmokeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createLiquidSmokeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official liquid smoke material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createMaterial</code><span class="sig-paren">(</span><em>galleryname</em>, <em>nodename</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a material from the gallery and installs into /mat.
+Returns the result.  Note if it already exists, it will
+create a new one!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createMaterialFromFluidType">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createMaterialFromFluidType</code><span class="sig-paren">(</span><em>fluidtype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createMaterialFromFluidType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createMistMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createMistMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createMistMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official mist material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createMushroomMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createMushroomMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createMushroomMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official smoke material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createObjectImportingFromFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createObjectImportingFromFluid</code><span class="sig-paren">(</span><em>dopnode</em>, <em>fluidtype</em>, <em>buildmat=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createObjectImportingFromFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new object importing fluid from dopnode
+of the given type.  Returns the display node of the created
+object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createRelationship">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createRelationship</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>dopnode</em>, <em>sourcesink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createRelationship" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a relationship of type sourcesink between the
+fluidnode (as the affectee) and the DOP Node (as the
+affector).  This uses the dopobjscreatedby function to ensure
+node renames are properly handled.  If the specified nodes
+are Group DOPs, a chs() expression will be built to the
+group’s name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createRenderNode">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createRenderNode</code><span class="sig-paren">(</span><em>objectnode</em>, <em>dopnode</em>, <em>fluidtype</em>, <em>isupres</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createRenderNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a dopimportfield inside objectnode that extracts the
+expected fields from dopnode given it being fluidtype.
+isupres flags that this is the upres stage so we should
+set the presets appropriately.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createSmokeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createSmokeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createSmokeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official smoke material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createSopAttribVolume">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createSopAttribVolume</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>objectnode</em>, <em>sourcesink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createSopAttribVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts objects into a volumes for a dop smoke sim
+the script uses the type (sink/source/pump) and mode (sort of geometry) to set up operators</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createSopVolumeForDop">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createSopVolumeForDop</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>objectnode</em>, <em>sourcesink</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createSopVolumeForDop" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts objects into a volumes for a dop smoke sim
+the script uses the type (sink/source/pump) and mode (sort of geometry) to set up operators</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createSprayMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createSprayMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createSprayMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official spray material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createSteamMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createSteamMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createSteamMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official steam material in /mat.  Returns existing
+one if it already exists.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createUniformVolumeMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createUniformVolumeMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createUniformVolumeMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official uniform volume material in /mat</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.createUniformVolumeOceanMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">createUniformVolumeOceanMaterial</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.createUniformVolumeOceanMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an official uniform ocean volume material in /mat
+Always builds a new one as we will be setting displacement channels.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.deleteBoundingBox">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">deleteBoundingBox</code><span class="sig-paren">(</span><em>object</em>, <em>sop</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.deleteBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends a node to sop that deletes the bounding box group.
+Sets the render, and only render, flag to this so things
+render nicely.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.distributeClusterSimulation">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">distributeClusterSimulation</code><span class="sig-paren">(</span><em>creator_object</em>, <em>fluidtype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.distributeClusterSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prepares the the file for a cluster based distribution.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.distributeGridSimulation">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">distributeGridSimulation</code><span class="sig-paren">(</span><em>activepane</em>, <em>fluidobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.distributeGridSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the net border exchange node and builds a control
+panel to setup the distribution of a grid based fluid sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.distributeSimulation">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">distributeSimulation</code><span class="sig-paren">(</span><em>kwargs</em>, <em>prompt=None</em>, <em>invalid_selection_message=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.distributeSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a fluid object to distribute and then invokes
+the correct distribution method.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.dopEmptyFluidBox">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">dopEmptyFluidBox</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>fluidtype</em>, <em>prompt=None</em>, <em>buildmat=True</em>, <em>containerinstance=False</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.dopEmptyFluidBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an empty smoke or fluid box and export it to Objects 
+Returns (dopnode, fieldnode), dopnode is what creates
+this fluid in DOPs and fieldnode is the node that imports it
+it in Sops.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.embedDopInFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">embedDopInFluid</code><span class="sig-paren">(</span><em>embedobject</em>, <em>fluidobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.embedDopInFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embeds the specified DOP_Object into the DOP_Object fluidobject
+embed object will be driven by the fluid object within the
+fluid object’s field of influence</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.embedDopInFluidByNodes">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">embedDopInFluidByNodes</code><span class="sig-paren">(</span><em>embednode</em>, <em>embedtype</em>, <em>fluidnode</em>, <em>sourcetype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.embedDopInFluidByNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embeds the fluid of type embedtype and owned by embednode
+inside the fluid of sourcetype owned by fluidnode.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.embedInFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">embedInFluid</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.embedInFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected object is added to set to float in the found fluid
+solver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.embedObjectInFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">embedObjectInFluid</code><span class="sig-paren">(</span><em>objectnode</em>, <em>fluidobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.embedObjectInFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Embeds the specified OBJ_Node into the DOP_Object fluidobject.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.findBestGroupNode">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">findBestGroupNode</code><span class="sig-paren">(</span><em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.findBestGroupNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches descendents of fluidnode for a group node that
+should be used for relationships rather than the groupnode.
+Currently we only accept a post-switch group node where that
+switch is suspected to have been made by an upres merge.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.findDopIONodes">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">findDopIONodes</code><span class="sig-paren">(</span><em>dopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.findDopIONodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds all DOP I/O nodes that import this DOP node.  Locates
+it by finding all DOP I/O nodes one level deep in Objects
+and then checking to see if their autodopnetwork
+and dopscreatedby match.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.findImportingFluidBox">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">findImportingFluidBox</code><span class="sig-paren">(</span><em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.findImportingFluidBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a DOP I/O node that imports this fluidnode.  Locates
+it by finding all DOP I/O nodes one level deep in Objects
+and then checking to see if their autodopnetwork
+and dopscreatedby match.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.findOrCreateMaterial">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">findOrCreateMaterial</code><span class="sig-paren">(</span><em>galleryname</em>, <em>nodename</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.findOrCreateMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches the gallery for a matching material and installs it
+into /mat.  Returns the resulting material.  Note that if a
+material already exists of this name, it will be used instead!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.findOrCreateMergeRelationship">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">findOrCreateMergeRelationship</code><span class="sig-paren">(</span><em>reltype</em>, <em>forcecreate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.findOrCreateMergeRelationship" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches the auto-net for a given type of merge relationship.
+If it doesn’t exist, create it.  The relationship name is
+something like Source, Empty, etc.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.getExpression">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">getExpression</code><span class="sig-paren">(</span><em>node</em>, <em>parmname</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.getExpression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the expression for the given parmname.  If it is not
+an expression or the parm or node doesn’t exist returns None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.getImportedFields">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">getImportedFields</code><span class="sig-paren">(</span><em>dopionode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.getImportedFields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.haspointattribute">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">haspointattribute</code><span class="sig-paren">(</span><em>samplenode</em>, <em>attribute='v'</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.haspointattribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.initVelocity">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">initVelocity</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.initVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the initial velocity of the container from a SOP network.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.initVelocityOfFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">initVelocityOfFluid</code><span class="sig-paren">(</span><em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.initVelocityOfFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the velocity of the given object.
+Returns the volume velocity node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.linkParms">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">linkParms</code><span class="sig-paren">(</span><em>destnode</em>, <em>srcnode</em>, <em>parmlist</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.linkParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a ch() link in the dest node pointing to the source
+node for each parm in the parmlist.  The two nodes must
+have matching parm names.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.parentFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">parentFluid</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.parentFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select fluid and set it up to be parented.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.parentFluidTo">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">parentFluidTo</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>parentobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.parentFluidTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parents the fluid dynamic object fluidobject to parent object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.renamevolume">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">renamevolume</code><span class="sig-paren">(</span><em>fluidsource</em>, <em>merge</em>, <em>number=1</em>, <em>name='rename'</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.renamevolume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.resizeFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">resizeFluid</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.resizeFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select fluid and set it up to be resizeable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.resizeFluidToMatch">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">resizeFluidToMatch</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>matchobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.resizeFluidToMatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resizes the fluid dynamic object fluidobject according
+to match object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.seedVorticles">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">seedVorticles</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.seedVorticles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a bounding box of vorticles to the selected simulation</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.seedVorticlesInFluid">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">seedVorticlesInFluid</code><span class="sig-paren">(</span><em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.seedVorticlesInFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Seed vorticles inside the given fluid object.
+Returns the vorticlenode</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.selectedConvertToAttribSource">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">selectedConvertToAttribSource</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>sourcesink</em>, <em>dopname</em>, <em>attribname</em>, <em>attribtype</em>, <em>mergemethod=None</em>, <em>rangein=None</em>, <em>rangeout=None</em>, <em>targetrate=None</em>, <em>increaserate=None</em>, <em>decreaserate=None</em>, <em>objprompt=None</em>, <em>fluidprompt=None</em>, <em>autoconvert=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.selectedConvertToAttribSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import selected objects to AutoDop and make sourcesink 
+relationships.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.selectedConvertToSourceSink">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">selectedConvertToSourceSink</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>sourcesink</em>, <em>objprompt=None</em>, <em>fluidprompt=None</em>, <em>autoconvert=True</em>, <em>createifempty=None</em>, <em>subtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.selectedConvertToSourceSink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import selected objects to AutoDop and make sourcesink 
+relationships.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.setupFLIPSource">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">setupFLIPSource</code><span class="sig-paren">(</span><em>fluidsource</em>, <em>fluidnode</em>, <em>sourcesink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.setupFLIPSource" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.setupFluidSource">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">setupFluidSource</code><span class="sig-paren">(</span><em>fluidsource</em>, <em>diam</em>, <em>sourcetype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.setupFluidSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>scale fluidsource values relative to source scale</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.setupmultifield">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">setupmultifield</code><span class="sig-paren">(</span><em>dopnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.setupmultifield" title="Permalink to this definition">¶</a></dt>
+<dd><p>function sets up multi parm visualization</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.solverinputnodes">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">solverinputnodes</code><span class="sig-paren">(</span><em>solver</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.solverinputnodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates a seperated list for the node specified, containing all the 
+ancestor nodes for every independent input. ie: [[1,[x,x,x]],[2,[y,y,y]]]</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.sourcesolvertype">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">sourcesolvertype</code><span class="sig-paren">(</span><em>solvernode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.sourcesolvertype" title="Permalink to this definition">¶</a></dt>
+<dd><p>a solver of a type pyro or upres can represent multiple fluid types
+this function returns the correct type based on the mode the solver is in.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.spliceUpresSim">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">spliceUpresSim</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>fieldnode</em>, <em>upresnode</em>, <em>upresfieldnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.spliceUpresSim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Splices a upres sim with a normal res sim assuming both are in
+the same network.  Also updates our upresfieldnode to
+object merge in the needed fields from fieldnode for proper
+rendering.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.targetDrivenSmoke">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">targetDrivenSmoke</code><span class="sig-paren">(</span><em>fluidobject</em>, <em>goalobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.targetDrivenSmoke" title="Permalink to this definition">¶</a></dt>
+<dd><p>goalobject is made a target goal of fluidobject.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.targetDrivenSmokeSelect">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">targetDrivenSmokeSelect</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.targetDrivenSmokeSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects smoke &amp; target shape, then creates a target
+driven effect from the smoke to the target.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.transferRelationships">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">transferRelationships</code><span class="sig-paren">(</span><em>oldnode</em>, <em>newnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.transferRelationships" title="Permalink to this definition">¶</a></dt>
+<dd><p>For all nodes inside the dopnet given, search for
+relationship nodes.  If the affector or affectee is a
+dopscreatedby or group channel reference to oldnode, change it
+to the approriate expression for new node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.upresSelect">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">upresSelect</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.upresSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a fluid sim to upres.  Will then create a new DOP
+network to hold the resulting upresed sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.upresSmoke">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">upresSmoke</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>buildmat=True</em>, <em>fluidlocation=None</em>, <em>solver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.upresSmoke" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.upresSmokeSameNet">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">upresSmokeSameNet</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>buildmat=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.upresSmokeSameNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a fluidnode builds the upres version of it.  This is
+built in the same network as the fluid node but switches
+are put in place to try and ensure we can disable the
+uprespath.</p>
+<p>The generated nodes are left unwired in the net.  The
+(upresfluidnode, fieldnode) is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopsmoketoolutils.upresSmokeSelectSameNet">
+<code class="descclassname">dopsmoketoolutils.</code><code class="descname">upresSmokeSelectSameNet</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopsmoketoolutils.upresSmokeSelectSameNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a fluid sim to upres.  Creates the upres simulation
+in the same network as that sim using a switch dop
+to select upres mode.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dopsbdtoolutils.html" title="previous chapter">dopsbdtoolutils module</a></li>
+      <li>Next: <a href="dopstatictoolutils.html" title="next chapter">dopstatictoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dopsmoketoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/dopsmoketoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

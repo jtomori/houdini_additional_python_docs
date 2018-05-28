@@ -1,0 +1,392 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>dopparticlefluidtoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="doppoptoolutils module" href="doppoptoolutils.html" />
+    <link rel="prev" title="dopinstance module" href="dopinstance.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-dopparticlefluidtoolutils">
+<span id="dopparticlefluidtoolutils-module"></span><h1>dopparticlefluidtoolutils module<a class="headerlink" href="#module-dopparticlefluidtoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.beachTank">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">beachTank</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.beachTank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.collideWithFluid">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">collideWithFluid</code><span class="sig-paren">(</span><em>sourcenode</em>, <em>dopnode</em>, <em>solvernode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.collideWithFluid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.convertToFLIP">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">convertToFLIP</code><span class="sig-paren">(</span><em>dopobjectnode</em>, <em>nosopcooking=False</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.convertToFLIP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Customize particle fluid dopnet into a FLIP dopnet
+nosopcooking disables any potential cooking of SOPs, and
+requires the caller is willing to setup the limits, etc.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createCrownSplash">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createCrownSplash</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createCrownSplash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a crown splash effect using a flip fluid box,
+an emitter and surface tension</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createDripParticleFluid">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createDripParticleFluid</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createDripParticleFluid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a dripping fluid effect using a continuous sphere emitter
+and surface tension</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createMist">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createMist</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createMist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a fluid sim for generating mist.  Will then
+create a new DOP  to hold the resulting whitewater sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createMistFromNode">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createMistFromNode</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createMistFromNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a mist solver from a given node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createSculptedFluid">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createSculptedFluid</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createSculptedFluid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createSteam">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createSteam</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createSteam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a fluid sim for generating steam.  Will then
+create a new DOP  to hold the resulting whitewater sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createSteamFromNode">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createSteamFromNode</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createSteamFromNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a steam solver from a given node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createSteamImport">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createSteamImport</code><span class="sig-paren">(</span><em>prefixname</em>, <em>dopobject</em>, <em>sizeparm</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createSteamImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a node to import from a dopobject as a steam
+look/sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createSteamSource">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createSteamSource</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>nameprefix</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createSteamSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a source for steam
+Returns the created source  object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createWhitewater">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createWhitewater</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createWhitewater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a fluid sim for generating whitewater .  Will then
+create a new DOP  to hold the resulting whitewater sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createWhitewaterEmitter">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createWhitewaterEmitter</code><span class="sig-paren">(</span><em>dopnet</em>, <em>prefixname</em>, <em>sourcenode</em>, <em>pointcount</em>, <em>inheritvel</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createWhitewaterEmitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the POP/source replicate paradigm, returns the
+final node in this chain</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createWhitewaterFromNode">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createWhitewaterFromNode</code><span class="sig-paren">(</span><em>fluidnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createWhitewaterFromNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post selection, creates a white water from a given
+DOP node</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createWhitewaterImport">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createWhitewaterImport</code><span class="sig-paren">(</span><em>prefixname</em>, <em>dopobject</em>, <em>sizeparm</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createWhitewaterImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a node to import from a dopobject as a white
+water look/sim.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createWhitewaterSource">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createWhitewaterSource</code><span class="sig-paren">(</span><em>fluidnode</em>, <em>nameprefix</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createWhitewaterSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a source for white water
+Returns the created source  object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createadvectpop">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createadvectpop</code><span class="sig-paren">(</span><em>solver</em>, <em>advectsource</em>, <em>oceansource</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createadvectpop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createdeleteboundary">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createdeleteboundary</code><span class="sig-paren">(</span><em>dopimport</em>, <em>box</em>, <em>boundscale</em>, <em>do_layout=True</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createdeleteboundary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createflipbox">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createflipbox</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>center</em>, <em>size</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createflipbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a flip fluid box at the given center and size</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createoceanbox">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createoceanbox</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>preset</em>, <em>center</em>, <em>size</em>, <em>followobj</em>, <em>beachobj</em>, <em>createspectrum</em>, <em>createbeach</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createoceanbox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a flip fluid box at the given center and size</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createoceanboxtwo">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createoceanboxtwo</code><span class="sig-paren">(</span><em>sceneviewer</em>, <em>preset</em>, <em>center</em>, <em>size</em>, <em>followobj</em>, <em>beachobj</em>, <em>createspectrum</em>, <em>createbeach</em>, <em>createguide</em>, <em>createnarrowband</em>, <em>createextended</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createoceanboxtwo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a flip fluid box at the given center and size</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createoceansource">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createoceansource</code><span class="sig-paren">(</span><em>preset</em>, <em>createspectrum</em>, <em>createbeach</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createoceansource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a wave tank of flip particles to be all splashy
+and render ready.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.createoceansourcetwo">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">createoceansourcetwo</code><span class="sig-paren">(</span><em>preset</em>, <em>createspectrum</em>, <em>createbeach</em>, <em>createguide</em>, <em>createnarrowband</em>, <em>createextended</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.createoceansourcetwo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a wave tank of flip particles to be all splashy
+and render ready.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.distributeParticleFluidSimulation">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">distributeParticleFluidSimulation</code><span class="sig-paren">(</span><em>activepane</em>, <em>fluidobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.distributeParticleFluidSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds in the netslice exchange and a control panel
+to operate the tracker</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.distributeWhitewaterSimulation">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">distributeWhitewaterSimulation</code><span class="sig-paren">(</span><em>activepane</em>, <em>wwobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.distributeWhitewaterSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds in the netslice exchange and a control panel
+to operate the tracker</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.flatTank">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">flatTank</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.flatTank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.flipBox">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">flipBox</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.flipBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a fluid tank of flip particles for the user
+to play with.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.getParticleFluidSliceCount">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">getParticleFluidSliceCount</code><span class="sig-paren">(</span><em>fluidobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.getParticleFluidSliceCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of slices in the fluidobject. A value of 1 means
+that there is no slicing.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.guidedOceanLayer">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">guidedOceanLayer</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.guidedOceanLayer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.largeOcean">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">largeOcean</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.largeOcean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.makeObjectViscous">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">makeObjectViscous</code><span class="sig-paren">(</span><em>flipnode</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.makeObjectViscous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giving the flipnode set up viscosity for it.
+No-op if already is.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.makeViscous">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">makeViscous</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.makeViscous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on viscosity for the selected FLIP objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.oceanFlatTank">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">oceanFlatTank</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.oceanFlatTank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.oceanFromSpectra">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">oceanFromSpectra</code><span class="sig-paren">(</span><em>oceansurface</em>, <em>gridsize</em>, <em>gridres</em>, <em>foamcam</em>, <em>spectra</em>, <em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.oceanFromSpectra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.op_div">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">op_div</code><span class="sig-paren">(</span><em>val</em>, <em>diam</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.op_div" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divides val by diam</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.op_mult">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">op_mult</code><span class="sig-paren">(</span><em>val</em>, <em>diam</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.op_mult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplies val by diam</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.op_multsquare">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">op_multsquare</code><span class="sig-paren">(</span><em>val</em>, <em>diam</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.op_multsquare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplies val by diam^2</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.particleFluidSuction">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">particleFluidSuction</code><span class="sig-paren">(</span><em>fluidobject</em>, <em>goalobject</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.particleFluidSuction" title="Permalink to this definition">¶</a></dt>
+<dd><p>goalobject is made a target goal of fluidobject.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.particleFluidSuctionSelect">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">particleFluidSuctionSelect</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.particleFluidSuctionSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects fluid &amp; suction object, then creates a suction
+effect driving the fluid into the target.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.particlefluidAddEmitterOrSink">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">particlefluidAddEmitterOrSink</code><span class="sig-paren">(</span><em>kwargs</em>, <em>emitterorsink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.particlefluidAddEmitterOrSink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects a fluid object to be the destination.  If none
+selected, creates a new particle fluid.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.particlefluidConvertToEmitterOrSink">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">particlefluidConvertToEmitterOrSink</code><span class="sig-paren">(</span><em>fluidobject</em>, <em>dopnode</em>, <em>sopnode</em>, <em>emitterorsink</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.particlefluidConvertToEmitterOrSink" title="Permalink to this definition">¶</a></dt>
+<dd><p>We add to the selected dopnode an emitter or sink which
+loads from objectnode.  If sopnode is None, we use
+default ellipse/box.  If dopnode is None, we look at 
+fluidobject’s creator.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.particlefluidFindNamedMergeFromNode">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">particlefluidFindNamedMergeFromNode</code><span class="sig-paren">(</span><em>dopnode</em>, <em>mergetype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.particlefluidFindNamedMergeFromNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giving a DOP Node, find the particle fluid solver attached
+to the object.  Then look for the merge node off the
+semantically named input, creating a merge node if not
+present, and returning that merge node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.sliceSimByPlane">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">sliceSimByPlane</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>slicetype</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.sliceSimByPlane" title="Permalink to this definition">¶</a></dt>
+<dd><p>The user selects an existing cutting plane or simulation
+object.  A new cutting plane is made a child of this.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.smallOcean">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">smallOcean</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.smallOcean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.sourceParticleAttribFromVolume">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">sourceParticleAttribFromVolume</code><span class="sig-paren">(</span><em>flipnode</em>, <em>sourcesop</em>, <em>dopname</em>, <em>sourcename</em>, <em>destname</em>, <em>attribtype</em>, <em>mergemethod=None</em>, <em>rangein=None</em>, <em>rangeout=None</em>, <em>targetrate=None</em>, <em>increaserate=None</em>, <em>decreaserate=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.sourceParticleAttribFromVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giving the flipnode add a Source Particle Attrib DOP to it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dopparticlefluidtoolutils.waveTank">
+<code class="descclassname">dopparticlefluidtoolutils.</code><code class="descname">waveTank</code><span class="sig-paren">(</span><em>kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dopparticlefluidtoolutils.waveTank" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="dopinstance.html" title="previous chapter">dopinstance module</a></li>
+      <li>Next: <a href="doppoptoolutils.html" title="next chapter">doppoptoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dopparticlefluidtoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/dopparticlefluidtoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

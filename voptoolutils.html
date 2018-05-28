@@ -1,0 +1,625 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>voptoolutils module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="vopnettoolutils module" href="vopnettoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-voptoolutils">
+<span id="voptoolutils-module"></span><h1>voptoolutils module<a class="headerlink" href="#module-voptoolutils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="voptoolutils.InputData">
+<em class="property">class </em><code class="descclassname">voptoolutils.</code><code class="descname">InputData</code><span class="sig-paren">(</span><em>inputnode</em>, <em>inputname</em>, <em>inputlabel</em>, <em>inputparmtuple</em>, <em>outputnode</em>, <em>outputname</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.InputData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="voptoolutils.InputData.inputlabel">
+<code class="descname">inputlabel</code><a class="headerlink" href="#voptoolutils.InputData.inputlabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="voptoolutils.InputData.inputname">
+<code class="descname">inputname</code><a class="headerlink" href="#voptoolutils.InputData.inputname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="voptoolutils.InputData.inputnode">
+<code class="descname">inputnode</code><a class="headerlink" href="#voptoolutils.InputData.inputnode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="voptoolutils.InputData.inputparmtuple">
+<code class="descname">inputparmtuple</code><a class="headerlink" href="#voptoolutils.InputData.inputparmtuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="voptoolutils.InputData.outputname">
+<code class="descname">outputname</code><a class="headerlink" href="#voptoolutils.InputData.outputname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 5</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="voptoolutils.InputData.outputnode">
+<code class="descname">outputnode</code><a class="headerlink" href="#voptoolutils.InputData.outputnode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="voptoolutils.PromotedParmData">
+<em class="property">class </em><code class="descclassname">voptoolutils.</code><code class="descname">PromotedParmData</code><a class="headerlink" href="#voptoolutils.PromotedParmData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#voptoolutils.PromotedParmData" title="voptoolutils.PromotedParmData"><code class="xref py py-class docutils literal notranslate"><span class="pre">voptoolutils.PromotedParmData</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="voptoolutils.VopInputPresetManager">
+<em class="property">class </em><code class="descclassname">voptoolutils.</code><code class="descname">VopInputPresetManager</code><a class="headerlink" href="#voptoolutils.VopInputPresetManager" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.addPreset">
+<code class="descname">addPreset</code><span class="sig-paren">(</span><em>preset</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.addPreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.addPresets">
+<code class="descname">addPresets</code><span class="sig-paren">(</span><em>presets</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.addPresets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.addPresetsFromJson">
+<code class="descname">addPresetsFromJson</code><span class="sig-paren">(</span><em>json_path</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.addPresetsFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.checkNodePresetCreatesInput">
+<code class="descname">checkNodePresetCreatesInput</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em>, <em>preset_name_or_preset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.checkNodePresetCreatesInput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.createAllInputsFromPreset">
+<code class="descname">createAllInputsFromPreset</code><span class="sig-paren">(</span><em>node</em>, <em>passthrough_input=None</em>, <em>parm_gen_type=vopParmGenType.SubnetInput</em>, <em>recurse=True</em>, <em>preset_name_or_preset=None</em>, <em>replace_existing=True</em>, <em>depth=0</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.createAllInputsFromPreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.createInput">
+<code class="descname">createInput</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em>, <em>passthrough_input=None</em>, <em>type='parameter'</em>, <em>node_type=None</em>, <em>node_output=0</em>, <em>node_useexisting=False</em>, <em>node_folderlevel=None</em>, <em>parm_name=None</em>, <em>parm_label=None</em>, <em>parm_type=None</em>, <em>parm_useexisting=False</em>, <em>parm_invisible=False</em>, <em>parm_inheritname=False</em>, <em>parm_gen_type=vopParmGenType.SubnetInput</em>, <em>preset=None</em>, <em>default_value=None</em>, <em>node_folder=None</em>, <em>node_prefix=None</em>, <em>recurse=True</em>, <em>replace_existing=True</em>, <em>guard_conditionals=False</em>, <em>add_promotion_parms=False</em>, <em>depth=0</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.createInput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.createInputUsingPreset">
+<code class="descname">createInputUsingPreset</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em>, <em>passthrough_input=None</em>, <em>parm_gen_type=vopParmGenType.SubnetInput</em>, <em>recurse=True</em>, <em>input_preset=None</em>, <em>guard_conditionals=False</em>, <em>replace_existing=True</em>, <em>depth=0</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.createInputUsingPreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.currentInputUsedByPreset">
+<code class="descname">currentInputUsedByPreset</code><span class="sig-paren">(</span><em>node_type</em>, <em>preset_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.currentInputUsedByPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if the nodes currently connected to the input of ‘node’
+would be reused when an input of ‘node_type’ is created using the
+preset specified by ‘preset_name’</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.filterPresets">
+<code class="descname">filterPresets</code><span class="sig-paren">(</span><em>node_type</em>, <em>preset_name=None</em>, <em>find_default_for_type=False</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.filterPresets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds presets that match node_type and, if specified, the preset
+name.</p>
+<p>If find_default_for_type is True, the preset_name is ignored and
+the preset marked as default for the node_type is returned in a
+list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.findPreset">
+<code class="descname">findPreset</code><span class="sig-paren">(</span><em>node_type</em>, <em>preset_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.findPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a preset that matches node_type as well as preset_name,
+if preset_name is not None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.getInputPresetFromNodePreset">
+<code class="descname">getInputPresetFromNodePreset</code><span class="sig-paren">(</span><em>node</em>, <em>inputname</em>, <em>preset_name_or_preset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.getInputPresetFromNodePreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.getPreset">
+<code class="descname">getPreset</code><span class="sig-paren">(</span><em>node_type</em>, <em>preset_name_or_preset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.getPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a preset that’s already merged on top of all it’s parents</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="voptoolutils.VopInputPresetManager.validatePreset">
+<code class="descname">validatePreset</code><span class="sig-paren">(</span><em>preset</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.VopInputPresetManager.validatePreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.addOrReplaceParm">
+<code class="descclassname">voptoolutils.</code><code class="descname">addOrReplaceParm</code><span class="sig-paren">(</span><em>node</em>, <em>parm_template</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.addOrReplaceParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.addOrReplaceStringParm">
+<code class="descclassname">voptoolutils.</code><code class="descname">addOrReplaceStringParm</code><span class="sig-paren">(</span><em>node</em>, <em>parm_name</em>, <em>parm_label</em>, <em>string_type=stringParmType.Regular</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.addOrReplaceStringParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.addPromotionParms">
+<code class="descclassname">voptoolutils.</code><code class="descname">addPromotionParms</code><span class="sig-paren">(</span><em>node</em>, <em>ui_host_node=None</em>, <em>folder=None</em>, <em>prefix=None</em>, <em>use_host_folder=True</em>, <em>use_host_prefix=True</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.addPromotionParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds parameters which control how parameters are promoted from this
+node.</p>
+<p>The values of the parameters are set according to the arguments passed
+to this procedure.</p>
+<p>These parameters are added to ‘node’:</p>
+<dl class="docutils">
+<dt>vopui_host            Parameters promoted from ‘node’ will show up in</dt>
+<dd><p class="first">the folder of this host.</p>
+<p class="last">Default value: ‘ui_host_node’</p>
+</dd>
+<dt>vopui_usehostfolder   A toggle that controls whether to append to</dt>
+<dd><p class="first">host folder.</p>
+<p class="last">Default value: True</p>
+</dd>
+<dt>vopui_usehostprefix   A toggle that controls whether to append to</dt>
+<dd><p class="first">host prefix.</p>
+<p class="last">Default value: True</p>
+</dd>
+<dt>vopui_folder            The folder to add parameter.</dt>
+<dd><p class="first">If vopui_usehostfolder is True, this folder
+will be appended to the host’s folder</p>
+<p class="last">Default value: node.type().description()</p>
+</dd>
+<dt>vopui_prefix            The prefix to use for parameters.</dt>
+<dd><p class="first">If vopui_usehostprefix is True, this prefix
+will be appended to the host’s prefix</p>
+<p class="last">Default value: ‘’</p>
+</dd>
+<dt>vopui_myfolder          This is set up with a python expression which</dt>
+<dd>computes the concatenated folder.</dd>
+<dt>vopui_myprefix          This is set up with a python expression which</dt>
+<dd>computes the concatenated prefix.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.autoCreateComputeLighting">
+<code class="descclassname">voptoolutils.</code><code class="descname">autoCreateComputeLighting</code><span class="sig-paren">(</span><em>shadernode</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.autoCreateComputeLighting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.buildBlockPair">
+<code class="descclassname">voptoolutils.</code><code class="descname">buildBlockPair</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>name</em>, <em>opentype</em>, <em>closetype</em>, <em>encloseinputs</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.buildBlockPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a pair of block nodes, a begin and an end, and links
+them together nicely.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.checkHasInput">
+<code class="descclassname">voptoolutils.</code><code class="descname">checkHasInput</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.checkHasInput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.checkHasOutput">
+<code class="descclassname">voptoolutils.</code><code class="descname">checkHasOutput</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.checkHasOutput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.checkInput">
+<code class="descclassname">voptoolutils.</code><code class="descname">checkInput</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.checkInput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.checkOutput">
+<code class="descclassname">voptoolutils.</code><code class="descname">checkOutput</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.checkOutput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.checkValidParmDataType">
+<code class="descclassname">voptoolutils.</code><code class="descname">checkValidParmDataType</code><span class="sig-paren">(</span><em>data_type</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.checkValidParmDataType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.collectParmChain">
+<code class="descclassname">voptoolutils.</code><code class="descname">collectParmChain</code><span class="sig-paren">(</span><em>node</em>, <em>parm_name</em>, <em>usehost_name</em>, <em>separator</em>, <em>separator_at_end=False</em>, <em>level=0</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.collectParmChain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.createAllParmVops">
+<code class="descclassname">voptoolutils.</code><code class="descname">createAllParmVops</code><span class="sig-paren">(</span><em>node</em>, <em>parm_gen_type=vopParmGenType.Parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.createAllParmVops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.createInputs">
+<code class="descclassname">voptoolutils.</code><code class="descname">createInputs</code><span class="sig-paren">(</span><em>node</em>, <em>parm_gen_type=vopParmGenType.Parameter</em>, <em>preset_name_or_preset=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.createInputs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.createPromotionRefs">
+<code class="descclassname">voptoolutils.</code><code class="descname">createPromotionRefs</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.createPromotionRefs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.deleteAllInputs">
+<code class="descclassname">voptoolutils.</code><code class="descname">deleteAllInputs</code><span class="sig-paren">(</span><em>begin_node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.deleteAllInputs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.destroyExclusiveInputNodes">
+<code class="descclassname">voptoolutils.</code><code class="descname">destroyExclusiveInputNodes</code><span class="sig-paren">(</span><em>endnode</em>, <em>endnode_input=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.destroyExclusiveInputNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.embedInputParmVops">
+<code class="descclassname">voptoolutils.</code><code class="descname">embedInputParmVops</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.embedInputParmVops" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.embedInputParms">
+<code class="descclassname">voptoolutils.</code><code class="descname">embedInputParms</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.embedInputParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.filterParmSetByPresets">
+<code class="descclassname">voptoolutils.</code><code class="descname">filterParmSetByPresets</code><span class="sig-paren">(</span><em>parm_set</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.filterParmSetByPresets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.findContributingParms">
+<code class="descclassname">voptoolutils.</code><code class="descname">findContributingParms</code><span class="sig-paren">(</span><em>node</em>, <em>target_name=None</em>, <em>_depth=0</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.findContributingParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.findCorrectlyPlacedItem">
+<code class="descclassname">voptoolutils.</code><code class="descname">findCorrectlyPlacedItem</code><span class="sig-paren">(</span><em>item</em>, <em>ptg</em>, <em>parm_set</em>, <em>search_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.findCorrectlyPlacedItem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.findExclusiveInputNodes">
+<code class="descclassname">voptoolutils.</code><code class="descname">findExclusiveInputNodes</code><span class="sig-paren">(</span><em>endnode</em>, <em>endnode_input=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.findExclusiveInputNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively finds nodes that only output to ‘endnode’. If endnode_input
+is not None, only nodes that only output to that input are returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.findParmsToEmbed">
+<code class="descclassname">voptoolutils.</code><code class="descname">findParmsToEmbed</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.findParmsToEmbed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.genericTool">
+<code class="descclassname">voptoolutils.</code><code class="descname">genericTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>nodename=None</em>, <em>exact_node_type=True</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.genericTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls the generic tool handler for all nodes, which allows the
+user to lay down a node in the network editor.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getIndependentSiblingOfType">
+<code class="descclassname">voptoolutils.</code><code class="descname">getIndependentSiblingOfType</code><span class="sig-paren">(</span><em>node</em>, <em>node_type</em>, <em>pool=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getIndependentSiblingOfType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputConnector">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputConnector</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputConnector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputData">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputData</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputIndex">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputIndex</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputLabel">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputLabel</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputName">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputName</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputNode">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputNode</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputNodeOutputIndex">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputNodeOutputIndex</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputNodeOutputIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputOfTypeRecursive">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputOfTypeRecursive</code><span class="sig-paren">(</span><em>node</em>, <em>node_type</em>, <em>skip_self</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputOfTypeRecursive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputOfTypeRecursiveHelper">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputOfTypeRecursiveHelper</code><span class="sig-paren">(</span><em>node</em>, <em>node_type</em>, <em>skip_self</em>, <em>array</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputOfTypeRecursiveHelper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputParmTuple">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputParmTuple</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputParmTuple" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputsRecursive">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputsRecursive</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputsRecursive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getInputsRecursiveHelper">
+<code class="descclassname">voptoolutils.</code><code class="descname">getInputsRecursiveHelper</code><span class="sig-paren">(</span><em>node</em>, <em>res</em>, <em>array</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getInputsRecursiveHelper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getNewParmName">
+<code class="descclassname">voptoolutils.</code><code class="descname">getNewParmName</code><span class="sig-paren">(</span><em>source_node</em>, <em>parm_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getNewParmName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getOutputIndex">
+<code class="descclassname">voptoolutils.</code><code class="descname">getOutputIndex</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getOutputIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getOutputLabel">
+<code class="descclassname">voptoolutils.</code><code class="descname">getOutputLabel</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getOutputLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getOutputName">
+<code class="descclassname">voptoolutils.</code><code class="descname">getOutputName</code><span class="sig-paren">(</span><em>node</em>, <em>index_or_name</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getOutputName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getParmName">
+<code class="descclassname">voptoolutils.</code><code class="descname">getParmName</code><span class="sig-paren">(</span><em>parm_vop</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getParmName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getParmPromotionFolder">
+<code class="descclassname">voptoolutils.</code><code class="descname">getParmPromotionFolder</code><span class="sig-paren">(</span><em>parm_vop</em>, <em>contributing_nodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getParmPromotionFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the folders that a parameter should be promoted to as a
+slash separated string</p>
+<p>This is done by checking which promotion folders the parm’s output
+nodes specify. If there is a conflict between the folders on output
+nodes the deepest common folder is returned.</p>
+<p>If contributing_nodes is a list, it will be populated with all
+the nodes that contributed to the folder path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getParmPromotionFolderString">
+<code class="descclassname">voptoolutils.</code><code class="descname">getParmPromotionFolderString</code><span class="sig-paren">(</span><em>parm_vop</em>, <em>contributing_nodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getParmPromotionFolderString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getPromotionFolder">
+<code class="descclassname">voptoolutils.</code><code class="descname">getPromotionFolder</code><span class="sig-paren">(</span><em>node</em>, <em>input_names=()</em>, <em>contributing_nodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getPromotionFolder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getPromotionFolderString">
+<code class="descclassname">voptoolutils.</code><code class="descname">getPromotionFolderString</code><span class="sig-paren">(</span><em>node</em>, <em>input_names=()</em>, <em>contributing_nodes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getPromotionFolderString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.getPromotionPrefix">
+<code class="descclassname">voptoolutils.</code><code class="descname">getPromotionPrefix</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.getPromotionPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.hasNodeAsInputRecursive">
+<code class="descclassname">voptoolutils.</code><code class="descname">hasNodeAsInputRecursive</code><span class="sig-paren">(</span><em>node</em>, <em>find_node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.hasNodeAsInputRecursive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.insertFilterNode">
+<code class="descclassname">voptoolutils.</code><code class="descname">insertFilterNode</code><span class="sig-paren">(</span><em>target_node</em>, <em>input_index_or_name</em>, <em>orig_input_node</em>, <em>new_input_node</em>, <em>filter_node_type</em>, <em>filter_node_input</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.insertFilterNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.insertParm">
+<code class="descclassname">voptoolutils.</code><code class="descname">insertParm</code><span class="sig-paren">(</span><em>node</em>, <em>input_name</em>, <em>parm_gen_type=vopParmGenType.Parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.insertParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.insertParmVop">
+<code class="descclassname">voptoolutils.</code><code class="descname">insertParmVop</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em>, <em>parm_gen_type=vopParmGenType.Parameter</em>, <em>parm_name=None</em>, <em>parm_label=None</em>, <em>parm_type=None</em>, <em>default_value=None</em>, <em>move_to_folder=True</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.insertParmVop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Parameter VOP for the given input. If the input has a
+corresponding parameter of the same name, all relevant attributes are
+copied over to the Parameter VOP.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.jumpToNode">
+<code class="descclassname">voptoolutils.</code><code class="descname">jumpToNode</code><span class="sig-paren">(</span><em>kwargs</em>, <em>effect_type</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.jumpToNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.makeFilterNodePreset">
+<code class="descclassname">voptoolutils.</code><code class="descname">makeFilterNodePreset</code><span class="sig-paren">(</span><em>passthrough_input_name</em>, <em>excluded_inputs=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.makeFilterNodePreset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.moveParameters">
+<code class="descclassname">voptoolutils.</code><code class="descname">moveParameters</code><span class="sig-paren">(</span><em>ptg</em>, <em>parm_set</em>, <em>included_parm_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.moveParameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.movePromotedChildParameters">
+<code class="descclassname">voptoolutils.</code><code class="descname">movePromotedChildParameters</code><span class="sig-paren">(</span><em>owner_node</em>, <em>included_parm_vops=None</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.movePromotedChildParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sorts and moves into folders all parameters promoted to this node</p>
+<p>If included_parm_vops is an iterable containing Parameter VOPs, only
+only parameters associated with those Parameter VOPs will be moved.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.movePromotedParameters">
+<code class="descclassname">voptoolutils.</code><code class="descname">movePromotedParameters</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.movePromotedParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the VOP node’s promoted parameters to the folder specified by the
+‘In Folder’ parameter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.parmVopEffect">
+<code class="descclassname">voptoolutils.</code><code class="descname">parmVopEffect</code><span class="sig-paren">(</span><em>kwargs</em>, <em>effect_type</em>, <em>name_prefix=None</em>, <em>mix_with_existing_type=None</em>, <em>custom_creator=None</em>, <em>parm_gen_type=vopParmGenType.Parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.parmVopEffect" title="Permalink to this definition">¶</a></dt>
+<dd><p>High-level utility function for creating a parm effect where the effect
+filters the parameter animation. It returns the created hou.VopNode.</p>
+<dl class="docutils">
+<dt>kwargs</dt>
+<dd>A dictionary containing the keyword ‘parms’, mapping to a
+tuple of hou.Parm objects that is to be affected.</dd>
+<dt>effect_type</dt>
+<dd>The type of the effect to create. Note that because some
+of them may involve more than one node, we can’t just blindly
+make this the node type to create.</dd>
+<dt>name_prefix</dt>
+<dd>The name prefix used for the created node.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.positionItems">
+<code class="descclassname">voptoolutils.</code><code class="descname">positionItems</code><span class="sig-paren">(</span><em>target_node</em>, <em>items</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.positionItems" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.printTable">
+<code class="descclassname">voptoolutils.</code><code class="descname">printTable</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.printTable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.replaceInput">
+<code class="descclassname">voptoolutils.</code><code class="descname">replaceInput</code><span class="sig-paren">(</span><em>node</em>, <em>input_index_or_name</em>, <em>new_input_node</em>, <em>output_index_or_name=0</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.replaceInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the new input node, and deletes the existing input node (and it’s
+inputs) if they only depended on ‘node’.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.setConnection">
+<code class="descclassname">voptoolutils.</code><code class="descname">setConnection</code><span class="sig-paren">(</span><em>start_node</em>, <em>start_node_output</em>, <em>end_node</em>, <em>end_node_input</em>, <em>delete_unused=True</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.setConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.setDefaultColor">
+<code class="descclassname">voptoolutils.</code><code class="descname">setDefaultColor</code><span class="sig-paren">(</span><em>parm_node</em>, <em>def_col</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.setDefaultColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.syncParmTemplateGroupToParmSet">
+<code class="descclassname">voptoolutils.</code><code class="descname">syncParmTemplateGroupToParmSet</code><span class="sig-paren">(</span><em>ptg</em>, <em>parm_set</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.syncParmTemplateGroupToParmSet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.translateConditionalNames">
+<code class="descclassname">voptoolutils.</code><code class="descname">translateConditionalNames</code><span class="sig-paren">(</span><em>cond</em>, <em>translate_method</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.translateConditionalNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the conditional with new parm names</p>
+<p>translate_method should take the old parm name as it’s sole argument
+and return the new parm name</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.updateParmVopConditionals">
+<code class="descclassname">voptoolutils.</code><code class="descname">updateParmVopConditionals</code><span class="sig-paren">(</span><em>parm_nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.updateParmVopConditionals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces parm names in conditionals with the name parameters are
+exposed with.  i.e. with the name of the parm VOP plugged into
+the parameter’s input, including it’s prefix.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="voptoolutils.wrapParmInFolder">
+<code class="descclassname">voptoolutils.</code><code class="descname">wrapParmInFolder</code><span class="sig-paren">(</span><em>ptg</em>, <em>parm_name</em>, <em>folder_label</em><span class="sig-paren">)</span><a class="headerlink" href="#voptoolutils.wrapParmInFolder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="vopnettoolutils.html" title="previous chapter">vopnettoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/voptoolutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/voptoolutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

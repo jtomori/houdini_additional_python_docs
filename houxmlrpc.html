@@ -1,0 +1,183 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>houxmlrpc module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="hqrop module" href="hqrop.html" />
+    <link rel="prev" title="houpythonportion module" href="houpythonportion.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-houxmlrpc">
+<span id="houxmlrpc-module"></span><h1>houxmlrpc module<a class="headerlink" href="#module-houxmlrpc" title="Permalink to this headline">¶</a></h1>
+<p>A module to give enhanced XMLRPC access to HOM.</p>
+<p>It is “enhanced” in a few ways:</p>
+<ul>
+<li><p class="first">It uses the None/Null extension to XMLRPC (this is technically non-standard,
+but most implementations support it).</p>
+</li>
+<li><p class="first">Provides client/server non-primitive type wrappers.  What this means is
+that for any type that XMLRPC cannot marshal, the server will return a
+“remote object reference”, which is a 2-tuple of the form
+(‘types.’ + typeName, objectId):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>typeName is the name of the type (can be anything, but see below</dt>
+<dd><p class="first last">for description of typeMethods)</p>
+</dd>
+</dl>
+<p>objectId is an integer representing this object</p>
+</div></blockquote>
+<p>This module’s ServerProxy class, when it encounters a remote object
+reference, will replace it with a remote object proxy.  It does this by
+creating a object proxy that saves its objectId, and by binding all
+methods that begin with ‘typeMethods.’ + typeName to the proxy.  The
+list of available methods is obtained with the XMLRPC
+system.listMethods() call.</p>
+</li>
+<li><p class="first">If the first parameter of a function call is a session identifier, then
+the specified session is used to track objects.  This parameter is then
+removed from the list of parameters passed on to the server-side
+function call.  If no session identifier is specified, then an
+anonymous session will be used.  Session identifiers are of the form:
+(‘sessionid’, sessionId)</p>
+</li>
+</ul>
+<p>These issues do not prevent a standard XMLRPC client implementation
+from connecting to this XMLRPC server, the object proxies are merely for
+client programmer’s convenience.</p>
+<dl class="docutils">
+<dt>To start a server (in a new thread), run:</dt>
+<dd>houxmlrpc.run(port=8888)</dd>
+</dl>
+<p>This function returns the thread that was created.</p>
+<dl class="docutils">
+<dt>To attach to the server from a client, run:</dt>
+<dd>s = houxmlrpc.ServerProxy(‘<a class="reference external" href="http://localhost:8888">http://localhost:8888</a>’)</dd>
+<dt>Consider this example using the object proxies:</dt>
+<dd><p class="first">root = s.hou.root()
+for c in root.children():</p>
+<blockquote class="last">
+<div>print c.path()</div></blockquote>
+</dd>
+<dt>as opposed to this example without using the object proxies:</dt>
+<dd><p class="first">root = s.hou.root()
+for c in s.hou.typeMethods.hou.Node.children(root):</p>
+<blockquote class="last">
+<div>print s.hou.typeMethods.hou.Node.path(c)</div></blockquote>
+</dd>
+</dl>
+<dl class="class">
+<dt id="houxmlrpc.HouXMLRPCServer">
+<em class="property">class </em><code class="descclassname">houxmlrpc.</code><code class="descname">HouXMLRPCServer</code><span class="sig-paren">(</span><em>addr=('localhost'</em>, <em>8888)</em>, <em>logRequests=False</em>, <em>maxSessions=10</em>, <em>maxSessionObjs=1000</em><span class="sig-paren">)</span><a class="headerlink" href="#houxmlrpc.HouXMLRPCServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimpleXMLRPCServer.SimpleXMLRPCServer</span></code></p>
+<dl class="attribute">
+<dt id="houxmlrpc.HouXMLRPCServer.allow_reuse_address">
+<code class="descname">allow_reuse_address</code><em class="property"> = True</em><a class="headerlink" href="#houxmlrpc.HouXMLRPCServer.allow_reuse_address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houxmlrpc.HouXMLRPCServer.delObj">
+<code class="descname">delObj</code><span class="sig-paren">(</span><em>objId</em>, <em>sessId</em><span class="sig-paren">)</span><a class="headerlink" href="#houxmlrpc.HouXMLRPCServer.delObj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houxmlrpc.HouXMLRPCServer.serve_forever">
+<code class="descname">serve_forever</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houxmlrpc.HouXMLRPCServer.serve_forever" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="houxmlrpc.HouXMLRPCServer.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#houxmlrpc.HouXMLRPCServer.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the XMLRPC Server</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="houxmlrpc.ServerProxy">
+<em class="property">class </em><code class="descclassname">houxmlrpc.</code><code class="descname">ServerProxy</code><span class="sig-paren">(</span><em>*args</em>, <em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#houxmlrpc.ServerProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">xmlrpclib.ServerProxy</span></code></p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="houpythonportion.html" title="previous chapter">houpythonportion module</a></li>
+      <li>Next: <a href="hqrop.html" title="next chapter">hqrop module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/houxmlrpc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/houxmlrpc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,949 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorig package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="bakeanimation module" href="bakeanimation.html" />
+    <link rel="prev" title="assetdownload module" href="assetdownload.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="autorig-package">
+<h1>autorig package<a class="headerlink" href="#autorig-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorig.isbodypart">
+<span id="autorig-isbodypart-module"></span><h2>autorig.isbodypart module<a class="headerlink" href="#module-autorig.isbodypart" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorig.isbodypart.isAnimationRigPart">
+<code class="descclassname">autorig.isbodypart.</code><code class="descname">isAnimationRigPart</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.isbodypart.isAnimationRigPart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorig.isbodypart.isAutoRigPart">
+<code class="descclassname">autorig.isbodypart.</code><code class="descname">isAutoRigPart</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.isbodypart.isAutoRigPart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorig.isbodypart.isAutoRigPlacer">
+<code class="descclassname">autorig.isbodypart.</code><code class="descname">isAutoRigPlacer</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.isbodypart.isAutoRigPlacer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorig.isbodypart.isDeformRigPart">
+<code class="descclassname">autorig.isbodypart.</code><code class="descname">isDeformRigPart</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.isbodypart.isDeformRigPart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorig.mocapbodypart">
+<span id="autorig-mocapbodypart-module"></span><h2>autorig.mocapbodypart module<a class="headerlink" href="#module-autorig.mocapbodypart" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorig.mocapbodypart.MocapBodyPart">
+<em class="property">class </em><code class="descclassname">autorig.mocapbodypart.</code><code class="descname">MocapBodyPart</code><span class="sig-paren">(</span><em>parttype</em>, <em>mocappart=None</em>, <em>otherpart=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an object that stores data for a Mocap body part asset.</p>
+<p>A MocapBodyPart stores links to Houdini assets, parameters,
+and series of position and control mappings.</p>
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.addLength">
+<code class="descname">addLength</code><span class="sig-paren">(</span><em>length</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.addLength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a length to the list of bone lengths.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.addMapPoint">
+<code class="descname">addMapPoint</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.addMapPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a single map point to the list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.animControls">
+<code class="descname">animControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.animControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of animation rig control object names.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.autoControls">
+<code class="descname">autoControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.autoControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of auto rig control object names.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.channels">
+<code class="descname">channels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of corresponding animation channels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.extraPositions">
+<code class="descname">extraPositions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.extraPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a nodes extra position locations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.initializeRootMap">
+<code class="descname">initializeRootMap</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.initializeRootMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take a point string and insert it to be the first map point
+and add the ‘root’ map location to the list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.insertMapLocation">
+<code class="descname">insertMapLocation</code><span class="sig-paren">(</span><em>toadd</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.insertMapLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a location into the list of Map Locations at a 
+specific position.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.insertMapPoint">
+<code class="descname">insertMapPoint</code><span class="sig-paren">(</span><em>index</em>, <em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.insertMapPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a single map point into the list at a specific
+location.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.lengths">
+<code class="descname">lengths</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.lengths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of bone lengths.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.mapLocations">
+<code class="descname">mapLocations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.mapLocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of the map locations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.mapPoints">
+<code class="descname">mapPoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.mapPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of Map Points.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.mocapPart">
+<code class="descname">mocapPart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.mocapPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an object representing the physical mocap rig node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.modifyMapPoint">
+<code class="descname">modifyMapPoint</code><span class="sig-paren">(</span><em>index</em>, <em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.modifyMapPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change a Map Point in place.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.name">
+<code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the name of the body part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.otherPart">
+<code class="descname">otherPart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.otherPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an object representing the corresponding animation
+rig node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.parmNames">
+<code class="descname">parmNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.parmNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of parameter names.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.parms">
+<code class="descname">parms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.parms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.resetMapLocations">
+<code class="descname">resetMapLocations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.resetMapLocations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the Map Locations back to the default values for this
+type of mocap object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.setMapPoints">
+<code class="descname">setMapPoints</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.setMapPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the Map Points to a list of specified locations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.setParmNames">
+<code class="descname">setParmNames</code><span class="sig-paren">(</span><em>parms</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.setParmNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the list of parm names.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.setPretransforms">
+<code class="descname">setPretransforms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.setPretransforms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the pretransforms of the mocap body part to the 
+positions of the controls from the corresponding auto 
+rig part.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.skipFirstMap">
+<code class="descname">skipFirstMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.skipFirstMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns wether a node should skip the first map point.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.twistExtra">
+<code class="descname">twistExtra</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.twistExtra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an objects extra twist information.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.twistTarget">
+<code class="descname">twistTarget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.twistTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a parts custom twist target.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.type">
+<code class="descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the type of the object as a string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.useEnd">
+<code class="descname">useEnd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.useEnd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether a part uses End.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorig.mocapbodypart.MocapBodyPart.useTwist">
+<code class="descname">useTwist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocapbodypart.MocapBodyPart.useTwist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether a part uses a custom twist.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorig.mocappartmapping">
+<span id="autorig-mocappartmapping-module"></span><h2>autorig.mocappartmapping module<a class="headerlink" href="#module-autorig.mocappartmapping" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorig.mocaprigutils">
+<span id="autorig-mocaprigutils-module"></span><h2>autorig.mocaprigutils module<a class="headerlink" href="#module-autorig.mocaprigutils" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="autorig.mocaprigutils.MessageError">
+<em class="property">exception </em><code class="descclassname">autorig.mocaprigutils.</code><code class="descname">MessageError</code><a class="headerlink" href="#autorig.mocaprigutils.MessageError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.calculateScaleOffset">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">calculateScaleOffset</code><span class="sig-paren">(</span><em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.calculateScaleOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the scale to offset the translates of the root null.
+The scale is based on the height of the COG minus the low
+bound of the objects bounding box.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.checkForCOGBone">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">checkForCOGBone</code><span class="sig-paren">(</span><em>skeleton</em>, <em>mocapobjects</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.checkForCOGBone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to determine if a COG bone needs to be created.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.chopsToKeys">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">chopsToKeys</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.chopsToKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert channels with chop() expressions to raw keyframes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.configureMocapRigs">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">configureMocapRigs</code><span class="sig-paren">(</span><em>mocappart</em>, <em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.configureMocapRigs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup all the parameters and modify any skeleton parts to
+correctly initialize the mocap object and skeleton.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createCOG">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createCOG</code><span class="sig-paren">(</span><em>skeleton</em>, <em>root</em>, <em>legs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createCOG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a bone that will act as the COG.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createDialog">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createDialog</code><span class="sig-paren">(</span><em>rigasset</em>, <em>mocapobjects</em>, <em>acceptfunctionname</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Mocap Dialog node.</p>
+<p>A Mocap Dialog node is a temporary ass that is used in the
+mapping process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createEndTarget">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createEndTarget</code><span class="sig-paren">(</span><em>mocapobject</em>, <em>bone</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createEndTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a target null that is attached to a bone that can be
+used to fetch transforms from.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createMocap">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createMocap</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createMocap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Mocap rig from an animation rig and an animated
+skeleton.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createMocapNodes">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createMocapNodes</code><span class="sig-paren">(</span><em>mocaprig</em>, <em>animationrigparts</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createMocapNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create mocap body part assets in the mocap rig network.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createMocapRig">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createMocapRig</code><span class="sig-paren">(</span><em>sourcerig</em>, <em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createMocapRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a motion capture rig from an animation rig and an
+animated skeleton.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createRootNull">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createRootNull</code><span class="sig-paren">(</span><em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createRootNull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a root null that is used for transforming for an 
+imported mocap skeleton.</p>
+<p>Find the current root null by searching the rigs children
+for any nodes with 0 inputs(start of hierarchy).  If more 
+than one is found, try and look for the name ‘root’.  If not 
+found, display a message that we are skipping this step.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.createTwist">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">createTwist</code><span class="sig-paren">(</span><em>bone</em>, <em>name</em>, <em>moveToEnd=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.createTwist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a twist effector for an IK solver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.doAutoRigSet">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">doAutoRigSet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.doAutoRigSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup an Auto Rigs control positions to the location of bones
+of a skeleton.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.doCheck">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">doCheck</code><span class="sig-paren">(</span><em>bone</em>, <em>bones</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.doCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check a bone to see if there are any bones attached to its
+input.</p>
+<p>If there are bones attached to its input and they are
+not in the list of bones, set these bones lengths to be the
+equivalent of the lengths of the bone and any copy bones.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.doMocapModify">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">doMocapModify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.doMocapModify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the modification of the skeleton and setting of the Mocap
+objects parameters when creating a rig from an animation rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.doRefit">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">doRefit</code><span class="sig-paren">(</span><em>node</em>, <em>tolerance</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.doRefit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refit all the channels on a node by the given tolerance.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.duplicateBones">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">duplicateBones</code><span class="sig-paren">(</span><em>mappoints</em>, <em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.duplicateBones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create copy bones when multiple map points are mapped to the
+same bone.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.getDistance">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">getDistance</code><span class="sig-paren">(</span><em>source</em>, <em>target</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.getDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the distance between two objects.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.modifyMocapSkeleton">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">modifyMocapSkeleton</code><span class="sig-paren">(</span><em>skeleton</em>, <em>mocapobjects</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.modifyMocapSkeleton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the skeleton so that we can map to it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.modifyScaleOffset">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">modifyScaleOffset</code><span class="sig-paren">(</span><em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.modifyScaleOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the scale offset parameter on the mocap rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.modifySkeletonNetwork">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">modifySkeletonNetwork</code><span class="sig-paren">(</span><em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.modifySkeletonNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform a skeleton subnetwork into a digital asset.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.readOpscript">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">readOpscript</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.readOpscript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply animation from a file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.reformatMessageErrors">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">reformatMessageErrors</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.reformatMessageErrors" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function decorator catches MessageError exceptions and displays
+a message in the UI when they occur.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.setAutoRigPositions">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">setAutoRigPositions</code><span class="sig-paren">(</span><em>autorignode</em>, <em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.setAutoRigPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Mocap Bodypart objects for use when setting the position
+of the Auto Rig controls to the locations of a skeleton.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.setChopChannels">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">setChopChannels</code><span class="sig-paren">(</span><em>mocapparts</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.setChopChannels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set parameters on the animation rig to be chop expressions that
+get their values from the correct chop and channels.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.setControlScale">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">setControlScale</code><span class="sig-paren">(</span><em>mocapparts</em>, <em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.setControlScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the control scale to be the scale of the root.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.setMocapParms">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">setMocapParms</code><span class="sig-paren">(</span><em>mocapobjects</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.setMocapParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters on the mocap rig parts.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.setupScaleOffset">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">setupScaleOffset</code><span class="sig-paren">(</span><em>skeleton</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.setupScaleOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the parameters of the skeleton to use the scale offset.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.skeletonSelect">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">skeletonSelect</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.skeletonSelect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selection function to select a skeleton subnet.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.mocaprigutils.writeOpscript">
+<code class="descclassname">autorig.mocaprigutils.</code><code class="descname">writeOpscript</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.mocaprigutils.writeOpscript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write out a file with the opscript necessary to recreate the 
+keys.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorig.rigtoolutils">
+<span id="autorig-rigtoolutils-module"></span><h2>autorig.rigtoolutils module<a class="headerlink" href="#module-autorig.rigtoolutils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorig.rigtoolutils.checkForMove">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">checkForMove</code><span class="sig-paren">(</span><em>rignode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.checkForMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if the body part should be moved on creation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.createAutoRig">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">createAutoRig</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.createAutoRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Auto Rig asset from a selection of Auto Rig body
+parts.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.genericAutorigTool">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">genericAutorigTool</code><span class="sig-paren">(</span><em>scriptargs</em>, <em>nodetypename</em>, <em>prompts=('hook object'</em>, <em>)</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.genericAutorigTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an Auto Rig body part.</p>
+<p>If invoked from a Scene Viewer, prompt to connect the part
+to any hook point of another existing body part.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.getCharacterPlacer">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">getCharacterPlacer</code><span class="sig-paren">(</span><em>rignode</em>, <em>hook</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.getCharacterPlacer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Traverse the connection hierarchy looking for a Character
+Placer to connect to.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.getHook">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">getHook</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.getHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Traverse a nodes outputs looking for a valid hook object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.hasName">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">hasName</code><span class="sig-paren">(</span><em>name</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.hasName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicate whether a nodes name contains a specific string</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.moveNodes">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">moveNodes</code><span class="sig-paren">(</span><em>rignode</em>, <em>initialposition</em>, <em>newposition</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.moveNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reposition controls of a node to a new position.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.reconnectPart">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">reconnectPart</code><span class="sig-paren">(</span><em>scriptargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.reconnectPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconnect and reposition a body part to the skeleton.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.selectionPrompt">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">selectionPrompt</code><span class="sig-paren">(</span><em>elementtype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.selectionPrompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a selection prompt for connecting body parts.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.rigtoolutils.updateLayer">
+<code class="descclassname">autorig.rigtoolutils.</code><code class="descname">updateLayer</code><span class="sig-paren">(</span><em>rignode</em>, <em>hook</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.rigtoolutils.updateLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the layer of a new autorig part.</p>
+<p>Check the layer parameter value of the body part that is 
+being connected to and make sure the new part has its 
+layer set to a value that is at least 1 greater than the
+hook target.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorig.utils">
+<span id="autorig-utils-module"></span><h2>autorig.utils module<a class="headerlink" href="#module-autorig.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="autorig.utils.MessageError">
+<em class="property">exception </em><code class="descclassname">autorig.utils.</code><code class="descname">MessageError</code><a class="headerlink" href="#autorig.utils.MessageError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.alertIfMissingName">
+<code class="descclassname">autorig.utils.</code><code class="descname">alertIfMissingName</code><span class="sig-paren">(</span><em>node</em>, <em>required_name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.alertIfMissingName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.checkFileForDefinition">
+<code class="descclassname">autorig.utils.</code><code class="descname">checkFileForDefinition</code><span class="sig-paren">(</span><em>file_path</em>, <em>definition_name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.checkFileForDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check an otl file for a definition that matches the supplied 
+name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.checkSymOverride">
+<code class="descclassname">autorig.utils.</code><code class="descname">checkSymOverride</code><span class="sig-paren">(</span><em>auto_rig_part</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.checkSymOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check a body part for the symmetry_override parameter.  If the
+parameter is found, check to see if it is on.  If it is on,
+return True.  If it is not, continue up the hierarchy looking
+for a body part that has it enabled.  If not found, return 
+False.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.compareNodes">
+<code class="descclassname">autorig.utils.</code><code class="descname">compareNodes</code><span class="sig-paren">(</span><em>part_1</em>, <em>part_2</em>, <em>count=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.compareNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort rig nodes by body part type. If the parts are the same 
+type, try sorting by positions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.copyHooks">
+<code class="descclassname">autorig.utils.</code><code class="descname">copyHooks</code><span class="sig-paren">(</span><em>animation_rig_part</em>, <em>auto_rig_node</em>, <em>replace_hooks=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.copyHooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the hook object paths from the auto rig to the new 
+animation rig node.  If “True” is passed to “replace”, swap
+“left” and “right” in the path if found.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.copyHoudiniRig">
+<code class="descclassname">autorig.utils.</code><code class="descname">copyHoudiniRig</code><span class="sig-paren">(</span><em>auto_rig</em>, <em>file_path</em>, <em>delete_original</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.copyHoudiniRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the asset definition from the Houdini libraries to the otl
+file that contains the Animation and Deform rigs, deleting the
+original rig node if specified.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAnimationPart">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAnimationPart</code><span class="sig-paren">(</span><em>auto_rig_part</em>, <em>animation_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAnimationPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and setup an Animation bodypart based on an Auto Rig
+part.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAnimationProxySection">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAnimationProxySection</code><span class="sig-paren">(</span><em>auto_rig</em>, <em>animation_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAnimationProxySection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an extra Proxy section in an Animation rig that contains
+a dictionary with all the proxy control parameter values.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAnimationProxySource">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAnimationProxySource</code><span class="sig-paren">(</span><em>animation_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAnimationProxySource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a network that reads in the proxy geometry file for
+the animation rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAnimationRig">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAnimationRig</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAnimationRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an Animation Rig asset based on an Auto Rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAutoRig">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAutoRig</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAutoRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Auto Rig asset based on a list of body parts.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAutoRigDialog">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAutoRigDialog</code><span class="sig-paren">(</span><em>children</em>, <em>rig_definition</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAutoRigDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the dialog script for a custom Auto Rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAutoRigFromAnimationRig">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAutoRigFromAnimationRig</code><span class="sig-paren">(</span><em>animation_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAutoRigFromAnimationRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an Auto Rig from an Animation Rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createAutoRigSourceGeo">
+<code class="descclassname">autorig.utils.</code><code class="descname">createAutoRigSourceGeo</code><span class="sig-paren">(</span><em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createAutoRigSourceGeo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create source geometry for an Auto Rig.</p>
+<p>The source geometry network consists of an Object Merge and a 
+File SOP combined together with a switch to toggle the source.</p>
+<p>If “proxy_display_geometry” == 2 (Proxy Groups), the source
+geo is not displayed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createDeformPart">
+<code class="descclassname">autorig.utils.</code><code class="descname">createDeformPart</code><span class="sig-paren">(</span><em>deform_rig</em>, <em>animation_part</em>, <em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createDeformPart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and setup a Deform body part.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createDeformRig">
+<code class="descclassname">autorig.utils.</code><code class="descname">createDeformRig</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createDeformRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createDeformSkin">
+<code class="descclassname">autorig.utils.</code><code class="descname">createDeformSkin</code><span class="sig-paren">(</span><em>deform_rig</em>, <em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createDeformSkin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the deform skin network.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createDialog">
+<code class="descclassname">autorig.utils.</code><code class="descname">createDialog</code><span class="sig-paren">(</span><em>rig_parts</em>, <em>dialog_script</em>, <em>parm_type</em>, <em>folder_name</em>, <em>token</em>, <em>extra</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a section of Dialog Script code for a certain set
+of parameter types.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createGeoContainer">
+<code class="descclassname">autorig.utils.</code><code class="descname">createGeoContainer</code><span class="sig-paren">(</span><em>root_node</em>, <em>node_name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createGeoContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an empty Geometry object.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.createProxyExport">
+<code class="descclassname">autorig.utils.</code><code class="descname">createProxyExport</code><span class="sig-paren">(</span><em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.createProxyExport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the Proxy Geometry Export network.</p>
+<p>The proxy geometry is object merged from each body part.  A delete
+node is added and is used to delete overlapping primitives.  The 
+group field of the delete is set by “writeProxy()” in the rig’s
+python module.  The resulting proxy geometry is then written to
+disk using a ROP Output Driver.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.doSearch">
+<code class="descclassname">autorig.utils.</code><code class="descname">doSearch</code><span class="sig-paren">(</span><em>capture_node</em>, <em>deform_node</em>, <em>use_bone_deform</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.doSearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a deform asset, get the proper sop representation that
+should be used for the deform path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.executeProxyWrite">
+<code class="descclassname">autorig.utils.</code><code class="descname">executeProxyWrite</code><span class="sig-paren">(</span><em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.executeProxyWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the render button on the ROP output to write out the 
+proxy.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.finishAsset">
+<code class="descclassname">autorig.utils.</code><code class="descname">finishAsset</code><span class="sig-paren">(</span><em>auto_rig</em>, <em>rig_definition</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.finishAsset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleanup actions for an asset.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.getDeformNodes">
+<code class="descclassname">autorig.utils.</code><code class="descname">getDeformNodes</code><span class="sig-paren">(</span><em>use_bone_deform</em>, <em>capture_node</em>, <em>deform_rig_parts</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.getDeformNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate through a list of body parts looking for deform type
+nodes to add to the capture.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.getDialog">
+<code class="descclassname">autorig.utils.</code><code class="descname">getDialog</code><span class="sig-paren">(</span><em>rig_parts</em>, <em>parm_type</em>, <em>folder_name=''</em>, <em>token=''</em>, <em>extra=''</em>, <em>group=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.getDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a group of specific type of dialog parameters for
+a list of nodes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.getIconType">
+<code class="descclassname">autorig.utils.</code><code class="descname">getIconType</code><span class="sig-paren">(</span><em>rig_parts</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.getIconType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the body parts to determine which rig icon is suitable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.isHDA">
+<code class="descclassname">autorig.utils.</code><code class="descname">isHDA</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.isHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a node is an HDA by checking for a nodeType 
+definition.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.isType">
+<code class="descclassname">autorig.utils.</code><code class="descname">isType</code><span class="sig-paren">(</span><em>type_list</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.isType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a node is a specific type by checking string(s)
+against the type name of a node.  If type_list is a tuple, check 
+against each type in the tuple.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.linkAutoRigParms">
+<code class="descclassname">autorig.utils.</code><code class="descname">linkAutoRigParms</code><span class="sig-paren">(</span><em>children</em>, <em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.linkAutoRigParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Links parameters on Auto Rig body parts to the auto rig asset.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.matchRig">
+<code class="descclassname">autorig.utils.</code><code class="descname">matchRig</code><span class="sig-paren">(</span><em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.matchRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matches the positions of auto rig armature and proxy controls 
+with those of the specified animation rig. The opposite of
+modifyRig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.modifyDialogScript">
+<code class="descclassname">autorig.utils.</code><code class="descname">modifyDialogScript</code><span class="sig-paren">(</span><em>dialog_script</em>, <em>parm_type</em>, <em>part_name</em>, <em>folder_name=''</em>, <em>token=''</em>, <em>extra=''</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.modifyDialogScript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify a template parameter dialog with the tokens we choose.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.modifyRig">
+<code class="descclassname">autorig.utils.</code><code class="descname">modifyRig</code><span class="sig-paren">(</span><em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.modifyRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the positions of an Animation Rig to those of an 
+Auto Rig.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.parseDialog">
+<code class="descclassname">autorig.utils.</code><code class="descname">parseDialog</code><span class="sig-paren">(</span><em>dialog_script</em>, <em>dialogs_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.parseDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses a supplied dictionary to add in entries to the dialog 
+script.</p>
+<p>A source dictionary is layed out as follows:</p>
+<p>target: dialog code
+e.g. “ADD ANIMATION”: “a sting containing dialog code”</p>
+<p>For each key in the dictionary, the value is added in
+at the target location and the full dialog is returned.
+If the target cannot be found, it is skipped.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.performModification">
+<code class="descclassname">autorig.utils.</code><code class="descname">performModification</code><span class="sig-paren">(</span><em>autorig_part</em>, <em>animation_part</em>, <em>symmetry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.performModification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the modification to match the Animation part with the Auto
+Rig part.</p>
+<p>All parameters will be reverted to default before modification,
+create temporary variables to hold parameter values that 
+should be kept.  These include custom control spaces, control 
+colors, and sides.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.positionProxy">
+<code class="descclassname">autorig.utils.</code><code class="descname">positionProxy</code><span class="sig-paren">(</span><em>animation_part</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.positionProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the transforms required to properly align proxy
+geometry with the animation rig part.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.prepForAsset">
+<code class="descclassname">autorig.utils.</code><code class="descname">prepForAsset</code><span class="sig-paren">(</span><em>auto_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.prepForAsset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the source node to setup names and paths for asset 
+creation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.reformatMessageErrors">
+<code class="descclassname">autorig.utils.</code><code class="descname">reformatMessageErrors</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.reformatMessageErrors" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function decorator catches MessageError exceptions and displays
+a message in the UI when they occur.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.setAnimationDefaults">
+<code class="descclassname">autorig.utils.</code><code class="descname">setAnimationDefaults</code><span class="sig-paren">(</span><em>animation_part</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.setAnimationDefaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>For any parameter that is in the “Animation” folder on the 
+bodypart, revert it to defaults if it is autoscoped.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.setProxyToEmbedded">
+<code class="descclassname">autorig.utils.</code><code class="descname">setProxyToEmbedded</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.setProxyToEmbedded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an Animation rig to look to itself for proxy.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.setupAnimationTool">
+<code class="descclassname">autorig.utils.</code><code class="descname">setupAnimationTool</code><span class="sig-paren">(</span><em>animation_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.setupAnimationTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modify the default tool for Animation Rig nodes so they can be 
+placed interactively.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.sortByLayer">
+<code class="descclassname">autorig.utils.</code><code class="descname">sortByLayer</code><span class="sig-paren">(</span><em>part_1</em>, <em>part_2</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.sortByLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort a list of nodes based upon a nodes “layer” parameter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.splitTypes">
+<code class="descclassname">autorig.utils.</code><code class="descname">splitTypes</code><span class="sig-paren">(</span><em>rig_parts</em>, <em>dialog_script</em>, <em>parm_type</em>, <em>token</em>, <em>extra</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.splitTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Separate pieces into similar group folders.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.updateDeformRigCapturePose">
+<code class="descclassname">autorig.utils.</code><code class="descname">updateDeformRigCapturePose</code><span class="sig-paren">(</span><em>auto_rig</em>, <em>auto_rig_parts</em>, <em>animation_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.updateDeformRigCapturePose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the deform rig capture pills</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.wrapFolder">
+<code class="descclassname">autorig.utils.</code><code class="descname">wrapFolder</code><span class="sig-paren">(</span><em>dialog_script</em>, <em>tab_name</em>, <em>folder_name</em>, <em>folder_dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.wrapFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap a dialog script string with a folder parameter string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.writeManualProxy">
+<code class="descclassname">autorig.utils.</code><code class="descname">writeManualProxy</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.writeManualProxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a writing out of the proxy geometry.</p>
+<p>Execute a hou.Parm.pressButton() on the “Render” button of the
+proxy output rop.</p>
+<p>If the file path is empty or no proxy is diplayed, display a
+message and quit.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorig.utils.writeProxyToEmbedded">
+<code class="descclassname">autorig.utils.</code><code class="descname">writeProxyToEmbedded</code><span class="sig-paren">(</span><em>auto_rig</em>, <em>animation_rig</em><span class="sig-paren">)</span><a class="headerlink" href="#autorig.utils.writeProxyToEmbedded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates proxy embedded into the Animation rig.</p>
+<p>If the proxy display is set to “None”, change it to “Bounding
+Geometry” and write out the proxy; changing it back afterwards.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorig">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorig" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorig package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorig.isbodypart">autorig.isbodypart module</a></li>
+<li><a class="reference internal" href="#module-autorig.mocapbodypart">autorig.mocapbodypart module</a></li>
+<li><a class="reference internal" href="#module-autorig.mocappartmapping">autorig.mocappartmapping module</a></li>
+<li><a class="reference internal" href="#module-autorig.mocaprigutils">autorig.mocaprigutils module</a></li>
+<li><a class="reference internal" href="#module-autorig.rigtoolutils">autorig.rigtoolutils module</a></li>
+<li><a class="reference internal" href="#module-autorig.utils">autorig.utils module</a></li>
+<li><a class="reference internal" href="#module-autorig">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="assetdownload.html" title="previous chapter">assetdownload module</a></li>
+      <li>Next: <a href="bakeanimation.html" title="next chapter">bakeanimation module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorig.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/autorig.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

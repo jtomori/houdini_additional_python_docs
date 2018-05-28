@@ -1,0 +1,586 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>sas package &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="shadingutils module" href="shadingutils.html" />
+    <link rel="prev" title="roptoolutils module" href="roptoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sas-package">
+<h1>sas package<a class="headerlink" href="#sas-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-sas.inspectasset">
+<span id="sas-inspectasset-module"></span><h2>sas.inspectasset module<a class="headerlink" href="#module-sas.inspectasset" title="Permalink to this headline">¶</a></h2>
+<p>This module contains functions related to inspecting Houdini digital assets
+and determining which other assets they depend on.  It also has functions to
+extract icons from assets and embed them into them.</p>
+<dl class="function">
+<dt id="sas.inspectasset.extract_node_type_category_name">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">extract_node_type_category_name</code><span class="sig-paren">(</span><em>node_type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.extract_node_type_category_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.find_node_type">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">find_node_type</code><span class="sig-paren">(</span><em>otl_file</em>, <em>node_type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.find_node_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look in an OTL file for the given hou.NodeType and return it.
+Returns None if the OTL file does not contain a node type with
+that name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.full_node_type_name_from_definition">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">full_node_type_name_from_definition</code><span class="sig-paren">(</span><em>definition</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.full_node_type_name_from_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an HDADefinition, return its full node type name (i.e. in
+Category/name) form.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.get_dependency_info_for_node">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">get_dependency_info_for_node</code><span class="sig-paren">(</span><em>node</em>, <em>skip_nested_namespaces=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.get_dependency_info_for_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search the given asset instance and return information about itself
+and the node types it uses, in the same format as get_otl_file_info.</p>
+<p>The value for “missing” in the returned dictionary is always an empty list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.get_otl_file_info">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">get_otl_file_info</code><span class="sig-paren">(</span><em>otl_file</em>, <em>skip_nested_namespaces=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.get_otl_file_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches an OTL file and return JSON containing dependencies from a node
+type to other node types defined in the OTL.</p>
+<dl class="docutils">
+<dt>skip_nested_namespaces: When True, node types that are embedded inside</dt>
+<dd>other node types will be ignored (unless there are missing
+dependencies).</dd>
+</dl>
+<p>For all the node types defined in the given OTL file, information is
+put in a single block of JSON.  For example, this function might return
+the following:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>{</dt>
+<dd><dl class="first docutils">
+<dt>“contents”: {</dt>
+<dd><dl class="first docutils">
+<dt>“car”: {</dt>
+<dd>“descriptive_name”: “Car”,
+“category_name”: “Object”,
+“depends_on”: [“wheel”]
+“otl_file”: “car_and_wheel.otl”,
+“icon_type”: None,
+“is_nested”: False,
+“houdini_version”: “12.5.427”</dd>
+</dl>
+<p>},
+“wheel”: {</p>
+<blockquote>
+<div>“descriptive_name”: “Wheel”,
+“category_name”: “Object”,
+“depends_on”: []
+“otl_file”: “car_and_wheel.otl”,
+“icon_type”: None,
+“is_nested”: False,
+“houdini_version”: “12.5.427”</div></blockquote>
+<p class="last">},</p>
+</dd>
+</dl>
+<p class="last">},
+“missing”: []</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>if “wheel” and “car” are in the OTL file and “car” depends on “wheel”.
+Or, it might return:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>{</dt>
+<dd><dl class="first docutils">
+<dt>“contents”: {</dt>
+<dd><dl class="first docutils">
+<dt>“car”: {</dt>
+<dd>“descriptive_name”: “Car”,
+“category_name”: “Object”,
+“depends_on”: [“wheel”]
+“otl_file”: “car.otl”,
+“icon_type”: None,
+“is_nested”: False,
+“houdini_version”: “12.5.427”</dd>
+</dl>
+<p class="last">},</p>
+</dd>
+</dl>
+<p class="last">},
+“missing”: [[“Object”, “wheel”]]</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>if “wheel” is not in the OTL file.</p>
+<p>Node types built into Houdini are not included in the output.  The
+result dependency dictionary is not expanded: if A, B, and C are node
+types, A uses B, and B uses C, the dependencies will be {“A”: [“B”],
+“B”: [“C”]}, not {“A”: [“B”, “C”]}.</p>
+<p>Note that “icon_type” is one of “png”, “svg”, or None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.icon_type">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">icon_type</code><span class="sig-paren">(</span><em>node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.icon_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the type of icon file that can be extracted from a node type (either
+“png” or “svg”), or None if the node type does not contain an embedded
+icon.</p>
+<p>Icon references in Houdini can either be the special icon section
+names or they can be normal opdef references.  If it’s a normal
+reference to a non-SVG file then it must be to a bitmap image, and
+we’ll convert that to a PNG.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.is_asset_type">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">is_asset_type</code><span class="sig-paren">(</span><em>node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.is_asset_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the given node type is a user-defined asset.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.is_namespaced_node_type">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">is_namespaced_node_type</code><span class="sig-paren">(</span><em>node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.is_namespaced_node_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.is_nested_node_type">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">is_nested_node_type</code><span class="sig-paren">(</span><em>node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.is_nested_node_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether this node type is nested inside another node type.</p>
+<p>Note that instances of nested node types can only be created inside
+instances of the containing node type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.is_nested_node_type_from_definition">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">is_nested_node_type_from_definition</code><span class="sig-paren">(</span><em>definition</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.is_nested_node_type_from_definition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a defintiion, return whether this node type is nested inside
+another node type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.node_type_name_with_category">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">node_type_name_with_category</code><span class="sig-paren">(</span><em>node_type_name</em>, <em>category</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.node_type_name_with_category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.node_type_name_with_vendor">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">node_type_name_with_vendor</code><span class="sig-paren">(</span><em>node_type_name</em>, <em>vendor</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.node_type_name_with_vendor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a node type name (which may or may not include the category),
+return a new node type name that adds/changes the vendor (author) prefix.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.node_type_name_without_category">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">node_type_name_without_category</code><span class="sig-paren">(</span><em>node_type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.node_type_name_without_category" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a node type name that may or may not include the node type
+category, return one without any node type category.</p>
+<p>For example, if you pass in “Object/geo” this function returns “geo”.
+If you pass in “SideFX::Object/geo”, it returns “SideFX::geo”.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.read_icon_data">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">read_icon_data</code><span class="sig-paren">(</span><em>image_file</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.read_icon_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the icon data from a image file on disk (SVG or raster data),
+convert it into the appropriate format needed by Houdini, and
+return an (icon_section_name, image_data) tuple.</p>
+<p>The icon_section_name is where Houdini will store the image if
+it’s put into an asset definition, and identifies whether the data
+is svg or raster data.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.save_icon">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">save_icon</code><span class="sig-paren">(</span><em>node_type</em>, <em>output_file</em>, <em>icon_dimensions</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.save_icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a node type for an asset that has an icon file, write the
+icon to the given output file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.scoping_node_type_name">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">scoping_node_type_name</code><span class="sig-paren">(</span><em>node_type</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.scoping_node_type_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.scoping_node_type_name_from_name">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">scoping_node_type_name_from_name</code><span class="sig-paren">(</span><em>node_type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.scoping_node_type_name_from_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.inspectasset.set_icon">
+<code class="descclassname">sas.inspectasset.</code><code class="descname">set_icon</code><span class="sig-paren">(</span><em>node_type</em>, <em>icon_section_name</em>, <em>icon_data</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.inspectasset.set_icon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the icon for an asset to the given raw icon data (.svg or .pic) format,
+storing it in the given section name.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sas.localassets">
+<span id="sas-localassets-module"></span><h2>sas.localassets module<a class="headerlink" href="#module-sas.localassets" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="sas.localassets.CurrentUser">
+<em class="property">class </em><code class="descclassname">sas.localassets.</code><code class="descname">CurrentUser</code><a class="headerlink" href="#sas.localassets.CurrentUser" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="sas.localassets.CurrentUser.name">
+<code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#sas.localassets.CurrentUser.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sas.localassets.SessionData">
+<em class="property">class </em><code class="descclassname">sas.localassets.</code><code class="descname">SessionData</code><span class="sig-paren">(</span><em>server</em>, <em>session_key</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.SessionData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hutil.html#hutil.api.ClientSessionData" title="hutil.api.ClientSessionData"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.api.ClientSessionData</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sas.localassets.StoreAPI">
+<em class="property">class </em><code class="descclassname">sas.localassets.</code><code class="descname">StoreAPI</code><span class="sig-paren">(</span><em>session_data</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.StoreAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hutil.html#hutil.api.ClientAPIConnection" title="hutil.api.ClientAPIConnection"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.api.ClientAPIConnection</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sas.localassets.WebResponderAPI">
+<em class="property">class </em><code class="descclassname">sas.localassets.</code><code class="descname">WebResponderAPI</code><span class="sig-paren">(</span><em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.WebResponderAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class forms the API that the URL scheme handler uses to control
+Houdini.</p>
+<dl class="method">
+<dt id="sas.localassets.WebResponderAPI.begin_upload_with_credentials">
+<code class="descname">begin_upload_with_credentials</code><span class="sig-paren">(</span><em>session_key</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.WebResponderAPI.begin_upload_with_credentials" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sas.localassets.WebResponderAPI.invoke_callback_to_return_cached_session_key">
+<code class="descname">invoke_callback_to_return_cached_session_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.WebResponderAPI.invoke_callback_to_return_cached_session_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sas.localassets.WebResponderAPI.return_session_key">
+<code class="descname">return_session_key</code><span class="sig-paren">(</span><em>session_key</em>, <em>username</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.WebResponderAPI.return_session_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sas.localassets.WebResponderAPI.show_asset_in_running_session">
+<code class="descname">show_asset_in_running_session</code><span class="sig-paren">(</span><em>node_type_category_name</em>, <em>node_type_name</em>, <em>current_user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.WebResponderAPI.show_asset_in_running_session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.asset_store_dir">
+<code class="descclassname">sas.localassets.</code><code class="descname">asset_store_dir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.asset_store_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.begin_upload_with_credentials">
+<code class="descclassname">sas.localassets.</code><code class="descname">begin_upload_with_credentials</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.begin_upload_with_credentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>When uploading from Houdini, the user first needs to log into the
+web site, and then the running Houdini is told to upload the asset via
+the websreponder thread.  The webresponder thread calls this function,
+passing in the session key to prove that the user is logged in.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.begin_uploading_asset">
+<code class="descclassname">sas.localassets.</code><code class="descname">begin_uploading_asset</code><span class="sig-paren">(</span><em>node</em>, <em>server=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.begin_uploading_asset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.begin_uploading_dependent_asset">
+<code class="descclassname">sas.localassets.</code><code class="descname">begin_uploading_dependent_asset</code><span class="sig-paren">(</span><em>uploading_node</em>, <em>session_key</em>, <em>containing_node=None</em>, <em>store_server=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.begin_uploading_dependent_asset" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called both after the user logs in to initiate the
+upload process (i.e. from begin_upload_with_credentials) (in which case
+containing_node won’t be passed in), when uploading dependent assets from
+the asset dependencies dialog, and when finally uploading the containing
+asset after completing uploading dependencies (containing_node will be None
+in that case too).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.check_for_asset_updates">
+<code class="descclassname">sas.localassets.</code><code class="descname">check_for_asset_updates</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.check_for_asset_updates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.check_for_shelf_tool_assets">
+<code class="descclassname">sas.localassets.</code><code class="descname">check_for_shelf_tool_assets</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.check_for_shelf_tool_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.check_for_shelf_tool_assets_wrapper">
+<code class="descclassname">sas.localassets.</code><code class="descname">check_for_shelf_tool_assets_wrapper</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.check_for_shelf_tool_assets_wrapper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.create_namespaced_otl">
+<code class="descclassname">sas.localassets.</code><code class="descname">create_namespaced_otl</code><span class="sig-paren">(</span><em>otl_file</em>, <em>author_prefix</em>, <em>new_node_type_name=None</em>, <em>new_suffix='-with_author'</em>, <em>dependencies_must_be_embedded=True</em>, <em>other_old_to_new_node_types=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.create_namespaced_otl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an otl file with one top-level asset, copy it into an otl file
+with the given suffix and add/change an author prefix to the namespace.</p>
+<p>Returns a (node, old_node_type) tuple, where node is the instance of the
+new namespaced node type.</p>
+<p>See _install_otl_and_get_node_type for information about the
+dependencies_must_be_added parameter.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.deferred_decorator">
+<code class="descclassname">sas.localassets.</code><code class="descname">deferred_decorator</code><span class="sig-paren">(</span><em>callback_returning_decorator</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.deferred_decorator" title="Permalink to this definition">¶</a></dt>
+<dd><p>This decorator defers another decorator from being called until the
+decorated function is actually called.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.ensure_webresponder_server_is_running">
+<code class="descclassname">sas.localassets.</code><code class="descname">ensure_webresponder_server_is_running</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.ensure_webresponder_server_is_running" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.file_name_with_suffix">
+<code class="descclassname">sas.localassets.</code><code class="descname">file_name_with_suffix</code><span class="sig-paren">(</span><em>original_file</em>, <em>new_suffix</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.file_name_with_suffix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.get_session_key">
+<code class="descclassname">sas.localassets.</code><code class="descname">get_session_key</code><span class="sig-paren">(</span><em>callback</em>, <em>server=None</em>, <em>username=None</em>, <em>force_login=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.get_session_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.get_store_logged_in_user_name">
+<code class="descclassname">sas.localassets.</code><code class="descname">get_store_logged_in_user_name</code><span class="sig-paren">(</span><em>session_key</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.get_store_logged_in_user_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.get_sync_information">
+<code class="descclassname">sas.localassets.</code><code class="descname">get_sync_information</code><span class="sig-paren">(</span><em>session_key</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.get_sync_information" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.install_or_update_asset_from_houdinis_browser">
+<code class="descclassname">sas.localassets.</code><code class="descname">install_or_update_asset_from_houdinis_browser</code><span class="sig-paren">(</span><em>server</em>, <em>session_key</em>, <em>license_number</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.install_or_update_asset_from_houdinis_browser" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when an asset is launched from inside
+houdini’s browser.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.install_or_update_asset_from_license_number">
+<code class="descclassname">sas.localassets.</code><code class="descname">install_or_update_asset_from_license_number</code><span class="sig-paren">(</span><em>session_data</em>, <em>license_number</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.install_or_update_asset_from_license_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when the URL scheme handler is told to install
+an asset.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.install_url_handler">
+<code class="descclassname">sas.localassets.</code><code class="descname">install_url_handler</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.install_url_handler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.prepare_node_for_uploading">
+<code class="descclassname">sas.localassets.</code><code class="descname">prepare_node_for_uploading</code><span class="sig-paren">(</span><em>node</em>, <em>author_prefix</em>, <em>store_server=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.prepare_node_for_uploading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an instance of an asset, prepare it for uploading to the store by:
+- making sure the node type and its dependencies are in their own otl files
+- ensuring the asset contains the author’s prefix in the namespaced node</p>
+<blockquote>
+<div>type name</div></blockquote>
+<p>Returns the node (which may have had its type changed) on success, and None
+if the user cancelled the process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.show_asset_for_node_type">
+<code class="descclassname">sas.localassets.</code><code class="descname">show_asset_for_node_type</code><span class="sig-paren">(</span><em>node_type_category_name</em>, <em>node_type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.show_asset_for_node_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.show_asset_in_newly_launched_session">
+<code class="descclassname">sas.localassets.</code><code class="descname">show_asset_in_newly_launched_session</code><span class="sig-paren">(</span><em>node_type_category_name</em>, <em>node_type_name</em>, <em>current_user</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.show_asset_in_newly_launched_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Now that a new Houdini session has been started, install the asset
+and create an instance of it.</p>
+<p>This function is invoked from the script that starts a new instance of
+Houdini.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.show_asset_in_running_session">
+<code class="descclassname">sas.localassets.</code><code class="descname">show_asset_in_running_session</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.show_asset_in_running_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Present a prompt to the user to allow them to decide whether or not
+to open the downloaded asset in their current houdini session, or to open
+a new session.</p>
+<p>If the asset does not have an example hip file, open the asset browser
+pane in the session and create an instance of the asset.  Otherwise,
+merge the example hip file into the current hip file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.update_asset_browser">
+<code class="descclassname">sas.localassets.</code><code class="descname">update_asset_browser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.update_asset_browser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.update_existing_asset_browsers">
+<code class="descclassname">sas.localassets.</code><code class="descname">update_existing_asset_browsers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.update_existing_asset_browsers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.update_installed_asset_from_license_number">
+<code class="descclassname">sas.localassets.</code><code class="descname">update_installed_asset_from_license_number</code><span class="sig-paren">(</span><em>server</em>, <em>session_key</em>, <em>license_number</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.update_installed_asset_from_license_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.upload_asset">
+<code class="descclassname">sas.localassets.</code><code class="descname">upload_asset</code><span class="sig-paren">(</span><em>otl_file</em>, <em>session_key</em>, <em>server=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.upload_asset" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called by OPUI_UploadAssetDialog to actually upload
+the asset to the store using the web API.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.upload_asset_inside_houdini_browser">
+<code class="descclassname">sas.localassets.</code><code class="descname">upload_asset_inside_houdini_browser</code><span class="sig-paren">(</span><em>session_key</em>, <em>server</em>, <em>author_prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.upload_asset_inside_houdini_browser" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is called when selecting an asset to 
+upload inside Houdini’s browser.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.localassets.upload_screenshot">
+<code class="descclassname">sas.localassets.</code><code class="descname">upload_screenshot</code><span class="sig-paren">(</span><em>server</em>, <em>session_key</em>, <em>unique_name</em>, <em>upload_id</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.localassets.upload_screenshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload a screenshot from Houdini’s browser, during the upload process.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sas.webresponder">
+<span id="sas-webresponder-module"></span><h2>sas.webresponder module<a class="headerlink" href="#module-sas.webresponder" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="sas.webresponder.connect_to_any_server">
+<code class="descclassname">sas.webresponder.</code><code class="descname">connect_to_any_server</code><span class="sig-paren">(</span><em>timeout=5</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.webresponder.connect_to_any_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>From a client, try multiple ports to find a running instance of Houdini.</p>
+<p>Returns an hjsonrpc.ServiceProxy object on success, or None if no
+connection could be made.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.webresponder.connect_to_server">
+<code class="descclassname">sas.webresponder.</code><code class="descname">connect_to_server</code><span class="sig-paren">(</span><em>port</em>, <em>timeout=5</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.webresponder.connect_to_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>From a client, connect to a server on a specific port.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.webresponder.port_range">
+<code class="descclassname">sas.webresponder.</code><code class="descname">port_range</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sas.webresponder.port_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the range of possible port numbers that instances of Houdini
+may be listening on.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sas.webresponder.start_server">
+<code class="descclassname">sas.webresponder.</code><code class="descname">start_server</code><span class="sig-paren">(</span><em>api_class</em><span class="sig-paren">)</span><a class="headerlink" href="#sas.webresponder.start_server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a server from inside Houdini, finding an available port, and
+process requests made to it from a new thread.</p>
+<p>api_class: An class with methods decorated with hjsonrpc.rpcMethod.  This
+function will create an instance of the class, passing in the port number.</p>
+<p>Returns an instance of the api_class, or None if all ports are in use.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sas">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sas" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sas package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sas.inspectasset">sas.inspectasset module</a></li>
+<li><a class="reference internal" href="#module-sas.localassets">sas.localassets module</a></li>
+<li><a class="reference internal" href="#module-sas.webresponder">sas.webresponder module</a></li>
+<li><a class="reference internal" href="#module-sas">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="roptoolutils.html" title="previous chapter">roptoolutils module</a></li>
+      <li>Next: <a href="shadingutils.html" title="next chapter">shadingutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sas.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/sas.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

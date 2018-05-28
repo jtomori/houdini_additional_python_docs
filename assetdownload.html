@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>assetdownload module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorig package" href="autorig.html" />
+    <link rel="prev" title="assetauthortools module" href="assetauthortools.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-assetdownload">
+<span id="assetdownload-module"></span><h1>assetdownload module<a class="headerlink" href="#module-assetdownload" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="assetdownload.downloadAssetThumbnail">
+<code class="descclassname">assetdownload.</code><code class="descname">downloadAssetThumbnail</code><span class="sig-paren">(</span><em>thumbnail_url</em>, <em>temp_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.downloadAssetThumbnail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the given thumbnail url and saves it into a temporary
+file.  Returns the path of the temporary file on success. 
+Returns the empty string on failure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.downloadFile">
+<code class="descclassname">assetdownload.</code><code class="descname">downloadFile</code><span class="sig-paren">(</span><em>file_url</em>, <em>destination_path</em>, <em>file_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.downloadFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Downloads the file from the given url and places it in
+specified destination folder.  If ‘file_name’ is not specified,
+then the downloaded file is named by the one that is listed in the
+‘Contents-Type’ header from http response.  Returns the path
+of the downloaded file on success.  Returns the empty string
+on failure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.endsWithAnyOf">
+<code class="descclassname">assetdownload.</code><code class="descname">endsWithAnyOf</code><span class="sig-paren">(</span><em>file_path</em>, <em>extension_list</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.endsWithAnyOf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the file ends with any of the extensions in the
+list. This only looks at last extension, after the last dot</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.extractArchive">
+<code class="descclassname">assetdownload.</code><code class="descname">extractArchive</code><span class="sig-paren">(</span><em>archive_path</em>, <em>destination_path</em>, <em>required_extension=None</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.extractArchive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Precondition: isSupportedArchive(archive_path) == True. 
+Extracts the specified archive file and stores the contents in
+‘destination_path’. If required_extension is specified, then
+only files inside the archive that have this extension will be
+extracted from the archive.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.extractGzipArchive">
+<code class="descclassname">assetdownload.</code><code class="descname">extractGzipArchive</code><span class="sig-paren">(</span><em>archive_path</em>, <em>destination_path</em>, <em>required_extension</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.extractGzipArchive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Precondition: archive_path is a gzip file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.extractZipArchive">
+<code class="descclassname">assetdownload.</code><code class="descname">extractZipArchive</code><span class="sig-paren">(</span><em>archive_path</em>, <em>destination_path</em>, <em>required_extension</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.extractZipArchive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Precondition: archive_path is a zip archive.
+If required_extension is specified, then only files
+inside the archive that have this extension will be extracted
+from the archive.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.getAssetsFromURL">
+<code class="descclassname">assetdownload.</code><code class="descname">getAssetsFromURL</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.getAssetsFromURL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the url and returns a list of details on the
+assets that are available for download.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.getAssetsFromURLAsStringArray">
+<code class="descclassname">assetdownload.</code><code class="descname">getAssetsFromURLAsStringArray</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.getAssetsFromURLAsStringArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries the url and returns a list of assets in the form 
+of a string array.  The string array has the following format:
+[ “asset_name1”, “asset_description1”, “asset_author1”,</p>
+<blockquote>
+<div>“asset_version1”, “asset_thumbnail1”, “asset_download_url1”, 
+“asset_last_modified1”, “asset_name2”, “asset_description2”, … ]</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.gzipExtensions">
+<code class="descclassname">assetdownload.</code><code class="descname">gzipExtensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.gzipExtensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Supported extensions for gzip archives</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.isSupportedArchive">
+<code class="descclassname">assetdownload.</code><code class="descname">isSupportedArchive</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.isSupportedArchive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the file is an archive type that is
+supported for downloadable assets by Houdini.
+The current supported archive formats are: zip.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="assetdownload.zipExtensions">
+<code class="descclassname">assetdownload.</code><code class="descname">zipExtensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#assetdownload.zipExtensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Supported extensions for zip archives</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="assetauthortools.html" title="previous chapter">assetauthortools module</a></li>
+      <li>Next: <a href="autorig.html" title="next chapter">autorig package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/assetdownload.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/assetdownload.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

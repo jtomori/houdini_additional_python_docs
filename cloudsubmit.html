@@ -1,0 +1,302 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>cloudsubmit module &#8212; houdini additional docs 16.5.378 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="cloudtoolutils module" href="cloudtoolutils.html" />
+    <link rel="prev" title="cloudEULA module" href="cloudEULA.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cloudsubmit">
+<span id="cloudsubmit-module"></span><h1>cloudsubmit module<a class="headerlink" href="#module-cloudsubmit" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="cloudsubmit.EC2Instance">
+<em class="property">class </em><code class="descclassname">cloudsubmit.</code><code class="descname">EC2Instance</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="classmethod">
+<dt id="cloudsubmit.EC2Instance.beginStartingInstance">
+<em class="property">classmethod </em><code class="descname">beginStartingInstance</code><span class="sig-paren">(</span><em>aws_connection</em>, <em>instance_type</em>, <em>license_category</em>, <em>houdini_version</em>, <em>server_machine='127.0.0.1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.beginStartingInstance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="cloudsubmit.EC2Instance.beginStartingMultipleInstances">
+<em class="property">classmethod </em><code class="descname">beginStartingMultipleInstances</code><span class="sig-paren">(</span><em>aws_connection</em>, <em>num_machines</em>, <em>instance_type</em>, <em>license_category</em>, <em>houdini_version</em>, <em>server_machine</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.beginStartingMultipleInstances" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="cloudsubmit.EC2Instance.findRunningInstanceWithMachineName">
+<em class="property">classmethod </em><code class="descname">findRunningInstanceWithMachineName</code><span class="sig-paren">(</span><em>aws_connection</em>, <em>machine_name</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.findRunningInstanceWithMachineName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="cloudsubmit.EC2Instance.getAllInstances">
+<em class="property">classmethod </em><code class="descname">getAllInstances</code><span class="sig-paren">(</span><em>aws_connection</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.getAllInstances" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.EC2Instance.isRunning">
+<code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.isRunning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.EC2Instance.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.refresh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="cloudsubmit.EC2Instance.startInstanceAndWaitUntilRunning">
+<em class="property">classmethod </em><code class="descname">startInstanceAndWaitUntilRunning</code><span class="sig-paren">(</span><em>aws_connection</em>, <em>machine_description</em>, <em>instance_type</em>, <em>license_category</em>, <em>houdini_version</em>, <em>server_machine='127.0.0.1'</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.startInstanceAndWaitUntilRunning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.EC2Instance.status">
+<code class="descname">status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the instance status (“running”, “starting”, etc.), or None
+if nothing is known about the instance.  Note that if the instance
+status is “terminated”, this method returns None.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.EC2Instance.terminate">
+<code class="descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.terminate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.EC2Instance.userData">
+<code class="descname">userData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.EC2Instance.userData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="cloudsubmit.ExitThread">
+<em class="property">exception </em><code class="descclassname">cloudsubmit.</code><code class="descname">ExitThread</code><a class="headerlink" href="#cloudsubmit.ExitThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="cloudsubmit.HTTPRequestHandler">
+<em class="property">class </em><code class="descclassname">cloudsubmit.</code><code class="descname">HTTPRequestHandler</code><a class="headerlink" href="#cloudsubmit.HTTPRequestHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hjsonrpc.html#hjsonrpc.RPCRequestHandler" title="hjsonrpc.RPCRequestHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">hjsonrpc.RPCRequestHandler</span></code></a></p>
+<dl class="method">
+<dt id="cloudsubmit.HTTPRequestHandler.do_GET">
+<code class="descname">do_GET</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.HTTPRequestHandler.do_GET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.HTTPRequestHandler.redirectTo">
+<code class="descname">redirectTo</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.HTTPRequestHandler.redirectTo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cloudsubmit.RPCService">
+<em class="property">class </em><code class="descclassname">cloudsubmit.</code><code class="descname">RPCService</code><a class="headerlink" href="#cloudsubmit.RPCService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="cloudsubmit.RPCService.addDownloadedFrame">
+<code class="descname">addDownloadedFrame</code><span class="sig-paren">(</span><em>project_name</em>, <em>frame_number</em>, <em>local_frame_path</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.addDownloadedFrame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.addProject">
+<code class="descname">addProject</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.addProject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.cloudRegion">
+<code class="descname">cloudRegion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.cloudRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.cloudServerTerminated">
+<code class="descname">cloudServerTerminated</code><span class="sig-paren">(</span><em>error</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.cloudServerTerminated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.getCloudServerMachine">
+<code class="descname">getCloudServerMachine</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.getCloudServerMachine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.getStatus">
+<code class="descname">getStatus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.getStatus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.isRunning">
+<code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.isRunning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.isStalled">
+<code class="descname">isStalled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.isStalled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.playFilesForProject">
+<code class="descname">playFilesForProject</code><span class="sig-paren">(</span><em>job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.playFilesForProject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.queueProject">
+<code class="descname">queueProject</code><span class="sig-paren">(</span><em>project_parms_path</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.queueProject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.quit">
+<code class="descname">quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.quit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.setIdForProject">
+<code class="descname">setIdForProject</code><span class="sig-paren">(</span><em>project_name</em>, <em>job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.setIdForProject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.setLaunching">
+<code class="descname">setLaunching</code><span class="sig-paren">(</span><em>is_launching</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.setLaunching" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.setStalled">
+<code class="descname">setStalled</code><span class="sig-paren">(</span><em>is_stalled</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.setStalled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.setState">
+<code class="descname">setState</code><span class="sig-paren">(</span><em>project_name</em>, <em>state</em>, <em>size_description=''</em>, <em>fraction_complete=0.0</em>, <em>estimated_remaining_time=''</em>, <em>frames_remaining=0</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.setState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.suggestProjectName">
+<code class="descname">suggestProjectName</code><span class="sig-paren">(</span><em>requested_project_name</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.suggestProjectName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.terminateCloudInstances">
+<code class="descname">terminateCloudInstances</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.terminateCloudInstances" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="cloudsubmit.RPCService.timeToAutoShutdown">
+<code class="descname">timeToAutoShutdown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RPCService.timeToAutoShutdown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cloudsubmit.RobustConnection">
+<em class="property">class </em><code class="descclassname">cloudsubmit.</code><code class="descname">RobustConnection</code><span class="sig-paren">(</span><em>conn</em>, <em>conn_desc</em>, <em>method_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.RobustConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="cloudsubmit.getConnection">
+<code class="descclassname">cloudsubmit.</code><code class="descname">getConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.getConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a connection to the local cloud submission process’s RPC
+server.</p>
+<p>Return None if the cloudsubmit process isn’t running.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloudsubmit.openBrowser">
+<code class="descclassname">cloudsubmit.</code><code class="descname">openBrowser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.openBrowser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a web browser pointing to this cloud submission process.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloudsubmit.start">
+<code class="descclassname">cloudsubmit.</code><code class="descname">start</code><span class="sig-paren">(</span><em>project_parms_path</em>, <em>temp_file_with_key</em>, <em>debug</em>, <em>verbose</em><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start an RPC server in one thread, launch the local render monitor and
+open a browser window to it from another thread, and submit the job to the
+cloud and download the output from this thread.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cloudsubmit.startWithSysArgs">
+<code class="descclassname">cloudsubmit.</code><code class="descname">startWithSysArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cloudsubmit.startWithSysArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">houdini_libs</a><ul>
+      <li>Previous: <a href="cloudEULA.html" title="previous chapter">cloudEULA module</a></li>
+      <li>Next: <a href="cloudtoolutils.html" title="next chapter">cloudtoolutils module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/cloudsubmit.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/cloudsubmit.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
