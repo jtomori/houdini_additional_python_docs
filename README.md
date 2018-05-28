@@ -121,7 +121,7 @@ Guide (linux)
     > Name prefix for templates and static dir [_]: 
 
     The project name will occur in several places in the built documentation.
-    > Project name: Houdini additional Python docs
+    > Project name: Houdini Python modules
     > Author name(s): jtomori
     > Project release []: 16.5.378
 
@@ -190,12 +190,12 @@ Guide (linux)
 
     it should like like this:
     ```
-    .. Houdini additional Python docs documentation master file, created by
+    .. Houdini Python modules documentation master file, created by
        sphinx-quickstart on Sat May 26 15:50:01 2018.
        You can adapt this file completely to your liking, but it should at least
        contain the root `toctree` directive.
 
-    Welcome to Houdini additional Python docs's documentation!
+    Welcome to Houdini Python modules documentation!
     ===================================================
 
     .. toctree::
