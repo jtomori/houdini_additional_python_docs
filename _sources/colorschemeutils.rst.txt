@@ -1,0 +1,7 @@
+colorschemeutils module
+=======================
+
+.. automodule:: colorschemeutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,30 @@
+bookish.avenue package
+======================
+
+Submodules
+----------
+
+bookish.avenue.avenue module
+----------------------------
+
+.. automodule:: bookish.avenue.avenue
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.avenue.patterns module
+------------------------------
+
+.. automodule:: bookish.avenue.patterns
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bookish.avenue
+    :members:
+    :undoc-members:
+    :show-inheritance:

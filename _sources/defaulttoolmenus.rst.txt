@@ -1,0 +1,7 @@
+defaulttoolmenus module
+=======================
+
+.. automodule:: defaulttoolmenus
+    :members:
+    :undoc-members:
+    :show-inheritance:

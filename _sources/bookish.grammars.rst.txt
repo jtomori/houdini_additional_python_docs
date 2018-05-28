@@ -1,0 +1,38 @@
+bookish.grammars package
+========================
+
+Submodules
+----------
+
+bookish.grammars.avenue module
+------------------------------
+
+.. automodule:: bookish.grammars.avenue
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.grammars.meta module
+----------------------------
+
+.. automodule:: bookish.grammars.meta
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.grammars.wiki module
+----------------------------
+
+.. automodule:: bookish.grammars.wiki
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bookish.grammars
+    :members:
+    :undoc-members:
+    :show-inheritance:

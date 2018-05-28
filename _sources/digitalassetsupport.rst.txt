@@ -1,0 +1,7 @@
+digitalassetsupport module
+==========================
+
+.. automodule:: digitalassetsupport
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+opnode\_sum module
+==================
+
+.. automodule:: opnode_sum
+    :members:
+    :undoc-members:
+    :show-inheritance:

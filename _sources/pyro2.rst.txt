@@ -1,0 +1,7 @@
+pyro2 module
+============
+
+.. automodule:: pyro2
+    :members:
+    :undoc-members:
+    :show-inheritance:

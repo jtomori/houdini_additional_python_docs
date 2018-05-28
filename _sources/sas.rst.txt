@@ -1,0 +1,38 @@
+sas package
+===========
+
+Submodules
+----------
+
+sas.inspectasset module
+-----------------------
+
+.. automodule:: sas.inspectasset
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+sas.localassets module
+----------------------
+
+.. automodule:: sas.localassets
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+sas.webresponder module
+-----------------------
+
+.. automodule:: sas.webresponder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: sas
+    :members:
+    :undoc-members:
+    :show-inheritance:

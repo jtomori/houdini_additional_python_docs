@@ -1,0 +1,30 @@
+poster package
+==============
+
+Submodules
+----------
+
+poster.encode module
+--------------------
+
+.. automodule:: poster.encode
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+poster.streaminghttp module
+---------------------------
+
+.. automodule:: poster.streaminghttp
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: poster
+    :members:
+    :undoc-members:
+    :show-inheritance:

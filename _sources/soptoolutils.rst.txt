@@ -1,0 +1,7 @@
+soptoolutils module
+===================
+
+.. automodule:: soptoolutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

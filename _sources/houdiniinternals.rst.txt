@@ -1,0 +1,7 @@
+houdiniinternals module
+=======================
+
+.. automodule:: houdiniinternals
+    :members:
+    :undoc-members:
+    :show-inheritance:

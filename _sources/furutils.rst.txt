@@ -1,0 +1,7 @@
+furutils module
+===============
+
+.. automodule:: furutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+vopfxmenu module
+================
+
+.. automodule:: vopfxmenu
+    :members:
+    :undoc-members:
+    :show-inheritance:

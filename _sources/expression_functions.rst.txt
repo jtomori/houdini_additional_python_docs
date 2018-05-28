@@ -1,0 +1,46 @@
+expression\_functions package
+=============================
+
+Submodules
+----------
+
+expression\_functions.exprhelper module
+---------------------------------------
+
+.. automodule:: expression_functions.exprhelper
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+expression\_functions.matrix module
+-----------------------------------
+
+.. automodule:: expression_functions.matrix
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+expression\_functions.opdigits module
+-------------------------------------
+
+.. automodule:: expression_functions.opdigits
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+expression\_functions.vector module
+-----------------------------------
+
+.. automodule:: expression_functions.vector
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: expression_functions
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+dopwiretoolutils module
+=======================
+
+.. automodule:: dopwiretoolutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

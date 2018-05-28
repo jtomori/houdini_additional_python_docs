@@ -1,0 +1,46 @@
+bookish.parser package
+======================
+
+Submodules
+----------
+
+bookish.parser.bootstrap module
+-------------------------------
+
+.. automodule:: bookish.parser.bootstrap
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.parser.builder module
+-----------------------------
+
+.. automodule:: bookish.parser.builder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.parser.parser module
+----------------------------
+
+.. automodule:: bookish.parser.parser
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.parser.rules module
+---------------------------
+
+.. automodule:: bookish.parser.rules
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bookish.parser
+    :members:
+    :undoc-members:
+    :show-inheritance:

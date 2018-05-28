@@ -1,0 +1,7 @@
+displaymessage module
+=====================
+
+.. automodule:: displaymessage
+    :members:
+    :undoc-members:
+    :show-inheritance:

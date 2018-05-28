@@ -1,0 +1,7 @@
+assetauthortools module
+=======================
+
+.. automodule:: assetauthortools
+    :members:
+    :undoc-members:
+    :show-inheritance:

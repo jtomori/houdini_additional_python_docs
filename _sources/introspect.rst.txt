@@ -1,0 +1,7 @@
+introspect module
+=================
+
+.. automodule:: introspect
+    :members:
+    :undoc-members:
+    :show-inheritance:

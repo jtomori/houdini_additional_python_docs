@@ -1,0 +1,7 @@
+perfmon\_sum module
+===================
+
+.. automodule:: perfmon_sum
+    :members:
+    :undoc-members:
+    :show-inheritance:

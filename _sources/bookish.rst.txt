@@ -1,0 +1,175 @@
+bookish package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    bookish.avenue
+    bookish.grammars
+    bookish.parser
+
+Submodules
+----------
+
+bookish.checkpoints module
+--------------------------
+
+.. automodule:: bookish.checkpoints
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.coloring module
+-----------------------
+
+.. automodule:: bookish.coloring
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.compat module
+---------------------
+
+.. automodule:: bookish.compat
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.config module
+---------------------
+
+.. automodule:: bookish.config
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.convert module
+----------------------
+
+.. automodule:: bookish.convert
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.flaskapp module
+-----------------------
+
+.. automodule:: bookish.flaskapp
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.flasksupport module
+---------------------------
+
+.. automodule:: bookish.flasksupport
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.functions module
+------------------------
+
+.. automodule:: bookish.functions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.i18n module
+-------------------
+
+.. automodule:: bookish.i18n
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.includes module
+-----------------------
+
+.. automodule:: bookish.includes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.paths module
+--------------------
+
+.. automodule:: bookish.paths
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.pipeline module
+-----------------------
+
+.. automodule:: bookish.pipeline
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.search module
+---------------------
+
+.. automodule:: bookish.search
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.stores module
+---------------------
+
+.. automodule:: bookish.stores
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.styles module
+---------------------
+
+.. automodule:: bookish.styles
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.testing module
+----------------------
+
+.. automodule:: bookish.testing
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.textify module
+----------------------
+
+.. automodule:: bookish.textify
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.util module
+-------------------
+
+.. automodule:: bookish.util
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bookish.wikipages module
+------------------------
+
+.. automodule:: bookish.wikipages
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bookish
+    :members:
+    :undoc-members:
+    :show-inheritance:

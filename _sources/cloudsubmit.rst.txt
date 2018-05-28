@@ -1,0 +1,7 @@
+cloudsubmit module
+==================
+
+.. automodule:: cloudsubmit
+    :members:
+    :undoc-members:
+    :show-inheritance:

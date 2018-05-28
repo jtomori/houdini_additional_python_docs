@@ -1,0 +1,7 @@
+nodeselectionutil module
+========================
+
+.. automodule:: nodeselectionutil
+    :members:
+    :undoc-members:
+    :show-inheritance:

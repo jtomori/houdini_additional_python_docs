@@ -1,0 +1,7 @@
+houdiniInterpreter module
+=========================
+
+.. automodule:: houdiniInterpreter
+    :members:
+    :undoc-members:
+    :show-inheritance:

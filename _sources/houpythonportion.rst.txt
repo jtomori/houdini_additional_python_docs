@@ -1,0 +1,7 @@
+houpythonportion module
+=======================
+
+.. automodule:: houpythonportion
+    :members:
+    :undoc-members:
+    :show-inheritance:

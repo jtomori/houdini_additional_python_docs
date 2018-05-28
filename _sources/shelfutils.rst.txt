@@ -1,0 +1,7 @@
+shelfutils module
+=================
+
+.. automodule:: shelfutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

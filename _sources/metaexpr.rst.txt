@@ -1,0 +1,7 @@
+metaexpr module
+===============
+
+.. automodule:: metaexpr
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,62 @@
+charpicker package
+==================
+
+Submodules
+----------
+
+charpicker.controlbutton module
+-------------------------------
+
+.. automodule:: charpicker.controlbutton
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+charpicker.controlslider module
+-------------------------------
+
+.. automodule:: charpicker.controlslider
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+charpicker.cpglobals module
+---------------------------
+
+.. automodule:: charpicker.cpglobals
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+charpicker.mainwidget module
+----------------------------
+
+.. automodule:: charpicker.mainwidget
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+charpicker.tabview module
+-------------------------
+
+.. automodule:: charpicker.tabview
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+charpicker.tabwindow module
+---------------------------
+
+.. automodule:: charpicker.tabwindow
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: charpicker
+    :members:
+    :undoc-members:
+    :show-inheritance:

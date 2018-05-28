@@ -1,0 +1,7 @@
+EC2 module
+==========
+
+.. automodule:: EC2
+    :members:
+    :undoc-members:
+    :show-inheritance:

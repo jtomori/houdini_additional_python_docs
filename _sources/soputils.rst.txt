@@ -1,0 +1,7 @@
+soputils module
+===============
+
+.. automodule:: soputils
+    :members:
+    :undoc-members:
+    :show-inheritance:

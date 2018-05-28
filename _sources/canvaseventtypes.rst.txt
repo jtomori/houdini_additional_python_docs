@@ -1,0 +1,7 @@
+canvaseventtypes module
+=======================
+
+.. automodule:: canvaseventtypes
+    :members:
+    :undoc-members:
+    :show-inheritance:

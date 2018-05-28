@@ -1,0 +1,7 @@
+mssbuild module
+===============
+
+.. automodule:: mssbuild
+    :members:
+    :undoc-members:
+    :show-inheritance:

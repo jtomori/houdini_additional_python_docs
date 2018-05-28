@@ -1,0 +1,7 @@
+muscletoolutils module
+======================
+
+.. automodule:: muscletoolutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

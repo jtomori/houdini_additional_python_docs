@@ -1,0 +1,7 @@
+charactertoolutils module
+=========================
+
+.. automodule:: charactertoolutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

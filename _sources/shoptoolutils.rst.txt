@@ -1,0 +1,7 @@
+shoptoolutils module
+====================
+
+.. automodule:: shoptoolutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

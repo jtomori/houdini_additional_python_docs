@@ -1,0 +1,110 @@
+houdinihelp package
+===================
+
+Submodules
+----------
+
+houdinihelp.api module
+----------------------
+
+.. automodule:: houdinihelp.api
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.cli module
+----------------------
+
+.. automodule:: houdinihelp.cli
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.examples module
+---------------------------
+
+.. automodule:: houdinihelp.examples
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.hcoloring module
+----------------------------
+
+.. automodule:: houdinihelp.hcoloring
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.hconfig module
+--------------------------
+
+.. automodule:: houdinihelp.hconfig
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.hotkeys module
+--------------------------
+
+.. automodule:: houdinihelp.hotkeys
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.hpages module
+-------------------------
+
+.. automodule:: houdinihelp.hpages
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.hsearch module
+--------------------------
+
+.. automodule:: houdinihelp.hsearch
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.hstores module
+--------------------------
+
+.. automodule:: houdinihelp.hstores
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.htextify module
+---------------------------
+
+.. automodule:: houdinihelp.htextify
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.server module
+-------------------------
+
+.. automodule:: houdinihelp.server
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+houdinihelp.vex module
+----------------------
+
+.. automodule:: houdinihelp.vex
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: houdinihelp
+    :members:
+    :undoc-members:
+    :show-inheritance:

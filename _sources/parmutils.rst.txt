@@ -1,0 +1,7 @@
+parmutils module
+================
+
+.. automodule:: parmutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

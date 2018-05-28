@@ -1,0 +1,7 @@
+chopnettoolutils module
+=======================
+
+.. automodule:: chopnettoolutils
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+assetdownload module
+====================
+
+.. automodule:: assetdownload
+    :members:
+    :undoc-members:
+    :show-inheritance:

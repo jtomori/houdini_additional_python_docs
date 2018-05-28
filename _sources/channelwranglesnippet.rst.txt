@@ -1,0 +1,7 @@
+channelwranglesnippet module
+============================
+
+.. automodule:: channelwranglesnippet
+    :members:
+    :undoc-members:
+    :show-inheritance:

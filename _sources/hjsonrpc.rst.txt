@@ -1,0 +1,7 @@
+hjsonrpc module
+===============
+
+.. automodule:: hjsonrpc
+    :members:
+    :undoc-members:
+    :show-inheritance:
