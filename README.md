@@ -7,7 +7,7 @@ Info
 ----
 [Generated documentation can be found here](https://jtomori.github.io/houdini_additional_python_docs/)
 
-If you did some scripting in Houdini, then chances are that you have found *toolutils* module quite handy. But searching in Houdini online help is not very helpful, you will not find much information about it. Maybe some useful code snippets, but not its documentation.
+If you did some scripting in Houdini, then chances are that you have found [*toolutils*](https://jtomori.github.io/houdini_additional_python_docs/toolutils.html) module quite handy. But searching in Houdini online help is not very helpful, you will not find much information about it. Maybe some useful code snippets, but not its documentation.
 
 As it turns out there are some handy modules coming with Houdini, but they can be a bit hidden to many users. So I decided to do a small project and auto-generate documentation from docstrings from those modules. I used [*Sphinx*](http://www.sphinx-doc.org/en/master/) for this.
 
