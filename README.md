@@ -44,12 +44,12 @@ Guide (linux)
     $ cp -r /opt/hfsXX.X.XXX/houdini/python2.7libs .
     ```
 
-    Some of the modules do not need to be docummented, so delete them
+    Some of the modules do not need to be documented, so delete them
     ```
     $ rm -r python2.7libs/whoosh python2.7libs/hou.py
     ```
 
-    Those two modules are already docummented
+    Those two modules are already documented
     * [hou](http://www.sidefx.com/docs/houdini/hom/hou/)
     * [whoosh](http://whoosh.readthedocs.io/en/latest/)
 
