@@ -1,4 +1,4 @@
-# houdini_additional_python_docs
+# Houdini additional Python documentation
 *Additional documentation of Houdini Python modules*
 <br><br>
 
