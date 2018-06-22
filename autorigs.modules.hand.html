@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.hand package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.head package" href="autorigs.modules.head.html" />
+    <link rel="prev" title="autorigs.modules.foot package" href="autorigs.modules.foot.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-hand-package">
+<h1>autorigs.modules.hand package<a class="headerlink" href="#autorigs-modules-hand-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.hand.autoRigsHandBuilder">
+<span id="autorigs-modules-hand-autorigshandbuilder-module"></span><h2>autorigs.modules.hand.autoRigsHandBuilder module<a class="headerlink" href="#module-autorigs.modules.hand.autoRigsHandBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.hand.autoRigsHandBuilder.</code><code class="descname">AutoRigsHandBuilder</code><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder" title="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'bigdigitrootcontrol': 'rootcontrol', 'bonegroup': 'bone_group', 'chopnetname': 'handchopnet', 'controlgroup': 'control_all_group', 'digitbone': 'fingerbone', 'digitcontrol': 'digitcontrol', 'digitend': 'finger_endaffector', 'digitendctrl': 'finger_endctrl', 'digitroll': 'fingerroll', 'digitsolvername': 'fingersolver', 'digitspikecontrolgroup': 'control_finger_spikes', 'digittwist': 'finger_twist', 'digittwistctrl': 'finger_twistctrl', 'extremitybone': 'handbone', 'extremitycontrolsgroup': 'control_hand', 'extremityend': 'hand_endaffector', 'extremityendctrl': 'hand_endctrl', 'extremityroll': 'handroll', 'extremityroot': 'handroot', 'extremityrootcurve': 'handrootcurve', 'extremitysolvername': 'handsolver', 'extremitytwist': 'hand_twist', 'extremitytwistctrl': 'hand_twistctrl', 'fkcontrol': 'fkcontrol', 'fkcontrolgroup': 'control_fk_group', 'ikcurl': 'ikcurl', 'ikcurladj': 'ikcurl_adjust', 'ikspike': 'ikspike', 'ikspikeall': 'ikspikeall', 'ikspikeall_transform': 'ikspikeall_trans', 'iksplayfan': 'iksplayfan', 'limbfkikblend': 'arm_fkikblendr', 'limbfkparent': 'arm_fkparent', 'limbikparent': 'arm_ikparent', 'limbnorotation': 'arm_norotation', 'limbtipstart': 'arm_tip', 'metadigit': 'metacarpal', 'metasolver': 'metasolver', 'metastart': 'metastart', 'metatwist': 'metatwist', 'nodegroup': 'node_group', 'phalange': 'phalange', 'phalangecontrolgroup': 'control_phalange_group', 'phalangeend': 'phalange_endcontrol', 'phalangesolver': 'phalange_solver', 'phalangeup': 'phalange_up', 'root': 'root', 'rootcarve': 'rootcarve', 'rootcircle': 'rootcircle', 'visiblegroup': 'visible_all_group'}</em><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder.buildRig">
+<em class="property">classmethod </em><code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>mastermodule</em>, <em>parentinfo</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder.hasAllDegreeBigDigitRoot">
+<em class="property">classmethod </em><code class="descname">hasAllDegreeBigDigitRoot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandBuilder.AutoRigsHandBuilder.hasAllDegreeBigDigitRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.hand.autoRigsHandInterfaceBuilder">
+<span id="autorigs-modules-hand-autorigshandinterfacebuilder-module"></span><h2>autorigs.modules.hand.autoRigsHandInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.hand.autoRigsHandInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.hand.autoRigsHandInterfaceBuilder.</code><code class="descname">AutoRigsHandInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder" title="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'allcurl': ('allcurl', 'Curl'), 'allfan': ('allfan', 'Fan'), 'allsplay': ('allsplay', 'Splay'), 'bonedisplay': ('bonedisplay', 'Bone Display'), 'controldigitend': ('fingerend', 'Finger End'), 'controldigitfkcontrol': ('fingercontrol', 'Finger FK Control'), 'controldigitroll': ('fingerroll', 'Finger Roll'), 'controldisplay': ('controldisplay', 'Control Display'), 'controlextremityfkcontrol': ('handfkcontrol', 'Hand FK Control'), 'controlextremityroll': ('handroll', 'Hand Roll'), 'controlextremityroot': ('handroot', 'Hand Root'), 'controlextremitytwist': ('handtwist', 'Hand Twist'), 'controlsfolder': ('controloptions', 'Controls'), 'digitbonepath': ('digitbonepath', 'Digit Bone Path'), 'digitfkcontrolpath': ('digitfkcontrolpath', 'Digit FK Control Path'), 'digitfolderformat': ('finger{}', '{}'), 'digitikhandlepath': ('digitikhandlepath', 'Digit IK Handle Path'), 'digitkinsolverpath': ('digitkinsolverpath', 'Digit Kinematic Solver Path'), 'digittwistctrlpath': ('digitiktwisthandlepath', 'Digit IK Twist Handle Path'), 'displayfkcontrols': ('displayfkcontrols', 'Display FK Controls'), 'extremitybonepath': ('extremitybonepath', 'Extremity Bone Path'), 'extremityfkcontrolpath': ('extremityfkcontrolpath', 'Extremity FK Control Path'), 'extremityfolder': ('handfolder', 'Hand'), 'extremityikhandlepath': ('extremityikhandlepath', 'Extremity IK Handle Path'), 'extremitykinsolverpath': ('extremitykinsolverpath', 'Extremity Kinematic Solver Path'), 'extremitytwistctrlpath': ('extremitytwistctrlpath', 'Extremity IK Twist Handle Path'), 'firstrootcontrol': ('rootcontrol', 'Root'), 'fkikblend': ('fkikblend', 'FK-&gt;IK Blend'), 'fkikthresh': ('fkikthresh', 'FK Display Threshold'), 'icurlformat': ('i{}curl', 'Curl'), 'idphalanxendformat': ('i{}dphalanxend', 'DPhalanx End'), 'ikcurl': ('ikcurl', 'IK Curl'), 'ikdampen': ('ikdampen', 'Max IK Dampening'), 'ikfan': ('ikfan', 'IK Fan'), 'ikfingercurl': ('ikcurlfinger', 'IK Curl'), 'iksplay': ('iksplay', 'IK Splay'), 'imphalanxendformat': ('i{}mphalanxend', 'MPhalanx End'), 'ipphalanxendformat': ('i{}pphalanxend', 'PPhalanx End'), 'kinsolverpath': ('kinsolverpath', 'Kinematic Solver Path'), 'leftfolder': ('folder', 'Left '), 'matchfkik': ('matchfkik', 'Match FK to IK'), 'matchikfk': ('matchikfk', 'Match IK to FK'), 'optionsfolder': ('options', 'Options'), 'rightfolder': ('folder', 'Right ')}</em><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.L_PREFIX">
+<code class="descname">L_PREFIX</code><em class="property"> = 'lefthand'</em><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.L_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.R_PREFIX">
+<code class="descname">R_PREFIX</code><em class="property"> = 'righthand'</em><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.R_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.hasSeparateBigDigitAllSpikeControls">
+<em class="property">classmethod </em><code class="descname">hasSeparateBigDigitAllSpikeControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.autoRigsHandInterfaceBuilder.AutoRigsHandInterfaceBuilder.hasSeparateBigDigitAllSpikeControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.hand.buildHandGuide">
+<span id="autorigs-modules-hand-buildhandguide-module"></span><h2>autorigs.modules.hand.buildHandGuide module<a class="headerlink" href="#module-autorigs.modules.hand.buildHandGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.hand.buildHandGuide.HandFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.hand.buildHandGuide.</code><code class="descname">HandFactory</code><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory" title="autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.hand.buildHandGuide.HandFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.hand.buildHandGuide.HandFactory.createFromJsonNew">
+<em class="property">classmethod </em><code class="descname">createFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandFactory.createFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.hand.buildHandGuide.HandFactory.initializeGuides">
+<em class="property">classmethod </em><code class="descname">initializeGuides</code><span class="sig-paren">(</span><em>buildguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandFactory.initializeGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.hand.buildHandGuide.HandGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.hand.buildHandGuide.</code><code class="descname">HandGuide</code><span class="sig-paren">(</span><em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide" title="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.hand.buildHandGuide.HandGuide.JSON_LABELS">
+<code class="descname">JSON_LABELS</code><em class="property"> = {'adddigit_format': 'addfinger_nameformat', 'bigdigit_guides': ['root', 'pphalanx', 'mphalanx', 'dphalanx'], 'bigdigitline': 'meta_thumbline', 'digit_guides': ['root', 'pphalanx', 'mphalanx', 'dphalanx'], 'digitguidespacing': 'digitguidespacing', 'digitroll': 'fingerend', 'digitroot': 'fingerrootguide', 'digitrootspacing': 'digitrootspacing', 'digits': 'fingers', 'digitspacing': 'digitspacing', 'extremityroll': 'fingerroll', 'extremityroot': 'hand_main_root', 'extremitystart': 'wrist', 'guidecurve': 'guidecurve', 'guidecurve_add': 'guidecurve_add', 'guidecurve_merge': 'guidecurve_merge', 'guidecurve_out': 'guidecurve_out', 'guidecurve_polywire': 'guidecurve_polywire', 'lineadddash': 'lineadddash', 'linedigitend': 'linefingerend', 'linemetaend': 'linemetaend', 'linepointline': 'linepointline', 'lineresample': 'lineresample', 'metaadd': 'metaadd', 'metabigdigitcontrol': 'meta_thumbcontrol', 'metabox': 'metabox', 'metacopybigdigit': 'metacopy_thumb', 'metacopydigits': 'metacopy_fingers', 'metacopynobigdigit': 'metacopy_nothumb', 'metadeletecolor': 'meta_deletecolor', 'metaends': 'metaends', 'metafirstpoint': 'meta_firstpoint', 'metaguide': 'metaguide', 'metaline': 'metaline', 'metamergebigdigit': 'metamerge_thumb', 'metaout': 'metaout', 'metapointcolor': 'metapointcolor', 'metaresample': 'metaresample', 'metaswitch': 'metaswitch', 'metaswitchbigdigit': 'metaswitch_thumb', 'mirrormetaguide': 'mirrormetaguide', 'missing_phalanx': 'mphalanx', 'root': 'hand_root', 'rotateroot': 'rotateroot'}</em><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandGuide.JSON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.hand.buildHandGuide.HandGuide.JSON_PARAM_LABELS">
+<code class="descname">JSON_PARAM_LABELS</code><em class="property"> = {'big_digit_guides': ['allguides', 'root', 'pphalanx', 'dphalanx'], 'center': 'handscenter', 'digit_params': 'fingerparams', 'digit_roll': 'fingerroll', 'digits': 'fingers', 'digits_guides': ['allguides', 'root', 'pphalanx', 'mphalanx', 'dphalanx'], 'digits_root': 'fingersroot', 'extremity_roll': 'handroll', 'extremity_start': 'wrist', 'root': 'handroot', 'rotateroot': 'rotateroot'}</em><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandGuide.JSON_PARAM_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.hand.buildHandGuide.HandGuide.parentExtremities">
+<code class="descname">parentExtremities</code><span class="sig-paren">(</span><em>parent</em>, <em>root</em>, <em>rot</em>, <em>wrist</em>, <em>handroll</em>, <em>fingerroll</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandGuide.parentExtremities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.hand.buildHandGuide.HandGuide.resetParentDisplay">
+<code class="descname">resetParentDisplay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandGuide.resetParentDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.hand.buildHandGuide.HandGuide.updateToLimbParent">
+<code class="descname">updateToLimbParent</code><span class="sig-paren">(</span><em>node</em>, <em>mirrornode</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.hand.buildHandGuide.HandGuide.updateToLimbParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.hand.handModule">
+<span id="autorigs-modules-hand-handmodule-module"></span><h2>autorigs.modules.hand.handModule module<a class="headerlink" href="#module-autorigs.modules.hand.handModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.hand">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.hand" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.hand package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.hand.autoRigsHandBuilder">autorigs.modules.hand.autoRigsHandBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.hand.autoRigsHandInterfaceBuilder">autorigs.modules.hand.autoRigsHandInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.hand.buildHandGuide">autorigs.modules.hand.buildHandGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.hand.handModule">autorigs.modules.hand.handModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.hand">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.foot.html" title="previous chapter">autorigs.modules.foot package</a></li>
+      <li>Next: <a href="autorigs.modules.head.html" title="next chapter">autorigs.modules.head package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.hand.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.hand.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

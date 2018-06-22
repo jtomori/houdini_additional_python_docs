@@ -1,0 +1,183 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nodegraphfurutils module &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nodegraphgestures module" href="nodegraphgestures.html" />
+    <link rel="prev" title="nodegraphflags module" href="nodegraphflags.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nodegraphfurutils">
+<span id="nodegraphfurutils-module"></span><h1>nodegraphfurutils module<a class="headerlink" href="#module-nodegraphfurutils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nodegraphfurutils.NodeGroomMouseHandler">
+<em class="property">class </em><code class="descclassname">nodegraphfurutils.</code><code class="descname">NodeGroomMouseHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMouseHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nodegraph.html#nodegraph.NodeMouseHandler" title="nodegraph.NodeMouseHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraph.NodeMouseHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphfurutils.NodeGroomMouseHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMouseHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphfurutils.NodeGroomMoveHandler">
+<em class="property">class </em><code class="descclassname">nodegraphfurutils.</code><code class="descname">NodeGroomMoveHandler</code><span class="sig-paren">(</span><em>start_uievent</em>, <em>click_handler</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMoveHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nodegraph.html#nodegraph.NodeMoveHandler" title="nodegraph.NodeMoveHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraph.NodeMoveHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphfurutils.NodeGroomMoveHandler.buildPreviewWires">
+<code class="descname">buildPreviewWires</code><span class="sig-paren">(</span><em>editor</em>, <em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMoveHandler.buildPreviewWires" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphfurutils.NodeGroomMoveHandler.getInputWires">
+<code class="descname">getInputWires</code><span class="sig-paren">(</span><em>editor</em>, <em>item</em>, <em>conn</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMoveHandler.getInputWires" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphfurutils.NodeGroomMoveHandler.getOutputWires">
+<code class="descname">getOutputWires</code><span class="sig-paren">(</span><em>editor</em>, <em>item</em>, <em>conn</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMoveHandler.getOutputWires" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphfurutils.NodeGroomMoveHandler.handleDrop">
+<code class="descname">handleDrop</code><span class="sig-paren">(</span><em>mouseitem</em>, <em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMoveHandler.handleDrop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphfurutils.NodeGroomMoveHandler.makeChainConnections">
+<code class="descname">makeChainConnections</code><span class="sig-paren">(</span><em>inconns</em>, <em>outconns</em>, <em>item_chain</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.NodeGroomMoveHandler.makeChainConnections" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.createEventHandler">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">createEventHandler</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.createEventHandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.cross">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">cross</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.cross" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.findConnectionCandidates">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">findConnectionCandidates</code><span class="sig-paren">(</span><em>groomnode</em>, <em>prevnode</em>, <em>searchinput</em>, <em>nodecenter</em>, <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.findConnectionCandidates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.getConnectionDist">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">getConnectionDist</code><span class="sig-paren">(</span><em>editor</em>, <em>conn</em>, <em>pos</em>, <em>vbias=1.5</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.getConnectionDist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.getGroomNodeConnections">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">getGroomNodeConnections</code><span class="sig-paren">(</span><em>inputitem</em>, <em>outputindex</em>, <em>outputitem</em>, <em>inputindex</em>, <em>editor</em>, <em>nodecenter</em>, <em>branch</em>, <em>inputs=True</em>, <em>outputs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.getGroomNodeConnections" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.getPointLineDist">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">getPointLineDist</code><span class="sig-paren">(</span><em>point</em>, <em>lineA</em>, <em>lineB</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.getPointLineDist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.getSurroundingGroomNodesAndIndex">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">getSurroundingGroomNodesAndIndex</code><span class="sig-paren">(</span><em>inputitem</em>, <em>outputindex</em>, <em>outputitem</em>, <em>inputindex</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.getSurroundingGroomNodesAndIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.isPassThroughConnection">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">isPassThroughConnection</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.isPassThroughConnection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphfurutils.setSelectPosContextData">
+<code class="descclassname">nodegraphfurutils.</code><code class="descname">setSelectPosContextData</code><span class="sig-paren">(</span><em>editor</em>, <em>contextdata</em>, <em>locatedconn</em>, <em>locatedinput</em>, <em>locatedoutput</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphfurutils.setSelectPosContextData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="nodegraphflags.html" title="previous chapter">nodegraphflags module</a></li>
+      <li>Next: <a href="nodegraphgestures.html" title="next chapter">nodegraphgestures module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodegraphfurutils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/nodegraphfurutils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

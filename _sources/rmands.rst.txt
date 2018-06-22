@@ -1,7 +1,0 @@
-rmands module
-=============
-
-.. automodule:: rmands
-    :members:
-    :undoc-members:
-    :show-inheritance:

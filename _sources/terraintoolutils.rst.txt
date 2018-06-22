@@ -1,7 +1,0 @@
-terraintoolutils module
-=======================
-
-.. automodule:: terraintoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,0 +1,1373 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>poselib package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="poster package" href="poster.html" />
+    <link rel="prev" title="poptoolutils module" href="poptoolutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="poselib-package">
+<h1>poselib package<a class="headerlink" href="#poselib-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-poselib.capturewidget">
+<span id="poselib-capturewidget-module"></span><h2>poselib.capturewidget module<a class="headerlink" href="#module-poselib.capturewidget" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.capturewidget.CaptureFrameRangeWidget">
+<em class="property">class </em><code class="descclassname">poselib.capturewidget.</code><code class="descname">CaptureFrameRangeWidget</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureFrameRangeWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>Widget for capturing frame ranges used for generating clips and
+thumbnails.</p>
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureFrameRangeWidget.endFrame">
+<code class="descname">endFrame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureFrameRangeWidget.endFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the end frame captured by this widget.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureFrameRangeWidget.showEvent">
+<code class="descname">showEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureFrameRangeWidget.showEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle the show event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureFrameRangeWidget.startFrame">
+<code class="descname">startFrame</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureFrameRangeWidget.startFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the start frame captured by this widget.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="poselib.capturewidget.CaptureWidget">
+<em class="property">class </em><code class="descclassname">poselib.capturewidget.</code><code class="descname">CaptureWidget</code><span class="sig-paren">(</span><em>poselib</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>Widget containing capture pose controls.</p>
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureWidget.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureWidget.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close options dialog if Pose Library is closed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureWidget.hideOptions">
+<code class="descname">hideOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureWidget.hideOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes options dialog. Called when leaving Edit Mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureWidget.openClipOptions">
+<code class="descname">openClipOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureWidget.openClipOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens Pose Library Clip Capture options dialog.
+Close other options dialog if it is open.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureWidget.openPoseOptions">
+<code class="descname">openPoseOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureWidget.openPoseOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens Pose Library Pose Capture options dialog.
+Close other options dialog if it is open.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.capturewidget.CaptureWidget.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.capturewidget.CaptureWidget.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the capture widget to its default state.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.character">
+<span id="poselib-character-module"></span><h2>poselib.character module<a class="headerlink" href="#module-poselib.character" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.character.Character">
+<em class="property">class </em><code class="descclassname">poselib.character.</code><code class="descname">Character</code><span class="sig-paren">(</span><em>node</em>, <em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="poselib.character.Character.applyClip">
+<code class="descname">applyClip</code><span class="sig-paren">(</span><em>clip</em>, <em>chop=True</em>, <em>root=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.applyClip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a pose to the character.</p>
+<p>&#64;param chop: True if a separate CHOP Network should be generated</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.applyPose">
+<code class="descname">applyPose</code><span class="sig-paren">(</span><em>clip</em>, <em>commit=True</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.applyPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a pose to the character.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.blendPose">
+<code class="descname">blendPose</code><span class="sig-paren">(</span><em>clip</em>, <em>amount</em>, <em>commit=True</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.blendPose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.captureBlend">
+<code class="descname">captureBlend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.captureBlend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.captureClip">
+<code class="descname">captureClip</code><span class="sig-paren">(</span><em>start</em>, <em>end</em>, <em>bake_clip</em>, <em>sample_rate</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.captureClip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Captures clip of character in provided range of frames.</p>
+<p>&#64;param bake_clip: True if baking clip as key frames
+&#64;param sample_rate: Determines sample rate for generating key frames.
+Only used if bake_clip is true.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.capturePose">
+<code class="descname">capturePose</code><span class="sig-paren">(</span><em>frame</em>, <em>keyframe</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.capturePose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Captures current pose of character.</p>
+<p>Returns hou.Pose object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.nodeEvent">
+<code class="descname">nodeEvent</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.nodeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.removeCallbacks">
+<code class="descname">removeCallbacks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.removeCallbacks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.character.Character.scopedChannels">
+<code class="descname">scopedChannels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.character.Character.scopedChannels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.chopdata">
+<span id="poselib-chopdata-module"></span><h2>poselib.chopdata module<a class="headerlink" href="#module-poselib.chopdata" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.chopdata.ChopData">
+<em class="property">class </em><code class="descclassname">poselib.chopdata.</code><code class="descname">ChopData</code><a class="headerlink" href="#poselib.chopdata.ChopData" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="poselib.chopdata.ChopData.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>parm_name</em>, <em>chop</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.chopdata.ChopData.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.chopdata.ChopData.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><em>start</em>, <em>root</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.chopdata.ChopData.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.chopdata.ChopData.capture">
+<code class="descname">capture</code><span class="sig-paren">(</span><em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.chopdata.ChopData.capture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.chopdata.ChopData.hasData">
+<code class="descname">hasData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.chopdata.ChopData.hasData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.chopdata.ChopData.jsonDict">
+<code class="descname">jsonDict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.chopdata.ChopData.jsonDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.chopdata.ChopData.setJSONDict">
+<code class="descname">setJSONDict</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.chopdata.ChopData.setJSONDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.grid">
+<span id="poselib-grid-module"></span><h2>poselib.grid module<a class="headerlink" href="#module-poselib.grid" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.grid.Grid">
+<em class="property">class </em><code class="descclassname">poselib.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>lib_widget</em>, <em>name</em>, <em>unsaved</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>Represents a group of poses/clips in the form of a grid in the library
+UI.</p>
+<dl class="attribute">
+<dt id="poselib.grid.Grid.DEFAULT_ENTRY_ICON_HEIGHT">
+<code class="descname">DEFAULT_ENTRY_ICON_HEIGHT</code><a class="headerlink" href="#poselib.grid.Grid.DEFAULT_ENTRY_ICON_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.grid.Grid.DEFAULT_ENTRY_ICON_WIDTH">
+<code class="descname">DEFAULT_ENTRY_ICON_WIDTH</code><a class="headerlink" href="#poselib.grid.Grid.DEFAULT_ENTRY_ICON_WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.grid.Grid.DEFAULT_ENTRY_LABEL_HEIGHT">
+<code class="descname">DEFAULT_ENTRY_LABEL_HEIGHT</code><a class="headerlink" href="#poselib.grid.Grid.DEFAULT_ENTRY_LABEL_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.grid.Grid.ENTRY_BORDER_SIZE">
+<code class="descname">ENTRY_BORDER_SIZE</code><a class="headerlink" href="#poselib.grid.Grid.ENTRY_BORDER_SIZE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.grid.Grid.ENTRY_SPACING">
+<code class="descname">ENTRY_SPACING</code><em class="property"> = 5</em><a class="headerlink" href="#poselib.grid.Grid.ENTRY_SPACING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.grid.Grid.GRID_MARGIN">
+<code class="descname">GRID_MARGIN</code><em class="property"> = 5</em><a class="headerlink" href="#poselib.grid.Grid.GRID_MARGIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.addEntry">
+<code class="descname">addEntry</code><span class="sig-paren">(</span><em>name</em>, <em>image</em>, <em>animated</em>, <em>pose</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.addEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new pose entry and add it to the grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.deleteEntry">
+<code class="descname">deleteEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.deleteEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.dragEnterEvent">
+<code class="descname">dragEnterEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.dragEnterEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.dragSwap">
+<code class="descname">dragSwap</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.dragSwap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.dropEvent">
+<code class="descname">dropEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.dropEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.exportToPath">
+<code class="descname">exportToPath</code><span class="sig-paren">(</span><em>save_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.exportToPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports grid entries to the given directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.getUntitledClipCount">
+<code class="descname">getUntitledClipCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.getUntitledClipCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.getUntitledPoseCount">
+<code class="descname">getUntitledPoseCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.getUntitledPoseCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.grid.Grid.gridContextMenuRequested">
+<code class="descname">gridContextMenuRequested</code><a class="headerlink" href="#poselib.grid.Grid.gridContextMenuRequested" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.gridEntryBorderSize">
+<code class="descname">gridEntryBorderSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.gridEntryBorderSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the border size of a grid entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.gridEntryHeight">
+<code class="descname">gridEntryHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.gridEntryHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the height of a grid entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.gridEntryIconHeight">
+<code class="descname">gridEntryIconHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.gridEntryIconHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the height of just the icon portion of a grid entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.gridEntryIconWidth">
+<code class="descname">gridEntryIconWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.gridEntryIconWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the width of just the icon portion of a grid entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.gridEntryLabelHeight">
+<code class="descname">gridEntryLabelHeight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.gridEntryLabelHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the height of just the text portion of a grid entry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.grid.Grid.gridEntrySizeChanged">
+<code class="descname">gridEntrySizeChanged</code><a class="headerlink" href="#poselib.grid.Grid.gridEntrySizeChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.gridEntryWidth">
+<code class="descname">gridEntryWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.gridEntryWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the width of a grid entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.incrementNameCounters">
+<code class="descname">incrementNameCounters</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.incrementNameCounters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.isCurrent">
+<code class="descname">isCurrent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.isCurrent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if this is the current grid in the Pose Library
+and False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.isInEditMode">
+<code class="descname">isInEditMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.isInEditMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience function for grid entries to determine if the Pose
+Library is in Edit Mode or not.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.makeCurrent">
+<code class="descname">makeCurrent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.makeCurrent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make this grid the current grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.moveEntry">
+<code class="descname">moveEntry</code><span class="sig-paren">(</span><em>entry</em>, <em>new_row</em>, <em>new_col</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.moveEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.removeEntry">
+<code class="descname">removeEntry</code><span class="sig-paren">(</span><em>entry</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.removeEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.resizeEvent">
+<code class="descname">resizeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.resizeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.showIcons">
+<code class="descname">showIcons</code><span class="sig-paren">(</span><em>show</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.showIcons" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.showLabels">
+<code class="descname">showLabels</code><span class="sig-paren">(</span><em>show</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.showLabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.tabName">
+<code class="descname">tabName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.tabName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor for the grid/tab name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><em>include_entries=True</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a JSON representation of this pose grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.grid.Grid.undoEntry">
+<code class="descname">undoEntry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.grid.Grid.undoEntry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.gridentry">
+<span id="poselib-gridentry-module"></span><h2>poselib.gridentry module<a class="headerlink" href="#module-poselib.gridentry" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.gridentry.GridEntry">
+<em class="property">class </em><code class="descclassname">poselib.gridentry.</code><code class="descname">GridEntry</code><span class="sig-paren">(</span><em>grid</em>, <em>name</em>, <em>image</em>, <em>animated</em>, <em>col</em>, <em>row</em>, <em>pose</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>Represents a pose/clip in the Pose Library grid interface.</p>
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.animated">
+<code class="descname">animated</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.animated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.gridentry.GridEntry.blendChanged">
+<code class="descname">blendChanged</code><a class="headerlink" href="#poselib.gridentry.GridEntry.blendChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.gridentry.GridEntry.blendEnded">
+<code class="descname">blendEnded</code><a class="headerlink" href="#poselib.gridentry.GridEntry.blendEnded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.gridentry.GridEntry.blendStarted">
+<code class="descname">blendStarted</code><a class="headerlink" href="#poselib.gridentry.GridEntry.blendStarted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.changeIcon">
+<code class="descname">changeIcon</code><span class="sig-paren">(</span><em>image_data</em>, <em>is_animated</em>, <em>image_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.changeIcon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the entry’s icon with the given image data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.createSaveDirectory">
+<code class="descname">createSaveDirectory</code><span class="sig-paren">(</span><em>save_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.createSaveDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create directory where this pose’s file resources will be stored.</p>
+<p>Return True if directory was created successfully.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.gridentry.GridEntry.deleteRequested">
+<code class="descname">deleteRequested</code><a class="headerlink" href="#poselib.gridentry.GridEntry.deleteRequested" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.dragEnterEvent">
+<code class="descname">dragEnterEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.dragEnterEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.editingFinished">
+<code class="descname">editingFinished</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.editingFinished" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.enterEvent">
+<code class="descname">enterEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.enterEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.enterRenameState">
+<code class="descname">enterRenameState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.enterRenameState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the name input field allowing the user to rename the pose
+entry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.gridentry.GridEntry.entryContextMenuRequested">
+<code class="descname">entryContextMenuRequested</code><a class="headerlink" href="#poselib.gridentry.GridEntry.entryContextMenuRequested" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.exportPoseDataToFile">
+<code class="descname">exportPoseDataToFile</code><span class="sig-paren">(</span><em>save_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.exportPoseDataToFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export only pose data to given path.</p>
+<p>Return name of file pose was saved to, or None if save failed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.exportThumbnailToFile">
+<code class="descname">exportThumbnailToFile</code><span class="sig-paren">(</span><em>save_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.exportThumbnailToFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export image data to given path.</p>
+<p>Return name of file image was saved to, or None if save failed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.exportToFile">
+<code class="descname">exportToFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.exportToFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export this entry to a chosen file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.exportToHDA">
+<code class="descname">exportToHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.exportToHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the poses to an HDA</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.exportToPath">
+<code class="descname">exportToPath</code><span class="sig-paren">(</span><em>save_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.exportToPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export this entry into the given directory.</p>
+<p>Return name of folder pose was saved into, or None if pose failed to 
+save.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.imageData">
+<code class="descname">imageData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.imageData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to entry’s icon image data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.leaveEvent">
+<code class="descname">leaveEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.leaveEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.mouseMoveEvent">
+<code class="descname">mouseMoveEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.mouseMoveEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle mouse move events.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.mousePressEvent">
+<code class="descname">mousePressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle mouse press events.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.mouseReleaseEvent">
+<code class="descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle mouse release events.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.name">
+<code class="descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.notifyEditModeChange">
+<code class="descname">notifyEditModeChange</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.notifyEditModeChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propagate the new Edit Mode state to the widgets in this grid
+entry.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.gridentry.GridEntry.poseApplied">
+<code class="descname">poseApplied</code><a class="headerlink" href="#poselib.gridentry.GridEntry.poseApplied" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.poseData">
+<code class="descname">poseData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.poseData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to entry’s pose data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.requestDeletion">
+<code class="descname">requestDeletion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.requestDeletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle a request to delete this entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.showEntryIcon">
+<code class="descname">showEntryIcon</code><span class="sig-paren">(</span><em>show</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.showEntryIcon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.showEntryLabel">
+<code class="descname">showEntryLabel</code><span class="sig-paren">(</span><em>show</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.showEntryLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a JSON representation of this grid entry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.gridentry.GridEntry.updateCoordinates">
+<code class="descname">updateCoordinates</code><span class="sig-paren">(</span><em>row</em>, <em>col</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.gridentry.GridEntry.updateCoordinates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.librarywidget">
+<span id="poselib-librarywidget-module"></span><h2>poselib.librarywidget module<a class="headerlink" href="#module-poselib.librarywidget" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.librarywidget.LibraryWidget">
+<em class="property">class </em><code class="descclassname">poselib.librarywidget.</code><code class="descname">LibraryWidget</code><span class="sig-paren">(</span><em>poselib</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>The interface containing the loaded poses/clips.</p>
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.addPose">
+<code class="descname">addPose</code><span class="sig-paren">(</span><em>name</em>, <em>image</em>, <em>animated</em>, <em>pose</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.addPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new pose to the current grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.addTab">
+<code class="descname">addTab</code><span class="sig-paren">(</span><em>name=None</em>, <em>unsaved=True</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.addTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new tab to the pose widget</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the entries in the library.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.currentGrid">
+<code class="descname">currentGrid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.currentGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current grid.</p>
+<p>Return None if there is current grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.ensureTabExists">
+<code class="descname">ensureTabExists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.ensureTabExists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if at least one tab is present in the poselib.</p>
+<p>If there are no tabs then prompt the user to add one.
+Return True if there is at least one tab in the library and False
+otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.globalSettings">
+<code class="descname">globalSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.globalSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for getting the Pose Library global settings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.handleNewPoseLibrary">
+<code class="descname">handleNewPoseLibrary</code><span class="sig-paren">(</span><em>load_from_existing=False</em>, <em>load_type=None</em>, <em>load_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.handleNewPoseLibrary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle a request to create a new Pose Library.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.importFromFile">
+<code class="descname">importFromFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.importFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle a request to import entries into the current grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.importFromHDA">
+<code class="descname">importFromHDA</code><span class="sig-paren">(</span><em>clear_tabs=False</em>, <em>warn=True</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.importFromHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import poses from an HDA into the current grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.isPoseLibraryLoaded">
+<code class="descname">isPoseLibraryLoaded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.isPoseLibraryLoaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if pose/clip library has either a file, HDA, or
+directory source.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.isSavingToHDA">
+<code class="descname">isSavingToHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.isSavingToHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the library widget is currently saving to
+the source HDA definition and False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.keyPressEvent">
+<code class="descname">keyPressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.libraryDirectories">
+<code class="descname">libraryDirectories</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.libraryDirectories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return directories referenced by library.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.libraryName">
+<code class="descname">libraryName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.libraryName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return name of library.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.loadFromDirectory">
+<code class="descname">loadFromDirectory</code><span class="sig-paren">(</span><em>path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.loadFromDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads poses from a directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.loadFromFile">
+<code class="descname">loadFromFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.loadFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads poses from a JSON file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.loadFromHDA">
+<code class="descname">loadFromHDA</code><span class="sig-paren">(</span><em>hda_node=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.loadFromHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads poses from an HDA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.loadFromTemp">
+<code class="descname">loadFromTemp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.loadFromTemp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads poses from the temp directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.mergeFromFile">
+<code class="descname">mergeFromFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.mergeFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges poses from a JSON file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.mergeFromHDA">
+<code class="descname">mergeFromHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.mergeFromHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge poses from an HDA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.poseLib">
+<code class="descname">poseLib</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.poseLib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for accessing the root Pose Library widget.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.promptToSave">
+<code class="descname">promptToSave</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.promptToSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt the user to save if there are unsaved changes.</p>
+<p>If there are no unsaved changes then do nothing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.removeCurrentTab">
+<code class="descname">removeCurrentTab</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.removeCurrentTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the current tab, if one exists</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.removeTabs">
+<code class="descname">removeTabs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.removeTabs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all tabs and their contents from the pose library</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the current contents in the library widget and re-populate it
+with a default tab.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the current poses to whereever they were loaded from.</p>
+<p>If there are no poses, create an empty pose/clip library source.</p>
+<p>If the current poses do not have a source then prompt the user
+for a save location.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.saveIfNeeded">
+<code class="descname">saveIfNeeded</code><span class="sig-paren">(</span><em>grid_index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.saveIfNeeded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt the user to save the library if there are unsaved changes.</p>
+<p>Return True if the library was saved successfully or if there are no
+unsaved changes.  Return False otherwise.</p>
+<p>You can optionally pass in a grid index so that unsaved changes are
+checked only for a particular grid.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.saveToDirectory">
+<code class="descname">saveToDirectory</code><span class="sig-paren">(</span><em>save_path=None</em>, <em>save_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.saveToDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the poses to a directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.saveToFile">
+<code class="descname">saveToFile</code><span class="sig-paren">(</span><em>save_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.saveToFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the poses to a file in JSON format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.saveToHDA">
+<code class="descname">saveToHDA</code><span class="sig-paren">(</span><em>hda_def=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.saveToHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the poses to an HDA</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.sourceHDA">
+<code class="descname">sourceHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.sourceHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the HDA definition that the current library is saved to.</p>
+<p>Return None if the library is not saved to an HDA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.librarywidget.LibraryWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.librarywidget.LibraryWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the JSON representation of the Pose Library’s state.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.plglobals">
+<span id="poselib-plglobals-module"></span><h2>poselib.plglobals module<a class="headerlink" href="#module-poselib.plglobals" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="poselib.plglobals.chooseAndLoadPoseLibraryDirectory">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">chooseAndLoadPoseLibraryDirectory</code><span class="sig-paren">(</span><em>prompt_title</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.chooseAndLoadPoseLibraryDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Prompt the user to choose a directory and load the pose library contained </dt>
+<dd>in the directory.</dd>
+</dl>
+<p>Return a 2-tuple of the chosen save path and the pose library 
+(JSON structure) that it contains.  Return a 2-tuple of (None, None) if no
+directory was chosen or if the pose library could not be loaded from the
+file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.chooseAndLoadPoseLibraryFile">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">chooseAndLoadPoseLibraryFile</code><span class="sig-paren">(</span><em>prompt_title</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.chooseAndLoadPoseLibraryFile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Prompt the user to choose a file and load the pose library contained in</dt>
+<dd>the file.</dd>
+</dl>
+<p>Return a 2-tuple of the chosen file path and the pose library 
+(JSON structure) that it contains.  Return a 2-tuple of (None, None) if no
+file was chosen or if the pose library could not be loaded from the file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.chooseAndLoadPoseLibraryHDA">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">chooseAndLoadPoseLibraryHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.chooseAndLoadPoseLibraryHDA" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Prompt the user to choose a node and load the Pose Library contained in</dt>
+<dd>the node’s HDA definition.</dd>
+</dl>
+<p>Return the pose library or None if there is a failure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.chooseHDANode">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">chooseHDANode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.chooseHDANode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt the user to choose a node that has an HDA definition.</p>
+<p>Return the HDA node if one was selected.  Return None otherwise.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.chooseOverwriteDirectory">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">chooseOverwriteDirectory</code><span class="sig-paren">(</span><em>output_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.chooseOverwriteDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose whether to overwrite an existing directory.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.chooseOverwriteOrMergeFile">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">chooseOverwriteOrMergeFile</code><span class="sig-paren">(</span><em>output_path</em>, <em>allow_merge</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.chooseOverwriteOrMergeFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose whether to overwrite or merge into an existing file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.choosePoseLibrarySaveDirectory">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">choosePoseLibrarySaveDirectory</code><span class="sig-paren">(</span><em>prompt_title</em>, <em>default_directory_name</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.choosePoseLibrarySaveDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose a save directory for the pose library.</p>
+<p>Return the chosen save path.  Return None if no path was chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.choosePoseLibrarySaveFile">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">choosePoseLibrarySaveFile</code><span class="sig-paren">(</span><em>prompt_title</em>, <em>default_file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.choosePoseLibrarySaveFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose a save file for the pose library.</p>
+<p>Return the chosen save path.  Return None if no path was chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.choosePoseLibrarySaveHDA">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">choosePoseLibrarySaveHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.choosePoseLibrarySaveHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose an HDA definition to save pose library data to.</p>
+<p>Return the chosen HDA definition.  Return None if no path was chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.choosePoseLibrarySaveOrMergeFile">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">choosePoseLibrarySaveOrMergeFile</code><span class="sig-paren">(</span><em>prompt_title</em>, <em>default_file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.choosePoseLibrarySaveOrMergeFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose a save file for the pose library.</p>
+<p>Return a 2-tuple containing the chosen save path and a boolean that is set
+to True if a merge action should be performed instead of a save.</p>
+<p>The returned save path is None if no file was chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.choosePoseLibrarySaveOrMergeHDA">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">choosePoseLibrarySaveOrMergeHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.choosePoseLibrarySaveOrMergeHDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose an HDA definition to save pose library data to.</p>
+<p>Return a 2-tuple containing the chosen HDA definition and a boolean that is set
+to True if a merge action should be performed instead of a save.</p>
+<p>The returned HDA definition is None if no definition was chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.clearAutosaveDirectory">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">clearAutosaveDirectory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.clearAutosaveDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears pose library autosave directory.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.confirmDialog">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">confirmDialog</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.confirmDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a confirm dialog with the options of “Save”, “Discard” and 
+“Cancel”. Returns the option number chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.errorDialog">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">errorDialog</code><span class="sig-paren">(</span><em>main_message</em>, <em>additional_message=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.errorDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an error dialog with the given message(s) and return if OK was
+pressed.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.getAvailableSavePath">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">getAvailableSavePath</code><span class="sig-paren">(</span><em>save_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.getAvailableSavePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an unused file name name by adding a number to end of given
+path and incrementing until a unique save path is obtained.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.getSceneViewerSelected">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">getSceneViewerSelected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.getSceneViewerSelected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.getViewportGif">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">getViewportGif</code><span class="sig-paren">(</span><em>frame_start</em>, <em>frame_end</em>, <em>include_all_objects=False</em>, <em>character_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.getViewportGif" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a QByteArray whose content is an animated gif that captures the
+animation of the current viewport from frame_start to frame_end. Ensure
+that frame_end - frame_start &gt;= 2.0 is true before calling this.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.getViewportImage">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">getViewportImage</code><span class="sig-paren">(</span><em>frame=None</em>, <em>include_all_objects=False</em>, <em>character_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.getViewportImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a still image of the current viewport as a Base64 encoded string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.inputDialog">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">inputDialog</code><span class="sig-paren">(</span><em>text</em>, <em>title</em>, <em>initial_contents=''</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.inputDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a popup dialog with the given properties
+and return the result or None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.jsonToStr">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">jsonToStr</code><span class="sig-paren">(</span><em>json_struct</em>, <em>pretty_print=False</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.jsonToStr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a JSON structure to string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.loadPoseLibraryDirectory">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">loadPoseLibraryDirectory</code><span class="sig-paren">(</span><em>library_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.loadPoseLibraryDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the pose library from the pose library file at the given path.</p>
+<p>Return None if the pose library could not be loaded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.loadPoseLibraryFile">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">loadPoseLibraryFile</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.loadPoseLibraryFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the pose library contained in the specified file.</p>
+<p>Return None if the pose library could not be loaded.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.loadPoseLibraryHDA">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">loadPoseLibraryHDA</code><span class="sig-paren">(</span><em>hda_def</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.loadPoseLibraryHDA" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Return the Pose Library (JSON structure) stored in the specified HDA</dt>
+<dd>definition.</dd>
+</dl>
+<p>Return None if the node does not a Pose Library in its HDA definition.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.loadThumbnailFromFile">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">loadThumbnailFromFile</code><span class="sig-paren">(</span><em>image_path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.loadThumbnailFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads image file at the given path.</p>
+<p>Returns a 2-tuple containing the image data and a boolean which is
+set to True if the image is animated.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.nodeHasPoseLibrary">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">nodeHasPoseLibrary</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.nodeHasPoseLibrary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the specified node has a Pose Library stored in its HDA
+definition and False otherwise.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.saveOptionsDialog">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">saveOptionsDialog</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.saveOptionsDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a save options dialog where the user can choose to save the 
+layout to HDA or to file, or cancel. Returns the option number chosen.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="poselib.plglobals.warningDialog">
+<code class="descclassname">poselib.plglobals.</code><code class="descname">warningDialog</code><span class="sig-paren">(</span><em>message</em>, <em>true_button='OK'</em>, <em>false_button='Cancel'</em>, <em>show_cancel=True</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.plglobals.warningDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a warning dialog with the given properties
+and return if true_button or Ok was pressed.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.pose">
+<span id="poselib-pose-module"></span><h2>poselib.pose module<a class="headerlink" href="#module-poselib.pose" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.pose.Clip">
+<em class="property">class </em><code class="descclassname">poselib.pose.</code><code class="descname">Clip</code><span class="sig-paren">(</span><em>pose_list</em>, <em>single_frame=False</em>, <em>chop_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.pose.Clip" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="poselib.pose.Clip.posesJSON">
+<code class="descname">posesJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.pose.Clip.posesJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return JSON representation of pose list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.pose.Clip.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.pose.Clip.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a JSON representation of this pose/clip.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="poselib.pose.Pose">
+<em class="property">class </em><code class="descclassname">poselib.pose.</code><code class="descname">Pose</code><span class="sig-paren">(</span><em>key=None</em>, <em>value=None</em>, <em>frame=None</em>, <em>chop=False</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.pose.Pose" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="poselib.pose.Pose.jsonDict">
+<code class="descname">jsonDict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.pose.Pose.jsonDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.pose.Pose.parmDict">
+<code class="descname">parmDict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.pose.Pose.parmDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.pose.Pose.setJSONDict">
+<code class="descname">setJSONDict</code><span class="sig-paren">(</span><em>json_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.pose.Pose.setJSONDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.poselib">
+<span id="poselib-poselib-module"></span><h2>poselib.poselib module<a class="headerlink" href="#module-poselib.poselib" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.poselib.PoseLibrary">
+<em class="property">class </em><code class="descclassname">poselib.poselib.</code><code class="descname">PoseLibrary</code><a class="headerlink" href="#poselib.poselib.PoseLibrary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>Main pose library widget.</p>
+<dl class="attribute">
+<dt id="poselib.poselib.PoseLibrary.CLEAR_HISTORY">
+<code class="descname">CLEAR_HISTORY</code><em class="property"> = '&lt;Clear History&gt;'</em><a class="headerlink" href="#poselib.poselib.PoseLibrary.CLEAR_HISTORY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.poselib.PoseLibrary.NO_HISTORY">
+<code class="descname">NO_HISTORY</code><em class="property"> = '&lt;No History&gt;'</em><a class="headerlink" href="#poselib.poselib.PoseLibrary.NO_HISTORY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.cleanup">
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.cleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is called by the Python Panel when the interface is
+about to be destroyed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures all option-dialogs are closed if Pose Library is closed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.ensureCharacterSelected">
+<code class="descname">ensureCharacterSelected</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.ensureCharacterSelected" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Checks if a valid character is present and prompts the user to</dt>
+<dd>select one if needed.</dd>
+</dl>
+<p>Return True if there is a selected character and False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.eventFilter">
+<code class="descname">eventFilter</code><span class="sig-paren">(</span><em>widget</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.eventFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.globalSettings">
+<code class="descname">globalSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.globalSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor for global settings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.handleHDAEvent">
+<code class="descname">handleHDAEvent</code><span class="sig-paren">(</span><em>event_type</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.handleHDAEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback handler for HDA events.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.handleHipFileEvent">
+<code class="descname">handleHipFileEvent</code><span class="sig-paren">(</span><em>event_type</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.handleHipFileEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Callback handler for .hip file events.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.handleLibrarySourceChanged">
+<code class="descname">handleLibrarySourceChanged</code><span class="sig-paren">(</span><em>source_exists</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.handleLibrarySourceChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle a change of the pose library source.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.libraryUI">
+<code class="descname">libraryUI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.libraryUI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor for the library widget.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.nodeEvent">
+<code class="descname">nodeEvent</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.nodeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the pose library to its default state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.selectedCharacter">
+<code class="descname">selectedCharacter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.selectedCharacter" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Return the selected character that the Pose Library is currently</dt>
+<dd>bound to.</dd>
+</dl>
+<p>Return None if there is no selected character.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.setCharacter">
+<code class="descname">setCharacter</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.setCharacter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the selected character in the Pose Library.</p>
+<p>Poses/clips in the library widget are applied to the selected
+character.  Return the True if the character was successfully selected
+and False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.poselib.PoseLibrary.showHelp">
+<code class="descname">showHelp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.poselib.PoseLibrary.showHelp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib.settings">
+<span id="poselib-settings-module"></span><h2>poselib.settings module<a class="headerlink" href="#module-poselib.settings" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poselib.settings.Settings">
+<em class="property">class </em><code class="descclassname">poselib.settings.</code><code class="descname">Settings</code><a class="headerlink" href="#poselib.settings.Settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>This class contains the global settings in the Pose Library.</p>
+<dl class="attribute">
+<dt id="poselib.settings.Settings.DEFAULT_ZOOM_INDEX">
+<code class="descname">DEFAULT_ZOOM_INDEX</code><em class="property"> = 4</em><a class="headerlink" href="#poselib.settings.Settings.DEFAULT_ZOOM_INDEX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.settings.Settings.ZOOM_MULTIPLIERS">
+<code class="descname">ZOOM_MULTIPLIERS</code><em class="property"> = [0.5, 0.67, 0.75, 0.9, 1.0, 1.1, 1.25, 1.5, 1.75, 2.0]</em><a class="headerlink" href="#poselib.settings.Settings.ZOOM_MULTIPLIERS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.decrementZoomMultiplier">
+<code class="descname">decrementZoomMultiplier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.decrementZoomMultiplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrement the zoom multiplier to the next smaller setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.settings.Settings.editModeChanged">
+<code class="descname">editModeChanged</code><a class="headerlink" href="#poselib.settings.Settings.editModeChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.incrementZoomMultiplier">
+<code class="descname">incrementZoomMultiplier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.incrementZoomMultiplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increment the zoom multiplier to the next larger setting.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.isInEditMode">
+<code class="descname">isInEditMode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.isInEditMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if the Pose Library is in edit mode and False otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.resetZoomMultiplier">
+<code class="descname">resetZoomMultiplier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.resetZoomMultiplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset zoom multiplier.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.setIsInEditMode">
+<code class="descname">setIsInEditMode</code><span class="sig-paren">(</span><em>on</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.setIsInEditMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set whether the Pose Library is in Edit Mode or not.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.setShowPoseIcons">
+<code class="descname">setShowPoseIcons</code><span class="sig-paren">(</span><em>on</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.setShowPoseIcons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set whether the pose entry icons should be displayed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.setShowPoseNames">
+<code class="descname">setShowPoseNames</code><span class="sig-paren">(</span><em>on</em><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.setShowPoseNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set whether the pose entry names should be displayed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.showPoseIcons">
+<code class="descname">showPoseIcons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.showPoseIcons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if pose entry icons should be displayed and False
+otherwise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.settings.Settings.showPoseIconsChanged">
+<code class="descname">showPoseIconsChanged</code><a class="headerlink" href="#poselib.settings.Settings.showPoseIconsChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.showPoseNames">
+<code class="descname">showPoseNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.showPoseNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if pose names should be displayed and False otherwise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.settings.Settings.showPoseNamesChanged">
+<code class="descname">showPoseNamesChanged</code><a class="headerlink" href="#poselib.settings.Settings.showPoseNamesChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="poselib.settings.Settings.zoomMultiplier">
+<code class="descname">zoomMultiplier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#poselib.settings.Settings.zoomMultiplier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the zoom multiplier for displaying pose entries.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="poselib.settings.Settings.zoomMultiplierChanged">
+<code class="descname">zoomMultiplierChanged</code><a class="headerlink" href="#poselib.settings.Settings.zoomMultiplierChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poselib">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-poselib" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">poselib package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-poselib.capturewidget">poselib.capturewidget module</a></li>
+<li><a class="reference internal" href="#module-poselib.character">poselib.character module</a></li>
+<li><a class="reference internal" href="#module-poselib.chopdata">poselib.chopdata module</a></li>
+<li><a class="reference internal" href="#module-poselib.grid">poselib.grid module</a></li>
+<li><a class="reference internal" href="#module-poselib.gridentry">poselib.gridentry module</a></li>
+<li><a class="reference internal" href="#module-poselib.librarywidget">poselib.librarywidget module</a></li>
+<li><a class="reference internal" href="#module-poselib.plglobals">poselib.plglobals module</a></li>
+<li><a class="reference internal" href="#module-poselib.pose">poselib.pose module</a></li>
+<li><a class="reference internal" href="#module-poselib.poselib">poselib.poselib module</a></li>
+<li><a class="reference internal" href="#module-poselib.settings">poselib.settings module</a></li>
+<li><a class="reference internal" href="#module-poselib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="poptoolutils.html" title="previous chapter">poptoolutils module</a></li>
+      <li>Next: <a href="poster.html" title="next chapter">poster package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/poselib.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/poselib.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

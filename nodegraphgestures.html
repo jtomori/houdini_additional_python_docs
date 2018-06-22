@@ -1,0 +1,176 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nodegraphgestures module &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nodegraphhooks module" href="nodegraphhooks.html" />
+    <link rel="prev" title="nodegraphfurutils module" href="nodegraphfurutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nodegraphgestures">
+<span id="nodegraphgestures-module"></span><h1>nodegraphgestures module<a class="headerlink" href="#module-nodegraphgestures" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nodegraphgestures.GestureDetector">
+<em class="property">class </em><code class="descclassname">nodegraphgestures.</code><code class="descname">GestureDetector</code><span class="sig-paren">(</span><em>editor</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureDetector" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="nodegraphgestures.GestureDetector.detectGesture">
+<code class="descname">detectGesture</code><span class="sig-paren">(</span><em>records</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureDetector.detectGesture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphgestures.GestureManager">
+<em class="property">class </em><code class="descclassname">nodegraphgestures.</code><code class="descname">GestureManager</code><a class="headerlink" href="#nodegraphgestures.GestureManager" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="nodegraphgestures.GestureManager.addDetector">
+<code class="descname">addDetector</code><span class="sig-paren">(</span><em>detector</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureManager.addDetector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphgestures.GestureManager.disable">
+<code class="descname">disable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureManager.disable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphgestures.GestureManager.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureManager.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphgestures.GestureManager.testForGesture">
+<code class="descname">testForGesture</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureManager.testForGesture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphgestures.GestureManager.velocity">
+<code class="descname">velocity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureManager.velocity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphgestures.GestureRecord">
+<em class="property">class </em><code class="descclassname">nodegraphgestures.</code><code class="descname">GestureRecord</code><span class="sig-paren">(</span><em>eventtime</em>, <em>mousepos</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.GestureRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="nodegraphgestures.GestureRecord.eventtime">
+<code class="descname">eventtime</code><a class="headerlink" href="#nodegraphgestures.GestureRecord.eventtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="nodegraphgestures.GestureRecord.mousepos">
+<code class="descname">mousepos</code><a class="headerlink" href="#nodegraphgestures.GestureRecord.mousepos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphgestures.ShakeDetector">
+<em class="property">class </em><code class="descclassname">nodegraphgestures.</code><code class="descname">ShakeDetector</code><span class="sig-paren">(</span><em>editor</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.ShakeDetector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphgestures.GestureDetector" title="nodegraphgestures.GestureDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphgestures.GestureDetector</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphgestures.ShakeDetector.detectGesture">
+<code class="descname">detectGesture</code><span class="sig-paren">(</span><em>records</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.ShakeDetector.detectGesture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphgestures.SwipeDetector">
+<em class="property">class </em><code class="descclassname">nodegraphgestures.</code><code class="descname">SwipeDetector</code><span class="sig-paren">(</span><em>editor</em>, <em>name</em>, <em>startangle</em>, <em>endangle</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.SwipeDetector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphgestures.GestureDetector" title="nodegraphgestures.GestureDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphgestures.GestureDetector</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphgestures.SwipeDetector.detectGesture">
+<code class="descname">detectGesture</code><span class="sig-paren">(</span><em>records</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphgestures.SwipeDetector.detectGesture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="nodegraphfurutils.html" title="previous chapter">nodegraphfurutils module</a></li>
+      <li>Next: <a href="nodegraphhooks.html" title="next chapter">nodegraphhooks module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodegraphgestures.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/nodegraphgestures.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

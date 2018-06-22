@@ -1,0 +1,233 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.simpleexample1 package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.spine package" href="autorigs.modules.spine.html" />
+    <link rel="prev" title="autorigs.modules.quadleg package" href="autorigs.modules.quadleg.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-simpleexample1-package">
+<h1>autorigs.modules.simpleexample1 package<a class="headerlink" href="#autorigs-modules-simpleexample1-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.simpleexample1.autoRigsSimpleBuilder">
+<span id="autorigs-modules-simpleexample1-autorigssimplebuilder-module"></span><h2>autorigs.modules.simpleexample1.autoRigsSimpleBuilder module<a class="headerlink" href="#module-autorigs.modules.simpleexample1.autoRigsSimpleBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.simpleexample1.autoRigsSimpleBuilder.AutoRigsSimpleBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.simpleexample1.autoRigsSimpleBuilder.</code><code class="descname">AutoRigsSimpleBuilder</code><a class="headerlink" href="#autorigs.modules.simpleexample1.autoRigsSimpleBuilder.AutoRigsSimpleBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="autorigs.modules.simpleexample1.autoRigsSimpleBuilder.AutoRigsSimpleBuilder.buildRig">
+<em class="property">classmethod </em><code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em>, <em>assetnode</em>, <em>options</em>, <em>simpleguide</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.autoRigsSimpleBuilder.AutoRigsSimpleBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.simpleexample1.buildSimpleGuide">
+<span id="autorigs-modules-simpleexample1-buildsimpleguide-module"></span><h2>autorigs.modules.simpleexample1.buildSimpleGuide module<a class="headerlink" href="#module-autorigs.modules.simpleexample1.buildSimpleGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.simpleexample1.buildSimpleGuide.</code><code class="descname">SimpleGuide</code><span class="sig-paren">(</span><em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseGuide" title="autorigs.modules.base.buildBaseGuide.BaseGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseGuide</span></code></a></p>
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.buildFromJsonExisting">
+<code class="descname">buildFromJsonExisting</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.buildFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.buildFromJsonNew">
+<code class="descname">buildFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>paramjson</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.buildFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd><p>paramjson is the transforms, which we don’t use here
+but could use in other situations. However, since the
+parameters widgets are linked to the ndoes in the viewport,
+doing a fromJson call there will actually update the values
+of the transforms in the nodes to the values in the json
+(see simpleGuideParams.py). Hence, we don’t actually need
+to do any transforming here.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.buildSimpleGuide.SimpleGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.simpleexample1.simpleGuideOptions">
+<span id="autorigs-modules-simpleexample1-simpleguideoptions-module"></span><h2>autorigs.modules.simpleexample1.simpleGuideOptions module<a class="headerlink" href="#module-autorigs.modules.simpleexample1.simpleGuideOptions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.simpleexample1.simpleGuideOptions.</code><code class="descname">ModuleOptionsWidget</code><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideOptions.ModuleOptionsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.simpleexample1.simpleGuideParams">
+<span id="autorigs-modules-simpleexample1-simpleguideparams-module"></span><h2>autorigs.modules.simpleexample1.simpleGuideParams module<a class="headerlink" href="#module-autorigs.modules.simpleexample1.simpleGuideParams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.simpleexample1.simpleGuideParams.</code><code class="descname">ModuleParamsWidget</code><span class="sig-paren">(</span><em>simpleguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<p>Constructor of the guide parameters. The simpleguide
+is a class that contains all of the guides that are built</p>
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.null0widgets">
+<code class="descname">null0widgets</code><em class="property"> = None</em><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.null0widgets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This will return a dictionary of {label, nodes, parameters}
+that will be used by the createParamWidget helper to create
+transform widgets</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.simpleexample1.simpleGuideParams.ModuleParamsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.simpleexample1.simpleModule">
+<span id="autorigs-modules-simpleexample1-simplemodule-module"></span><h2>autorigs.modules.simpleexample1.simpleModule module<a class="headerlink" href="#module-autorigs.modules.simpleexample1.simpleModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.simpleexample1">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.simpleexample1" title="Permalink to this headline">¶</a></h2>
+<p>Remember to change the Makefile &amp; python_scripts_files.cmake if you want to use the simpleexamples
+Also need to add the json path in defaultProperties.py</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.simpleexample1 package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.simpleexample1.autoRigsSimpleBuilder">autorigs.modules.simpleexample1.autoRigsSimpleBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.simpleexample1.buildSimpleGuide">autorigs.modules.simpleexample1.buildSimpleGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.simpleexample1.simpleGuideOptions">autorigs.modules.simpleexample1.simpleGuideOptions module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.simpleexample1.simpleGuideParams">autorigs.modules.simpleexample1.simpleGuideParams module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.simpleexample1.simpleModule">autorigs.modules.simpleexample1.simpleModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.simpleexample1">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.quadleg.html" title="previous chapter">autorigs.modules.quadleg package</a></li>
+      <li>Next: <a href="autorigs.modules.spine.html" title="next chapter">autorigs.modules.spine package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.simpleexample1.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.simpleexample1.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

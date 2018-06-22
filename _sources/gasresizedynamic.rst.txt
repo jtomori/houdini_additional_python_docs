@@ -1,7 +1,0 @@
-gasresizedynamic module
-=======================
-
-.. automodule:: gasresizedynamic
-    :members:
-    :undoc-members:
-    :show-inheritance:

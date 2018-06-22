@@ -1,7 +1,0 @@
-hscp module
-===========
-
-.. automodule:: hscp
-    :members:
-    :undoc-members:
-    :show-inheritance:

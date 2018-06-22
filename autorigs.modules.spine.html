@@ -1,0 +1,387 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.spine package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.tail package" href="autorigs.modules.tail.html" />
+    <link rel="prev" title="autorigs.modules.simpleexample1 package" href="autorigs.modules.simpleexample1.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-spine-package">
+<h1>autorigs.modules.spine package<a class="headerlink" href="#autorigs-modules-spine-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.spine.autoRigsSpineBuilder">
+<span id="autorigs-modules-spine-autorigsspinebuilder-module"></span><h2>autorigs.modules.spine.autoRigsSpineBuilder module<a class="headerlink" href="#module-autorigs.modules.spine.autoRigsSpineBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.spine.autoRigsSpineBuilder.</code><code class="descname">AutoRigsSpineBuilder</code><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.DEFAULT_SPINE_PREFIX">
+<code class="descname">DEFAULT_SPINE_PREFIX</code><em class="property"> = 'Spine'</em><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.DEFAULT_SPINE_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'bellyblend': 'belly_blend', 'bellyctrl': 'belly_ctrl', 'bonegroup': 'bones_group', 'chestablend': 'chest_a_blend', 'chestactrl': 'Chest_A_ctrl', 'chestatbelly': 'chest_at_belly', 'chestatchesta': 'chest_at_chest_a', 'chestatcog': 'chest_at_COG', 'chestatlocal': 'chest_at_local', 'chestctrl': 'Chest_ctrl', 'chestfollowcog': 'chest_follow_COG', 'chesthook': 'CHEST_HOOK', 'chestn': 'Chest_N', 'chopnet': 'spine_chopnet', 'cogctrl': 'COG_ctrl', 'coghook': 'COG_HOOK', 'controlgroup': 'control_group', 'hipsatbelly': 'hips_at_belly', 'hipsatchesta': 'hips_at_chest_a', 'hipsctrl': 'Hips_ctrl', 'hipshook': 'HIPS_HOOK', 'hipsn': 'Hips_N', 'localctrl': 'Local_ctrl', 'localhook': 'LOCAL_HOOK', 'nodegroup': 'all_node_group', 'pelvisbone': 'pelvis_bone', 'pelvisctrl': 'pelvis_ctrl', 'pelvisctrlptr': 'pelvis_ctrl_ptr', 'pelvisik': 'Pelvis_IK', 'shouldersctrl': 'shoulders_ctrl', 'spineboneformat': 'Spine_bone_{}', 'spinebonesblend': 'Spine_bones_blend', 'spinecurve': 'spine_curve', 'spinecurve_midpoints': 'delete_midpoints', 'spinecv0': 'spine_cv_0', 'spinecv1': 'spine_cv_1', 'spinecv2': 'spine_cv_2', 'spinecv3': 'spine_cv_3', 'spineik': 'Spine_IK', 'spineroot': 'Spine_root', 'visiblegroup': 'visible_group'}</em><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.buildRig">
+<em class="property">classmethod </em><code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorig_asset</em>, <em>options</em>, <em>spineguide</em>, <em>parent</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.buildRigControls">
+<em class="property">classmethod </em><code class="descname">buildRigControls</code><span class="sig-paren">(</span><em>index</em>, <em>autorig_asset</em>, <em>options</em>, <em>spineguide</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.buildRigControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.getPrefix">
+<em class="property">classmethod </em><code class="descname">getPrefix</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineBuilder.AutoRigsSpineBuilder.getPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.spine.autoRigsSpineInterfaceBuilder">
+<span id="autorigs-modules-spine-autorigsspineinterfacebuilder-module"></span><h2>autorigs.modules.spine.autoRigsSpineInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.spine.autoRigsSpineInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.spine.autoRigsSpineInterfaceBuilder.</code><code class="descname">AutoRigsSpineInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.BONE_DISPLAY_MENU">
+<code class="descname">BONE_DISPLAY_MENU</code><em class="property"> = ['ON', 'OFF']</em><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.BONE_DISPLAY_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.CONTROL_DISPLAY_MENU">
+<code class="descname">CONTROL_DISPLAY_MENU</code><em class="property"> = ['ON', 'Basic', 'OFF']</em><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.CONTROL_DISPLAY_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'belly': ('belly', 'Belly'), 'bonedisplay': ('bonedisplay', 'Bone Display'), 'chest': ('chest', 'Chest'), 'chesta': ('chesta', 'Chest_A_Ctrl'), 'chestfollowcog': ('chestfollowcog', 'Chest Follow COG'), 'cog': ('cog', 'Cog'), 'controldisplay': ('controldisplay', 'Control Display'), 'folder': ('spine', 'Spine'), 'hips': ('hips', 'Hips'), 'local': ('local', 'Local'), 'pelvis': ('pelvis', 'Pelvis')}</em><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.buildRigInterface">
+<em class="property">classmethod </em><code class="descname">buildRigInterface</code><span class="sig-paren">(</span><em>autorig_asset</em>, <em>options</em>, <em>controls</em>, <em>index</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.buildRigInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.buildRigInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildRigInterfaceParms</code><span class="sig-paren">(</span><em>controls</em>, <em>autorig_asset</em>, <em>prefix</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.buildRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.linkRigInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkRigInterfaceParms</code><span class="sig-paren">(</span><em>controls</em>, <em>autorig_asset</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.autoRigsSpineInterfaceBuilder.AutoRigsSpineInterfaceBuilder.linkRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.spine.buildSpineGuide">
+<span id="autorigs-modules-spine-buildspineguide-module"></span><h2>autorigs.modules.spine.buildSpineGuide module<a class="headerlink" href="#module-autorigs.modules.spine.buildSpineGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.spine.buildSpineGuide.</code><code class="descname">SpineFactory</code><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseFactory" title="autorigs.modules.base.buildBaseGuide.BaseFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineFactory.createFromDefault">
+<em class="property">classmethod </em><code class="descname">createFromDefault</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineFactory.createFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineFactory.createFromJsonNew">
+<em class="property">classmethod </em><code class="descname">createFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineFactory.createFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.spine.buildSpineGuide.</code><code class="descname">SpineGuide</code><span class="sig-paren">(</span><em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseGuide" title="autorigs.modules.base.buildBaseGuide.BaseGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.JSON_LABEL">
+<code class="descname">JSON_LABEL</code><em class="property"> = {'basehook': 'basehook', 'cog': 'cog', 'guidecurve': 'guidecurve', 'guidecurve_add': 'guidecurve_add', 'guidecurve_merge': 'guidecurve_merge', 'guidecurve_out': 'guidecurve_out', 'guidecurve_polywire': 'guidecurve_polywire', 'guideroot': 'spineroot', 'pelvis': 'pelvis', 'spine00': 'spine00', 'spine01': 'spine01', 'spine02': 'spine02', 'spinebase': 'spinebase', 'tophook': 'tophook'}</em><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.JSON_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.createFromJson">
+<code class="descname">createFromJson</code><span class="sig-paren">(</span><em>json</em>, <em>paramjson</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.createFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.deleteGuides">
+<code class="descname">deleteGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.existingFromJson">
+<code class="descname">existingFromJson</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.existingFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.getChosenParentNode">
+<code class="descname">getChosenParentNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.getChosenParentNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.buildSpineGuide.SpineGuide.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>parenttext</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.buildSpineGuide.SpineGuide.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.spine.spineGuideOptions">
+<span id="autorigs-modules-spine-spineguideoptions-module"></span><h2>autorigs.modules.spine.spineGuideOptions module<a class="headerlink" href="#module-autorigs.modules.spine.spineGuideOptions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions">
+<em class="property">class </em><code class="descclassname">autorigs.modules.spine.spineGuideOptions.</code><code class="descname">ModuleOptions</code><span class="sig-paren">(</span><em>assetnode</em>, <em>spineguide</em>, <em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.HOOK_BUTTON_HEIGHT">
+<code class="descname">HOOK_BUTTON_HEIGHT</code><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.HOOK_BUTTON_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.HOOK_BUTTON_WIDTH">
+<code class="descname">HOOK_BUTTON_WIDTH</code><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.HOOK_BUTTON_WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.button_size">
+<code class="descname">button_size</code><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.button_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.getAllWidgets">
+<code class="descname">getAllWidgets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.getAllWidgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.getDefaultParentPath">
+<code class="descname">getDefaultParentPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.getDefaultParentPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.getMainLayout">
+<code class="descname">getMainLayout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.getMainLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.getNumBones">
+<code class="descname">getNumBones</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.getNumBones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.getUseBones">
+<code class="descname">getUseBones</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.getUseBones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.isStretched">
+<code class="descname">isStretched</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.isStretched" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.onTextFieldFinishedEditing">
+<code class="descname">onTextFieldFinishedEditing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.onTextFieldFinishedEditing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.setBoneNumber">
+<code class="descname">setBoneNumber</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.setBoneNumber" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.setOptions">
+<code class="descname">setOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.setOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideOptions.ModuleOptions.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>parentmodule</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideOptions.ModuleOptions.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.spine.spineGuideParams">
+<span id="autorigs-modules-spine-spineguideparams-module"></span><h2>autorigs.modules.spine.spineGuideParams module<a class="headerlink" href="#module-autorigs.modules.spine.spineGuideParams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.spine.spineGuideParams.ModuleParams">
+<em class="property">class </em><code class="descclassname">autorigs.modules.spine.spineGuideParams.</code><code class="descname">ModuleParams</code><span class="sig-paren">(</span><em>spineguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideParams.ModuleParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideParams.ModuleParams.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideParams.ModuleParams.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideParams.ModuleParams.getMainLayout">
+<code class="descname">getMainLayout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideParams.ModuleParams.getMainLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideParams.ModuleParams.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideParams.ModuleParams.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.spine.spineGuideParams.ModuleParams.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.spine.spineGuideParams.ModuleParams.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.spine.spineModule">
+<span id="autorigs-modules-spine-spinemodule-module"></span><h2>autorigs.modules.spine.spineModule module<a class="headerlink" href="#module-autorigs.modules.spine.spineModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.spine">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.spine" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.spine package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.spine.autoRigsSpineBuilder">autorigs.modules.spine.autoRigsSpineBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.spine.autoRigsSpineInterfaceBuilder">autorigs.modules.spine.autoRigsSpineInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.spine.buildSpineGuide">autorigs.modules.spine.buildSpineGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.spine.spineGuideOptions">autorigs.modules.spine.spineGuideOptions module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.spine.spineGuideParams">autorigs.modules.spine.spineGuideParams module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.spine.spineModule">autorigs.modules.spine.spineModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.spine">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.simpleexample1.html" title="previous chapter">autorigs.modules.simpleexample1 package</a></li>
+      <li>Next: <a href="autorigs.modules.tail.html" title="next chapter">autorigs.modules.tail package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.spine.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.spine.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,388 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.quadFoot package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.quadHead package" href="autorigs.modules.quadHead.html" />
+    <link rel="prev" title="autorigs.modules.master package" href="autorigs.modules.master.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-quadfoot-package">
+<h1>autorigs.modules.quadFoot package<a class="headerlink" href="#autorigs-modules-quadfoot-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.quadFoot.autoRigsQuadFootBuilder">
+<span id="autorigs-modules-quadfoot-autorigsquadfootbuilder-module"></span><h2>autorigs.modules.quadFoot.autoRigsQuadFootBuilder module<a class="headerlink" href="#module-autorigs.modules.quadFoot.autoRigsQuadFootBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadFoot.autoRigsQuadFootBuilder.</code><code class="descname">AutoRigsQuadFootBuilder</code><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder" title="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'bonedisplay': ('bonedisplay', 'Bone Display'), 'controldisplay': ('controldisplay', 'Control Display'), 'controlsfolder': ('controloptions', 'Controls'), 'digitbonepath': ('digitbonepath', 'Digit Bone Path'), 'digitfkcontrolpath': ('digitfkcontrolpath', 'Digit FK Control Path'), 'digitikhandlepath': ('digitikhandlepath', 'Digit IK Handle Path'), 'digitkinsolverpath': ('digitkinsolverpath', 'Digit Kinematic Solver Path'), 'digittwistctrlpath': ('digitiktwisthandlepath', 'Digit IK Twist Handle Path'), 'displayfkcontrols': ('displayfkcontrols', 'Display FK Controls'), 'extremitybonepath': ('extremitybonepath', 'Extremity Bone Path'), 'extremityfkcontrolpath': ('extremityfkcontrolpath', 'Extremity FK Control Path'), 'extremityikhandlepath': ('extremityikhandlepath', 'Extremity IK Handle Path'), 'extremitykinsolverpath': ('extremitykinsolverpath', 'Extremity Kinematic Solver Path'), 'extremitytwistctrlpath': ('extremitytwistctrlpath', 'Extremity IK Twist Handle Path'), 'firstrootcontrol': ('rootcontrol', 'Root'), 'fkikblend': ('fkikblend', 'FK-&gt;IK Blend'), 'fkikthresh': ('fkikthresh', 'FK Display Threshold'), 'ikcurl': ('ikcurl', 'IK Curl'), 'ikdampen': ('ikdampen', 'Max IK Dampening'), 'ikfan': ('ikfan', 'IK Fan'), 'ikfingercurl': ('ikcurlfinger', 'IK Curl'), 'iksplay': ('iksplay', 'IK Splay'), 'kinsolverpath': ('kinsolverpath', 'Kinematic Solver Path'), 'matchfkik': ('matchfkik', 'Match FK to IK'), 'matchikfk': ('matchikfk', 'Match IK to FK'), 'optionsfolder': ('options', 'Options')}</em><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'bigdigitrootcontrol': 'rootcontrol', 'bonegroup': 'bone_group', 'chopnetname': 'footchopnet', 'controlgroup': 'control_all_group', 'digitbone': 'toebone', 'digitcontrol': 'digitcontrol', 'digitend': 'toe_endaffector', 'digitendctrl': 'toe_endctrl', 'digitroll': 'toeroll', 'digitsolvername': 'toesolver', 'digitspikecontrolgroup': 'control_toe_spikes', 'digittwist': 'toe_twist', 'digittwistctrl': 'toe_twistctrl', 'extremitybone': 'footbone', 'extremitycontrolsgroup': 'control_foot', 'extremityend': 'foot_endaffector', 'extremityendctrl': 'foot_endctrl', 'extremityroll': 'footroll', 'extremityroot': 'footroot', 'extremityrootcurve': 'footrootcurve', 'extremityrot': 'footrot', 'extremitysolvername': 'footsolver', 'extremitytwist': 'foot_twist', 'extremitytwistctrl': 'foot_twistctrl', 'fkcontrol': 'fkcontrol', 'fkcontrolgroup': 'control_fk_group', 'ikcurl': 'ikcurl', 'ikcurladj': 'ikcurl_adjust', 'ikspike': 'ikspike', 'ikspikeall': 'ikspikeall', 'ikspikeall_transform': 'ikspikeall_trans', 'iksplayfan': 'iksplayfan', 'limbfkikblend': 'leg_fkikblendr', 'limbfkparent': 'leg_fkparent', 'limbikparent': 'leg_ikparent', 'limbnorotation': 'leg_norotation', 'limbtipstart': 'leg_tip', 'metadigit': 'metatarsal', 'metasolver': 'metasolver', 'metastart': 'metastart', 'metatwist': 'metatwist', 'nodegroup': 'node_group', 'phalange': 'phalange', 'phalangecontrolgroup': 'control_phalange_group', 'phalangeend': 'phalange_endcontrol', 'phalangesolver': 'phalange_solver', 'phalangeup': 'phalange_up', 'root': 'root', 'rootcarve': 'rootcarve', 'rootcircle': 'rootcircle', 'visiblegroup': 'visible_all_group'}</em><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildDigitChainWithFKControls">
+<em class="property">classmethod </em><code class="descname">buildDigitChainWithFKControls</code><span class="sig-paren">(</span><em>assetnode</em>, <em>prefix</em>, <em>digitguides</em>, <em>subscript</em>, <em>digitidx</em>, <em>avgtoelength</em>, <em>rigscale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildDigitChainWithFKControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildDigitRigSide">
+<em class="property">classmethod </em><code class="descname">buildDigitRigSide</code><span class="sig-paren">(</span><em>prefix</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>ismain</em>, <em>rigscale</em>, <em>side</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildDigitRigSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildParentRelationships">
+<em class="property">classmethod </em><code class="descname">buildParentRelationships</code><span class="sig-paren">(</span><em>builtrigname</em>, <em>limbmodule</em>, <em>mastermodule</em>, <em>ismain</em>, <em>prefix</em>, <em>assetnode</em>, <em>optionsmodel</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildParentRelationships" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildRig">
+<em class="property">classmethod </em><code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>mastermodule</em>, <em>parentinfo</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildRigSide">
+<em class="property">classmethod </em><code class="descname">buildRigSide</code><span class="sig-paren">(</span><em>prefix</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>ismain</em>, <em>side</em>, <em>index</em>, <em>interfacebuilder</em>, <em>parentmodule</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.buildRigSide" title="Permalink to this definition">¶</a></dt>
+<dd><p>ismain specifies whether the side is a main side or
+mirror side. side specifies whether it’s left or right</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.connectToParents">
+<em class="property">classmethod </em><code class="descname">connectToParents</code><span class="sig-paren">(</span><em>builtrig</em>, <em>parentmodule</em>, <em>mastermodule</em>, <em>index</em>, <em>ismain</em>, <em>assetnode</em>, <em>optionsmodel</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.connectToParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.createExtremityDigitsRoot">
+<em class="property">classmethod </em><code class="descname">createExtremityDigitsRoot</code><span class="sig-paren">(</span><em>fullguides</em>, <em>prefix</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.createExtremityDigitsRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.createMetadigits">
+<em class="property">classmethod </em><code class="descname">createMetadigits</code><span class="sig-paren">(</span><em>digitscontrols</em>, <em>metastart</em>, <em>extremityguide</em>, <em>extremityrot</em>, <em>prefix</em>, <em>assetnode</em>, <em>ismain</em>, <em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.createMetadigits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.createSimpleSpike">
+<em class="property">classmethod </em><code class="descname">createSimpleSpike</code><span class="sig-paren">(</span><em>assetnode</em>, <em>nodepos</em>, <em>name</em>, <em>vec</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.createSimpleSpike" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.findChopNodeByType">
+<em class="property">classmethod </em><code class="descname">findChopNodeByType</code><span class="sig-paren">(</span><em>constraintpath</em>, <em>nodeType</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.findChopNodeByType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.hasAllDegreeBigDigitRoot">
+<em class="property">classmethod </em><code class="descname">hasAllDegreeBigDigitRoot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.hasAllDegreeBigDigitRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.makeParentConstraint">
+<em class="property">classmethod </em><code class="descname">makeParentConstraint</code><span class="sig-paren">(</span><em>parent</em>, <em>child</em>, <em>mask</em>, <em>delay=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.makeParentConstraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.postBuildTasks">
+<em class="property">classmethod </em><code class="descname">postBuildTasks</code><span class="sig-paren">(</span><em>built</em>, <em>assetnode</em>, <em>interfacebuilder</em>, <em>optionsmodel</em>, <em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.AutoRigsQuadFootBuilder.postBuildTasks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootBuilder.DelayConstraints">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadFoot.autoRigsQuadFootBuilder.</code><code class="descname">DelayConstraints</code><span class="sig-paren">(</span><em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootBuilder.DelayConstraints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder">
+<span id="autorigs-modules-quadfoot-autorigsquadfootinterfacebuilder-module"></span><h2>autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.</code><code class="descname">AutoRigsQuadFootInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder" title="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.DISPLAY_DIGIT_MENU">
+<code class="descname">DISPLAY_DIGIT_MENU</code><em class="property"> = ['All', 'Basic', 'Detail', 'OFF']</em><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.DISPLAY_DIGIT_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'allbend': ('allbend', 'Bend'), 'allcurl': ('allcurl', 'Curl'), 'allfan': ('allfan', 'Fan'), 'allsplay': ('allsplay', 'Splay'), 'bonedisplay': ('bonedisplay', 'Bone Display'), 'controldigitend': ('toeend', 'Toe End'), 'controldigitfkcontrol': ('toecontrol', 'Toe FK Control'), 'controldigitroll': ('toeroll', 'Toe'), 'controldisplay': ('controldisplay', 'Control Display'), 'controlextremityfkcontrol': ('footfkcontrol', 'Foot FK Control'), 'controlextremityroot': ('footroot', 'Foot Root'), 'controlextremityrot': ('footrot', 'Foot'), 'controlextremitytwist': ('foottwist', 'Foot Twist'), 'controlsfolder': ('controloptions', 'Controls'), 'digitbonepath': ('digitbonepath', 'Digit Bone Path'), 'digitfkcontrolpath': ('digitfkcontrolpath', 'Digit FK Control Path'), 'digitfolderformat': ('toe{}', '{}'), 'digitikhandlepath': ('digitikhandlepath', 'Digit IK Handle Path'), 'digitkinsolverpath': ('digitkinsolverpath', 'Digit Kinematic Solver Path'), 'digittwistctrlpath': ('digitiktwisthandlepath', 'Digit IK Twist Handle Path'), 'displayfkcontrols': ('displayfkcontrols', 'Display FK Controls'), 'extremitybonepath': ('extremitybonepath', 'Extremity Bone Path'), 'extremityfkcontrolpath': ('extremityfkcontrolpath', 'Extremity FK Control Path'), 'extremityfolder': ('footfolder', 'Foot'), 'extremityikhandlepath': ('extremityikhandlepath', 'Extremity IK Handle Path'), 'extremitykinsolverpath': ('extremitykinsolverpath', 'Extremity Kinematic Solver Path'), 'extremitytwistctrlpath': ('extremitytwistctrlpath', 'Extremity IK Twist Handle Path'), 'firstrootcontrol': ('rootcontrol', 'Root'), 'fkikblend': ('fkikblend', 'FK-&gt;IK Blend'), 'fkikthresh': ('fkikthresh', 'FK Display Threshold'), 'icurlformat': ('i{}curl', 'Curl'), 'idphalanxrotformat': ('i{}dphalanxr', 'DPhalanx Rotate'), 'ikcurl': ('ikcurl', 'IK Curl'), 'ikdampen': ('ikdampen', 'Max IK Dampening'), 'ikfan': ('ikfan', 'IK Fan'), 'ikfingercurl': ('ikcurlfinger', 'IK Curl'), 'iksplay': ('iksplay', 'IK Splay'), 'imetarotformat': ('i{}meta', 'Meta Rotate'), 'imphalanxrotformat': ('i{}mphalanxr', 'MPhalanx Rotate'), 'ipphalanxrotformat': ('i{}pphalanxr', 'PPhalanx Rotate'), 'kinsolverpath': ('kinsolverpath', 'Kinematic Solver Path'), 'leftfolder': ('folder', 'Left '), 'matchfkik': ('matchfkik', 'Match FK to IK'), 'matchikfk': ('matchikfk', 'Match IK to FK'), 'optionsfolder': ('options', 'Options'), 'rightfolder': ('folder', 'Right ')}</em><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.L_PREFIX">
+<code class="descname">L_PREFIX</code><em class="property"> = 'leftquadfoot'</em><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.L_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.R_PREFIX">
+<code class="descname">R_PREFIX</code><em class="property"> = 'rightquadfoot'</em><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.R_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildDigitInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildDigitInterfaceParms</code><span class="sig-paren">(</span><em>rigcontrols</em>, <em>assetnode</em>, <em>optionsmodel</em>, <em>foldertemplate</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildDigitInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildFullInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildFullInterfaceParms</code><span class="sig-paren">(</span><em>rigcontrols</em>, <em>assetnode</em>, <em>optionsmodel</em>, <em>foldertemplate</em>, <em>prefix</em>, <em>digitattached=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildFullInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildRigControlsInterfaceParams">
+<em class="property">classmethod </em><code class="descname">buildRigControlsInterfaceParams</code><span class="sig-paren">(</span><em>rigcontrols</em>, <em>prefix</em>, <em>interface_control_keys</em>, <em>foldertemplate</em>, <em>digitattached=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildRigControlsInterfaceParams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildRigInterface">
+<em class="property">classmethod </em><code class="descname">buildRigInterface</code><span class="sig-paren">(</span><em>assetnode</em>, <em>optionsmodel</em>, <em>rigcontrols</em>, <em>side</em>, <em>index</em>, <em>autorig_asset</em>, <em>parentmodule</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildRigInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildRigOptionsInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildRigOptionsInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>options</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.buildRigOptionsInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.createCurlSplayFanInterface">
+<em class="property">classmethod </em><code class="descname">createCurlSplayFanInterface</code><span class="sig-paren">(</span><em>folder</em>, <em>controls</em>, <em>assetnode</em>, <em>optionsmodel</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.createCurlSplayFanInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.findChopNodeByType">
+<em class="property">classmethod </em><code class="descname">findChopNodeByType</code><span class="sig-paren">(</span><em>constraintparent</em>, <em>nodeType</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.findChopNodeByType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.getQuadMatchFKtoIKStr">
+<em class="property">classmethod </em><code class="descname">getQuadMatchFKtoIKStr</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.getQuadMatchFKtoIKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.getQuadMatchIKtoFKStr">
+<em class="property">classmethod </em><code class="descname">getQuadMatchIKtoFKStr</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>prefix</em>, <em>rootoffset</em>, <em>lowerlimbend</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.getQuadMatchIKtoFKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.hasSeparateBigDigitAllSpikeControls">
+<em class="property">classmethod </em><code class="descname">hasSeparateBigDigitAllSpikeControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.hasSeparateBigDigitAllSpikeControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.linkDigitInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkDigitInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>options</em>, <em>prefix</em>, <em>isleft</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.linkDigitInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.linkFullInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkFullInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>options</em>, <em>prefix</em>, <em>digitsattached=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder.AutoRigsQuadFootInterfaceBuilder.linkFullInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadFoot.buildQuadFootGuide">
+<span id="autorigs-modules-quadfoot-buildquadfootguide-module"></span><h2>autorigs.modules.quadFoot.buildQuadFootGuide module<a class="headerlink" href="#module-autorigs.modules.quadFoot.buildQuadFootGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.FootFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadFoot.buildQuadFootGuide.</code><code class="descname">FootFactory</code><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.FootFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory" title="autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.FootFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.FootFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.FootFactory.createFromJsonNew">
+<em class="property">classmethod </em><code class="descname">createFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.FootFactory.createFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadFoot.buildQuadFootGuide.</code><code class="descname">QuadFootGuide</code><span class="sig-paren">(</span><em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide" title="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.JSON_LABELS">
+<code class="descname">JSON_LABELS</code><em class="property"> = {'adddigit_format': 'addtoe_nameformat', 'bigdigit_guides': ['root', 'pphalanx', 'mphalanx', 'dphalanx'], 'bigdigitline': 'meta_bigtoeline', 'digit_guides': ['root', 'pphalanx', 'mphalanx', 'dphalanx'], 'digitguidespacing': 'digitguidespacing', 'digitroll': 'toeend', 'digitroot': 'toesroot', 'digitrootspacing': 'digitrootspacing', 'digits': 'toes', 'digitspacing': 'digitspacing', 'extremityroll': 'footroll', 'extremityroot': 'foot_main_root', 'extremitystart': 'ankle', 'guidecurve': 'guidecurve', 'guidecurve_add': 'guidecurve_add', 'guidecurve_merge': 'guidecurve_merge', 'guidecurve_out': 'guidecurve_out', 'guidecurve_polywire': 'guidecurve_polywire', 'lineadddash': 'lineadddash', 'linedigitend': 'linetoeend', 'linemetaend': 'linemetaend', 'linepointline': 'linepointline', 'lineresample': 'lineresample', 'metaadd': 'metaadd', 'metabigdigitcontrol': 'meta_bigtoecontrol', 'metabox': 'metabox', 'metacopybigdigit': 'metacopy_bigtoe', 'metacopydigits': 'metacopy_toes', 'metacopynobigdigit': 'metacopy_nobigtoe', 'metadeletecolor': 'meta_deletecolor', 'metaends': 'metaends', 'metafirstpoint': 'meta_firstpoint', 'metaguide': 'metaguide', 'metaline': 'metaline', 'metamergebigdigit': 'metamerge_bigtoe', 'metaout': 'metaout', 'metapointcolor': 'metapointcolor', 'metaresample': 'metaresample', 'metaswitch': 'metaswitch', 'metaswitchbigdigit': 'metaswitch_bigtoe', 'mirrormetaguide': 'mirrormetaguide', 'missing_phalanx': 'mphalanx', 'root': 'foot_root', 'rotateroot': 'rotateroot'}</em><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.JSON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.JSON_PARAM_LABELS">
+<code class="descname">JSON_PARAM_LABELS</code><em class="property"> = {'big_digit_guides': ['allguides', 'root', 'pphalanx', 'dphalanx'], 'center': 'feetcenter', 'digit_params': 'toeparams', 'digit_roll': 'toeroll', 'digits': 'toes', 'digits_guides': ['allguides', 'root', 'pphalanx', 'mphalanx', 'dphalanx'], 'digits_root': 'toesroot', 'extremity_roll': 'footroll', 'extremity_start': 'ankle', 'root': 'footroot', 'rotateroot': 'rotateroot'}</em><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.JSON_PARAM_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.parentExtremities">
+<code class="descname">parentExtremities</code><span class="sig-paren">(</span><em>parent</em>, <em>root</em>, <em>rot</em>, <em>ankle</em>, <em>footroll</em>, <em>toeroll</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.parentExtremities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.resetParentDisplay">
+<code class="descname">resetParentDisplay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.resetParentDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.setBigDigitParent">
+<code class="descname">setBigDigitParent</code><span class="sig-paren">(</span><em>bigdigitguides</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.setBigDigitParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateMirror">
+<code class="descname">updateMirror</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateMirror" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToLimbParent">
+<code class="descname">updateToLimbParent</code><span class="sig-paren">(</span><em>node</em>, <em>mirrornode</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToLimbParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToLimbParentSide">
+<code class="descname">updateToLimbParentSide</code><span class="sig-paren">(</span><em>parent</em>, <em>ismain</em>, <em>rootkey</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToLimbParentSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToMasterParent">
+<code class="descname">updateToMasterParent</code><span class="sig-paren">(</span><em>node</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToMasterParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToSpineParent">
+<code class="descname">updateToSpineParent</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateToSpineParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateType">
+<code class="descname">updateType</code><span class="sig-paren">(</span><em>extremitytype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadFoot.buildQuadFootGuide.QuadFootGuide.updateType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadFoot.quadFootModule">
+<span id="autorigs-modules-quadfoot-quadfootmodule-module"></span><h2>autorigs.modules.quadFoot.quadFootModule module<a class="headerlink" href="#module-autorigs.modules.quadFoot.quadFootModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.quadFoot">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.quadFoot" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.quadFoot package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadFoot.autoRigsQuadFootBuilder">autorigs.modules.quadFoot.autoRigsQuadFootBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder">autorigs.modules.quadFoot.autoRigsQuadFootInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadFoot.buildQuadFootGuide">autorigs.modules.quadFoot.buildQuadFootGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadFoot.quadFootModule">autorigs.modules.quadFoot.quadFootModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadFoot">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.master.html" title="previous chapter">autorigs.modules.master package</a></li>
+      <li>Next: <a href="autorigs.modules.quadHead.html" title="next chapter">autorigs.modules.quadHead package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.quadFoot.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.quadFoot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,7 +1,0 @@
-dragdroputils module
-====================
-
-.. automodule:: dragdroputils
-    :members:
-    :undoc-members:
-    :show-inheritance:

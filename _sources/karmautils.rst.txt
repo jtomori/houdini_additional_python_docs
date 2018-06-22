@@ -1,7 +1,0 @@
-karmautils module
-=================
-
-.. automodule:: karmautils
-    :members:
-    :undoc-members:
-    :show-inheritance:

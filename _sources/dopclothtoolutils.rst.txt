@@ -1,7 +1,0 @@
-dopclothtoolutils module
-========================
-
-.. automodule:: dopclothtoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

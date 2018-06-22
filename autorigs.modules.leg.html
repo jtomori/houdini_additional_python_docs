@@ -1,0 +1,241 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.leg package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.limb package" href="autorigs.modules.limb.html" />
+    <link rel="prev" title="autorigs.modules.head package" href="autorigs.modules.head.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-leg-package">
+<h1>autorigs.modules.leg package<a class="headerlink" href="#autorigs-modules-leg-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.leg.autoRigsLegBuilder">
+<span id="autorigs-modules-leg-autorigslegbuilder-module"></span><h2>autorigs.modules.leg.autoRigsLegBuilder module<a class="headerlink" href="#module-autorigs.modules.leg.autoRigsLegBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.leg.autoRigsLegBuilder.</code><code class="descname">AutoRigsLegBuilder</code><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.limb.html#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder" title="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.DEFAULT_LIMB_PREFIX">
+<code class="descname">DEFAULT_LIMB_PREFIX</code><em class="property"> = 'Leg'</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.DEFAULT_LIMB_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.LEFT_LIMB_PREFIX">
+<code class="descname">LEFT_LIMB_PREFIX</code><em class="property"> = 'L_Leg'</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.LEFT_LIMB_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.LIMBTYPE">
+<code class="descname">LIMBTYPE</code><em class="property"> = 'BIPED'</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.LIMBTYPE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.RIGHT_LIMB_PREFIX">
+<code class="descname">RIGHT_LIMB_PREFIX</code><em class="property"> = 'R_Leg'</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.RIGHT_LIMB_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'basicbonegroup': 'basic_bone_group', 'basiccontrolgroup': 'control_basic_group', 'basiccontrolsgroup': 'control_basic_group', 'beforelimbbone': 'hip', 'beforelimbend': 'hip_end', 'beforelimbroot': 'hiproot', 'beforelimbsolver': 'hip_solver', 'chopnet': 'chopnet', 'controlgroup': 'control_all_group', 'ctrl0normal': 'hip_normal', 'ctrl0tangent': 'hip_tangent', 'ctrl1midangle': 'knee_midangle', 'ctrl1normal': 'knee_normal', 'ctrl1tangentlower': 'knee_tangent_lower', 'ctrl1tangentupper': 'knee_tangent_upper', 'ctrl2normal': 'ankle_normal', 'ctrl2tangent': 'ankle_tangent', 'deformbonegroup': 'deform_bone_group', 'detailcontrolsgroup': 'control_detail_group', 'endaffector': 'endaffector', 'endcontrol': 'endcontrol', 'fkcontrolgroup': 'control_fk_group', 'fkcontrolsgroup': 'control_fk_group', 'ikcontrolgroup': 'control_ik_group', 'ikcontrolsgroup': 'control_ik_group', 'lowerbone': 'lowerleg', 'lowercurve': 'lowerleg_curve', 'lowercurvenormalattrib': 'lower_curvenormal', 'lowercurvepointsop': 'lower_curvepointsop', 'lowercurvesop': 'lower_curvesop', 'lowerfkcontrol': 'lowerleg_fkcontrol', 'lowerfkinit': 'lowerleg_fkinit', 'lowerinit': 'lowerleg_init', 'lowermid': 'lowerleg_mid', 'lowernoodlebone': 'lower_noodlebone', 'lowernoodlesolver': 'lower_noodlesolver', 'lowertangenttrans': 'lower_tangent_translate', 'nodegroup': 'node_group', 'noodleboneblend': 'noodlebone_blend', 'noodlebonegroup': 'noodle_bone_group', 'noodlecontrolgroup': 'control_noodle_group', 'noodlectrl0': 'noodle_ctrl_hip', 'noodlectrl1': 'noodle_ctrl_knee', 'noodlectrl2': 'noodle_ctrl_ankle', 'noodlectrllower': 'noodle_ctrl_lowerleg', 'noodlectrlupper': 'noodle_ctrl_upperleg', 'paraendaffector': 'paraendaffector', 'paraendcontrol': 'paraendcontrol', 'paratwistaffector': 'paratwistaffector', 'paratwistcontrol': 'paratwistcontrol', 'parent': 'parent', 'qendaffector': 'qendaffector', 'qendcontrol': 'qendcontrol', 'qtwistaffector': 'qtwistaffector', 'qtwistcontrol': 'qtwistcontrol', 'solver': 'leg_solver', 'twistaffector': 'twistaffector', 'twistcontrol': 'twistcontrol', 'upperbone': 'upperleg', 'uppercurve': 'upperleg_curve', 'uppercurvenormalattrib': 'upper_curvenormal', 'uppercurvepointsop': 'upper_curvepointsop', 'uppercurvesop': 'upper_curvesop', 'upperfkcontrol': 'upperleg_fkcontrol', 'upperinit': 'upperleg_init', 'uppermid': 'upperleg_mid', 'uppernoodlebones': 'upper_noodlebone', 'uppernoodlesolver': 'upper_noodlesolver', 'uppertangenttrans': 'upper_tangent_translate', 'visiblegroup': 'visible_all_group'}</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.buildRig">
+<em class="property">classmethod </em><code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorigs_asset</em>, <em>options</em>, <em>legguide</em>, <em>spineparent</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegBuilder.AutoRigsLegBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.leg.autoRigsLegInterfaceBuilder">
+<span id="autorigs-modules-leg-autorigsleginterfacebuilder-module"></span><h2>autorigs.modules.leg.autoRigsLegInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.leg.autoRigsLegInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.leg.autoRigsLegInterfaceBuilder.</code><code class="descname">AutoRigsLegInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.limb.html#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder" title="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'beforelimbinitlen': ('hipinitlen', 'Hip Initial Length'), 'beforelimbstretch': ('hipstretch', 'Hip Stretch'), 'beforelimbstretchcalc': ('hipcalc', 'Hip Calculations'), 'bonedisplay': ('bonedisplay', 'Bone Display'), 'controlbeforelimb': ('hiproot', 'Hip Root'), 'controldisplay': ('controldisplay', 'Control Display'), 'controlend': ('end', 'End Control'), 'controllimbend': ('hipend', 'Hip End'), 'controllowerlimbfk': ('lowerlegfk', 'Lower Leg FK'), 'controlnoodle0': ('noodlehip', 'Hip Root'), 'controlnoodle0tangent': ('hiptangent', 'Hip Tangent'), 'controlnoodle1': ('noodleelbow', 'Knee'), 'controlnoodle1lowertangent': ('knee_lowertangent', 'Knee Lower Tangent'), 'controlnoodle1tangents': ('knee_tangents', 'Knee Tangents'), 'controlnoodle1uppertangent': ('knee_uppertangent', 'Knee Upper Tangent'), 'controlnoodle2': ('noodleankle', 'Ankle'), 'controlnoodle2tangent': ('ankletangent', 'Ankle Tangent'), 'controlnoodlelower': ('noodlelower', 'Lower Leg'), 'controlnoodleupper': ('noodleupper', 'Upper Leg'), 'controlsfolder': ('controls', 'Controls'), 'controltwist': ('twist', 'Twist Control'), 'controlupperlimbfk': ('upperlegfk', 'Upper Leg FK'), 'displayfkcontrols': ('displayfkcontrols', 'Display FK Controls'), 'fkikblend': ('fkikblend', 'FK-&gt;IK Blend'), 'fkikthresh': ('fkikthresh', 'FK Display Threshold'), 'ikdampen': ('ikdampen', 'Max IK Dampening'), 'ikhandlepath': ('ikhandlepath', 'IK Handle Path'), 'iktwisthandlepath': ('iktwisthandlepath', 'IK Twist Handle Path'), 'kinsolverpath': ('kinsolverpath', 'Kinematic Solver Path'), 'lowerbonepath': ('lowerbonepath', 'Lower Bone Path'), 'lowerfkcontrolpath': ('lowerfkcontrolpath', 'Lower FK Control Path'), 'lowerfkstretch': ('lowerfkstretch', 'Lowerleg FK Stretch'), 'lowerikstretch': ('lowerikstretch', 'Lowerleg IK Stretch'), 'lowerinitlen': ('lowerinitlen', 'Lower Initial Length'), 'lowermanualstretchlen': ('lowermanualstretchlen', 'Lower Manual Stretch'), 'lowerstretchcalc': ('lowerstretchcalc', 'Lower Stretch Calculations'), 'matchfkik': ('matchfkik', 'Match FK to IK'), 'matchikfk': ('matchikfk', 'Match IK to FK'), 'maxstretch': ('maxstretch', 'Leg Max Stretch'), 'optionsfolder': ('options', 'Options'), 'stretch': ('stretch', 'Stretch'), 'totalautostretch': ('totalautostretch', 'Total Auto Stretch'), 'totalmanstretchlen': ('totalmanstretchlen', 'Total Manual Stretch Len'), 'upperbonepath': ('upperbonepath', 'Upper Bone Path'), 'upperfkcontrolpath': ('upperfkcontrolpath', 'Upper FK Control Path'), 'upperfkstretch': ('upperfkstretch', 'Upperleg FK Stretch'), 'upperikstretch': ('upperikstretch', 'Upperleg IK Stretch'), 'upperinitlen': ('upperinitlen', 'Upper Initial Length'), 'uppermanualstretchlen': ('uppermanualstretchlen', 'Upper Manual Stretch'), 'upperstretchcalc': ('upperstretchcalc', 'Upper Stretch Calculations')}</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.LIMBTYPE">
+<code class="descname">LIMBTYPE</code><em class="property"> = 'BIPED'</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.LIMBTYPE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.L_INTERFACE_NAME_LABEL">
+<code class="descname">L_INTERFACE_NAME_LABEL</code><em class="property"> = ('leftleg', 'Left ')</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.L_INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.L_PREFIX_NAME">
+<code class="descname">L_PREFIX_NAME</code><em class="property"> = 'leftleg'</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.L_PREFIX_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.R_INTERFACE_NAME_LABEL">
+<code class="descname">R_INTERFACE_NAME_LABEL</code><em class="property"> = ('rightleg', 'Right ')</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.R_INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.R_PREFIX_NAME">
+<code class="descname">R_PREFIX_NAME</code><em class="property"> = 'rightleg'</em><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.R_PREFIX_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.setMidTangentExpressions">
+<em class="property">classmethod </em><code class="descname">setMidTangentExpressions</code><span class="sig-paren">(</span><em>lowertangenttrans</em>, <em>uppertangenttrans</em>, <em>lower</em>, <em>upper</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.leg.autoRigsLegInterfaceBuilder.AutoRigsLegInterfaceBuilder.setMidTangentExpressions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.leg.buildLegGuide">
+<span id="autorigs-modules-leg-buildlegguide-module"></span><h2>autorigs.modules.leg.buildLegGuide module<a class="headerlink" href="#module-autorigs.modules.leg.buildLegGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.leg.buildLegGuide.LegFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.leg.buildLegGuide.</code><code class="descname">LegFactory</code><a class="headerlink" href="#autorigs.modules.leg.buildLegGuide.LegFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.limb.html#autorigs.modules.limb.buildLimbGuide.LimbFactory" title="autorigs.modules.limb.buildLimbGuide.LimbFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.buildLimbGuide.LimbFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.leg.buildLegGuide.LegFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.leg.buildLegGuide.LegFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.leg.buildLegGuide.LegFactory.createFromJsonNew">
+<em class="property">classmethod </em><code class="descname">createFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.leg.buildLegGuide.LegFactory.createFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.leg.buildLegGuide.LegGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.leg.buildLegGuide.</code><code class="descname">LegGuide</code><span class="sig-paren">(</span><em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.leg.buildLegGuide.LegGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.limb.html#autorigs.modules.limb.buildLimbGuide.LimbGuide" title="autorigs.modules.limb.buildLimbGuide.LimbGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.buildLimbGuide.LimbGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.leg.buildLegGuide.LegGuide.JSON_LABELS">
+<code class="descname">JSON_LABELS</code><em class="property"> = {'beforelimb': 'pelvis', 'guidecurve': 'guidecurve', 'guidecurve_add': 'guidecurve_add', 'guidecurve_merge': 'guidecurve_merge', 'guidecurve_out': 'guidecurve_out', 'guidecurve_polywire': 'guidecurve_polywire', 'limbend': 'ankle', 'limbmiddle': 'knee', 'limbstart': 'hip', 'limbtwist': 'knee_twist', 'limbtwisttrans': 'knee_twist_transform', 'master': 'master'}</em><a class="headerlink" href="#autorigs.modules.leg.buildLegGuide.LegGuide.JSON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.leg.buildLegGuide.LegGuide.JSON_PARAM_LABELS">
+<code class="descname">JSON_PARAM_LABELS</code><em class="property"> = {'beforelimb': 'pelvis', 'limbend': 'ankle', 'limbmiddle': 'knee', 'limbstart': 'hip', 'master': 'master'}</em><a class="headerlink" href="#autorigs.modules.leg.buildLegGuide.LegGuide.JSON_PARAM_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.leg.legModule">
+<span id="autorigs-modules-leg-legmodule-module"></span><h2>autorigs.modules.leg.legModule module<a class="headerlink" href="#module-autorigs.modules.leg.legModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.leg">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.leg" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.leg package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.leg.autoRigsLegBuilder">autorigs.modules.leg.autoRigsLegBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.leg.autoRigsLegInterfaceBuilder">autorigs.modules.leg.autoRigsLegInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.leg.buildLegGuide">autorigs.modules.leg.buildLegGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.leg.legModule">autorigs.modules.leg.legModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.leg">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.head.html" title="previous chapter">autorigs.modules.head package</a></li>
+      <li>Next: <a href="autorigs.modules.limb.html" title="next chapter">autorigs.modules.limb package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.leg.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.leg.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

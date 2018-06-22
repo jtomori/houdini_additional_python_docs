@@ -1,0 +1,930 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.base package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.basicFace package" href="autorigs.modules.basicFace.html" />
+    <link rel="prev" title="autorigs.modules.arm package" href="autorigs.modules.arm.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-base-package">
+<h1>autorigs.modules.base package<a class="headerlink" href="#autorigs-modules-base-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.base.autoRigsBaseBuilder">
+<span id="autorigs-modules-base-autorigsbasebuilder-module"></span><h2>autorigs.modules.base.autoRigsBaseBuilder module<a class="headerlink" href="#module-autorigs.modules.base.autoRigsBaseBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.autoRigsBaseBuilder.</code><code class="descname">AutoRigsBaseBuilder</code><span class="sig-paren">(</span><em>index</em>, <em>modulename</em>, <em>autorigs_asset</em>, <em>buildguide</em>, <em>model</em>, <em>parentinfo</em>, <em>prefix=''</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.BONEGROUP">
+<code class="descname">BONEGROUP</code><em class="property"> = 'bone_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.BONEGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.CONTROLGROUP">
+<code class="descname">CONTROLGROUP</code><em class="property"> = 'control_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.CONTROLGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.INTERFACE">
+<code class="descname">INTERFACE</code><em class="property"> = {}</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.INTERFACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.NODEGROUP">
+<code class="descname">NODEGROUP</code><em class="property"> = 'node_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.NODEGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.NODES">
+<code class="descname">NODES</code><em class="property"> = {}</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.NODES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.VISIBLENODEGROUP">
+<code class="descname">VISIBLENODEGROUP</code><em class="property"> = 'visible_node_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.VISIBLENODEGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.buildRig">
+<code class="descname">buildRig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the rig and creates the autorig interface for the module.
+Override this function if the function orders need to be different.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.buildRigControls">
+<code class="descname">buildRigControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.buildRigControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the bones and controls based on the guide objects.
+prefix: the prefix to use for all the nodes created
+assetnode: the autorig assset node in which to create the rig
+model: the module’s model for build options
+buildguide: the module’s buildguides 
+parent: a function takes a node as the argument and parent the node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.captureGeometry">
+<code class="descname">captureGeometry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.captureGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Captures the geometry</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createAllNodeGroups">
+<code class="descname">createAllNodeGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createAllNodeGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createBone">
+<code class="descname">createBone</code><span class="sig-paren">(</span><em>key</em>, <em>name=''</em>, <em>deform=True</em>, <em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createBone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a bone
+deform: whether the bone will be captured or not</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createControl">
+<code class="descname">createControl</code><span class="sig-paren">(</span><em>key</em>, <em>name=''</em>, <em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a control null</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createFolderTemplate">
+<code class="descname">createFolderTemplate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createFolderTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the folder parm template for the module.
+model: the module’s model for build options</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createGroup">
+<code class="descname">createGroup</code><span class="sig-paren">(</span><em>group_prefix</em>, <em>nodes_dict=None</em>, <em>interface_dict=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new builder group.
+prefix: the prefix for the builder group. The prefix of the module is included by default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createGroups">
+<code class="descname">createGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createNodeGroups">
+<code class="descname">createNodeGroups</code><span class="sig-paren">(</span><em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createNodeGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createParm">
+<code class="descname">createParm</code><span class="sig-paren">(</span><em>template_type</em>, <em>key</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createRoot">
+<code class="descname">createRoot</code><span class="sig-paren">(</span><em>key</em>, <em>name=''</em>, <em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.createRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a root null</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getBones">
+<code class="descname">getBones</code><span class="sig-paren">(</span><em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getBones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getControls">
+<code class="descname">getControls</code><span class="sig-paren">(</span><em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getDeformBones">
+<code class="descname">getDeformBones</code><span class="sig-paren">(</span><em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getDeformBones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getGroup">
+<code class="descname">getGroup</code><span class="sig-paren">(</span><em>grp_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getGroups">
+<code class="descname">getGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getMainGroup">
+<code class="descname">getMainGroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getMainGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNode">
+<code class="descname">getNode</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNodeGroups">
+<code class="descname">getNodeGroups</code><span class="sig-paren">(</span><em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNodeGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNodeName">
+<code class="descname">getNodeName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNodeName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNodes">
+<code class="descname">getNodes</code><span class="sig-paren">(</span><em>grp_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getParent">
+<code class="descname">getParent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parent hook object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getPrefix">
+<code class="descname">getPrefix</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.getPrefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the node-naming prefix for this module</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.linkParm">
+<code class="descname">linkParm</code><span class="sig-paren">(</span><em>node</em>, <em>parm_info</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.linkParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Links the parameter of a node based on given parm_info
+node: the node to set up the parm expression
+parm_info: (tuple) (parm_id, parm_label, link_parm_id)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.linkRigInterfaceParms">
+<code class="descname">linkRigInterfaceParms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.linkRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.onCaptureCompleted">
+<code class="descname">onCaptureCompleted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.onCaptureCompleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes to run after geometry is captured</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.setParent">
+<code class="descname">setParent</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder.setParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.autoRigsBaseBuilder.</code><code class="descname">BuilderGroup</code><span class="sig-paren">(</span><em>assetnode</em>, <em>module_prefix</em>, <em>group_prefix</em>, <em>nodes_dict</em>, <em>interface_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.BONEGROUP">
+<code class="descname">BONEGROUP</code><em class="property"> = 'bone_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.BONEGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.CONTROLGROUP">
+<code class="descname">CONTROLGROUP</code><em class="property"> = 'control_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.CONTROLGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.DEFORMBONEGROUP">
+<code class="descname">DEFORMBONEGROUP</code><em class="property"> = 'deform_bone_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.DEFORMBONEGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.INTERFACE">
+<code class="descname">INTERFACE</code><em class="property"> = {}</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.INTERFACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.NODEGROUP">
+<code class="descname">NODEGROUP</code><em class="property"> = 'node_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.NODEGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.NODES">
+<code class="descname">NODES</code><em class="property"> = {}</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.NODES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.VISIBLENODEGROUP">
+<code class="descname">VISIBLENODEGROUP</code><em class="property"> = 'visible_node_group'</em><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.VISIBLENODEGROUP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createBone">
+<code class="descname">createBone</code><span class="sig-paren">(</span><em>key</em>, <em>name=''</em>, <em>deform=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createBone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a bone
+deform: whether the bone will be used to capture or not</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createControl">
+<code class="descname">createControl</code><span class="sig-paren">(</span><em>key</em>, <em>name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a control null</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createGeometry">
+<code class="descname">createGeometry</code><span class="sig-paren">(</span><em>key</em>, <em>name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createGeometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createNodeGroups">
+<code class="descname">createNodeGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createNodeGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the data stored to nodegroups</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createParm">
+<code class="descname">createParm</code><span class="sig-paren">(</span><em>template_type</em>, <em>key</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates and adds a parmTemplate of template_type as part of the class
+template_type: one of the hou.ParmTemplate type,
+name: the key and name for the parm (without prefix),
+label: the label for the parm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createRoot">
+<code class="descname">createRoot</code><span class="sig-paren">(</span><em>key</em>, <em>name=''</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.createRoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a root null</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getBones">
+<code class="descname">getBones</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getBones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getControls">
+<code class="descname">getControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getDeformBones">
+<code class="descname">getDeformBones</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getDeformBones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getLabelName">
+<code class="descname">getLabelName</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getLabelName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNode">
+<code class="descname">getNode</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodeGroup">
+<code class="descname">getNodeGroup</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodeGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the converted node group.
+Make sure node groups have been converted first.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodeGroups">
+<code class="descname">getNodeGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodeGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodeName">
+<code class="descname">getNodeName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodeName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodes">
+<code class="descname">getNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getParmName">
+<code class="descname">getParmName</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getParmName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getPrefix">
+<code class="descname">getPrefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.getPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.setConvertFlag">
+<code class="descname">setConvertFlag</code><span class="sig-paren">(</span><em>flag</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.setConvertFlag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.setGroups">
+<code class="descname">setGroups</code><span class="sig-paren">(</span><em>groups</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.setGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.setPrefix">
+<code class="descname">setPrefix</code><span class="sig-paren">(</span><em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseBuilder.BuilderGroup.setPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.base.autoRigsBaseWidget">
+<span id="autorigs-modules-base-autorigsbasewidget-module"></span><h2>autorigs.modules.base.autoRigsBaseWidget module<a class="headerlink" href="#module-autorigs.modules.base.autoRigsBaseWidget" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.autoRigsBaseWidget.</code><code class="descname">AutoRigsBaseWidget</code><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.markSaved">
+<code class="descname">markSaved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.markSaved" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.setLayout">
+<code class="descname">setLayout</code><span class="sig-paren">(</span><em>layout</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.setLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.autoRigsBaseWidget.</code><code class="descname">BaseOptionsWidget</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget" title="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget</span></code></a></p>
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget.markSaved">
+<code class="descname">markSaved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget.markSaved" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.autoRigsBaseWidget.</code><code class="descname">BaseParamWidget</code><span class="sig-paren">(</span><em>buildguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget" title="autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseWidget.AutoRigsBaseWidget</span></code></a></p>
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.createParamLayout">
+<code class="descname">createParamLayout</code><span class="sig-paren">(</span><em>name</em>, <em>label</em>, <em>params</em>, <em>node=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.createParamLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.markSaved">
+<code class="descname">markSaved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.markSaved" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.base.baseGuideModel">
+<span id="autorigs-modules-base-baseguidemodel-module"></span><h2>autorigs.modules.base.baseGuideModel module<a class="headerlink" href="#module-autorigs.modules.base.baseGuideModel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.base.baseGuideModel.BaseGuideModel">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.baseGuideModel.</code><code class="descname">BaseGuideModel</code><a class="headerlink" href="#autorigs.modules.base.baseGuideModel.BaseGuideModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.base.baseGuideModel.BaseGuideModel.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.baseGuideModel.BaseGuideModel.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.baseGuideModel.BaseGuideModel.markSaved">
+<code class="descname">markSaved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.baseGuideModel.BaseGuideModel.markSaved" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.modules.base.baseGuideModel.model_setter">
+<code class="descclassname">autorigs.modules.base.baseGuideModel.</code><code class="descname">model_setter</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.baseGuideModel.model_setter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.base.buildBaseGuide">
+<span id="autorigs-modules-base-buildbaseguide-module"></span><h2>autorigs.modules.base.buildBaseGuide module<a class="headerlink" href="#module-autorigs.modules.base.buildBaseGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.buildBaseGuide.</code><code class="descname">BaseFactory</code><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseFactory.createFromDefault">
+<em class="property">classmethod </em><code class="descname">createFromDefault</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseFactory.createFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseFactory.createFromJsonNew">
+<em class="property">classmethod </em><code class="descname">createFromJsonNew</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseFactory.createFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.buildBaseGuide.</code><code class="descname">BaseGuide</code><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.deleteGuides">
+<code class="descname">deleteGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.displayGuideData">
+<code class="descname">displayGuideData</code><span class="sig-paren">(</span><em>guidedata</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.displayGuideData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.displayGuides">
+<code class="descname">displayGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.displayGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.getGuideData">
+<code class="descname">getGuideData</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.getGuideData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.lockGuide">
+<code class="descname">lockGuide</code><span class="sig-paren">(</span><em>guide</em>, <em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.lockGuide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.lockGuideData">
+<code class="descname">lockGuideData</code><span class="sig-paren">(</span><em>guidedata</em>, <em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.lockGuideData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.lockGuides">
+<code class="descname">lockGuides</code><span class="sig-paren">(</span><em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.lockGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.setGuideDisplay">
+<code class="descname">setGuideDisplay</code><span class="sig-paren">(</span><em>guidename</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.setGuideDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.buildBaseGuide.BaseGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.buildBaseGuide.BaseGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.base.moduleTabsWidget">
+<span id="autorigs-modules-base-moduletabswidget-module"></span><h2>autorigs.modules.base.moduleTabsWidget module<a class="headerlink" href="#module-autorigs.modules.base.moduleTabsWidget" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.moduleTabsWidget.</code><code class="descname">ModuleTabsWidget</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget.createTabs">
+<code class="descname">createTabs</code><span class="sig-paren">(</span><em>prefix</em>, <em>hasproxy</em>, <em>optionswidget</em>, <em>paramswidget</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget.createTabs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget.rename">
+<code class="descname">rename</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.moduleTabsWidget.ModuleTabsWidget.rename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.base.rootModule">
+<span id="autorigs-modules-base-rootmodule-module"></span><h2>autorigs.modules.base.rootModule module<a class="headerlink" href="#module-autorigs.modules.base.rootModule" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.base.rootModule.Module">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.rootModule.</code><code class="descname">Module</code><a class="headerlink" href="#autorigs.modules.base.rootModule.Module" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="autorigs.modules.base.rootModule.Module.MODULE_TYPE">
+<code class="descname">MODULE_TYPE</code><em class="property"> = 'root'</em><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.MODULE_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.buildAfterImport">
+<code class="descname">buildAfterImport</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.buildAfterImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.buildFromDefault">
+<code class="descname">buildFromDefault</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.buildFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.buildFromJsonExisting">
+<code class="descname">buildFromJsonExisting</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.buildFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.buildFromJsonNew">
+<code class="descname">buildFromJsonNew</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.buildFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.buildRig">
+<code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.createListWidget">
+<code class="descname">createListWidget</code><span class="sig-paren">(</span><em>json</em>, <em>hasbypass=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.createListWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.deleteGuides">
+<code class="descname">deleteGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.destroy">
+<code class="descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getAutoRigsAsset">
+<code class="descname">getAutoRigsAsset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getAutoRigsAsset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getBuiltObject">
+<code class="descname">getBuiltObject</code><span class="sig-paren">(</span><em>builtkey</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getBuiltObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getBuiltParentHook">
+<code class="descname">getBuiltParentHook</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getBuiltParentHook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getBypass">
+<code class="descname">getBypass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getBypass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getController">
+<code class="descname">getController</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getController" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidekey</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getGuideTabs">
+<code class="descname">getGuideTabs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getGuideTabs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getListWidget">
+<code class="descname">getListWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getListWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getMainHook">
+<code class="descname">getMainHook</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getMainHook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getModel">
+<code class="descname">getModel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getModel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getModuleName">
+<code class="descname">getModuleName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getModuleName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getModuleType">
+<code class="descname">getModuleType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getModuleType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getOptions">
+<code class="descname">getOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getParams">
+<code class="descname">getParams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getParams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.getTabsWidget">
+<code class="descname">getTabsWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.getTabsWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.postRigBuild">
+<code class="descname">postRigBuild</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.postRigBuild" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is called after all the modules have bene built and hooked up</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.rename">
+<code class="descname">rename</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.rename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.setBypass">
+<code class="descname">setBypass</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.setBypass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.setDisplay">
+<code class="descname">setDisplay</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.setDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.setLock">
+<code class="descname">setLock</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.setLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.setModuleName">
+<code class="descname">setModuleName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.setModuleName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.unlink">
+<code class="descname">unlink</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.unlink" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.Module.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>modulesdict</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.Module.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab">
+<em class="property">class </em><code class="descclassname">autorigs.modules.base.rootModule.</code><code class="descname">ModuleGuideTab</code><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.buildFromJson">
+<code class="descname">buildFromJson</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.buildFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.getOptions">
+<code class="descname">getOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.getOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.getParams">
+<code class="descname">getParams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.getParams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.getTabsWidget">
+<code class="descname">getTabsWidget</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.getTabsWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.rename">
+<code class="descname">rename</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.rename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.setLock">
+<code class="descname">setLock</code><span class="sig-paren">(</span><em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.setLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.base.rootModule.ModuleGuideTab.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.base.rootModule.ModuleGuideTab.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.base">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.base" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.base package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.base.autoRigsBaseBuilder">autorigs.modules.base.autoRigsBaseBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.base.autoRigsBaseWidget">autorigs.modules.base.autoRigsBaseWidget module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.base.baseGuideModel">autorigs.modules.base.baseGuideModel module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.base.buildBaseGuide">autorigs.modules.base.buildBaseGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.base.moduleTabsWidget">autorigs.modules.base.moduleTabsWidget module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.base.rootModule">autorigs.modules.base.rootModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.base">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.arm.html" title="previous chapter">autorigs.modules.arm package</a></li>
+      <li>Next: <a href="autorigs.modules.basicFace.html" title="next chapter">autorigs.modules.basicFace package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.base.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.base.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

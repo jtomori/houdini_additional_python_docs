@@ -1,7 +1,0 @@
-drivertoolutils module
-======================
-
-.. automodule:: drivertoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

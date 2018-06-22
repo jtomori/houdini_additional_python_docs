@@ -1,0 +1,317 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nodegraphstates module &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nodegraphtitle module" href="nodegraphtitle.html" />
+    <link rel="prev" title="nodegraphsnap module" href="nodegraphsnap.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nodegraphstates">
+<span id="nodegraphstates-module"></span><h1>nodegraphstates module<a class="headerlink" href="#module-nodegraphstates" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nodegraphstates.AlignStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">AlignStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.AlignStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.VolatileStateHandler" title="nodegraphstates.VolatileStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.VolatileStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.AlignStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.AlignStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.BoxPickHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">BoxPickHandler</code><span class="sig-paren">(</span><em>start_uievent</em>, <em>set_cursor=False</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxPickHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nodegraphbase.html#nodegraphbase.EventHandler" title="nodegraphbase.EventHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.EventHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.BoxPickHandler.getItemsInBox">
+<code class="descname">getItemsInBox</code><span class="sig-paren">(</span><em>items</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxPickHandler.getItemsInBox" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.BoxPickHandler.handleBoxPickComplete">
+<code class="descname">handleBoxPickComplete</code><span class="sig-paren">(</span><em>items</em>, <em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxPickHandler.handleBoxPickComplete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.BoxPickHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxPickHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.BoxPickHandler.setSelectCursor">
+<code class="descname">setSelectCursor</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxPickHandler.setSelectCursor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.BoxSelectStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">BoxSelectStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxSelectStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.VolatileStateHandler" title="nodegraphstates.VolatileStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.VolatileStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.BoxSelectStateHandler.getPrompt">
+<code class="descname">getPrompt</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxSelectStateHandler.getPrompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.BoxSelectStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxSelectStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.BoxSelectStateHandler.setSelectCursor">
+<code class="descname">setSelectCursor</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.BoxSelectStateHandler.setSelectCursor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.CutWiresStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">CutWiresStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.CutWiresStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.VolatileStateHandler" title="nodegraphstates.VolatileStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.VolatileStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.CutWiresStateHandler.doCut">
+<code class="descname">doCut</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.CutWiresStateHandler.doCut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.CutWiresStateHandler.getPrompt">
+<code class="descname">getPrompt</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.CutWiresStateHandler.getPrompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.CutWiresStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.CutWiresStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.FlagStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">FlagStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em>, <em>flagindex</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.FlagStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.NodeSelectStateHandler" title="nodegraphstates.NodeSelectStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.NodeSelectStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.FlagStateHandler.getPrompt">
+<code class="descname">getPrompt</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.FlagStateHandler.getPrompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.FlagStateHandler.handlePick">
+<code class="descname">handlePick</code><span class="sig-paren">(</span><em>nodes</em>, <em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.FlagStateHandler.handlePick" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.FlagStateHandler.handleStateCompleted">
+<code class="descname">handleStateCompleted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.FlagStateHandler.handleStateCompleted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.NodeSelectStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">NodeSelectStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.NodeSelectStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.VolatileStateHandler" title="nodegraphstates.VolatileStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.VolatileStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.NodeSelectStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.NodeSelectStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.NodeSelectStateHandler.handlePick">
+<code class="descname">handlePick</code><span class="sig-paren">(</span><em>nodes</em>, <em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.NodeSelectStateHandler.handlePick" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.ScrollStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">ScrollStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em>, <em>wrapped_handler</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.ScrollStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.VolatileStateHandler" title="nodegraphstates.VolatileStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.VolatileStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.ScrollStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.ScrollStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.ScrollStateHandler.sendEventToSubHandler">
+<code class="descname">sendEventToSubHandler</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.ScrollStateHandler.sendEventToSubHandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.ViewStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">ViewStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.ViewStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.VolatileStateHandler" title="nodegraphstates.VolatileStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.VolatileStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.ViewStateHandler.getPrompt">
+<code class="descname">getPrompt</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.ViewStateHandler.getPrompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.ViewStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.ViewStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.VisualizeStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">VisualizeStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VisualizeStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.NodeSelectStateHandler" title="nodegraphstates.NodeSelectStateHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.NodeSelectStateHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.VisualizeStateHandler.getPrompt">
+<code class="descname">getPrompt</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VisualizeStateHandler.getPrompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.VisualizeStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VisualizeStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.VisualizeStateHandler.handlePick">
+<code class="descname">handlePick</code><span class="sig-paren">(</span><em>nodes</em>, <em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VisualizeStateHandler.handlePick" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.VisualizeStateHandler.handleStateCompleted">
+<code class="descname">handleStateCompleted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VisualizeStateHandler.handleStateCompleted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.VolatileNodeBoxPickHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">VolatileNodeBoxPickHandler</code><span class="sig-paren">(</span><em>start_uievent</em>, <em>owner</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileNodeBoxPickHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphstates.BoxPickHandler" title="nodegraphstates.BoxPickHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphstates.BoxPickHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.VolatileNodeBoxPickHandler.getItemsInBox">
+<code class="descname">getItemsInBox</code><span class="sig-paren">(</span><em>items</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileNodeBoxPickHandler.getItemsInBox" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.VolatileNodeBoxPickHandler.handleBoxPickComplete">
+<code class="descname">handleBoxPickComplete</code><span class="sig-paren">(</span><em>items</em>, <em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileNodeBoxPickHandler.handleBoxPickComplete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphstates.VolatileStateHandler">
+<em class="property">class </em><code class="descclassname">nodegraphstates.</code><code class="descname">VolatileStateHandler</code><span class="sig-paren">(</span><em>start_uievent</em>, <em>wrapped_handler=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileStateHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="nodegraphbase.html#nodegraphbase.EventHandler" title="nodegraphbase.EventHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.EventHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphstates.VolatileStateHandler.combineHandlerUpdates">
+<code class="descname">combineHandlerUpdates</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileStateHandler.combineHandlerUpdates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.VolatileStateHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileStateHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.VolatileStateHandler.handleStateCompleted">
+<code class="descname">handleStateCompleted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileStateHandler.handleStateCompleted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphstates.VolatileStateHandler.sendEventToSubHandler">
+<code class="descname">sendEventToSubHandler</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.VolatileStateHandler.sendEventToSubHandler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="nodegraphstates.isScrollStateEvent">
+<code class="descclassname">nodegraphstates.</code><code class="descname">isScrollStateEvent</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphstates.isScrollStateEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="nodegraphsnap.html" title="previous chapter">nodegraphsnap module</a></li>
+      <li>Next: <a href="nodegraphtitle.html" title="next chapter">nodegraphtitle module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodegraphstates.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/nodegraphstates.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

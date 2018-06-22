@@ -1,7 +1,0 @@
-toolutils module
-================
-
-.. automodule:: toolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

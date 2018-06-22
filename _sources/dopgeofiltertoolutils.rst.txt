@@ -1,7 +1,0 @@
-dopgeofiltertoolutils module
-============================
-
-.. automodule:: dopgeofiltertoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

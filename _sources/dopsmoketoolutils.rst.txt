@@ -1,7 +1,0 @@
-dopsmoketoolutils module
-========================
-
-.. automodule:: dopsmoketoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

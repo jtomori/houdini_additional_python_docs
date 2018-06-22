@@ -1,7 +1,0 @@
-doppyrotoolutils module
-=======================
-
-.. automodule:: doppyrotoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

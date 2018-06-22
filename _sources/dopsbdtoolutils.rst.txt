@@ -1,7 +1,0 @@
-dopsbdtoolutils module
-======================
-
-.. automodule:: dopsbdtoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

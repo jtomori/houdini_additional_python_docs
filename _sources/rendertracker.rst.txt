@@ -1,7 +1,0 @@
-rendertracker module
-====================
-
-.. automodule:: rendertracker
-    :members:
-    :undoc-members:
-    :show-inheritance:

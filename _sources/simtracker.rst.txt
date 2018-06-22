@@ -1,7 +1,0 @@
-simtracker module
-=================
-
-.. automodule:: simtracker
-    :members:
-    :undoc-members:
-    :show-inheritance:

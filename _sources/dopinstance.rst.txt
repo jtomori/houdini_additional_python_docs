@@ -1,7 +1,0 @@
-dopinstance module
-==================
-
-.. automodule:: dopinstance
-    :members:
-    :undoc-members:
-    :show-inheritance:

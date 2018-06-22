@@ -1,0 +1,379 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.quadHead package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.quadleg package" href="autorigs.modules.quadleg.html" />
+    <link rel="prev" title="autorigs.modules.quadFoot package" href="autorigs.modules.quadFoot.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-quadhead-package">
+<h1>autorigs.modules.quadHead package<a class="headerlink" href="#autorigs-modules-quadhead-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.quadHead.autoRigsQuadHeadBuilder">
+<span id="autorigs-modules-quadhead-autorigsquadheadbuilder-module"></span><h2>autorigs.modules.quadHead.autoRigsQuadHeadBuilder module<a class="headerlink" href="#module-autorigs.modules.quadHead.autoRigsQuadHeadBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadHead.autoRigsQuadHeadBuilder.</code><code class="descname">AutoRigsQuadHeadBuilder</code><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.DEFAULT_HEAD_PREFIX">
+<code class="descname">DEFAULT_HEAD_PREFIX</code><em class="property"> = 'QuadHead'</em><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.DEFAULT_HEAD_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'bonegroup': 'bone_group', 'controlgroup': 'control_group', 'headactrl': 'headactrl', 'headactrlptr': 'headactrlptr', 'headatchest': 'head_at_chest', 'headatcog': 'head_at_COG', 'headblend': 'head_blend', 'headbone': 'Head_bone', 'headboneblend': 'headbone_blend', 'headhook': 'headhook', 'headik': 'Head_IK', 'headneckchopnet': 'head_neck_chopnet', 'headneckctrl': 'Head_Neck_Ctrl', 'headneckroot': 'head_neck_root', 'headroot': 'Head_root', 'headsoloblend': 'headsoloblend', 'headsoloctrl': 'Head_Solo_Ctrl', 'headsoloctrlblend': 'headsoloctrlblend', 'headup': 'headup', 'neckaathead': 'neckaathead', 'neckablend': 'neckablend', 'neckactrl': 'neckactrl', 'neckaik': 'Neck_a_IK', 'neckatchest': 'neck_at_chest', 'neckatcog': 'neck_at_COG', 'neckatlastspine': 'neck_at_last_spine', 'neckbctrl': 'neckbctrl', 'neckbctrlatchest': 'neckbctrl_at_chest', 'neckbctrlathead': 'neckbctrl_at_head', 'neckbik': 'Neck_b_IK', 'neckblend': 'neck_blend', 'neckbone1': 'neck_bone_1', 'neckbone2': 'neck_bone_2', 'neckbone3': 'neck_bone_3', 'neckbone4': 'neck_bone_4', 'neckcblend': 'neckcblend', 'neckcctrl': 'neckcctrl', 'neckcctrlathead': 'neckcctrl_at_head', 'neckcctrlatneckctrl': 'neckcctrl_at_Neck_Ctrl', 'neckcik': 'Neck_c_IK', 'neckctrl': 'Neck_Ctrl', 'neckctrlblend': 'neckctrlblend', 'neckdctrl': 'neckdctrl', 'neckdik': 'Neck_d_IK', 'neckroot': 'neck_root', 'neckup': 'neckup', 'neckupblend': 'neckupblend', 'nodegroup': 'all_node_group', 'visiblenodegroup': 'visible_node_group'}</em><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.boneLengthStr">
+<em class="property">classmethod </em><code class="descname">boneLengthStr</code><span class="sig-paren">(</span><em>bone</em>, <em>obj1</em>, <em>obj2</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.boneLengthStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.buildRig">
+<em class="property">classmethod </em><code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorigs_asset</em>, <em>options</em>, <em>headguide</em>, <em>parentinfo</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.buildRigControls">
+<em class="property">classmethod </em><code class="descname">buildRigControls</code><span class="sig-paren">(</span><em>index</em>, <em>autorigs_asset</em>, <em>options</em>, <em>headguide</em>, <em>parentinfo</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.buildRigControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.cleanupMainViewport">
+<em class="property">classmethod </em><code class="descname">cleanupMainViewport</code><span class="sig-paren">(</span><em>controls</em>, <em>bonegroup</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.cleanupMainViewport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.getPrefix">
+<em class="property">classmethod </em><code class="descname">getPrefix</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadBuilder.AutoRigsQuadHeadBuilder.getPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder">
+<span id="autorigs-modules-quadhead-autorigsquadheadinterfacebuilder-module"></span><h2>autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.</code><code class="descname">AutoRigsQuadHeadInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.DISPLAY_MENU">
+<code class="descname">DISPLAY_MENU</code><em class="property"> = ['ON', 'OFF']</em><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.DISPLAY_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'bonedisplay': ('bonedisplay', 'Bone Display'), 'controldisplay': ('controldisplay', 'Control Display'), 'folder': ('head', 'QuadHead'), 'heada': ('heada', 'Head A'), 'headfollowchest': ('headfollowchest', 'Head Follow Chest'), 'headneckctrl': ('headneckctrl', 'HeadNeck Ctrl'), 'headsolo': ('headsolo', 'Head Solo'), 'headsoloblend': ('headsolovlend', 'Head Solo Blend'), 'headsoloctrl': ('headsoloctrl', 'Head Solo Ctrl'), 'necka': ('necka', 'Neck A'), 'neckb': ('neckb', 'Neck B'), 'neckc': ('neckc', 'Neck C'), 'neckctrl': ('neckctrl', 'Neck Ctrl'), 'neckd': ('neckd', 'Neck D')}</em><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.buildRigInterface">
+<em class="property">classmethod </em><code class="descname">buildRigInterface</code><span class="sig-paren">(</span><em>autorigs_asset</em>, <em>options</em>, <em>controls</em>, <em>index</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.buildRigInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.buildRigInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildRigInterfaceParms</code><span class="sig-paren">(</span><em>controls</em>, <em>assetnode</em>, <em>prefix</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.buildRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.linkRigInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkRigInterfaceParms</code><span class="sig-paren">(</span><em>controls</em>, <em>assetnode</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder.AutoRigsQuadHeadInterfaceBuilder.linkRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadHead.buildQuadHeadGuide">
+<span id="autorigs-modules-quadhead-buildquadheadguide-module"></span><h2>autorigs.modules.quadHead.buildQuadHeadGuide module<a class="headerlink" href="#module-autorigs.modules.quadHead.buildQuadHeadGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadHead.buildQuadHeadGuide.</code><code class="descname">HeadFactory</code><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseFactory" title="autorigs.modules.base.buildBaseGuide.BaseFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory.createFromDefault">
+<em class="property">classmethod </em><code class="descname">createFromDefault</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory.createFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory.createFromJsonNew">
+<em class="property">classmethod </em><code class="descname">createFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.HeadFactory.createFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadHead.buildQuadHeadGuide.</code><code class="descname">QuadHeadGuide</code><span class="sig-paren">(</span><em>assetnode</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseGuide" title="autorigs.modules.base.buildBaseGuide.BaseGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.JSON_LABEL">
+<code class="descname">JSON_LABEL</code><em class="property"> = {'guidecurve': 'guidecurve', 'guidecurve_add': 'guidecurve_add', 'guidecurve_merge': 'guidecurve_merge', 'guidecurve_out': 'guidecurve_out', 'guidecurve_polywire': 'guidecurve_polywire', 'head1': 'head1', 'headroot': 'headroot', 'headroothook': 'headroothook', 'neck1': 'neck1', 'neck2': 'neck2', 'neck3': 'neck3', 'neckblend': 'neckblend', 'neckroot': 'neckroot', 'neckroothook': 'neckroothook'}</em><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.JSON_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.createFromJson">
+<code class="descname">createFromJson</code><span class="sig-paren">(</span><em>json</em>, <em>paramjson</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.createFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.deleteGuides">
+<code class="descname">deleteGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.existingFromJson">
+<code class="descname">existingFromJson</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.existingFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.getChosenParentNode">
+<code class="descname">getChosenParentNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.getChosenParentNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>parenttext</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.updateToMasterParent">
+<code class="descname">updateToMasterParent</code><span class="sig-paren">(</span><em>masternode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.updateToMasterParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.updateToSpineHookParent">
+<code class="descname">updateToSpineHookParent</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.buildQuadHeadGuide.QuadHeadGuide.updateToSpineHookParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadHead.quadHeadGuideOptions">
+<span id="autorigs-modules-quadhead-quadheadguideoptions-module"></span><h2>autorigs.modules.quadHead.quadHeadGuideOptions module<a class="headerlink" href="#module-autorigs.modules.quadHead.quadHeadGuideOptions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadHead.quadHeadGuideOptions.</code><code class="descname">ModuleOptionsWidget</code><span class="sig-paren">(</span><em>headguide</em>, <em>spinemodules</em>, <em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.HOOK_BUTTON_HEIGHT">
+<code class="descname">HOOK_BUTTON_HEIGHT</code><em class="property"> = 25</em><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.HOOK_BUTTON_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.HOOK_BUTTON_WIDTH">
+<code class="descname">HOOK_BUTTON_WIDTH</code><em class="property"> = 25</em><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.HOOK_BUTTON_WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getAllWidgets">
+<code class="descname">getAllWidgets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getAllWidgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getBuiltParentInfo">
+<code class="descname">getBuiltParentInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getBuiltParentInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getDefaultParentPath">
+<code class="descname">getDefaultParentPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getDefaultParentPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getExistingParents">
+<code class="descname">getExistingParents</code><span class="sig-paren">(</span><em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getExistingParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getMasterParentGuides">
+<code class="descname">getMasterParentGuides</code><span class="sig-paren">(</span><em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getMasterParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getSpineParentGuides">
+<code class="descname">getSpineParentGuides</code><span class="sig-paren">(</span><em>spinemodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.getSpineParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>parentmodule</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.updateParentModules">
+<code class="descname">updateParentModules</code><span class="sig-paren">(</span><em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideOptions.ModuleOptionsWidget.updateParentModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadHead.quadHeadGuideParams">
+<span id="autorigs-modules-quadhead-quadheadguideparams-module"></span><h2>autorigs.modules.quadHead.quadHeadGuideParams module<a class="headerlink" href="#module-autorigs.modules.quadHead.quadHeadGuideParams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.quadHead.quadHeadGuideParams.</code><code class="descname">ModuleParamsWidget</code><span class="sig-paren">(</span><em>headguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.quadHead.quadHeadGuideParams.ModuleParamsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.quadHead.quadHeadModule">
+<span id="autorigs-modules-quadhead-quadheadmodule-module"></span><h2>autorigs.modules.quadHead.quadHeadModule module<a class="headerlink" href="#module-autorigs.modules.quadHead.quadHeadModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.quadHead">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.quadHead" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.quadHead package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadHead.autoRigsQuadHeadBuilder">autorigs.modules.quadHead.autoRigsQuadHeadBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder">autorigs.modules.quadHead.autoRigsQuadHeadInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadHead.buildQuadHeadGuide">autorigs.modules.quadHead.buildQuadHeadGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadHead.quadHeadGuideOptions">autorigs.modules.quadHead.quadHeadGuideOptions module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadHead.quadHeadGuideParams">autorigs.modules.quadHead.quadHeadGuideParams module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadHead.quadHeadModule">autorigs.modules.quadHead.quadHeadModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.quadHead">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.quadFoot.html" title="previous chapter">autorigs.modules.quadFoot package</a></li>
+      <li>Next: <a href="autorigs.modules.quadleg.html" title="next chapter">autorigs.modules.quadleg package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.quadHead.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.quadHead.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

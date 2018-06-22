@@ -1,0 +1,381 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.basicFace.jaw package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.extremity package" href="autorigs.modules.extremity.html" />
+    <link rel="prev" title="autorigs.modules.basicFace.eye package" href="autorigs.modules.basicFace.eye.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-basicface-jaw-package">
+<h1>autorigs.modules.basicFace.jaw package<a class="headerlink" href="#autorigs-modules-basicface-jaw-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw.autoRigsJawBuilder">
+<span id="autorigs-modules-basicface-jaw-autorigsjawbuilder-module"></span><h2>autorigs.modules.basicFace.jaw.autoRigsJawBuilder module<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw.autoRigsJawBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.jaw.autoRigsJawBuilder.</code><code class="descname">AutoRigsJawBuilder</code><span class="sig-paren">(</span><em>index</em>, <em>modulename</em>, <em>autorigs_asset</em>, <em>buildguide</em>, <em>model</em>, <em>parentinfo</em>, <em>prefix=''</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder" title="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.INTERFACE">
+<code class="descname">INTERFACE</code><em class="property"> = {'jaw_rx': ('rx', 'Jaw Open'), 'jaw_ry': ('ry', 'Jaw Wiggle'), 'jaw_rz': ('rz', 'Jaw Twist'), 'jawrctrl': ('r', 'Jaw Rotate'), 'jawtctrl': ('t', 'Jaw Translate')}</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.INTERFACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.NODES">
+<code class="descname">NODES</code><em class="property"> = {'dummybone': ('dummybone',), 'jawbone': ('jawbone',), 'jawrctrl': ('jaw_r_ctrl',), 'jawroot': ('jawroot',), 'jawtctrl': ('jaw_t_ctrl',)}</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.NODES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.addRotateSliderParm">
+<code class="descname">addRotateSliderParm</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.addRotateSliderParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.buildRigControls">
+<code class="descname">buildRigControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.buildRigControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the bones and controls based on the guide objects.
+prefix: the prefix to use for all the nodes created
+assetnode: the autorig assset node in which to create the rig
+model: the module’s model for build options
+buildguide: the module’s buildguides 
+parent: a function takes a node as the argument and parent the node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createFolderTemplate">
+<code class="descname">createFolderTemplate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createFolderTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the folder parm template for the module.
+model: the module’s model for build options</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createJawRotate">
+<code class="descname">createJawRotate</code><span class="sig-paren">(</span><em>jawbone</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createJawRotate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createJawTranslate">
+<code class="descname">createJawTranslate</code><span class="sig-paren">(</span><em>jawrctrl</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createJawTranslate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createLControl">
+<code class="descname">createLControl</code><span class="sig-paren">(</span><em>null</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.autoRigsJawBuilder.AutoRigsJawBuilder.createLControl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw.buildJawGuide">
+<span id="autorigs-modules-basicface-jaw-buildjawguide-module"></span><h2>autorigs.modules.basicFace.jaw.buildJawGuide module<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw.buildJawGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.jaw.buildJawGuide.</code><code class="descname">JawGuide</code><span class="sig-paren">(</span><em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseGuide" title="autorigs.modules.base.buildBaseGuide.BaseGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_ADD">
+<code class="descname">CURVE_ADD</code><em class="property"> = 'guidecurve_add'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_CARVE1">
+<code class="descname">CURVE_CARVE1</code><em class="property"> = 'guidecurve_carve1'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_CARVE1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_CARVE2">
+<code class="descname">CURVE_CARVE2</code><em class="property"> = 'guidecurve_carve2'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_CARVE2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_MERGE">
+<code class="descname">CURVE_MERGE</code><em class="property"> = 'guidecurve_merge'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_MERGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_OBJ_MERGE">
+<code class="descname">CURVE_OBJ_MERGE</code><em class="property"> = 'guidecurve_obj_merge'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_OBJ_MERGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_OUT">
+<code class="descname">CURVE_OUT</code><em class="property"> = 'guidecurve_out'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_OUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_POLYWIRE">
+<code class="descname">CURVE_POLYWIRE</code><em class="property"> = 'guidecurve_polywire'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_POLYWIRE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_SPHERE">
+<code class="descname">CURVE_SPHERE</code><em class="property"> = 'guidecurve_sphere'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.CURVE_SPHERE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.JAW_CURVE">
+<code class="descname">JAW_CURVE</code><em class="property"> = 'jawcurve'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.JAW_CURVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.JAW_END">
+<code class="descname">JAW_END</code><em class="property"> = 'jawend'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.JAW_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.JAW_ROOT">
+<code class="descname">JAW_ROOT</code><em class="property"> = 'jawroot'</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.JAW_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.buildFromJsonExisting">
+<code class="descname">buildFromJsonExisting</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.buildFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.buildFromJsonNew">
+<code class="descname">buildFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.buildFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.createJawCurveSOP">
+<code class="descname">createJawCurveSOP</code><span class="sig-paren">(</span><em>parent</em>, <em>jaw_root</em>, <em>jaw_end</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.createJawCurveSOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the guide curve SOP for the Jaw</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.buildJawGuide.JawGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw.jawGuideController">
+<span id="autorigs-modules-basicface-jaw-jawguidecontroller-module"></span><h2>autorigs.modules.basicFace.jaw.jawGuideController module<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw.jawGuideController" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideController.JawGuideController">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.jaw.jawGuideController.</code><code class="descname">JawGuideController</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideController.JawGuideController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideController.JawGuideController.onStretchToggled">
+<code class="descname">onStretchToggled</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideController.JawGuideController.onStretchToggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideController.JawGuideController.onTranslateToggled">
+<code class="descname">onTranslateToggled</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideController.JawGuideController.onTranslateToggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw.jawGuideModel">
+<span id="autorigs-modules-basicface-jaw-jawguidemodel-module"></span><h2>autorigs.modules.basicFace.jaw.jawGuideModel module<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw.jawGuideModel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.jaw.jawGuideModel.</code><code class="descname">JawGuideModel</code><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.baseGuideModel.BaseGuideModel" title="autorigs.modules.base.baseGuideModel.BaseGuideModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.baseGuideModel.BaseGuideModel</span></code></a></p>
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.getRotateAxis">
+<code class="descname">getRotateAxis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.getRotateAxis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.getTranslateAxis">
+<code class="descname">getTranslateAxis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.getTranslateAxis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.isRotateToggled">
+<code class="descname">isRotateToggled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.isRotateToggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.isStretchToggled">
+<code class="descname">isStretchToggled</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.isStretchToggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.isTranslateToggled">
+<code class="descname">isTranslateToggled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.isTranslateToggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setRotateAxis">
+<code class="descname">setRotateAxis</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setRotateAxis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setRotateToggle">
+<code class="descname">setRotateToggle</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setRotateToggle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setStretchToggle">
+<code class="descname">setStretchToggle</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setStretchToggle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setTranslateAxis">
+<code class="descname">setTranslateAxis</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setTranslateAxis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setTranslateToggle">
+<code class="descname">setTranslateToggle</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideModel.JawGuideModel.setTranslateToggle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw.jawGuideOptions">
+<span id="autorigs-modules-basicface-jaw-jawguideoptions-module"></span><h2>autorigs.modules.basicFace.jaw.jawGuideOptions module<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw.jawGuideOptions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.jaw.jawGuideOptions.</code><code class="descname">ModuleOptionsWidget</code><span class="sig-paren">(</span><em>buildguide</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget" title="autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget.XYZ_COMBO">
+<code class="descname">XYZ_COMBO</code><em class="property"> = ['XYZ', 'XY', 'YZ', 'ZX', 'X', 'Y', 'Z']</em><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget.XYZ_COMBO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideOptions.ModuleOptionsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw.jawGuideParams">
+<span id="autorigs-modules-basicface-jaw-jawguideparams-module"></span><h2>autorigs.modules.basicFace.jaw.jawGuideParams module<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw.jawGuideParams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.jaw.jawGuideParams.ModuleParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.jaw.jawGuideParams.</code><code class="descname">ModuleParamsWidget</code><span class="sig-paren">(</span><em>jawguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.jaw.jawGuideParams.ModuleParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget" title="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw.jawModule">
+<span id="autorigs-modules-basicface-jaw-jawmodule-module"></span><h2>autorigs.modules.basicFace.jaw.jawModule module<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw.jawModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.jaw">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.basicFace.jaw" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.basicFace.jaw package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw.autoRigsJawBuilder">autorigs.modules.basicFace.jaw.autoRigsJawBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw.buildJawGuide">autorigs.modules.basicFace.jaw.buildJawGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw.jawGuideController">autorigs.modules.basicFace.jaw.jawGuideController module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw.jawGuideModel">autorigs.modules.basicFace.jaw.jawGuideModel module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw.jawGuideOptions">autorigs.modules.basicFace.jaw.jawGuideOptions module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw.jawGuideParams">autorigs.modules.basicFace.jaw.jawGuideParams module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw.jawModule">autorigs.modules.basicFace.jaw.jawModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.jaw">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+  <li><a href="autorigs.modules.basicFace.html">autorigs.modules.basicFace package</a><ul>
+      <li>Previous: <a href="autorigs.modules.basicFace.eye.html" title="previous chapter">autorigs.modules.basicFace.eye package</a></li>
+      <li>Next: <a href="autorigs.modules.extremity.html" title="next chapter">autorigs.modules.extremity package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.basicFace.jaw.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.basicFace.jaw.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

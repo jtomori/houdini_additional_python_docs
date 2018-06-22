@@ -1,7 +1,0 @@
-toolprompts module
-==================
-
-.. automodule:: toolprompts
-    :members:
-    :undoc-members:
-    :show-inheritance:

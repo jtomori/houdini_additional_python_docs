@@ -1,0 +1,896 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.utils package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.utils.rigtoolutils package" href="autorigs.utils.rigtoolutils.html" />
+    <link rel="prev" title="autorigs.ui package" href="autorigs.ui.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-utils-package">
+<h1>autorigs.utils package<a class="headerlink" href="#autorigs-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autorigs.utils.rigtoolutils.html">autorigs.utils.rigtoolutils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.boneiktwisttool">autorigs.utils.rigtoolutils.boneiktwisttool module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.boneiktwistuserinput">autorigs.utils.rigtoolutils.boneiktwistuserinput module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.fkcontrols">autorigs.utils.rigtoolutils.fkcontrols module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.fkikinterfacecontrol">autorigs.utils.rigtoolutils.fkikinterfacecontrol module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.ikbonestretch">autorigs.utils.rigtoolutils.ikbonestretch module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.iktwistcontrols">autorigs.utils.rigtoolutils.iktwistcontrols module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.iktwistnaming">autorigs.utils.rigtoolutils.iktwistnaming module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.iktwistnetworkeditor">autorigs.utils.rigtoolutils.iktwistnetworkeditor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.iktwisttool">autorigs.utils.rigtoolutils.iktwisttool module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.iktwistuserinput">autorigs.utils.rigtoolutils.iktwistuserinput module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.randomnulls">autorigs.utils.rigtoolutils.randomnulls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils.rigutils">autorigs.utils.rigtoolutils.rigutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.utils.rigtoolutils.html#module-autorigs.utils.rigtoolutils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.utils.autoRigsBuilderCtrlUtils">
+<span id="autorigs-utils-autorigsbuilderctrlutils-module"></span><h2>autorigs.utils.autoRigsBuilderCtrlUtils module<a class="headerlink" href="#module-autorigs.utils.autoRigsBuilderCtrlUtils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.axisDifference">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">axisDifference</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.axisDifference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockAndHide">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockAndHide</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockAndHide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockForRCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockForRCtrl</code><span class="sig-paren">(</span><em>node</em>, <em>raxis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockForRCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockForTCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockForTCtrl</code><span class="sig-paren">(</span><em>node</em>, <em>taxis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockForTCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockForTRCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockForTRCtrl</code><span class="sig-paren">(</span><em>node</em>, <em>taxis='xyz'</em>, <em>raxis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockForTRCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockNoPick">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockNoPick</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockNoPick" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockPS">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockPS</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockTransform">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockTransform</code><span class="sig-paren">(</span><em>node</em>, <em>transform</em>, <em>axis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locks the specified axis of the transform</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.lockTransformAxis">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">lockTransformAxis</code><span class="sig-paren">(</span><em>node</em>, <em>transform</em>, <em>axis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.lockTransformAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locks the non-specified axis of the transform</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoBoxCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">makeIntoBoxCtrl</code><span class="sig-paren">(</span><em>node</em>, <em>size=0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoBoxCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoCircleCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">makeIntoCircleCtrl</code><span class="sig-paren">(</span><em>node</em>, <em>size=0.15</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoCircleCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoCircleYZCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">makeIntoCircleYZCtrl</code><span class="sig-paren">(</span><em>node</em>, <em>size=0.15</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoCircleYZCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoInvisibleCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">makeIntoInvisibleCtrl</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoInvisibleCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoRCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">makeIntoRCtrl</code><span class="sig-paren">(</span><em>nullnode</em>, <em>axis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoRCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoTCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">makeIntoTCtrl</code><span class="sig-paren">(</span><em>nullnode</em>, <em>axis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoTCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoTRCtrl">
+<code class="descclassname">autorigs.utils.autoRigsBuilderCtrlUtils.</code><code class="descname">makeIntoTRCtrl</code><span class="sig-paren">(</span><em>nullnode</em>, <em>taxis='xyz'</em>, <em>raxis='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderCtrlUtils.makeIntoTRCtrl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.autoRigsBuilderInterfaceUtils">
+<span id="autorigs-utils-autorigsbuilderinterfaceutils-module"></span><h2>autorigs.utils.autoRigsBuilderInterfaceUtils module<a class="headerlink" href="#module-autorigs.utils.autoRigsBuilderInterfaceUtils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.create01Slider">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">create01Slider</code><span class="sig-paren">(</span><em>key</em>, <em>grp</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.create01Slider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a 0 to 1 float slider with strict min and max.
+id: the name/id of the parm,
+label: the label of the parm,
+grp: (BuilderGroup) the builder group to create the parm</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.createDisplayTemplate">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">createDisplayTemplate</code><span class="sig-paren">(</span><em>namelabel</em>, <em>displaykey</em>, <em>prefix</em>, <em>menulabel</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.createDisplayTemplate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.createTransformTemplate">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">createTransformTemplate</code><span class="sig-paren">(</span><em>namelabel</em>, <em>prefix</em>, <em>controlname</em>, <em>transform</em>, <em>components=3</em>, <em>defaults=(0</em>, <em>0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.createTransformTemplate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.createTransformTemplates">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">createTransformTemplates</code><span class="sig-paren">(</span><em>namelabel</em>, <em>prefix</em>, <em>interface_control_keys</em>, <em>foldertemplate</em>, <em>controls</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.createTransformTemplates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.getLabel">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">getLabel</code><span class="sig-paren">(</span><em>namelabel</em>, <em>controltype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.getLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.getLabelTransform">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">getLabelTransform</code><span class="sig-paren">(</span><em>namelabel</em>, <em>prefix</em>, <em>controltype</em>, <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.getLabelTransform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.getName">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">getName</code><span class="sig-paren">(</span><em>namelabel</em>, <em>prefix</em>, <em>controltype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.getName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.getNamePrefix">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">getNamePrefix</code><span class="sig-paren">(</span><em>namelabel</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.getNamePrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.getNameTransform">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">getNameTransform</code><span class="sig-paren">(</span><em>namelabel</em>, <em>prefix</em>, <em>controltype</em>, <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.getNameTransform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkDisplay">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkDisplay</code><span class="sig-paren">(</span><em>assetnode</em>, <em>parm_id</em>, <em>nodesgroup</em>, <em>indexes</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link the display of the controlgroup to autorig display enum parameter.
+This function will not override existing linking of display to other parameters.
+assetnode: the autorigs node
+parm_id: the name of the paramater used in expression
+nodesgroup: the nodesgroup to link the display to
+indexes: (Tuples) the indexes of the enum to map the display</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkDisplayTemplate">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkDisplayTemplate</code><span class="sig-paren">(</span><em>controls</em>, <em>controlkeys</em>, <em>assetnode</em>, <em>displayname</em>, <em>displayformat</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkDisplayTemplate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkDisplayTemplateFKIK">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkDisplayTemplateFKIK</code><span class="sig-paren">(</span><em>controls</em>, <em>controlkeys</em>, <em>assetnode</em>, <em>displayname</em>, <em>displayfkikname</em>, <em>displayformat</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkDisplayTemplateFKIK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkSwitchTemplate">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkSwitchTemplate</code><span class="sig-paren">(</span><em>controls</em>, <em>controlkeys</em>, <em>assetnode</em>, <em>displayname</em>, <em>displayformat</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkSwitchTemplate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplate">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkTransformTemplate</code><span class="sig-paren">(</span><em>namelabel</em>, <em>assetnode</em>, <em>controls</em>, <em>prefix</em>, <em>controlname</em>, <em>interfacename</em>, <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplateObj">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkTransformTemplateObj</code><span class="sig-paren">(</span><em>assetnode</em>, <em>control</em>, <em>interface_name</em>, <em>transform</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplateObj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link the transform parm template interface to the control.
+assetnode: (hou.Node) the autorigs node,
+control: (hou.Node) the control with the parameter to be linked,
+interface_name: (str) the interface/parameter name,
+transform: (str) the transform to link</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplates">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkTransformTemplates</code><span class="sig-paren">(</span><em>namelabel</em>, <em>assetnode</em>, <em>controls</em>, <em>prefix</em>, <em>interface_control_keys</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplatesObj">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">linkTransformTemplatesObj</code><span class="sig-paren">(</span><em>assetnode</em>, <em>interfacename_controls</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.linkTransformTemplatesObj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link the given transform (t, r, s) parm templates
+assetnode: (hou.ObjNode) the assetnode with the autorigs interface
+interfacename_controls: (List) (parmname, rigcontrol, transforms)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderInterfaceUtils.relativePathChParmTo">
+<code class="descclassname">autorigs.utils.autoRigsBuilderInterfaceUtils.</code><code class="descname">relativePathChParmTo</code><span class="sig-paren">(</span><em>node</em>, <em>relnode</em>, <em>parm</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderInterfaceUtils.relativePathChParmTo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.autoRigsBuilderNameUtils">
+<span id="autorigs-utils-autorigsbuildernameutils-module"></span><h2>autorigs.utils.autoRigsBuilderNameUtils module<a class="headerlink" href="#module-autorigs.utils.autoRigsBuilderNameUtils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderNameUtils.getInterfaceName">
+<code class="descclassname">autorigs.utils.autoRigsBuilderNameUtils.</code><code class="descname">getInterfaceName</code><span class="sig-paren">(</span><em>cls</em>, <em>prefix</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderNameUtils.getInterfaceName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderNameUtils.getMatchFKIKFcnName">
+<code class="descclassname">autorigs.utils.autoRigsBuilderNameUtils.</code><code class="descname">getMatchFKIKFcnName</code><span class="sig-paren">(</span><em>cls</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderNameUtils.getMatchFKIKFcnName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderNameUtils.getMatchIKFKFcnName">
+<code class="descclassname">autorigs.utils.autoRigsBuilderNameUtils.</code><code class="descname">getMatchIKFKFcnName</code><span class="sig-paren">(</span><em>cls</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderNameUtils.getMatchIKFKFcnName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.autoRigsBuilderUtils">
+<span id="autorigs-utils-autorigsbuilderutils-module"></span><h2>autorigs.utils.autoRigsBuilderUtils module<a class="headerlink" href="#module-autorigs.utils.autoRigsBuilderUtils" title="Permalink to this headline">¶</a></h2>
+<p>This module stores functionality to build bones from nulls for autorigs
+TODO: This module needs to be refactored. Most of it is copied from ../rigtoolutils/rigutils.py
+and ../rigtoolutils/iktwisttool.py</p>
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.addObjControlsToGroup">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">addObjControlsToGroup</code><span class="sig-paren">(</span><em>controls</em>, <em>group</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.addObjControlsToGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.appendNodeGroups">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">appendNodeGroups</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.appendNodeGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>src: (NodesDataGroup) src data group
+dest: (NodesDataGroup) dest data group</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.buildBoneBetweenNulls">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">buildBoneBetweenNulls</code><span class="sig-paren">(</span><em>null0</em>, <em>null1</em>, <em>netparent</em>, <em>boneparent</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.buildBoneBetweenNulls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given two nulls, creates a bone between the origins of the two nulls
+and adds boneparent as the parent of the newly created bone</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.calculatePlaneNormal">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">calculatePlaneNormal</code><span class="sig-paren">(</span><em>obj0</em>, <em>obj1</em>, <em>obj2</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.calculatePlaneNormal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.copyNodeGroup">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">copyNodeGroup</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em>, <em>group_key</em>, <em>src_idx=0</em>, <em>dest_idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.copyNodeGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the specific node gorup from src builder to dest builder
+src: (AutoRigsBaseBuilder) src builder
+dest: (AutoRigsBaseBuilder) dest builder
+group_key: the key of the group as defined in AutoRigsBaseBuilder</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createIKSolverWithBones">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createIKSolverWithBones</code><span class="sig-paren">(</span><em>netparent</em>, <em>startbone</em>, <em>endbone</em>, <em>solvername</em>, <em>endcontrol</em>, <em>chopnet=None</em>, <em>chopnetname='KIN_chop'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createIKSolverWithBones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a start bone and end bone, creates an chop network with ik solver in it
+Optional parameters to give an already existing chopnetwork to place solver in</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createIKTwistSolverWithBones">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createIKTwistSolverWithBones</code><span class="sig-paren">(</span><em>netparent</em>, <em>startbone</em>, <em>endbone</em>, <em>solvername</em>, <em>endcontrol</em>, <em>twistcontrol</em>, <em>chopnet=None</em>, <em>chopnetname='Kin_chop'</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createIKTwistSolverWithBones" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createNewBoneNonOriented">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createNewBoneNonOriented</code><span class="sig-paren">(</span><em>obj0</em>, <em>obj1</em>, <em>parent</em>, <em>netparent</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createNewBoneNonOriented" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given two objs, creates a bone between them in netparent with prefix name
+such that the position is at obj0 and the end of bone is at obj1. This function
+also parents the newbone to parent</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createNewBoneNonOrientedFromPosition">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createNewBoneNonOrientedFromPosition</code><span class="sig-paren">(</span><em>pos0</em>, <em>obj1</em>, <em>netparent</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createNewBoneNonOrientedFromPosition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createNewBoneOriented">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createNewBoneOriented</code><span class="sig-paren">(</span><em>obj0</em>, <em>obj1</em>, <em>normal</em>, <em>boneparent</em>, <em>netparent</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createNewBoneOriented" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given two objs, places a bone in between them such that the bone is positioned
+at obj0 world and the end of the bone is at obj1 world. The bone is oriented
+such that its x-axis is aligned with the normal.</p>
+<dl class="docutils">
+<dt>input:</dt>
+<dd>boneparent - parent of the bone
+netparent - where to create the bone in the network</dd>
+</dl>
+<p>this can be used in conjunction with calculatePlaneNormal to get the normal of the plane
+that three nulls to create a bone orientation plane</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createNewBoneOrientedHelper">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createNewBoneOrientedHelper</code><span class="sig-paren">(</span><em>obj0</em>, <em>obj1</em>, <em>normal</em>, <em>parent</em>, <em>netparent</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createNewBoneOrientedHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given two objs, creates a bone between them in netparent with prefix name
+such that the position is at obj0 and the end of bone is at obj1. This function
+also parents the newbone to parent</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createNullAtEndOfBone">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createNullAtEndOfBone</code><span class="sig-paren">(</span><em>bone</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createNullAtEndOfBone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a null at the end of the bone</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.createNullAtNode">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">createNullAtNode</code><span class="sig-paren">(</span><em>node</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.createNullAtNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a null at the input node</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.initSettingsInBonesGroup">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">initSettingsInBonesGroup</code><span class="sig-paren">(</span><em>bonegroup</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.initSettingsInBonesGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.isObjectNode">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">isObjectNode</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.isObjectNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.setAllRestAngles">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">setAllRestAngles</code><span class="sig-paren">(</span><em>node</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.setAllRestAngles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.autoRigsBuilderUtils.setAllRotateParms">
+<code class="descclassname">autorigs.utils.autoRigsBuilderUtils.</code><code class="descname">setAllRotateParms</code><span class="sig-paren">(</span><em>node</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.autoRigsBuilderUtils.setAllRotateParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.autoRigsColors">
+<span id="autorigs-utils-autorigscolors-module"></span><h2>autorigs.utils.autoRigsColors module<a class="headerlink" href="#module-autorigs.utils.autoRigsColors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.utils.autoRigsColors.AutoRigsColors">
+<em class="property">class </em><code class="descclassname">autorigs.utils.autoRigsColors.</code><code class="descname">AutoRigsColors</code><a class="headerlink" href="#autorigs.utils.autoRigsColors.AutoRigsColors" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.utils.autoRigsColors.AutoRigsColors.BONE_NETWORK">
+<code class="descname">BONE_NETWORK</code><a class="headerlink" href="#autorigs.utils.autoRigsColors.AutoRigsColors.BONE_NETWORK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.utils.autoRigsColors.AutoRigsColors.CONTROL_NETWORK">
+<code class="descname">CONTROL_NETWORK</code><a class="headerlink" href="#autorigs.utils.autoRigsColors.AutoRigsColors.CONTROL_NETWORK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.utils.autoRigsColors.AutoRigsColors.VIEWPORT_GUIDE">
+<code class="descname">VIEWPORT_GUIDE</code><a class="headerlink" href="#autorigs.utils.autoRigsColors.AutoRigsColors.VIEWPORT_GUIDE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.buildGuideHelper">
+<span id="autorigs-utils-buildguidehelper-module"></span><h2>autorigs.utils.buildGuideHelper module<a class="headerlink" href="#module-autorigs.utils.buildGuideHelper" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.addAngleParameter">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">addAngleParameter</code><span class="sig-paren">(</span><em>guide</em>, <em>r_parm</em>, <em>r_range</em>, <em>offset=0</em>, <em>negative=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.addAngleParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an angle parameter to the given guide, and drive the expression for r_parm.
+The expression is “offset (+ or -) angle”
+guide: the guide node to add the parameter,
+r_parm: the rotate parm_name to be driven by the angle,
+r_range: the hard range for the angle (min, max),
+offset: offset for the expression,
+negative: + or -</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.addPoseScope">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">addPoseScope</code><span class="sig-paren">(</span><em>node</em>, <em>parm</em>, <em>input_sop=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.addPoseScope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds posescope to the geo node and point it to parm.
+node: the node to create the pose scope,
+parm: the parm name to map the pose scope to,
+input_sop: a specific input within the node to connect the nodes to</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.copyAllParms">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">copyAllParms</code><span class="sig-paren">(</span><em>src</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.copyAllParms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies all the values of the parameters from the src 
+node to the dst node.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.createAndMirrorNode">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">createAndMirrorNode</code><span class="sig-paren">(</span><em>node</em>, <em>copyname</em>, <em>display=False</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.createAndMirrorNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy and mirror the given node</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.createArrowPicker">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">createArrowPicker</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.createArrowPicker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an arrow picker sop.
+node: (objNode) the sop node to create the arrow</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.createGuideLines">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">createGuideLines</code><span class="sig-paren">(</span><em>parent</em>, <em>name</em>, <em>src</em>, <em>dests</em>, <em>color=(0</em>, <em>0</em>, <em>0)</em>, <em>resample=False</em>, <em>segment_multiplier=100</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.createGuideLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a line point from src to each of the destination nodes.
+parent: the parent node to create the geometry,
+name: name of the node,
+src: the src node,
+dests: the list of nodes for which to create lines,
+color: the color of the lines, default is black,
+resample: whether to resample and make the line dashes,
+segment_multiplier: the multiplier for segmentation of resampling</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.createNull">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">createNull</code><span class="sig-paren">(</span><em>parent_node</em>, <em>name</em>, <em>parent=None</em>, <em>keeppos=False</em>, <em>size=0.05</em>, <em>fxn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.createNull" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a basic null node(control)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.createSimpleParentCHOP">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">createSimpleParentCHOP</code><span class="sig-paren">(</span><em>node</em>, <em>parent</em>, <em>maskvalue=None</em>, <em>blendvalue=1</em>, <em>keeppos=False</em>, <em>blendparm=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.createSimpleParentCHOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a simple parent blend constraint.
+node: the node to be parented,
+parent: the parent node,
+maskvalue: the mask value to apply on the blend,
+keeppos: whether to keep position</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.deleteGuides">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">deleteGuides</code><span class="sig-paren">(</span><em>nodesdata</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.displayGuides">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">displayGuides</code><span class="sig-paren">(</span><em>nodesdata</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.displayGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.lockGuide">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">lockGuide</code><span class="sig-paren">(</span><em>guide</em>, <em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.lockGuide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.lockGuideData">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">lockGuideData</code><span class="sig-paren">(</span><em>guidedata</em>, <em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.lockGuideData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.lockGuides">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">lockGuides</code><span class="sig-paren">(</span><em>nodesdata</em>, <em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.lockGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.makeNonRenderable">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">makeNonRenderable</code><span class="sig-paren">(</span><em>geo_node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.makeNonRenderable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make the geo node not renderable</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.makeReferenceCopy">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">makeReferenceCopy</code><span class="sig-paren">(</span><em>node</em>, <em>copyname</em>, <em>display=False</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.makeReferenceCopy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.makeTransformParamReferences">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">makeTransformParamReferences</code><span class="sig-paren">(</span><em>node</em>, <em>newnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.makeTransformParamReferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set mirrored transform references for the newnode</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.mirrorNode">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">mirrorNode</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em>, <em>display=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.mirrorNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mirror the src node on to the dest node
+src: source node
+dest: mirrored node
+display: whether to display the mirrored node</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.mirrorNodes">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">mirrorNodes</code><span class="sig-paren">(</span><em>src_list</em>, <em>dest_list</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.mirrorNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mirror all the src nodes in a list</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.setPosition">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">setPosition</code><span class="sig-paren">(</span><em>node</em>, <em>xyztuple</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.setPosition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.setRotation">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">setRotation</code><span class="sig-paren">(</span><em>node</em>, <em>xyztuple</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.setRotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.setTRSPNodeParms">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">setTRSPNodeParms</code><span class="sig-paren">(</span><em>src</em>, <em>dst</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.setTRSPNodeParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.toJSON">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">toJSON</code><span class="sig-paren">(</span><em>nodesdata</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.updateMirror">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">updateMirror</code><span class="sig-paren">(</span><em>nodesdata</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.updateMirror" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.buildGuideHelper.updateSide">
+<code class="descclassname">autorigs.utils.buildGuideHelper.</code><code class="descname">updateSide</code><span class="sig-paren">(</span><em>nodesdata</em>, <em>mirrornodesdata</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.buildGuideHelper.updateSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.fkcontrols">
+<span id="autorigs-utils-fkcontrols-module"></span><h2>autorigs.utils.fkcontrols module<a class="headerlink" href="#module-autorigs.utils.fkcontrols" title="Permalink to this headline">¶</a></h2>
+<p>TODO This is copied from ../rigtoolutils/fkcontrols.py and modified to remove the stretch</p>
+<dl class="function">
+<dt id="autorigs.utils.fkcontrols.createFKControls">
+<code class="descclassname">autorigs.utils.fkcontrols.</code><code class="descname">createFKControls</code><span class="sig-paren">(</span><em>nameslist</em>, <em>startbone</em>, <em>endbone</em>, <em>inchain=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.fkcontrols.createFKControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates FK controls for each bone from start bone to end bone with the name
+prefix + ‘fkcontrol’</p>
+<p>required type:
+nameslist should be in reverse order of the bone chain
+inchain specifies whether the fk controls should be part of the bone chain or off to the side</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.guideOptionsHelper">
+<span id="autorigs-utils-guideoptionshelper-module"></span><h2>autorigs.utils.guideOptionsHelper module<a class="headerlink" href="#module-autorigs.utils.guideOptionsHelper" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.utils.guideOptionsHelper.createToggleButtonsWidget">
+<code class="descclassname">autorigs.utils.guideOptionsHelper.</code><code class="descname">createToggleButtonsWidget</code><span class="sig-paren">(</span><em>label</em>, <em>buttonlabels</em>, <em>default_checked_idx</em>, <em>onbuttonclicked=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideOptionsHelper.createToggleButtonsWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.guideParamsHelper">
+<span id="autorigs-utils-guideparamshelper-module"></span><h2>autorigs.utils.guideParamsHelper module<a class="headerlink" href="#module-autorigs.utils.guideParamsHelper" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.createParamWidget">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">createParamWidget</code><span class="sig-paren">(</span><em>paramobj</em>, <em>paramwidget_dst=None</em>, <em>label=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.createParamWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.createScrollLayout">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">createScrollLayout</code><span class="sig-paren">(</span><em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.createScrollLayout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a borderless scroll layout for the given widget</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.fromJSON">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em>, <em>widgets</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.getEditableGuideObj">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">getEditableGuideObj</code><span class="sig-paren">(</span><em>label</em>, <em>nodes</em>, <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.getEditableGuideObj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.hasUnsavedChanges">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><em>widgets</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.markSaved">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">markSaved</code><span class="sig-paren">(</span><em>widgets</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.markSaved" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.setParamWidget">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">setParamWidget</code><span class="sig-paren">(</span><em>widget</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.setParamWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.toJSON">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">toJSON</code><span class="sig-paren">(</span><em>widgets</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.unlinkParmWidgetDict">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">unlinkParmWidgetDict</code><span class="sig-paren">(</span><em>paramdict</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.unlinkParmWidgetDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.guideParamsHelper.unlinkParmWidgetList">
+<code class="descclassname">autorigs.utils.guideParamsHelper.</code><code class="descname">unlinkParmWidgetList</code><span class="sig-paren">(</span><em>paramwidgets</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.guideParamsHelper.unlinkParmWidgetList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.iktwistcontrols">
+<span id="autorigs-utils-iktwistcontrols-module"></span><h2>autorigs.utils.iktwistcontrols module<a class="headerlink" href="#module-autorigs.utils.iktwistcontrols" title="Permalink to this headline">¶</a></h2>
+<p>TODO This is copied from ../rigtoolutils/iktwistcontrols.py and modified to have postdict</p>
+<dl class="function">
+<dt id="autorigs.utils.iktwistcontrols.createControlsWithBones">
+<code class="descclassname">autorigs.utils.iktwistcontrols.</code><code class="descname">createControlsWithBones</code><span class="sig-paren">(</span><em>hastwist</em>, <em>startbone</em>, <em>endbone</em>, <em>parent</em>, <em>prefix</em>, <em>postdict</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.iktwistcontrols.createControlsWithBones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given hastwist = False (ik control) or hastwist = True (ik twist control)
+adds the controls to the given bone chain. Assumes that endbone is in the
+same chain as the start_bone. The parent is the parent of the whole structure.
+The prefix is the prefix name. postfix is a dictionary of values for the names</p>
+<dl class="docutils">
+<dt>Required values for postdict are:</dt>
+<dd>end - endaffector for the bones
+endhook - endcontrol for the end affector
+chopnet - chopnet that stores all the inversekin chops. Not necessary if one is provided
+iksolver - inversekin solver</dd>
+<dt>if hastwist is true:</dt>
+<dd>twist = twistaffector for the bones
+twisthook - twistcontrol for the twist affector</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.iktwistcontrols.createIKControl">
+<code class="descclassname">autorigs.utils.iktwistcontrols.</code><code class="descname">createIKControl</code><span class="sig-paren">(</span><em>startbone</em>, <em>endbone</em>, <em>parent</em>, <em>netparent</em>, <em>prefix</em>, <em>postdict</em>, <em>chopnet</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.iktwistcontrols.createIKControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new chopnet and assigns the IK controls to all bones between start bone and end bone
+Assumes that startbone is parent and endbone is a child of the parent</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.iktwistcontrols.createIKWithTwistControl">
+<code class="descclassname">autorigs.utils.iktwistcontrols.</code><code class="descname">createIKWithTwistControl</code><span class="sig-paren">(</span><em>startbone</em>, <em>endbone</em>, <em>parent</em>, <em>netparent</em>, <em>prefix</em>, <em>postdict</em>, <em>chopnet</em>, <em>rigscale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.iktwistcontrols.createIKWithTwistControl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to createIKControl but also adds a twist affector</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.iktwistcontrols.createName">
+<code class="descclassname">autorigs.utils.iktwistcontrols.</code><code class="descname">createName</code><span class="sig-paren">(</span><em>prefix</em>, <em>postdict</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.iktwistcontrols.createName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils.rigutils">
+<span id="autorigs-utils-rigutils-module"></span><h2>autorigs.utils.rigutils module<a class="headerlink" href="#module-autorigs.utils.rigutils" title="Permalink to this headline">¶</a></h2>
+<p>TODO This is copied from rigutils.py</p>
+<dl class="function">
+<dt id="autorigs.utils.rigutils.buildBoneBetweenNulls">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">buildBoneBetweenNulls</code><span class="sig-paren">(</span><em>null0</em>, <em>null1</em>, <em>netparent</em>, <em>boneparent</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.buildBoneBetweenNulls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given two nulls, creates a bone between the origins of the two nulls
+and adds boneparent as the parent of the newly created bone</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.createNullAtEndOfBone">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">createNullAtEndOfBone</code><span class="sig-paren">(</span><em>netparent</em>, <em>bone</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.createNullAtEndOfBone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a null at the end of the bone</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.createNullAtNode">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">createNullAtNode</code><span class="sig-paren">(</span><em>netparent</em>, <em>node</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.createNullAtNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a null at the input node</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.createNullHookForNode">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">createNullHookForNode</code><span class="sig-paren">(</span><em>netparent</em>, <em>node</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.createNullHookForNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a null parent for the node</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.getAverageBoneChainLength">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">getAverageBoneChainLength</code><span class="sig-paren">(</span><em>startbone</em>, <em>endbone</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.getAverageBoneChainLength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.getFKControl">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">getFKControl</code><span class="sig-paren">(</span><em>bone</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.getFKControl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.getRandomColor">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">getRandomColor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.getRandomColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.getTotalBoneChainLength">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">getTotalBoneChainLength</code><span class="sig-paren">(</span><em>startbone</em>, <em>endbone</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.getTotalBoneChainLength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns (totalbonelength, numberofbones) from start bone to end bone inclusive</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.isChildConnectedToParent">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">isChildConnectedToParent</code><span class="sig-paren">(</span><em>child</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.isChildConnectedToParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether child is connected to parent
+Returns true if child is parent</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.lockAllPivotParms">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">lockAllPivotParms</code><span class="sig-paren">(</span><em>node</em>, <em>value=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.lockAllPivotParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.lockAllRotateParms">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">lockAllRotateParms</code><span class="sig-paren">(</span><em>node</em>, <em>value=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.lockAllRotateParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.lockAllScaleParms">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">lockAllScaleParms</code><span class="sig-paren">(</span><em>node</em>, <em>value=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.lockAllScaleParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.lockAllTranslateParms">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">lockAllTranslateParms</code><span class="sig-paren">(</span><em>node</em>, <em>value=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.lockAllTranslateParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.numNodesFromChildToParent">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">numNodesFromChildToParent</code><span class="sig-paren">(</span><em>child</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.numNodesFromChildToParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns number of nodes from child to parent
+or until it reaches the end of the chain
+if child is not connected to parent</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.setAllRestAngles">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">setAllRestAngles</code><span class="sig-paren">(</span><em>node</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.setAllRestAngles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.setAllRotateParms">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">setAllRotateParms</code><span class="sig-paren">(</span><em>node</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.setAllRotateParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.setAllTranslateParms">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">setAllTranslateParms</code><span class="sig-paren">(</span><em>node</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.setAllTranslateParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.setDisplayColor">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">setDisplayColor</code><span class="sig-paren">(</span><em>node</em>, <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.setDisplayColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.utils.rigutils.setWireframeColorExpression">
+<code class="descclassname">autorigs.utils.rigutils.</code><code class="descname">setWireframeColorExpression</code><span class="sig-paren">(</span><em>colorobj</em>, <em>refobj</em>, <em>refparm</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.utils.rigutils.setWireframeColorExpression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the dcolorr/g/b of colorobj to be referenced to refobj/refparmrgb</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.utils package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.autoRigsBuilderCtrlUtils">autorigs.utils.autoRigsBuilderCtrlUtils module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.autoRigsBuilderInterfaceUtils">autorigs.utils.autoRigsBuilderInterfaceUtils module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.autoRigsBuilderNameUtils">autorigs.utils.autoRigsBuilderNameUtils module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.autoRigsBuilderUtils">autorigs.utils.autoRigsBuilderUtils module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.autoRigsColors">autorigs.utils.autoRigsColors module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.buildGuideHelper">autorigs.utils.buildGuideHelper module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.fkcontrols">autorigs.utils.fkcontrols module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.guideOptionsHelper">autorigs.utils.guideOptionsHelper module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.guideParamsHelper">autorigs.utils.guideParamsHelper module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.iktwistcontrols">autorigs.utils.iktwistcontrols module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils.rigutils">autorigs.utils.rigutils module</a></li>
+<li><a class="reference internal" href="#module-autorigs.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+      <li>Previous: <a href="autorigs.ui.html" title="previous chapter">autorigs.ui package</a></li>
+      <li>Next: <a href="autorigs.utils.rigtoolutils.html" title="next chapter">autorigs.utils.rigtoolutils package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

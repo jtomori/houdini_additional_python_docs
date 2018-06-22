@@ -1,0 +1,666 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>hotkeys package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="houdiniInterpreter module" href="houdiniInterpreter.html" />
+    <link rel="prev" title="hjsonrpc module" href="hjsonrpc.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="hotkeys-package">
+<h1>hotkeys package<a class="headerlink" href="#hotkeys-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-hotkeys.mainwidget">
+<span id="hotkeys-mainwidget-module"></span><h2>hotkeys.mainwidget module<a class="headerlink" href="#module-hotkeys.mainwidget" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="hotkeys.mainwidget.CommandTreeItem">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">CommandTreeItem</code><span class="sig-paren">(</span><em>context</em>, <em>label</em>, <em>description</em>, <em>keys</em>, <em>icon</em>, <em>category</em>, <em>symbol</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.appendChild">
+<code class="descname">appendChild</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.appendChild" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.child">
+<code class="descname">child</code><span class="sig-paren">(</span><em>row</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.child" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.childCount">
+<code class="descname">childCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.childCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.columnCount">
+<code class="descname">columnCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.columnCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.data">
+<code class="descname">data</code><span class="sig-paren">(</span><em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.parent">
+<code class="descname">parent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.parent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.row">
+<code class="descname">row</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.row" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeItem.tooltip">
+<code class="descname">tooltip</code><span class="sig-paren">(</span><em>column</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeItem.tooltip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.mainwidget.CommandTreeModel">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">CommandTreeModel</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.addTopLevelItem">
+<code class="descname">addTopLevelItem</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.addTopLevelItem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.addTopLevelItems">
+<code class="descname">addTopLevelItems</code><span class="sig-paren">(</span><em>items</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.addTopLevelItems" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.columnCount">
+<code class="descname">columnCount</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.columnCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.data">
+<code class="descname">data</code><span class="sig-paren">(</span><em>index</em>, <em>role</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.findItem">
+<code class="descname">findItem</code><span class="sig-paren">(</span><em>item</em>, <em>parent=&lt;sphinx.ext.autodoc.importer._MockObject object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.findItem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.flags">
+<code class="descname">flags</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.flags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.headerData">
+<code class="descname">headerData</code><span class="sig-paren">(</span><em>section</em>, <em>orientation</em>, <em>role</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.headerData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.index">
+<code class="descname">index</code><span class="sig-paren">(</span><em>row</em>, <em>column</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.parent">
+<code class="descname">parent</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.parent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeModel.rowCount">
+<code class="descname">rowCount</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeModel.rowCount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">CommandTreeProxyModel</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.disconnectNotify">
+<code class="descname">disconnectNotify</code><span class="sig-paren">(</span><em>signal</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.disconnectNotify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.filterAcceptsRow">
+<code class="descname">filterAcceptsRow</code><span class="sig-paren">(</span><em>row_num</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.filterAcceptsRow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.filterContextString">
+<code class="descname">filterContextString</code><em class="property"> = None</em><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.filterContextString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.keyFilterColumns">
+<code class="descname">keyFilterColumns</code><em class="property"> = [2]</em><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.keyFilterColumns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.searchFilter">
+<code class="descname">searchFilter</code><em class="property"> = ''</em><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.searchFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.searchKeys">
+<code class="descname">searchKeys</code><em class="property"> = False</em><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.searchKeys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.setFilterContext">
+<code class="descname">setFilterContext</code><span class="sig-paren">(</span><em>filter</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.setFilterContext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.setSearchFilter">
+<code class="descname">setSearchFilter</code><span class="sig-paren">(</span><em>filter</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.setSearchFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.CommandTreeProxyModel.textFilterColumns">
+<code class="descname">textFilterColumns</code><em class="property"> = [0, 3, 4]</em><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeProxyModel.textFilterColumns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.mainwidget.CommandTreeView">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">CommandTreeView</code><span class="sig-paren">(</span><em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.CommandTreeView.currentItemChanged">
+<code class="descname">currentItemChanged</code><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeView.currentItemChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.CommandTreeView.holdSelectionModel">
+<code class="descname">holdSelectionModel</code><em class="property"> = None</em><a class="headerlink" href="#hotkeys.mainwidget.CommandTreeView.holdSelectionModel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">ContextTreeProxyModel</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.disconnectNotify">
+<code class="descname">disconnectNotify</code><span class="sig-paren">(</span><em>signal</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.disconnectNotify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.filterAcceptsRow">
+<code class="descname">filterAcceptsRow</code><span class="sig-paren">(</span><em>row_num</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.filterAcceptsRow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.filterAcceptsRowOrCommand">
+<code class="descname">filterAcceptsRowOrCommand</code><span class="sig-paren">(</span><em>row_num</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.filterAcceptsRowOrCommand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.keyFilterColumns">
+<code class="descname">keyFilterColumns</code><em class="property"> = [2]</em><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.keyFilterColumns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.searchFilter">
+<code class="descname">searchFilter</code><em class="property"> = ''</em><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.searchFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.searchKeys">
+<code class="descname">searchKeys</code><em class="property"> = False</em><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.searchKeys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.setSearchFilter">
+<code class="descname">setSearchFilter</code><span class="sig-paren">(</span><em>filter</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.setSearchFilter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.ContextTreeProxyModel.textFilterColumns">
+<code class="descname">textFilterColumns</code><em class="property"> = [0, 3, 4]</em><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeProxyModel.textFilterColumns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.mainwidget.ContextTreeView">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">ContextTreeView</code><span class="sig-paren">(</span><em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.ContextTreeView.currentItemChanged">
+<code class="descname">currentItemChanged</code><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeView.currentItemChanged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.ContextTreeView.holdSelectionModel">
+<code class="descname">holdSelectionModel</code><em class="property"> = None</em><a class="headerlink" href="#hotkeys.mainwidget.ContextTreeView.holdSelectionModel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">HotkeyManagerWidget</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.accept" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.apply">
+<code class="descname">apply</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.apply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.askLoseChanges">
+<code class="descname">askLoseChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.askLoseChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.cleanupBeforeClose">
+<code class="descname">cleanupBeforeClose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.cleanupBeforeClose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.closeParent">
+<code class="descname">closeParent</code><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.closeParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.discard">
+<code class="descname">discard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.discard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.makeBrowserPane">
+<code class="descname">makeBrowserPane</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.makeBrowserPane" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.makeKeyboard">
+<code class="descname">makeKeyboard</code><span class="sig-paren">(</span><em>keys</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.makeKeyboard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.modelGetAllCommands">
+<code class="descname">modelGetAllCommands</code><span class="sig-paren">(</span><em>context_model</em>, <em>command_model</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.modelGetAllCommands" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.refreshData">
+<code class="descname">refreshData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.refreshData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.reject">
+<code class="descname">reject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.reject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.selectCommand">
+<code class="descname">selectCommand</code><span class="sig-paren">(</span><em>symbol</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.selectCommand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWidget.showHelp">
+<code class="descname">showHelp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWidget.showHelp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.mainwidget.HotkeyManagerWindow">
+<em class="property">class </em><code class="descclassname">hotkeys.mainwidget.</code><code class="descname">HotkeyManagerWindow</code><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWindow.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWindow.accept" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWindow.closeWindow">
+<code class="descname">closeWindow</code><span class="sig-paren">(</span><em>result=&lt;sphinx.ext.autodoc.importer._MockObject object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWindow.closeWindow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.mainwidget.HotkeyManagerWindow.hotkeyManager">
+<code class="descname">hotkeyManager</code><em class="property"> = None</em><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWindow.hotkeyManager" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.mainwidget.HotkeyManagerWindow.reject">
+<code class="descname">reject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.HotkeyManagerWindow.reject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.mainwidget.get_linenumber">
+<code class="descclassname">hotkeys.mainwidget.</code><code class="descname">get_linenumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.get_linenumber" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.mainwidget.main">
+<code class="descclassname">hotkeys.mainwidget.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.mainwidget.showHotkeyManagerWindow">
+<code class="descclassname">hotkeys.mainwidget.</code><code class="descname">showHotkeyManagerWindow</code><span class="sig-paren">(</span><em>symbol=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.mainwidget.showHotkeyManagerWindow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hotkeys.widgets">
+<span id="hotkeys-widgets-module"></span><h2>hotkeys.widgets module<a class="headerlink" href="#module-hotkeys.widgets" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="hotkeys.widgets.AssignmentInfo">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">AssignmentInfo</code><span class="sig-paren">(</span><em>context</em>, <em>action</em>, <em>label</em>, <em>key</em>, <em>dir</em>, <em>callback</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.AssignmentInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.ConflictWarning">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">ConflictWarning</code><span class="sig-paren">(</span><em>context</em>, <em>action</em>, <em>label</em>, <em>key</em>, <em>dir</em>, <em>callback</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.ConflictWarning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.KeyCaptureWidget">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">KeyCaptureWidget</code><span class="sig-paren">(</span><em>accept_label</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.KeyCaptureWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="hotkeys.widgets.KeyCaptureWidget.accept">
+<code class="descname">accept</code><a class="headerlink" href="#hotkeys.widgets.KeyCaptureWidget.accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.widgets.KeyCaptureWidget.cancel">
+<code class="descname">cancel</code><a class="headerlink" href="#hotkeys.widgets.KeyCaptureWidget.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.widgets.KeyCaptureWidget.changed">
+<code class="descname">changed</code><a class="headerlink" href="#hotkeys.widgets.KeyCaptureWidget.changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.KeyCaptureWidget.setText">
+<code class="descname">setText</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.KeyCaptureWidget.setText" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.widgets.KeyCaptureWidget.special_items">
+<code class="descname">special_items</code><em class="property"> = ['Esc', 'Tab', 'Enter', 'Del', 'Backspace']</em><a class="headerlink" href="#hotkeys.widgets.KeyCaptureWidget.special_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.KeyCaptureWidget.text">
+<code class="descname">text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.KeyCaptureWidget.text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.LinkLabel">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">LinkLabel</code><span class="sig-paren">(</span><em>text</em>, <em>callback=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.LinkLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="hotkeys.widgets.LinkLabel.mousePressEvent">
+<code class="descname">mousePressEvent</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.LinkLabel.mousePressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.NoAssignmentInfo">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">NoAssignmentInfo</code><span class="sig-paren">(</span><em>context</em>, <em>action</em>, <em>label</em>, <em>key</em>, <em>callback</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.NoAssignmentInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.RawKeyCapture">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">RawKeyCapture</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.RawKeyCapture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="hotkeys.widgets.RawKeyCapture.cancel">
+<code class="descname">cancel</code><a class="headerlink" href="#hotkeys.widgets.RawKeyCapture.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.RawKeyCapture.keyPressEvent">
+<code class="descname">keyPressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.RawKeyCapture.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.SearchLineEdit">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">SearchLineEdit</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.SearchLineEdit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="hotkeys.widgets.SearchLineEdit.keyPressEvent">
+<code class="descname">keyPressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.SearchLineEdit.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.VirtualKeyBoardFrame">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">VirtualKeyBoardFrame</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyBoardFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="hotkeys.widgets.VirtualKeyBoardFrame.layoutMargins">
+<code class="descname">layoutMargins</code><a class="headerlink" href="#hotkeys.widgets.VirtualKeyBoardFrame.layoutMargins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="hotkeys.widgets.VirtualKeyBoardFrame.layoutSpacing">
+<code class="descname">layoutSpacing</code><a class="headerlink" href="#hotkeys.widgets.VirtualKeyBoardFrame.layoutSpacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyBoardFrame.readLayoutMargins">
+<code class="descname">readLayoutMargins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyBoardFrame.readLayoutMargins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyBoardFrame.readLayoutSpacing">
+<code class="descname">readLayoutSpacing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyBoardFrame.readLayoutSpacing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyBoardFrame.setLayoutMargins">
+<code class="descname">setLayoutMargins</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyBoardFrame.setLayoutMargins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyBoardFrame.setLayoutSpacing">
+<code class="descname">setLayoutSpacing</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyBoardFrame.setLayoutSpacing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="hotkeys.widgets.VirtualKeyCapWidget">
+<em class="property">class </em><code class="descclassname">hotkeys.widgets.</code><code class="descname">VirtualKeyCapWidget</code><span class="sig-paren">(</span><em>keyname</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyCapWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="hotkeys.widgets.VirtualKeyCapWidget.conflictItemFormat">
+<code class="descname">conflictItemFormat</code><a class="headerlink" href="#hotkeys.widgets.VirtualKeyCapWidget.conflictItemFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyCapWidget.getLabel">
+<code class="descname">getLabel</code><span class="sig-paren">(</span><em>keyname</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyCapWidget.getLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyCapWidget.getLabels">
+<code class="descname">getLabels</code><span class="sig-paren">(</span><em>keyname</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyCapWidget.getLabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyCapWidget.readConflictItemFormat">
+<code class="descname">readConflictItemFormat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyCapWidget.readConflictItemFormat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyCapWidget.setConflictItemFormat">
+<code class="descname">setConflictItemFormat</code><span class="sig-paren">(</span><em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyCapWidget.setConflictItemFormat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="hotkeys.widgets.VirtualKeyCapWidget.setModifiers">
+<code class="descname">setModifiers</code><span class="sig-paren">(</span><em>modifiers</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.VirtualKeyCapWidget.setModifiers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.widgets.fromKeyDisplayString">
+<code class="descclassname">hotkeys.widgets.</code><code class="descname">fromKeyDisplayString</code><span class="sig-paren">(</span><em>keystr</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.fromKeyDisplayString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.widgets.get_linenumber">
+<code class="descclassname">hotkeys.widgets.</code><code class="descname">get_linenumber</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.get_linenumber" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.widgets.hom_color_to_hex">
+<code class="descclassname">hotkeys.widgets.</code><code class="descname">hom_color_to_hex</code><span class="sig-paren">(</span><em>hom_color</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.hom_color_to_hex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.widgets.make_conflict_list">
+<code class="descclassname">hotkeys.widgets.</code><code class="descname">make_conflict_list</code><span class="sig-paren">(</span><em>rows</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.make_conflict_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="hotkeys.widgets.toKeyDisplayString">
+<code class="descclassname">hotkeys.widgets.</code><code class="descname">toKeyDisplayString</code><span class="sig-paren">(</span><em>keystr</em><span class="sig-paren">)</span><a class="headerlink" href="#hotkeys.widgets.toKeyDisplayString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-hotkeys">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hotkeys" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">hotkeys package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-hotkeys.mainwidget">hotkeys.mainwidget module</a></li>
+<li><a class="reference internal" href="#module-hotkeys.widgets">hotkeys.widgets module</a></li>
+<li><a class="reference internal" href="#module-hotkeys">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="hjsonrpc.html" title="previous chapter">hjsonrpc module</a></li>
+      <li>Next: <a href="houdiniInterpreter.html" title="next chapter">houdiniInterpreter module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/hotkeys.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/hotkeys.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

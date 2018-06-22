@@ -1,7 +1,0 @@
-vopcallbacks module
-===================
-
-.. automodule:: vopcallbacks
-    :members:
-    :undoc-members:
-    :show-inheritance:

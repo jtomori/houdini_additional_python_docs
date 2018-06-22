@@ -1,7 +1,0 @@
-bakeanimation module
-====================
-
-.. automodule:: bakeanimation
-    :members:
-    :undoc-members:
-    :show-inheritance:

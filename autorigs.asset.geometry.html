@@ -1,0 +1,223 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.asset.geometry package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules package" href="autorigs.modules.html" />
+    <link rel="prev" title="autorigs.asset package" href="autorigs.asset.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-asset-geometry-package">
+<h1>autorigs.asset.geometry package<a class="headerlink" href="#autorigs-asset-geometry-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.asset.geometry.autoRigsCaptureBuilder">
+<span id="autorigs-asset-geometry-autorigscapturebuilder-module"></span><h2>autorigs.asset.geometry.autoRigsCaptureBuilder module<a class="headerlink" href="#module-autorigs.asset.geometry.autoRigsCaptureBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.addAutoRigNodeGroupsParm">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">addAutoRigNodeGroupsParm</code><span class="sig-paren">(</span><em>capture</em>, <em>region_parm_name</em>, <em>expr</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.addAutoRigNodeGroupsParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new parm for storing autorigs nodegroups, and drive the given parm with expression
+capture: (hou.Node) the capture node to add a new parm template,
+region_parm_name: (str) the parm name that will be driven by expression,
+expr: (str) the expression to drive</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.addBoneGroupToParm">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">addBoneGroupToParm</code><span class="sig-paren">(</span><em>node</em>, <em>bonegroup</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.addBoneGroupToParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the bonegroup to the AutoRigs Node Groups Parameter
+node: the capture node to edit
+bonegroup: the node group to add to the parm</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.buildCapture">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">buildCapture</code><span class="sig-paren">(</span><em>autorigs_asset</em>, <em>bonecapture_postfix</em>, <em>bonegroup</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.buildCapture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.cookCaptureNetwork">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">cookCaptureNetwork</code><span class="sig-paren">(</span><em>autorigs_asset</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.cookCaptureNetwork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cook the capture network by turning on deform</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.createCapture_">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">createCapture_</code><span class="sig-paren">(</span><em>capture_type</em>, <em>parent</em>, <em>geo_input</em>, <em>deform</em>, <em>stash</em>, <em>asset</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.createCapture_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.deleteGroup">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">deleteGroup</code><span class="sig-paren">(</span><em>geoobj</em>, <em>group</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.deleteGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the specified group from the geoobj.
+geoobj: (hou.Node) the geometry from which to delete the group,
+group: (str) the group to delete</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.findOrCreateNode_">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">findOrCreateNode_</code><span class="sig-paren">(</span><em>parent</em>, <em>node_type</em>, <em>node_name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.findOrCreateNode_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsCaptureBuilder.overrideCaptureRegion">
+<code class="descclassname">autorigs.asset.geometry.autoRigsCaptureBuilder.</code><code class="descname">overrideCaptureRegion</code><span class="sig-paren">(</span><em>parent</em>, <em>capture_geo</em>, <em>bonegroup</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsCaptureBuilder.overrideCaptureRegion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the capture region using the same capture override path.
+parent: (hou.Node) the node where the capture network resides,
+capture_geo: (hou.ObjNode) the node that defines the bounding region,
+bonegroup: (hou.NodeGroup) the nodegroup that contains the bones of interest</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.asset.geometry.autoRigsGeoBuilder">
+<span id="autorigs-asset-geometry-autorigsgeobuilder-module"></span><h2>autorigs.asset.geometry.autoRigsGeoBuilder module<a class="headerlink" href="#module-autorigs.asset.geometry.autoRigsGeoBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.addFileNodeToGeoSkin">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">addFileNodeToGeoSkin</code><span class="sig-paren">(</span><em>geoskin</em>, <em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.addFileNodeToGeoSkin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.addGeoSectionToAsset">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">addGeoSectionToAsset</code><span class="sig-paren">(</span><em>geonode</em>, <em>geoname</em>, <em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.addGeoSectionToAsset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.addObjectMergeToGeoSkin">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">addObjectMergeToGeoSkin</code><span class="sig-paren">(</span><em>geoskin</em>, <em>objpath</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.addObjectMergeToGeoSkin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.buildCapture">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">buildCapture</code><span class="sig-paren">(</span><em>autorigs_asset</em>, <em>bonecapture_postfix</em>, <em>bonegroup</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.buildCapture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.destroyGuides">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">destroyGuides</code><span class="sig-paren">(</span><em>geoguides</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.destroyGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.getFileName">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">getFileName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.getFileName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.getGeoName">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">getGeoName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.getGeoName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.geometry.autoRigsGeoBuilder.placeGeometry">
+<code class="descclassname">autorigs.asset.geometry.autoRigsGeoBuilder.</code><code class="descname">placeGeometry</code><span class="sig-paren">(</span><em>autorigs_asset</em>, <em>geoguides</em>, <em>masteroptions</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.geometry.autoRigsGeoBuilder.placeGeometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.asset.geometry.buildGeometryGuide">
+<span id="autorigs-asset-geometry-buildgeometryguide-module"></span><h2>autorigs.asset.geometry.buildGeometryGuide module<a class="headerlink" href="#module-autorigs.asset.geometry.buildGeometryGuide" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.asset.geometry">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.asset.geometry" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.asset.geometry package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.geometry.autoRigsCaptureBuilder">autorigs.asset.geometry.autoRigsCaptureBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.geometry.autoRigsGeoBuilder">autorigs.asset.geometry.autoRigsGeoBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.geometry.buildGeometryGuide">autorigs.asset.geometry.buildGeometryGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.asset.html">autorigs.asset package</a><ul>
+      <li>Previous: <a href="autorigs.asset.html" title="previous chapter">autorigs.asset package</a></li>
+      <li>Next: <a href="autorigs.modules.html" title="next chapter">autorigs.modules package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.asset.geometry.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.asset.geometry.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

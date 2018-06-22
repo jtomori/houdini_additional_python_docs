@@ -1,7 +1,0 @@
-choptoolutils module
-====================
-
-.. automodule:: choptoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

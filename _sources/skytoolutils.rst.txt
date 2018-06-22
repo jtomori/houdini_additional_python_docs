@@ -1,7 +1,0 @@
-skytoolutils module
-===================
-
-.. automodule:: skytoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

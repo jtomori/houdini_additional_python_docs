@@ -1,0 +1,822 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.basicFace.eye package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.basicFace.jaw package" href="autorigs.modules.basicFace.jaw.html" />
+    <link rel="prev" title="autorigs.modules.basicFace package" href="autorigs.modules.basicFace.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-basicface-eye-package">
+<h1>autorigs.modules.basicFace.eye package<a class="headerlink" href="#autorigs-modules-basicface-eye-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.eye.autoRigsEyeBuilder">
+<span id="autorigs-modules-basicface-eye-autorigseyebuilder-module"></span><h2>autorigs.modules.basicFace.eye.autoRigsEyeBuilder module<a class="headerlink" href="#module-autorigs.modules.basicFace.eye.autoRigsEyeBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.eye.autoRigsEyeBuilder.</code><code class="descname">AutoRigsEyeBuilder</code><span class="sig-paren">(</span><em>index</em>, <em>modulename</em>, <em>autorigs_asset</em>, <em>buildguide</em>, <em>model</em>, <em>parentinfo</em>, <em>prefix=''</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder" title="autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseBuilder.AutoRigsBaseBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.CONTROL_MODE_MENU">
+<code class="descname">CONTROL_MODE_MENU</code><em class="property"> = ['Simple', 'Detail']</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.CONTROL_MODE_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.EYELID_CENTER">
+<code class="descname">EYELID_CENTER</code><em class="property"> = 'eyelid_center'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.EYELID_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.EYELID_INNER">
+<code class="descname">EYELID_INNER</code><em class="property"> = 'eyelid_inner'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.EYELID_INNER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.EYELID_OUTER">
+<code class="descname">EYELID_OUTER</code><em class="property"> = 'eyelid_outer'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.EYELID_OUTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.INTERFACE">
+<code class="descname">INTERFACE</code><em class="property"> = {'controlmode': ('controlmode', 'Control Mode', ['Simple', 'Detail']), 'convergence': ('convergence', 'Convergence'), 'eyeball_influence': ('eyeball_influence', 'Eyeball Influence'), 'eyeopen': ('open', 'Open'), 'lookat_t': ('lookat_t', 'Lookat Translate'), 'master_lookat_blend': ('master_lookatblend', 'Follow Head'), 'masterlookat_r': ('masterlookat_r', 'Eyes Lookat Rotate'), 'masterlookat_t': ('masterlookat_t', 'Eyes Lookat Translate'), 'masteropen': ('masteropen', 'Eyes Open')}</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.INTERFACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.LOWERLID">
+<code class="descname">LOWERLID</code><em class="property"> = 'bot'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.LOWERLID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.NODES">
+<code class="descname">NODES</code><em class="property"> = {'capture_guide': ('capture_region_sphere',), 'eyegeo': ('eye_geo',), 'eyelookat': ('eye_lookat_ctrl',), 'eyelookatnull': ('eye_lookat_null',), 'eyelookup': ('eye_lookup',), 'eyenull': ('eye_null',), 'eyeroot': ('eye_root',), 'eyesroot': ('eyes_root',), 'lidroot': ('lid_root',), 'masterlookat': ('master_lookat',), 'masterlookat_target': ('master_lookat_target',), 'orbitbone': ('orbit_bone',), 'orbitroot': ('orbit_root',)}</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.NODES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.UPPERLID">
+<code class="descname">UPPERLID</code><em class="property"> = 'top'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.UPPERLID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.buildEyeRig">
+<code class="descname">buildEyeRig</code><span class="sig-paren">(</span><em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.buildEyeRig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds one side of the eye rig
+side: The side of the eye to build
+ismain: Whether the eye to build is the main side</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.buildRigControls">
+<code class="descname">buildRigControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.buildRigControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the bones and controls based on the guide objects.
+prefix: the prefix to use for all the nodes created
+assetnode: the autorig assset node in which to create the rig
+model: the module’s model for build options
+buildguide: the module’s buildguides 
+parent: a function takes a node as the argument and parent the node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.captureGeometry">
+<code class="descname">captureGeometry</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.captureGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Captures the geometry</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createCaptureRegionSphere">
+<code class="descname">createCaptureRegionSphere</code><span class="sig-paren">(</span><em>grp</em>, <em>capture_guide</em>, <em>eyelid_guide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createCaptureRegionSphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recreates the eye capture sphere based on the capture guide</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createEyeGeo">
+<code class="descname">createEyeGeo</code><span class="sig-paren">(</span><em>grp</em>, <em>geo_path</em>, <em>grp_path</em>, <em>mirror=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createEyeGeo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a node reference to the eye geometry</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createEyeOpenCloseParm">
+<code class="descname">createEyeOpenCloseParm</code><span class="sig-paren">(</span><em>key</em>, <em>grp</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createEyeOpenCloseParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createEyelidBones">
+<code class="descname">createEyelidBones</code><span class="sig-paren">(</span><em>eyelid_position</em>, <em>eyeroot_guide</em>, <em>parent</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createEyelidBones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the upperlid and lowerlid bones for the given eyelid_guide
+eyelid_position: the position of the eyelidbones (ex.CENTER, INNER, OUTER)
+eyeroot_guide: the guide for the eyeroot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createFolderTemplate">
+<code class="descname">createFolderTemplate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createFolderTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the folder parm template for the module.
+model: the module’s model for build options</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createGroups">
+<code class="descname">createGroups</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createGroups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createLookAtCHOP">
+<code class="descname">createLookAtCHOP</code><span class="sig-paren">(</span><em>node</em>, <em>lookat</em>, <em>lookup</em>, <em>blendvalue=1</em>, <em>blendnode=None</em>, <em>blendparm=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createLookAtCHOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a simple look at CHOP.
+node: the node to in which to create the CHOP
+lookat: the look at target
+lookup: the look up target</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createLookAtTParm">
+<code class="descname">createLookAtTParm</code><span class="sig-paren">(</span><em>parm_id</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createLookAtTParm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createOrbitParentConstraint">
+<code class="descname">createOrbitParentConstraint</code><span class="sig-paren">(</span><em>lid_root</em>, <em>orbit_root</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.createOrbitParentConstraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.getSideGroup">
+<code class="descname">getSideGroup</code><span class="sig-paren">(</span><em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.getSideGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.getSidePrefix">
+<code class="descname">getSidePrefix</code><span class="sig-paren">(</span><em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.getSidePrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.linkEyeInterface">
+<code class="descname">linkEyeInterface</code><span class="sig-paren">(</span><em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.linkEyeInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Link the parm interface of individual eye elements</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.linkRigInterfaceParms">
+<code class="descname">linkRigInterfaceParms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.linkRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.overrideCaptureRegion">
+<code class="descname">overrideCaptureRegion</code><span class="sig-paren">(</span><em>capture_guide</em>, <em>eyelid_guide</em>, <em>grp</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.overrideCaptureRegion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.postCaptureEyeSetup">
+<code class="descname">postCaptureEyeSetup</code><span class="sig-paren">(</span><em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.postCaptureEyeSetup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.setupEyelidDriver">
+<code class="descname">setupEyelidDriver</code><span class="sig-paren">(</span><em>position</em>, <em>grp</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.autoRigsEyeBuilder.AutoRigsEyeBuilder.setupEyelidDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set up expression for driving the open-close of eyelids</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.eye.buildEyeGuide">
+<span id="autorigs-modules-basicface-eye-buildeyeguide-module"></span><h2>autorigs.modules.basicFace.eye.buildEyeGuide module<a class="headerlink" href="#module-autorigs.modules.basicFace.eye.buildEyeGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.eye.buildEyeGuide.</code><code class="descname">EyeGuide</code><span class="sig-paren">(</span><em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseGuide" title="autorigs.modules.base.buildBaseGuide.BaseGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.CAPTURE_GUIDE">
+<code class="descname">CAPTURE_GUIDE</code><em class="property"> = 'capture_guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.CAPTURE_GUIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.CLOSED_GUIDE">
+<code class="descname">CLOSED_GUIDE</code><em class="property"> = 'closed_guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.CLOSED_GUIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.DEFAULT_CENTER_RANGE">
+<code class="descname">DEFAULT_CENTER_RANGE</code><em class="property"> = (-60, 60)</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.DEFAULT_CENTER_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.DEFAULT_INNER_RANGE">
+<code class="descname">DEFAULT_INNER_RANGE</code><em class="property"> = (-60, 0)</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.DEFAULT_INNER_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.DEFAULT_OUTER_RANGE">
+<code class="descname">DEFAULT_OUTER_RANGE</code><em class="property"> = (0, 60)</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.DEFAULT_OUTER_RANGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CAPTURELINE">
+<code class="descname">EYELID_CAPTURELINE</code><em class="property"> = 'eyelid_captureline'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CAPTURELINE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CAPTURE_COLOR">
+<code class="descname">EYELID_CAPTURE_COLOR</code><em class="property"> = (0, 1, 0)</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CAPTURE_COLOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CENTER">
+<code class="descname">EYELID_CENTER</code><em class="property"> = 'eyelid_center'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CLOSE_COLOR">
+<code class="descname">EYELID_CLOSE_COLOR</code><em class="property"> = (1, 0, 0)</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_CLOSE_COLOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_GUIDE">
+<code class="descname">EYELID_GUIDE</code><em class="property"> = 'eyelid_guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_GUIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_INNER">
+<code class="descname">EYELID_INNER</code><em class="property"> = 'eyelid_inner'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_INNER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_OPEN_COLOR">
+<code class="descname">EYELID_OPEN_COLOR</code><em class="property"> = (1, 0, 0)</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_OPEN_COLOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_OUTER">
+<code class="descname">EYELID_OUTER</code><em class="property"> = 'eyelid_outer'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYELID_OUTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYES_ROOT">
+<code class="descname">EYES_ROOT</code><em class="property"> = 'eyesroot'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYES_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYE_ROOT">
+<code class="descname">EYE_ROOT</code><em class="property"> = 'eyeroot'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.EYE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.GUIDE_CURVE">
+<code class="descname">GUIDE_CURVE</code><em class="property"> = 'guide_curve'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.GUIDE_CURVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOOKAT">
+<code class="descname">LOOKAT</code><em class="property"> = 'lookat'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOOKAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOOKAT_GUIDECURVE">
+<code class="descname">LOOKAT_GUIDECURVE</code><em class="property"> = 'lookat_guidecurve'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOOKAT_GUIDECURVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOOKAT_ROOT">
+<code class="descname">LOOKAT_ROOT</code><em class="property"> = 'lookat_root'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOOKAT_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOWERLID">
+<code class="descname">LOWERLID</code><em class="property"> = 'lowerlid_guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.LOWERLID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.MASTER_LOOKAT">
+<code class="descname">MASTER_LOOKAT</code><em class="property"> = 'master_lookat'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.MASTER_LOOKAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.OPENED_BOT">
+<code class="descname">OPENED_BOT</code><em class="property"> = 'opened_bot_guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.OPENED_BOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.OPENED_TOP">
+<code class="descname">OPENED_TOP</code><em class="property"> = 'opened_top_guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.OPENED_TOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.RX_DRIVER">
+<code class="descname">RX_DRIVER</code><em class="property"> = 'angle'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.RX_DRIVER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.SIDE_DEFAULT">
+<code class="descname">SIDE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.SIDE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.UPPERLID">
+<code class="descname">UPPERLID</code><em class="property"> = 'upperlid_guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.UPPERLID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.addRadiusParamter">
+<code class="descname">addRadiusParamter</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.addRadiusParamter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a radius paramter to the interface</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildEyelidGuides">
+<code class="descname">buildEyelidGuides</code><span class="sig-paren">(</span><em>gdn</em>, <em>mgdn</em>, <em>parent</em>, <em>mirror_parent</em>, <em>curve_range</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildEyelidGuides" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the eyelid guides for one position (i.e. inner, center, outer)
+gdn: guidenodesdata
+mgdn: mirror_guidendoesdata
+parent: parent for main
+mirror_parent: parent for mirror
+curve_range: the range for the guide curve to rotate (about y)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildEyelidGuidesFromExisting">
+<code class="descname">buildEyelidGuidesFromExisting</code><span class="sig-paren">(</span><em>gdn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildEyelidGuidesFromExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildFromJsonExisting">
+<code class="descname">buildFromJsonExisting</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildFromJsonNew">
+<code class="descname">buildFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.buildFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createCaptureGuide">
+<code class="descname">createCaptureGuide</code><span class="sig-paren">(</span><em>gdn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createCaptureGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the capture region guide for the eye</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidCaptureLines">
+<code class="descname">createEyelidCaptureLines</code><span class="sig-paren">(</span><em>gdn</em>, <em>eye_root</em>, <em>eyelid_guides</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidCaptureLines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the capture lines from eye root to each eyelid guide</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidGuideAlongCircle">
+<code class="descname">createEyelidGuideAlongCircle</code><span class="sig-paren">(</span><em>name</em>, <em>parent</em>, <em>circle</em>, <em>flip=False</em>, <em>r_range=(0</em>, <em>60)</em>, <em>offset=0</em>, <em>translate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidGuideAlongCircle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an eyelid guide that orbits around createNodethe center of the circle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidGuideCHOP">
+<code class="descname">createEyelidGuideCHOP</code><span class="sig-paren">(</span><em>node</em>, <em>center_guide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidGuideCHOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates proportional parent blend constraint to the center_gudie for eyelid guide</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidSOP">
+<code class="descname">createEyelidSOP</code><span class="sig-paren">(</span><em>parent</em>, <em>gdn</em>, <em>curve_range</em>, <em>negative=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createEyelidSOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the SOP for the eyelid guide curve</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createLookAtCHOP">
+<code class="descname">createLookAtCHOP</code><span class="sig-paren">(</span><em>node</em>, <em>master_lookat</em>, <em>eyeroot</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createLookAtCHOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the CHOP network for the lookat guide</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createSimpleParentCHOP">
+<code class="descname">createSimpleParentCHOP</code><span class="sig-paren">(</span><em>node</em>, <em>parent</em>, <em>maskvalue</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.createSimpleParentCHOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a simple parent blend constraint
+node: the node to be parented
+parent: the parent node
+maskvalue: the mask value to apply on the blend</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.deleteGuides">
+<code class="descname">deleteGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.displayGuides">
+<code class="descname">displayGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.displayGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.flipAngleParm">
+<code class="descname">flipAngleParm</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.flipAngleParm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flip the angle parm to mirror the angle properly</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em>, <em>ismain=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.lockGuides">
+<code class="descname">lockGuides</code><span class="sig-paren">(</span><em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.lockGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.snapEyeToGeometry">
+<code class="descname">snapEyeToGeometry</code><span class="sig-paren">(</span><em>node</em>, <em>geo</em>, <em>primgrp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.snapEyeToGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Snap the eye_root to the eye geometry
+node: the obj node of the geometry
+geometry: the geometry data (hou.Geometry)
+primgrp: the primitive group for bounding box</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.updateMirror">
+<code class="descname">updateMirror</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.updateMirror" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.updateSide">
+<code class="descname">updateSide</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.buildEyeGuide.EyeGuide.updateSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.eye.eyeGuideController">
+<span id="autorigs-modules-basicface-eye-eyeguidecontroller-module"></span><h2>autorigs.modules.basicFace.eye.eyeGuideController module<a class="headerlink" href="#module-autorigs.modules.basicFace.eye.eyeGuideController" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.eye.eyeGuideController.</code><code class="descname">EyeGuideController</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onEyeGeoChanged">
+<code class="descname">onEyeGeoChanged</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onEyeGeoChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onEyeGeoGroupChanged">
+<code class="descname">onEyeGeoGroupChanged</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onEyeGeoGroupChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onMirrorToggled">
+<code class="descname">onMirrorToggled</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onMirrorToggled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onSideChanged">
+<code class="descname">onSideChanged</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onSideChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onSnapButtonPressed">
+<code class="descname">onSnapButtonPressed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideController.EyeGuideController.onSnapButtonPressed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.eye.eyeGuideModel">
+<span id="autorigs-modules-basicface-eye-eyeguidemodel-module"></span><h2>autorigs.modules.basicFace.eye.eyeGuideModel module<a class="headerlink" href="#module-autorigs.modules.basicFace.eye.eyeGuideModel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.eye.eyeGuideModel.</code><code class="descname">EyeGuideModel</code><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.baseGuideModel.BaseGuideModel" title="autorigs.modules.base.baseGuideModel.BaseGuideModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.baseGuideModel.BaseGuideModel</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.SIDE_DEFAULT">
+<code class="descname">SIDE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.SIDE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addSnapToEyeGeoCallback">
+<code class="descname">addSnapToEyeGeoCallback</code><span class="sig-paren">(</span><em>fxn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addSnapToEyeGeoCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addUpdateEyeGeoCallback">
+<code class="descname">addUpdateEyeGeoCallback</code><span class="sig-paren">(</span><em>fxn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addUpdateEyeGeoCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addUpdateMirrorCallback">
+<code class="descname">addUpdateMirrorCallback</code><span class="sig-paren">(</span><em>fxn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addUpdateMirrorCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addUpdateSideCallback">
+<code class="descname">addUpdateSideCallback</code><span class="sig-paren">(</span><em>fxn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.addUpdateSideCallback" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getEyeGeo">
+<code class="descname">getEyeGeo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getEyeGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getEyeGeoGroup">
+<code class="descname">getEyeGeoGroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getEyeGeoGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getGeometry">
+<code class="descname">getGeometry</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getGeometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getMirrorGeo">
+<code class="descname">getMirrorGeo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getMirrorGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getMirrorGeoGroup">
+<code class="descname">getMirrorGeoGroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getMirrorGeoGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getSide">
+<code class="descname">getSide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.getSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.isMirrored">
+<code class="descname">isMirrored</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.isMirrored" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setMirrorGeoGroup">
+<code class="descname">setMirrorGeoGroup</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setMirrorGeoGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setMirrored">
+<code class="descname">setMirrored</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setMirrored" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setSide">
+<code class="descname">setSide</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setUseMainGeo">
+<code class="descname">setUseMainGeo</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.setUseMainGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.snapToEyeGeo">
+<code class="descname">snapToEyeGeo</code><span class="sig-paren">(</span><em>geo_node</em>, <em>grp</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.snapToEyeGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.updateEyeGeo">
+<code class="descname">updateEyeGeo</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.updateEyeGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.updateEyeGeoGroup">
+<code class="descname">updateEyeGeoGroup</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.updateEyeGeoGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.updateMirrorGeo">
+<code class="descname">updateMirrorGeo</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.updateMirrorGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.useMainGeo">
+<code class="descname">useMainGeo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideModel.EyeGuideModel.useMainGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.eye.eyeGuideOptions">
+<span id="autorigs-modules-basicface-eye-eyeguideoptions-module"></span><h2>autorigs.modules.basicFace.eye.eyeGuideOptions module<a class="headerlink" href="#module-autorigs.modules.basicFace.eye.eyeGuideOptions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.eye.eyeGuideOptions.</code><code class="descname">ModuleOptionsWidget</code><span class="sig-paren">(</span><em>buildguide</em>, <em>model</em>, <em>controller</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget" title="autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseWidget.BaseOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.SIDE_BUTTON_LABELS">
+<code class="descname">SIDE_BUTTON_LABELS</code><em class="property"> = ['Left', 'Right']</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.SIDE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.changeFormLayout">
+<code class="descname">changeFormLayout</code><span class="sig-paren">(</span><em>formlayout</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.changeFormLayout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.onEyeGeoChanged">
+<code class="descname">onEyeGeoChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.onEyeGeoChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.onMirrorGeoChanged">
+<code class="descname">onMirrorGeoChanged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.onMirrorGeoChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.repopulateList">
+<code class="descname">repopulateList</code><span class="sig-paren">(</span><em>dropdown_menu</em>, <em>new_list</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.repopulateList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.toggleMirrorGeometryOptions">
+<code class="descname">toggleMirrorGeometryOptions</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.toggleMirrorGeometryOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.toggleMirrorOptions">
+<code class="descname">toggleMirrorOptions</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideOptions.ModuleOptionsWidget.toggleMirrorOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.eye.eyeGuideParams">
+<span id="autorigs-modules-basicface-eye-eyeguideparams-module"></span><h2>autorigs.modules.basicFace.eye.eyeGuideParams module<a class="headerlink" href="#module-autorigs.modules.basicFace.eye.eyeGuideParams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.basicFace.eye.eyeGuideParams.</code><code class="descname">ModuleParamsWidget</code><span class="sig-paren">(</span><em>eyeguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget" title="autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.autoRigsBaseWidget.BaseParamWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.EYELID_CENTER_GUIDE_NAME">
+<code class="descname">EYELID_CENTER_GUIDE_NAME</code><em class="property"> = 'Eyelid Center Guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.EYELID_CENTER_GUIDE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.EYELID_INNER_GUIDE_NAME">
+<code class="descname">EYELID_INNER_GUIDE_NAME</code><em class="property"> = 'Eyelid Inner Guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.EYELID_INNER_GUIDE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.EYELID_OUTER_GUIDE_NAME">
+<code class="descname">EYELID_OUTER_GUIDE_NAME</code><em class="property"> = 'Eyelid Outer Guide'</em><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.EYELID_OUTER_GUIDE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.createEyelidGuideTab">
+<code class="descname">createEyelidGuideTab</code><span class="sig-paren">(</span><em>guide_name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.createEyelidGuideTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the widget of the eyelid guide tab</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.flipTabs">
+<code class="descname">flipTabs</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.basicFace.eye.eyeGuideParams.ModuleParamsWidget.flipTabs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.basicFace.eye">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.basicFace.eye" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.basicFace.eye package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.eye.autoRigsEyeBuilder">autorigs.modules.basicFace.eye.autoRigsEyeBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.eye.buildEyeGuide">autorigs.modules.basicFace.eye.buildEyeGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.eye.eyeGuideController">autorigs.modules.basicFace.eye.eyeGuideController module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.eye.eyeGuideModel">autorigs.modules.basicFace.eye.eyeGuideModel module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.eye.eyeGuideOptions">autorigs.modules.basicFace.eye.eyeGuideOptions module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.eye.eyeGuideParams">autorigs.modules.basicFace.eye.eyeGuideParams module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.basicFace.eye">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+  <li><a href="autorigs.modules.basicFace.html">autorigs.modules.basicFace package</a><ul>
+      <li>Previous: <a href="autorigs.modules.basicFace.html" title="previous chapter">autorigs.modules.basicFace package</a></li>
+      <li>Next: <a href="autorigs.modules.basicFace.jaw.html" title="next chapter">autorigs.modules.basicFace.jaw package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.basicFace.eye.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.basicFace.eye.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,7 +1,0 @@
-defaulttools module
-===================
-
-.. automodule:: defaulttools
-    :members:
-    :undoc-members:
-    :show-inheritance:

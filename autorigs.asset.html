@@ -1,0 +1,914 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.asset package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.asset.geometry package" href="autorigs.asset.geometry.html" />
+    <link rel="prev" title="autorigs package" href="autorigs.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-asset-package">
+<h1>autorigs.asset package<a class="headerlink" href="#autorigs-asset-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autorigs.asset.geometry.html">autorigs.asset.geometry package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.asset.geometry.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.asset.geometry.html#module-autorigs.asset.geometry.autoRigsCaptureBuilder">autorigs.asset.geometry.autoRigsCaptureBuilder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.asset.geometry.html#module-autorigs.asset.geometry.autoRigsGeoBuilder">autorigs.asset.geometry.autoRigsGeoBuilder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.asset.geometry.html#module-autorigs.asset.geometry.buildGeometryGuide">autorigs.asset.geometry.buildGeometryGuide module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autorigs.asset.geometry.html#module-autorigs.asset.geometry">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.asset.autoRigsAsset">
+<span id="autorigs-asset-autorigsasset-module"></span><h2>autorigs.asset.autoRigsAsset module<a class="headerlink" href="#module-autorigs.asset.autoRigsAsset" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset">
+<em class="property">class </em><code class="descclassname">autorigs.asset.autoRigsAsset.</code><code class="descname">AutoRigsAsset</code><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.JSON_SECTION">
+<code class="descname">JSON_SECTION</code><em class="property"> = 'AutorigSettings'</em><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.JSON_SECTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneDigitMatchFKtoIKSection">
+<code class="descname">addOneDigitMatchFKtoIKSection</code><span class="sig-paren">(</span><em>moduletype</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneDigitMatchFKtoIKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneDigitMatchIKtoFKSection">
+<code class="descname">addOneDigitMatchIKtoFKSection</code><span class="sig-paren">(</span><em>moduletype</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneDigitMatchIKtoFKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneExtremityMatchFKtoIKSection">
+<code class="descname">addOneExtremityMatchFKtoIKSection</code><span class="sig-paren">(</span><em>moduletype</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneExtremityMatchFKtoIKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneExtremityMatchIKtoFKSection">
+<code class="descname">addOneExtremityMatchIKtoFKSection</code><span class="sig-paren">(</span><em>moduletype</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneExtremityMatchIKtoFKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneImportToolutilsSection">
+<code class="descname">addOneImportToolutilsSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneImportToolutilsSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneMatchFKtoIKSection">
+<code class="descname">addOneMatchFKtoIKSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneMatchFKtoIKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneMatchIKtoFKSection">
+<code class="descname">addOneMatchIKtoFKSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneMatchIKtoFKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneNoodleTwistSection">
+<code class="descname">addOneNoodleTwistSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneNoodleTwistSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneQuadMatchFKtoIKSection">
+<code class="descname">addOneQuadMatchFKtoIKSection</code><span class="sig-paren">(</span><em>moduletype</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneQuadMatchFKtoIKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneQuadMatchIKtoFKSection">
+<code class="descname">addOneQuadMatchIKtoFKSection</code><span class="sig-paren">(</span><em>moduletype</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneQuadMatchIKtoFKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneTailMatchFKtoIKSection">
+<code class="descname">addOneTailMatchFKtoIKSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addOneTailMatchFKtoIKSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.addTextToPythonModule">
+<code class="descname">addTextToPythonModule</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.addTextToPythonModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.appendNewModule">
+<code class="descname">appendNewModule</code><span class="sig-paren">(</span><em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.appendNewModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.buildInitialAsset">
+<code class="descname">buildInitialAsset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.buildInitialAsset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.buildRig">
+<code class="descname">buildRig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.createMasterModule">
+<code class="descname">createMasterModule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.createMasterModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.deleteAllModules">
+<code class="descname">deleteAllModules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.deleteAllModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.deleteModule">
+<code class="descname">deleteModule</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.deleteModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.existingFromJson">
+<code class="descname">existingFromJson</code><span class="sig-paren">(</span><em>assetnode</em>, <em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.existingFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getAssetName">
+<code class="descname">getAssetName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getAssetName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getAutoRigsModules">
+<code class="descname">getAutoRigsModules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getAutoRigsModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getBuiltAsset">
+<code class="descname">getBuiltAsset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getBuiltAsset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getBuiltGeometryNodes">
+<code class="descname">getBuiltGeometryNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getBuiltGeometryNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getGeoObj">
+<code class="descname">getGeoObj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getGeoObj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getGeometryGuide">
+<code class="descname">getGeometryGuide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getGeometryGuide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getHoudiniVersion">
+<code class="descname">getHoudiniVersion</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getHoudiniVersion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchDigitFKtoIKPythonSection">
+<code class="descname">getMatchDigitFKtoIKPythonSection</code><span class="sig-paren">(</span><em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchDigitFKtoIKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchDigitIKtoFKPythonSection">
+<code class="descname">getMatchDigitIKtoFKPythonSection</code><span class="sig-paren">(</span><em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchDigitIKtoFKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityFKtoIKPythonSection">
+<code class="descname">getMatchExtremityFKtoIKPythonSection</code><span class="sig-paren">(</span><em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityFKtoIKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityFKtoIKStr">
+<code class="descname">getMatchExtremityFKtoIKStr</code><span class="sig-paren">(</span><em>moduletype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityFKtoIKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityIKtoFKPythonSection">
+<code class="descname">getMatchExtremityIKtoFKPythonSection</code><span class="sig-paren">(</span><em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityIKtoFKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityIKtoFKStr">
+<code class="descname">getMatchExtremityIKtoFKStr</code><span class="sig-paren">(</span><em>moduletype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchExtremityIKtoFKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchFKtoIKPythonSection">
+<code class="descname">getMatchFKtoIKPythonSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchFKtoIKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchFKtoIKStr">
+<code class="descname">getMatchFKtoIKStr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchFKtoIKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchIKtoFKPythonSection">
+<code class="descname">getMatchIKtoFKPythonSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchIKtoFKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchIKtoFKStr">
+<code class="descname">getMatchIKtoFKStr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchIKtoFKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchQuadFKtoIKPythonSection">
+<code class="descname">getMatchQuadFKtoIKPythonSection</code><span class="sig-paren">(</span><em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchQuadFKtoIKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchQuadIKtoFKPythonSection">
+<code class="descname">getMatchQuadIKtoFKPythonSection</code><span class="sig-paren">(</span><em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchQuadIKtoFKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchTailFKtoIKPythonSection">
+<code class="descname">getMatchTailFKtoIKPythonSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchTailFKtoIKPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchTailFKtoIKStr">
+<code class="descname">getMatchTailFKtoIKStr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getMatchTailFKtoIKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getNoodleTwistPythonSection">
+<code class="descname">getNoodleTwistPythonSection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getNoodleTwistPythonSection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getNoodleTwistStr">
+<code class="descname">getNoodleTwistStr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getNoodleTwistStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.getSettings">
+<code class="descname">getSettings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.getSettings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.hasUnsavedChanges">
+<code class="descname">hasUnsavedChanges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.hasUnsavedChanges" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.isBuilt">
+<code class="descname">isBuilt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.isBuilt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.newFromJson">
+<code class="descname">newFromJson</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.newFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.preBuildfunctions">
+<code class="descname">preBuildfunctions</code><span class="sig-paren">(</span><em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.preBuildfunctions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.saveAndLockNode">
+<code class="descname">saveAndLockNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.saveAndLockNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.setAssetSelected">
+<code class="descname">setAssetSelected</code><span class="sig-paren">(</span><em>selected</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.setAssetSelected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.setBuiltRig">
+<code class="descname">setBuiltRig</code><span class="sig-paren">(</span><em>built</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.setBuiltRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.setFinalParameterInterface">
+<code class="descname">setFinalParameterInterface</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.setFinalParameterInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.setGeoObj">
+<code class="descname">setGeoObj</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.setGeoObj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.setPostBuildParameterInterface">
+<code class="descname">setPostBuildParameterInterface</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.setPostBuildParameterInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.setSimpleSettings">
+<code class="descname">setSimpleSettings</code><span class="sig-paren">(</span><em>create_values</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.setSimpleSettings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.unlinkAllModules">
+<code class="descname">unlinkAllModules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.unlinkAllModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.unlockNode">
+<code class="descname">unlockNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.unlockNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.updateParents">
+<code class="descname">updateParents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.updateParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAsset.writeToHDA">
+<code class="descname">writeToHDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAsset.writeToHDA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAssetFactory">
+<em class="property">class </em><code class="descclassname">autorigs.asset.autoRigsAsset.</code><code class="descname">AutoRigsAssetFactory</code><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAssetFactory" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAssetFactory.createFromDefault">
+<em class="property">classmethod </em><code class="descname">createFromDefault</code><span class="sig-paren">(</span><em>settings</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAssetFactory.createFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAssetFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>assetnode</em>, <em>json</em>, <em>settings</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAssetFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsAsset.AutoRigsAssetFactory.defaults">
+<code class="descname">defaults</code><em class="property"> = &lt;module 'autorigs.asset.defaultProperties' from '/home/jtomori/coding/houdini_additional_python_docs/python2.7libs/autorigs/asset/defaultProperties.pyc'&gt;</em><a class="headerlink" href="#autorigs.asset.autoRigsAsset.AutoRigsAssetFactory.defaults" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.asset.autoRigsModules">
+<span id="autorigs-asset-autorigsmodules-module"></span><h2>autorigs.asset.autoRigsModules module<a class="headerlink" href="#module-autorigs.asset.autoRigsModules" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules">
+<em class="property">class </em><code class="descclassname">autorigs.asset.autoRigsModules.</code><code class="descname">AutoRigsModules</code><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.appendNewModule">
+<code class="descname">appendNewModule</code><span class="sig-paren">(</span><em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.appendNewModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.buildModules">
+<code class="descname">buildModules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.buildModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.deleteAllModules">
+<code class="descname">deleteAllModules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.deleteAllModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.deleteModule">
+<code class="descname">deleteModule</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.deleteModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.getList">
+<code class="descname">getList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.getList" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.getMasterModule">
+<code class="descname">getMasterModule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.getMasterModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.getModulesByType">
+<code class="descname">getModulesByType</code><span class="sig-paren">(</span><em>moduletype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.getModulesByType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.getModulesDict">
+<code class="descname">getModulesDict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.getModulesDict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.unlinkAllModules">
+<code class="descname">unlinkAllModules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.unlinkAllModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.unlinkModule">
+<code class="descname">unlinkModule</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.unlinkModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.updateParentExceptModule">
+<code class="descname">updateParentExceptModule</code><span class="sig-paren">(</span><em>exceptmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.updateParentExceptModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsModules.AutoRigsModules.updateParents">
+<code class="descname">updateParents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsModules.AutoRigsModules.updateParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.asset.autoRigsSettings">
+<span id="autorigs-asset-autorigssettings-module"></span><h2>autorigs.asset.autoRigsSettings module<a class="headerlink" href="#module-autorigs.asset.autoRigsSettings" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings">
+<em class="property">class </em><code class="descclassname">autorigs.asset.autoRigsSettings.</code><code class="descname">AutoRigsSettings</code><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSETNAME_DEFAULT">
+<code class="descname">ASSETNAME_DEFAULT</code><em class="property"> = ''</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSETNAME_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSETTYPE_DEFAULT">
+<code class="descname">ASSETTYPE_DEFAULT</code><em class="property"> = ''</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSETTYPE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_ICON_PATH_DEFAULT">
+<code class="descname">ASSET_ICON_PATH_DEFAULT</code><em class="property"> = 'MISC_digital_asset'</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_ICON_PATH_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_DEFAULT">
+<code class="descname">ASSET_PATH_DEFAULT</code><em class="property"> = 'TEST_ASSET.hda'</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_EMBED_HIP">
+<code class="descname">ASSET_PATH_EMBED_HIP</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_EMBED_HIP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_FILE">
+<code class="descname">ASSET_PATH_FILE</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_FILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_OPTION_DEFAULT">
+<code class="descname">ASSET_PATH_OPTION_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.ASSET_PATH_OPTION_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.CAPTURE_DISPLAY_DEFORM">
+<code class="descname">CAPTURE_DISPLAY_DEFORM</code><em class="property"> = False</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.CAPTURE_DISPLAY_DEFORM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.CAPTURE_SHOW_NETWORK_DEFAULT">
+<code class="descname">CAPTURE_SHOW_NETWORK_DEFAULT</code><em class="property"> = True</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.CAPTURE_SHOW_NETWORK_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.CAPTURE_TYPE_DEFAULT">
+<code class="descname">CAPTURE_TYPE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.CAPTURE_TYPE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_NAME_DEFAULT">
+<code class="descname">GEO_NAME_DEFAULT</code><em class="property"> = 'geo_skin'</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_NAME_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_AS_IS">
+<code class="descname">GEO_PLACEMENT_AS_IS</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_AS_IS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_AUTOPLACE">
+<code class="descname">GEO_PLACEMENT_AUTOPLACE</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_AUTOPLACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_DEFAULT">
+<code class="descname">GEO_PLACEMENT_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_LABELS">
+<code class="descname">GEO_PLACEMENT_LABELS</code><em class="property"> = ['As Is', 'Autoplace']</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_PLACEMENT_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_DEFAULT">
+<code class="descname">GEO_SOURCE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_EMBED">
+<code class="descname">GEO_SOURCE_EMBED</code><em class="property"> = True</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_EMBED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_FROM_FILE">
+<code class="descname">GEO_SOURCE_FROM_FILE</code><em class="property"> = 2</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_FROM_FILE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_FROM_OPERATOR">
+<code class="descname">GEO_SOURCE_FROM_OPERATOR</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_FROM_OPERATOR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_NONE">
+<code class="descname">GEO_SOURCE_NONE</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_ROTATE_DEFAULT">
+<code class="descname">GEO_SOURCE_ROTATE_DEFAULT</code><em class="property"> = (0, 0, 0)</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_ROTATE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_SCALE_DEFAULT">
+<code class="descname">GEO_SOURCE_SCALE_DEFAULT</code><em class="property"> = (1, 1, 1)</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_SCALE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_STAND_IN">
+<code class="descname">GEO_SOURCE_STAND_IN</code><em class="property"> = 3</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_STAND_IN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_TRANSLATE_DEFAULT">
+<code class="descname">GEO_SOURCE_TRANSLATE_DEFAULT</code><em class="property"> = (0, 0, 0)</em><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.GEO_SOURCE_TRANSLATE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetIcon">
+<code class="descname">getAssetIcon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetIcon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetIconPath">
+<code class="descname">getAssetIconPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetIconPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetName">
+<code class="descname">getAssetName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetPathFile">
+<code class="descname">getAssetPathFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetPathFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetPathOption">
+<code class="descname">getAssetPathOption</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetPathOption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetType">
+<code class="descname">getAssetType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getAssetType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getAutoPlacement">
+<code class="descname">getAutoPlacement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getAutoPlacement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getCaptureDisplay">
+<code class="descname">getCaptureDisplay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getCaptureDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getCaptureNetwork">
+<code class="descname">getCaptureNetwork</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getCaptureNetwork" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getCaptureType">
+<code class="descname">getCaptureType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getCaptureType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoEmbed">
+<code class="descname">getGeoEmbed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoEmbed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoFile">
+<code class="descname">getGeoFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoFileOffset">
+<code class="descname">getGeoFileOffset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoFileOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoFilePlacement">
+<code class="descname">getGeoFilePlacement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoFilePlacement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoName">
+<code class="descname">getGeoName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperator">
+<code class="descname">getGeoOperator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperatorGroup">
+<code class="descname">getGeoOperatorGroup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperatorGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperatorOffset">
+<code class="descname">getGeoOperatorOffset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperatorOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperatorPlacement">
+<code class="descname">getGeoOperatorPlacement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoOperatorPlacement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoSourceOption">
+<code class="descname">getGeoSourceOption</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoSourceOption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoStandinOffset">
+<code class="descname">getGeoStandinOffset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.getGeoStandinOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetIconPath">
+<code class="descname">setAssetIconPath</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetIconPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetName">
+<code class="descname">setAssetName</code><span class="sig-paren">(</span><em>assetname</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetPathFile">
+<code class="descname">setAssetPathFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetPathFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetPathOption">
+<code class="descname">setAssetPathOption</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setAssetPathOption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setCaptureDisplay">
+<code class="descname">setCaptureDisplay</code><span class="sig-paren">(</span><em>capturedisplay</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setCaptureDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setCaptureNetwork">
+<code class="descname">setCaptureNetwork</code><span class="sig-paren">(</span><em>capturenetwork</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setCaptureNetwork" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setCaptureType">
+<code class="descname">setCaptureType</code><span class="sig-paren">(</span><em>capturetype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setCaptureType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoEmbed">
+<code class="descname">setGeoEmbed</code><span class="sig-paren">(</span><em>embed</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoEmbed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoFile">
+<code class="descname">setGeoFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoFileOffset">
+<code class="descname">setGeoFileOffset</code><span class="sig-paren">(</span><em>translate</em>, <em>rotate</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoFileOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoFilePlacement">
+<code class="descname">setGeoFilePlacement</code><span class="sig-paren">(</span><em>placement</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoFilePlacement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoName">
+<code class="descname">setGeoName</code><span class="sig-paren">(</span><em>geoname</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperator">
+<code class="descname">setGeoOperator</code><span class="sig-paren">(</span><em>operator</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperatorGroup">
+<code class="descname">setGeoOperatorGroup</code><span class="sig-paren">(</span><em>group</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperatorGroup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperatorOffset">
+<code class="descname">setGeoOperatorOffset</code><span class="sig-paren">(</span><em>translate</em>, <em>rotate</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperatorOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperatorPlacement">
+<code class="descname">setGeoOperatorPlacement</code><span class="sig-paren">(</span><em>placement</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoOperatorPlacement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoSourceOption">
+<code class="descname">setGeoSourceOption</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoSourceOption" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoStandinOffset">
+<code class="descname">setGeoStandinOffset</code><span class="sig-paren">(</span><em>translate</em>, <em>rotate</em>, <em>scale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setGeoStandinOffset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.setSimpleSettings">
+<code class="descname">setSimpleSettings</code><span class="sig-paren">(</span><em>assetname</em>, <em>assettype</em>, <em>geosource</em>, <em>geodata</em>, <em>assetfilesource</em>, <em>assetfiledata</em>, <em>capturenetwork</em>, <em>capturetype</em>, <em>displaydeform</em>, <em>asseticonpath</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.setSimpleSettings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.asset.autoRigsSettings.AutoRigsSettings.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.autoRigsSettings.AutoRigsSettings.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.asset.defaultProperties">
+<span id="autorigs-asset-defaultproperties-module"></span><h2>autorigs.asset.defaultProperties module<a class="headerlink" href="#module-autorigs.asset.defaultProperties" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="autorigs.asset.defaultProperties.ASSET_ICON_LOCATION">
+<code class="descclassname">autorigs.asset.defaultProperties.</code><code class="descname">ASSET_ICON_LOCATION</code><em class="property"> = ''</em><a class="headerlink" href="#autorigs.asset.defaultProperties.ASSET_ICON_LOCATION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Autorig default JSON files</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.asset.moduleFactory">
+<span id="autorigs-asset-modulefactory-module"></span><h2>autorigs.asset.moduleFactory module<a class="headerlink" href="#module-autorigs.asset.moduleFactory" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="autorigs.asset.moduleFactory.createModule">
+<code class="descclassname">autorigs.asset.moduleFactory.</code><code class="descname">createModule</code><span class="sig-paren">(</span><em>moduletype</em>, <em>autorig_asset</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.moduleFactory.createModule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.moduleFactory.createModuleDefault">
+<code class="descclassname">autorigs.asset.moduleFactory.</code><code class="descname">createModuleDefault</code><span class="sig-paren">(</span><em>moduletype</em>, <em>autorig_asset</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.moduleFactory.createModuleDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.moduleFactory.createModuleFromJsonExisting">
+<code class="descclassname">autorigs.asset.moduleFactory.</code><code class="descname">createModuleFromJsonExisting</code><span class="sig-paren">(</span><em>json</em>, <em>autorigs_asset</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.moduleFactory.createModuleFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="autorigs.asset.moduleFactory.createModuleFromJsonNew">
+<code class="descclassname">autorigs.asset.moduleFactory.</code><code class="descname">createModuleFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>autorigs_asset</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.asset.moduleFactory.createModuleFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.asset.moduleInfos">
+<span id="autorigs-asset-moduleinfos-module"></span><h2>autorigs.asset.moduleInfos module<a class="headerlink" href="#module-autorigs.asset.moduleInfos" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.asset">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.asset" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.asset package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.autoRigsAsset">autorigs.asset.autoRigsAsset module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.autoRigsModules">autorigs.asset.autoRigsModules module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.autoRigsSettings">autorigs.asset.autoRigsSettings module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.defaultProperties">autorigs.asset.defaultProperties module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.moduleFactory">autorigs.asset.moduleFactory module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset.moduleInfos">autorigs.asset.moduleInfos module</a></li>
+<li><a class="reference internal" href="#module-autorigs.asset">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+      <li>Previous: <a href="autorigs.html" title="previous chapter">autorigs package</a></li>
+      <li>Next: <a href="autorigs.asset.geometry.html" title="next chapter">autorigs.asset.geometry package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.asset.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.asset.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

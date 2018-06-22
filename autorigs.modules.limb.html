@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.limb package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.master package" href="autorigs.modules.master.html" />
+    <link rel="prev" title="autorigs.modules.leg package" href="autorigs.modules.leg.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-limb-package">
+<h1>autorigs.modules.limb package<a class="headerlink" href="#autorigs-modules-limb-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.limb.autoRigsLimbBuilder">
+<span id="autorigs-modules-limb-autorigslimbbuilder-module"></span><h2>autorigs.modules.limb.autoRigsLimbBuilder module<a class="headerlink" href="#module-autorigs.modules.limb.autoRigsLimbBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.autoRigsLimbBuilder.</code><code class="descname">AutoRigsLimbBuilder</code><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.BEFORE_LIMB_CONTROL_RATIO">
+<code class="descname">BEFORE_LIMB_CONTROL_RATIO</code><em class="property"> = 2.5</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.BEFORE_LIMB_CONTROL_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.CENTER_SIDE_NAME">
+<code class="descname">CENTER_SIDE_NAME</code><em class="property"> = 2</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.CENTER_SIDE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.LEFT_SIDE_NAME">
+<code class="descname">LEFT_SIDE_NAME</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.LEFT_SIDE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.NUM_NOODLE_BONES">
+<code class="descname">NUM_NOODLE_BONES</code><em class="property"> = 10</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.NUM_NOODLE_BONES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.RIGHT_SIDE_NAME">
+<code class="descname">RIGHT_SIDE_NAME</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.RIGHT_SIDE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'basicbonegroup': 'basic_bone_group', 'basiccontrolgroup': 'control_basic_group', 'basiccontrolsgroup': 'control_basic_group', 'chopnet': 'chopnet', 'controlgroup': 'control_all_group', 'deformbonegroup': 'deform_bone_group', 'detailcontrolsgroup': 'control_detail_group', 'endaffector': 'endaffector', 'endcontrol': 'endcontrol', 'fkcontrolgroup': 'control_fk_group', 'fkcontrolsgroup': 'control_fk_group', 'ikcontrolgroup': 'control_ik_group', 'ikcontrolsgroup': 'control_ik_group', 'nodegroup': 'node_group', 'noodleboneblend': 'noodlebone_blend', 'noodlebonegroup': 'noodle_bone_group', 'noodlecontrolgroup': 'control_noodle_group', 'paraendaffector': 'paraendaffector', 'paraendcontrol': 'paraendcontrol', 'paratwistaffector': 'paratwistaffector', 'paratwistcontrol': 'paratwistcontrol', 'parent': 'parent', 'qendaffector': 'qendaffector', 'qendcontrol': 'qendcontrol', 'qtwistaffector': 'qtwistaffector', 'qtwistcontrol': 'qtwistcontrol', 'twistaffector': 'twistaffector', 'twistcontrol': 'twistcontrol', 'visiblegroup': 'visible_all_group'}</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildLimbRig">
+<em class="property">classmethod </em><code class="descname">buildLimbRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorigs_asset</em>, <em>options</em>, <em>limbguide</em>, <em>parentinfo</em>, <em>interfacebuilder</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildLimbRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildNoodleSide">
+<em class="property">classmethod </em><code class="descname">buildNoodleSide</code><span class="sig-paren">(</span><em>maincontrols</em>, <em>prefix</em>, <em>rigscale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildNoodleSide" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO(dian) refactor this into components too large!</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildParmLinks">
+<em class="property">classmethod </em><code class="descname">buildParmLinks</code><span class="sig-paren">(</span><em>rigcontrols</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildParmLinks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildRigSide">
+<em class="property">classmethod </em><code class="descname">buildRigSide</code><span class="sig-paren">(</span><em>prefix</em>, <em>autorigs_asset</em>, <em>options</em>, <em>limbguide</em>, <em>ismain</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.buildRigSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.cleanupMainViewport">
+<em class="property">classmethod </em><code class="descname">cleanupMainViewport</code><span class="sig-paren">(</span><em>maincontrols</em>, <em>rigscale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.cleanupMainViewport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.cleanupNoodleViewport">
+<em class="property">classmethod </em><code class="descname">cleanupNoodleViewport</code><span class="sig-paren">(</span><em>noodlecontrols</em>, <em>rigscale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.cleanupNoodleViewport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.getPrefix">
+<em class="property">classmethod </em><code class="descname">getPrefix</code><span class="sig-paren">(</span><em>index</em>, <em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbBuilder.AutoRigsLimbBuilder.getPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.limb.autoRigsLimbInterfaceBuilder">
+<span id="autorigs-modules-limb-autorigslimbinterfacebuilder-module"></span><h2>autorigs.modules.limb.autoRigsLimbInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.limb.autoRigsLimbInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.autoRigsLimbInterfaceBuilder.</code><code class="descname">AutoRigsLimbInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.CENTER_SIDE">
+<code class="descname">CENTER_SIDE</code><em class="property"> = 2</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.CENTER_SIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.DISPLAY_MENU">
+<code class="descname">DISPLAY_MENU</code><em class="property"> = ['ON', 'OFF']</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.DISPLAY_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.DISPLAY_NOODLE_MENU">
+<code class="descname">DISPLAY_NOODLE_MENU</code><em class="property"> = ['All', 'Basic', 'Noodle', 'OFF']</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.DISPLAY_NOODLE_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'bonedisplay': ('bonedisplay', 'Bone Display'), 'controldisplay': ('controldisplay', 'Control Display'), 'controlsfolder': ('controls', 'Controls'), 'displayfkcontrols': ('displayfkcontrols', 'Display FK Controls'), 'fkikblend': ('fkikblend', 'FK-&gt;IK Blend'), 'fkikthresh': ('fkikthresh', 'FK Display Threshold'), 'ikdampen': ('ikdampen', 'Max IK Dampening'), 'ikhandlepath': ('ikhandlepath', 'IK Handle Path'), 'iktwisthandlepath': ('iktwisthandlepath', 'IK Twist Handle Path'), 'kinsolverpath': ('kinsolverpath', 'Kinematic Solver Path'), 'lowerbonepath': ('lowerbonepath', 'Lower Bone Path'), 'lowerfkcontrolpath': ('lowerfkcontrolpath', 'Lower FK Control Path'), 'lowerinitlen': ('lowerinitlen', 'Lower Initial Length'), 'lowermanualstretchlen': ('lowermanualstretchlen', 'Lower Manual Stretch'), 'lowerstretchcalc': ('lowerstretchcalc', 'Lower Stretch Calculations'), 'matchfkik': ('matchfkik', 'Match FK to IK'), 'matchikfk': ('matchikfk', 'Match IK to FK'), 'optionsfolder': ('options', 'Options'), 'stretch': ('stretch', 'Stretch'), 'totalautostretch': ('totalautostretch', 'Total Auto Stretch'), 'totalmanstretchlen': ('totalmanstretchlen', 'Total Manual Stretch Len'), 'upperbonepath': ('upperbonepath', 'Upper Bone Path'), 'upperfkcontrolpath': ('upperfkcontrolpath', 'Upper FK Control Path'), 'upperinitlen': ('upperinitlen', 'Upper Initial Length'), 'uppermanualstretchlen': ('uppermanualstretchlen', 'Upper Manual Stretch'), 'upperstretchcalc': ('upperstretchcalc', 'Upper Stretch Calculations')}</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.LEFT_SIDE">
+<code class="descname">LEFT_SIDE</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.LEFT_SIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.MATCH_FK_IK_POSTFIX">
+<code class="descname">MATCH_FK_IK_POSTFIX</code><em class="property"> = 'MatchFKIK'</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.MATCH_FK_IK_POSTFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.MATCH_IK_FK_POSTFIX">
+<code class="descname">MATCH_IK_FK_POSTFIX</code><em class="property"> = 'MatchIKFK'</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.MATCH_IK_FK_POSTFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.MATCH_NOODLE_TWIST_POSTFIX">
+<code class="descname">MATCH_NOODLE_TWIST_POSTFIX</code><em class="property"> = 'NoodleTwist'</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.MATCH_NOODLE_TWIST_POSTFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.RIGHT_SIDE">
+<code class="descname">RIGHT_SIDE</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.RIGHT_SIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigControlsInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildRigControlsInterfaceParms</code><span class="sig-paren">(</span><em>controls</em>, <em>assetnode</em>, <em>options</em>, <em>prefix</em>, <em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigControlsInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigInterface">
+<em class="property">classmethod </em><code class="descname">buildRigInterface</code><span class="sig-paren">(</span><em>autorig_asset</em>, <em>options</em>, <em>rigcontrols</em>, <em>side</em>, <em>index</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildRigInterfaceParms</code><span class="sig-paren">(</span><em>controls</em>, <em>assetnode</em>, <em>options</em>, <em>prefix</em>, <em>side</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigOptionsInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildRigOptionsInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>options</em>, <em>prefix</em>, <em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.buildRigOptionsInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getBeforeLimbStretchExpr">
+<em class="property">classmethod </em><code class="descname">getBeforeLimbStretchExpr</code><span class="sig-paren">(</span><em>beforelimbroot</em>, <em>beforelimbend</em>, <em>initlengthstr</em>, <em>assetnode</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getBeforeLimbStretchExpr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getEvalParmStr">
+<em class="property">classmethod </em><code class="descname">getEvalParmStr</code><span class="sig-paren">(</span><em>parm</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getEvalParmStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getLimbMatchFKtoIKStr">
+<em class="property">classmethod </em><code class="descname">getLimbMatchFKtoIKStr</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>isstretchy</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getLimbMatchFKtoIKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getLimbMatchIKtoFKStr">
+<em class="property">classmethod </em><code class="descname">getLimbMatchIKtoFKStr</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>isstretchy</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getLimbMatchIKtoFKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getLimbNoodleTwistStr">
+<em class="property">classmethod </em><code class="descname">getLimbNoodleTwistStr</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>isstretchy</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getLimbNoodleTwistStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getParmStr">
+<em class="property">classmethod </em><code class="descname">getParmStr</code><span class="sig-paren">(</span><em>parm</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.getParmStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.linkRigControlsInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkRigControlsInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>options</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.linkRigControlsInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.linkRigInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkRigInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>options</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.linkRigInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.linkRigOptionsInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkRigOptionsInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>options</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.linkRigOptionsInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.setMidTangentExpressions">
+<em class="property">classmethod </em><code class="descname">setMidTangentExpressions</code><span class="sig-paren">(</span><em>lowertangenttrans</em>, <em>uppertangenttrans</em>, <em>lower</em>, <em>upper</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.setMidTangentExpressions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.setupBoneDisplayChannel">
+<em class="property">classmethod </em><code class="descname">setupBoneDisplayChannel</code><span class="sig-paren">(</span><em>bone</em>, <em>assetnode</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.autoRigsLimbInterfaceBuilder.AutoRigsLimbInterfaceBuilder.setupBoneDisplayChannel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.limb.buildLimbGuide">
+<span id="autorigs-modules-limb-buildlimbguide-module"></span><h2>autorigs.modules.limb.buildLimbGuide module<a class="headerlink" href="#module-autorigs.modules.limb.buildLimbGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.buildLimbGuide.</code><code class="descname">LimbFactory</code><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseFactory" title="autorigs.modules.base.buildBaseGuide.BaseFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbFactory.createFromDefault">
+<em class="property">classmethod </em><code class="descname">createFromDefault</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbFactory.createFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.buildLimbGuide.</code><code class="descname">LimbGuide</code><span class="sig-paren">(</span><em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseGuide" title="autorigs.modules.base.buildBaseGuide.BaseGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.createFromJson">
+<code class="descname">createFromJson</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.createFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.deleteGuides">
+<code class="descname">deleteGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.existingFromJson">
+<code class="descname">existingFromJson</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.existingFromJson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assumes that the guide nodes exists in the network and
+finds it to set this class instead of creating the nodes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.getGuideObjectSide">
+<code class="descname">getGuideObjectSide</code><span class="sig-paren">(</span><em>mainbool</em>, <em>guidepart</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.getGuideObjectSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.setMirrorGuidesDisplay">
+<code class="descname">setMirrorGuidesDisplay</code><span class="sig-paren">(</span><em>canchangedisplay</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.setMirrorGuidesDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.toJsonGuideTypeNames">
+<code class="descname">toJsonGuideTypeNames</code><span class="sig-paren">(</span><em>jsonobj</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.toJsonGuideTypeNames" title="Permalink to this definition">¶</a></dt>
+<dd><p>overridden by subclass</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.toJsonGuidenames">
+<code class="descname">toJsonGuidenames</code><span class="sig-paren">(</span><em>jsonobj</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.toJsonGuidenames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.toggleGuideDisplay">
+<code class="descname">toggleGuideDisplay</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.toggleGuideDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.toggleMainGuidesDisplay">
+<code class="descname">toggleMainGuidesDisplay</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.toggleMainGuidesDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.toggleMirrorGuidesDisplay">
+<code class="descname">toggleMirrorGuidesDisplay</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.toggleMirrorGuidesDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.updateMirror">
+<code class="descname">updateMirror</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.updateMirror" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.updateSide">
+<code class="descname">updateSide</code><span class="sig-paren">(</span><em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.updateSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.updateToMasterParent">
+<code class="descname">updateToMasterParent</code><span class="sig-paren">(</span><em>masternode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.updateToMasterParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.buildLimbGuide.LimbGuide.updateToSpineHookParent">
+<code class="descname">updateToSpineHookParent</code><span class="sig-paren">(</span><em>spinenode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.buildLimbGuide.LimbGuide.updateToSpineHookParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.limb.limbGuideOptions">
+<span id="autorigs-modules-limb-limbguideoptions-module"></span><h2>autorigs.modules.limb.limbGuideOptions module<a class="headerlink" href="#module-autorigs.modules.limb.limbGuideOptions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideOptions.</code><code class="descname">ArmOptionsWidget</code><span class="sig-paren">(</span><em>limbguide</em>, <em>spinemodules</em>, <em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget" title="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.MIRROR_LABEL">
+<code class="descname">MIRROR_LABEL</code><em class="property"> = 'Mirror'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.MIRROR_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.NOODLE_LABEL">
+<code class="descname">NOODLE_LABEL</code><em class="property"> = 'Noodle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.NOODLE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.PARENT_LABEL">
+<code class="descname">PARENT_LABEL</code><em class="property"> = 'Arm Parent'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.PARENT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.PREFIX_DEFAULT_LABEL">
+<code class="descname">PREFIX_DEFAULT_LABEL</code><em class="property"> = 'L_Arm'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.PREFIX_DEFAULT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.PREFIX_LABEL">
+<code class="descname">PREFIX_LABEL</code><em class="property"> = 'Prefix'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.PREFIX_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.SIDE_BUTTON_LABELS">
+<code class="descname">SIDE_BUTTON_LABELS</code><em class="property"> = ['Left', 'Right']</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.SIDE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.SIDE_LABEL">
+<code class="descname">SIDE_LABEL</code><em class="property"> = 'Side'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.SIDE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.STRETCH_LABEL">
+<code class="descname">STRETCH_LABEL</code><em class="property"> = 'Stretch'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.STRETCH_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.getSpineParentGuides">
+<code class="descname">getSpineParentGuides</code><span class="sig-paren">(</span><em>spinemodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.getSpineParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>parentmodule</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ArmOptionsWidget.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideOptions.</code><code class="descname">LegOptionsWidget</code><span class="sig-paren">(</span><em>limbguide</em>, <em>spinemodules</em>, <em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget" title="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.MIRROR_LABEL">
+<code class="descname">MIRROR_LABEL</code><em class="property"> = 'Mirror'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.MIRROR_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.NOODLE_LABEL">
+<code class="descname">NOODLE_LABEL</code><em class="property"> = 'Noodle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.NOODLE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.PARENT_LABEL">
+<code class="descname">PARENT_LABEL</code><em class="property"> = 'Leg Parent'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.PARENT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.PREFIX_DEFAULT_LABEL">
+<code class="descname">PREFIX_DEFAULT_LABEL</code><em class="property"> = 'L_Leg'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.PREFIX_DEFAULT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.PREFIX_LABEL">
+<code class="descname">PREFIX_LABEL</code><em class="property"> = 'Prefix'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.PREFIX_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.SIDE_BUTTON_LABELS">
+<code class="descname">SIDE_BUTTON_LABELS</code><em class="property"> = ['Left', 'Right']</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.SIDE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.SIDE_LABEL">
+<code class="descname">SIDE_LABEL</code><em class="property"> = 'Side'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.SIDE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.STRETCH_LABEL">
+<code class="descname">STRETCH_LABEL</code><em class="property"> = 'Stretch'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.STRETCH_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.getSpineParentGuides">
+<code class="descname">getSpineParentGuides</code><span class="sig-paren">(</span><em>spinemodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.getSpineParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>parentmodule</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.LegOptionsWidget.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideOptions.</code><code class="descname">ModuleOptionsWidget</code><span class="sig-paren">(</span><em>limbguide</em>, <em>spinemodules</em>, <em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.createParentWidget">
+<code class="descname">createParentWidget</code><span class="sig-paren">(</span><em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.createParentWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getAllWidgets">
+<code class="descname">getAllWidgets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getAllWidgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getBuiltParentInfo">
+<code class="descname">getBuiltParentInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getBuiltParentInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getDefaultParentPath">
+<code class="descname">getDefaultParentPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getDefaultParentPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getExistingParents">
+<code class="descname">getExistingParents</code><span class="sig-paren">(</span><em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getExistingParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getLeftRightSide">
+<code class="descname">getLeftRightSide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getLeftRightSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getLegPrefix">
+<code class="descname">getLegPrefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getLegPrefix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getMasterParentGuides">
+<code class="descname">getMasterParentGuides</code><span class="sig-paren">(</span><em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getMasterParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getSide">
+<code class="descname">getSide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.getSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.isMirror">
+<code class="descname">isMirror</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.isMirror" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.isNoodle">
+<code class="descname">isNoodle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.isNoodle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.isStretchy">
+<code class="descname">isStretchy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.isStretchy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.linkSide">
+<code class="descname">linkSide</code><span class="sig-paren">(</span><em>callback_fcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.linkSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.onNoodleChanged">
+<code class="descname">onNoodleChanged</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.onNoodleChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.onSideChanged">
+<code class="descname">onSideChanged</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.onSideChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.unlinkSide">
+<code class="descname">unlinkSide</code><span class="sig-paren">(</span><em>callback_fcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.unlinkSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.updateParentModules">
+<code class="descname">updateParentModules</code><span class="sig-paren">(</span><em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget.updateParentModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideOptions.</code><code class="descname">QuadLegOptionsWidget</code><span class="sig-paren">(</span><em>limbguide</em>, <em>spinemodules</em>, <em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget" title="autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.limbGuideOptions.ModuleOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.MIRROR_LABEL">
+<code class="descname">MIRROR_LABEL</code><em class="property"> = 'Mirror'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.MIRROR_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.NOODLE_LABEL">
+<code class="descname">NOODLE_LABEL</code><em class="property"> = 'Noodle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.NOODLE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.PARENT_LABEL">
+<code class="descname">PARENT_LABEL</code><em class="property"> = 'QuadLeg Parent'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.PARENT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.PREFIX_DEFAULT_LABEL">
+<code class="descname">PREFIX_DEFAULT_LABEL</code><em class="property"> = 'QL_Leg'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.PREFIX_DEFAULT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.PREFIX_LABEL">
+<code class="descname">PREFIX_LABEL</code><em class="property"> = 'Prefix'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.PREFIX_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.SIDE_BUTTON_LABELS">
+<code class="descname">SIDE_BUTTON_LABELS</code><em class="property"> = ['Left', 'Right']</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.SIDE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.SIDE_LABEL">
+<code class="descname">SIDE_LABEL</code><em class="property"> = 'Side'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.SIDE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.STRETCH_LABEL">
+<code class="descname">STRETCH_LABEL</code><em class="property"> = 'Stretch'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.STRETCH_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.getSpineParentGuides">
+<code class="descname">getSpineParentGuides</code><span class="sig-paren">(</span><em>spinemodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.getSpineParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>parentmodule</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideOptions.QuadLegOptionsWidget.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.limb.limbGuideParams">
+<span id="autorigs-modules-limb-limbguideparams-module"></span><h2>autorigs.modules.limb.limbGuideParams module<a class="headerlink" href="#module-autorigs.modules.limb.limbGuideParams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideParams.</code><code class="descname">ArmParamsWidget</code><span class="sig-paren">(</span><em>limbguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.limb.limbGuideParams.ModuleParamsWidget" title="autorigs.modules.limb.limbGuideParams.ModuleParamsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.limbGuideParams.ModuleParamsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_ALL">
+<code class="descname">JSON_ALL</code><em class="property"> = 'allguides'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_BEFORE_LIMB">
+<code class="descname">JSON_BEFORE_LIMB</code><em class="property"> = 'clavicle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_BEFORE_LIMB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_END">
+<code class="descname">JSON_LIMB_END</code><em class="property"> = 'wrist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_MIDDLE">
+<code class="descname">JSON_LIMB_MIDDLE</code><em class="property"> = 'elbow'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_MIDDLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_START">
+<code class="descname">JSON_LIMB_START</code><em class="property"> = 'shoulder'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_TWIST">
+<code class="descname">JSON_LIMB_TWIST</code><em class="property"> = 'armtwist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_LIMB_TWIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_MASTER">
+<code class="descname">JSON_MASTER</code><em class="property"> = 'master'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.JSON_MASTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_ALL">
+<code class="descname">LABEL_ALL</code><em class="property"> = 'All Guides'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_BEFORE_LIMB">
+<code class="descname">LABEL_BEFORE_LIMB</code><em class="property"> = 'Clavicle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_BEFORE_LIMB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_END">
+<code class="descname">LABEL_LIMB_END</code><em class="property"> = 'Wrist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_MIDDLE">
+<code class="descname">LABEL_LIMB_MIDDLE</code><em class="property"> = 'Elbow'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_MIDDLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_START">
+<code class="descname">LABEL_LIMB_START</code><em class="property"> = 'Shoulder'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_TWIST">
+<code class="descname">LABEL_LIMB_TWIST</code><em class="property"> = 'Arm Twist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_LIMB_TWIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_MASTER">
+<code class="descname">LABEL_MASTER</code><em class="property"> = 'Master'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ArmParamsWidget.LABEL_MASTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideParams.</code><code class="descname">LegParamsWidget</code><span class="sig-paren">(</span><em>limbguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.limb.limbGuideParams.ModuleParamsWidget" title="autorigs.modules.limb.limbGuideParams.ModuleParamsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.limbGuideParams.ModuleParamsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_ALL">
+<code class="descname">JSON_ALL</code><em class="property"> = 'allguides'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_BEFORE_LIMB">
+<code class="descname">JSON_BEFORE_LIMB</code><em class="property"> = 'pelvis'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_BEFORE_LIMB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_END">
+<code class="descname">JSON_LIMB_END</code><em class="property"> = 'ankle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_MIDDLE">
+<code class="descname">JSON_LIMB_MIDDLE</code><em class="property"> = 'knee'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_MIDDLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_START">
+<code class="descname">JSON_LIMB_START</code><em class="property"> = 'hip'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_TWIST">
+<code class="descname">JSON_LIMB_TWIST</code><em class="property"> = 'legtwist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_LIMB_TWIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_MASTER">
+<code class="descname">JSON_MASTER</code><em class="property"> = 'master'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.JSON_MASTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_ALL">
+<code class="descname">LABEL_ALL</code><em class="property"> = 'All Guides'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_BEFORE_LIMB">
+<code class="descname">LABEL_BEFORE_LIMB</code><em class="property"> = 'Pelvis'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_BEFORE_LIMB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_END">
+<code class="descname">LABEL_LIMB_END</code><em class="property"> = 'Ankle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_MIDDLE">
+<code class="descname">LABEL_LIMB_MIDDLE</code><em class="property"> = 'Knee'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_MIDDLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_START">
+<code class="descname">LABEL_LIMB_START</code><em class="property"> = 'Hip'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_TWIST">
+<code class="descname">LABEL_LIMB_TWIST</code><em class="property"> = 'Leg Twist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_LIMB_TWIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_MASTER">
+<code class="descname">LABEL_MASTER</code><em class="property"> = 'Master'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.LegParamsWidget.LABEL_MASTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideParams.ModuleParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideParams.</code><code class="descname">ModuleParamsWidget</code><span class="sig-paren">(</span><em>limbguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ModuleParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideParams.ModuleParamsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ModuleParamsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideParams.ModuleParamsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ModuleParamsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbGuideParams.ModuleParamsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.ModuleParamsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbGuideParams.</code><code class="descname">QuadLegParamsWidget</code><span class="sig-paren">(</span><em>limbguide</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.limb.limbGuideParams.ModuleParamsWidget" title="autorigs.modules.limb.limbGuideParams.ModuleParamsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.limb.limbGuideParams.ModuleParamsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_ALL">
+<code class="descname">JSON_ALL</code><em class="property"> = 'allguides'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_BEFORE_LIMB">
+<code class="descname">JSON_BEFORE_LIMB</code><em class="property"> = 'pelvis'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_BEFORE_LIMB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_FOOT_END">
+<code class="descname">JSON_FOOT_END</code><em class="property"> = 'foot'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_FOOT_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_END">
+<code class="descname">JSON_LIMB_END</code><em class="property"> = 'ankle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_MIDDLE">
+<code class="descname">JSON_LIMB_MIDDLE</code><em class="property"> = 'knee'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_MIDDLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_START">
+<code class="descname">JSON_LIMB_START</code><em class="property"> = 'hip'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_TWIST">
+<code class="descname">JSON_LIMB_TWIST</code><em class="property"> = 'legtwist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_LIMB_TWIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_MASTER">
+<code class="descname">JSON_MASTER</code><em class="property"> = 'master'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.JSON_MASTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_ALL">
+<code class="descname">LABEL_ALL</code><em class="property"> = 'All Guides'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_BEFORE_LIMB">
+<code class="descname">LABEL_BEFORE_LIMB</code><em class="property"> = 'Pelvis'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_BEFORE_LIMB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_FOOT_END">
+<code class="descname">LABEL_FOOT_END</code><em class="property"> = 'Foot'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_FOOT_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_END">
+<code class="descname">LABEL_LIMB_END</code><em class="property"> = 'Ankle'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_MIDDLE">
+<code class="descname">LABEL_LIMB_MIDDLE</code><em class="property"> = 'Knee'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_MIDDLE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_START">
+<code class="descname">LABEL_LIMB_START</code><em class="property"> = 'Hip'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_TWIST">
+<code class="descname">LABEL_LIMB_TWIST</code><em class="property"> = 'Leg Twist'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_LIMB_TWIST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_MASTER">
+<code class="descname">LABEL_MASTER</code><em class="property"> = 'Master'</em><a class="headerlink" href="#autorigs.modules.limb.limbGuideParams.QuadLegParamsWidget.LABEL_MASTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.limb.limbModule">
+<span id="autorigs-modules-limb-limbmodule-module"></span><h2>autorigs.modules.limb.limbModule module<a class="headerlink" href="#module-autorigs.modules.limb.limbModule" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.limb.limbModule.LimbGuideTab">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbModule.</code><code class="descname">LimbGuideTab</code><span class="sig-paren">(</span><em>buildguides</em>, <em>spinemodules</em>, <em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbGuideTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.rootModule.ModuleGuideTab" title="autorigs.modules.base.rootModule.ModuleGuideTab"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.rootModule.ModuleGuideTab</span></code></a></p>
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbGuideTab.getBuiltParentInfo">
+<code class="descname">getBuiltParentInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbGuideTab.getBuiltParentInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbGuideTab.getSide">
+<code class="descname">getSide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbGuideTab.getSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbGuideTab.linkSide">
+<code class="descname">linkSide</code><span class="sig-paren">(</span><em>callback_fcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbGuideTab.linkSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbGuideTab.unlinkSide">
+<code class="descname">unlinkSide</code><span class="sig-paren">(</span><em>callback_fcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbGuideTab.unlinkSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbGuideTab.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbGuideTab.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.limb.limbModule.LimbModule">
+<em class="property">class </em><code class="descclassname">autorigs.modules.limb.limbModule.</code><code class="descname">LimbModule</code><span class="sig-paren">(</span><em>autorig_asset</em>, <em>guidesfactory</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.rootModule.Module" title="autorigs.modules.base.rootModule.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.rootModule.Module</span></code></a></p>
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.buildFromDefault">
+<code class="descname">buildFromDefault</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.buildFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.buildFromJsonExisting">
+<code class="descname">buildFromJsonExisting</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.buildFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.buildFromJsonNew">
+<code class="descname">buildFromJsonNew</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.buildFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.buildRig">
+<code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.getBUiltObject">
+<code class="descname">getBUiltObject</code><span class="sig-paren">(</span><em>builtkey</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.getBUiltObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.getBuiltObjectSide">
+<code class="descname">getBuiltObjectSide</code><span class="sig-paren">(</span><em>builtkey</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.getBuiltObjectSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.getBuiltParentInfo">
+<code class="descname">getBuiltParentInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.getBuiltParentInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.getBuiltRig">
+<code class="descname">getBuiltRig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.getBuiltRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.getSide">
+<code class="descname">getSide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.getSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.linkSide">
+<code class="descname">linkSide</code><span class="sig-paren">(</span><em>callback_fcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.linkSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.unlinkSide">
+<code class="descname">unlinkSide</code><span class="sig-paren">(</span><em>callback_fcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.unlinkSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.limb.limbModule.LimbModule.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>modulesdict</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.limb.limbModule.LimbModule.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.limb">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.limb" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.limb package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.limb.autoRigsLimbBuilder">autorigs.modules.limb.autoRigsLimbBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.limb.autoRigsLimbInterfaceBuilder">autorigs.modules.limb.autoRigsLimbInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.limb.buildLimbGuide">autorigs.modules.limb.buildLimbGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.limb.limbGuideOptions">autorigs.modules.limb.limbGuideOptions module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.limb.limbGuideParams">autorigs.modules.limb.limbGuideParams module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.limb.limbModule">autorigs.modules.limb.limbModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.limb">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.leg.html" title="previous chapter">autorigs.modules.leg package</a></li>
+      <li>Next: <a href="autorigs.modules.master.html" title="next chapter">autorigs.modules.master package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.limb.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.limb.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

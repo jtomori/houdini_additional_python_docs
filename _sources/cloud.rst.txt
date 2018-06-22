@@ -1,7 +1,0 @@
-cloud module
-============
-
-.. automodule:: cloud
-    :members:
-    :undoc-members:
-    :show-inheritance:

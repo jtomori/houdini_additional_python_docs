@@ -1,0 +1,206 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nodegraphview module &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nodesearch package" href="nodesearch.html" />
+    <link rel="prev" title="nodegraphutils module" href="nodegraphutils.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nodegraphview">
+<span id="nodegraphview-module"></span><h1>nodegraphview module<a class="headerlink" href="#module-nodegraphview" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nodegraphview.QuickMark">
+<em class="property">class </em><code class="descclassname">nodegraphview.</code><code class="descname">QuickMark</code><span class="sig-paren">(</span><em>net</em>, <em>bounds</em>, <em>items</em>, <em>currentnode</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.QuickMark" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="nodegraphview.QuickMark.asJson">
+<code class="descname">asJson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.QuickMark.asJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="nodegraphview.QuickMark.fromJson">
+<em class="property">static </em><code class="descname">fromJson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.QuickMark.fromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphview.QuickMark.jump">
+<code class="descname">jump</code><span class="sig-paren">(</span><em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.QuickMark.jump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphview.QuickMark.verify">
+<code class="descname">verify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.QuickMark.verify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.changeNetwork">
+<code class="descclassname">nodegraphview.</code><code class="descname">changeNetwork</code><span class="sig-paren">(</span><em>editor</em>, <em>newnet</em>, <em>override_bounds=None</em>, <em>moving_up=False</em>, <em>dive_into_dive_target=True</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.changeNetwork" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.clearViewBoundsData">
+<code class="descclassname">nodegraphview.</code><code class="descname">clearViewBoundsData</code><span class="sig-paren">(</span><em>editor</em>, <em>currentpath</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.clearViewBoundsData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.createQuickMark">
+<code class="descclassname">nodegraphview.</code><code class="descname">createQuickMark</code><span class="sig-paren">(</span><em>editor</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.createQuickMark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.createUndoQuickMark">
+<code class="descclassname">nodegraphview.</code><code class="descname">createUndoQuickMark</code><span class="sig-paren">(</span><em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.createUndoQuickMark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.diveIntoNode">
+<code class="descclassname">nodegraphview.</code><code class="descname">diveIntoNode</code><span class="sig-paren">(</span><em>editor</em>, <em>node=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.diveIntoNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.ensureItemsAreVisible">
+<code class="descclassname">nodegraphview.</code><code class="descname">ensureItemsAreVisible</code><span class="sig-paren">(</span><em>editor</em>, <em>items</em>, <em>immediate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.ensureItemsAreVisible" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.frameItems">
+<code class="descclassname">nodegraphview.</code><code class="descname">frameItems</code><span class="sig-paren">(</span><em>editor</em>, <em>items</em>, <em>immediate=False</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.frameItems" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.getQuickMark">
+<code class="descclassname">nodegraphview.</code><code class="descname">getQuickMark</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.getQuickMark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.handleNetworkChange">
+<code class="descclassname">nodegraphview.</code><code class="descname">handleNetworkChange</code><span class="sig-paren">(</span><em>editor</em>, <em>oldpath</em>, <em>newpath</em>, <em>override_bounds</em>, <em>ignore_next_change</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.handleNetworkChange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.jumpToNode">
+<code class="descclassname">nodegraphview.</code><code class="descname">jumpToNode</code><span class="sig-paren">(</span><em>editor</em>, <em>node</em>, <em>frame_nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.jumpToNode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.jumpToQuickMark">
+<code class="descclassname">nodegraphview.</code><code class="descname">jumpToQuickMark</code><span class="sig-paren">(</span><em>editor</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.jumpToQuickMark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.modifySelection">
+<code class="descclassname">nodegraphview.</code><code class="descname">modifySelection</code><span class="sig-paren">(</span><em>uievent</em>, <em>editor</em>, <em>items</em>, <em>current=None</em>, <em>shift=None</em>, <em>ctrl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.modifySelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.moveCurrent">
+<code class="descclassname">nodegraphview.</code><code class="descname">moveCurrent</code><span class="sig-paren">(</span><em>editor</em>, <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.moveCurrent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.quickmarkMenuLabel">
+<code class="descclassname">nodegraphview.</code><code class="descname">quickmarkMenuLabel</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.quickmarkMenuLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.scaleAroundMouse">
+<code class="descclassname">nodegraphview.</code><code class="descname">scaleAroundMouse</code><span class="sig-paren">(</span><em>editor</em>, <em>pivot</em>, <em>scale</em>, <em>startbounds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.scaleAroundMouse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.scaleWithMouseWheel">
+<code class="descclassname">nodegraphview.</code><code class="descname">scaleWithMouseWheel</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.scaleWithMouseWheel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphview.setQuickMark">
+<code class="descclassname">nodegraphview.</code><code class="descname">setQuickMark</code><span class="sig-paren">(</span><em>index</em>, <em>quickmark</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphview.setQuickMark" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="nodegraphutils.html" title="previous chapter">nodegraphutils module</a></li>
+      <li>Next: <a href="nodesearch.html" title="next chapter">nodesearch package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodegraphview.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/nodegraphview.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

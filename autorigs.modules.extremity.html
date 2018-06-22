@@ -1,0 +1,1943 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.extremity package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.foot package" href="autorigs.modules.foot.html" />
+    <link rel="prev" title="autorigs.modules.basicFace.jaw package" href="autorigs.modules.basicFace.jaw.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-extremity-package">
+<h1>autorigs.modules.extremity package<a class="headerlink" href="#autorigs-modules-extremity-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.extremity.autoRigsExtremityBuilder">
+<span id="autorigs-modules-extremity-autorigsextremitybuilder-module"></span><h2>autorigs.modules.extremity.autoRigsExtremityBuilder module<a class="headerlink" href="#module-autorigs.modules.extremity.autoRigsExtremityBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.autoRigsExtremityBuilder.</code><code class="descname">AutoRigsExtremityBuilder</code><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.BIG_DIGIT_ROOT_CONTROL_RATIO">
+<code class="descname">BIG_DIGIT_ROOT_CONTROL_RATIO</code><em class="property"> = 1.0</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.BIG_DIGIT_ROOT_CONTROL_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.DIGIT_ROLL_SIZE_RATIO">
+<code class="descname">DIGIT_ROLL_SIZE_RATIO</code><em class="property"> = 0.25</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.DIGIT_ROLL_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.EXTREMITY_ROLL_SIZE_RATIO">
+<code class="descname">EXTREMITY_ROLL_SIZE_RATIO</code><em class="property"> = 0.45</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.EXTREMITY_ROLL_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.EXTREMITY_ROOT_WIDTH_SIZE_RATIO">
+<code class="descname">EXTREMITY_ROOT_WIDTH_SIZE_RATIO</code><em class="property"> = 0.5</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.EXTREMITY_ROOT_WIDTH_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_CURLS_ADJS_SIZE_RATIO">
+<code class="descname">FK_CURLS_ADJS_SIZE_RATIO</code><em class="property"> = 0.7</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_CURLS_ADJS_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_DISPLAYHEAD_SPIKE_SIZE_RATIO">
+<code class="descname">FK_DISPLAYHEAD_SPIKE_SIZE_RATIO</code><em class="property"> = 10.25</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_DISPLAYHEAD_SPIKE_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_ROOT_SIZE_RATIO">
+<code class="descname">FK_ROOT_SIZE_RATIO</code><em class="property"> = 0.5</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_ROOT_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_SPIKE_SIZE_RATIO">
+<code class="descname">FK_SPIKE_SIZE_RATIO</code><em class="property"> = 1.0</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_SPIKE_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_SPLAY_FAN_SIZE_RATIO">
+<code class="descname">FK_SPLAY_FAN_SIZE_RATIO</code><em class="property"> = 0.4</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.FK_SPLAY_FAN_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_CURLS_ADJS_SIZE_RATIO">
+<code class="descname">IK_CURLS_ADJS_SIZE_RATIO</code><em class="property"> = 1.5</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_CURLS_ADJS_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_DISPLAYHEAD_SPIKE_SIZE_RATIO">
+<code class="descname">IK_DISPLAYHEAD_SPIKE_SIZE_RATIO</code><em class="property"> = 10.25</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_DISPLAYHEAD_SPIKE_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_PHALANGE_END_SIZE_RATIO">
+<code class="descname">IK_PHALANGE_END_SIZE_RATIO</code><em class="property"> = 0.8</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_PHALANGE_END_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_SPIKE_SIZE_RATIO">
+<code class="descname">IK_SPIKE_SIZE_RATIO</code><em class="property"> = 1.0</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_SPIKE_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_SPLAY_FAN_SIZE_RATIO">
+<code class="descname">IK_SPLAY_FAN_SIZE_RATIO</code><em class="property"> = 0.5</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.IK_SPLAY_FAN_SIZE_RATIO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'bigdigitrootcontrol': 'rootcontrol', 'bonegroup': 'bone_group', 'controlgroup': 'control_all_group', 'digitcontrol': 'digitcontrol', 'fkcontrol': 'fkcontrol', 'fkcontrolgroup': 'control_fk_group', 'ikcurl': 'ikcurl', 'ikcurladj': 'ikcurl_adjust', 'ikspike': 'ikspike', 'ikspikeall': 'ikspikeall', 'ikspikeall_transform': 'ikspikeall_trans', 'iksplayfan': 'iksplayfan', 'metasolver': 'metasolver', 'metastart': 'metastart', 'metatwist': 'metatwist', 'nodegroup': 'node_group', 'phalange': 'phalange', 'phalangecontrolgroup': 'control_phalange_group', 'phalangeend': 'phalange_endcontrol', 'phalangesolver': 'phalange_solver', 'phalangeup': 'phalange_up', 'root': 'root', 'rootcarve': 'rootcarve', 'rootcircle': 'rootcircle', 'visiblegroup': 'visible_all_group'}</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildDigitChainWithControls">
+<em class="property">classmethod </em><code class="descname">buildDigitChainWithControls</code><span class="sig-paren">(</span><em>assetnode</em>, <em>prefix</em>, <em>digitguides</em>, <em>subscript</em>, <em>digitidx</em>, <em>chopnet</em>, <em>avgtoelength</em>, <em>rigscale</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildDigitChainWithControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildDigitConstrains">
+<em class="property">classmethod </em><code class="descname">buildDigitConstrains</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildDigitConstrains" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildDigitRigSide">
+<em class="property">classmethod </em><code class="descname">buildDigitRigSide</code><span class="sig-paren">(</span><em>prefix</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>ismain</em>, <em>rigscale</em>, <em>side</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildDigitRigSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildExtremityRig">
+<em class="property">classmethod </em><code class="descname">buildExtremityRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>interfacebuilder</em>, <em>parentinfo</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildExtremityRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildFullRigSide">
+<em class="property">classmethod </em><code class="descname">buildFullRigSide</code><span class="sig-paren">(</span><em>prefix</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>ismain</em>, <em>rigscale</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildFullRigSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildParentRelationships">
+<em class="property">classmethod </em><code class="descname">buildParentRelationships</code><span class="sig-paren">(</span><em>builtrigname</em>, <em>limbmodule</em>, <em>mastermodule</em>, <em>ismain</em>, <em>prefix</em>, <em>assetnode</em>, <em>optionsmodel</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildParentRelationships" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildRigSide">
+<em class="property">classmethod </em><code class="descname">buildRigSide</code><span class="sig-paren">(</span><em>prefix</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>ismain</em>, <em>side</em>, <em>index</em>, <em>interfacebuilder</em>, <em>parentmodule</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.buildRigSide" title="Permalink to this definition">¶</a></dt>
+<dd><p>ismain specifies whether the side is a main side or
+mirror side. side specifies whether it’s left or right</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.cleanupMainViewport">
+<em class="property">classmethod </em><code class="descname">cleanupMainViewport</code><span class="sig-paren">(</span><em>rigcontrols</em>, <em>bonegroup</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.cleanupMainViewport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.connectToParents">
+<em class="property">classmethod </em><code class="descname">connectToParents</code><span class="sig-paren">(</span><em>builtrig</em>, <em>parentmodule</em>, <em>mastermodule</em>, <em>index</em>, <em>ismain</em>, <em>assetnode</em>, <em>optionsmodel</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.connectToParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createAllSpike">
+<em class="property">classmethod </em><code class="descname">createAllSpike</code><span class="sig-paren">(</span><em>assetnode</em>, <em>nodepos</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createAllSpike" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createExtremityDigitsRoot">
+<em class="property">classmethod </em><code class="descname">createExtremityDigitsRoot</code><span class="sig-paren">(</span><em>fullguides</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createExtremityDigitsRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createExtremityRoot">
+<em class="property">classmethod </em><code class="descname">createExtremityRoot</code><span class="sig-paren">(</span><em>fullguides</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createExtremityRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createMetadigits">
+<em class="property">classmethod </em><code class="descname">createMetadigits</code><span class="sig-paren">(</span><em>digitscontrols</em>, <em>metastart</em>, <em>extremityguide</em>, <em>prefix</em>, <em>assetnode</em>, <em>extremitytwist</em>, <em>chopnet</em>, <em>ismain</em>, <em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createMetadigits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createSpike">
+<em class="property">classmethod </em><code class="descname">createSpike</code><span class="sig-paren">(</span><em>assetnode</em>, <em>nodepos</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.createSpike" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.getAvgDigitsLength">
+<em class="property">classmethod </em><code class="descname">getAvgDigitsLength</code><span class="sig-paren">(</span><em>bigdigitguides</em>, <em>digitsguides</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder.getAvgDigitsLength" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder">
+<span id="autorigs-modules-extremity-autorigsextremityinterfacebuilder-module"></span><h2>autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.</code><code class="descname">AutoRigsExtremityInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.DISPLAY_DIGIT_MENU">
+<code class="descname">DISPLAY_DIGIT_MENU</code><em class="property"> = ['All', 'Basic', 'Detail', 'Fine', 'OFF']</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.DISPLAY_DIGIT_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.DISPLAY_FULL_MENU">
+<code class="descname">DISPLAY_FULL_MENU</code><em class="property"> = ['ON', 'OFF']</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.DISPLAY_FULL_MENU" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'bonedisplay': ('bonedisplay', 'Bone Display'), 'controldisplay': ('controldisplay', 'Control Display'), 'controlsfolder': ('controloptions', 'Controls'), 'digitbonepath': ('digitbonepath', 'Digit Bone Path'), 'digitfkcontrolpath': ('digitfkcontrolpath', 'Digit FK Control Path'), 'digitikhandlepath': ('digitikhandlepath', 'Digit IK Handle Path'), 'digitkinsolverpath': ('digitkinsolverpath', 'Digit Kinematic Solver Path'), 'digittwistctrlpath': ('digitiktwisthandlepath', 'Digit IK Twist Handle Path'), 'displayfkcontrols': ('displayfkcontrols', 'Display FK Controls'), 'extremitybonepath': ('extremitybonepath', 'Extremity Bone Path'), 'extremityfkcontrolpath': ('extremityfkcontrolpath', 'Extremity FK Control Path'), 'extremityikhandlepath': ('extremityikhandlepath', 'Extremity IK Handle Path'), 'extremitykinsolverpath': ('extremitykinsolverpath', 'Extremity Kinematic Solver Path'), 'extremitytwistctrlpath': ('extremitytwistctrlpath', 'Extremity IK Twist Handle Path'), 'firstrootcontrol': ('rootcontrol', 'Root'), 'fkikblend': ('fkikblend', 'FK-&gt;IK Blend'), 'fkikthresh': ('fkikthresh', 'FK Display Threshold'), 'ikcurl': ('ikcurl', 'IK Curl'), 'ikdampen': ('ikdampen', 'Max IK Dampening'), 'ikfan': ('ikfan', 'IK Fan'), 'ikfingercurl': ('ikcurlfinger', 'IK Curl'), 'iksplay': ('iksplay', 'IK Splay'), 'kinsolverpath': ('kinsolverpath', 'Kinematic Solver Path'), 'matchfkik': ('matchfkik', 'Match FK to IK'), 'matchikfk': ('matchikfk', 'Match IK to FK'), 'optionsfolder': ('options', 'Options')}</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.LEFT_SIDE">
+<code class="descname">LEFT_SIDE</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.LEFT_SIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.L_INTERFACE_NAME_LABEL">
+<code class="descname">L_INTERFACE_NAME_LABEL</code><em class="property"> = ('leftextremity', 'Left Extremity')</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.L_INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.L_PREFIX">
+<code class="descname">L_PREFIX</code><em class="property"> = 'leftextremity'</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.L_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.MATCH_FK_IK_POSTFIX">
+<code class="descname">MATCH_FK_IK_POSTFIX</code><em class="property"> = 'MatchFKIK'</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.MATCH_FK_IK_POSTFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.MATCH_IK_FK_POSTFIX">
+<code class="descname">MATCH_IK_FK_POSTFIX</code><em class="property"> = 'MatchIKFK'</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.MATCH_IK_FK_POSTFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.RIGHT_SIDE">
+<code class="descname">RIGHT_SIDE</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.RIGHT_SIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.R_INTERFACE_NAME_LABEL">
+<code class="descname">R_INTERFACE_NAME_LABEL</code><em class="property"> = ('rightextremity', 'Right Extremity')</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.R_INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.R_PREFIX">
+<code class="descname">R_PREFIX</code><em class="property"> = 'rightextremity'</em><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.R_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildDigitInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildDigitInterfaceParms</code><span class="sig-paren">(</span><em>rigcontrols</em>, <em>assetnode</em>, <em>optionsmodel</em>, <em>foldertemplate</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildDigitInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildFullInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildFullInterfaceParms</code><span class="sig-paren">(</span><em>rigcontrols</em>, <em>assetnode</em>, <em>optionsmodel</em>, <em>foldertemplate</em>, <em>prefix</em>, <em>digitattached=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildFullInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildRigControlsInterfaceParams">
+<em class="property">classmethod </em><code class="descname">buildRigControlsInterfaceParams</code><span class="sig-paren">(</span><em>rigcontrols</em>, <em>prefix</em>, <em>interface_control_keys</em>, <em>foldertemplate</em>, <em>digitattached=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildRigControlsInterfaceParams" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildRigInterface">
+<em class="property">classmethod </em><code class="descname">buildRigInterface</code><span class="sig-paren">(</span><em>assetnode</em>, <em>optionsmodel</em>, <em>rigcontrols</em>, <em>side</em>, <em>index</em>, <em>autorig_asset</em>, <em>parentmodule</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildRigInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildRigOptionsInterfaceParms">
+<em class="property">classmethod </em><code class="descname">buildRigOptionsInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>options</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.buildRigOptionsInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.createCurlSplayFanInterface">
+<em class="property">classmethod </em><code class="descname">createCurlSplayFanInterface</code><span class="sig-paren">(</span><em>folder</em>, <em>controls</em>, <em>assetnode</em>, <em>optionsmodel</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.createCurlSplayFanInterface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.getExtremityMatchFKtoIKStr">
+<em class="property">classmethod </em><code class="descname">getExtremityMatchFKtoIKStr</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.getExtremityMatchFKtoIKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.getExtremityMatchIKtoFKStr">
+<em class="property">classmethod </em><code class="descname">getExtremityMatchIKtoFKStr</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>prefix</em>, <em>rootoffset</em>, <em>lowerlimbend</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.getExtremityMatchIKtoFKStr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.linkDigitInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkDigitInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>options</em>, <em>prefix</em>, <em>isleft</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.linkDigitInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.linkFullInterfaceParms">
+<em class="property">classmethod </em><code class="descname">linkFullInterfaceParms</code><span class="sig-paren">(</span><em>assetnode</em>, <em>controls</em>, <em>options</em>, <em>prefix</em>, <em>digitsattached=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.linkFullInterfaceParms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.relativePathChParmTo">
+<em class="property">classmethod </em><code class="descname">relativePathChParmTo</code><span class="sig-paren">(</span><em>node</em>, <em>relnode</em>, <em>parm</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder.relativePathChParmTo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity.buildExtremityGuide">
+<span id="autorigs-modules-extremity-buildextremityguide-module"></span><h2>autorigs.modules.extremity.buildExtremityGuide module<a class="headerlink" href="#module-autorigs.modules.extremity.buildExtremityGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.buildExtremityGuide.</code><code class="descname">ExtremityFactory</code><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseFactory" title="autorigs.modules.base.buildBaseGuide.BaseFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory.createFromDefault">
+<em class="property">classmethod </em><code class="descname">createFromDefault</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory.createFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.buildExtremityGuide.</code><code class="descname">ExtremityGuide</code><span class="sig-paren">(</span><em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.buildBaseGuide.BaseGuide" title="autorigs.modules.base.buildBaseGuide.BaseGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.buildBaseGuide.BaseGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.SIDE_DEFAULT">
+<code class="descname">SIDE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.SIDE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.TYPE_DEFAULT">
+<code class="descname">TYPE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.TYPE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.TYPE_DIGITS">
+<code class="descname">TYPE_DIGITS</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.TYPE_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.TYPE_FULL">
+<code class="descname">TYPE_FULL</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.TYPE_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.buildAdditionalGuides">
+<code class="descname">buildAdditionalGuides</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>assetnode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.buildAdditionalGuides" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method allows for the addition of guide objects
+not present in an older json file to be created</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createDigitGuideNull">
+<code class="descname">createDigitGuideNull</code><span class="sig-paren">(</span><em>name</em>, <em>color</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createDigitGuideNull" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createDigitGuides">
+<code class="descname">createDigitGuides</code><span class="sig-paren">(</span><em>parent</em>, <em>guidenames</em>, <em>guidepositions</em>, <em>rootrotate</em>, <em>color</em>, <em>display=True</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createDigitGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createDigitGuidesFromJson">
+<code class="descname">createDigitGuidesFromJson</code><span class="sig-paren">(</span><em>parent</em>, <em>digit_json</em>, <em>digit_params_json</em>, <em>digitidx</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createDigitGuidesFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createFromJson">
+<code class="descname">createFromJson</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>extremitytype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createFromJson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assumes the guide objects have not been created yet</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createFullExtremity">
+<code class="descname">createFullExtremity</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>assetnode</em>, <em>parent</em>, <em>extremitytype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createFullExtremity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createGuideNamesFromJson">
+<code class="descname">createGuideNamesFromJson</code><span class="sig-paren">(</span><em>idx</em>, <em>json_nameformat</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createGuideNamesFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createGuidePositionsFromJson">
+<code class="descname">createGuidePositionsFromJson</code><span class="sig-paren">(</span><em>idx</em>, <em>prev_tx</em>, <em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createGuidePositionsFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMetaThumbGeo">
+<code class="descname">createMetaThumbGeo</code><span class="sig-paren">(</span><em>guidenames</em>, <em>metafirstpoint</em>, <em>bigdigitroot</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMetaThumbGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorDigitGuides">
+<code class="descname">createMirrorDigitGuides</code><span class="sig-paren">(</span><em>digitguides</em>, <em>guidenames</em>, <em>parent</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorDigitGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorDigitGuidesFromJson">
+<code class="descname">createMirrorDigitGuidesFromJson</code><span class="sig-paren">(</span><em>digitguides</em>, <em>jsonobj</em>, <em>parent</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorDigitGuidesFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorDigitsGuidesFromJson">
+<code class="descname">createMirrorDigitsGuidesFromJson</code><span class="sig-paren">(</span><em>digitsguides</em>, <em>jsonobjs</em>, <em>parent</em>, <em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorDigitsGuidesFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorFullExtremity">
+<code class="descname">createMirrorFullExtremity</code><span class="sig-paren">(</span><em>json</em>, <em>display</em>, <em>parent</em>, <em>extremitytype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.createMirrorFullExtremity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.deleteDigitGuides">
+<code class="descname">deleteDigitGuides</code><span class="sig-paren">(</span><em>digitguides</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.deleteDigitGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.deleteDigitGuidesMirrorPair">
+<code class="descname">deleteDigitGuidesMirrorPair</code><span class="sig-paren">(</span><em>digitguides</em>, <em>mirrordigitguides</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.deleteDigitGuidesMirrorPair" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.deleteGuides">
+<code class="descname">deleteGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.deleteGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.displayGuides">
+<code class="descname">displayGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.displayGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.existingDigitsFromJson">
+<code class="descname">existingDigitsFromJson</code><span class="sig-paren">(</span><em>digits_json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.existingDigitsFromJson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.existingFromJson">
+<code class="descname">existingFromJson</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.existingFromJson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assumes that the guide nodes exists in the network and
+finds it to set this class instead of creating them
+This function sets the same variables as createFromJson</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getDigitsGuidesObjectSide">
+<code class="descname">getDigitsGuidesObjectSide</code><span class="sig-paren">(</span><em>ismain</em>, <em>guidepart</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getDigitsGuidesObjectSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideJsonLabels">
+<em class="property">classmethod </em><code class="descname">getGuideJsonLabels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideJsonLabels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObject">
+<code class="descname">getGuideObject</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObjectData">
+<code class="descname">getGuideObjectData</code><span class="sig-paren">(</span><em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObjectData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObjectDataSide">
+<code class="descname">getGuideObjectDataSide</code><span class="sig-paren">(</span><em>ismain</em>, <em>guidepart</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObjectDataSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObjectSide">
+<code class="descname">getGuideObjectSide</code><span class="sig-paren">(</span><em>ismain</em>, <em>guidename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getGuideObjectSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getInitialPrevTx">
+<code class="descname">getInitialPrevTx</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getInitialPrevTx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getPointColorExp">
+<code class="descname">getPointColorExp</code><span class="sig-paren">(</span><em>pointcolor</em>, <em>alldigits</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.getPointColorExp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.lockGuides">
+<code class="descname">lockGuides</code><span class="sig-paren">(</span><em>lock</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.lockGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideAdd">
+<code class="descname">makemetaGuideAdd</code><span class="sig-paren">(</span><em>node</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideAdd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideBox">
+<code class="descname">makemetaGuideBox</code><span class="sig-paren">(</span><em>node</em>, <em>extremityrootguide</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideBox" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideCopy">
+<code class="descname">makemetaGuideCopy</code><span class="sig-paren">(</span><em>node</em>, <em>metaends</em>, <em>metapointcolor</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideCopy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideEnds">
+<code class="descname">makemetaGuideEnds</code><span class="sig-paren">(</span><em>node</em>, <em>metabox</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideEnds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideLine">
+<code class="descname">makemetaGuideLine</code><span class="sig-paren">(</span><em>parentnode</em>, <em>name</em>, <em>negatedir=False</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideLine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideOut">
+<code class="descname">makemetaGuideOut</code><span class="sig-paren">(</span><em>node</em>, <em>metamerge</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideOut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideResample">
+<code class="descname">makemetaGuideResample</code><span class="sig-paren">(</span><em>node</em>, <em>linewristwidth</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideResample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideSwitch">
+<code class="descname">makemetaGuideSwitch</code><span class="sig-paren">(</span><em>node</em>, <em>metaresample</em>, <em>metaonefing</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaGuideSwitch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaPointColor">
+<code class="descname">makemetaPointColor</code><span class="sig-paren">(</span><em>ismain</em>, <em>node</em>, <em>metawristpts</em>, <em>alldigits</em>, <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.makemetaPointColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.parentExtremities">
+<code class="descname">parentExtremities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.parentExtremities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setBigDigitGuides">
+<code class="descname">setBigDigitGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setBigDigitGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setBigDigitParent">
+<code class="descname">setBigDigitParent</code><span class="sig-paren">(</span><em>bigdigitguides</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setBigDigitParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfAllDigitsGuides">
+<code class="descname">setDefaultDisplayOfAllDigitsGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfAllDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfAllMirrorDigitsGuides">
+<code class="descname">setDefaultDisplayOfAllMirrorDigitsGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfAllMirrorDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfBigDigitsGuides">
+<code class="descname">setDefaultDisplayOfBigDigitsGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfBigDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfBigMirrorDigitsGuides">
+<code class="descname">setDefaultDisplayOfBigMirrorDigitsGuides</code><span class="sig-paren">(</span><em>display</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDefaultDisplayOfBigMirrorDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDisplayOfBigDigitsGuides">
+<code class="descname">setDisplayOfBigDigitsGuides</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setDisplayOfBigDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setPointColor">
+<code class="descname">setPointColor</code><span class="sig-paren">(</span><em>pointcolorsop</em>, <em>alldigits</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.setPointColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toJsonGuidename">
+<code class="descname">toJsonGuidename</code><span class="sig-paren">(</span><em>jsonobj</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toJsonGuidename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayAndDisplayableOfGuide">
+<code class="descname">toggleDisplayAndDisplayableOfGuide</code><span class="sig-paren">(</span><em>guidename</em>, <em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayAndDisplayableOfGuide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfAllDigitsGuides">
+<code class="descname">toggleDisplayOfAllDigitsGuides</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfAllDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfAllMirrorDigitsGuides">
+<code class="descname">toggleDisplayOfAllMirrorDigitsGuides</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfAllMirrorDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfBigMirrorDigitsGuides">
+<code class="descname">toggleDisplayOfBigMirrorDigitsGuides</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfBigMirrorDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfDigitsGuides">
+<code class="descname">toggleDisplayOfDigitsGuides</code><span class="sig-paren">(</span><em>digitroot</em>, <em>digitsguides</em>, <em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfDigitsGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfGuides">
+<code class="descname">toggleDisplayOfGuides</code><span class="sig-paren">(</span><em>guides</em>, <em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.toggleDisplayOfGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateHasBigDigit">
+<code class="descname">updateHasBigDigit</code><span class="sig-paren">(</span><em>hasbigdigit</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateHasBigDigit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaBigDigitGeo">
+<code class="descname">updateMetaBigDigitGeo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaBigDigitGeo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaPointColor">
+<code class="descname">updateMetaPointColor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaPointColor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaSide">
+<code class="descname">updateMetaSide</code><span class="sig-paren">(</span><em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetadigit">
+<code class="descname">updateMetadigit</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetadigit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaresample">
+<code class="descname">updateMetaresample</code><span class="sig-paren">(</span><em>numdigits</em>, <em>hasbigdigit</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMetaresample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMirror">
+<code class="descname">updateMirror</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateMirror" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateNumDigits">
+<code class="descname">updateNumDigits</code><span class="sig-paren">(</span><em>numdigits</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateNumDigits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateSide">
+<code class="descname">updateSide</code><span class="sig-paren">(</span><em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToLimbParent">
+<code class="descname">updateToLimbParent</code><span class="sig-paren">(</span><em>node</em>, <em>mirrornode</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToLimbParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToLimbParentSide">
+<code class="descname">updateToLimbParentSide</code><span class="sig-paren">(</span><em>parent</em>, <em>ismain</em>, <em>rootkey</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToLimbParentSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToMasterParent">
+<code class="descname">updateToMasterParent</code><span class="sig-paren">(</span><em>node</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToMasterParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToSpineParent">
+<code class="descname">updateToSpineParent</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateToSpineParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateType">
+<code class="descname">updateType</code><span class="sig-paren">(</span><em>extremitytype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide.updateType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity.extremityGuideController">
+<span id="autorigs-modules-extremity-extremityguidecontroller-module"></span><h2>autorigs.modules.extremity.extremityGuideController module<a class="headerlink" href="#module-autorigs.modules.extremity.extremityGuideController" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideController.</code><code class="descname">ModuleOptionController</code><span class="sig-paren">(</span><em>guidemodel</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onDigitsButtonChanged">
+<code class="descname">onDigitsButtonChanged</code><span class="sig-paren">(</span><em>buttonid</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onDigitsButtonChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onDigitsCountChanged">
+<code class="descname">onDigitsCountChanged</code><span class="sig-paren">(</span><em>digitscount</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onDigitsCountChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onHasBigDigitChanged">
+<code class="descname">onHasBigDigitChanged</code><span class="sig-paren">(</span><em>hasbigdigit</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onHasBigDigitChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onMetadigitChanged">
+<code class="descname">onMetadigitChanged</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onMetadigitChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onMirrorChanged">
+<code class="descname">onMirrorChanged</code><span class="sig-paren">(</span><em>viewmirror</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onMirrorChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onSideChanged">
+<code class="descname">onSideChanged</code><span class="sig-paren">(</span><em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onSideChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onTypeChanged">
+<code class="descname">onTypeChanged</code><span class="sig-paren">(</span><em>extremitytype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideController.ModuleOptionController.onTypeChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity.extremityGuideModel">
+<span id="autorigs-modules-extremity-extremityguidemodel-module"></span><h2>autorigs.modules.extremity.extremityGuideModel module<a class="headerlink" href="#module-autorigs.modules.extremity.extremityGuideModel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideModel.</code><code class="descname">ModuleOptionModel</code><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.DIGITS_COUNT_MORE">
+<code class="descname">DIGITS_COUNT_MORE</code><em class="property"> = 5</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.DIGITS_COUNT_MORE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.SIDE_DEFAULT">
+<code class="descname">SIDE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.SIDE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.TYPE_DEFAULT">
+<code class="descname">TYPE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.TYPE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.TYPE_DIGITS">
+<code class="descname">TYPE_DIGITS</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.TYPE_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.TYPE_FULL">
+<code class="descname">TYPE_FULL</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.TYPE_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addBigDigitChangedFcn">
+<code class="descname">addBigDigitChangedFcn</code><span class="sig-paren">(</span><em>bigdigitfcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addBigDigitChangedFcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addDigitsCountChangedFcn">
+<code class="descname">addDigitsCountChangedFcn</code><span class="sig-paren">(</span><em>digitsfcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addDigitsCountChangedFcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addExtremityTypeChangedFcn">
+<code class="descname">addExtremityTypeChangedFcn</code><span class="sig-paren">(</span><em>typefcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addExtremityTypeChangedFcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addMetadigitChangedFcn">
+<code class="descname">addMetadigitChangedFcn</code><span class="sig-paren">(</span><em>metafcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addMetadigitChangedFcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addMirrorChangedFcn">
+<code class="descname">addMirrorChangedFcn</code><span class="sig-paren">(</span><em>mirrorfcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addMirrorChangedFcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addSideChangedFcn">
+<code class="descname">addSideChangedFcn</code><span class="sig-paren">(</span><em>sidefcn</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.addSideChangedFcn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.getNumDigits">
+<code class="descname">getNumDigits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.getNumDigits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.getSide">
+<code class="descname">getSide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.getSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.getType">
+<code class="descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.getType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.hasBigDigit">
+<code class="descname">hasBigDigit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.hasBigDigit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.hasMetadigits">
+<code class="descname">hasMetadigits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.hasMetadigits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.isMirror">
+<code class="descname">isMirror</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.isMirror" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateDigitsCountChanged">
+<code class="descname">updateDigitsCountChanged</code><span class="sig-paren">(</span><em>digitscount</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateDigitsCountChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateExtremityTypeChanged">
+<code class="descname">updateExtremityTypeChanged</code><span class="sig-paren">(</span><em>extremitytype</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateExtremityTypeChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateHasBigDigitChanged">
+<code class="descname">updateHasBigDigitChanged</code><span class="sig-paren">(</span><em>hasbigdigit</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateHasBigDigitChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateMetadigitChanged">
+<code class="descname">updateMetadigitChanged</code><span class="sig-paren">(</span><em>hasmeta</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateMetadigitChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateMirrorChanged">
+<code class="descname">updateMirrorChanged</code><span class="sig-paren">(</span><em>modelmirror</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateMirrorChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateSideChanged">
+<code class="descname">updateSideChanged</code><span class="sig-paren">(</span><em>modelside</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideModel.ModuleOptionModel.updateSideChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity.extremityGuideOptions">
+<span id="autorigs-modules-extremity-extremityguideoptions-module"></span><h2>autorigs.modules.extremity.extremityGuideOptions module<a class="headerlink" href="#module-autorigs.modules.extremity.extremityGuideOptions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideOptions.</code><code class="descname">FootOptionsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>controller</em>, <em>model</em>, <em>assetnode</em>, <em>mastermodule</em>, <em>spinemodules</em>, <em>limbmodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget" title="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.DIGITS_COUNT_LABEL">
+<code class="descname">DIGITS_COUNT_LABEL</code><em class="property"> = 'Toe Count'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.DIGITS_COUNT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.HAS_BIG_DIGIT_LABEL">
+<code class="descname">HAS_BIG_DIGIT_LABEL</code><em class="property"> = 'Has Big Toe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.HAS_BIG_DIGIT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_HAS_BIG_DIGIT">
+<code class="descname">JSON_HAS_BIG_DIGIT</code><em class="property"> = 'has_bigtoe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_HAS_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_HAS_METADIGITS">
+<code class="descname">JSON_HAS_METADIGITS</code><em class="property"> = 'has_metatarpals'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_HAS_METADIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_METADIGIT_LENGTH">
+<code class="descname">JSON_METADIGIT_LENGTH</code><em class="property"> = 'metatarpal_length'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_METADIGIT_LENGTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_NUM_DIGITS">
+<code class="descname">JSON_NUM_DIGITS</code><em class="property"> = 'numtoes'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.JSON_NUM_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.META_TOGGLE_LABEL">
+<code class="descname">META_TOGGLE_LABEL</code><em class="property"> = 'Metatarsals'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.META_TOGGLE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.PARENT_LABEL">
+<code class="descname">PARENT_LABEL</code><em class="property"> = 'Foot Parent'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.PARENT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.PREFIX_DEFAULT_LABEL">
+<code class="descname">PREFIX_DEFAULT_LABEL</code><em class="property"> = 'L_Foot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.PREFIX_DEFAULT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.SIDE_LABEL">
+<code class="descname">SIDE_LABEL</code><em class="property"> = 'Foot Side'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.SIDE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.TYPE_BUTTON_LABELS">
+<code class="descname">TYPE_BUTTON_LABELS</code><em class="property"> = ['Boot', 'Toes']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.TYPE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.TYPE_LABEL">
+<code class="descname">TYPE_LABEL</code><em class="property"> = 'Foot Type'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.TYPE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.createParentWidget">
+<code class="descname">createParentWidget</code><span class="sig-paren">(</span><em>spinemodules</em>, <em>limbmodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.createParentWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getArmParentGuides">
+<code class="descname">getArmParentGuides</code><span class="sig-paren">(</span><em>armmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getArmParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getExistingParents">
+<code class="descname">getExistingParents</code><span class="sig-paren">(</span><em>limbmodules</em>, <em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getExistingParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getLegParentGuides">
+<code class="descname">getLegParentGuides</code><span class="sig-paren">(</span><em>legmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getLegParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getQuadLegParentGuides">
+<code class="descname">getQuadLegParentGuides</code><span class="sig-paren">(</span><em>quadlegmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getQuadLegParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getSpineParentGuides">
+<code class="descname">getSpineParentGuides</code><span class="sig-paren">(</span><em>spinemodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.getSpineParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>module</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.FootOptionsWidget.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideOptions.</code><code class="descname">HandOptionsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>controller</em>, <em>model</em>, <em>assetnode</em>, <em>mastermodule</em>, <em>spinemodules</em>, <em>limbmodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget" title="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.DIGITS_COUNT_LABEL">
+<code class="descname">DIGITS_COUNT_LABEL</code><em class="property"> = 'Finger Count'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.DIGITS_COUNT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.HAS_BIG_DIGIT_LABEL">
+<code class="descname">HAS_BIG_DIGIT_LABEL</code><em class="property"> = 'Has Thumb'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.HAS_BIG_DIGIT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_HAS_BIG_DIGIT">
+<code class="descname">JSON_HAS_BIG_DIGIT</code><em class="property"> = 'has_thumb'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_HAS_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_HAS_METADIGITS">
+<code class="descname">JSON_HAS_METADIGITS</code><em class="property"> = 'has_metacarpals'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_HAS_METADIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_METADIGIT_LENGTH">
+<code class="descname">JSON_METADIGIT_LENGTH</code><em class="property"> = 'metacarpal_length'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_METADIGIT_LENGTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_NUM_DIGITS">
+<code class="descname">JSON_NUM_DIGITS</code><em class="property"> = 'numfingers'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.JSON_NUM_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.META_TOGGLE_LABEL">
+<code class="descname">META_TOGGLE_LABEL</code><em class="property"> = 'Metacarpals'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.META_TOGGLE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.PARENT_LABEL">
+<code class="descname">PARENT_LABEL</code><em class="property"> = 'Hand Parent'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.PARENT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.PREFIX_DEFAULT_LABEL">
+<code class="descname">PREFIX_DEFAULT_LABEL</code><em class="property"> = 'L_Hand'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.PREFIX_DEFAULT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.SIDE_LABEL">
+<code class="descname">SIDE_LABEL</code><em class="property"> = 'Hand Side'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.SIDE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.TYPE_BUTTON_LABELS">
+<code class="descname">TYPE_BUTTON_LABELS</code><em class="property"> = ['Glove', 'Fingers']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.TYPE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.TYPE_LABEL">
+<code class="descname">TYPE_LABEL</code><em class="property"> = 'Hand Type'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.TYPE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.createParentWidget">
+<code class="descname">createParentWidget</code><span class="sig-paren">(</span><em>spinemodules</em>, <em>limbmodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.createParentWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.getExistingParents">
+<code class="descname">getExistingParents</code><span class="sig-paren">(</span><em>limbmodules</em>, <em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.getExistingParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.getLimbParentGuides">
+<code class="descname">getLimbParentGuides</code><span class="sig-paren">(</span><em>armmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.getLimbParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.getSpineParentGuides">
+<code class="descname">getSpineParentGuides</code><span class="sig-paren">(</span><em>spinemodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.getSpineParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>module</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.HandOptionsWidget.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideOptions.</code><code class="descname">ModuleOptionsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>controller</em>, <em>model</em>, <em>assetnode</em>, <em>mastermodule</em>, <em>spinemodules</em>, <em>limbmodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.DEFAULT_PARENT_PATH">
+<code class="descname">DEFAULT_PARENT_PATH</code><em class="property"> = 'DEFAULT_PARENT_PATH'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.DEFAULT_PARENT_PATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.DIGITS_COUNT_MORE">
+<code class="descname">DIGITS_COUNT_MORE</code><em class="property"> = 5</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.DIGITS_COUNT_MORE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.DIGITS_ZERO">
+<code class="descname">DIGITS_ZERO</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.DIGITS_ZERO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.HIGHLIGHT_COLOR">
+<code class="descname">HIGHLIGHT_COLOR</code><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.HIGHLIGHT_COLOR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used by autodoc_mock_imports.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.SIDE_BUTTON_LABELS">
+<code class="descname">SIDE_BUTTON_LABELS</code><em class="property"> = ['Left', 'Right']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.SIDE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.SIDE_LEFT">
+<code class="descname">SIDE_LEFT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.SIDE_LEFT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.SIDE_RIGHT">
+<code class="descname">SIDE_RIGHT</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.SIDE_RIGHT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.TYPE_DEFAULT">
+<code class="descname">TYPE_DEFAULT</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.TYPE_DEFAULT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.TYPE_DIGITS">
+<code class="descname">TYPE_DIGITS</code><em class="property"> = 1</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.TYPE_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.TYPE_FULL">
+<code class="descname">TYPE_FULL</code><em class="property"> = 0</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.TYPE_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getAllWidgets">
+<code class="descname">getAllWidgets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getAllWidgets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getBuiltParentInfo">
+<code class="descname">getBuiltParentInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getBuiltParentInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getDefaultParentPath">
+<code class="descname">getDefaultParentPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getDefaultParentPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getHasBigDigit">
+<code class="descname">getHasBigDigit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getHasBigDigit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getMasterParentGuides">
+<code class="descname">getMasterParentGuides</code><span class="sig-paren">(</span><em>mastermodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.getMasterParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onDigitsButtonChanged">
+<code class="descname">onDigitsButtonChanged</code><span class="sig-paren">(</span><em>buttonid</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onDigitsButtonChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onDigitsCountChanged">
+<code class="descname">onDigitsCountChanged</code><span class="sig-paren">(</span><em>numdigits</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onDigitsCountChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onHasBigDigitChanged">
+<code class="descname">onHasBigDigitChanged</code><span class="sig-paren">(</span><em>hasbigdigit</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onHasBigDigitChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onMetadigitToggleChanged">
+<code class="descname">onMetadigitToggleChanged</code><span class="sig-paren">(</span><em>toggle</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onMetadigitToggleChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onTypeChanged">
+<code class="descname">onTypeChanged</code><span class="sig-paren">(</span><em>buttonid</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.onTypeChanged" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.updateParentModules">
+<code class="descname">updateParentModules</code><span class="sig-paren">(</span><em>limbmodules</em>, <em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget.updateParentModules" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideOptions.</code><code class="descname">QuadFootOptionsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>controller</em>, <em>model</em>, <em>assetnode</em>, <em>mastermodule</em>, <em>spinemodules</em>, <em>limbmodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget" title="autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.extremityGuideOptions.ModuleOptionsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.DIGITS_COUNT_LABEL">
+<code class="descname">DIGITS_COUNT_LABEL</code><em class="property"> = 'Toe Count'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.DIGITS_COUNT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.HAS_BIG_DIGIT_LABEL">
+<code class="descname">HAS_BIG_DIGIT_LABEL</code><em class="property"> = 'Has Big Toe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.HAS_BIG_DIGIT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_HAS_BIG_DIGIT">
+<code class="descname">JSON_HAS_BIG_DIGIT</code><em class="property"> = 'has_bigtoe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_HAS_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_HAS_METADIGITS">
+<code class="descname">JSON_HAS_METADIGITS</code><em class="property"> = 'has_metatarpals'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_HAS_METADIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_METADIGIT_LENGTH">
+<code class="descname">JSON_METADIGIT_LENGTH</code><em class="property"> = 'metatarpal_length'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_METADIGIT_LENGTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_NUM_DIGITS">
+<code class="descname">JSON_NUM_DIGITS</code><em class="property"> = 'numtoes'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.JSON_NUM_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.META_TOGGLE_LABEL">
+<code class="descname">META_TOGGLE_LABEL</code><em class="property"> = 'Metatarsals'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.META_TOGGLE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.PARENT_LABEL">
+<code class="descname">PARENT_LABEL</code><em class="property"> = 'QuadFoot Parent'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.PARENT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.PREFIX_DEFAULT_LABEL">
+<code class="descname">PREFIX_DEFAULT_LABEL</code><em class="property"> = 'L_QuadFoot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.PREFIX_DEFAULT_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.SIDE_LABEL">
+<code class="descname">SIDE_LABEL</code><em class="property"> = 'QuadFoot Side'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.SIDE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.TYPE_BUTTON_LABELS">
+<code class="descname">TYPE_BUTTON_LABELS</code><em class="property"> = ['Hoof', 'Paw']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.TYPE_BUTTON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.TYPE_LABEL">
+<code class="descname">TYPE_LABEL</code><em class="property"> = 'QuadFoot Type'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.TYPE_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.createParentWidget">
+<code class="descname">createParentWidget</code><span class="sig-paren">(</span><em>spinemodules</em>, <em>limbmodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.createParentWidget" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getArmParentGuides">
+<code class="descname">getArmParentGuides</code><span class="sig-paren">(</span><em>armmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getArmParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getExistingParents">
+<code class="descname">getExistingParents</code><span class="sig-paren">(</span><em>limbmodules</em>, <em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getExistingParents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getLegParentGuides">
+<code class="descname">getLegParentGuides</code><span class="sig-paren">(</span><em>legmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getLegParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getQuadLegParentGuides">
+<code class="descname">getQuadLegParentGuides</code><span class="sig-paren">(</span><em>quadlegmodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getQuadLegParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getSpineParentGuides">
+<code class="descname">getSpineParentGuides</code><span class="sig-paren">(</span><em>spinemodule</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.getSpineParentGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>module</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideOptions.QuadFootOptionsWidget.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity.extremityGuideParams">
+<span id="autorigs-modules-extremity-extremityguideparams-module"></span><h2>autorigs.modules.extremity.extremityGuideParams module<a class="headerlink" href="#module-autorigs.modules.extremity.extremityGuideParams" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideParams.</code><code class="descname">FootParamsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget" title="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_BIG_DIGIT">
+<code class="descname">JSON_BIG_DIGIT</code><em class="property"> = 'bigtoe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_CENTER">
+<code class="descname">JSON_CENTER</code><em class="property"> = 'feetcenter'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGITS">
+<code class="descname">JSON_DIGITS</code><em class="property"> = 'toes'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGITS_ROOT">
+<code class="descname">JSON_DIGITS_ROOT</code><em class="property"> = 'toesroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGITS_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_ALL">
+<code class="descname">JSON_DIGIT_ALL</code><em class="property"> = 'toeguides'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_FORMAT">
+<code class="descname">JSON_DIGIT_FORMAT</code><em class="property"> = 'toe{}'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_PARAMS">
+<code class="descname">JSON_DIGIT_PARAMS</code><em class="property"> = 'toeparams'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_PARAMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_ROLL">
+<code class="descname">JSON_DIGIT_ROLL</code><em class="property"> = 'toeroll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_DIGIT_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_EXTREMITY_ROLL">
+<code class="descname">JSON_EXTREMITY_ROLL</code><em class="property"> = 'footroll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_EXTREMITY_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_EXTREMITY_START">
+<code class="descname">JSON_EXTREMITY_START</code><em class="property"> = 'ankle'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_EXTREMITY_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_FULL">
+<code class="descname">JSON_FULL</code><em class="property"> = 'foot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_ROOT">
+<code class="descname">JSON_ROOT</code><em class="property"> = 'footroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_ROTATE_ROOT">
+<code class="descname">JSON_ROTATE_ROOT</code><em class="property"> = 'rotateroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.JSON_ROTATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_DIGIT">
+<code class="descname">LABEL_DIGIT</code><em class="property"> = 'Toes'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_DIGIT_ROOT">
+<code class="descname">LABEL_DIGIT_ROOT</code><em class="property"> = 'Toes Root'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_DIGIT_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_FULL">
+<code class="descname">LABEL_FULL</code><em class="property"> = 'Foot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_BIG_DIGIT">
+<code class="descname">LABEL_PARAM_BIG_DIGIT</code><em class="property"> = 'Big Toe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_CENTER">
+<code class="descname">LABEL_PARAM_CENTER</code><em class="property"> = 'Feet Center'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_DIGIT_FORMAT">
+<code class="descname">LABEL_PARAM_DIGIT_FORMAT</code><em class="property"> = 'Toe {}'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_DIGIT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_DIGIT_ROLL">
+<code class="descname">LABEL_PARAM_DIGIT_ROLL</code><em class="property"> = 'Toe Roll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_DIGIT_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_EXTREMITY_ROLL">
+<code class="descname">LABEL_PARAM_EXTREMITY_ROLL</code><em class="property"> = 'Foot Roll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_EXTREMITY_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_EXTREMITY_START">
+<code class="descname">LABEL_PARAM_EXTREMITY_START</code><em class="property"> = 'Ankle'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_EXTREMITY_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_ROOT">
+<code class="descname">LABEL_PARAM_ROOT</code><em class="property"> = 'Foot Root'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_ROTATE_ROOT">
+<code class="descname">LABEL_PARAM_ROTATE_ROOT</code><em class="property"> = 'Foot Root Rot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_ROTATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_TRANSLATE_ROOT">
+<code class="descname">LABEL_PARAM_TRANSLATE_ROOT</code><em class="property"> = 'Foot Root Translate'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.FootParamsWidget.LABEL_PARAM_TRANSLATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideParams.</code><code class="descname">HandParamsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget" title="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_BIG_DIGIT">
+<code class="descname">JSON_BIG_DIGIT</code><em class="property"> = 'bigfinger'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_CENTER">
+<code class="descname">JSON_CENTER</code><em class="property"> = 'handscenter'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGITS">
+<code class="descname">JSON_DIGITS</code><em class="property"> = 'fingers'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGITS_ROOT">
+<code class="descname">JSON_DIGITS_ROOT</code><em class="property"> = 'fingersroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGITS_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_ALL">
+<code class="descname">JSON_DIGIT_ALL</code><em class="property"> = 'fingerguides'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_FORMAT">
+<code class="descname">JSON_DIGIT_FORMAT</code><em class="property"> = 'finger{}'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_PARAMS">
+<code class="descname">JSON_DIGIT_PARAMS</code><em class="property"> = 'fingerparams'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_PARAMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_ROLL">
+<code class="descname">JSON_DIGIT_ROLL</code><em class="property"> = 'fingerroll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_DIGIT_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_EXTREMITY_ROLL">
+<code class="descname">JSON_EXTREMITY_ROLL</code><em class="property"> = 'handroll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_EXTREMITY_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_EXTREMITY_START">
+<code class="descname">JSON_EXTREMITY_START</code><em class="property"> = 'wrist'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_EXTREMITY_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_FULL">
+<code class="descname">JSON_FULL</code><em class="property"> = 'hand'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_ROOT">
+<code class="descname">JSON_ROOT</code><em class="property"> = 'handroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_ROTATE_ROOT">
+<code class="descname">JSON_ROTATE_ROOT</code><em class="property"> = 'rotateroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.JSON_ROTATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_DIGIT">
+<code class="descname">LABEL_DIGIT</code><em class="property"> = 'Fingers'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_DIGIT_ROOT">
+<code class="descname">LABEL_DIGIT_ROOT</code><em class="property"> = 'Fingers Root'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_DIGIT_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_FULL">
+<code class="descname">LABEL_FULL</code><em class="property"> = 'Hand'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_BIG_DIGIT">
+<code class="descname">LABEL_PARAM_BIG_DIGIT</code><em class="property"> = 'Thumb'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_CENTER">
+<code class="descname">LABEL_PARAM_CENTER</code><em class="property"> = 'Hands Center'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_DIGIT_FORMAT">
+<code class="descname">LABEL_PARAM_DIGIT_FORMAT</code><em class="property"> = 'Finger {}'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_DIGIT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_DIGIT_ROLL">
+<code class="descname">LABEL_PARAM_DIGIT_ROLL</code><em class="property"> = 'Finger Roll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_DIGIT_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_EXTREMITY_ROLL">
+<code class="descname">LABEL_PARAM_EXTREMITY_ROLL</code><em class="property"> = 'Hand Roll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_EXTREMITY_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_EXTREMITY_START">
+<code class="descname">LABEL_PARAM_EXTREMITY_START</code><em class="property"> = 'Wrist'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_EXTREMITY_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_ROOT">
+<code class="descname">LABEL_PARAM_ROOT</code><em class="property"> = 'Hand Root'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_ROTATE_ROOT">
+<code class="descname">LABEL_PARAM_ROTATE_ROOT</code><em class="property"> = 'Hand Root Rot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.HandParamsWidget.LABEL_PARAM_ROTATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideParams.</code><code class="descname">ModuleParamsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sphinx.ext.autodoc.importer._MockObject</span></code></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.JSON_PARAM_BIG_DIGIT_GUIDES">
+<code class="descname">JSON_PARAM_BIG_DIGIT_GUIDES</code><em class="property"> = ['allguides', 'root', 'pphalanx', 'dphalanx']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.JSON_PARAM_BIG_DIGIT_GUIDES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.JSON_PARAM_DIGITS_GUIDES">
+<code class="descname">JSON_PARAM_DIGITS_GUIDES</code><em class="property"> = ['allguides', 'root', 'pphalanx', 'mphalanx', 'dphalanx']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.JSON_PARAM_DIGITS_GUIDES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.LABEL_PARAM_BIG_DIGIT_GUIDES">
+<code class="descname">LABEL_PARAM_BIG_DIGIT_GUIDES</code><em class="property"> = ['Root Guide', 'Proximal Phalanx', 'Distal Phalanx']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.LABEL_PARAM_BIG_DIGIT_GUIDES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.LABEL_PARAM_DIGITS_GUIDES">
+<code class="descname">LABEL_PARAM_DIGITS_GUIDES</code><em class="property"> = ['Root Guide', 'Proximal Phalanx', 'Middle Phalanx', 'Distal Phalanx']</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.LABEL_PARAM_DIGITS_GUIDES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.addTab">
+<code class="descname">addTab</code><span class="sig-paren">(</span><em>tablabel</em>, <em>tabscroll</em>, <em>insertidx=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.addTab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.createTab">
+<code class="descname">createTab</code><span class="sig-paren">(</span><em>tabdetail</em>, <em>digitwidgetsdst=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.createTab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.getDigitGuideTabObj">
+<code class="descname">getDigitGuideTabObj</code><span class="sig-paren">(</span><em>tablabel</em>, <em>controls</em>, <em>controllabels</em>, <em>controljsonlabels</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.getDigitGuideTabObj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.getExtremityType">
+<code class="descname">getExtremityType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.getExtremityType" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.getJsonDigitGuides">
+<code class="descname">getJsonDigitGuides</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.getJsonDigitGuides" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.toJSON">
+<code class="descname">toJSON</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.toJSON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.unlinkAllNodes">
+<code class="descname">unlinkAllNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.unlinkAllNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.updateHasBigDigit">
+<code class="descname">updateHasBigDigit</code><span class="sig-paren">(</span><em>hasbigdigit</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.updateHasBigDigit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.updateNumDigit">
+<code class="descname">updateNumDigit</code><span class="sig-paren">(</span><em>numdigits</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.updateNumDigit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.updateParmUI">
+<code class="descname">updateParmUI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget.updateParmUI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityGuideParams.</code><code class="descname">QuadFootParamsWidget</code><span class="sig-paren">(</span><em>extremityguide</em>, <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget" title="autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.extremityGuideParams.ModuleParamsWidget</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_BIG_DIGIT">
+<code class="descname">JSON_BIG_DIGIT</code><em class="property"> = 'bigtoe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_CENTER">
+<code class="descname">JSON_CENTER</code><em class="property"> = 'feetcenter'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGITS">
+<code class="descname">JSON_DIGITS</code><em class="property"> = 'toes'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGITS_ROOT">
+<code class="descname">JSON_DIGITS_ROOT</code><em class="property"> = 'toesroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGITS_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_ALL">
+<code class="descname">JSON_DIGIT_ALL</code><em class="property"> = 'toeguides'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_ALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_FORMAT">
+<code class="descname">JSON_DIGIT_FORMAT</code><em class="property"> = 'toe{}'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_PARAMS">
+<code class="descname">JSON_DIGIT_PARAMS</code><em class="property"> = 'toeparams'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_PARAMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_ROLL">
+<code class="descname">JSON_DIGIT_ROLL</code><em class="property"> = 'toeroll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_DIGIT_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_EXTREMITY_ROLL">
+<code class="descname">JSON_EXTREMITY_ROLL</code><em class="property"> = 'footroll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_EXTREMITY_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_EXTREMITY_START">
+<code class="descname">JSON_EXTREMITY_START</code><em class="property"> = 'ankle'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_EXTREMITY_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_FULL">
+<code class="descname">JSON_FULL</code><em class="property"> = 'foot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_ROOT">
+<code class="descname">JSON_ROOT</code><em class="property"> = 'footroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_ROTATE_ROOT">
+<code class="descname">JSON_ROTATE_ROOT</code><em class="property"> = 'rotateroot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.JSON_ROTATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_DIGIT">
+<code class="descname">LABEL_DIGIT</code><em class="property"> = 'Toes'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_DIGIT_ROOT">
+<code class="descname">LABEL_DIGIT_ROOT</code><em class="property"> = 'Toes Root'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_DIGIT_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_FULL">
+<code class="descname">LABEL_FULL</code><em class="property"> = 'Foot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_BIG_DIGIT">
+<code class="descname">LABEL_PARAM_BIG_DIGIT</code><em class="property"> = 'Big Toe'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_BIG_DIGIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_CENTER">
+<code class="descname">LABEL_PARAM_CENTER</code><em class="property"> = 'Feet Center'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_CENTER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_DIGIT_FORMAT">
+<code class="descname">LABEL_PARAM_DIGIT_FORMAT</code><em class="property"> = 'Toe {}'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_DIGIT_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_DIGIT_ROLL">
+<code class="descname">LABEL_PARAM_DIGIT_ROLL</code><em class="property"> = 'Toe Roll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_DIGIT_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_EXTREMITY_ROLL">
+<code class="descname">LABEL_PARAM_EXTREMITY_ROLL</code><em class="property"> = 'Foot Roll'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_EXTREMITY_ROLL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_EXTREMITY_START">
+<code class="descname">LABEL_PARAM_EXTREMITY_START</code><em class="property"> = 'Ankle'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_EXTREMITY_START" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_ROOT">
+<code class="descname">LABEL_PARAM_ROOT</code><em class="property"> = 'Foot Root'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_ROTATE_ROOT">
+<code class="descname">LABEL_PARAM_ROTATE_ROOT</code><em class="property"> = 'Foot Root Rot'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_ROTATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_TRANSLATE_ROOT">
+<code class="descname">LABEL_PARAM_TRANSLATE_ROOT</code><em class="property"> = 'Foot Root Translate'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityGuideParams.QuadFootParamsWidget.LABEL_PARAM_TRANSLATE_ROOT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity.extremityModule">
+<span id="autorigs-modules-extremity-extremitymodule-module"></span><h2>autorigs.modules.extremity.extremityModule module<a class="headerlink" href="#module-autorigs.modules.extremity.extremityModule" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityGuideTab">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityModule.</code><code class="descname">ExtremityGuideTab</code><span class="sig-paren">(</span><em>buildguides</em>, <em>assetnode</em>, <em>mastermodule</em>, <em>limbmodules</em>, <em>spinemodules</em>, <em>model</em>, <em>controller</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityGuideTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.rootModule.ModuleGuideTab" title="autorigs.modules.base.rootModule.ModuleGuideTab"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.rootModule.ModuleGuideTab</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityGuideTab.PREFIX">
+<code class="descname">PREFIX</code><em class="property"> = 'Extremity'</em><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityGuideTab.PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityGuideTab.getBuiltParentInfo">
+<code class="descname">getBuiltParentInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityGuideTab.getBuiltParentInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityGuideTab.updateParent">
+<code class="descname">updateParent</code><span class="sig-paren">(</span><em>limbmodules</em>, <em>spinemodules</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityGuideTab.updateParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule">
+<em class="property">class </em><code class="descclassname">autorigs.modules.extremity.extremityModule.</code><code class="descname">ExtremityModule</code><span class="sig-paren">(</span><em>autorigs_asset</em>, <em>limbmodules</em>, <em>guidesfactory</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.base.html#autorigs.modules.base.rootModule.Module" title="autorigs.modules.base.rootModule.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.base.rootModule.Module</span></code></a></p>
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule.buildFromDefault">
+<code class="descname">buildFromDefault</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule.buildFromDefault" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule.buildFromJsonExisting">
+<code class="descname">buildFromJsonExisting</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule.buildFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule.buildFromJsonNew">
+<code class="descname">buildFromJsonNew</code><span class="sig-paren">(</span><em>json</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule.buildFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule.buildRig">
+<code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule.getBUiltObject">
+<code class="descname">getBUiltObject</code><span class="sig-paren">(</span><em>builtkey</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule.getBUiltObject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule.getBuiltObjectSide">
+<code class="descname">getBuiltObjectSide</code><span class="sig-paren">(</span><em>builtkey</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule.getBuiltObjectSide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.extremity.extremityModule.ExtremityModule.getLimbModuleIfExists">
+<code class="descname">getLimbModuleIfExists</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.extremity.extremityModule.ExtremityModule.getLimbModuleIfExists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.extremity">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.extremity" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.extremity package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.autoRigsExtremityBuilder">autorigs.modules.extremity.autoRigsExtremityBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder">autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.buildExtremityGuide">autorigs.modules.extremity.buildExtremityGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.extremityGuideController">autorigs.modules.extremity.extremityGuideController module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.extremityGuideModel">autorigs.modules.extremity.extremityGuideModel module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.extremityGuideOptions">autorigs.modules.extremity.extremityGuideOptions module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.extremityGuideParams">autorigs.modules.extremity.extremityGuideParams module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity.extremityModule">autorigs.modules.extremity.extremityModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.extremity">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.basicFace.jaw.html" title="previous chapter">autorigs.modules.basicFace.jaw package</a></li>
+      <li>Next: <a href="autorigs.modules.foot.html" title="next chapter">autorigs.modules.foot package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.extremity.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.extremity.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

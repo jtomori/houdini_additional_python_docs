@@ -1,7 +1,0 @@
-dopstatictoolutils module
-=========================
-
-.. automodule:: dopstatictoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

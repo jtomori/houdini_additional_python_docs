@@ -1,7 +1,0 @@
-vexpressionmenu module
-======================
-
-.. automodule:: vexpressionmenu
-    :members:
-    :undoc-members:
-    :show-inheritance:

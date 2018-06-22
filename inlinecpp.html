@@ -1,0 +1,383 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>inlinecpp module &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="introspect module" href="introspect.html" />
+    <link rel="prev" title="images2gif module" href="images2gif.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-inlinecpp">
+<span id="inlinecpp-module"></span><h1>inlinecpp module<a class="headerlink" href="#module-inlinecpp" title="Permalink to this headline">¶</a></h1>
+<p>This module lets you write functions in C++ that are accessible from Python.
+When necessary, your C++ code is automatically compiled into a library and
+the library is loaded, but the code won’t be compiled when the library already
+exists, and the library won’t be reloaded when it’s already loaded.</p>
+<dl class="docutils">
+<dt>NOTE: The Python ctypes module does not support 64-bit Windows in Python 2.5,</dt>
+<dd>so this module requires Python 2.6 on 64-bit Windows.</dd>
+<dt>Consider this example:</dt>
+<dd><dl class="first docutils">
+<dt>mymodule = inlinecpp.createLibrary(</dt>
+<dd>name=”example_string_library”,
+includes=”#include &lt;UT/UT_String.h&gt;”,
+function_sources=[</dd>
+</dl>
+<p>“””
+int matchesPattern(const char <a href="#id1"><span class="problematic" id="id2">*</span></a>str, const char <a href="#id3"><span class="problematic" id="id4">*</span></a>pattern)
+{</p>
+<blockquote>
+<div>return UT_String(str).multiMatch(pattern);</div></blockquote>
+<p>}
+“”“])</p>
+<p>string = “one”
+for pattern in “o*”, “x*”, “^o*”:</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>print “%s matches %s: %s” % (repr(string), repr(pattern),</dt>
+<dd>bool(mymodule.matchesPattern(string, pattern)))</dd>
+</dl>
+</div></blockquote>
+</dd>
+</dl>
+<p>The call to inlinecpp.createLibrary receives your C++ source code and returns a
+module-like object (assigned to the variable mymodule).  You can then call
+mymodule.matchesPattern to invoke the corresponding C++ function.  If you
+forget which parameters to pass to matchesPattern, you can get the C++
+signature with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mymodule</span><span class="o">.</span><span class="n">matchesPattern</span><span class="o">.</span><span class="n">signature</span><span class="p">()</span>
+<span class="go">&#39;int matchesPattern(const char * str, const char * pattern)&#39;</span>
+</pre></div>
+</div>
+<p>Note that subsequent calls to createLibrary with the exact same parameters will
+not recompile your module, and will not reload it if it’s been loaded in the
+current session.</p>
+<p>This module uses the hcustom HDK tool to compile your C++ code.  If your
+code contains a compiler error, it raises a CompilerError exception.  You can
+compile your code with debugging enabled by passing debug=True to
+createLibrary.</p>
+<p>If you want to check for compiler warnings, call the _compiler_output method
+of the module-like object.  Note that if the library was already compiled when
+it was loaded, calling _compiler_output will force it to be recompiled.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">mymodule</span><span class="o">.</span><span class="n">_compiler_output</span><span class="p">()</span>
+<span class="go">Making /home/user/houdiniX.Y/inlinecpp/example_string_library_Linux_x86_64_j5c9Dz</span>
+<span class="go">T525OU0VdJ5uL0kw.o and /home/user/houdiniX.Y/inlinecpp/example_string_library_Lin</span>
+<span class="go">ux_x86_64_j5c9DzT525OU0VdJ5uL0kw.so from /home/user/houdiniX.Y/inlinecpp/example_</span>
+<span class="go">string_library_Linux_x86_64_j5c9DzT525OU0VdJ5uL0kw.C</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Your C++ functions may have the following parameter types:</dt>
+<dd>int
+float              (pass a Python float)
+double             (pass a Python float)
+const char *       (pass a Python str object)
+bool               (Python 2.6 and up only)
+GU_Detail *        (pass a hou.Geometry object from inside a Python sop)
+const GU_Detail *  (pass a hou.Geometry object)
+OP_Node *          (pass a hou.Node object)
+CHOP_Node *        (pass a hou.ChopNode)
+COP2_Node *        (pass a hou.CopNode)
+DOP_Node *         (pass a hou.DopNode)
+OBJ_Node *         (pass a hou.ObjNode)
+POP_Node *         (pass a hou.PopNode)
+POPNET_Node *      (pass a hou.PopNetNode)
+ROP_Node *         (pass a hou.RopNode)
+SHOP_Node *        (pass a hou.ShopNode)
+SOP_Node *         (pass a hou.SopNode)
+VOP_Node *         (pass a hou.VopNode)
+VOPNET_Node *      (pass a hou.VopNetNode)
+OP_Operator *      (pass a hou.NodeType)
+PRM_Tuple *        (pass a hou.ParmTuple)
+CL_Track *         (pass a hou.Track)
+const SIM_Data *   (pass a hou.DopData)
+UT_Vector2D *      (pass a hou.Vector2)
+UT_Vector3D *      (pass a hou.Vector3)
+UT_Vector4D *      (pass a hou.Vector4)
+UT_DMatrix3 *      (pass a hou.Matrix3)
+UT_DMatrix4 *      (pass a hou.Matrix4)
+UT_BoundingBox *   (pass a hou.BoundingBox)
+UT_Color *         (pass a hou.Color)
+UT_QuaternionD *   (pass a hou.Quaternion)</dd>
+<dt>Your C++ functions may have one of the following return values:</dt>
+<dd>void
+int
+float
+double
+const char *       (a null-terminated string that will not be freed)
+char *             (a null-terminated string that will be freed with free())
+bool               (Python 2.6 and up only)</dd>
+</dl>
+<p>The shared library file (.so on Linux, .dll on Windows, and .dylib on Mac) is
+put in your $HOME/houdiniX.Y/inlinecpp directory.  It is named</p>
+<blockquote>
+<div>&lt;name&gt;_&lt;platform&gt;_&lt;processor&gt;_&lt;houdini_version&gt;_&lt;checksum&gt;.{so|dll|dylib}</div></blockquote>
+<p>where the name is the name you pass to createLibrary and the checksum is based
+on the C++ source code.  When you change the source code, the shared library
+name will be different, and this module recompiles the new library and
+automatically deletes any old libraries.  As long as the C++ source code
+doesn’t change (for example, if it’s embedded inside a digital asset), you can
+be sure the checksum won’t change and you can distribute the library within
+your facility as you would with any other HDK library.</p>
+<p>For more information and examples, see the “Extending with C++” subsection of
+the “Houdini Object Module” section of Houdini’s documentation.</p>
+<dl class="class">
+<dt id="inlinecpp.ConstGU_DetailHandle">
+<em class="property">class </em><code class="descclassname">inlinecpp.</code><code class="descname">ConstGU_DetailHandle</code><span class="sig-paren">(</span><em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.ConstGU_DetailHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hutil.html#hutil.cppinline.ConverterHandle" title="hutil.cppinline.ConverterHandle"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.cppinline.ConverterHandle</span></code></a></p>
+<dl class="method">
+<dt id="inlinecpp.ConstGU_DetailHandle.as_pointer">
+<code class="descname">as_pointer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.ConstGU_DetailHandle.as_pointer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="inlinecpp.ConstGU_DetailHandle.destroy">
+<code class="descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.ConstGU_DetailHandle.destroy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="inlinecpp.GU_DetailHandle">
+<em class="property">class </em><code class="descclassname">inlinecpp.</code><code class="descname">GU_DetailHandle</code><span class="sig-paren">(</span><em>geometry</em><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.GU_DetailHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#inlinecpp.ConstGU_DetailHandle" title="inlinecpp.ConstGU_DetailHandle"><code class="xref py py-class docutils literal notranslate"><span class="pre">inlinecpp.ConstGU_DetailHandle</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="inlinecpp.HcustomCompilerHook">
+<em class="property">class </em><code class="descclassname">inlinecpp.</code><code class="descname">HcustomCompilerHook</code><a class="headerlink" href="#inlinecpp.HcustomCompilerHook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="hutil.html#hutil.cppinline.CompilerHook" title="hutil.cppinline.CompilerHook"><code class="xref py py-class docutils literal notranslate"><span class="pre">hutil.cppinline.CompilerHook</span></code></a></p>
+<dl class="method">
+<dt id="inlinecpp.HcustomCompilerHook.clean_up_after_compiling">
+<code class="descname">clean_up_after_compiling</code><span class="sig-paren">(</span><em>cpp_file_path</em>, <em>output_shared_library_path</em>, <em>debug</em>, <em>include_dirs</em>, <em>link_dirs</em>, <em>link_libs</em><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.HcustomCompilerHook.clean_up_after_compiling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove any temporary files that were created during the compilation
+process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="inlinecpp.HcustomCompilerHook.default_shared_library_directory">
+<code class="descname">default_shared_library_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.HcustomCompilerHook.default_shared_library_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a full path to the directory where shared libraries will
+be placed when initially compiled.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="inlinecpp.HcustomCompilerHook.find_shared_library">
+<code class="descname">find_shared_library</code><span class="sig-paren">(</span><em>shared_library_file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.HcustomCompilerHook.find_shared_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for a shared library with the given name, returning its
+full path or None if it couldn’t be found.  This method lets you
+search for the library in more than the default directory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="inlinecpp.HcustomCompilerHook.get_compile_command">
+<code class="descname">get_compile_command</code><span class="sig-paren">(</span><em>cpp_file_path</em>, <em>output_shared_library_path</em>, <em>debug</em>, <em>include_dirs</em>, <em>link_dirs</em>, <em>link_libs</em><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.HcustomCompilerHook.get_compile_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string containing the command to compile, and optionally
+also link, the given C++ file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="inlinecpp.createLibrary">
+<code class="descclassname">inlinecpp.</code><code class="descname">createLibrary</code><span class="sig-paren">(</span><em>name</em>, <em>includes=''</em>, <em>function_sources=()</em>, <em>debug=False</em>, <em>catch_crashes=None</em>, <em>acquire_hom_lock=False</em>, <em>structs=()</em>, <em>include_dirs=()</em>, <em>link_dirs=()</em>, <em>link_libs=()</em>, <em>config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.createLibrary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a library of C++ functions from C++ source, returning it if
+it’s already loaded, compiling it only if it hasn’t already been compiled.</p>
+<dl class="docutils">
+<dt>name:</dt>
+<dd>A unique name used to build the shared object file’s name.</dd>
+<dt>includes:</dt>
+<dd>A string containing #include lines to go before your functions.  You
+can also put helper functions in this string that can be called from
+your functions but are not exposed to Python.</dd>
+<dt>function_sources:</dt>
+<dd>A sequence of strings, with each string containing the source code
+to one of your functions.  The string must begin with the signature
+for your function so it can be parsed out.</dd>
+<dt>debug:</dt>
+<dd>If True, the code will be compiled with debug information.  If True
+and you do not specify a value for catch_crashes, Houdini will also
+attempt to convert crashes in your C++ code into Python RuntimeError
+exceptions.</dd>
+<dt>catch_crashes:</dt>
+<dd>If True, Houdini will attempt to catch crashes in your C++ code and
+convert them into Python RuntimeError exceptions containing a C++ stack
+trace.  There is no guarantee that Houdini can always recover from
+crashes in your C++ code, so Houdini may still crash even if this
+parameter is set to True.  Setting this parameter to None (the default)
+will make it use the same setting as the debug parameter.</dd>
+<dt>structs:</dt>
+<dd><p class="first">A sequence of descriptions of C structures that can be used as return
+values.  Each structure description is a pair, where the first element
+is the name of the structure and the second is a sequence of member
+descriptions.  Each member description is a pair of strings containing
+the member name and type.</p>
+<p>Member types may be one of:
+- A format characters used by Python’s struct module (e.g. “i” for</p>
+<blockquote>
+<div>integer, “d” for double, “c” for character, etc.).</div></blockquote>
+<ul class="simple">
+<li>A format character preceded by a “*”, to indicate an array of
+those elements.  For example, “<a href="#id5"><span class="problematic" id="id6">*</span></a>i” is an array of integers.</li>
+<li>The name of an earlier type in the sequence of structs.</li>
+</ul>
+<p>Note that, instead of a sequence of member descriptions, the second
+element of a struct description may be a string.  In this case,
+the type will be a typedef.  These typedefs are useful to create
+type names for arrays of values.</p>
+<p>For example, the following sequence creates a Point struct with two
+integer members x and y, and a Data struct containing members named
+“tolerance” (a double), “single_point” (a Point), and “points” (an
+array of Points.  One of your C++ functions could return a “Data”
+value that is automatically converted into Python objects.</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>(</dt>
+<dd><dl class="first docutils">
+<dt>(“Point”, (</dt>
+<dd>(“x”, “i”),
+(“y”, “i”),</dd>
+</dl>
+<p>)),
+(“Data”, (</p>
+<blockquote>
+<div>(“tolerance”, “d”),
+(“single_point”, “Point”),
+(“points”, “<a href="#id7"><span class="problematic" id="id8">*</span></a>Point”),</div></blockquote>
+<p class="last">)),</p>
+</dd>
+</dl>
+<p>)</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>The following sequence creates an IntArray struct:</dt>
+<dd>((“IntArray”, “<a href="#id9"><span class="problematic" id="id10">*</span></a>i”),)</dd>
+</dl>
+<p class="last">One of your C++ functions could then use IntArray as the return type
+and return a std::vector&lt;int&gt;.</p>
+</dd>
+<dt>include_dirs:</dt>
+<dd>A sequence of extra directory paths to be used to search for include
+files.  These paths are passed as -I options to the hcustom command
+when compiling the C++ code.</dd>
+<dt>link_dirs:</dt>
+<dd>A sequence of extra directory paths to be used to search for shared or
+static libraries that the C++ code links against.  These paths are
+passed as -L options to the hcustom command.</dd>
+<dt>link_libs:</dt>
+<dd>A sequence of names of extra libraries that the C++ code needs to link
+against.  These library names are passed as -l options to the hcustom
+command.</dd>
+<dt>config:</dt>
+<dd>Either a cppinline.Config object to customize how cppinline works, or
+None.</dd>
+<dt>acquire_hom_lock:</dt>
+<dd>If True, the code will be automatically modified to use a HOM_AutoLock,
+to ensure threadsafe access to the C++ object when the Python code
+is being run in a separate thread.  If your code modifies Houdini’s
+internal state, set this parameter to True.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="inlinecpp.extendClass">
+<code class="descclassname">inlinecpp.</code><code class="descname">extendClass</code><span class="sig-paren">(</span><em>cls</em>, <em>library_name</em>, <em>includes=''</em>, <em>function_sources=()</em>, <em>debug=False</em>, <em>catch_crashes=None</em>, <em>structs=()</em>, <em>auto_add_include=True</em>, <em>include_dirs=()</em>, <em>link_dirs=()</em>, <em>link_libs=()</em>, <em>config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#inlinecpp.extendClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend a hou class by adding methods implemented in C++.</p>
+<p>cls is the hou module class you’re extending.  The rest of the arguments
+are the same as for createLibrary, except acquire_hom_lock is always True.
+Note that this function automatically adds a <cite>#include</cite> line for the
+underlying C++ class unless auto_add_include is False.</p>
+<p>The first parameter to your C++ functions must be a pointer to a C++ object
+corresponding to the hou object.  See the module documentation for the
+mapping from hou classes to C++ HDK classes.</p>
+<p>Note that if you are passing hou.Geometry objects, you must provide a
+const GU_Detail * if it can be called on a read-only hou.Geometry object
+and a GU_Detail * only if it can only be called on a hou.Geometry object
+from within a Python SOP.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="images2gif.html" title="previous chapter">images2gif module</a></li>
+      <li>Next: <a href="introspect.html" title="next chapter">introspect module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/inlinecpp.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/inlinecpp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

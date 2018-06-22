@@ -1,7 +1,0 @@
-dopparticlefluidtoolutils module
-================================
-
-.. automodule:: dopparticlefluidtoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

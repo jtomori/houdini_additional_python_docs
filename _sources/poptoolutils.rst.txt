@@ -1,7 +1,0 @@
-poptoolutils module
-===================
-
-.. automodule:: poptoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

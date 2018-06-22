@@ -1,7 +1,0 @@
-houdiniengineutils module
-=========================
-
-.. automodule:: houdiniengineutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

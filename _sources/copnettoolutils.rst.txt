@@ -1,7 +1,0 @@
-copnettoolutils module
-======================
-
-.. automodule:: copnettoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

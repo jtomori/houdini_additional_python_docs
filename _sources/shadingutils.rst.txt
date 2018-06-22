@@ -1,7 +1,0 @@
-shadingutils module
-===================
-
-.. automodule:: shadingutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

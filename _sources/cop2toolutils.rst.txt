@@ -1,7 +1,0 @@
-cop2toolutils module
-====================
-
-.. automodule:: cop2toolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

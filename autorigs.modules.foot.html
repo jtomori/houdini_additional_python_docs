@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>autorigs.modules.foot package &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autorigs.modules.hand package" href="autorigs.modules.hand.html" />
+    <link rel="prev" title="autorigs.modules.extremity package" href="autorigs.modules.extremity.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="autorigs-modules-foot-package">
+<h1>autorigs.modules.foot package<a class="headerlink" href="#autorigs-modules-foot-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-autorigs.modules.foot.autoRigsFootBuilder">
+<span id="autorigs-modules-foot-autorigsfootbuilder-module"></span><h2>autorigs.modules.foot.autoRigsFootBuilder module<a class="headerlink" href="#module-autorigs.modules.foot.autoRigsFootBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.foot.autoRigsFootBuilder.</code><code class="descname">AutoRigsFootBuilder</code><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder" title="autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.autoRigsExtremityBuilder.AutoRigsExtremityBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder.SUFFIX">
+<code class="descname">SUFFIX</code><em class="property"> = {'bigdigitrootcontrol': 'rootcontrol', 'bonegroup': 'bone_group', 'chopnetname': 'footchopnet', 'controlgroup': 'control_all_group', 'digitbone': 'toebone', 'digitcontrol': 'digitcontrol', 'digitend': 'toe_endaffector', 'digitendctrl': 'toe_endctrl', 'digitroll': 'toeroll', 'digitsolvername': 'toesolver', 'digitspikecontrolgroup': 'control_toe_spikes', 'digittwist': 'toe_twist', 'digittwistctrl': 'toe_twistctrl', 'extremitybone': 'footbone', 'extremitycontrolsgroup': 'control_foot', 'extremityend': 'foot_endaffector', 'extremityendctrl': 'foot_endctrl', 'extremityroll': 'footroll', 'extremityroot': 'footroot', 'extremityrootcurve': 'footrootcurve', 'extremitysolvername': 'footsolver', 'extremitytwist': 'foot_twist', 'extremitytwistctrl': 'foot_twistctrl', 'fkcontrol': 'fkcontrol', 'fkcontrolgroup': 'control_fk_group', 'ikcurl': 'ikcurl', 'ikcurladj': 'ikcurl_adjust', 'ikspike': 'ikspike', 'ikspikeall': 'ikspikeall', 'ikspikeall_transform': 'ikspikeall_trans', 'iksplayfan': 'iksplayfan', 'limbfkikblend': 'leg_fkikblendr', 'limbfkparent': 'leg_fkparent', 'limbikparent': 'leg_ikparent', 'limbnorotation': 'leg_norotation', 'limbtipstart': 'leg_tip', 'metadigit': 'metatarsal', 'metasolver': 'metasolver', 'metastart': 'metastart', 'metatwist': 'metatwist', 'nodegroup': 'node_group', 'phalange': 'phalange', 'phalangecontrolgroup': 'control_phalange_group', 'phalangeend': 'phalange_endcontrol', 'phalangesolver': 'phalange_solver', 'phalangeup': 'phalange_up', 'root': 'root', 'rootcarve': 'rootcarve', 'rootcircle': 'rootcircle', 'visiblegroup': 'visible_all_group'}</em><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder.SUFFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder.buildRig">
+<em class="property">classmethod </em><code class="descname">buildRig</code><span class="sig-paren">(</span><em>index</em>, <em>autorig_asset</em>, <em>optionsmodel</em>, <em>extremityguide</em>, <em>mastermodule</em>, <em>parentinfo</em>, <em>modulename</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder.buildRig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder.hasAllDegreeBigDigitRoot">
+<em class="property">classmethod </em><code class="descname">hasAllDegreeBigDigitRoot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootBuilder.AutoRigsFootBuilder.hasAllDegreeBigDigitRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.foot.autoRigsFootInterfaceBuilder">
+<span id="autorigs-modules-foot-autorigsfootinterfacebuilder-module"></span><h2>autorigs.modules.foot.autoRigsFootInterfaceBuilder module<a class="headerlink" href="#module-autorigs.modules.foot.autoRigsFootInterfaceBuilder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder">
+<em class="property">class </em><code class="descclassname">autorigs.modules.foot.autoRigsFootInterfaceBuilder.</code><code class="descname">AutoRigsFootInterfaceBuilder</code><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder" title="autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.autoRigsExtremityInterfaceBuilder.AutoRigsExtremityInterfaceBuilder</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.INTERFACE_NAME_LABEL">
+<code class="descname">INTERFACE_NAME_LABEL</code><em class="property"> = {'allcurl': ('allcurl', 'Curl'), 'allfan': ('allfan', 'Fan'), 'allsplay': ('allsplay', 'Splay'), 'bonedisplay': ('bonedisplay', 'Bone Display'), 'controldigitend': ('toeend', 'Toe End'), 'controldigitfkcontrol': ('toecontrol', 'Toe FK Control'), 'controldigitroll': ('toeroll', 'Toe Roll'), 'controldisplay': ('controldisplay', 'Control Display'), 'controlextremityfkcontrol': ('footfkcontrol', 'Foot FK Control'), 'controlextremityroll': ('footroll', 'Foot Roll'), 'controlextremityroot': ('footroot', 'Foot Root'), 'controlextremitytwist': ('foottwist', 'Foot Twist'), 'controlsfolder': ('controloptions', 'Controls'), 'digitbonepath': ('digitbonepath', 'Digit Bone Path'), 'digitfkcontrolpath': ('digitfkcontrolpath', 'Digit FK Control Path'), 'digitfolderformat': ('toe{}', '{}'), 'digitikhandlepath': ('digitikhandlepath', 'Digit IK Handle Path'), 'digitkinsolverpath': ('digitkinsolverpath', 'Digit Kinematic Solver Path'), 'digittwistctrlpath': ('digitiktwisthandlepath', 'Digit IK Twist Handle Path'), 'displayfkcontrols': ('displayfkcontrols', 'Display FK Controls'), 'extremitybonepath': ('extremitybonepath', 'Extremity Bone Path'), 'extremityfkcontrolpath': ('extremityfkcontrolpath', 'Extremity FK Control Path'), 'extremityfolder': ('footfolder', 'Foot'), 'extremityikhandlepath': ('extremityikhandlepath', 'Extremity IK Handle Path'), 'extremitykinsolverpath': ('extremitykinsolverpath', 'Extremity Kinematic Solver Path'), 'extremitytwistctrlpath': ('extremitytwistctrlpath', 'Extremity IK Twist Handle Path'), 'firstrootcontrol': ('rootcontrol', 'Root'), 'fkikblend': ('fkikblend', 'FK-&gt;IK Blend'), 'fkikthresh': ('fkikthresh', 'FK Display Threshold'), 'icurlformat': ('i{}curl', 'Curl'), 'idphalanxendformat': ('i{}dphalanxend', 'DPhalanx End'), 'ikcurl': ('ikcurl', 'IK Curl'), 'ikdampen': ('ikdampen', 'Max IK Dampening'), 'ikfan': ('ikfan', 'IK Fan'), 'ikfingercurl': ('ikcurlfinger', 'IK Curl'), 'iksplay': ('iksplay', 'IK Splay'), 'imphalanxendformat': ('i{}mphalanxend', 'MPhalanx End'), 'ipphalanxendformat': ('i{}pphalanxend', 'PPhalanx End'), 'kinsolverpath': ('kinsolverpath', 'Kinematic Solver Path'), 'leftfolder': ('folder', 'Left '), 'matchfkik': ('matchfkik', 'Match FK to IK'), 'matchikfk': ('matchikfk', 'Match IK to FK'), 'optionsfolder': ('options', 'Options'), 'rightfolder': ('folder', 'Right ')}</em><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.INTERFACE_NAME_LABEL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.L_PREFIX">
+<code class="descname">L_PREFIX</code><em class="property"> = 'leftfoot'</em><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.L_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.R_PREFIX">
+<code class="descname">R_PREFIX</code><em class="property"> = 'rightfoot'</em><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.R_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.hasSeparateBigDigitAllSpikeControls">
+<em class="property">classmethod </em><code class="descname">hasSeparateBigDigitAllSpikeControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.autoRigsFootInterfaceBuilder.AutoRigsFootInterfaceBuilder.hasSeparateBigDigitAllSpikeControls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.foot.buildFootGuide">
+<span id="autorigs-modules-foot-buildfootguide-module"></span><h2>autorigs.modules.foot.buildFootGuide module<a class="headerlink" href="#module-autorigs.modules.foot.buildFootGuide" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="autorigs.modules.foot.buildFootGuide.FootFactory">
+<em class="property">class </em><code class="descclassname">autorigs.modules.foot.buildFootGuide.</code><code class="descname">FootFactory</code><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory" title="autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.buildExtremityGuide.ExtremityFactory</span></code></a></p>
+<dl class="classmethod">
+<dt id="autorigs.modules.foot.buildFootGuide.FootFactory.createFromJsonExisting">
+<em class="property">classmethod </em><code class="descname">createFromJsonExisting</code><span class="sig-paren">(</span><em>json</em>, <em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootFactory.createFromJsonExisting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="autorigs.modules.foot.buildFootGuide.FootFactory.createFromJsonNew">
+<em class="property">classmethod </em><code class="descname">createFromJsonNew</code><span class="sig-paren">(</span><em>json</em>, <em>guidejson</em>, <em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootFactory.createFromJsonNew" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="autorigs.modules.foot.buildFootGuide.FootGuide">
+<em class="property">class </em><code class="descclassname">autorigs.modules.foot.buildFootGuide.</code><code class="descname">FootGuide</code><span class="sig-paren">(</span><em>assetnode</em>, <em>model</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootGuide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="autorigs.modules.extremity.html#autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide" title="autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide"><code class="xref py py-class docutils literal notranslate"><span class="pre">autorigs.modules.extremity.buildExtremityGuide.ExtremityGuide</span></code></a></p>
+<dl class="attribute">
+<dt id="autorigs.modules.foot.buildFootGuide.FootGuide.JSON_LABELS">
+<code class="descname">JSON_LABELS</code><em class="property"> = {'adddigit_format': 'addtoe_nameformat', 'bigdigit_guides': ['root', 'pphalanx', 'mphalanx', 'dphalanx'], 'bigdigitline': 'meta_bigtoeline', 'digit_guides': ['root', 'pphalanx', 'mphalanx', 'dphalanx'], 'digitguidespacing': 'digitguidespacing', 'digitroll': 'toeend', 'digitroot': 'toerootguide', 'digitrootspacing': 'digitrootspacing', 'digits': 'toes', 'digitspacing': 'digitspacing', 'extremityroll': 'footroll', 'extremityroot': 'foot_main_root', 'extremitystart': 'ankle', 'guidecurve': 'guidecurve', 'guidecurve_add': 'guidecurve_add', 'guidecurve_merge': 'guidecurve_merge', 'guidecurve_out': 'guidecurve_out', 'guidecurve_polywire': 'guidecurve_polywire', 'lineadddash': 'lineadddash', 'linedigitend': 'linetoeend', 'linemetaend': 'linemetaend', 'linepointline': 'linepointline', 'lineresample': 'lineresample', 'metaadd': 'metaadd', 'metabigdigitcontrol': 'meta_bigtoecontrol', 'metabox': 'metabox', 'metacopybigdigit': 'metacopy_bigtoe', 'metacopydigits': 'metacopy_toes', 'metacopynobigdigit': 'metacopy_nobigtoe', 'metadeletecolor': 'meta_deletecolor', 'metaends': 'metaends', 'metafirstpoint': 'meta_firstpoint', 'metaguide': 'metaguide', 'metaline': 'metaline', 'metamergebigdigit': 'metamerge_bigtoe', 'metaout': 'metaout', 'metapointcolor': 'metapointcolor', 'metaresample': 'metaresample', 'metaswitch': 'metaswitch', 'metaswitchbigdigit': 'metaswitch_bigtoe', 'mirrormetaguide': 'mirrormetaguide', 'missing_phalanx': 'mphalanx', 'root': 'foot_root', 'rotateroot': 'rotateroot'}</em><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootGuide.JSON_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="autorigs.modules.foot.buildFootGuide.FootGuide.JSON_PARAM_LABELS">
+<code class="descname">JSON_PARAM_LABELS</code><em class="property"> = {'big_digit_guides': ['allguides', 'root', 'pphalanx', 'dphalanx'], 'center': 'feetcenter', 'digit_params': 'toeparams', 'digit_roll': 'toeroll', 'digits': 'toes', 'digits_guides': ['allguides', 'root', 'pphalanx', 'mphalanx', 'dphalanx'], 'digits_root': 'toesroot', 'extremity_roll': 'footroll', 'extremity_start': 'ankle', 'root': 'footroot', 'rotateroot': 'rotateroot'}</em><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootGuide.JSON_PARAM_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.foot.buildFootGuide.FootGuide.parentExtremities">
+<code class="descname">parentExtremities</code><span class="sig-paren">(</span><em>parent</em>, <em>root</em>, <em>rot</em>, <em>ankle</em>, <em>footroll</em>, <em>toeroll</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootGuide.parentExtremities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.foot.buildFootGuide.FootGuide.resetParentDisplay">
+<code class="descname">resetParentDisplay</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootGuide.resetParentDisplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.foot.buildFootGuide.FootGuide.setBigDigitParent">
+<code class="descname">setBigDigitParent</code><span class="sig-paren">(</span><em>bigdigitguides</em>, <em>ismain</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootGuide.setBigDigitParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="autorigs.modules.foot.buildFootGuide.FootGuide.updateToLimbParent">
+<code class="descname">updateToLimbParent</code><span class="sig-paren">(</span><em>node</em>, <em>mirrornode</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#autorigs.modules.foot.buildFootGuide.FootGuide.updateToLimbParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-autorigs.modules.foot.footModule">
+<span id="autorigs-modules-foot-footmodule-module"></span><h2>autorigs.modules.foot.footModule module<a class="headerlink" href="#module-autorigs.modules.foot.footModule" title="Permalink to this headline">¶</a></h2>
+<p>Used by autodoc_mock_imports.</p>
+</div>
+<div class="section" id="module-autorigs.modules.foot">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autorigs.modules.foot" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">autorigs.modules.foot package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.foot.autoRigsFootBuilder">autorigs.modules.foot.autoRigsFootBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.foot.autoRigsFootInterfaceBuilder">autorigs.modules.foot.autoRigsFootInterfaceBuilder module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.foot.buildFootGuide">autorigs.modules.foot.buildFootGuide module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.foot.footModule">autorigs.modules.foot.footModule module</a></li>
+<li><a class="reference internal" href="#module-autorigs.modules.foot">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+  <li><a href="autorigs.html">autorigs package</a><ul>
+  <li><a href="autorigs.modules.html">autorigs.modules package</a><ul>
+      <li>Previous: <a href="autorigs.modules.extremity.html" title="previous chapter">autorigs.modules.extremity package</a></li>
+      <li>Next: <a href="autorigs.modules.hand.html" title="next chapter">autorigs.modules.hand package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autorigs.modules.foot.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/autorigs.modules.foot.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,181 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nodegraphsnap module &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nodegraphstates module" href="nodegraphstates.html" />
+    <link rel="prev" title="nodegraphselectposhooks module" href="nodegraphselectposhooks.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nodegraphsnap">
+<span id="nodegraphsnap-module"></span><h1>nodegraphsnap module<a class="headerlink" href="#module-nodegraphsnap" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nodegraphsnap.SnapResult">
+<em class="property">class </em><code class="descclassname">nodegraphsnap.</code><code class="descname">SnapResult</code><a class="headerlink" href="#nodegraphsnap.SnapResult" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="nodegraphsnap.SnapResult.delta">
+<code class="descname">delta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.SnapResult.delta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphsnap.SnapResult.isValid">
+<code class="descname">isValid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.SnapResult.isValid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphsnap.SnapResult.setHorizontalSnap">
+<code class="descname">setHorizontalSnap</code><span class="sig-paren">(</span><em>srcpos</em>, <em>snappos</em>, <em>snapdistance</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.SnapResult.setHorizontalSnap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphsnap.SnapResult.setVerticalSnap">
+<code class="descname">setVerticalSnap</code><span class="sig-paren">(</span><em>srcpos</em>, <em>snappos</em>, <em>snapdistance</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.SnapResult.setVerticalSnap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphsnap.SnapResult.shapes">
+<code class="descname">shapes</code><span class="sig-paren">(</span><em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.SnapResult.shapes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.isCenterSnapper">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">isCenterSnapper</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.isCenterSnapper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.snap">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">snap</code><span class="sig-paren">(</span><em>editor</em>, <em>item</em>, <em>rect</em>, <em>snaprects</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.snap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.snapGrid">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">snapGrid</code><span class="sig-paren">(</span><em>editor</em>, <em>item</em>, <em>rect</em>, <em>currentsnaps</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.snapGrid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.snapNodes">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">snapNodes</code><span class="sig-paren">(</span><em>editor</em>, <em>item</em>, <em>rect</em>, <em>snaprects</em>, <em>currentsnaps</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.snapNodes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.snapResizeRect">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">snapResizeRect</code><span class="sig-paren">(</span><em>uievent</em>, <em>item</em>, <em>initialrect</em>, <em>direction</em>, <em>titleheight</em>, <em>startpos</em>, <em>alignrects=None</em>, <em>preserve_aspect_ratio=False</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.snapResizeRect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.testEdgeSnaps">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">testEdgeSnaps</code><span class="sig-paren">(</span><em>rect</em>, <em>snaprect</em>, <em>currentsnaps</em>, <em>radius</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.testEdgeSnaps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.testGridEdgeSnaps">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">testGridEdgeSnaps</code><span class="sig-paren">(</span><em>rect</em>, <em>steps</em>, <em>currentsnaps</em>, <em>radius</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.testGridEdgeSnaps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.testGridHEdgeSnaps">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">testGridHEdgeSnaps</code><span class="sig-paren">(</span><em>rect</em>, <em>steps</em>, <em>currentsnaps</em>, <em>radius</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.testGridHEdgeSnaps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.testGridSnaps">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">testGridSnaps</code><span class="sig-paren">(</span><em>pos</em>, <em>steps</em>, <em>currentsnaps</em>, <em>radius</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.testGridSnaps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.testHEdgeSnaps">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">testHEdgeSnaps</code><span class="sig-paren">(</span><em>rect</em>, <em>snaprect</em>, <em>currentsnaps</em>, <em>radius</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.testHEdgeSnaps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphsnap.testSnaps">
+<code class="descclassname">nodegraphsnap.</code><code class="descname">testSnaps</code><span class="sig-paren">(</span><em>pos</em>, <em>snappos</em>, <em>currentsnaps</em>, <em>radius</em>, <em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphsnap.testSnaps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="nodegraphselectposhooks.html" title="previous chapter">nodegraphselectposhooks module</a></li>
+      <li>Next: <a href="nodegraphstates.html" title="next chapter">nodegraphstates module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodegraphsnap.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/nodegraphsnap.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

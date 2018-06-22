@@ -1,7 +1,0 @@
-radialmenu module
-=================
-
-.. automodule:: radialmenu
-    :members:
-    :undoc-members:
-    :show-inheritance:

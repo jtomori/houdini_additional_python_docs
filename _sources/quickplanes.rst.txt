@@ -1,7 +1,0 @@
-quickplanes module
-==================
-
-.. automodule:: quickplanes
-    :members:
-    :undoc-members:
-    :show-inheritance:

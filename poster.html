@@ -6,17 +6,17 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>poster package &#8212; Houdini Python modules 16.5.378 documentation</title>
+    <title>poster package &#8212; Houdini Python modules 16.5.496 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="pyro2 module" href="pyro2.html" />
-    <link rel="prev" title="poptoolutils module" href="poptoolutils.html" />
+    <link rel="prev" title="poselib package" href="poselib.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -29,6 +29,8 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="poster-package">
@@ -311,37 +313,6 @@ opener object.</p>
 <p>Returns the created OpenerDirector object.</p>
 </dd></dl>
 
-<dl class="class">
-<dt id="poster.streaminghttp.StreamingHTTPSHandler">
-<em class="property">class </em><code class="descclassname">poster.streaminghttp.</code><code class="descname">StreamingHTTPSHandler</code><span class="sig-paren">(</span><em>debuglevel=0</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">urllib2.HTTPSHandler</span></code></p>
-<p>Subclass of <cite>urllib2.HTTPSHandler</cite> that uses
-StreamingHTTPSConnection as its http connection class.</p>
-<dl class="attribute">
-<dt id="poster.streaminghttp.StreamingHTTPSHandler.handler_order">
-<code class="descname">handler_order</code><em class="property"> = 499</em><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler.handler_order" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="poster.streaminghttp.StreamingHTTPSHandler.https_open">
-<code class="descname">https_open</code><span class="sig-paren">(</span><em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler.https_open" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="poster.streaminghttp.StreamingHTTPSHandler.https_request">
-<code class="descname">https_request</code><span class="sig-paren">(</span><em>req</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSHandler.https_request" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="poster.streaminghttp.StreamingHTTPSConnection">
-<em class="property">class </em><code class="descclassname">poster.streaminghttp.</code><code class="descname">StreamingHTTPSConnection</code><span class="sig-paren">(</span><em>host</em>, <em>port=None</em>, <em>key_file=None</em>, <em>cert_file=None</em>, <em>strict=None</em>, <em>timeout=&lt;object object&gt;</em>, <em>source_address=None</em>, <em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#poster.streaminghttp.StreamingHTTPSConnection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">poster.streaminghttp._StreamingHTTPMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">httplib.HTTPSConnection</span></code></p>
-<p>Subclass of <cite>httplib.HTTSConnection</cite> that overrides the <cite>send()</cite>
-method to support iterable body objects</p>
-</dd></dl>
-
 </div>
 <div class="section" id="module-poster">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-poster" title="Permalink to this headline">¶</a></h2>
@@ -356,6 +327,7 @@ New in version 0.6.</p>
 
 
           </div>
+          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -374,8 +346,8 @@ New in version 0.6.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-  <li><a href="modules.html">houdini_libs</a><ul>
-      <li>Previous: <a href="poptoolutils.html" title="previous chapter">poptoolutils module</a></li>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="poselib.html" title="previous chapter">poselib package</a></li>
       <li>Next: <a href="pyro2.html" title="next chapter">pyro2 module</a></li>
   </ul></li>
   </ul></li>
@@ -408,8 +380,8 @@ New in version 0.6.</p>
       &copy;2018, jtomori.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
       
       |
       <a href="_sources/poster.rst.txt"

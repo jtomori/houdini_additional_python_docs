@@ -1,7 +1,0 @@
-stroketoolutils module
-======================
-
-.. automodule:: stroketoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

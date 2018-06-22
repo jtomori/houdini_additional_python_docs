@@ -1,7 +1,0 @@
-dopfetoolutils module
-=====================
-
-.. automodule:: dopfetoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

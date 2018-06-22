@@ -1,7 +1,0 @@
-nodethemes module
-=================
-
-.. automodule:: nodethemes
-    :members:
-    :undoc-members:
-    :show-inheritance:

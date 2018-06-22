@@ -1,7 +1,0 @@
-images2gif module
-=================
-
-.. automodule:: images2gif
-    :members:
-    :undoc-members:
-    :show-inheritance:

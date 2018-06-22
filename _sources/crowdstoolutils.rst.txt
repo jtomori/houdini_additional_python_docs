@@ -1,7 +1,0 @@
-crowdstoolutils module
-======================
-
-.. automodule:: crowdstoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

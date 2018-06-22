@@ -1,7 +1,0 @@
-hrpyc module
-============
-
-.. automodule:: hrpyc
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-doptoolutils module
-===================
-
-.. automodule:: doptoolutils
-    :members:
-    :undoc-members:
-    :show-inheritance:

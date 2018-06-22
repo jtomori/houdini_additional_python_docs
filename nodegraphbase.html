@@ -1,0 +1,202 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nodegraphbase module &#8212; Houdini Python modules 16.5.496 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nodegraphconnect module" href="nodegraphconnect.html" />
+    <link rel="prev" title="nodegraphautoscroll module" href="nodegraphautoscroll.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nodegraphbase">
+<span id="nodegraphbase-module"></span><h1>nodegraphbase module<a class="headerlink" href="#module-nodegraphbase" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nodegraphbase.EventHandler">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">EventHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.EventHandler" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="nodegraphbase.EventHandler.getPrompt">
+<code class="descname">getPrompt</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.EventHandler.getPrompt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphbase.EventHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.EventHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphbase.ItemEventHandler">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">ItemEventHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.ItemEventHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphbase.EventHandler" title="nodegraphbase.EventHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.EventHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphbase.ItemEventHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.ItemEventHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphbase.OverviewMouseHandler">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">OverviewMouseHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.OverviewMouseHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphbase.EventHandler" title="nodegraphbase.EventHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.EventHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphbase.OverviewMouseHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.OverviewMouseHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphbase.PendingAction">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">PendingAction</code><a class="headerlink" href="#nodegraphbase.PendingAction" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="nodegraphbase.PendingAction.completeAction">
+<code class="descname">completeAction</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.PendingAction.completeAction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphbase.PendingDelayedAction">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">PendingDelayedAction</code><span class="sig-paren">(</span><em>editor</em>, <em>delay</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.PendingDelayedAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphbase.PendingAction" title="nodegraphbase.PendingAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.PendingAction</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphbase.PendingDelayedAction.completeAction">
+<code class="descname">completeAction</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.PendingDelayedAction.completeAction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nodegraphbase.PendingDelayedAction.runDelayedAction">
+<code class="descname">runDelayedAction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.PendingDelayedAction.runDelayedAction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphbase.PendingTextChangeAction">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">PendingTextChangeAction</code><span class="sig-paren">(</span><em>item</em>, <em>valueid</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.PendingTextChangeAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphbase.PendingAction" title="nodegraphbase.PendingAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.PendingAction</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphbase.PendingTextChangeAction.completeAction">
+<code class="descname">completeAction</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.PendingTextChangeAction.completeAction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphbase.ViewPanHandler">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">ViewPanHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.ViewPanHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphbase.EventHandler" title="nodegraphbase.EventHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.EventHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphbase.ViewPanHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.ViewPanHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nodegraphbase.ViewScaleHandler">
+<em class="property">class </em><code class="descclassname">nodegraphbase.</code><code class="descname">ViewScaleHandler</code><span class="sig-paren">(</span><em>start_uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.ViewScaleHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#nodegraphbase.EventHandler" title="nodegraphbase.EventHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodegraphbase.EventHandler</span></code></a></p>
+<dl class="method">
+<dt id="nodegraphbase.ViewScaleHandler.handleEvent">
+<code class="descname">handleEvent</code><span class="sig-paren">(</span><em>uievent</em>, <em>pending_actions</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.ViewScaleHandler.handleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="nodegraphbase.isPanEvent">
+<code class="descclassname">nodegraphbase.</code><code class="descname">isPanEvent</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.isPanEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nodegraphbase.isScaleEvent">
+<code class="descclassname">nodegraphbase.</code><code class="descname">isScaleEvent</code><span class="sig-paren">(</span><em>uievent</em><span class="sig-paren">)</span><a class="headerlink" href="#nodegraphbase.isScaleEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">python2.7libs</a><ul>
+      <li>Previous: <a href="nodegraphautoscroll.html" title="previous chapter">nodegraphautoscroll module</a></li>
+      <li>Next: <a href="nodegraphconnect.html" title="next chapter">nodegraphconnect module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/nodegraphbase.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, jtomori.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+      |
+      <a href="_sources/nodegraphbase.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,7 +1,0 @@
-hqrop module
-============
-
-.. automodule:: hqrop
-    :members:
-    :undoc-members:
-    :show-inheritance:
